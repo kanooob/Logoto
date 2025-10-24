@@ -257,11 +257,6 @@
                     </value>
                   </block>
                 </value>
-                <value name="BOOLEAN">
-                  <block type="logic_boolean" id="]#%pV0NO5/u3qAxi[xkZ">
-                    <field name="BOOL">TRUE</field>
-                  </block>
-                </value>
               </block>
             </statement>
           </block>
