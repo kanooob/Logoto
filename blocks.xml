@@ -2,7 +2,7 @@
   <block type="frost_webserver" id="R,j`S@q5kB2@uXi{D^66" x="-1045" y="264">
     <value name="URL">
       <shadow type="text" id="V`o+fE%0nSwoJ+E7C|?h">
-        <field name="TEXT">This site was created to keep bot on 25/8</field>
+        <field name="TEXT">Ce bot à été créé le 04/10/2025</field>
       </shadow>
     </value>
   </block>
@@ -187,7 +187,7 @@
       </block>
     </statement>
   </block>
-  <block type="s4d_on_message" id="+*!H7XtJO[#kkQr(SIOV" x="-328" y="1421">
+  <block type="jg_event_message_when_a_message_is_recieved_and_author_isnt_a_bot" id="uY##-1Fh1[cEc(fs`tQD" x="-655" y="1453">
     <statement name="STATEMENTS">
       <block type="s4d_reply" id="5PWuJ{xHX/Hh[np0VgAP">
         <value name="CONTENT">

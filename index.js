@@ -86,7 +86,7 @@
     const http = require('http');
     const server = http.createServer((req, res) => {
         res.writeHead(200);
-        res.end('This site was created to keep bot on 25/8');
+        res.end('Ce bot à été créé le 04/10/2025');
     });
     server.listen(3000);
     
@@ -113,14 +113,17 @@
     });
     
     s4d.client.on('messageCreate', async (s4dmessage) => {
-      s4dmessage.channel.send(((s4dmessage.guild).icon));
+            if (s4dmessage.author.bot) {
+                return;
+            }
+              s4dmessage.channel.send(((s4dmessage.guild).icon));
       if (((s4dmessage.guild).icon) != (s4d.client.channels.cache.find((channel) => channel.name === ([(new Date().getDate()),'-',((new Date().getMonth())) + 1,'-',(s4dmessage.guild).id].join(''))).topic)) {
         (s4dmessage.guild).setIcon((s4d.client.channels.cache.find((channel) => channel.name === ([(new Date().getDate()),'-',((new Date().getMonth())) + 1,'-',(s4dmessage.guild).id].join(''))).topic),'Car c\'est comme ça.')
     
         s4dmessage.channel.send({content:String('c\'est fait !')});
       }
     
-    });
+        });
     
     return s4d
 })();
