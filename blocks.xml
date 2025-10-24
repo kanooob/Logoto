@@ -170,6 +170,20 @@
                 </statement>
               </block>
             </statement>
+            <next>
+              <block type="slash_reply" id="Y]RxbAY+NbwJd?;O{Si_">
+                <value name="CONTENT">
+                  <block type="jg_text_remake_paragraph_quotes" id="xzp?)(EwKRo;t]`)tbou">
+                    <field name="TEXT">Mettez le lien du logo dans le sujet du salon</field>
+                  </block>
+                </value>
+                <value name="BOOLEAN">
+                  <block type="logic_boolean" id="h;w9sdcZp2Fg7oO)%im]">
+                    <field name="BOOL">FALSE</field>
+                  </block>
+                </value>
+              </block>
+            </next>
           </block>
         </statement>
       </block>

@@ -110,6 +110,7 @@
               if ((interaction.commandName) == 'setup') {
         (interaction.guild).channels.create('Logo', { type: 'GUILD_CATEGORY' }).then(async cat => {  (interaction.guild).channels.create(([(new Date().getDate()),'-',((new Date().getMonth())) + 1,'-',(interaction.guild).id].join('')), { type: "GUILD_TEXT", parent: (cat) }).then(async cat =>{  (cat).permissionOverwrites.edit(((interaction.guild).roles.cache.get(((interaction.guild).id))), { VIEW_CHANNEL: false });(cat).send({content:String('Mettez le lien du logo dans le sujet du salon')});
           });});
+        await interaction.reply({ content: 'Mettez le lien du logo dans le sujet du salon', ephemeral: false, components: [] });
       }
     
         });
