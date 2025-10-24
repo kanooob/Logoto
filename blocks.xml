@@ -1,0 +1,16 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+  <block type="s4d_login" id="076e7c%2/lzW`#B^9s#h" x="422" y="212">
+    <value name="TOKEN">
+      <shadow type="text" id="SU|33Kq9bT.I:;x.7K`4">
+        <field name="TEXT">Your bot token</field>
+      </shadow>
+      <block type="frost_env" id="YY{:7Wr4QQ,zF*j}NhOa">
+        <value name="VALUE">
+          <shadow type="text" id="RuzU@v4~g}Q$UU@f?%YZ">
+            <field name="TEXT">token</field>
+          </shadow>
+        </value>
+      </block>
+    </value>
+  </block>
+</xml>
