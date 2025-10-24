@@ -112,6 +112,9 @@
           });});
         await interaction.reply({ content: 'C\'est bon.', ephemeral: false, components: [] });
       }
+      if ((interaction.commandName) == 'help') {
+        await interaction.reply({ content: (['**Paramétré le changement de logo avec le salon**','\n','31-12-0123456789','\n','[jour]-[mois]-[id du serveur]','\n','Lien du logo du serveur dans le sujet.','\n','[day]-[month]-[server id]','\n','Server logo link in the subject.','\n','**Inviter le bot**','\n','[Lien d\'invitation](https://discord.com/oauth2/authorize?client_id=1431383390162124920)'].join('')), ephemeral: true, components: [] });
+      }
     
         });
     
@@ -119,6 +122,12 @@
       {
           name: 'setup',
       		description: 'Première commande a faire',
+      		options: [
+    
+          ]
+      },{
+          name: 'help',
+      		description: 'Les commandes du bot',
       		options: [
     
           ]
