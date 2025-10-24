@@ -84,6 +84,21 @@
     
 
     // blockly code
+    var day;
+    
+    
+    s4d.client.on('interactionCreate', async (interaction) => {
+              if ((interaction.commandName) == 'setup') {
+        (interaction.guild).channels.create('Logo', { type: 'GUILD_CATEGORY' }).then(async cat => {  (interaction.guild).channels.create(([(new Date().getDate()),'-',((new Date().getMonth())) + 1,'-',(interaction.guild).id].join('')), { type: "GUILD_TEXT", parent: (cat) }).then(async cat =>{  (cat).permissionOverwrites.edit(((interaction.guild).roles.cache.get(((interaction.guild).id))), { VIEW_CHANNEL: false });(cat).send({content:String((['31-12-0123456789','\n','[jour]-[mois]-[id du serveur]','\n','Lien du logo du serveur dans le sujet.','\n','[day]-[month]-[server id]','\n','Server logo link in the subject.'].join('')))});
+          });});
+        await interaction.reply({ content: 'C\'est bon.', ephemeral: false, components: [] });
+      }
+      if ((interaction.commandName) == 'help') {
+        await interaction.reply({ content: (['**Paramétré le changement de logo avec le salon**','\n','31-12-0123456789','\n','[jour]-[mois]-[id du serveur]','\n','Lien du logo du serveur dans le sujet.','\n','[day]-[month]-[server id]','\n','Server logo link in the subject.','\n','**Inviter le bot**','\n','[Lien d\'invitation](https://discord.com/oauth2/authorize?client_id=1431383390162124920)'].join('')), ephemeral: true, components: [] });
+      }
+    
+        });
+    
     const http = require('http');
     const server = http.createServer((req, res) => {
         res.writeHead(200);
@@ -99,23 +114,6 @@
             } else {
                 throw new Error("Privileged Gateway Intents are not enabled! Please go to https://discord.com/developers and turn on all of them.")
             }
-        });
-    
-    s4d.client.on('ready', async () => {
-      s4d.client.user.setPresence({status: "online",activities:[{name:([s4d.client.users.cache.size,' membres, ',s4d.client.guilds.cache.size,' serveur.'].join('')),type:"WATCHING"}]});
-    
-    });
-    
-    s4d.client.on('interactionCreate', async (interaction) => {
-              if ((interaction.commandName) == 'setup') {
-        (interaction.guild).channels.create('Logo', { type: 'GUILD_CATEGORY' }).then(async cat => {  (interaction.guild).channels.create(([(new Date().getDate()),'-',((new Date().getMonth())) + 1,'-',(interaction.guild).id].join('')), { type: "GUILD_TEXT", parent: (cat) }).then(async cat =>{  (cat).permissionOverwrites.edit(((interaction.guild).roles.cache.get(((interaction.guild).id))), { VIEW_CHANNEL: false });(cat).send({content:String((['31-12-0123456789','\n','[jour]-[mois]-[id du serveur]','\n','Lien du logo du serveur dans le sujet.','\n','[day]-[month]-[server id]','\n','Server logo link in the subject.'].join('')))});
-          });});
-        await interaction.reply({ content: 'C\'est bon.', ephemeral: false, components: [] });
-      }
-      if ((interaction.commandName) == 'help') {
-        await interaction.reply({ content: (['**Paramétré le changement de logo avec le salon**','\n','31-12-0123456789','\n','[jour]-[mois]-[id du serveur]','\n','Lien du logo du serveur dans le sujet.','\n','[day]-[month]-[server id]','\n','Server logo link in the subject.','\n','**Inviter le bot**','\n','[Lien d\'invitation](https://discord.com/oauth2/authorize?client_id=1431383390162124920)'].join('')), ephemeral: true, components: [] });
-      }
-    
         });
     
     synchronizeSlashCommands(s4d.client, [
@@ -137,14 +135,28 @@
     
     });
     
-    s4d.client.on('messageCreate', async (s4dmessage) => {
-            if (s4dmessage.author.bot) {
-                return;
-            }
-              (s4dmessage.guild).setIcon((s4d.client.channels.cache.find((channel) => channel.name === ([(new Date().getDate()),'-',((new Date().getMonth())) + 1,'-',(s4dmessage.guild).id].join(''))).topic),'Car c\'est comme ça.')
+    s4d.client.on('ready', async () => {
+      day = ((new Date().getDate()));
     
+              while(s4d.client && s4d.client.token) {
+                  await delay(60);
+                    s4d.client.user.setPresence({status: "online",activities:[{name:([s4d.client.users.cache.size,' membres, ',s4d.client.guilds.cache.size,' serveur.'].join('')),type:"WATCHING"}]});
+        if (day != ((new Date().getDate()))) {
+          s4d.client.guilds.cache.forEach(async (s) =>{
+             (s).setIcon((s4d.client.channels.cache.find((channel) => channel.name === ([(new Date().getDate()),'-',((new Date().getMonth())) + 1,'-',(s).id].join(''))).topic),'Changement de logo !')
     
-        });
+            console.log((['Changement de logo du serveur : ',(s).name,' (',(s).id,').'].join('')));
+    
+          })
+          day = ((new Date().getDate()));
+        }
+    
+                  if (false) {
+                      console.log('ran')
+                  }
+              }
+    
+    });
     
     return s4d
 })();
