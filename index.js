@@ -93,5 +93,15 @@
             }
         });
     
+    s4d.client.on('guildCreate', async (s4dguild) => {
+      ((s4d.client.guilds.cache.get((s4dguild.id))).channels.cache.first()).send({content:String('Bonjour')});
+    
+    });
+    
+    s4d.client.on('ready', async () => {
+      s4d.client.user.setPresence({status: "online",activities:[{name:([s4d.client.users.cache.size,'membres, ',s4d.client.guilds.cache.size,'serveur.'].join('')),type:"WATCHING"}]});
+    
+    });
+    
     return s4d
 })();

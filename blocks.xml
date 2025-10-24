@@ -13,4 +13,59 @@
       </block>
     </value>
   </block>
+  <block type="s4d_on_added" id="IHdp{r}JzL;IdozSjxSg" x="-232" y="272">
+    <statement name="STATEMENTS">
+      <block type="s4d_send_channel" id="+s)]|mV|Fh.a.xoM4.yD">
+        <value name="CONTENT">
+          <block type="jg_text_remake_paragraph_quotes" id="-:9e(4cea9gl]i+@Edvt">
+            <field name="TEXT">Bonjour</field>
+          </block>
+        </value>
+        <value name="CHANNEL">
+          <block type="jg_alex_channels_first_channel_in_server" id="]R*iIkD*#`ZnvopQx}yv">
+            <field name="TYPE">first</field>
+            <value name="SERVER">
+              <block type="s4d_get_server" id="=m2GY$y#%8|2]fal-;5)">
+                <field name="SEARCH_TYPE">ID</field>
+                <value name="VALUE">
+                  <block type="s4d_add_server_id" id="Bf$)#ZRcTGgAU?XF7;#w"></block>
+                </value>
+              </block>
+            </value>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block type="s4d_on_connected" id="Lw!S*EllkhX8m{|{=ZM+" x="474" y="497">
+    <statement name="STATEMENTS">
+      <block type="s4d_set_bot_game" id="L6f;z_zrr8/vgpm8(Plv">
+        <field name="OIFD">online</field>
+        <field name="TYPE">WATCHING</field>
+        <value name="GAME">
+          <block type="text_join" id="_$Hr;!)`^;A`c+w.V6Zm">
+            <mutation items="4"></mutation>
+            <value name="ADD0">
+              <block type="s4d_bot_amount" id=")bFRS_E(bH_`DJ+Mh#XT">
+                <field name="T">users</field>
+              </block>
+            </value>
+            <value name="ADD1">
+              <block type="jg_text_remake_paragraph_quotes" id="70qfql42hCr*7GFuD}2~">
+                <field name="TEXT">membres, </field>
+              </block>
+            </value>
+            <value name="ADD2">
+              <block type="s4d_bot_server_count" id="yOvyd$U?/p$L%6@#M@Nh"></block>
+            </value>
+            <value name="ADD3">
+              <block type="jg_text_remake_paragraph_quotes" id="C[Tc:yko}#CNM8unPFM3">
+                <field name="TEXT">serveur.</field>
+              </block>
+            </value>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
 </xml>
