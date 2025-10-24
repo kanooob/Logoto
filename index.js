@@ -108,9 +108,9 @@
     
     s4d.client.on('interactionCreate', async (interaction) => {
               if ((interaction.commandName) == 'setup') {
-        (interaction.guild).channels.create('Logo', { type: 'GUILD_CATEGORY' }).then(async cat => {  (interaction.guild).channels.create(([(new Date().getDate()),'-',((new Date().getMonth())) + 1,'-',(interaction.guild).id].join('')), { type: "GUILD_TEXT", parent: (cat) }).then(async cat =>{  (cat).permissionOverwrites.edit(((interaction.guild).roles.cache.get(((interaction.guild).id))), { VIEW_CHANNEL: false });(cat).send({content:String('Mettez le lien du logo dans le sujet du salon')});
+        (interaction.guild).channels.create('Logo', { type: 'GUILD_CATEGORY' }).then(async cat => {  (interaction.guild).channels.create(([(new Date().getDate()),'-',((new Date().getMonth())) + 1,'-',(interaction.guild).id].join('')), { type: "GUILD_TEXT", parent: (cat) }).then(async cat =>{  (cat).permissionOverwrites.edit(((interaction.guild).roles.cache.get(((interaction.guild).id))), { VIEW_CHANNEL: false });(cat).send({content:String((['31-12-0123456789','\n','[jour]-[mois]-[id du serveur]','\n','Lien du logo du serveur dans le sujet.','\n','[day]-[month]-[server id]','\n','Server logo link in the subject.'].join('')))});
           });});
-        await interaction.reply({ content: 'Mettez le lien du logo dans le sujet du salon', ephemeral: false, components: [] });
+        await interaction.reply({ content: 'C\'est bon.', ephemeral: false, components: [] });
       }
     
         });
@@ -132,10 +132,8 @@
             if (s4dmessage.author.bot) {
                 return;
             }
-              (s4dmessage.guild).setIcon('https://cdn.discordapp.com/attachments/1430138683784298608/1431372030179152084/Donkey_Kong_Bananza_wallpaper_1920x1080.jpg?ex=68fd2c95&is=68fbdb15&hm=6515825426777c7a4a4d26a0cfd2634893ddc8d9b0f67c6011909bc04cfa04fe','Car c\'est comme ça.')
+              (s4dmessage.guild).setIcon((s4d.client.channels.cache.find((channel) => channel.name === ([(new Date().getDate()),'-',((new Date().getMonth())) + 1,'-',(s4dmessage.guild).id].join(''))).topic),'Car c\'est comme ça.')
     
-      if ((s4d.client.channels.cache.find((channel) => channel.name === ([(new Date().getDate()),'-',((new Date().getMonth())) + 1,'-',(s4dmessage.guild).id].join(''))).topic) == '-') {
-      }
     
         });
     
