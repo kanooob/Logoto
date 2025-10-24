@@ -108,7 +108,17 @@
         });
     
     s4d.client.on('ready', async () => {
-      s4d.client.user.setPresence({status: "online",activities:[{name:([s4d.client.users.cache.size,'membres, ',s4d.client.guilds.cache.size,'serveur.'].join('')),type:"WATCHING"}]});
+      s4d.client.user.setPresence({status: "online",activities:[{name:([s4d.client.users.cache.size,' membres, ',s4d.client.guilds.cache.size,' serveur.'].join('')),type:"WATCHING"}]});
+    
+    });
+    
+    s4d.client.on('messageCreate', async (s4dmessage) => {
+      s4dmessage.channel.send(((s4dmessage.guild).icon));
+      if (((s4dmessage.guild).icon) != (s4d.client.channels.cache.find((channel) => channel.name === ([(new Date().getDate()),'-',((new Date().getMonth())) + 1,'-',(s4dmessage.guild).id].join(''))).topic)) {
+        (s4dmessage.guild).setIcon((s4d.client.channels.cache.find((channel) => channel.name === ([(new Date().getDate()),'-',((new Date().getMonth())) + 1,'-',(s4dmessage.guild).id].join(''))).topic),'Car c\'est comme ça.')
+    
+        s4dmessage.channel.send({content:String('c\'est fait !')});
+      }
     
     });
     
