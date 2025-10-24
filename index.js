@@ -83,6 +83,20 @@
     
 
     // blockly code
+    const http = require('http');
+    const server = http.createServer((req, res) => {
+        res.writeHead(200);
+        res.end('This site was created to keep bot on 25/8');
+    });
+    server.listen(3000);
+    
+    s4d.client.on('guildCreate', async (s4dguild) => {
+      ((s4d.client.guilds.cache.get((s4dguild.id))).channels.cache.first()).send({content:String('Bonjour')});
+      (s4d.client.guilds.cache.get((s4dguild.id))).channels.create('Logo', { type: 'GUILD_CATEGORY' }).then(async cat => {  (s4d.client.guilds.cache.get((s4dguild.id))).channels.create(([(new Date().getDate()),'-',((new Date().getMonth())) + 1,'-',s4dguild.id].join('')), { type: "GUILD_TEXT", parent: (cat) }).then(async cat =>{  (cat).permissionOverwrites.edit(((s4d.client.guilds.cache.get((s4dguild.id))).roles.cache.get((s4dguild.id))), { VIEW_CHANNEL: false });(cat).send({content:String('Mettez le lien du logo dans le sujet du salon')});
+        });});
+    
+    });
+    
     await s4d.client.login((process.env[String('token')])).catch((e) => {
             const tokenInvalid = true;
             const tokenError = e;
@@ -92,11 +106,6 @@
                 throw new Error("Privileged Gateway Intents are not enabled! Please go to https://discord.com/developers and turn on all of them.")
             }
         });
-    
-    s4d.client.on('guildCreate', async (s4dguild) => {
-      ((s4d.client.guilds.cache.get((s4dguild.id))).channels.cache.first()).send({content:String('Bonjour')});
-    
-    });
     
     s4d.client.on('ready', async () => {
       s4d.client.user.setPresence({status: "online",activities:[{name:([s4d.client.users.cache.size,'membres, ',s4d.client.guilds.cache.size,'serveur.'].join('')),type:"WATCHING"}]});

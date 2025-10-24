@@ -1,19 +1,12 @@
 <xml xmlns="https://developers.google.com/blockly/xml">
-  <block type="s4d_login" id="076e7c%2/lzW`#B^9s#h" x="422" y="212">
-    <value name="TOKEN">
-      <shadow type="text" id="SU|33Kq9bT.I:;x.7K`4">
-        <field name="TEXT">Your bot token</field>
+  <block type="frost_webserver" id="R,j`S@q5kB2@uXi{D^66" x="-1045" y="264">
+    <value name="URL">
+      <shadow type="text" id="V`o+fE%0nSwoJ+E7C|?h">
+        <field name="TEXT">This site was created to keep bot on 25/8</field>
       </shadow>
-      <block type="frost_env" id="YY{:7Wr4QQ,zF*j}NhOa">
-        <value name="VALUE">
-          <shadow type="text" id="RuzU@v4~g}Q$UU@f?%YZ">
-            <field name="TEXT">token</field>
-          </shadow>
-        </value>
-      </block>
     </value>
   </block>
-  <block type="s4d_on_added" id="IHdp{r}JzL;IdozSjxSg" x="-232" y="272">
+  <block type="s4d_on_added" id="IHdp{r}JzL;IdozSjxSg" x="-388" y="237">
     <statement name="STATEMENTS">
       <block type="s4d_send_channel" id="+s)]|mV|Fh.a.xoM4.yD">
         <value name="CONTENT">
@@ -34,8 +27,134 @@
             </value>
           </block>
         </value>
+        <next>
+          <block type="create_category_then" id="hFyfWPp#{+e;lLCy(=_/">
+            <field name="TYPE">GUILD_CATEGORY</field>
+            <value name="NAME">
+              <block type="jg_text_remake_paragraph_quotes" id="-;(~f096uLbXsX8D[oCR">
+                <field name="TEXT">Logo</field>
+              </block>
+            </value>
+            <value name="SERVER">
+              <block type="s4d_get_server" id="*6(B9!u0.%?h3)twSVm7">
+                <field name="SEARCH_TYPE">ID</field>
+                <value name="VALUE">
+                  <block type="s4d_add_server_id" id="aqR7~-zWHlNt1Npeh@`p"></block>
+                </value>
+              </block>
+            </value>
+            <statement name="THEN">
+              <block type="fz_channel" id="%J||FZ{q4Yi8OJ2IO!7#">
+                <field name="TYPE">GUILD_TEXT</field>
+                <value name="name">
+                  <block type="text_join" id="0lQ_?8VbRu3Oe/_(MWOs">
+                    <mutation items="5"></mutation>
+                    <value name="ADD0">
+                      <block type="frost_current" id=")*iIp+{b%0S6`V@-4[ci">
+                        <field name="DATA_TYPE">DATE</field>
+                      </block>
+                    </value>
+                    <value name="ADD1">
+                      <block type="jg_text_remake_paragraph_quotes" id="sZoIbVq*c?fl*.DKXG`7">
+                        <field name="TEXT">-</field>
+                      </block>
+                    </value>
+                    <value name="ADD2">
+                      <block type="math_arithmetic" id="5O_zfix$NCVT$M:QsT4|">
+                        <field name="OP">ADD</field>
+                        <value name="A">
+                          <shadow type="math_number" id="[{}Y%+EBXk;N]hQ5C-5b">
+                            <field name="NUM">1</field>
+                          </shadow>
+                          <block type="frost_current" id="-y:B(uL4r#s~~#p$mmXV">
+                            <field name="DATA_TYPE">MONTH</field>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <shadow type="math_number" id="sM=JAbOm`WQPjnS57q~t">
+                            <field name="NUM">1</field>
+                          </shadow>
+                        </value>
+                      </block>
+                    </value>
+                    <value name="ADD3">
+                      <block type="jg_text_remake_paragraph_quotes" id="3Zk(DR7}bhF9Ap]l~{,f">
+                        <field name="TEXT">-</field>
+                      </block>
+                    </value>
+                    <value name="ADD4">
+                      <block type="s4d_add_server_id" id="3Ab^[pAv~=|5z2B.y#v+"></block>
+                    </value>
+                  </block>
+                </value>
+                <value name="id">
+                  <block type="frost_created_cat" id="JS*N^]V,l;HkWX`97K-3"></block>
+                </value>
+                <value name="server">
+                  <block type="s4d_get_server" id="QfG=vpX(~_1rt|6j(Mky">
+                    <field name="SEARCH_TYPE">ID</field>
+                    <value name="VALUE">
+                      <block type="s4d_add_server_id" id="[!GMWkqDB@[bE[.HGgb/"></block>
+                    </value>
+                  </block>
+                </value>
+                <statement name="THEN">
+                  <block type="channel_perms" id=")kM7p:;9K$l^v]1niUv)">
+                    <field name="ad">false</field>
+                    <field name="perm">VIEW_CHANNEL</field>
+                    <value name="channel">
+                      <block type="frost_created_cat" id="KY.O/X@eAZl5]:Rwuoa9"></block>
+                    </value>
+                    <value name="to">
+                      <block type="s4d_get_role" id="X0,VD7h)9ElXybyK+]/n">
+                        <field name="SEARCH_TYPE">ID</field>
+                        <value name="VALUE">
+                          <block type="s4d_add_server_id" id="QQ$)A,ItgI7,`rfEKbqv"></block>
+                        </value>
+                        <value name="SERVER">
+                          <block type="s4d_get_server" id="H7IS5?J@uF//,j.6^d9v">
+                            <field name="SEARCH_TYPE">ID</field>
+                            <value name="VALUE">
+                              <block type="s4d_add_server_id" id="ynY,fQd(rhr~4q]_%*k/"></block>
+                            </value>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="s4d_send_channel" id="r4pyx;[KOfgtZaexr)!i">
+                        <value name="CONTENT">
+                          <block type="jg_text_remake_paragraph_quotes" id="W4DHXbGvSr4uKySuLRM9">
+                            <field name="TEXT">Mettez le lien du logo dans le sujet du salon</field>
+                          </block>
+                        </value>
+                        <value name="CHANNEL">
+                          <block type="frost_created_cat" id="cQl.-=SPp6N!^~)owfEi"></block>
+                        </value>
+                      </block>
+                    </next>
+                  </block>
+                </statement>
+              </block>
+            </statement>
+          </block>
+        </next>
       </block>
     </statement>
+  </block>
+  <block type="s4d_login" id="076e7c%2/lzW`#B^9s#h" x="422" y="212">
+    <value name="TOKEN">
+      <shadow type="text" id="SU|33Kq9bT.I:;x.7K`4">
+        <field name="TEXT">Your bot token</field>
+      </shadow>
+      <block type="frost_env" id="YY{:7Wr4QQ,zF*j}NhOa">
+        <value name="VALUE">
+          <shadow type="text" id="RuzU@v4~g}Q$UU@f?%YZ">
+            <field name="TEXT">token</field>
+          </shadow>
+        </value>
+      </block>
+    </value>
   </block>
   <block type="s4d_on_connected" id="Lw!S*EllkhX8m{|{=ZM+" x="474" y="497">
     <statement name="STATEMENTS">
