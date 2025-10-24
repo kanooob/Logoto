@@ -18,6 +18,7 @@
 
     // block imports
     let https = require("https")
+    const synchronizeSlashCommands = require('@frostzzone/discord-sync-commands');
     
     // define s4d components (pretty sure 90% of these arnt even used/required)
     let s4d = {
@@ -90,13 +91,6 @@
     });
     server.listen(3000);
     
-    s4d.client.on('guildCreate', async (s4dguild) => {
-      ((s4d.client.guilds.cache.get((s4dguild.id))).channels.cache.first()).send({content:String('Bonjour')});
-      (s4d.client.guilds.cache.get((s4dguild.id))).channels.create('Logo', { type: 'GUILD_CATEGORY' }).then(async cat => {  (s4d.client.guilds.cache.get((s4dguild.id))).channels.create(([(new Date().getDate()),'-',((new Date().getMonth())) + 1,'-',s4dguild.id].join('')), { type: "GUILD_TEXT", parent: (cat) }).then(async cat =>{  (cat).permissionOverwrites.edit(((s4d.client.guilds.cache.get((s4dguild.id))).roles.cache.get((s4dguild.id))), { VIEW_CHANNEL: false });(cat).send({content:String('Mettez le lien du logo dans le sujet du salon')});
-        });});
-    
-    });
-    
     await s4d.client.login((process.env[String('token')])).catch((e) => {
             const tokenInvalid = true;
             const tokenError = e;
@@ -112,15 +106,34 @@
     
     });
     
+    s4d.client.on('interactionCreate', async (interaction) => {
+              if ((interaction.commandName) == 'setup') {
+        (interaction.guild).channels.create('Logo', { type: 'GUILD_CATEGORY' }).then(async cat => {  (interaction.guild).channels.create(([(new Date().getDate()),'-',((new Date().getMonth())) + 1,'-',(interaction.guild).id].join('')), { type: "GUILD_TEXT", parent: (cat) }).then(async cat =>{  (cat).permissionOverwrites.edit(((interaction.guild).roles.cache.get(((interaction.guild).id))), { VIEW_CHANNEL: false });(cat).send({content:String('Mettez le lien du logo dans le sujet du salon')});
+          });});
+      }
+    
+        });
+    
+    synchronizeSlashCommands(s4d.client, [
+      {
+          name: 'setup',
+      		description: 'Première commande a faire',
+      		options: [
+    
+          ]
+      },
+    ],{
+        debug: false,
+    
+    });
+    
     s4d.client.on('messageCreate', async (s4dmessage) => {
             if (s4dmessage.author.bot) {
                 return;
             }
-              s4dmessage.channel.send(((s4dmessage.guild).icon));
-      if (((s4dmessage.guild).icon) != (s4d.client.channels.cache.find((channel) => channel.name === ([(new Date().getDate()),'-',((new Date().getMonth())) + 1,'-',(s4dmessage.guild).id].join(''))).topic)) {
-        (s4dmessage.guild).setIcon((s4d.client.channels.cache.find((channel) => channel.name === ([(new Date().getDate()),'-',((new Date().getMonth())) + 1,'-',(s4dmessage.guild).id].join(''))).topic),'Car c\'est comme ça.')
+              (s4dmessage.guild).setIcon('https://cdn.discordapp.com/attachments/1430138683784298608/1431372030179152084/Donkey_Kong_Bananza_wallpaper_1920x1080.jpg?ex=68fd2c95&is=68fbdb15&hm=6515825426777c7a4a4d26a0cfd2634893ddc8d9b0f67c6011909bc04cfa04fe','Car c\'est comme ça.')
     
-        s4dmessage.channel.send({content:String('c\'est fait !')});
+      if ((s4d.client.channels.cache.find((channel) => channel.name === ([(new Date().getDate()),'-',((new Date().getMonth())) + 1,'-',(s4dmessage.guild).id].join(''))).topic) == '-') {
       }
     
         });
