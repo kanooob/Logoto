@@ -113,33 +113,35 @@
       }
       if ((interaction.commandName) == 'help') {
         await interaction.reply({ content: `🤖 Aide de Logoto - Automatisez votre Logo ! ⚙️
-        =================================================
+        ===========================================
     
         **Je suis le bot spécialisé dans l'automatisation du changement de logo de votre serveur, sans nécessiter de commandes complexes après la configuration.**
     
-        ### 🚀 Démarrage Rapide
+        ###
+        🚀 Démarrage Rapide
     
         * **\`/setup\`** : Crée un salon de démonstration pour comprendre le fonctionnement et démarrer rapidement la configuration.
         * **\`/help\`** : Affiche ce message d'aide.
         * **\`/invite\`** : Invitez le bot dans votre serveurs.
     
     
-        ### 🖼️ Système de Changement de Logo Automatique
+        ###
+        🖼️ Système de Changement de Logo Automatique
     
         Le bot surveille un salon pour planifier les changements de logo. Voici comment le configurer manuellement :
     
-        1.  **Créez le Salon de Planification :**
+        1. **Créez le Salon de Planification :**
             * Le nom du salon doit être au format suivant : \`[JOUR]-[MOIS]-[ID du Serveur]\`
             * **EXEMPLE :** Pour un logo qui changera le 31 décembre sur un serveur (il faut pas mettre cette id) : \`31-12-1287003115291414619\`
     
-        2.  **Préparez l'Image (le Logo) :**
+        2. **Préparez l'Image (le Logo) :**
             * Envoyez votre image de logo sur n'importe quel salon Discord et **copiez son lien direct (URL)**.
     
-        3.  **Planifiez le Changement :**
+        3. **Planifiez le Changement :**
             * Modifiez le **Sujet du Salon** que vous avez créé à l'étape 1.
             * Collez le **lien direct (URL)** de votre image dans le sujet du salon.
     
-        4.  **Résultat :**
+        4. **Résultat :**
             * Le bot changera automatiquement le logo du serveur au jour et au mois spécifiés dans le nom du salon !`, ephemeral: false, components: [] });
       }
       if ((interaction.commandName) == 'invite') {
