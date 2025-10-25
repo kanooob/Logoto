@@ -117,7 +117,7 @@
             * **\`/setup\`** : Crée un salon de démonstration pour comprendre le fonctionnement et démarrer rapidement la configuration.
             * **\`/help\`** : Affiche ce message d'aide.
             * **\`/invite\`** : Invitez le bot dans votre serveurs.
-            * **\`\\support\`** : Rejoigniez le serveur de support.
+            * **\`/support\`** : Rejoigniez le serveur de support.
     
     
             **🖼️ Système de Changement de Logo Automatique**
@@ -151,6 +151,7 @@
         * **\`/setup\`** : Crée un salon de démonstration pour comprendre le fonctionnement et démarrer rapidement la configuration.
         * **\`/help\`** : Affiche ce message d'aide.
         * **\`/invite\`** : Invitez le bot dans votre serveurs.
+        * **\`/support\`** : Rejoigniez le serveur de support.
     
     
         **🖼️ Système de Changement de Logo Automatique**
