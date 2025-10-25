@@ -19,7 +19,7 @@
   <block type="frost_webserver" id="R,j`S@q5kB2@uXi{D^66" x="878" y="166">
     <value name="URL">
       <shadow type="text" id="V`o+fE%0nSwoJ+E7C|?h">
-        <field name="TEXT">Ce bot à été créé le 04/10/2025</field>
+        <field name="TEXT">Ce bot à été créé le 24/10/2025</field>
       </shadow>
     </value>
   </block>
@@ -130,7 +130,7 @@
                       <block type="s4d_send_channel" id="r4pyx;[KOfgtZaexr)!i">
                         <value name="CONTENT">
                           <block type="jg_text_remake_paragraph_quotes" id="w{6^,`1:/)zas+V,Ufdh">
-                            <field name="TEXT">🤖 Aide de Logoto - Automatisez votre Logo ! ⚙️&amp;#10;===========================================&amp;#10;&amp;#10;**Je suis le bot spécialisé dans l'automatisation du changement de logo de votre serveur, sans nécessiter de commandes complexes après la configuration.**&amp;#10;&amp;#10;**🚀 Démarrage Rapide**&amp;#10;&amp;#10;* **`/setup`** : Crée un salon de démonstration pour comprendre le fonctionnement et démarrer rapidement la configuration.&amp;#10;* **`/help`** : Affiche ce message d'aide.&amp;#10;* **`/invite`** : Invitez le bot dans votre serveurs.&amp;#10;&amp;#10;&amp;#10;**🖼️ Système de Changement de Logo Automatique**&amp;#10;&amp;#10;Le bot surveille un salon pour planifier les changements de logo. Voici comment le configurer manuellement :&amp;#10;&amp;#10;1. **Créez le Salon de Planification :**&amp;#10;    * Le nom du salon doit être au format suivant : `[JOUR]-[MOIS]-[ID du Serveur]`&amp;#10;    * **EXEMPLE :** Pour un logo qui changera le 31 décembre sur un serveur (il faut pas mettre cette id) : `31-12-1287003115291414619`&amp;#10;&amp;#10;2. **Préparez l'Image (le Logo) :**&amp;#10;    * Envoyez votre image de logo sur n'importe quel salon Discord et **copiez son lien direct (URL)**.&amp;#10;&amp;#10;3. **Planifiez le Changement :**&amp;#10;    * Modifiez le **Sujet du Salon** que vous avez créé à l'étape 1.&amp;#10;    * Collez le **lien direct (URL)** de votre image dans le sujet du salon.&amp;#10;&amp;#10;4. Résultat :&amp;#10;    * Le bot changera automatiquement le logo du serveur au jour et au mois spécifiés dans le nom du salon !</field>
+                            <field name="TEXT">🤖 Aide de Logoto - Automatisez votre Logo ! ⚙️&amp;#10;===========================================&amp;#10;&amp;#10;**Je suis le bot spécialisé dans l'automatisation du changement de logo de votre serveur, sans nécessiter de commandes complexes après la configuration.**&amp;#10;&amp;#10;**🚀 Démarrage Rapide**&amp;#10;&amp;#10;* **`/setup`** : Crée un salon de démonstration pour comprendre le fonctionnement et démarrer rapidement la configuration.&amp;#10;* **`/help`** : Affiche ce message d'aide.&amp;#10;* **`/invite`** : Invitez le bot dans votre serveurs.&amp;#10;* **`\support`** : Rejoigniez le serveur de support.&amp;#10;&amp;#10;&amp;#10;**🖼️ Système de Changement de Logo Automatique**&amp;#10;&amp;#10;Le bot surveille un salon pour planifier les changements de logo. Voici comment le configurer manuellement :&amp;#10;&amp;#10;1. **Créez le Salon de Planification :**&amp;#10;    * Le nom du salon doit être au format suivant : `[JOUR]-[MOIS]-[ID du Serveur]`&amp;#10;    * **EXEMPLE :** Pour un logo qui changera le 31 décembre sur un serveur (il faut pas mettre cette id) : `31-12-1287003115291414619`&amp;#10;&amp;#10;2. **Préparez l'Image (le Logo) :**&amp;#10;    * Envoyez votre image de logo sur n'importe quel salon Discord et **copiez son lien direct (URL)**.&amp;#10;&amp;#10;3. **Planifiez le Changement :**&amp;#10;    * Modifiez le **Sujet du Salon** que vous avez créé à l'étape 1.&amp;#10;    * Collez le **lien direct (URL)** de votre image dans le sujet du salon.&amp;#10;&amp;#10;4. Résultat :&amp;#10;    * Le bot changera automatiquement le logo du serveur au jour et au mois spécifiés dans le nom du salon !</field>
                           </block>
                         </value>
                         <value name="CHANNEL">
@@ -219,6 +219,37 @@
                     </value>
                   </block>
                 </statement>
+                <next>
+                  <block type="controls_if" id="r!L!tYfz_X$-y4LJL$}5">
+                    <value name="IF0">
+                      <block type="logic_compare" id="+?WgzuXHFsP1J+(.I-^4">
+                        <field name="OP">EQ</field>
+                        <value name="A">
+                          <block type="interaction_name" id="M~9rjVsb7S#y({!c^+,9"></block>
+                        </value>
+                        <value name="B">
+                          <block type="jg_text_remake_paragraph_quotes" id="}vHA@3M72,1vAgDT_hg8">
+                            <field name="TEXT">support</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <statement name="DO0">
+                      <block type="slash_reply" id="~(Es9d+ri)(u_c6o[}A4">
+                        <value name="CONTENT">
+                          <block type="jg_text_remake_paragraph_quotes" id="U`dq%J0%dj}9hC?xr_*p">
+                            <field name="TEXT">Voici le lien pour rejoindre le serveur de support : [lien](https://discord.gg/TPXFVYVnXe)</field>
+                          </block>
+                        </value>
+                        <value name="BOOLEAN">
+                          <block type="logic_boolean" id="RBoB4sqUM-~DSgx8GVfI">
+                            <field name="BOOL">FALSE</field>
+                          </block>
+                        </value>
+                      </block>
+                    </statement>
+                  </block>
+                </next>
               </block>
             </next>
           </block>
@@ -263,6 +294,20 @@
                     <field name="TEXT">Invitez le bot</field>
                   </shadow>
                 </value>
+                <next>
+                  <block type="frost_slash_command" id="d=]C5=ozhYmu%{4S,;RY">
+                    <value name="NAME">
+                      <shadow type="text" id="?TL/?DLNJ5v1:lr1S`Kh">
+                        <field name="TEXT">support</field>
+                      </shadow>
+                    </value>
+                    <value name="DESC">
+                      <shadow type="text" id="1,oraiBN})nWX|xmTt=B">
+                        <field name="TEXT">Rejoigniez le serveur de support.</field>
+                      </shadow>
+                    </value>
+                  </block>
+                </next>
               </block>
             </next>
           </block>

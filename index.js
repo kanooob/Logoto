@@ -101,7 +101,7 @@
     const http = require('http');
     const server = http.createServer((req, res) => {
         res.writeHead(200);
-        res.end('Ce bot à été créé le 04/10/2025');
+        res.end('Ce bot à été créé le 24/10/2025');
     });
     server.listen(3000);
     
@@ -117,6 +117,7 @@
             * **\`/setup\`** : Crée un salon de démonstration pour comprendre le fonctionnement et démarrer rapidement la configuration.
             * **\`/help\`** : Affiche ce message d'aide.
             * **\`/invite\`** : Invitez le bot dans votre serveurs.
+            * **\`\\support\`** : Rejoigniez le serveur de support.
     
     
             **🖼️ Système de Changement de Logo Automatique**
@@ -173,6 +174,9 @@
       if ((interaction.commandName) == 'invite') {
         await interaction.reply({ content: 'Voici le lien pour ajouter le bot : [lien](https://discord.com/oauth2/authorize?client_id=1431383390162124920)', ephemeral: false, components: [] });
       }
+      if ((interaction.commandName) == 'support') {
+        await interaction.reply({ content: 'Voici le lien pour rejoindre le serveur de support : [lien](https://discord.gg/TPXFVYVnXe)', ephemeral: false, components: [] });
+      }
     
         });
     
@@ -192,6 +196,12 @@
       },{
           name: 'invite',
       		description: 'Invitez le bot',
+      		options: [
+    
+          ]
+      },{
+          name: 'support',
+      		description: 'Rejoigniez le serveur de support.',
       		options: [
     
           ]
