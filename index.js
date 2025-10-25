@@ -184,7 +184,7 @@
           s4d.client.guilds.cache.forEach(async (s) =>{
              (s).setIcon((s4d.client.channels.cache.find((channel) => channel.name === ([(new Date().getDate()),'-',((new Date().getMonth())) + 1,'-',(s).id].join(''))).topic),'Changement de logo !')
     
-            s4d.client.channels.cache.find((channel) => channel.name === ([(new Date().getDate()),'-',((new Date().getMonth())) + 1,'-',(s).id].join(''))).send({content:String((['<:Copiede:1431613481055944740> **Logo du Serveur Mis à Jour !** Action : Le logo du serveur a été mis à jour automatiquement. Date :',[(new Date().getDate()),'-',((new Date().getMonth())) + 1].join(''),'Nouveau Logo :',s4d.client.channels.cache.find((channel) => channel.name === ([(new Date().getDate()),'-',((new Date().getMonth())) + 1,'-',(s).id].join(''))).topic].join('')))});
+            s4d.client.channels.cache.find((channel) => channel.name === ([(new Date().getDate()),'-',((new Date().getMonth())) + 1,'-',(s).id].join(''))).send({content:String((['<:Valide:1431646854193610823> **Logo du Serveur Mis à Jour !** Action : Le logo du serveur a été mis à jour automatiquement. Date :',[(new Date().getDate()),'-',((new Date().getMonth())) + 1].join(''),'Nouveau Logo :',s4d.client.channels.cache.find((channel) => channel.name === ([(new Date().getDate()),'-',((new Date().getMonth())) + 1,'-',(s).id].join(''))).topic].join('')))});
             console.log((['Changement de logo du serveur : ',(s).name,' (',(s).id,').'].join('')));
     
           })
