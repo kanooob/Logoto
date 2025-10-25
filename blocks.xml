@@ -2,6 +2,27 @@
   <variables>
     <variable id="!+qDd7]|maDZtQ|}L:0|">day</variable>
   </variables>
+  <block type="s4d_login" id="076e7c%2/lzW`#B^9s#h" x="900" y="43">
+    <value name="TOKEN">
+      <shadow type="text" id="SU|33Kq9bT.I:;x.7K`4">
+        <field name="TEXT">Your bot token</field>
+      </shadow>
+      <block type="frost_env" id="YY{:7Wr4QQ,zF*j}NhOa">
+        <value name="VALUE">
+          <shadow type="text" id="RuzU@v4~g}Q$UU@f?%YZ">
+            <field name="TEXT">token</field>
+          </shadow>
+        </value>
+      </block>
+    </value>
+  </block>
+  <block type="frost_webserver" id="R,j`S@q5kB2@uXi{D^66" x="878" y="166">
+    <value name="URL">
+      <shadow type="text" id="V`o+fE%0nSwoJ+E7C|?h">
+        <field name="TEXT">Ce bot à été créé le 04/10/2025</field>
+      </shadow>
+    </value>
+  </block>
   <block type="on_slash" id="M9k;2t1VKPgR]FYUz.Y," x="1522" y="282">
     <statement name="STATEMENTS">
       <block type="controls_if" id="LDmTnFPquXgVxh@wAzB;">
@@ -196,7 +217,7 @@
               <block type="slash_reply" id="S78q]X~Zh#*aI#EfN[^~">
                 <value name="CONTENT">
                   <block type="jg_text_remake_paragraph_quotes" id="O^uHk+V4Ns;)wJ1?@D/?">
-                    <field name="TEXT">###&amp;#10;Aide de LogAuto&amp;#10;Je suis le bot de gestion du logo de votre serveur. Je suis spécialisé dans l'automatisation des changements de logo&amp;#10;&amp;#10;**Commandes principales (Logo Automatique)**&amp;#10;`/setup` | Créé un salon de démonstration pour comprendre comment marche le bot.&amp;#10;&amp;#10;**Comment utiliser le système de changement de logo sans commande**&amp;#10;1. Créer/modifier un salon avec comme nom :&amp;#10;[jour du changement de logo]-[mois du changement de logo]-[id du serveur]&amp;#10;-# le salon aura comme nom que des chiffres et des tirés.&amp;#10;**EX :** 31-12-1287003115291414619&amp;#10;2. Avoir le lien d'une image, vous pouvez envoyer une image sur discord (sur le salon que vous avez créer) et copiez le lien de l'image.&amp;#10;3. Changer le sujet du salon avec le lien que vous avez copié.&amp;#10;4. Attendre le jour du changement et admire le résultat.</field>
+                    <field name="TEXT">🤖 Aide de Logoto - Automatisez votre Logo ! ⚙️&amp;#10;=================================================&amp;#10;&amp;#10;**Je suis le bot spécialisé dans l'automatisation du changement de logo de votre serveur, sans nécessiter de commandes complexes après la configuration.**&amp;#10;&amp;#10;### 🚀 Démarrage Rapide&amp;#10;&amp;#10;* **`/setup`** : Crée un salon de démonstration pour comprendre le fonctionnement et démarrer rapidement la configuration.&amp;#10;* **`/help`** : Affiche ce message d'aide.&amp;#10;* **`/invite`** : Invitez le bot dans votre serveurs.&amp;#10;&amp;#10;&amp;#10;### 🖼️ Système de Changement de Logo Automatique&amp;#10;&amp;#10;Le bot surveille un salon pour planifier les changements de logo. Voici comment le configurer manuellement :&amp;#10;&amp;#10;1.  **Créez le Salon de Planification :**&amp;#10;    * Le nom du salon doit être au format suivant : `[JOUR]-[MOIS]-[ID du Serveur]`&amp;#10;    * **EXEMPLE :** Pour un logo qui changera le 31 décembre sur un serveur (il faut pas mettre cette id) : `31-12-1287003115291414619`&amp;#10;&amp;#10;2.  **Préparez l'Image (le Logo) :**&amp;#10;    * Envoyez votre image de logo sur n'importe quel salon Discord et **copiez son lien direct (URL)**.&amp;#10;&amp;#10;3.  **Planifiez le Changement :**&amp;#10;    * Modifiez le **Sujet du Salon** que vous avez créé à l'étape 1.&amp;#10;    * Collez le **lien direct (URL)** de votre image dans le sujet du salon.&amp;#10;&amp;#10;4.  **Résultat :**&amp;#10;    * Le bot changera automatiquement le logo du serveur au jour et au mois spécifiés dans le nom du salon !</field>
                   </block>
                 </value>
                 <value name="BOOLEAN">
@@ -206,33 +227,43 @@
                 </value>
               </block>
             </statement>
+            <next>
+              <block type="controls_if" id="/C##lNs{LbciL?(M)+bR">
+                <value name="IF0">
+                  <block type="logic_compare" id="kGspGp)L[o*2YqOFBN|z">
+                    <field name="OP">EQ</field>
+                    <value name="A">
+                      <block type="interaction_name" id="9`q_;3{F4(+$(kUfY%NQ"></block>
+                    </value>
+                    <value name="B">
+                      <block type="jg_text_remake_paragraph_quotes" id="u1I~NdyV`1WAJ~?Sm:r4">
+                        <field name="TEXT">invite</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <statement name="DO0">
+                  <block type="slash_reply" id="N5cbOEn!y+`:o{d3[OVo">
+                    <value name="CONTENT">
+                      <block type="jg_text_remake_paragraph_quotes" id="?q~;IQ7Cj9[@^r#N:+EQ">
+                        <field name="TEXT">Voici le lien pour ajouter le bot : [lien](https://discord.com/oauth2/authorize?client_id=1431383390162124920)</field>
+                      </block>
+                    </value>
+                    <value name="BOOLEAN">
+                      <block type="logic_boolean" id="8Ft$gcW=h8lMU=FE5_p(">
+                        <field name="BOOL">FALSE</field>
+                      </block>
+                    </value>
+                  </block>
+                </statement>
+              </block>
+            </next>
           </block>
         </next>
       </block>
     </statement>
   </block>
-  <block type="frost_webserver" id="R,j`S@q5kB2@uXi{D^66" x="6" y="377">
-    <value name="URL">
-      <shadow type="text" id="V`o+fE%0nSwoJ+E7C|?h">
-        <field name="TEXT">Ce bot à été créé le 04/10/2025</field>
-      </shadow>
-    </value>
-  </block>
-  <block type="s4d_login" id="076e7c%2/lzW`#B^9s#h" x="733" y="344">
-    <value name="TOKEN">
-      <shadow type="text" id="SU|33Kq9bT.I:;x.7K`4">
-        <field name="TEXT">Your bot token</field>
-      </shadow>
-      <block type="frost_env" id="YY{:7Wr4QQ,zF*j}NhOa">
-        <value name="VALUE">
-          <shadow type="text" id="RuzU@v4~g}Q$UU@f?%YZ">
-            <field name="TEXT">token</field>
-          </shadow>
-        </value>
-      </block>
-    </value>
-  </block>
-  <block type="frost_slash_register" id="}A:$DED(O`PGQ,Nm+r_," x="-390" y="612">
+  <block type="frost_slash_register" id="}A:$DED(O`PGQ,Nm+r_," x="567" y="339">
     <statement name="OPTIONS">
       <block type="frost_slash_command" id="L`/^#xUK12c.4}E3m@[n">
         <value name="NAME">
@@ -257,6 +288,20 @@
                 <field name="TEXT">Les commandes du bot</field>
               </shadow>
             </value>
+            <next>
+              <block type="frost_slash_command" id="z.Ed5@~2]|:HS)L4n?NF">
+                <value name="NAME">
+                  <shadow type="text" id="}OcwXZn+%f]JGy.UN[Ru">
+                    <field name="TEXT">invite</field>
+                  </shadow>
+                </value>
+                <value name="DESC">
+                  <shadow type="text" id="y~B3?]ao+wR*~FYNP#Ji">
+                    <field name="TEXT">Invitez le bot</field>
+                  </shadow>
+                </value>
+              </block>
+            </next>
           </block>
         </next>
       </block>
