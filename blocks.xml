@@ -325,12 +325,7 @@
           </block>
         </value>
         <next>
-          <block type="s4d_forever3" id="~^S#GC8Qzc32YWg%|taF">
-            <value name="DELAY">
-              <shadow type="math_number" id="dPsvplWPFrb2HEym!JSW">
-                <field name="NUM">60</field>
-              </shadow>
-            </value>
+          <block type="s4d_forever" id="YCihHCc-_)a/#ZC.^y7s">
             <statement name="STATEMENT">
               <block type="s4d_set_bot_game" id="L6f;z_zrr8/vgpm8(Plv">
                 <field name="OIFD">online</field>
@@ -494,15 +489,19 @@
                         </next>
                       </block>
                     </statement>
+                    <next>
+                      <block type="s4d_wait_seconds" id="zUSfz3pT7),R$_zz*rsr">
+                        <value name="TIME">
+                          <shadow type="math_number" id="bUA6s2tvL0MiCNf|Se^+">
+                            <field name="NUM">60</field>
+                          </shadow>
+                        </value>
+                      </block>
+                    </next>
                   </block>
                 </next>
               </block>
             </statement>
-            <value name="LOG">
-              <shadow type="logic_boolean" id="Q9hsCor(~U5/BWw-*:7K">
-                <field name="BOOL">FALSE</field>
-              </shadow>
-            </value>
           </block>
         </next>
       </block>

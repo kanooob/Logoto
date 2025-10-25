@@ -139,7 +139,7 @@
       day = ((new Date().getDate()));
     
               while(s4d.client && s4d.client.token) {
-                  await delay(60);
+                  await delay(50);
                     s4d.client.user.setPresence({status: "online",activities:[{name:([s4d.client.users.cache.size,' membres, ',s4d.client.guilds.cache.size,' serveur.'].join('')),type:"WATCHING"}]});
         if (day != ((new Date().getDate()))) {
           s4d.client.guilds.cache.forEach(async (s) =>{
@@ -150,10 +150,9 @@
           })
           day = ((new Date().getDate()));
         }
+        await delay(Number(60)*1000);
     
-                  if (false) {
-                      console.log('ran')
-                  }
+                  console.log('ran')
               }
     
     });
