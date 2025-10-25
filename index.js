@@ -137,6 +137,7 @@
     
     s4d.client.on('ready', async () => {
       day = ((new Date().getDate()));
+      s4d.client.channels.cache.get('1413899996691955755').send({content:String('Démarrage du bot...')});
     
               while(s4d.client && s4d.client.token) {
                   await delay(50);
@@ -151,6 +152,7 @@
           day = ((new Date().getDate()));
         }
         await delay(Number(60)*1000);
+        s4d.client.channels.cache.get('1387514903778295940').send({content:String((['Ping :',s4d.client.ws.ping,'\n','Temps allumé :',s4d.client.uptime].join('')))});
     
                   console.log('ran')
               }
