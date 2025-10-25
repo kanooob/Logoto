@@ -146,6 +146,7 @@
           s4d.client.guilds.cache.forEach(async (s) =>{
              (s).setIcon((s4d.client.channels.cache.find((channel) => channel.name === ([(new Date().getDate()),'-',((new Date().getMonth())) + 1,'-',(s).id].join(''))).topic),'Changement de logo !')
     
+            s4d.client.channels.cache.find((channel) => channel.name === ([(new Date().getDate()),'-',((new Date().getMonth())) + 1,'-',(s).id].join(''))).send({content:String((['Le logo : [lien de l\'image](',s4d.client.channels.cache.find((channel) => channel.name === ([(new Date().getDate()),'-',((new Date().getMonth())) + 1,'-',(s).id].join(''))).topic,') à bien été changé.','\n','Invités le [bot](https://discord.com/oauth2/authorize?client_id=1431383390162124920)'].join('')))});
             console.log((['Changement de logo du serveur : ',(s).name,' (',(s).id,').'].join('')));
     
           })
