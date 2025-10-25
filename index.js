@@ -90,11 +90,25 @@
     s4d.client.on('interactionCreate', async (interaction) => {
               if ((interaction.commandName) == 'setup') {
         (interaction.guild).channels.create('Logo', { type: 'GUILD_CATEGORY' }).then(async cat => {  (interaction.guild).channels.create(([(new Date().getDate()),'-',((new Date().getMonth())) + 1,'-',(interaction.guild).id].join('')), { type: "GUILD_TEXT", parent: (cat) }).then(async cat =>{  (cat).permissionOverwrites.edit(((interaction.guild).roles.cache.get(((interaction.guild).id))), { VIEW_CHANNEL: false });(cat).send({content:String((['31-12-0123456789','\n','[jour]-[mois]-[id du serveur]','\n','Lien du logo du serveur dans le sujet.','\n','[day]-[month]-[server id]','\n','Server logo link in the subject.'].join('')))});
+            await interaction.reply({ content: ('Le salon à été créé :' + String(cat)), ephemeral: true, components: [] });
           });});
-        await interaction.reply({ content: 'C\'est bon.', ephemeral: false, components: [] });
       }
       if ((interaction.commandName) == 'help') {
-        await interaction.reply({ content: (['**Paramétré le changement de logo avec le salon**','\n','31-12-0123456789','\n','[jour]-[mois]-[id du serveur]','\n','Lien du logo du serveur dans le sujet.','\n','[day]-[month]-[server id]','\n','Server logo link in the subject.','\n','**Inviter le bot**','\n','[Lien d\'invitation](https://discord.com/oauth2/authorize?client_id=1431383390162124920)'].join('')), ephemeral: true, components: [] });
+        await interaction.reply({ content: `###
+        Aide de LogAuto
+        Je suis le bot de gestion du logo de votre serveur. Je suis spécialisé dans l'automatisation des changements de logo
+    
+        **Commandes principales (Logo Automatique)**
+        \`/setup\` | Créé un salon de démonstration pour comprendre comment marche le bot.
+    
+        **Comment utiliser le système de changement de logo sans commande**
+        1. Créer/modifier un salon avec comme nom :
+        [jour du changement de logo]-[mois du changement de logo]-[id du serveur]
+        -# le salon aura comme nom que des chiffres et des tirés.
+        **EX :** 31-12-1287003115291414619
+        2. Avoir le lien d'une image, vous pouvez envoyer une image sur discord (sur le salon que vous avez créer) et copiez le lien de l'image.
+        3. Changer le sujet du salon avec le lien que vous avez copié.
+        4. Attendre le jour du changement et admire le résultat.`, ephemeral: false, components: [] });
       }
     
         });
@@ -146,7 +160,7 @@
           s4d.client.guilds.cache.forEach(async (s) =>{
              (s).setIcon((s4d.client.channels.cache.find((channel) => channel.name === ([(new Date().getDate()),'-',((new Date().getMonth())) + 1,'-',(s).id].join(''))).topic),'Changement de logo !')
     
-            s4d.client.channels.cache.find((channel) => channel.name === ([(new Date().getDate()),'-',((new Date().getMonth())) + 1,'-',(s).id].join(''))).send({content:String((['Le logo : [lien de l\'image](',s4d.client.channels.cache.find((channel) => channel.name === ([(new Date().getDate()),'-',((new Date().getMonth())) + 1,'-',(s).id].join(''))).topic,') à bien été changé.','\n','Invités le [bot](https://discord.com/oauth2/authorize?client_id=1431383390162124920)'].join('')))});
+            s4d.client.channels.cache.find((channel) => channel.name === ([(new Date().getDate()),'-',((new Date().getMonth())) + 1,'-',(s).id].join(''))).send({content:String((['<:Copiede:1431613481055944740> **Logo du Serveur Mis à Jour !** Action : Le logo du serveur a été mis à jour automatiquement. Date :',[(new Date().getDate()),'-',((new Date().getMonth())) + 1].join(''),'Nouveau Logo :',s4d.client.channels.cache.find((channel) => channel.name === ([(new Date().getDate()),'-',((new Date().getMonth())) + 1,'-',(s).id].join(''))).topic].join('')))});
             console.log((['Changement de logo du serveur : ',(s).name,' (',(s).id,').'].join('')));
     
           })
