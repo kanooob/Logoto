@@ -365,7 +365,7 @@
                         </value>
                         <value name="ADD3">
                           <block type="jg_text_remake_paragraph_quotes" id="C[Tc:yko}#CNM8unPFM3">
-                            <field name="TEXT"> serveur.</field>
+                            <field name="TEXT"> serveurs.</field>
                           </block>
                         </value>
                       </block>
@@ -510,7 +510,7 @@
                           <block type="s4d_wait_seconds" id="zUSfz3pT7),R$_zz*rsr">
                             <value name="TIME">
                               <shadow type="math_number" id="bUA6s2tvL0MiCNf|Se^+">
-                                <field name="NUM">60</field>
+                                <field name="NUM">180</field>
                               </shadow>
                             </value>
                             <next>

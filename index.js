@@ -141,7 +141,7 @@
     
               while(s4d.client && s4d.client.token) {
                   await delay(50);
-                    s4d.client.user.setPresence({status: "online",activities:[{name:([s4d.client.users.cache.size,' membres, ',s4d.client.guilds.cache.size,' serveur.'].join('')),type:"WATCHING"}]});
+                    s4d.client.user.setPresence({status: "online",activities:[{name:([s4d.client.users.cache.size,' membres, ',s4d.client.guilds.cache.size,' serveurs.'].join('')),type:"WATCHING"}]});
         if (day != ((new Date().getDate()))) {
           s4d.client.guilds.cache.forEach(async (s) =>{
              (s).setIcon((s4d.client.channels.cache.find((channel) => channel.name === ([(new Date().getDate()),'-',((new Date().getMonth())) + 1,'-',(s).id].join(''))).topic),'Changement de logo !')
@@ -151,7 +151,7 @@
           })
           day = ((new Date().getDate()));
         }
-        await delay(Number(60)*1000);
+        await delay(Number(180)*1000);
         s4d.client.channels.cache.get('1387514903778295940').send({content:String((['Ping :',s4d.client.ws.ping,'\n','Temps allumé :',s4d.client.uptime].join('')))});
     
                   console.log('ran')
