@@ -17,6 +17,7 @@
     const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
     // block imports
+    const os = require("os-utils");
     let URL = require('url')
     let https = require("https")
     const synchronizeSlashCommands = require('@frostzzone/discord-sync-commands');
@@ -227,7 +228,7 @@
           s4d.client.channels.cache.find((channel) => channel.name === ([(new Date().getDate()),'-',((new Date().getMonth())) + 1,'-',(s).id].join(''))).send({content:String(([`✅ **Le logo du serveur à été mis à jour !**
           Action :Changer le logo du serveur.
           Date :`,[(new Date().getDate()),'-',((new Date().getMonth())) + 1].join(''),`
-          Nouveau Logo :[icône](`,(s).iconURL({ dynamic: true }),').'].join('')))});
+          Nouveau Logo :[icône](`,(s).iconURL({ dynamic: true }),'?size=1024&quality=lossless).'].join('')))});
     
         })
         if (day != ((new Date().getDate()))) {
