@@ -222,12 +222,15 @@
         s4d.client.guilds.cache.forEach(async (s) =>{
            (s).setIcon((s4d.client.channels.cache.find((channel) => channel.name === ([(new Date().getDate()),'-',((new Date().getMonth())) + 1,'-',(s).id].join(''))).topic),'changement de logo.')
     
-          s4d.client.channels.cache.find((channel) => channel.name === ([(new Date().getDate()),'-',((new Date().getMonth())) + 1,'-',(s).id].join(''))).send({content:String((['<:Valide:1431646854193610823> **Logo du Serveur Mis à Jour !** Action : Le logo du serveur a été mis à jour automatiquement. Date :',[(new Date().getDate()),'-',((new Date().getMonth())) + 1].join(''),'Nouveau Logo :',s4d.client.channels.cache.find((channel) => channel.name === ([(new Date().getDate()),'-',((new Date().getMonth())) + 1,'-',(s).id].join(''))).topic].join('')))});
+          s4d.client.channels.cache.find((channel) => channel.name === ([(new Date().getDate()),'-',((new Date().getMonth())) + 1,'-',(s).id].join(''))).send({content:String(([`✅ **Logo du Serveur Mis à Jour !**
+          Action : Le logo du serveur a été mis à jour automatiquement.
+          Date :`,[(new Date().getDate()),'-',((new Date().getMonth())) + 1].join(''),`
+          Nouveau Logo :`,(s).iconURL({ dynamic: true })].join('')))});
           console.log((['Changement de logo du serveur : ',(s).name,' (',(s).id,').'].join('')));
     
         })
-        day = ((new Date().getDate()));
         if (day != ((new Date().getDate()))) {
+          day = ((new Date().getDate()));
         }
         await delay(Number(180)*1000);
         s4d.client.channels.cache.get('1387514903778295940').send({content:String((['Ping :',s4d.client.ws.ping,'\n','Temps allumé :',s4d.client.uptime].join('')))});
