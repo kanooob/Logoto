@@ -99,10 +99,8 @@
                   await delay(50);
                     s4d.client.user.setPresence({status: "online",activities:[{name:([s4d.client.users.cache.size,' membres, ',s4d.client.guilds.cache.size,' serveurs.'].join('')),type:"WATCHING"}]});
         if (day != ((new Date().getDate()))) {
-          eventEmitter.emit('logo');
-          await delay(Number(1)*1000);
-          eventEmitter.emit('logo-annee');
           day = ((new Date().getDate()));
+          eventEmitter.emit('logo');
         }
         await delay(Number(180)*1000);
         ms_on = (s4d.client.uptime);
@@ -262,27 +260,23 @@
     
     eventEmitter.on('logo', async => {
           s4d.client.guilds.cache.forEach(async (s) =>{
-         (s).setIcon((s4d.client.channels.cache.find((channel) => channel.name === ([(new Date().getDate()),'-',((new Date().getMonth())) + 1].join(''))).topic),'changement de logo.')
+         if (typeof s4d.client.channels.cache.find((channel) => channel.name === ([(new Date().getDate()),'-',((new Date().getMonth())) + 1].join(''))) !== undefined) {
+          (s).setIcon((s4d.client.channels.cache.find((channel) => channel.name === ([(new Date().getDate()),'-',((new Date().getMonth())) + 1].join(''))).topic),'changement de logo.')
     
-        console.log((['Changement de logo du serveur : ',(s).name,' (',(s).id,').'].join('')));
-        s4d.client.channels.cache.find((channel) => channel.name === ([(new Date().getDate()),'-',((new Date().getMonth())) + 1].join(''))).send({content:String(([`✅ **Le logo du serveur à été mis à jour !**
-        Action :Changer le logo du serveur.
-        Date :`,[(new Date().getDate()),'-',((new Date().getMonth())) + 1].join(''),`
-        Nouveau Logo :`,s4d.client.channels.cache.find((channel) => channel.name === ([(new Date().getDate()),'-',((new Date().getMonth())) + 1].join(''))).topic].join('')))});
+          s4d.client.channels.cache.find((channel) => channel.name === ([(new Date().getDate()),'-',((new Date().getMonth())) + 1].join(''))).send({content:String(([`✅ **Le logo du serveur à été mis à jour !**
+          Action :Changer le logo du serveur.
+          Date :`,[(new Date().getDate()),'-',((new Date().getMonth())) + 1].join(''),`
+          Nouveau Logo :`,s4d.client.channels.cache.find((channel) => channel.name === ([(new Date().getDate()),'-',((new Date().getMonth())) + 1].join(''))).topic].join('')))});
+          console.log((['Changement de logo du serveur : ',(s).name,' (',(s).id,').'].join('')));
+        } else if (typeof s4d.client.channels.cache.find((channel) => channel.name === ([(new Date().getDate()),'-',((new Date().getMonth())) + 1,'-',(new Date().getFullYear())].join(''))) !== undefined) {
+          (s).setIcon((s4d.client.channels.cache.find((channel) => channel.name === ([(new Date().getDate()),'-',((new Date().getMonth())) + 1,'-',(new Date().getFullYear())].join(''))).topic),'changement de logo.')
     
-      })
-    
-      });
-    
-    eventEmitter.on('logo-annee', async => {
-          s4d.client.guilds.cache.forEach(async (s) =>{
-         (s).setIcon((s4d.client.channels.cache.find((channel) => channel.name === ([(new Date().getDate()),'-',((new Date().getMonth())) + 1,'-',(new Date().getFullYear())].join(''))).topic),'changement de logo.')
-    
-        console.log((['Changement de logo du serveur : ',(s).name,' (',(s).id,').'].join('')));
-        s4d.client.channels.cache.find((channel) => channel.name === ([(new Date().getDate()),'-',((new Date().getMonth())) + 1,'-',(new Date().getFullYear())].join(''))).send({content:String(([`✅ **Le logo du serveur à été mis à jour !**
-        Action :Changer le logo du serveur.
-        Date :`,[(new Date().getDate()),'-',((new Date().getMonth())) + 1,'-',(new Date().getFullYear())].join(''),`
-        Nouveau Logo :`,s4d.client.channels.cache.find((channel) => channel.name === ([(new Date().getDate()),'-',((new Date().getMonth())) + 1,'-',(new Date().getFullYear())].join(''))).topic].join('')))});
+          s4d.client.channels.cache.find((channel) => channel.name === ([(new Date().getDate()),'-',((new Date().getMonth())) + 1,'-',(new Date().getFullYear())].join(''))).send({content:String(([`✅ **Le logo du serveur à été mis à jour !**
+          Action :Changer le logo du serveur.
+          Date :`,[(new Date().getDate()),'-',((new Date().getMonth())) + 1,'-',(new Date().getFullYear())].join(''),`
+          Nouveau Logo :`,s4d.client.channels.cache.find((channel) => channel.name === ([(new Date().getDate()),'-',((new Date().getMonth())) + 1,'-',(new Date().getFullYear())].join(''))).topic].join('')))});
+          console.log((['Changement de logo du serveur : ',(s).name,' (',(s).id,').'].join('')));
+        }
     
       })
     
