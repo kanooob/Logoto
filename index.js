@@ -221,17 +221,21 @@
     
     eventEmitter.on('logo', async => {
           s4d.client.guilds.cache.forEach(async (s) =>{
-         (s).setIcon((s4d.client.channels.cache.find((channel) => channel.name === ([(new Date().getDate()),'-',((new Date().getMonth())) + 1,'-',(s).id].join(''))).topic),'changement de logo.')
-    
-        s4d.client.channels.cache.find((channel) => channel.name === ([(new Date().getDate()),'-',((new Date().getMonth())) + 1,'-',(s).id].join(''))).send({content:String(([`✅ **Le logo du serveur à été mis à jour !**
-        Action :Changer le logo du serveur.
-        Date :`,[(new Date().getDate()),'-',((new Date().getMonth())) + 1,'-',(s).id].join(''),`
-        Nouveau Logo :`,s4d.client.channels.cache.find((channel) => channel.name === ([(new Date().getDate()),'-',((new Date().getMonth())) + 1,'-',(s).id].join(''))).topic].join('')))});
-        console.log((['Changement de logo du serveur : ',(s).name,' (',(s).id,').'].join('')));
     
       })
     
       });
+    
+    s4d.client.on('messageCreate', async (s4dmessage) => {
+      (s4dmessage.guild).setIcon((s4d.client.channels.cache.find((channel) => channel.name === ([(new Date().getDate()),'-',((new Date().getMonth())) + 1,'-',(s4dmessage.guild).id].join(''))).topic),'changement de logo.')
+    
+      s4d.client.channels.cache.find((channel) => channel.name === ([(new Date().getDate()),'-',((new Date().getMonth())) + 1,'-',(s4dmessage.guild).id].join(''))).send({content:String(([`✅ **Le logo du serveur à été mis à jour !**
+      Action :Changer le logo du serveur.
+      Date :`,[(new Date().getDate()),'-',((new Date().getMonth())) + 1].join(''),`
+      Nouveau Logo :`,s4d.client.channels.cache.find((channel) => channel.name === ([(new Date().getDate()),'-',((new Date().getMonth())) + 1,'-',(s4dmessage.guild).id].join(''))).topic].join('')))});
+      console.log((['Changement de logo du serveur : ',(s4dmessage.guild).name,' (',(s4dmessage.guild).id,').'].join('')));
+    
+    });
     
     s4d.client.on('guildCreate', async (s4dguild) => {
       s4d.client.channels.cache.get('1432341468059537419').send({content:String((['Bot ajouté dans **',s4dguild.name,'** (',s4dguild.id,').'].join('')))});
