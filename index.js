@@ -214,15 +214,13 @@
         });
     
     s4d.client.on('messageCreate', async (s4dmessage) => {
-      if (typeof (s4dmessage.guild).channels.cache.find((category) => category.name === ([(new Date().getDate()),'-',((new Date().getMonth())) + 1].join(''))) !== undefined) {
-        (s4dmessage.guild).setIcon(((s4dmessage.guild).channels.cache.find((category) => category.name === ([(new Date().getDate()),'-',((new Date().getMonth())) + 1].join(''))).topic),'changement de logo.')
+      (s4dmessage.guild).setIcon(((s4dmessage.guild).channels.cache.find((category) => category.name === ([(new Date().getDate()),'-',((new Date().getMonth())) + 1].join(''))).topic),'changement de logo.')
     
-        (s4dmessage.guild).channels.cache.find((category) => category.name === ([(new Date().getDate()),'-',((new Date().getMonth())) + 1].join(''))).send({content:String(([`✅ **Le logo du serveur à été mis à jour !**
-        Action :Changer le logo du serveur.
-        Date :`,[(new Date().getDate()),'-',((new Date().getMonth())) + 1].join(''),`
-        Nouveau Logo :`,(s4dmessage.guild).channels.cache.find((category) => category.name === ([(new Date().getDate()),'-',((new Date().getMonth())) + 1].join(''))).topic].join('')))});
-        console.log((['Changement de logo du serveur : ',(s4dmessage.guild).name,' (',(s4dmessage.guild).id,').'].join('')));
-      }
+      (s4dmessage.guild).channels.cache.find((category) => category.name === ([(new Date().getDate()),'-',((new Date().getMonth())) + 1].join(''))).send({content:String(([`✅ **Le logo du serveur à été mis à jour !**
+      Action :Changer le logo du serveur.
+      Date :`,[(new Date().getDate()),'-',((new Date().getMonth())) + 1].join(''),`
+      Nouveau Logo :`,(s4dmessage.guild).channels.cache.find((category) => category.name === ([(new Date().getDate()),'-',((new Date().getMonth())) + 1].join(''))).topic].join('')))});
+      console.log((['Changement de logo du serveur : ',(s4dmessage.guild).name,' (',(s4dmessage.guild).id,').'].join('')));
     
     });
     
