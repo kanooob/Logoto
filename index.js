@@ -87,28 +87,8 @@
     
 
     // blockly code
-    var day, ms_on;
+    var ms_on;
     
-    
-    s4d.client.on('ready', async () => {
-      day = ((new Date().getDate())) - 1;
-      s4d.client.channels.cache.get('1413899996691955755').send({content:String('Démarrage du bot...')});
-    
-              while(s4d.client && s4d.client.token) {
-                  await delay(50);
-                    s4d.client.user.setPresence({status: "online",activities:[{name:([s4d.client.users.cache.size,' membres, ',s4d.client.guilds.cache.size,' serveurs.'].join('')),type:"WATCHING"}]});
-        if (day != ((new Date().getDate()))) {
-          day = ((new Date().getDate()));
-          (s4dmessage.guild).channels.cache.find((category) => category.name === ([(new Date().getDate()),'-',((new Date().getMonth())) + 1,'-',(new Date().getFullYear())].join(''))).send({content:String('Changement...')});
-        }
-        await delay(Number(180)*1000);
-        ms_on = (s4d.client.uptime);
-        s4d.client.channels.cache.get('1387514903778295940').send({content:String((['Ping :**',s4d.client.ws.ping,'\n','**Temps de fonctionnement **',Math.round(ms_on / 3600000),'** heures.'].join('')))});
-    
-                  console.log('ran')
-              }
-    
-    });
     
     await s4d.client.login((process.env[String('token')])).catch((e) => {
             const tokenInvalid = true;
@@ -126,6 +106,21 @@
         res.end('Ce bot à été créé le 24/10/2025');
     });
     server.listen(3000);
+    
+    s4d.client.on('ready', async () => {
+      s4d.client.channels.cache.get('1413899996691955755').send({content:String('Démarrage du bot...')});
+    
+              while(s4d.client && s4d.client.token) {
+                  await delay(50);
+                    s4d.client.user.setPresence({status: "online",activities:[{name:([s4d.client.users.cache.size,' membres, ',s4d.client.guilds.cache.size,' serveurs.'].join('')),type:"WATCHING"}]});
+        await delay(Number(180)*1000);
+        ms_on = (s4d.client.uptime);
+        s4d.client.channels.cache.get('1387514903778295940').send({content:String((['Ping :**',s4d.client.ws.ping,'\n','**Temps de fonctionnement **',Math.round(ms_on / 3600000),'** heures.'].join('')))});
+    
+                  console.log('ran')
+              }
+    
+    });
     
     synchronizeSlashCommands(s4d.client, [
       {
@@ -232,7 +227,8 @@
             * Collez le **lien** de votre image dans le sujet du salon.
     
         4. Résultat :
-            * Le bot changera automatiquement le logo du serveur au jour et au mois spécifiés dans le nom du salon (à 00:00 UTC) !
+            * Le bot changera automatiquement le logo du serveur au jour et au mois spécifiés dans le nom du salon !
+        -# ||Le logo change quand un message est envoyés sur le serveur||
         ⚠️ Si il y a 2 salon avec la même date un avec l'année et l'autre sans l'année, seul le salon avec l'année changera le logo du serveur.`, ephemeral: false, components: [] });
       }
       if ((interaction.commandName) == 'invite') {
@@ -276,15 +272,11 @@
         Nouveau Logo :`,(s4dmessage.guild).channels.cache.find((category) => category.name === ([(new Date().getDate()),'-',((new Date().getMonth())) + 1].join(''))).topic].join('')))});
         console.log((['Changement de logo du serveur : ',(s4dmessage.guild).name,' (',(s4dmessage.guild).id,').'].join('')));
       }
-      s4d.client.channels.cache.get('1387514903778295940').send({content:String(([s4dmessage.author,' :','\n',s4dmessage.content,'\n','dans :',(s4dmessage.channel).name].join('')))});
     
     });
     
     s4d.client.on('guildCreate', async (s4dguild) => {
       s4d.client.channels.cache.get('1432341468059537419').send({content:String((['Bot ajouté dans **',s4dguild.name,'** (',s4dguild.id,').'].join('')))});
-      ((s4d.client.guilds.cache.get((s4dguild.id))).systemChannelId).send({content:String(([`###
-      Merci d'avoir ajouté le bot.`,'\n',`Pour la première utilisation faite /setup
-      Puis pour les autres changements de logo faite /logo-add`].join('')))});
     
     });
     
