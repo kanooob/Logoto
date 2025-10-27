@@ -1156,336 +1156,345 @@
           </block>
         </statement>
         <next>
-          <block type="controls_if" id="U-j$T7]d^.ZPd%SL_UTi">
-            <value name="IF0">
-              <block type="s4d_channel_exist" id="I23(o:r3z6])/=a|{BQ3">
-                <value name="CHANNEL">
-                  <block type="frost_category_get" id="(GZSq,c2b1U:ud?nxD:u">
-                    <field name="SEARCH_TYPE">NAME</field>
-                    <value name="VALUE">
-                      <block type="text_join" id="(it?iKx;DA@uHx5mm|;9">
-                        <mutation items="5"></mutation>
-                        <value name="ADD0">
-                          <block type="frost_current" id="p|FX)(]mR$#}trQJeeOH">
-                            <field name="DATA_TYPE">DATE</field>
-                          </block>
-                        </value>
-                        <value name="ADD1">
-                          <block type="jg_text_remake_paragraph_quotes" id="2#J_7b7G73IQl{GPp^Tp">
-                            <field name="TEXT">-</field>
-                          </block>
-                        </value>
-                        <value name="ADD2">
-                          <block type="math_arithmetic" id="2L3]uohQ=K3/vMAqx/$^">
-                            <field name="OP">ADD</field>
-                            <value name="A">
-                              <shadow type="math_number" id="[{}Y%+EBXk;N]hQ5C-5b">
-                                <field name="NUM">1</field>
-                              </shadow>
-                              <block type="frost_current" id="(eb#,2s=S~SuN=C[^o]r">
-                                <field name="DATA_TYPE">MONTH</field>
-                              </block>
-                            </value>
-                            <value name="B">
-                              <shadow type="math_number" id="==o|o__E!W22#%vN#KK;">
-                                <field name="NUM">1</field>
-                              </shadow>
-                            </value>
-                          </block>
-                        </value>
-                        <value name="ADD3">
-                          <block type="jg_text_remake_paragraph_quotes" id="iAwJz)z3z0O#ctzw{cMP">
-                            <field name="TEXT">-</field>
-                          </block>
-                        </value>
-                        <value name="ADD4">
-                          <block type="frost_current" id="f{X.em0/=0nG}7+LOnkv">
-                            <field name="DATA_TYPE">YEAR</field>
-                          </block>
-                        </value>
-                      </block>
-                    </value>
-                    <value name="SERVER">
-                      <block type="s4d_message_guild" id="ZU_S}fPv+C4W=WU=X~W_"></block>
-                    </value>
-                  </block>
-                </value>
-              </block>
+          <block type="s4d_wait_seconds" id="lKNAS-@i]Kx*Q-9YI:*{">
+            <value name="TIME">
+              <shadow type="math_number" id="e;hVq/~|T{1PvpX8j2Ir">
+                <field name="NUM">1</field>
+              </shadow>
             </value>
-            <statement name="DO0">
-              <block type="set_server_something" id="}wNy,~U$l;{v-a{glbkj">
-                <field name="parameter">ICON</field>
-                <value name="value">
-                  <block type="s4d_channel_topic" id="4`B8L7qISP7^z,j4l.tn">
+            <next>
+              <block type="controls_if" id="U-j$T7]d^.ZPd%SL_UTi">
+                <value name="IF0">
+                  <block type="s4d_channel_exist" id="I23(o:r3z6])/=a|{BQ3">
                     <value name="CHANNEL">
-                      <block type="frost_category_get" id="~^8J^$zJsyTe:{c:oeNY">
+                      <block type="frost_category_get" id="(GZSq,c2b1U:ud?nxD:u">
                         <field name="SEARCH_TYPE">NAME</field>
                         <value name="VALUE">
-                          <block type="text_join" id="LBSV*mA^l9vrBc$Jn(mv">
+                          <block type="text_join" id="(it?iKx;DA@uHx5mm|;9">
                             <mutation items="5"></mutation>
                             <value name="ADD0">
-                              <block type="frost_current" id="NG,[]PU08P)AeuVtno*K">
+                              <block type="frost_current" id="p|FX)(]mR$#}trQJeeOH">
                                 <field name="DATA_TYPE">DATE</field>
                               </block>
                             </value>
                             <value name="ADD1">
-                              <block type="jg_text_remake_paragraph_quotes" id="i/q}jNCr~})9k2RyPOoB">
+                              <block type="jg_text_remake_paragraph_quotes" id="2#J_7b7G73IQl{GPp^Tp">
                                 <field name="TEXT">-</field>
                               </block>
                             </value>
                             <value name="ADD2">
-                              <block type="math_arithmetic" id="vVJgyJAJMfso3kMTXDqo">
+                              <block type="math_arithmetic" id="2L3]uohQ=K3/vMAqx/$^">
                                 <field name="OP">ADD</field>
                                 <value name="A">
                                   <shadow type="math_number" id="[{}Y%+EBXk;N]hQ5C-5b">
                                     <field name="NUM">1</field>
                                   </shadow>
-                                  <block type="frost_current" id="L8BNEI,R?DX%bGAtwL3Y">
+                                  <block type="frost_current" id="(eb#,2s=S~SuN=C[^o]r">
                                     <field name="DATA_TYPE">MONTH</field>
                                   </block>
                                 </value>
                                 <value name="B">
-                                  <shadow type="math_number" id="7U42Dj~wlw0ce%7{E4=h">
+                                  <shadow type="math_number" id="==o|o__E!W22#%vN#KK;">
                                     <field name="NUM">1</field>
                                   </shadow>
                                 </value>
                               </block>
                             </value>
                             <value name="ADD3">
-                              <block type="jg_text_remake_paragraph_quotes" id="L+dF)]5$+y7P%lI/;66h">
+                              <block type="jg_text_remake_paragraph_quotes" id="iAwJz)z3z0O#ctzw{cMP">
                                 <field name="TEXT">-</field>
                               </block>
                             </value>
                             <value name="ADD4">
-                              <block type="frost_current" id="ix_3LR:BlFB}=;N,Sq0|">
+                              <block type="frost_current" id="f{X.em0/=0nG}7+LOnkv">
                                 <field name="DATA_TYPE">YEAR</field>
                               </block>
                             </value>
                           </block>
                         </value>
                         <value name="SERVER">
-                          <block type="s4d_message_guild" id="b!?jl3m}4)J]uvySZ|hi"></block>
+                          <block type="s4d_message_guild" id="ZU_S}fPv+C4W=WU=X~W_"></block>
                         </value>
                       </block>
                     </value>
                   </block>
                 </value>
-                <value name="reason">
-                  <shadow type="text" id="pXnu6/jD3iJNHe@*4dcW">
-                    <field name="TEXT">changement de logo.</field>
-                  </shadow>
-                </value>
-                <value name="server">
-                  <block type="s4d_message_guild" id="KSO+_)}%N9NYLY}FkRpi"></block>
-                </value>
-                <next>
-                  <block type="s4d_send_channel" id="KVnt-uEDp9o}mf:C,,rV">
-                    <value name="CONTENT">
-                      <block type="text_join" id="vJc6=kFy9ER.?UV+#9)E">
-                        <mutation items="4"></mutation>
-                        <value name="ADD0">
-                          <block type="jg_text_remake_paragraph_quotes" id="$b#{:v_7yN?5rivH@sl5">
-                            <field name="TEXT">✅ **Le logo du serveur à été mis à jour !** &amp;#10;Action :Changer le logo du serveur. &amp;#10;Date :</field>
-                          </block>
-                        </value>
-                        <value name="ADD1">
-                          <block type="text_join" id="iJjYrH0i35X5o~3mnYwt">
-                            <mutation items="5"></mutation>
-                            <value name="ADD0">
-                              <block type="frost_current" id="!=ikYwpZO0;C[k:!i3xw">
-                                <field name="DATA_TYPE">DATE</field>
-                              </block>
-                            </value>
-                            <value name="ADD1">
-                              <block type="jg_text_remake_paragraph_quotes" id="cndcE2g.2G5ME0K+?fp%">
-                                <field name="TEXT">-</field>
-                              </block>
-                            </value>
-                            <value name="ADD2">
-                              <block type="math_arithmetic" id="|}c?gx-^b_,[ctrH_5ew">
-                                <field name="OP">ADD</field>
-                                <value name="A">
-                                  <shadow type="math_number" id="[{}Y%+EBXk;N]hQ5C-5b">
-                                    <field name="NUM">1</field>
-                                  </shadow>
-                                  <block type="frost_current" id="7NSJDV3~6(wjo%xPglWy">
-                                    <field name="DATA_TYPE">MONTH</field>
+                <statement name="DO0">
+                  <block type="set_server_something" id="}wNy,~U$l;{v-a{glbkj">
+                    <field name="parameter">ICON</field>
+                    <value name="value">
+                      <block type="s4d_channel_topic" id="4`B8L7qISP7^z,j4l.tn">
+                        <value name="CHANNEL">
+                          <block type="frost_category_get" id="~^8J^$zJsyTe:{c:oeNY">
+                            <field name="SEARCH_TYPE">NAME</field>
+                            <value name="VALUE">
+                              <block type="text_join" id="LBSV*mA^l9vrBc$Jn(mv">
+                                <mutation items="5"></mutation>
+                                <value name="ADD0">
+                                  <block type="frost_current" id="NG,[]PU08P)AeuVtno*K">
+                                    <field name="DATA_TYPE">DATE</field>
                                   </block>
                                 </value>
-                                <value name="B">
-                                  <shadow type="math_number" id=")$/pR[_Jq~c_SWepY%T1">
-                                    <field name="NUM">1</field>
-                                  </shadow>
+                                <value name="ADD1">
+                                  <block type="jg_text_remake_paragraph_quotes" id="i/q}jNCr~})9k2RyPOoB">
+                                    <field name="TEXT">-</field>
+                                  </block>
                                 </value>
-                              </block>
-                            </value>
-                            <value name="ADD3">
-                              <block type="jg_text_remake_paragraph_quotes" id="z1h~Tj5/mZQJ`Uws)U?+">
-                                <field name="TEXT">-</field>
-                              </block>
-                            </value>
-                            <value name="ADD4">
-                              <block type="frost_current" id="0i*OQy{FAtW3_ZaQzGDK">
-                                <field name="DATA_TYPE">YEAR</field>
-                              </block>
-                            </value>
-                          </block>
-                        </value>
-                        <value name="ADD2">
-                          <block type="jg_text_remake_paragraph_quotes" id="}69GFx2=b]Oy|;gAEb,t">
-                            <field name="TEXT">&amp;#10;Nouveau Logo :</field>
-                          </block>
-                        </value>
-                        <value name="ADD3">
-                          <block type="s4d_channel_topic" id="%]ESGoySLJ)C,/}42JJk">
-                            <value name="CHANNEL">
-                              <block type="frost_category_get" id="^GA6a`9B~qlWjdB8N_]N">
-                                <field name="SEARCH_TYPE">NAME</field>
-                                <value name="VALUE">
-                                  <block type="text_join" id="7k7B__vl1j]B`ocOP^tO">
-                                    <mutation items="5"></mutation>
-                                    <value name="ADD0">
-                                      <block type="frost_current" id="8^!5F|.zuAse[xwU^CB1">
-                                        <field name="DATA_TYPE">DATE</field>
+                                <value name="ADD2">
+                                  <block type="math_arithmetic" id="vVJgyJAJMfso3kMTXDqo">
+                                    <field name="OP">ADD</field>
+                                    <value name="A">
+                                      <shadow type="math_number" id="[{}Y%+EBXk;N]hQ5C-5b">
+                                        <field name="NUM">1</field>
+                                      </shadow>
+                                      <block type="frost_current" id="L8BNEI,R?DX%bGAtwL3Y">
+                                        <field name="DATA_TYPE">MONTH</field>
                                       </block>
                                     </value>
-                                    <value name="ADD1">
-                                      <block type="jg_text_remake_paragraph_quotes" id="QY@]beiCXC!EHUSC*Bte">
-                                        <field name="TEXT">-</field>
-                                      </block>
-                                    </value>
-                                    <value name="ADD2">
-                                      <block type="math_arithmetic" id=":_-A1_T[rAH/`0`#AjdJ">
-                                        <field name="OP">ADD</field>
-                                        <value name="A">
-                                          <shadow type="math_number" id="[{}Y%+EBXk;N]hQ5C-5b">
-                                            <field name="NUM">1</field>
-                                          </shadow>
-                                          <block type="frost_current" id="REh1lIGE{{rak(bqQn}Y">
-                                            <field name="DATA_TYPE">MONTH</field>
-                                          </block>
-                                        </value>
-                                        <value name="B">
-                                          <shadow type="math_number" id="l68vR-_G%yH7^od^_f_Y">
-                                            <field name="NUM">1</field>
-                                          </shadow>
-                                        </value>
-                                      </block>
-                                    </value>
-                                    <value name="ADD3">
-                                      <block type="jg_text_remake_paragraph_quotes" id=")}:PSa80^S_hl!o:o:zb">
-                                        <field name="TEXT">-</field>
-                                      </block>
-                                    </value>
-                                    <value name="ADD4">
-                                      <block type="frost_current" id="5nVB/7Q)57E5qK0kO+(~">
-                                        <field name="DATA_TYPE">YEAR</field>
-                                      </block>
+                                    <value name="B">
+                                      <shadow type="math_number" id="7U42Dj~wlw0ce%7{E4=h">
+                                        <field name="NUM">1</field>
+                                      </shadow>
                                     </value>
                                   </block>
                                 </value>
-                                <value name="SERVER">
-                                  <block type="s4d_message_guild" id="UQ6-g21iP!a_.i$#vpH%"></block>
+                                <value name="ADD3">
+                                  <block type="jg_text_remake_paragraph_quotes" id="L+dF)]5$+y7P%lI/;66h">
+                                    <field name="TEXT">-</field>
+                                  </block>
+                                </value>
+                                <value name="ADD4">
+                                  <block type="frost_current" id="ix_3LR:BlFB}=;N,Sq0|">
+                                    <field name="DATA_TYPE">YEAR</field>
+                                  </block>
                                 </value>
                               </block>
+                            </value>
+                            <value name="SERVER">
+                              <block type="s4d_message_guild" id="b!?jl3m}4)J]uvySZ|hi"></block>
                             </value>
                           </block>
                         </value>
                       </block>
                     </value>
-                    <value name="CHANNEL">
-                      <block type="frost_category_get" id="Q;wSKWMi%YpD]i)~Xt;/">
-                        <field name="SEARCH_TYPE">NAME</field>
-                        <value name="VALUE">
-                          <block type="text_join" id="s~%W8GlgL6Y,@}U[ad*0">
-                            <mutation items="5"></mutation>
-                            <value name="ADD0">
-                              <block type="frost_current" id=")8y6e{wD?(b0miC^4;W]">
-                                <field name="DATA_TYPE">DATE</field>
-                              </block>
-                            </value>
-                            <value name="ADD1">
-                              <block type="jg_text_remake_paragraph_quotes" id="j4g8`Qz3,/nm-~/$DJ{F">
-                                <field name="TEXT">-</field>
-                              </block>
-                            </value>
-                            <value name="ADD2">
-                              <block type="math_arithmetic" id="Yc)vKq[9H}C,xRU}#S.U">
-                                <field name="OP">ADD</field>
-                                <value name="A">
-                                  <shadow type="math_number" id="[{}Y%+EBXk;N]hQ5C-5b">
-                                    <field name="NUM">1</field>
-                                  </shadow>
-                                  <block type="frost_current" id="s$F7kyJ}urcC@V#7/1l_">
-                                    <field name="DATA_TYPE">MONTH</field>
-                                  </block>
-                                </value>
-                                <value name="B">
-                                  <shadow type="math_number" id="r1#AFP+xDEBJPOlv:=z:">
-                                    <field name="NUM">1</field>
-                                  </shadow>
-                                </value>
-                              </block>
-                            </value>
-                            <value name="ADD3">
-                              <block type="jg_text_remake_paragraph_quotes" id="A6%d1J#^%QVE$~_g$rcQ">
-                                <field name="TEXT">-</field>
-                              </block>
-                            </value>
-                            <value name="ADD4">
-                              <block type="frost_current" id="t:wZ^n#ug$/#K/9SCRPy">
-                                <field name="DATA_TYPE">YEAR</field>
-                              </block>
-                            </value>
-                          </block>
-                        </value>
-                        <value name="SERVER">
-                          <block type="s4d_message_guild" id="iF@F^tw8Siz;?$EtsmxV"></block>
-                        </value>
-                      </block>
+                    <value name="reason">
+                      <shadow type="text" id="pXnu6/jD3iJNHe@*4dcW">
+                        <field name="TEXT">changement de logo.</field>
+                      </shadow>
+                    </value>
+                    <value name="server">
+                      <block type="s4d_message_guild" id="KSO+_)}%N9NYLY}FkRpi"></block>
                     </value>
                     <next>
-                      <block type="s4d_print" id="nIWd!Q)KxHKeqYy,s6c,">
-                        <value name="PRINT">
-                          <block type="text_join" id="l2w?O!1!=8ycB`P:TME%">
-                            <mutation items="5"></mutation>
+                      <block type="s4d_send_channel" id="KVnt-uEDp9o}mf:C,,rV">
+                        <value name="CONTENT">
+                          <block type="text_join" id="vJc6=kFy9ER.?UV+#9)E">
+                            <mutation items="4"></mutation>
                             <value name="ADD0">
-                              <block type="jg_text_remake_paragraph_quotes" id="mt$_O-IfxjV(47c#`*b$">
-                                <field name="TEXT">Changement de logo du serveur : </field>
+                              <block type="jg_text_remake_paragraph_quotes" id="$b#{:v_7yN?5rivH@sl5">
+                                <field name="TEXT">✅ **Le logo du serveur à été mis à jour !** &amp;#10;Action :Changer le logo du serveur. &amp;#10;Date :</field>
                               </block>
                             </value>
                             <value name="ADD1">
-                              <block type="s4d_server_name" id="k9Wf$?#yhLLWuRHFEX6f">
-                                <value name="SERVER">
-                                  <block type="s4d_message_guild" id="Gz5{TN;#A_sp0BU8l!eW"></block>
+                              <block type="text_join" id="iJjYrH0i35X5o~3mnYwt">
+                                <mutation items="5"></mutation>
+                                <value name="ADD0">
+                                  <block type="frost_current" id="!=ikYwpZO0;C[k:!i3xw">
+                                    <field name="DATA_TYPE">DATE</field>
+                                  </block>
+                                </value>
+                                <value name="ADD1">
+                                  <block type="jg_text_remake_paragraph_quotes" id="cndcE2g.2G5ME0K+?fp%">
+                                    <field name="TEXT">-</field>
+                                  </block>
+                                </value>
+                                <value name="ADD2">
+                                  <block type="math_arithmetic" id="|}c?gx-^b_,[ctrH_5ew">
+                                    <field name="OP">ADD</field>
+                                    <value name="A">
+                                      <shadow type="math_number" id="[{}Y%+EBXk;N]hQ5C-5b">
+                                        <field name="NUM">1</field>
+                                      </shadow>
+                                      <block type="frost_current" id="7NSJDV3~6(wjo%xPglWy">
+                                        <field name="DATA_TYPE">MONTH</field>
+                                      </block>
+                                    </value>
+                                    <value name="B">
+                                      <shadow type="math_number" id=")$/pR[_Jq~c_SWepY%T1">
+                                        <field name="NUM">1</field>
+                                      </shadow>
+                                    </value>
+                                  </block>
+                                </value>
+                                <value name="ADD3">
+                                  <block type="jg_text_remake_paragraph_quotes" id="z1h~Tj5/mZQJ`Uws)U?+">
+                                    <field name="TEXT">-</field>
+                                  </block>
+                                </value>
+                                <value name="ADD4">
+                                  <block type="frost_current" id="0i*OQy{FAtW3_ZaQzGDK">
+                                    <field name="DATA_TYPE">YEAR</field>
+                                  </block>
                                 </value>
                               </block>
                             </value>
                             <value name="ADD2">
-                              <block type="jg_text_remake_paragraph_quotes" id="EG^z9T;[M{k0,V{5$yc$">
-                                <field name="TEXT"> (</field>
+                              <block type="jg_text_remake_paragraph_quotes" id="}69GFx2=b]Oy|;gAEb,t">
+                                <field name="TEXT">&amp;#10;Nouveau Logo :</field>
                               </block>
                             </value>
                             <value name="ADD3">
-                              <block type="s4d_server_id" id="wx,MtwV)?EdiMsf!F{~t">
-                                <value name="SERVER">
-                                  <block type="s4d_message_guild" id="K_a2Y;^FN0c=}jAcGFJg"></block>
+                              <block type="s4d_channel_topic" id="%]ESGoySLJ)C,/}42JJk">
+                                <value name="CHANNEL">
+                                  <block type="frost_category_get" id="^GA6a`9B~qlWjdB8N_]N">
+                                    <field name="SEARCH_TYPE">NAME</field>
+                                    <value name="VALUE">
+                                      <block type="text_join" id="7k7B__vl1j]B`ocOP^tO">
+                                        <mutation items="5"></mutation>
+                                        <value name="ADD0">
+                                          <block type="frost_current" id="8^!5F|.zuAse[xwU^CB1">
+                                            <field name="DATA_TYPE">DATE</field>
+                                          </block>
+                                        </value>
+                                        <value name="ADD1">
+                                          <block type="jg_text_remake_paragraph_quotes" id="QY@]beiCXC!EHUSC*Bte">
+                                            <field name="TEXT">-</field>
+                                          </block>
+                                        </value>
+                                        <value name="ADD2">
+                                          <block type="math_arithmetic" id=":_-A1_T[rAH/`0`#AjdJ">
+                                            <field name="OP">ADD</field>
+                                            <value name="A">
+                                              <shadow type="math_number" id="[{}Y%+EBXk;N]hQ5C-5b">
+                                                <field name="NUM">1</field>
+                                              </shadow>
+                                              <block type="frost_current" id="REh1lIGE{{rak(bqQn}Y">
+                                                <field name="DATA_TYPE">MONTH</field>
+                                              </block>
+                                            </value>
+                                            <value name="B">
+                                              <shadow type="math_number" id="l68vR-_G%yH7^od^_f_Y">
+                                                <field name="NUM">1</field>
+                                              </shadow>
+                                            </value>
+                                          </block>
+                                        </value>
+                                        <value name="ADD3">
+                                          <block type="jg_text_remake_paragraph_quotes" id=")}:PSa80^S_hl!o:o:zb">
+                                            <field name="TEXT">-</field>
+                                          </block>
+                                        </value>
+                                        <value name="ADD4">
+                                          <block type="frost_current" id="5nVB/7Q)57E5qK0kO+(~">
+                                            <field name="DATA_TYPE">YEAR</field>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </value>
+                                    <value name="SERVER">
+                                      <block type="s4d_message_guild" id="UQ6-g21iP!a_.i$#vpH%"></block>
+                                    </value>
+                                  </block>
                                 </value>
-                              </block>
-                            </value>
-                            <value name="ADD4">
-                              <block type="jg_text_remake_paragraph_quotes" id="|xW`*kqwKL1J5Cn%~^W;">
-                                <field name="TEXT">).</field>
                               </block>
                             </value>
                           </block>
                         </value>
+                        <value name="CHANNEL">
+                          <block type="frost_category_get" id="Q;wSKWMi%YpD]i)~Xt;/">
+                            <field name="SEARCH_TYPE">NAME</field>
+                            <value name="VALUE">
+                              <block type="text_join" id="s~%W8GlgL6Y,@}U[ad*0">
+                                <mutation items="5"></mutation>
+                                <value name="ADD0">
+                                  <block type="frost_current" id=")8y6e{wD?(b0miC^4;W]">
+                                    <field name="DATA_TYPE">DATE</field>
+                                  </block>
+                                </value>
+                                <value name="ADD1">
+                                  <block type="jg_text_remake_paragraph_quotes" id="j4g8`Qz3,/nm-~/$DJ{F">
+                                    <field name="TEXT">-</field>
+                                  </block>
+                                </value>
+                                <value name="ADD2">
+                                  <block type="math_arithmetic" id="Yc)vKq[9H}C,xRU}#S.U">
+                                    <field name="OP">ADD</field>
+                                    <value name="A">
+                                      <shadow type="math_number" id="[{}Y%+EBXk;N]hQ5C-5b">
+                                        <field name="NUM">1</field>
+                                      </shadow>
+                                      <block type="frost_current" id="s$F7kyJ}urcC@V#7/1l_">
+                                        <field name="DATA_TYPE">MONTH</field>
+                                      </block>
+                                    </value>
+                                    <value name="B">
+                                      <shadow type="math_number" id="r1#AFP+xDEBJPOlv:=z:">
+                                        <field name="NUM">1</field>
+                                      </shadow>
+                                    </value>
+                                  </block>
+                                </value>
+                                <value name="ADD3">
+                                  <block type="jg_text_remake_paragraph_quotes" id="A6%d1J#^%QVE$~_g$rcQ">
+                                    <field name="TEXT">-</field>
+                                  </block>
+                                </value>
+                                <value name="ADD4">
+                                  <block type="frost_current" id="t:wZ^n#ug$/#K/9SCRPy">
+                                    <field name="DATA_TYPE">YEAR</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                            <value name="SERVER">
+                              <block type="s4d_message_guild" id="iF@F^tw8Siz;?$EtsmxV"></block>
+                            </value>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="s4d_print" id="nIWd!Q)KxHKeqYy,s6c,">
+                            <value name="PRINT">
+                              <block type="text_join" id="l2w?O!1!=8ycB`P:TME%">
+                                <mutation items="5"></mutation>
+                                <value name="ADD0">
+                                  <block type="jg_text_remake_paragraph_quotes" id="mt$_O-IfxjV(47c#`*b$">
+                                    <field name="TEXT">Changement de logo du serveur : </field>
+                                  </block>
+                                </value>
+                                <value name="ADD1">
+                                  <block type="s4d_server_name" id="k9Wf$?#yhLLWuRHFEX6f">
+                                    <value name="SERVER">
+                                      <block type="s4d_message_guild" id="Gz5{TN;#A_sp0BU8l!eW"></block>
+                                    </value>
+                                  </block>
+                                </value>
+                                <value name="ADD2">
+                                  <block type="jg_text_remake_paragraph_quotes" id="EG^z9T;[M{k0,V{5$yc$">
+                                    <field name="TEXT"> (</field>
+                                  </block>
+                                </value>
+                                <value name="ADD3">
+                                  <block type="s4d_server_id" id="wx,MtwV)?EdiMsf!F{~t">
+                                    <value name="SERVER">
+                                      <block type="s4d_message_guild" id="K_a2Y;^FN0c=}jAcGFJg"></block>
+                                    </value>
+                                  </block>
+                                </value>
+                                <value name="ADD4">
+                                  <block type="jg_text_remake_paragraph_quotes" id="|xW`*kqwKL1J5Cn%~^W;">
+                                    <field name="TEXT">).</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                          </block>
+                        </next>
                       </block>
                     </next>
                   </block>
-                </next>
+                </statement>
               </block>
-            </statement>
+            </next>
           </block>
         </next>
       </block>
