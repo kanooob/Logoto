@@ -8,8 +8,21 @@
       <block type="variables_set" id="`s[x4K-5N#%%NHs-$3+{">
         <field name="VAR" id="!+qDd7]|maDZtQ|}L:0|">day</field>
         <value name="VALUE">
-          <block type="frost_current" id="Yv[1t%y~i[r_u_Y6K!d_">
-            <field name="DATA_TYPE">DATE</field>
+          <block type="math_arithmetic" id="SbGZ0Z+^K4oQp8g!a8y1">
+            <field name="OP">MINUS</field>
+            <value name="A">
+              <shadow type="math_number" id="zF+n6UM/|s9Z[0u^Ruv:">
+                <field name="NUM">1</field>
+              </shadow>
+              <block type="frost_current" id="Yv[1t%y~i[r_u_Y6K!d_">
+                <field name="DATA_TYPE">DATE</field>
+              </block>
+            </value>
+            <value name="B">
+              <shadow type="math_number" id="mH_0(iVz~b*4F@b_Ir-/">
+                <field name="NUM">1</field>
+              </shadow>
+            </value>
           </block>
         </value>
         <next>
@@ -153,20 +166,28 @@
                                           </block>
                                         </value>
                                         <value name="ADD4">
-                                          <block type="math_arithmetic" id="@gF4?W^Im7++-x/vA]`#">
-                                            <field name="OP">DIVIDE</field>
-                                            <value name="A">
-                                              <shadow type="math_number" id="0g_m=/GHLS.yCR*HNYf]">
-                                                <field name="NUM">1</field>
+                                          <block type="math_round" id="Rco)uYy7aw@cyzA72g8d">
+                                            <field name="OP">ROUND</field>
+                                            <value name="NUM">
+                                              <shadow type="math_number" id="v6/B/,hz3X_4b8.hGSPq">
+                                                <field name="NUM">3.1</field>
                                               </shadow>
-                                              <block type="variables_get" id="gM4*/+Wb`aNCp=l4{7Dv">
-                                                <field name="VAR" id="jlm:W3Oxc-yLpT4NI{=*">ms on</field>
+                                              <block type="math_arithmetic" id="@gF4?W^Im7++-x/vA]`#">
+                                                <field name="OP">DIVIDE</field>
+                                                <value name="A">
+                                                  <shadow type="math_number" id="0g_m=/GHLS.yCR*HNYf]">
+                                                    <field name="NUM">1</field>
+                                                  </shadow>
+                                                  <block type="variables_get" id="gM4*/+Wb`aNCp=l4{7Dv">
+                                                    <field name="VAR" id="jlm:W3Oxc-yLpT4NI{=*">ms on</field>
+                                                  </block>
+                                                </value>
+                                                <value name="B">
+                                                  <shadow type="math_number" id="]J6-IPEiv/0:8bHRgbjO">
+                                                    <field name="NUM">3600000</field>
+                                                  </shadow>
+                                                </value>
                                               </block>
-                                            </value>
-                                            <value name="B">
-                                              <shadow type="math_number" id="]J6-IPEiv/0:8bHRgbjO">
-                                                <field name="NUM">3600000</field>
-                                              </shadow>
                                             </value>
                                           </block>
                                         </value>
@@ -204,7 +225,28 @@
       </block>
     </statement>
   </block>
-  <block type="frost_slash_register" id="}A:$DED(O`PGQ,Nm+r_," x="101" y="-7">
+  <block type="s4d_login" id="076e7c%2/lzW`#B^9s#h" x="900" y="43">
+    <value name="TOKEN">
+      <shadow type="text" id="SU|33Kq9bT.I:;x.7K`4">
+        <field name="TEXT">Your bot token</field>
+      </shadow>
+      <block type="frost_env" id="YY{:7Wr4QQ,zF*j}NhOa">
+        <value name="VALUE">
+          <shadow type="text" id="RuzU@v4~g}Q$UU@f?%YZ">
+            <field name="TEXT">token</field>
+          </shadow>
+        </value>
+      </block>
+    </value>
+  </block>
+  <block type="frost_webserver" id="R,j`S@q5kB2@uXi{D^66" x="878" y="166">
+    <value name="URL">
+      <shadow type="text" id="V`o+fE%0nSwoJ+E7C|?h">
+        <field name="TEXT">Ce bot à été créé le 24/10/2025</field>
+      </shadow>
+    </value>
+  </block>
+  <block type="frost_slash_register" id="}A:$DED(O`PGQ,Nm+r_," x="265" y="296">
     <statement name="OPTIONS">
       <block type="frost_slash_command" id="L`/^#xUK12c.4}E3m@[n">
         <value name="NAME">
@@ -270,7 +312,7 @@
                             <field name="TYPE">4</field>
                             <value name="NAME">
                               <shadow type="text" id="s4v9E/|Nm5$w*X[)${KI">
-                                <field name="TEXT">jour</field>
+                                <field name="TEXT">day</field>
                               </shadow>
                             </value>
                             <value name="DESC">
@@ -288,7 +330,7 @@
                                 <field name="TYPE">4</field>
                                 <value name="NAME">
                                   <shadow type="text" id="5~MnFE(NbIL(B~Tcszc-">
-                                    <field name="TEXT">mois</field>
+                                    <field name="TEXT">month</field>
                                   </shadow>
                                 </value>
                                 <value name="DESC">
@@ -306,7 +348,7 @@
                                     <field name="TYPE">4</field>
                                     <value name="NAME">
                                       <shadow type="text" id="kNZu@IG]7kE@VemB!N.`">
-                                        <field name="TEXT">annee</field>
+                                        <field name="TEXT">year</field>
                                       </shadow>
                                     </value>
                                     <value name="DESC">
@@ -335,27 +377,6 @@
         </next>
       </block>
     </statement>
-  </block>
-  <block type="s4d_login" id="076e7c%2/lzW`#B^9s#h" x="900" y="43">
-    <value name="TOKEN">
-      <shadow type="text" id="SU|33Kq9bT.I:;x.7K`4">
-        <field name="TEXT">Your bot token</field>
-      </shadow>
-      <block type="frost_env" id="YY{:7Wr4QQ,zF*j}NhOa">
-        <value name="VALUE">
-          <shadow type="text" id="RuzU@v4~g}Q$UU@f?%YZ">
-            <field name="TEXT">token</field>
-          </shadow>
-        </value>
-      </block>
-    </value>
-  </block>
-  <block type="frost_webserver" id="R,j`S@q5kB2@uXi{D^66" x="878" y="166">
-    <value name="URL">
-      <shadow type="text" id="V`o+fE%0nSwoJ+E7C|?h">
-        <field name="TEXT">Ce bot à été créé le 24/10/2025</field>
-      </shadow>
-    </value>
   </block>
   <block type="on_slash" id="M9k;2t1VKPgR]FYUz.Y," x="1522" y="282">
     <statement name="STATEMENTS">
@@ -451,8 +472,8 @@
                     <next>
                       <block type="s4d_send_channel" id="r4pyx;[KOfgtZaexr)!i">
                         <value name="CONTENT">
-                          <block type="jg_text_remake_paragraph_quotes" id="w{6^,`1:/)zas+V,Ufdh">
-                            <field name="TEXT">🤖 Aide de Logoto - Automatisez votre Logo ! ⚙️&amp;#10;===========================================&amp;#10;&amp;#10;**Je suis le bot spécialisé dans l'automatisation du changement de logo de votre serveur, sans nécessiter de commandes complexes après la configuration.**&amp;#10;&amp;#10;**🚀 Démarrage Rapide**&amp;#10;&amp;#10;* **`/setup`** : Crée un salon de démonstration pour comprendre le fonctionnement et démarrer rapidement la configuration.&amp;#10;* **`/help`** : Affiche ce message d'aide.&amp;#10;* **`/invite`** : Invitez le bot dans votre serveurs.&amp;#10;* **`/support`** : Rejoigniez le serveur de support.&amp;#10;&amp;#10;&amp;#10;**🖼️ Système de Changement de Logo Automatique**&amp;#10;&amp;#10;Le bot surveille un salon pour planifier les changements de logo. Voici comment le configurer manuellement :&amp;#10;&amp;#10;1. **Créez le Salon de Planification :**&amp;#10;    * Le nom du salon doit être au format suivant : `[JOUR]-[MOIS]-[ID du Serveur]`&amp;#10;    * **EXEMPLE :** Pour un logo qui changera le 31 décembre sur un serveur (il faut pas mettre cette id) : `31-12-1287003115291414619`&amp;#10;&amp;#10;2. **Préparez l'Image (le Logo) :**&amp;#10;    * Envoyez votre image de logo sur n'importe quel salon Discord et **copiez son lien direct (URL)**.&amp;#10;&amp;#10;3. **Planifiez le Changement :**&amp;#10;    * Modifiez le **Sujet du Salon** que vous avez créé à l'étape 1.&amp;#10;    * Collez le **lien direct (URL)** de votre image dans le sujet du salon.&amp;#10;&amp;#10;4. Résultat :&amp;#10;    * Le bot changera automatiquement le logo du serveur au jour et au mois spécifiés dans le nom du salon !</field>
+                          <block type="jg_text_remake_paragraph_quotes" id="+QvM)ExbI6Qx-_Qj`lTh">
+                            <field name="TEXT">**C'est bientôt fini !**&amp;#10;Il vous reste plus qu'à mettre le lien d'une image dans le sujet sur salon, il faut que le lien soit une url discord &amp;#10;-# (elle doit commencer par https://cdn.discordapp.com/attachments).&amp;#10;&amp;#10;**It's almost over!**&amp;#10;All that's left is to add a link to an image in the thread in the chat room. The link must be a Discord URL&amp;#10;-# (it must begin with https://cdn.discordapp.com/attachments).</field>
                           </block>
                         </value>
                         <value name="CHANNEL">
@@ -502,7 +523,7 @@
               <block type="slash_reply" id="S78q]X~Zh#*aI#EfN[^~">
                 <value name="CONTENT">
                   <block type="jg_text_remake_paragraph_quotes" id="c{t`Cn;ctD8*Kt@!cRtF">
-                    <field name="TEXT">🤖 Aide de Logoto - Automatisez votre Logo ! ⚙️&amp;#10;===========================================&amp;#10;&amp;#10;**Je suis le bot spécialisé dans l'automatisation du changement de logo de votre serveur, sans nécessiter de commandes complexes après la configuration.**&amp;#10;&amp;#10;**🚀 Démarrage Rapide**&amp;#10;&amp;#10;* **`/setup`** : Crée un salon de démonstration pour comprendre le fonctionnement et démarrer rapidement la configuration.&amp;#10;* **`/help`** : Affiche ce message d'aide.&amp;#10;* **`/invite`** : Invitez le bot dans votre serveurs.&amp;#10;* **`/support`** : Rejoigniez le serveur de support.&amp;#10;&amp;#10;&amp;#10;**🖼️ Système de Changement de Logo Automatique**&amp;#10;&amp;#10;Le bot surveille un salon pour planifier les changements de logo. Voici comment le configurer manuellement :&amp;#10;&amp;#10;1. **Créez le Salon de Planification :**&amp;#10;    * Le nom du salon doit être au format suivant : `[JOUR]-[MOIS]-[ID du Serveur]`&amp;#10;    * **EXEMPLE :** Pour un logo qui changera le 31 décembre sur un serveur (il faut pas mettre cette id) : `31-12-1287003115291414619`&amp;#10;&amp;#10;2. **Préparez l'Image (le Logo) :**&amp;#10;    * Envoyez votre image de logo sur n'importe quel salon Discord et **copiez son lien direct (URL)**.&amp;#10;&amp;#10;3. **Planifiez le Changement :**&amp;#10;    * Modifiez le **Sujet du Salon** que vous avez créé à l'étape 1.&amp;#10;    * Collez le **lien direct (URL)** de votre image dans le sujet du salon.&amp;#10;&amp;#10;4. Résultat :&amp;#10;    * Le bot changera automatiquement le logo du serveur au jour et au mois spécifiés dans le nom du salon !</field>
+                    <field name="TEXT">Aide de Logoto - Automatisez votre Logo !&amp;#10;====================================&amp;#10;&amp;#10;**Je suis le bot spécialisé dans l'automatisation du changement de logo de votre serveur, sans nécessiter de commandes complexes après la configuration.**&amp;#10;&amp;#10;###&amp;#10;Les commandes&amp;#10;&amp;#10;* **`/setup`** : Crée un salon de démonstration pour comprendre le fonctionnement et démarrer rapidement la configuration.&amp;#10;* **`/logo-add`** : Crée un salon de changement de logo avec les options day (Obligatoire, pour le jour), month (Obligatoire, pour le mois), year (Facultatif, pur l'année).&amp;#10;* **`/help`** : Affiche ce message d'aide.&amp;#10;* **`/invite`** : Invitez le bot dans votre serveurs.&amp;#10;* **`/support`** : Rejoigniez le serveur de support.&amp;#10;&amp;#10;###&amp;#10;Système de changement de logo automatique&amp;#10;&amp;#10;Le bot surveille un salon pour planifier les changements de logo. Voici comment le configurer manuellement :&amp;#10;&amp;#10;1. **Créez le Salon de Planification :**&amp;#10;    * Le nom du salon doit être au format suivant : `[JOUR]-[MOIS]-[ANNÉE (facultatifs)]`&amp;#10;    * **EXEMPLE :** Pour un logo qui changera le 31 décembre (2025) sur un serveur : `31-12`/`31-12-2025`&amp;#10;&amp;#10;2. **Préparez le Logo :**&amp;#10;    * Envoyez votre image de logo sur n'importe quel salon Discord et **copiez son lien direct**.&amp;#10;&amp;#10;3. **Planifiez le Changement :**&amp;#10;    * Modifiez le **Sujet du Salon** que vous avez créé à l'étape 1.&amp;#10;    * Collez le **lien** de votre image dans le sujet du salon.&amp;#10;&amp;#10;4. Résultat :&amp;#10;    * Le bot changera automatiquement le logo du serveur au jour et au mois spécifiés dans le nom du salon (à 00:00 UTC) !</field>
                   </block>
                 </value>
                 <value name="BOOLEAN">
@@ -531,7 +552,7 @@
                   <block type="slash_reply" id="N5cbOEn!y+`:o{d3[OVo">
                     <value name="CONTENT">
                       <block type="jg_text_remake_paragraph_quotes" id="?q~;IQ7Cj9[@^r#N:+EQ">
-                        <field name="TEXT">Voici le lien pour ajouter le bot : [lien](https://discord.com/oauth2/authorize?client_id=1431383390162124920)</field>
+                        <field name="TEXT">Voici le lien pour ajouter le bot : [lien](https://discord.com/oauth2/authorize?client_id=1431383390162124920)&amp;#10;&amp;#10;Here is the link to add the bot: [link](https://discord.com/oauth2/authorize?client_id=1431383390162124920)</field>
                       </block>
                     </value>
                     <value name="BOOLEAN">
@@ -560,7 +581,7 @@
                       <block type="slash_reply" id="~(Es9d+ri)(u_c6o[}A4">
                         <value name="CONTENT">
                           <block type="jg_text_remake_paragraph_quotes" id="U`dq%J0%dj}9hC?xr_*p">
-                            <field name="TEXT">Voici le lien pour rejoindre le serveur de support : [lien](https://discord.gg/TPXFVYVnXe)</field>
+                            <field name="TEXT">Voici le lien pour rejoindre le serveur de support : [lien](https://discord.gg/TPXFVYVnXe)&amp;#10;&amp;#10;Here is the link to join the support server: [link](https://discord.gg/TPXFVYVnXe)</field>
                           </block>
                         </value>
                         <value name="BOOLEAN">
@@ -597,7 +618,7 @@
                                     <field name="SEARCH">Integer</field>
                                     <value name="BOOLEAN">
                                       <block type="jg_text_remake_paragraph_quotes" id="q.qV/MkOKooqtn^#OQh^">
-                                        <field name="TEXT">jour</field>
+                                        <field name="TEXT">day</field>
                                       </block>
                                     </value>
                                   </block>
@@ -613,7 +634,7 @@
                                     <field name="SEARCH">Integer</field>
                                     <value name="BOOLEAN">
                                       <block type="jg_text_remake_paragraph_quotes" id="r!K3N_K@dUBL!b)!!}B6">
-                                        <field name="TEXT">mois</field>
+                                        <field name="TEXT">month</field>
                                       </block>
                                     </value>
                                   </block>
@@ -629,7 +650,7 @@
                                     <field name="SEARCH">Integer</field>
                                     <value name="BOOLEAN">
                                       <block type="jg_text_remake_paragraph_quotes" id="H,D%CRtTW}0VJ3N;W8{g">
-                                        <field name="TEXT">annee</field>
+                                        <field name="TEXT">year</field>
                                       </block>
                                     </value>
                                   </block>
@@ -641,7 +662,7 @@
                                 <field name="SEARCH_TYPE">NAME</field>
                                 <value name="VALUE">
                                   <block type="jg_text_remake_paragraph_quotes" id="uLS:~0X;QvUFKX~u4Im~">
-                                    <field name="TEXT">logo</field>
+                                    <field name="TEXT">Logo</field>
                                   </block>
                                 </value>
                                 <value name="SERVER">
@@ -677,8 +698,8 @@
                                 <next>
                                   <block type="s4d_send_channel" id="dTk9xs{U1aQ?%KQh3dGs">
                                     <value name="CONTENT">
-                                      <block type="jg_text_remake_paragraph_quotes" id="IIPEncv31Ic/`vM]K4!Y">
-                                        <field name="TEXT">**C'est bientôt fini !**&amp;#10;Il vous reste plus qu'à mettre le lien d'une image dans le sujet sur salon, il faut que le lien soit une url discord (elle doit commencer par https://cdn.discordapp.com/attachments).</field>
+                                      <block type="jg_text_remake_paragraph_quotes" id=")tjW7[t/-sj[@R2aZ7=1">
+                                        <field name="TEXT">**C'est bientôt fini !**&amp;#10;Il vous reste plus qu'à mettre le lien d'une image dans le sujet sur salon, il faut que le lien soit une url discord &amp;#10;-# (elle doit commencer par https://cdn.discordapp.com/attachments).&amp;#10;&amp;#10;**It's almost over!**&amp;#10;All that's left is to add a link to an image in the thread in the chat room. The link must be a Discord URL&amp;#10;-# (it must begin with https://cdn.discordapp.com/attachments).</field>
                                       </block>
                                     </value>
                                     <value name="CHANNEL">
@@ -1230,12 +1251,12 @@
       </block>
     </statement>
   </block>
-  <block type="s4d_on_added" id="f[f[K3UbN$5[%Vy(]zA9" x="705" y="3086">
+  <block type="s4d_on_added" id="f[f[K3UbN$5[%Vy(]zA9" x="336" y="3012">
     <statement name="STATEMENTS">
       <block type="s4d_send_channel" id="lwwqVA9u]IHw!|T%T3_]">
         <value name="CONTENT">
           <block type="text_join" id="Q=W*:U60YA$)h)h20`xk">
-            <mutation items="7"></mutation>
+            <mutation items="5"></mutation>
             <value name="ADD0">
               <block type="jg_text_remake_paragraph_quotes" id="z%RPhtd2(*%b+3.t#cmm">
                 <field name="TEXT">Bot ajouté dans **</field>
@@ -1257,21 +1278,6 @@
                 <field name="TEXT">).</field>
               </block>
             </value>
-            <value name="ADD5">
-              <block type="s4d_newline" id="Z*Y?V2VsquIn{irs+Wy#"></block>
-            </value>
-            <value name="ADD6">
-              <block type="monaco_all_invites" id="#0,FUK?!s,4xQo5j!)l_">
-                <value name="server">
-                  <block type="s4d_get_server" id="U4lyxL2g}]`*CuJMPqv,">
-                    <field name="SEARCH_TYPE">ID</field>
-                    <value name="VALUE">
-                      <block type="s4d_add_server_id" id="$W}b|Yv3L/O^gZO:wsK{"></block>
-                    </value>
-                  </block>
-                </value>
-              </block>
-            </value>
           </block>
         </value>
         <value name="CHANNEL">
@@ -1288,18 +1294,26 @@
           <block type="s4d_send_channel" id="/VM}2#$Lx3yB:ptS2f{_">
             <value name="CONTENT">
               <block type="text_join" id="jIn5VBsE7ZJGUwcJ[pQk">
-                <mutation items="1"></mutation>
+                <mutation items="3"></mutation>
                 <value name="ADD0">
                   <block type="jg_text_remake_paragraph_quotes" id="cyT6_+|SEDrqELDR,}ts">
-                    <field name="TEXT">Merci d'avoir ajouté le bot.</field>
+                    <field name="TEXT">###&amp;#10;Merci d'avoir ajouté le bot.</field>
+                  </block>
+                </value>
+                <value name="ADD1">
+                  <block type="s4d_newline" id="unZ}s^,%cosJhYX:^=}q"></block>
+                </value>
+                <value name="ADD2">
+                  <block type="jg_text_remake_paragraph_quotes" id="W3_#JhAGbTPmlmZrAI;b">
+                    <field name="TEXT">Pour la première utilisation faite /setup&amp;#10;Puis pour les autres changements de logo faite /logo-add</field>
                   </block>
                 </value>
               </block>
             </value>
             <value name="CHANNEL">
-              <block type="jg_alex_channels_first_channel_in_server" id="A1B`$Ut/B.m5b+|Qz(pJ">
-                <field name="TYPE">first</field>
-                <value name="SERVER">
+              <block type="server_attributes" id="|E~TkVY|-|[,iffuKqt=">
+                <field name="attributes">SYS_CHANNEL_ID</field>
+                <value name="server">
                   <block type="s4d_get_server" id="|ZFPj_b40,!;Twq52y[c">
                     <field name="SEARCH_TYPE">ID</field>
                     <value name="VALUE">

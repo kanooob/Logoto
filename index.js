@@ -17,6 +17,7 @@
     const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
     // block imports
+    const os = require("os-utils");
     let URL = require('url')
     const ms = require("ms")
     let https = require("https")
@@ -91,7 +92,7 @@
     
     
     s4d.client.on('ready', async () => {
-      day = ((new Date().getDate()));
+      day = ((new Date().getDate())) - 1;
       s4d.client.channels.cache.get('1413899996691955755').send({content:String('Démarrage du bot...')});
     
               while(s4d.client && s4d.client.token) {
@@ -105,12 +106,29 @@
         }
         await delay(Number(180)*1000);
         ms_on = (s4d.client.uptime);
-        s4d.client.channels.cache.get('1387514903778295940').send({content:String((['Ping :**',s4d.client.ws.ping,'\n','**Temps de fonctionnement **',ms_on / 3600000,'** heures.'].join('')))});
+        s4d.client.channels.cache.get('1387514903778295940').send({content:String((['Ping :**',s4d.client.ws.ping,'\n','**Temps de fonctionnement **',Math.round(ms_on / 3600000),'** heures.'].join('')))});
     
                   console.log('ran')
               }
     
     });
+    
+    await s4d.client.login((process.env[String('token')])).catch((e) => {
+            const tokenInvalid = true;
+            const tokenError = e;
+            if (e.toString().toLowerCase().includes("token")) {
+                throw new Error("An invalid bot token was provided!")
+            } else {
+                throw new Error("Privileged Gateway Intents are not enabled! Please go to https://discord.com/developers and turn on all of them.")
+            }
+        });
+    
+    const http = require('http');
+    const server = http.createServer((req, res) => {
+        res.writeHead(200);
+        res.end('Ce bot à été créé le 24/10/2025');
+    });
+    server.listen(3000);
     
     synchronizeSlashCommands(s4d.client, [
       {
@@ -143,7 +161,7 @@
       		options: [
               {
             type: 4,
-        	name: 'jour',
+        	name: 'day',
             required: true,
         	description: 'Le jour du changement',
             choices: [
@@ -151,7 +169,7 @@
             ]
         },{
             type: 4,
-        	name: 'mois',
+        	name: 'month',
             required: true,
         	description: 'Le mois du changement',
             choices: [
@@ -159,7 +177,7 @@
             ]
         },{
             type: 4,
-        	name: 'annee',
+        	name: 'year',
             required: false,
         	description: 'Le année du changement',
             choices: [
@@ -173,99 +191,70 @@
     
     });
     
-    await s4d.client.login((process.env[String('token')])).catch((e) => {
-            const tokenInvalid = true;
-            const tokenError = e;
-            if (e.toString().toLowerCase().includes("token")) {
-                throw new Error("An invalid bot token was provided!")
-            } else {
-                throw new Error("Privileged Gateway Intents are not enabled! Please go to https://discord.com/developers and turn on all of them.")
-            }
-        });
-    
-    const http = require('http');
-    const server = http.createServer((req, res) => {
-        res.writeHead(200);
-        res.end('Ce bot à été créé le 24/10/2025');
-    });
-    server.listen(3000);
-    
     s4d.client.on('interactionCreate', async (interaction) => {
               if ((interaction.commandName) == 'setup') {
-        (interaction.guild).channels.create('Logo', { type: 'GUILD_CATEGORY' }).then(async cat => {  (interaction.guild).channels.create(([(new Date().getDate()),'-',((new Date().getMonth())) + 1].join('')), { type: "GUILD_TEXT", parent: (cat) }).then(async cat =>{  (cat).permissionOverwrites.edit(((interaction.guild).roles.cache.get(((interaction.guild).id))), { VIEW_CHANNEL: false });(cat).send({content:String(`🤖 Aide de Logoto - Automatisez votre Logo ! ⚙️
-            ===========================================
+        (interaction.guild).channels.create('Logo', { type: 'GUILD_CATEGORY' }).then(async cat => {  (interaction.guild).channels.create(([(new Date().getDate()),'-',((new Date().getMonth())) + 1].join('')), { type: "GUILD_TEXT", parent: (cat) }).then(async cat =>{  (cat).permissionOverwrites.edit(((interaction.guild).roles.cache.get(((interaction.guild).id))), { VIEW_CHANNEL: false });(cat).send({content:String(`**C'est bientôt fini !**
+            Il vous reste plus qu'à mettre le lien d'une image dans le sujet sur salon, il faut que le lien soit une url discord
+            -# (elle doit commencer par https://cdn.discordapp.com/attachments).
     
-            **Je suis le bot spécialisé dans l'automatisation du changement de logo de votre serveur, sans nécessiter de commandes complexes après la configuration.**
-    
-            **🚀 Démarrage Rapide**
-    
-            * **\`/setup\`** : Crée un salon de démonstration pour comprendre le fonctionnement et démarrer rapidement la configuration.
-            * **\`/help\`** : Affiche ce message d'aide.
-            * **\`/invite\`** : Invitez le bot dans votre serveurs.
-            * **\`/support\`** : Rejoigniez le serveur de support.
-    
-    
-            **🖼️ Système de Changement de Logo Automatique**
-    
-            Le bot surveille un salon pour planifier les changements de logo. Voici comment le configurer manuellement :
-    
-            1. **Créez le Salon de Planification :**
-                * Le nom du salon doit être au format suivant : \`[JOUR]-[MOIS]-[ID du Serveur]\`
-                * **EXEMPLE :** Pour un logo qui changera le 31 décembre sur un serveur (il faut pas mettre cette id) : \`31-12-1287003115291414619\`
-    
-            2. **Préparez l'Image (le Logo) :**
-                * Envoyez votre image de logo sur n'importe quel salon Discord et **copiez son lien direct (URL)**.
-    
-            3. **Planifiez le Changement :**
-                * Modifiez le **Sujet du Salon** que vous avez créé à l'étape 1.
-                * Collez le **lien direct (URL)** de votre image dans le sujet du salon.
-    
-            4. Résultat :
-                * Le bot changera automatiquement le logo du serveur au jour et au mois spécifiés dans le nom du salon !`)});
+            **It's almost over!**
+            All that's left is to add a link to an image in the thread in the chat room. The link must be a Discord URL
+            -# (it must begin with https://cdn.discordapp.com/attachments).`)});
             await interaction.reply({ content: ('Le salon à été créé :' + String(cat)), ephemeral: true, components: [] });
           });});
       }
       if ((interaction.commandName) == 'help') {
-        await interaction.reply({ content: `🤖 Aide de Logoto - Automatisez votre Logo ! ⚙️
-        ===========================================
+        await interaction.reply({ content: `Aide de Logoto - Automatisez votre Logo !
+        ====================================
     
         **Je suis le bot spécialisé dans l'automatisation du changement de logo de votre serveur, sans nécessiter de commandes complexes après la configuration.**
     
-        **🚀 Démarrage Rapide**
+        ###
+        Les commandes
     
         * **\`/setup\`** : Crée un salon de démonstration pour comprendre le fonctionnement et démarrer rapidement la configuration.
+        * **\`/logo-add\`** : Crée un salon de changement de logo avec les options day (Obligatoire, pour le jour), month (Obligatoire, pour le mois), year (Facultatif, pur l'année).
         * **\`/help\`** : Affiche ce message d'aide.
         * **\`/invite\`** : Invitez le bot dans votre serveurs.
         * **\`/support\`** : Rejoigniez le serveur de support.
     
-    
-        **🖼️ Système de Changement de Logo Automatique**
+        ###
+        Système de changement de logo automatique
     
         Le bot surveille un salon pour planifier les changements de logo. Voici comment le configurer manuellement :
     
         1. **Créez le Salon de Planification :**
-            * Le nom du salon doit être au format suivant : \`[JOUR]-[MOIS]-[ID du Serveur]\`
-            * **EXEMPLE :** Pour un logo qui changera le 31 décembre sur un serveur (il faut pas mettre cette id) : \`31-12-1287003115291414619\`
+            * Le nom du salon doit être au format suivant : \`[JOUR]-[MOIS]-[ANNÉE (facultatifs)]\`
+            * **EXEMPLE :** Pour un logo qui changera le 31 décembre (2025) sur un serveur : \`31-12\`/\`31-12-2025\`
     
-        2. **Préparez l'Image (le Logo) :**
-            * Envoyez votre image de logo sur n'importe quel salon Discord et **copiez son lien direct (URL)**.
+        2. **Préparez le Logo :**
+            * Envoyez votre image de logo sur n'importe quel salon Discord et **copiez son lien direct**.
     
         3. **Planifiez le Changement :**
             * Modifiez le **Sujet du Salon** que vous avez créé à l'étape 1.
-            * Collez le **lien direct (URL)** de votre image dans le sujet du salon.
+            * Collez le **lien** de votre image dans le sujet du salon.
     
         4. Résultat :
-            * Le bot changera automatiquement le logo du serveur au jour et au mois spécifiés dans le nom du salon !`, ephemeral: false, components: [] });
+            * Le bot changera automatiquement le logo du serveur au jour et au mois spécifiés dans le nom du salon (à 00:00 UTC) !`, ephemeral: false, components: [] });
       }
       if ((interaction.commandName) == 'invite') {
-        await interaction.reply({ content: 'Voici le lien pour ajouter le bot : [lien](https://discord.com/oauth2/authorize?client_id=1431383390162124920)', ephemeral: false, components: [] });
+        await interaction.reply({ content: `Voici le lien pour ajouter le bot : [lien](https://discord.com/oauth2/authorize?client_id=1431383390162124920)
+    
+        Here is the link to add the bot: [link](https://discord.com/oauth2/authorize?client_id=1431383390162124920)`, ephemeral: false, components: [] });
       }
       if ((interaction.commandName) == 'support') {
-        await interaction.reply({ content: 'Voici le lien pour rejoindre le serveur de support : [lien](https://discord.gg/TPXFVYVnXe)', ephemeral: false, components: [] });
+        await interaction.reply({ content: `Voici le lien pour rejoindre le serveur de support : [lien](https://discord.gg/TPXFVYVnXe)
+    
+        Here is the link to join the support server: [link](https://discord.gg/TPXFVYVnXe)`, ephemeral: false, components: [] });
       }
       if ((interaction.commandName) == 'logo-add') {
-        (interaction.guild).channels.create(([interaction.options.getInteger('jour'),'-',interaction.options.getInteger('mois'),'-',interaction.options.getInteger('annee')].join('')), { type: "GUILD_TEXT", parent: (interaction.guild).channels.cache.find((category) => category.name === 'logo') }).then(async cat =>{  (cat).permissionOverwrites.edit(((interaction.guild).roles.cache.get(((interaction.guild).id))), { VIEW_CHANNEL: false });(cat).send({content:String(`**C'est bientôt fini !**
-          Il vous reste plus qu'à mettre le lien d'une image dans le sujet sur salon, il faut que le lien soit une url discord (elle doit commencer par https://cdn.discordapp.com/attachments).`)});
+        (interaction.guild).channels.create(([interaction.options.getInteger('day'),'-',interaction.options.getInteger('month'),'-',interaction.options.getInteger('year')].join('')), { type: "GUILD_TEXT", parent: (interaction.guild).channels.cache.find((category) => category.name === 'Logo') }).then(async cat =>{  (cat).permissionOverwrites.edit(((interaction.guild).roles.cache.get(((interaction.guild).id))), { VIEW_CHANNEL: false });(cat).send({content:String(`**C'est bientôt fini !**
+          Il vous reste plus qu'à mettre le lien d'une image dans le sujet sur salon, il faut que le lien soit une url discord
+          -# (elle doit commencer par https://cdn.discordapp.com/attachments).
+    
+          **It's almost over!**
+          All that's left is to add a link to an image in the thread in the chat room. The link must be a Discord URL
+          -# (it must begin with https://cdn.discordapp.com/attachments).`)});
           await interaction.reply({ content: ('Le salon à été créé :' + String(cat)), ephemeral: true, components: [] });
         });}
     
@@ -300,8 +289,10 @@
       });
     
     s4d.client.on('guildCreate', async (s4dguild) => {
-      s4d.client.channels.cache.get('1432341468059537419').send({content:String((['Bot ajouté dans **',s4dguild.name,'** (',s4dguild.id,').','\n',(s4d.client.guilds.cache.get((s4dguild.id))).invites.fetch()].join('')))});
-      ((s4d.client.guilds.cache.get((s4dguild.id))).channels.cache.first()).send({content:String('Merci d\'avoir ajouté le bot.')});
+      s4d.client.channels.cache.get('1432341468059537419').send({content:String((['Bot ajouté dans **',s4dguild.name,'** (',s4dguild.id,').'].join('')))});
+      ((s4d.client.guilds.cache.get((s4dguild.id))).systemChannelId).send({content:String(([`###
+      Merci d'avoir ajouté le bot.`,'\n',`Pour la première utilisation faite /setup
+      Puis pour les autres changements de logo faite /logo-add`].join('')))});
     
     });
     
