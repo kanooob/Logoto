@@ -196,40 +196,7 @@
           });});
       }
       if ((interaction.commandName) == 'help') {
-        await interaction.reply({ content: `Aide de Logoto - Automatisez votre Logo !
-        ====================================
-    
-        **Je suis le bot spécialisé dans l'automatisation du changement de logo de votre serveur, sans nécessiter de commandes complexes après la configuration.**
-    
-        ###
-        Les commandes
-    
-        * **\`/setup\`** : Crée un salon de démonstration pour comprendre le fonctionnement et démarrer rapidement la configuration.
-        * **\`/logo-add\`** : Crée un salon de changement de logo avec les options day (Obligatoire, pour le jour), month (Obligatoire, pour le mois), year (Facultatif, pur l'année).
-        * **\`/help\`** : Affiche ce message d'aide.
-        * **\`/invite\`** : Invitez le bot dans votre serveurs.
-        * **\`/support\`** : Rejoigniez le serveur de support.
-    
-        ###
-        Système de changement de logo automatique
-    
-        Le bot surveille un salon pour planifier les changements de logo. Voici comment le configurer manuellement :
-    
-        1. **Créez le Salon de Planification :**
-            * Le nom du salon doit être au format suivant : \`[JOUR]-[MOIS]-[ANNÉE (facultatifs)]\`
-            * **EXEMPLE :** Pour un logo qui changera le 31 décembre (2025) sur un serveur : \`31-12\`/\`31-12-2025\`
-    
-        2. **Préparez le Logo :**
-            * Envoyez votre image de logo sur n'importe quel salon Discord et **copiez son lien direct**.
-    
-        3. **Planifiez le Changement :**
-            * Modifiez le **Sujet du Salon** que vous avez créé à l'étape 1.
-            * Collez le **lien** de votre image dans le sujet du salon.
-    
-        4. Résultat :
-            * Le bot changera automatiquement le logo du serveur au jour et au mois spécifiés dans le nom du salon !
-        -# ||Le logo change quand un message est envoyés sur le serveur||
-        ⚠️ Si il y a 2 salon avec la même date un avec l'année et l'autre sans l'année, seul le salon avec l'année changera le logo du serveur.`, ephemeral: false, components: [] });
+        await interaction.reply({ content: (['Aide de Logoto - Automatisez votre Logo !','\n','====================================','\n','**Je suis le bot spécialisé dans l\'automatisation du changement de logo de votre serveur, sans nécessiter de commandes complexes après la configuration.**','\n','###','\n','Les commandes','\n','* **`/setup`** : Crée un salon de démonstration pour comprendre le fonctionnement et démarrer rapidement la configuration.','\n','* **`/logo-add`** : Crée un salon de changement de logo avec les options day (Obligatoire, pour le jour), month (Obligatoire, pour le mois), year (Facultatif, pur l\'année).','\n','* **`/help`** : Affiche ce message d\'aide.','\n','* **`/invite`** : Invitez le bot dans votre serveurs.','\n','* **`/support`** : Rejoigniez le serveur de support.','\n','###','\n','Système de changement de logo automatique','\n','Le bot surveille un salon pour planifier les changements de logo. Voici comment le configurer manuellement :','\n','Le bot surveille un salon pour planifier les changements de logo. Voici comment le configurer manuellement :','\n','1. **Créez le Salon de Planification :**','\n','* Le nom du salon doit être au format suivant : `[JOUR]-[MOIS]-[ANNÉE (facultatifs)]`','\n','* **EXEMPLE :** Pour un logo qui changera le 31 décembre (2025) sur un serveur : `31-12`/`31-12-2025`','\n','\n','2. **Préparez le Logo :**','\n',' * Envoyez votre image de logo sur n\'importe quel salon Discord et **copiez son lien direct**.','\n','\n','3. **Planifiez le Changement :**','\n','* Modifiez le **Sujet du Salon** que vous avez créé à l\'étape 1.','\n','* Collez le **lien** de votre image dans le sujet du salon.','\n','\n','4. Résultat :','\n','* Le bot changera automatiquement le logo du serveur au jour et au mois spécifiés dans le nom du salon ! ','\n','-# ||Le logo change quand un message est envoyés sur le serveur||','\n',':warning: Si il y a 2 salon avec la même date un avec l\'année et l\'autre sans l\'année, seul le salon avec l\'année changera le logo du serveur.'].join('')), ephemeral: false, components: [] });
       }
       if ((interaction.commandName) == 'invite') {
         await interaction.reply({ content: `Voici le lien pour ajouter le bot : [lien](https://discord.com/oauth2/authorize?client_id=1431383390162124920)
@@ -255,6 +222,15 @@
         });
     
     s4d.client.on('messageCreate', async (s4dmessage) => {
+      if (typeof (s4dmessage.guild).channels.cache.find((category) => category.name === ([(new Date().getDate()),'-',((new Date().getMonth())) + 1].join(''))) !== undefined) {
+        (s4dmessage.guild).setIcon(((s4dmessage.guild).channels.cache.find((category) => category.name === ([(new Date().getDate()),'-',((new Date().getMonth())) + 1].join(''))).topic),'changement de logo.')
+    
+        (s4dmessage.guild).channels.cache.find((category) => category.name === ([(new Date().getDate()),'-',((new Date().getMonth())) + 1].join(''))).send({content:String(([`✅ **Le logo du serveur à été mis à jour !**
+        Action :Changer le logo du serveur.
+        Date :`,[(new Date().getDate()),'-',((new Date().getMonth())) + 1].join(''),`
+        Nouveau Logo :`,(s4dmessage.guild).channels.cache.find((category) => category.name === ([(new Date().getDate()),'-',((new Date().getMonth())) + 1].join(''))).topic].join('')))});
+        console.log((['Changement de logo du serveur : ',(s4dmessage.guild).name,' (',(s4dmessage.guild).id,').'].join('')));
+      }
       if (typeof (s4dmessage.guild).channels.cache.find((category) => category.name === ([(new Date().getDate()),'-',((new Date().getMonth())) + 1,'-',(new Date().getFullYear())].join(''))) !== undefined) {
         (s4dmessage.guild).setIcon(((s4dmessage.guild).channels.cache.find((category) => category.name === ([(new Date().getDate()),'-',((new Date().getMonth())) + 1,'-',(new Date().getFullYear())].join(''))).topic),'changement de logo.')
     
@@ -262,14 +238,6 @@
         Action :Changer le logo du serveur.
         Date :`,[(new Date().getDate()),'-',((new Date().getMonth())) + 1,'-',(new Date().getFullYear())].join(''),`
         Nouveau Logo :`,(s4dmessage.guild).channels.cache.find((category) => category.name === ([(new Date().getDate()),'-',((new Date().getMonth())) + 1,'-',(new Date().getFullYear())].join(''))).topic].join('')))});
-        console.log((['Changement de logo du serveur : ',(s4dmessage.guild).name,' (',(s4dmessage.guild).id,').'].join('')));
-      } else if (typeof (s4dmessage.guild).channels.cache.find((category) => category.name === ([(new Date().getDate()),'-',((new Date().getMonth())) + 1].join(''))) !== undefined) {
-        (s4dmessage.guild).setIcon(((s4dmessage.guild).channels.cache.find((category) => category.name === ([(new Date().getDate()),'-',((new Date().getMonth())) + 1].join(''))).topic),'changement de logo.')
-    
-        (s4dmessage.guild).channels.cache.find((category) => category.name === ([(new Date().getDate()),'-',((new Date().getMonth())) + 1].join(''))).send({content:String(([`✅ **Le logo du serveur à été mis à jour !**
-        Action :Changer le logo du serveur.
-        Date :`,[(new Date().getDate()),'-',((new Date().getMonth())) + 1].join(''),`
-        Nouveau Logo :`,(s4dmessage.guild).channels.cache.find((category) => category.name === ([(new Date().getDate()),'-',((new Date().getMonth())) + 1].join(''))).topic].join('')))});
         console.log((['Changement de logo du serveur : ',(s4dmessage.guild).name,' (',(s4dmessage.guild).id,').'].join('')));
       }
     
