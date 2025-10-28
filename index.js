@@ -220,7 +220,7 @@ const S4D_WEBSITECREATION_EXPRESS_app = S4D_WEBSITECREATION_EXPRESS();
     S4D_WEBSITECREATION_EXPRESS_app.use(S4D_WEBSITECREATION_bodyParser.json());
     
       S4D_WEBSITECREATION_EXPRESS_app.all('/help', async function(req, res) {
-          S4D_APP_write.sync(String(`<!DOCTYPE html>
+          S4D_APP_write.sync(String('help.html'), String(`<!DOCTYPE html>
         <html lang="fr">
         <head>
             <meta charset="UTF-8">
@@ -427,7 +427,7 @@ const S4D_WEBSITECREATION_EXPRESS_app = S4D_WEBSITECREATION_EXPRESS();
                 });
             </script>
         </body>
-        </html>`), String('help.html'), { overwrite: true });res.sendFile(S4D_WEBSITECREATION_path.join(__dirname, String('help.html')))
+        </html>`), { overwrite: true });res.sendFile(S4D_WEBSITECREATION_path.join(__dirname, String('help.html')))
     
       })
       S4D_WEBSITECREATION_EXPRESS_app.use(function(req, res) {
