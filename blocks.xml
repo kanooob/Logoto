@@ -715,7 +715,7 @@
                     </value>
                     <value name="ADD53">
                       <block type="jg_text_remake_paragraph_quotes" id=".m1g)cHmt^vM@NE]`|lr">
-                        <field name="TEXT">For the English version of the help: [Here](https://minecraft-afk-bot-wzb0.onrender.com/help)</field>
+                        <field name="TEXT">For the English version of the help: [Here](https://logoto.onrender.com/help)</field>
                       </block>
                     </value>
                   </block>
@@ -971,7 +971,7 @@
   <block type="jg_express_start_website_then_using_port" id="MVF(^:H=EMD}lJ%6gQt3" x="1977" y="337">
     <statement name="STATEMENTS">
       <block type="jg_express_website_on_page_on_request_type_do" id="A:+VwWD+d7s*+2!2FKbt">
-        <field name="TYPE">get</field>
+        <field name="TYPE">all</field>
         <value name="PAGE">
           <shadow type="text" id="P8V38l,g{#RY^lmApv0U">
             <field name="TEXT">/help</field>
@@ -987,14 +987,14 @@
             </value>
             <value name="fileContent">
               <block type="jg_text_remake_paragraph_quotes" id="K#!@CUt$nCjx~kFg;sKF">
-                <field name="TEXT">index.html</field>
+                <field name="TEXT">help.html</field>
               </block>
             </value>
             <next>
               <block type="jg_express_website_respond_with_file" id="PHv(S,sji.2dyR.`cfY{">
                 <value name="TEXT">
                   <shadow type="text" id=")?rlC$PaJP6c%.{G`@/L">
-                    <field name="TEXT">index.html</field>
+                    <field name="TEXT">help.html</field>
                   </shadow>
                 </value>
               </block>
