@@ -1234,7 +1234,7 @@
             <field name="SEARCH_TYPE">NAME</field>
             <value name="VALUE">
               <block type="text_join" id="!}Cl@,PNGV^C[)Q`cXKr">
-                <mutation items="6"></mutation>
+                <mutation items="4"></mutation>
                 <value name="ADD0">
                   <block type="jg_text_remake_paragraph_quotes" id="U-0K`E6CBHw*}+?kczKs">
                     <field name="TEXT">logo-</field>
@@ -1265,18 +1265,6 @@
                       <shadow type="math_number" id="YSot{Ps[GA4!Z?7Dnk-x">
                         <field name="NUM">1</field>
                       </shadow>
-                    </value>
-                  </block>
-                </value>
-                <value name="ADD4">
-                  <block type="jg_text_remake_paragraph_quotes" id="+$T0G$YGC(40@VXwkz$v">
-                    <field name="TEXT">-</field>
-                  </block>
-                </value>
-                <value name="ADD5">
-                  <block type="s4d_server_id" id="F+p`5},p}*E//)ntXV[j">
-                    <value name="SERVER">
-                      <block type="s4d_message_guild" id="7C!(o=BHyI1e;ftzUtnV"></block>
                     </value>
                   </block>
                 </value>
