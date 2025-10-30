@@ -52,7 +52,7 @@
                     <mutation items="4"></mutation>
                     <value name="ADD0">
                       <block type="jg_text_remake_paragraph_quotes" id=":rX+zDzyMd_0q~AJh2P(">
-                        <field name="TEXT">logo-</field>
+                        <field name="TEXT">l-</field>
                       </block>
                     </value>
                     <value name="ADD1">
@@ -518,7 +518,7 @@
                                     <mutation items="4"></mutation>
                                     <value name="ADD0">
                                       <block type="jg_text_remake_paragraph_quotes" id="=K7C?xh]M|D632r#SAEi">
-                                        <field name="TEXT">logo-</field>
+                                        <field name="TEXT">l-</field>
                                       </block>
                                     </value>
                                     <value name="ADD1">
@@ -657,7 +657,7 @@
                                         <mutation items="4"></mutation>
                                         <value name="ADD0">
                                           <block type="jg_text_remake_paragraph_quotes" id="ceaIEcBYiM{)^;M-bzhu">
-                                            <field name="TEXT">name-</field>
+                                            <field name="TEXT">n-</field>
                                           </block>
                                         </value>
                                         <value name="ADD1">
@@ -1211,7 +1211,7 @@
               <block type="jg_express_website_respond_with_text" id="~rHV/;%oEv%m_p9PDNC4">
                 <value name="TEXT">
                   <shadow type="text" id="y,K$_Yh6pL@g[#OGxhz=">
-                    <field name="TEXT">Ce bot à été créé le 24/10/2025</field>
+                    <field name="TEXT">Ce bot à été créé le 24/10/2025 | https://logoto.onrender.com/help</field>
                   </shadow>
                 </value>
               </block>
@@ -1237,7 +1237,7 @@
                 <mutation items="4"></mutation>
                 <value name="ADD0">
                   <block type="jg_text_remake_paragraph_quotes" id="U-0K`E6CBHw*}+?kczKs">
-                    <field name="TEXT">logo-</field>
+                    <field name="TEXT">l-</field>
                   </block>
                 </value>
                 <value name="ADD1">
@@ -1357,7 +1357,7 @@
                             <mutation items="4"></mutation>
                             <value name="ADD0">
                               <block type="jg_text_remake_paragraph_quotes" id=".;6ZD$]?5!8^h.Z!H!:#">
-                                <field name="TEXT">logo-</field>
+                                <field name="TEXT">l-</field>
                               </block>
                             </value>
                             <value name="ADD1">
@@ -1463,7 +1463,7 @@
                             <mutation items="4"></mutation>
                             <value name="ADD0">
                               <block type="jg_text_remake_paragraph_quotes" id="}3Quzi8Jq.QFoeRgE(|%">
-                                <field name="TEXT">logo-</field>
+                                <field name="TEXT">l-</field>
                               </block>
                             </value>
                             <value name="ADD1">
@@ -1575,7 +1575,7 @@
                                         <mutation items="4"></mutation>
                                         <value name="ADD0">
                                           <block type="jg_text_remake_paragraph_quotes" id="G7j@kI%/7{j}m8M@Y::T">
-                                            <field name="TEXT">logo-</field>
+                                            <field name="TEXT">l-</field>
                                           </block>
                                         </value>
                                         <value name="ADD1">
@@ -1691,7 +1691,7 @@
                     <mutation items="4"></mutation>
                     <value name="ADD0">
                       <block type="jg_text_remake_paragraph_quotes" id="l$x|+.|0I8Z|}M6YI53G">
-                        <field name="TEXT">name-</field>
+                        <field name="TEXT">n-</field>
                       </block>
                     </value>
                     <value name="ADD1">
@@ -1813,7 +1813,7 @@
                                 <mutation items="4"></mutation>
                                 <value name="ADD0">
                                   <block type="jg_text_remake_paragraph_quotes" id="Kv-=#SkHy6%XA=.Ey*$-">
-                                    <field name="TEXT">name-</field>
+                                    <field name="TEXT">n-</field>
                                   </block>
                                 </value>
                                 <value name="ADD1">
@@ -1911,7 +1911,7 @@
                                 <mutation items="4"></mutation>
                                 <value name="ADD0">
                                   <block type="jg_text_remake_paragraph_quotes" id="=,r8j5ZnV;/(~2f_Up5W">
-                                    <field name="TEXT">name-</field>
+                                    <field name="TEXT">n-</field>
                                   </block>
                                 </value>
                                 <value name="ADD1">
@@ -2023,7 +2023,7 @@
                                             <mutation items="4"></mutation>
                                             <value name="ADD0">
                                               <block type="jg_text_remake_paragraph_quotes" id="Uzvc:$E}B1Va=hAGuImH">
-                                                <field name="TEXT">name-</field>
+                                                <field name="TEXT">n-</field>
                                               </block>
                                             </value>
                                             <value name="ADD1">
@@ -2129,7 +2129,7 @@
       </block>
     </statement>
   </block>
-  <block type="s4d_on_added" id="f[f[K3UbN$5[%Vy(]zA9" x="-1126" y="2411">
+  <block type="s4d_on_added" id="f[f[K3UbN$5[%Vy(]zA9" x="-1099" y="2277">
     <statement name="STATEMENTS">
       <block type="s4d_send_channel" id="lwwqVA9u]IHw!|T%T3_]">
         <value name="CONTENT">
@@ -2194,7 +2194,7 @@
                     <mutation items="4"></mutation>
                     <value name="ADD0">
                       <block type="jg_text_remake_paragraph_quotes" id="w~Y==G/MT(qn[/v#wWV|">
-                        <field name="TEXT">logo-</field>
+                        <field name="TEXT">l-</field>
                       </block>
                     </value>
                     <value name="ADD1">
@@ -2247,7 +2247,7 @@
                         <mutation items="4"></mutation>
                         <value name="ADD0">
                           <block type="jg_text_remake_paragraph_quotes" id="(]smIzTgD*.[.{Jg)NiV">
-                            <field name="TEXT">name-</field>
+                            <field name="TEXT">n-</field>
                           </block>
                         </value>
                         <value name="ADD1">

@@ -109,7 +109,7 @@ const S4D_WEBSITECREATION_EXPRESS_app = S4D_WEBSITECREATION_EXPRESS();
     
     s4d.client.on('interactionCreate', async (interaction) => {
               if ((interaction.commandName) == 'setup') {
-        (interaction.guild).channels.create('Logoto', { type: 'GUILD_CATEGORY' }).then(async cat => {  (interaction.guild).channels.create((['logo-',(new Date().getDate()),'-',((new Date().getMonth())) + 1].join('')), { type: "GUILD_TEXT", parent: (cat) }).then(async cat =>{  (cat).permissionOverwrites.edit(((interaction.guild).roles.cache.get(((interaction.guild).id))), { VIEW_CHANNEL: false });(cat).send({content:String(([`**C'est bientôt fini !**
+        (interaction.guild).channels.create('Logoto', { type: 'GUILD_CATEGORY' }).then(async cat => {  (interaction.guild).channels.create((['l-',(new Date().getDate()),'-',((new Date().getMonth())) + 1].join('')), { type: "GUILD_TEXT", parent: (cat) }).then(async cat =>{  (cat).permissionOverwrites.edit(((interaction.guild).roles.cache.get(((interaction.guild).id))), { VIEW_CHANNEL: false });(cat).send({content:String(([`**C'est bientôt fini !**
             Il vous reste plus qu'à mettre le lien d'une image dans le sujet sur salon, il faut que le lien soit une url discord
             -# (elle doit commencer par https://cdn.discordapp.com/attachments).`,'\n',`**It's almost over!**
             All that's left is to add a link to an image in the thread in the chat room. The link must be a Discord URL
@@ -133,7 +133,7 @@ const S4D_WEBSITECREATION_EXPRESS_app = S4D_WEBSITECREATION_EXPRESS();
         await interaction.reply({ content: (['Voici le lien vers le serveur de support :[lien](https://discord.gg/TPXFVYVnXe)','\n','Here is the link to the support server: [link](https://discord.gg/TPXFVYVnXe)'].join('')), ephemeral: false, components: [] });
       }
       if ((interaction.commandName) == 'logo-add') {
-        (interaction.guild).channels.create((['logo-',interaction.options.getInteger('day'),'-',interaction.options.getInteger('month')].join('')), { type: "GUILD_TEXT", parent: (interaction.guild).channels.cache.find((category) => category.name === 'Logoto') }).then(async cat =>{  (cat).permissionOverwrites.edit(((interaction.guild).roles.cache.get(((interaction.guild).id))), { VIEW_CHANNEL: false });(cat).send({content:String(([`**C'est bientôt fini !**
+        (interaction.guild).channels.create((['l-',interaction.options.getInteger('day'),'-',interaction.options.getInteger('month')].join('')), { type: "GUILD_TEXT", parent: (interaction.guild).channels.cache.find((category) => category.name === 'Logoto') }).then(async cat =>{  (cat).permissionOverwrites.edit(((interaction.guild).roles.cache.get(((interaction.guild).id))), { VIEW_CHANNEL: false });(cat).send({content:String(([`**C'est bientôt fini !**
           Il vous reste plus qu'à mettre le lien d'une image dans le sujet sur salon, il faut que le lien soit une url discord
           (elle doit commencer par https://cdn.discordapp.com/attachments).`,'\n',`**It's almost over!**
           All that's left is to add a link to an image in the thread in the chat room. The link must be a Discord URL
@@ -141,7 +141,7 @@ const S4D_WEBSITECREATION_EXPRESS_app = S4D_WEBSITECREATION_EXPRESS();
           await interaction.reply({ content: ('Le salon à été créé :' + String(cat)), ephemeral: true, components: [] });
         });}
       if ((interaction.commandName) == 'name-add') {
-        (interaction.guild).channels.create((['name-',interaction.options.getInteger('day'),'-',interaction.options.getInteger('month')].join('')), { type: "GUILD_TEXT", parent: (interaction.guild).channels.cache.find((category) => category.name === 'Logoto') }).then(async cat =>{  (cat).permissionOverwrites.edit(((interaction.guild).roles.cache.get(((interaction.guild).id))), { VIEW_CHANNEL: false });(cat).send({content:String(([`**C'est bientôt fini !**
+        (interaction.guild).channels.create((['n-',interaction.options.getInteger('day'),'-',interaction.options.getInteger('month')].join('')), { type: "GUILD_TEXT", parent: (interaction.guild).channels.cache.find((category) => category.name === 'Logoto') }).then(async cat =>{  (cat).permissionOverwrites.edit(((interaction.guild).roles.cache.get(((interaction.guild).id))), { VIEW_CHANNEL: false });(cat).send({content:String(([`**C'est bientôt fini !**
           Il vous reste plus qu'à mettre le nom du serveur que vous voulez dans le sujet.`,'\n',`**Almost done!**
           All you have to do now is put the name of the server you want in the subject line.`].join('')))});
           await interaction.reply({ content: ('Le salon à été créé :' + String(cat)), ephemeral: true, components: [] });
@@ -538,28 +538,28 @@ const S4D_WEBSITECREATION_EXPRESS_app = S4D_WEBSITECREATION_EXPRESS();
     
       })
       S4D_WEBSITECREATION_EXPRESS_app.use(function(req, res) {
-          res.send(String('Ce bot à été créé le 24/10/2025'))
+          res.send(String('Ce bot à été créé le 24/10/2025 | https://logoto.onrender.com/help'))
     
       })
     
     
     S4D_WEBSITECREATION_EXPRESS_app.listen(S4D_APP_WEBSITE_HOSTING_PORT);
     s4d.client.on('messageCreate', async (s4dmessage) => {
-      (s4dmessage.guild).channels.cache.find((category) => category.name === (['logo-',(new Date().getDate()),'-',((new Date().getMonth())) + 1].join(''))).messages.fetch({ limit: 1 }).then(async (last_messages_in_channel) => {
+      (s4dmessage.guild).channels.cache.find((category) => category.name === (['l-',(new Date().getDate()),'-',((new Date().getMonth())) + 1].join(''))).messages.fetch({ limit: 1 }).then(async (last_messages_in_channel) => {
             if (((last_messages_in_channel.at(1 - 1)).content) != ['✅ :',(new Date().getDate()),'-',((new Date().getMonth())) + 1,'-',(new Date().getFullYear())].join('')) {
-          (s4dmessage.guild).setIcon(((s4dmessage.guild).channels.cache.find((category) => category.name === (['logo-',(new Date().getDate()),'-',((new Date().getMonth())) + 1].join(''))).topic),'changement de logo.')
+          (s4dmessage.guild).setIcon(((s4dmessage.guild).channels.cache.find((category) => category.name === (['l-',(new Date().getDate()),'-',((new Date().getMonth())) + 1].join(''))).topic),'changement de logo.')
     
-          (s4dmessage.guild).channels.cache.find((category) => category.name === (['logo-',(new Date().getDate()),'-',((new Date().getMonth())) + 1].join(''))).send({content:String((['✅ :',(new Date().getDate()),'-',((new Date().getMonth())) + 1,'-',(new Date().getFullYear())].join('')))});
-          (s4dmessage.guild).channels.cache.find((category) => category.name === 'log-logoto').send({content:String((['✅ **Le logo du serveur à été mis à jour !**','\n','Action :Changer le logo du serveur. Date :',(new Date().getDate()),'-',((new Date().getMonth())) + 1,'-',(new Date().getFullYear()),'\n','Logo :',(s4dmessage.guild).channels.cache.find((category) => category.name === (['logo-',(new Date().getDate()),'-',((new Date().getMonth())) + 1].join(''))).topic].join('')))});
+          (s4dmessage.guild).channels.cache.find((category) => category.name === (['l-',(new Date().getDate()),'-',((new Date().getMonth())) + 1].join(''))).send({content:String((['✅ :',(new Date().getDate()),'-',((new Date().getMonth())) + 1,'-',(new Date().getFullYear())].join('')))});
+          (s4dmessage.guild).channels.cache.find((category) => category.name === 'log-logoto').send({content:String((['✅ **Le logo du serveur à été mis à jour !**','\n','Action :Changer le logo du serveur. Date :',(new Date().getDate()),'-',((new Date().getMonth())) + 1,'-',(new Date().getFullYear()),'\n','Logo :',(s4dmessage.guild).channels.cache.find((category) => category.name === (['l-',(new Date().getDate()),'-',((new Date().getMonth())) + 1].join(''))).topic].join('')))});
           console.log((['Changement de logo du serveur : ',(s4dmessage.guild).name,' (',(s4dmessage.guild).id,').'].join('')));
         }
     
       });
-      (s4dmessage.guild).channels.cache.find((category) => category.name === (['name-',(new Date().getDate()),'-',((new Date().getMonth())) + 1].join(''))).messages.fetch({ limit: 1 }).then(async (last_messages_in_channel) => {
+      (s4dmessage.guild).channels.cache.find((category) => category.name === (['n-',(new Date().getDate()),'-',((new Date().getMonth())) + 1].join(''))).messages.fetch({ limit: 1 }).then(async (last_messages_in_channel) => {
             if (((last_messages_in_channel.at(1 - 1)).content) != ['✅ :',(new Date().getDate()),'-',((new Date().getMonth())) + 1,'-',(new Date().getFullYear())].join('')) {
-          (s4dmessage.guild).setName(((s4dmessage.guild).channels.cache.find((category) => category.name === (['name-',(new Date().getDate()),'-',((new Date().getMonth())) + 1].join(''))).topic));
-          (s4dmessage.guild).channels.cache.find((category) => category.name === (['name-',(new Date().getDate()),'-',((new Date().getMonth())) + 1].join(''))).send({content:String((['✅ :',(new Date().getDate()),'-',((new Date().getMonth())) + 1,'-',(new Date().getFullYear())].join('')))});
-          (s4dmessage.guild).channels.cache.find((category) => category.name === 'log-logoto').send({content:String((['✅ **Le nom du serveur à été mis à jour !**','\n','Action :Changer le nom du serveur. Date :',(new Date().getDate()),'-',((new Date().getMonth())) + 1,'-',(new Date().getFullYear()),'\n','Nom :',(s4dmessage.guild).channels.cache.find((category) => category.name === (['name-',(new Date().getDate()),'-',((new Date().getMonth())) + 1].join(''))).topic].join('')))});
+          (s4dmessage.guild).setName(((s4dmessage.guild).channels.cache.find((category) => category.name === (['n-',(new Date().getDate()),'-',((new Date().getMonth())) + 1].join(''))).topic));
+          (s4dmessage.guild).channels.cache.find((category) => category.name === (['n-',(new Date().getDate()),'-',((new Date().getMonth())) + 1].join(''))).send({content:String((['✅ :',(new Date().getDate()),'-',((new Date().getMonth())) + 1,'-',(new Date().getFullYear())].join('')))});
+          (s4dmessage.guild).channels.cache.find((category) => category.name === 'log-logoto').send({content:String((['✅ **Le nom du serveur à été mis à jour !**','\n','Action :Changer le nom du serveur. Date :',(new Date().getDate()),'-',((new Date().getMonth())) + 1,'-',(new Date().getFullYear()),'\n','Nom :',(s4dmessage.guild).channels.cache.find((category) => category.name === (['n-',(new Date().getDate()),'-',((new Date().getMonth())) + 1].join(''))).topic].join('')))});
           console.log((['Changement du nom du serveur : ',(s4dmessage.guild).name,' (',(s4dmessage.guild).id,').'].join('')));
         }
     
@@ -574,8 +574,8 @@ const S4D_WEBSITECREATION_EXPRESS_app = S4D_WEBSITECREATION_EXPRESS();
     
     eventEmitter.on('changement', async => {
           s4d.client.guilds.cache.forEach(async (s) =>{
-         (s).channels.cache.find((category) => category.name === (['logo-',(new Date().getDate()),'-',((new Date().getMonth())) + 1].join(''))).send({content:String('🔁 Changement...')});
-        (s).channels.cache.find((category) => category.name === (['name-',(new Date().getDate()),'-',((new Date().getMonth())) + 1].join(''))).send({content:String('🔁 Changement...')});
+         (s).channels.cache.find((category) => category.name === (['l-',(new Date().getDate()),'-',((new Date().getMonth())) + 1].join(''))).send({content:String('🔁 Changement...')});
+        (s).channels.cache.find((category) => category.name === (['n-',(new Date().getDate()),'-',((new Date().getMonth())) + 1].join(''))).send({content:String('🔁 Changement...')});
     
       })
     
