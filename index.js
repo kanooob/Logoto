@@ -107,25 +107,49 @@ const S4D_WEBSITECREATION_EXPRESS_app = S4D_WEBSITECREATION_EXPRESS();
             }
         });
     
-    s4d.client.on('ready', async () => {
-      jour = ((new Date().getDate())) - 1;
-      s4d.client.channels.cache.get('1413899996691955755').send({content:String('Démarrage du bot...')});
-    
-              while(s4d.client && s4d.client.token) {
-                  await delay(50);
-                    s4d.client.user.setPresence({status: "online",activities:[{name:([s4d.client.users.cache.size,' membres, ',s4d.client.guilds.cache.size,' serveurs.'].join('')),type:"WATCHING"}]});
-        await delay(Number(180)*1000);
-        if (jour != ((new Date().getDate()))) {
-          jour = ((new Date().getDate()));
-          eventEmitter.emit('logo');
+    s4d.client.on('interactionCreate', async (interaction) => {
+              if ((interaction.commandName) == 'setup') {
+        if (!(typeof (interaction.guild).channels.cache.find((category) => category.name === 'Logoto') !== undefined)) {
+          (interaction.guild).channels.create('Logoto', { type: 'GUILD_CATEGORY' }).then(async cat => {});
         }
-        ms_on = (s4d.client.uptime);
-        s4d.client.channels.cache.get('1387514903778295940').send({content:String((['Ping :**',s4d.client.ws.ping,'\n','**Temps de fonctionnement **',Math.round(ms_on / 3600000),'** heures.'].join('')))});
+        await delay(Number(1)*1000);
+        (interaction.guild).channels.create((['l-',(new Date().getDate()),'-',((new Date().getMonth())) + 1,'-',(interaction.guild).id].join('')), { type: "GUILD_TEXT", parent: (interaction.guild).channels.cache.find((category) => category.name === 'Logoto') }).then(async cat =>{  (cat).permissionOverwrites.edit(((interaction.guild).roles.cache.get(((interaction.guild).id))), { VIEW_CHANNEL: false });(cat).send({content:String(([`**C'est bientôt fini !**
+          Il vous reste plus qu'à mettre le lien d'une image dans le sujet sur salon, il faut que le lien soit une url discord
+          -# (elle doit commencer par https://cdn.discordapp.com/attachments).`,'\n',`**It's almost over!**
+          All that's left is to add a link to an image in the thread in the chat room. The link must be a Discord URL
+          -# (it must begin with https://cdn.discordapp.com/attachments).`].join('')))});
+          await interaction.reply({ content: ('Le salon à été créé :' + String(cat)), ephemeral: true, components: [] });
+        });if (!(typeof s4d.client.channels.cache.find((channel) => channel.name === 'log') !== undefined)) {
+          (interaction.guild).channels.create('log', { type: "GUILD_TEXT", parent: (interaction.guild).channels.cache.find((category) => category.name === 'Logoto') }).then(async cat =>{  (cat).permissionOverwrites.edit(((interaction.guild).roles.cache.get(((interaction.guild).id))), { VIEW_CHANNEL: false });(cat).send({content:String(([`**Salon des log à été créé**
+            Vous obtiendrez les actions fait par le bot dans se salon`,'\n',`**Log room has been created**
+            You will find the actions performed by the bot in this room.`].join('')))});
+          });}
+      }
+      if ((interaction.commandName) == 'help') {
+        await interaction.reply({ content: (['Aide de Logoto - Automatisez votre Logo !','\n','====================================','\n','**Je suis le bot spécialisé dans l\'automatisation du changement de logo de votre serveur, sans nécessiter de commandes complexes après la configuration.**','\n','###','\n','Les commandes','\n','* **`/setup`** : Crée un salon de démonstration pour comprendre le fonctionnement et démarrer rapidement la configuration.','\n','* **`/logo-add`** : Crée un salon de changement de logo avec les options day (Obligatoire, pour le jour), month (Obligatoire, pour le mois).','\n','* **`/name-add`** : Crée un salon de changement de nom avec les options day (Obligatoire, pour le jour), month (Obligatoire, pour le mois).','\n','* **`/help`** : Affiche ce message d\'aide.','\n','* **`/invite`** : Invitez le bot dans votre serveurs.','\n','* **`/support`** : Rejoigniez le serveur de support.','\n','Pour l\'aide complète :[Ici](https://logoto.onrender.com/help)','\n','For english help :[Here](https://logoto.onrender.com/help)'].join('')), ephemeral: false, components: [] });
+      }
+      if ((interaction.commandName) == 'invite') {
+        await interaction.reply({ content: (['Voici le lien d\'invitation du bot Discord :[lien](https://discord.com/oauth2/authorize?client_id=1431383390162124920)','\n','Here is the link to add the bot: [link](https://discord.com/oauth2/authorize?client_id=1431383390162124920)'].join('')), ephemeral: false, components: [] });
+      }
+      if ((interaction.commandName) == 'support') {
+        await interaction.reply({ content: (['Voici le lien vers le serveur de support :[lien](https://discord.gg/TPXFVYVnXe)','\n','Here is the link to the support server: [link](https://discord.gg/TPXFVYVnXe)'].join('')), ephemeral: false, components: [] });
+      }
+      if ((interaction.commandName) == 'logo-add') {
+        (interaction.guild).channels.create((['l-',interaction.options.getInteger('day'),'-',interaction.options.getInteger('month'),'-',(interaction.guild).id].join('')), { type: "GUILD_TEXT", parent: (interaction.guild).channels.cache.find((category) => category.name === 'Logoto') }).then(async cat =>{  (cat).permissionOverwrites.edit(((interaction.guild).roles.cache.get(((interaction.guild).id))), { VIEW_CHANNEL: false });(cat).send({content:String(([`**C'est bientôt fini !**
+          Il vous reste plus qu'à mettre le lien d'une image dans le sujet sur salon, il faut que le lien soit une url discord
+          -# (elle doit commencer par https://cdn.discordapp.com/attachments).`,'\n',`**It's almost over!**
+          All that's left is to add a link to an image in the thread in the chat room. The link must be a Discord URL
+          -# (it must begin with https://cdn.discordapp.com/attachments).`].join('')))});
+          await interaction.reply({ content: ('Le salon à été créé :' + String(cat)), ephemeral: true, components: [] });
+        });}
+      if ((interaction.commandName) == 'name-add') {
+        (interaction.guild).channels.create((['n-',interaction.options.getInteger('day'),'-',interaction.options.getInteger('month'),'-',(interaction.guild).id].join('')), { type: "GUILD_TEXT", parent: (interaction.guild).channels.cache.find((category) => category.name === 'Logoto') }).then(async cat =>{  (cat).permissionOverwrites.edit(((interaction.guild).roles.cache.get(((interaction.guild).id))), { VIEW_CHANNEL: false });(cat).send({content:String(([`**C'est bientôt fini !**
+          Il vous reste plus qu'à mettre le nom du serveur que vous voulez dans le sujet.`,'\n',`**Almost done!**
+          All you have to do now is put the name of the server you want in the subject line.`].join('')))});
+          await interaction.reply({ content: ('Le salon à été créé :' + String(cat)), ephemeral: true, components: [] });
+        });}
     
-                  console.log('ran')
-              }
-    
-    });
+        });
     
     synchronizeSlashCommands(s4d.client, [
       {
@@ -174,41 +198,53 @@ const S4D_WEBSITECREATION_EXPRESS_app = S4D_WEBSITECREATION_EXPRESS();
             ]
         },
           ]
+      },{
+          name: 'name-add',
+      		description: 'Ajoutez un nouveau changement de nom',
+      		options: [
+              {
+            type: 4,
+        	name: 'day',
+            required: true,
+        	description: 'Le jour du changement',
+            choices: [
+    
+            ]
+        },{
+            type: 4,
+        	name: 'month',
+            required: true,
+        	description: 'Le mois du changement',
+            choices: [
+    
+            ]
+        },
+          ]
       },
     ],{
         debug: false,
     
     });
     
-    s4d.client.on('interactionCreate', async (interaction) => {
-              if ((interaction.commandName) == 'setup') {
-        (interaction.guild).channels.create('Logo', { type: 'GUILD_CATEGORY' }).then(async cat => {  (interaction.guild).channels.create(([(new Date().getDate()),'-',((new Date().getMonth())) + 1,'-',(interaction.guild).id].join('')), { type: "GUILD_TEXT", parent: (cat) }).then(async cat =>{  (cat).permissionOverwrites.edit(((interaction.guild).roles.cache.get(((interaction.guild).id))), { VIEW_CHANNEL: false });(cat).send({content:String(([`**C'est bientôt fini !**
-            Il vous reste plus qu'à mettre le lien d'une image dans le sujet sur salon, il faut que le lien soit une url discord
-            -# (elle doit commencer par https://cdn.discordapp.com/attachments).`,'\n',`**It's almost over!**
-            All that's left is to add a link to an image in the thread in the chat room. The link must be a Discord URL
-            -# (it must begin with https://cdn.discordapp.com/attachments).`].join('')))});
-            await interaction.reply({ content: ('Le salon à été créé :' + String(cat)), ephemeral: true, components: [] });
-          });});
-      }
-      if ((interaction.commandName) == 'help') {
-        await interaction.reply({ content: (['Aide de Logoto - Automatisez votre Logo !','\n','====================================','\n','**Je suis le bot spécialisé dans l\'automatisation du changement de logo de votre serveur, sans nécessiter de commandes complexes après la configuration.**','\n','###','\n','Les commandes','\n','* **`/setup`** : Crée un salon de démonstration pour comprendre le fonctionnement et démarrer rapidement la configuration.','\n','* **`/logo-add`** : Crée un salon de changement de logo avec les options day (Obligatoire, pour le jour), month (Obligatoire, pour le mois).','\n','* **`/help`** : Affiche ce message d\'aide.','\n','* **`/invite`** : Invitez le bot dans votre serveurs.','\n','* **`/support`** : Rejoigniez le serveur de support.','\n','###','\n','Système de changement de logo automatique','\n','Le bot surveille un salon pour planifier les changements de logo. Voici comment le configurer manuellement :','\n','Le bot surveille un salon pour planifier les changements de logo. Voici comment le configurer manuellement :','\n','1. **Créez le Salon de Planification :**','\n','* Le nom du salon doit être au format suivant : `[JOUR]-[MOIS]-[ID du serveur]`','\n','**EXEMPLE :** Pour un logo qui changera le 31 décembre (2025) sur un serveur : `31-12`/`31-12-2025`','\n','\n','2. **Préparez le Logo :**','\n',' * Envoyez votre image de logo sur n\'importe quel salon Discord et **copiez son lien direct**.','\n','\n','3. **Planifiez le Changement :**','\n','* Modifiez le **Sujet du Salon** que vous avez créé à l\'étape 1.','\n','* Collez le **lien** de votre image dans le sujet du salon.','\n','\n','4. Résultat :','\n','* Le bot changera automatiquement le logo du serveur au jour et au mois spécifiés dans le nom du salon ! ','\n','-# ||Le logo change quand un message est envoyés sur le serveur||','\n','For the English version of the help: [Here](https://logoto.onrender.com/help)'].join('')), ephemeral: false, components: [] });
-      }
-      if ((interaction.commandName) == 'invite') {
-        await interaction.reply({ content: (['Voici le lien d\'invitation du bot Discord :[lien](https://discord.com/oauth2/authorize?client_id=1431383390162124920)','\n','Here is the link to add the bot: [link](https://discord.com/oauth2/authorize?client_id=1431383390162124920)'].join('')), ephemeral: false, components: [] });
-      }
-      if ((interaction.commandName) == 'support') {
-        await interaction.reply({ content: (['Voici le lien vers le serveur de support :[lien](https://discord.gg/TPXFVYVnXe)','\n','Here is the link to the support server: [link](https://discord.gg/TPXFVYVnXe)'].join('')), ephemeral: false, components: [] });
-      }
-      if ((interaction.commandName) == 'logo-add') {
-        (interaction.guild).channels.create(([interaction.options.getInteger('day'),'-',interaction.options.getInteger('month'),'-',(interaction.guild).id].join('')), { type: "GUILD_TEXT", parent: (interaction.guild).channels.cache.find((category) => category.name === 'Logo') }).then(async cat =>{  (cat).permissionOverwrites.edit(((interaction.guild).roles.cache.get(((interaction.guild).id))), { VIEW_CHANNEL: false });(cat).send({content:String(([`**C'est bientôt fini !**
-          Il vous reste plus qu'à mettre le lien d'une image dans le sujet sur salon, il faut que le lien soit une url discord
-          -# (elle doit commencer par https://cdn.discordapp.com/attachments).`,'\n',`**It's almost over!**
-          All that's left is to add a link to an image in the thread in the chat room. The link must be a Discord URL
-          -# (it must begin with https://cdn.discordapp.com/attachments).`].join('')))});
-          await interaction.reply({ content: ('Le salon à été créé :' + String(cat)), ephemeral: true, components: [] });
-        });}
+    s4d.client.on('ready', async () => {
+      jour = ((new Date().getDate())) - 1;
+      s4d.client.channels.cache.get('1413899996691955755').send({content:String('Démarrage du bot...')});
     
-        });
+              while(s4d.client && s4d.client.token) {
+                  await delay(50);
+                    s4d.client.user.setPresence({status: "online",activities:[{name:([s4d.client.users.cache.size,' membres, ',s4d.client.guilds.cache.size,' serveurs.'].join('')),type:"WATCHING"}]});
+        await delay(Number(180)*1000);
+        if (jour != ((new Date().getDate()))) {
+          jour = ((new Date().getDate()));
+          eventEmitter.emit('logo');
+        }
+        ms_on = (s4d.client.uptime);
+        s4d.client.channels.cache.get('1387514903778295940').send({content:String((['Ping :**',s4d.client.ws.ping,'\n','**Temps de fonctionnement **',Math.round(ms_on / 3600000),'** heures.'].join('')))});
+    
+                  console.log('ran')
+              }
+    
+    });
     
     /* IMPORTED - S4D Website Hosting Dependencies */
     let S4D_APP_WEBSITE_HOSTING_PORT = 8080
@@ -225,7 +261,7 @@ const S4D_WEBSITECREATION_EXPRESS_app = S4D_WEBSITECREATION_EXPRESS();
         <head>
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Aide de Logoto - Automatisez votre Logo</title>
+            <title>Aide de Logoto - Automatisez votre Logo & Nom</title>
             <style>
                 body {
                     font-family: Arial, sans-serif;
@@ -288,6 +324,11 @@ const S4D_WEBSITECREATION_EXPRESS_app = S4D_WEBSITECREATION_EXPRESS();
                     text-align: center;
                     margin-bottom: 20px;
                 }
+                hr {
+                    border: 0;
+                    border-top: 1px dashed #ddd;
+                    margin: 30px 0;
+                }
             </style>
         </head>
         <body>
@@ -304,27 +345,30 @@ const S4D_WEBSITECREATION_EXPRESS_app = S4D_WEBSITECREATION_EXPRESS();
             <script>
                 // --- Contenu Français ---
                 const contentFR = \`
-                    <h1>Aide de Logoto - Automatisez votre Logo ! 🇫🇷</h1>
-                    <p>Je suis le bot spécialisé dans l'automatisation du changement de logo de votre serveur, sans nécessiter de commandes complexes après la configuration.</p>
+                    <h1>Aide de Logoto - Automatisez votre Logo & Nom ! 🇫🇷</h1>
+                    <p>Je suis le bot spécialisé dans l'automatisation du changement de logo ET du nom de votre serveur, sans nécessiter de commandes complexes après la configuration.</p>
     
                     <h2>Les Commandes</h2>
                     <ul class="command-list">
                         <li><code>/setup</code> : Crée un salon de démonstration pour comprendre le fonctionnement et démarrer rapidement la configuration.</li>
                         <li><code>/logo-add</code> : Crée un salon de changement de logo avec les options <code>day</code> (Obligatoire, pour le jour) et <code>month</code> (Obligatoire, pour le mois).</li>
+                        <li><code>/name-add</code> : Crée un salon de changement de nom du serveur avec les options <code>day</code> et <code>month</code>.</li>
                         <li><code>/help</code> : Affiche ce message d'aide (ou cette page !).</li>
                         <li><code>/invite</code> : Obtenez le lien pour inviter le bot sur votre serveur.</li>
                         <li><code>/support</code> : Rejoignez le serveur de support pour toute question ou aide.</li>
                     </ul>
+    
+                    <hr>
     
                     <h2>Système de Changement de Logo Automatique (Configuration Manuelle)</h2>
                     <p>Le bot surveille un salon spécifique pour planifier et exécuter les changements de logo. Voici comment le configurer manuellement :</p>
     
                     <ol>
                         <li>
-                            Créez le Salon de Planification :
+                            Créez le Salon de Planification (Logo) :
                             <ul>
-                                <li>Le nom du salon doit être au format suivant : <code>[JOUR]-[MOIS]-[ID du serveur]</code></li>
-                                <li>EXEMPLE : Pour un logo qui changera le 31 décembre sur un serveur : <code>31-12-010203040506070809</code></li>
+                                <li>Le nom du salon doit être au format suivant : <code>l-[JOUR]-[MOIS]-[ID du serveur]</code></li>
+                                <li>EXEMPLE : Pour un logo qui changera le 31 décembre sur un serveur : <code>l-31-12-010203040506070809</code></li>
                             </ul>
                         </li>
                         <li>
@@ -336,8 +380,8 @@ const S4D_WEBSITECREATION_EXPRESS_app = S4D_WEBSITECREATION_EXPRESS();
                         <li>
                             Planifiez le Changement :
                             <ul>
-                                <li>Modifiez le Sujet du Salon (Channel Topic) que vous avez créé à l'étape 1.</li>
-                                <li>Collez le lien de votre image dans le sujet du salon.</li>
+                                <li>Modifiez le Sujet du Salon (Channel Topic) créé à l'étape 1.</li>
+                                <li>Collez le **lien** de votre image dans le sujet du salon.</li>
                             </ul>
                         </li>
                         <li>
@@ -348,34 +392,65 @@ const S4D_WEBSITECREATION_EXPRESS_app = S4D_WEBSITECREATION_EXPRESS();
                         </li>
                     </ol>
     
+                    <hr>
+    
+                    <h2>Système de Changement de Nom Automatique (Configuration Manuelle)</h2>
+                    <p>Le bot surveille un autre salon pour modifier le nom de votre serveur. Voici comment le configurer manuellement :</p>
+    
+                    <ol>
+                        <li>
+                            Créez le Salon de Planification (Nom) :
+                            <ul>
+                                <li>Le nom du salon doit être au format suivant : <code>n-[JOUR]-[MOIS]-[ID du serveur]</code></li>
+                                <li>EXEMPLE : Pour un nom qui changera le 1er janvier sur un serveur : <code>n-01-01-010203040506070809</code></li>
+                            </ul>
+                        </li>
+                        <li>
+                            Planifiez le Changement :
+                            <ul>
+                                <li>Modifiez le Sujet du Salon (Channel Topic) créé à l'étape 1.</li>
+                                <li>Écrivez le **nouveau nom du serveur** dans le sujet du salon.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            Résultat :
+                            <ul>
+                                <li>Le bot changera automatiquement le nom du serveur au jour et au mois spécifiés dans le nom du salon !</li>
+                            </ul>
+                        </li>
+                    </ol>
+    
                     <div class="note">
-                        NOTE IMPORTANTE : Le logo change lorsque un message est envoyé sur le serveur (n'importe quel message, par n'importe quel utilisateur). Cependant, le bot envoie lui-même un message discret en début de journée pour s'assurer que le changement se fasse, donc vous n'avez pas besoin de vous inquiéter.
+                        NOTE IMPORTANTE : Le changement (logo OU nom) se déclenche quand un message est envoyé sur le serveur. Le bot envoie lui-même un message discret en début de journée pour s'assurer que le changement se fasse, donc pas besoin de s'inquiéter.
                     </div>
                 \`;
     
                 // --- Contenu Anglais ---
                 const contentEN = \`
-                    <h1>Logoto Help - Automate your Logo! 🇬🇧</h1>
-                    <p>I am the bot specialized in automating the change of your server's logo, without requiring complex commands after the initial setup.</p>
+                    <h1>Logoto Help - Automate your Logo & Name! 🇬🇧</h1>
+                    <p>I am the bot specialized in automating the change of your server's logo AND name, without requiring complex commands after the initial setup.</p>
     
                     <h2>Commands</h2>
                     <ul class="command-list">
                         <li><code>/setup</code> : Creates a demonstration channel to understand the process and quickly start the configuration.</li>
                         <li><code>/logo-add</code> : Creates a logo change channel with the options <code>day</code> (Required) and <code>month</code> (Required).</li>
+                        <li><code>/name-add</code> : Creates a server name change channel with the options <code>day</code> and <code>month</code>.</li>
                         <li><code>/help</code> : Displays this help message (or this page!).</li>
                         <li><code>/invite</code> : Get the link to invite the bot to your server.</li>
                         <li><code>/support</code> : Join the support server for any questions or assistance.</li>
                     </ul>
+    
+                    <hr>
     
                     <h2>Automatic Logo Change System (Manual Setup)</h2>
                     <p>The bot monitors a specific channel to schedule and execute logo changes. Here's how to configure it manually:</p>
     
                     <ol>
                         <li>
-                            Create the Scheduling Channel:
+                            Create the Scheduling Channel (Logo):
                             <ul>
-                                <li>The channel name must follow this format: <code>[DAY]-[MONTH]-[Server ID]</code></li>
-                                <li>EXAMPLE: For a logo that will change on December 31st on a server: <code>31-12-010203040506070809</code></li>
+                                <li>The channel name must follow this format: <code>l-[DAY]-[MONTH]-[Server ID]</code></li>
+                                <li>EXAMPLE: For a logo that will change on December 31st on a server: <code>l-31-12-010203040506070809</code></li>
                             </ul>
                         </li>
                         <li>
@@ -388,7 +463,7 @@ const S4D_WEBSITECREATION_EXPRESS_app = S4D_WEBSITECREATION_EXPRESS();
                             Schedule the Change:
                             <ul>
                                 <li>Edit the Channel Topic of the channel you created in step 1.</li>
-                                <li>Paste the link of your image into the channel topic.</li>
+                                <li>Paste the **link** of your image into the channel topic.</li>
                             </ul>
                         </li>
                         <li>
@@ -399,8 +474,36 @@ const S4D_WEBSITECREATION_EXPRESS_app = S4D_WEBSITECREATION_EXPRESS();
                         </li>
                     </ol>
     
+                    <hr>
+    
+                    <h2>Automatic Name Change System (Manual Setup)</h2>
+                    <p>The bot monitors another channel to modify your server's name. Here's how to configure it manually:</p>
+    
+                    <ol>
+                        <li>
+                            Create the Scheduling Channel (Name):
+                            <ul>
+                                <li>The channel name must follow this format: <code>n-[DAY]-[MONTH]-[Server ID]</code></li>
+                                <li>EXAMPLE: For a name that will change on January 1st on a server: <code>n-01-01-010203040506070809</code></li>
+                            </ul>
+                        </li>
+                        <li>
+                            Schedule the Change:
+                            <ul>
+                                <li>Edit the Channel Topic of the channel you created in step 1.</li>
+                                <li>Write the **new server name** in the channel topic.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            Result:
+                            <ul>
+                                <li>The bot will automatically change the server name on the day and month specified in the channel name!</li>
+                            </ul>
+                        </li>
+                    </ol>
+    
                     <div class="note">
-                        IMPORTANT NOTE: The logo changes when a message is sent on the server (any message, by any user). However, the bot sends a discreet message itself at the beginning of the day to ensure the change happens, so you don't need to worry.
+                        IMPORTANT NOTE: The change (logo OR name) is triggered when a message is sent on the server. The bot sends a discreet message itself at the beginning of the day to ensure the change happens, so you don't need to worry.
                     </div>
                 \`;
     
@@ -438,21 +541,23 @@ const S4D_WEBSITECREATION_EXPRESS_app = S4D_WEBSITECREATION_EXPRESS();
     
     
     S4D_WEBSITECREATION_EXPRESS_app.listen(S4D_APP_WEBSITE_HOSTING_PORT);
-    eventEmitter.on('logo', async => {
-          s4d.client.guilds.cache.forEach(async (s) =>{
-         s4d.client.channels.cache.find((channel) => channel.name === ([(new Date().getDate()),'-',((new Date().getMonth())) + 1,'-',(s).id].join(''))).send({content:String('🔁 Changement...')});
+    s4d.client.on('messageCreate', async (s4dmessage) => {
+      s4d.client.channels.cache.find((channel) => channel.name === (['l-',(new Date().getDate()),'-',((new Date().getMonth())) + 1,'-',(s4dmessage.guild).id].join(''))).messages.fetch({ limit: 1 }).then(async (last_messages_in_channel) => {
+            if (((last_messages_in_channel.at(1 - 1)).content) != ['✅ :',(new Date().getDate()),'-',((new Date().getMonth())) + 1,'-',(new Date().getFullYear())].join('')) {
+          (s4dmessage.guild).setIcon((s4d.client.channels.cache.find((channel) => channel.name === (['l-',(new Date().getDate()),'-',((new Date().getMonth())) + 1,'-',(s4dmessage.guild).id].join(''))).topic),'changement de logo.')
     
-      })
+          s4d.client.channels.cache.find((channel) => channel.name === (['l-',(new Date().getDate()),'-',((new Date().getMonth())) + 1,'-',(s4dmessage.guild).id].join(''))).send({content:String((['✅ :',(new Date().getDate()),'-',((new Date().getMonth())) + 1,'-',(new Date().getFullYear())].join('')))});
+          s4d.client.channels.cache.find((channel) => channel.name === 'log').send({content:String((['✅ **Le logo du serveur à été mis à jour !**','\n','Action :Changer le logo du serveur. Date :',(new Date().getDate()),'-',((new Date().getMonth())) + 1,'-',(new Date().getFullYear()),'\n','Logo :',s4d.client.channels.cache.find((channel) => channel.name === (['l-',(new Date().getDate()),'-',((new Date().getMonth())) + 1,'-',(s4dmessage.guild).id].join(''))).topic].join('')))});
+          console.log((['Changement de logo du serveur : ',(s4dmessage.guild).name,' (',(s4dmessage.guild).id,').'].join('')));
+        }
     
       });
-    
-    s4d.client.on('messageCreate', async (s4dmessage) => {
-      s4d.client.channels.cache.find((channel) => channel.name === ([(new Date().getDate()),'-',((new Date().getMonth())) + 1,'-',(s4dmessage.guild).id].join(''))).messages.fetch({ limit: 1 }).then(async (last_messages_in_channel) => {
-            if (((last_messages_in_channel.at(1 - 1)).content) != '✅ **Le logo du serveur à été mis à jour !** Action :Changer le logo du serveur. Date :' + String([(new Date().getDate()),'-',((new Date().getMonth())) + 1,'-',(new Date().getFullYear())].join(''))) {
-          (s4dmessage.guild).setIcon((s4d.client.channels.cache.find((channel) => channel.name === ([(new Date().getDate()),'-',((new Date().getMonth())) + 1,'-',(s4dmessage.guild).id].join(''))).topic),'changement de logo.')
-    
-          s4d.client.channels.cache.find((channel) => channel.name === ([(new Date().getDate()),'-',((new Date().getMonth())) + 1,'-',(s4dmessage.guild).id].join(''))).send({content:String(('✅ **Le logo du serveur à été mis à jour !** Action :Changer le logo du serveur. Date :' + String([(new Date().getDate()),'-',((new Date().getMonth())) + 1,'-',(new Date().getFullYear())].join(''))))});
-          console.log((['Changement de logo du serveur : ',(s4dmessage.guild).name,' (',(s4dmessage.guild).id,').'].join('')));
+      s4d.client.channels.cache.find((channel) => channel.name === (['n-',(new Date().getDate()),'-',((new Date().getMonth())) + 1,'-',(s4dmessage.guild).id].join(''))).messages.fetch({ limit: 1 }).then(async (last_messages_in_channel) => {
+            if (((last_messages_in_channel.at(1 - 1)).content) != ['✅ :',(new Date().getDate()),'-',((new Date().getMonth())) + 1,'-',(new Date().getFullYear())].join('')) {
+          (s4dmessage.guild).setName((s4d.client.channels.cache.find((channel) => channel.name === (['n-',(new Date().getDate()),'-',((new Date().getMonth())) + 1,'-',(s4dmessage.guild).id].join(''))).topic));
+          s4d.client.channels.cache.find((channel) => channel.name === (['n-',(new Date().getDate()),'-',((new Date().getMonth())) + 1,'-',(s4dmessage.guild).id].join(''))).send({content:String((['✅ :',(new Date().getDate()),'-',((new Date().getMonth())) + 1,'-',(new Date().getFullYear())].join('')))});
+          s4d.client.channels.cache.find((channel) => channel.name === 'log').send({content:String((['✅ **Le nom du serveur à été mis à jour !**','\n','Action :Changer le nom du serveur. Date :',(new Date().getDate()),'-',((new Date().getMonth())) + 1,'-',(new Date().getFullYear()),'\n','Nom :',s4d.client.channels.cache.find((channel) => channel.name === (['n-',(new Date().getDate()),'-',((new Date().getMonth())) + 1,'-',(s4dmessage.guild).id].join(''))).topic].join('')))});
+          console.log((['Changement du nom du serveur : ',(s4dmessage.guild).name,' (',(s4dmessage.guild).id,').'].join('')));
         }
     
       });
@@ -463,6 +568,15 @@ const S4D_WEBSITECREATION_EXPRESS_app = S4D_WEBSITECREATION_EXPRESS();
       s4d.client.channels.cache.get('1432341468059537419').send({content:String((['Bot ajouté dans **',s4dguild.name,'** (',s4dguild.id,').'].join('')))});
     
     });
+    
+    eventEmitter.on('logo', async => {
+          s4d.client.guilds.cache.forEach(async (s) =>{
+         s4d.client.channels.cache.find((channel) => channel.name === (['l-',(new Date().getDate()),'-',((new Date().getMonth())) + 1,'-',(s).id].join(''))).send({content:String('🔁 Changement...')});
+        s4d.client.channels.cache.find((channel) => channel.name === (['n-',(new Date().getDate()),'-',((new Date().getMonth())) + 1,'-',(s).id].join(''))).send({content:String('🔁 Changement...')});
+    
+      })
+    
+      });
     
     return s4d
 })();
