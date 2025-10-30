@@ -1221,7 +1221,7 @@
       </block>
     </statement>
   </block>
-  <block type="s4d_on_message" id="8YBohI]Dkfe0rTYfFc-h" x="-2418" y="2115">
+  <block type="s4d_on_message" id="8YBohI]Dkfe0rTYfFc-h" x="-2444" y="2044">
     <statement name="STATEMENTS">
       <block type="jg_channel_get_last_messages_in_channel_then" id="tx3r+=8w5^Q9URnm.8[c">
         <value name="AMOUNT">
@@ -1799,12 +1799,12 @@
                   </block>
                 </value>
                 <statement name="DO0">
-                  <block type="s4d_set_server_name" id="jeao.1?hk.V.G.jv)E`o">
+                  <block type="s4d_set_server_name" id=",hmv=whpDm`3m#y2b^Lz">
                     <value name="SERVER">
-                      <block type="s4d_message_guild" id="4I]8VgEo0Es1pJ~/+XLo"></block>
+                      <block type="s4d_message_guild" id=";oq3ZwVHi-Z6l/#hwy~k"></block>
                     </value>
                     <value name="NEW_NICKNAME">
-                      <block type="s4d_channel_topic" id="4SN66Pi(X!Ot,:Yk*s0g">
+                      <block type="s4d_channel_topic" id="nA`y#W6jg4$2LSW~[J)%">
                         <value name="CHANNEL">
                           <block type="frost_category_get" id="To}m)WS3Ec{M`yLL6#bb">
                             <field name="SEARCH_TYPE">NAME</field>
