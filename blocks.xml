@@ -1191,7 +1191,7 @@
             </value>
             <value name="fileContent">
               <block type="jg_text_remake_paragraph_quotes" id="fo!^A|`oU]E)=G][,J_1">
-                <field name="TEXT">&lt;!DOCTYPE html&gt;&amp;#10;&lt;html lang="fr"&gt;&amp;#10;&lt;head&gt;&amp;#10;    &lt;meta charset="UTF-8"&gt;&amp;#10;    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;&amp;#10;    &lt;title&gt;Aide de Logoto - Automatisez votre Logo &amp; Nom&lt;/title&gt;&amp;#10;    &lt;style&gt;&amp;#10;        body {&amp;#10;            font-family: Arial, sans-serif;&amp;#10;            line-height: 1.6;&amp;#10;            margin: 20px;&amp;#10;            background-color: #f4f4f4;&amp;#10;            color: #333;&amp;#10;        }&amp;#10;        .container {&amp;#10;            max-width: 900px;&amp;#10;            margin: auto;&amp;#10;            background: #fff;&amp;#10;            padding: 30px;&amp;#10;            border-radius: 8px;&amp;#10;            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);&amp;#10;        }&amp;#10;        h1 {&amp;#10;            color: #7289da; /* Couleur Discord */&amp;#10;            border-bottom: 2px solid #7289da;&amp;#10;            padding-bottom: 10px;&amp;#10;        }&amp;#10;        h2 {&amp;#10;            color: #5865f2;&amp;#10;            margin-top: 30px;&amp;#10;        }&amp;#10;        code {&amp;#10;            background-color: #eee;&amp;#10;            padding: 2px 4px;&amp;#10;            border-radius: 4px;&amp;#10;        }&amp;#10;        .command-list {&amp;#10;            list-style-type: none;&amp;#10;            padding: 0;&amp;#10;        }&amp;#10;        .command-list li {&amp;#10;            margin-bottom: 10px;&amp;#10;        }&amp;#10;        .note {&amp;#10;            background-color: #fff3cd;&amp;#10;            border-left: 5px solid #ffc107;&amp;#10;            padding: 15px;&amp;#10;            margin-top: 20px;&amp;#10;            border-radius: 4px;&amp;#10;        }&amp;#10;        .lang-switch button {&amp;#10;            background-color: #7289da;&amp;#10;            color: white;&amp;#10;            border: none;&amp;#10;            padding: 10px 15px;&amp;#10;            cursor: pointer;&amp;#10;            border-radius: 4px;&amp;#10;            margin-left: 10px;&amp;#10;            font-weight: bold;&amp;#10;            transition: background-color 0.3s;&amp;#10;        }&amp;#10;        .lang-switch button:hover {&amp;#10;            background-color: #5865f2;&amp;#10;        }&amp;#10;        .lang-switch {&amp;#10;            text-align: center;&amp;#10;            margin-bottom: 20px;&amp;#10;        }&amp;#10;        hr {&amp;#10;            border: 0;&amp;#10;            border-top: 1px dashed #ddd;&amp;#10;            margin: 30px 0;&amp;#10;        }&amp;#10;    &lt;/style&gt;&amp;#10;&lt;/head&gt;&amp;#10;&lt;body&gt;&amp;#10;    &lt;div class="container"&gt;&amp;#10;        &lt;div class="lang-switch"&gt;&amp;#10;            &lt;button onclick="changeLanguage('fr')"&gt;Afficher en Français&lt;/button&gt;&amp;#10;            &lt;button onclick="changeLanguage('en')"&gt;Display in English&lt;/button&gt;&amp;#10;        &lt;/div&gt;&amp;#10;&amp;#10;        &lt;div id="content-area"&gt;&amp;#10;            &lt;/div&gt;&amp;#10;    &lt;/div&gt;&amp;#10;&amp;#10;    &lt;script&gt;&amp;#10;        // --- Contenu Français ---&amp;#10;        const contentFR = `&amp;#10;            &lt;h1&gt;Aide de Logoto - Automatisez votre Logo &amp; Nom ! 🇫🇷&lt;/h1&gt;&amp;#10;            &lt;p&gt;Je suis le bot spécialisé dans l'automatisation du changement de logo ET du nom de votre serveur, sans nécessiter de commandes complexes après la configuration.&lt;/p&gt;&amp;#10;&amp;#10;            &lt;h2&gt;Les Commandes&lt;/h2&gt;&amp;#10;            &lt;ul class="command-list"&gt;&amp;#10;                &lt;li&gt;&lt;code&gt;/setup&lt;/code&gt; : Crée un salon de démonstration pour comprendre le fonctionnement et démarrer rapidement la configuration.&lt;/li&gt;&amp;#10;                &lt;li&gt;&lt;code&gt;/logo-add&lt;/code&gt; : Crée un salon de changement de logo avec les options &lt;code&gt;day&lt;/code&gt; (Obligatoire, pour le jour) et &lt;code&gt;month&lt;/code&gt; (Obligatoire, pour le mois).&lt;/li&gt;&amp;#10;                &lt;li&gt;&lt;code&gt;/name-add&lt;/code&gt; : Crée un salon de changement de nom du serveur avec les options &lt;code&gt;day&lt;/code&gt; et &lt;code&gt;month&lt;/code&gt;.&lt;/li&gt;&amp;#10;                &lt;li&gt;&lt;code&gt;/help&lt;/code&gt; : Affiche ce message d'aide (ou cette page !).&lt;/li&gt;&amp;#10;                &lt;li&gt;&lt;code&gt;/invite&lt;/code&gt; : Obtenez le lien pour inviter le bot sur votre serveur.&lt;/li&gt;&amp;#10;                &lt;li&gt;&lt;code&gt;/support&lt;/code&gt; : Rejoignez le serveur de support pour toute question ou aide.&lt;/li&gt;&amp;#10;            &lt;/ul&gt;&amp;#10;&amp;#10;            &lt;hr&gt;&amp;#10;&amp;#10;            &lt;h2&gt;Système de Changement de Logo Automatique (Configuration Manuelle)&lt;/h2&gt;&amp;#10;            &lt;p&gt;Le bot surveille un salon spécifique pour planifier et exécuter les changements de logo. Voici comment le configurer manuellement :&lt;/p&gt;&amp;#10;&amp;#10;            &lt;ol&gt;&amp;#10;                &lt;li&gt;&amp;#10;                    Créez le Salon de Planification (Logo) :&amp;#10;                    &lt;ul&gt;&amp;#10;                        &lt;li&gt;Le nom du salon doit être au format suivant : &lt;code&gt;l-[JOUR]-[MOIS]-[ID du serveur]&lt;/code&gt;&lt;/li&gt;&amp;#10;                        &lt;li&gt;EXEMPLE : Pour un logo qui changera le 31 décembre sur un serveur : &lt;code&gt;l-31-12-010203040506070809&lt;/code&gt;&lt;/li&gt;&amp;#10;                    &lt;/ul&gt;&amp;#10;                &lt;/li&gt;&amp;#10;                &lt;li&gt;&amp;#10;                    Préparez le Logo :&amp;#10;                    &lt;ul&gt;&amp;#10;                        &lt;li&gt;Envoyez votre image de logo sur n'importe quel salon Discord et copiez son lien direct.&lt;/li&gt;&amp;#10;                    &lt;/ul&gt;&amp;#10;                &lt;/li&gt;&amp;#10;                &lt;li&gt;&amp;#10;                    Planifiez le Changement :&amp;#10;                    &lt;ul&gt;&amp;#10;                        &lt;li&gt;Modifiez le Sujet du Salon (Channel Topic) créé à l'étape 1.&lt;/li&gt;&amp;#10;                        &lt;li&gt;Collez le **lien** de votre image dans le sujet du salon.&lt;/li&gt;&amp;#10;                    &lt;/ul&gt;&amp;#10;                &lt;/li&gt;&amp;#10;                &lt;li&gt;&amp;#10;                    Résultat :&amp;#10;                    &lt;ul&gt;&amp;#10;                        &lt;li&gt;Le bot changera automatiquement le logo du serveur au jour et au mois spécifiés dans le nom du salon !&lt;/li&gt;&amp;#10;                    &lt;/ul&gt;&amp;#10;                &lt;/li&gt;&amp;#10;            &lt;/ol&gt;&amp;#10;&amp;#10;            &lt;hr&gt;&amp;#10;&amp;#10;            &lt;h2&gt;Système de Changement de Nom Automatique (Configuration Manuelle)&lt;/h2&gt;&amp;#10;            &lt;p&gt;Le bot surveille un autre salon pour modifier le nom de votre serveur. Voici comment le configurer manuellement :&lt;/p&gt;&amp;#10;&amp;#10;            &lt;ol&gt;&amp;#10;                &lt;li&gt;&amp;#10;                    Créez le Salon de Planification (Nom) :&amp;#10;                    &lt;ul&gt;&amp;#10;                        &lt;li&gt;Le nom du salon doit être au format suivant : &lt;code&gt;n-[JOUR]-[MOIS]-[ID du serveur]&lt;/code&gt;&lt;/li&gt;&amp;#10;                        &lt;li&gt;EXEMPLE : Pour un nom qui changera le 1er janvier sur un serveur : &lt;code&gt;n-01-01-010203040506070809&lt;/code&gt;&lt;/li&gt;&amp;#10;                    &lt;/ul&gt;&amp;#10;                &lt;/li&gt;&amp;#10;                &lt;li&gt;&amp;#10;                    Planifiez le Changement :&amp;#10;                    &lt;ul&gt;&amp;#10;                        &lt;li&gt;Modifiez le Sujet du Salon (Channel Topic) créé à l'étape 1.&lt;/li&gt;&amp;#10;                        &lt;li&gt;Écrivez le **nouveau nom du serveur** dans le sujet du salon.&lt;/li&gt;&amp;#10;                    &lt;/ul&gt;&amp;#10;                &lt;/li&gt;&amp;#10;                &lt;li&gt;&amp;#10;                    Résultat :&amp;#10;                    &lt;ul&gt;&amp;#10;                        &lt;li&gt;Le bot changera automatiquement le nom du serveur au jour et au mois spécifiés dans le nom du salon !&lt;/li&gt;&amp;#10;                    &lt;/ul&gt;&amp;#10;                &lt;/li&gt;&amp;#10;            &lt;/ol&gt;&amp;#10;&amp;#10;            &lt;div class="note"&gt;&amp;#10;                NOTE IMPORTANTE : Le changement (logo OU nom) se déclenche quand un message est envoyé sur le serveur. Le bot envoie lui-même un message discret en début de journée pour s'assurer que le changement se fasse, donc pas besoin de s'inquiéter.&amp;#10;            &lt;/div&gt;&amp;#10;        `;&amp;#10;&amp;#10;        // --- Contenu Anglais ---&amp;#10;        const contentEN = `&amp;#10;            &lt;h1&gt;Logoto Help - Automate your Logo &amp; Name! 🇬🇧&lt;/h1&gt;&amp;#10;            &lt;p&gt;I am the bot specialized in automating the change of your server's logo AND name, without requiring complex commands after the initial setup.&lt;/p&gt;&amp;#10;&amp;#10;            &lt;h2&gt;Commands&lt;/h2&gt;&amp;#10;            &lt;ul class="command-list"&gt;&amp;#10;                &lt;li&gt;&lt;code&gt;/setup&lt;/code&gt; : Creates a demonstration channel to understand the process and quickly start the configuration.&lt;/li&gt;&amp;#10;                &lt;li&gt;&lt;code&gt;/logo-add&lt;/code&gt; : Creates a logo change channel with the options &lt;code&gt;day&lt;/code&gt; (Required) and &lt;code&gt;month&lt;/code&gt; (Required).&lt;/li&gt;&amp;#10;                &lt;li&gt;&lt;code&gt;/name-add&lt;/code&gt; : Creates a server name change channel with the options &lt;code&gt;day&lt;/code&gt; and &lt;code&gt;month&lt;/code&gt;.&lt;/li&gt;&amp;#10;                &lt;li&gt;&lt;code&gt;/help&lt;/code&gt; : Displays this help message (or this page!).&lt;/li&gt;&amp;#10;                &lt;li&gt;&lt;code&gt;/invite&lt;/code&gt; : Get the link to invite the bot to your server.&lt;/li&gt;&amp;#10;                &lt;li&gt;&lt;code&gt;/support&lt;/code&gt; : Join the support server for any questions or assistance.&lt;/li&gt;&amp;#10;            &lt;/ul&gt;&amp;#10;&amp;#10;            &lt;hr&gt;&amp;#10;&amp;#10;            &lt;h2&gt;Automatic Logo Change System (Manual Setup)&lt;/h2&gt;&amp;#10;            &lt;p&gt;The bot monitors a specific channel to schedule and execute logo changes. Here's how to configure it manually:&lt;/p&gt;&amp;#10;&amp;#10;            &lt;ol&gt;&amp;#10;                &lt;li&gt;&amp;#10;                    Create the Scheduling Channel (Logo):&amp;#10;                    &lt;ul&gt;&amp;#10;                        &lt;li&gt;The channel name must follow this format: &lt;code&gt;l-[DAY]-[MONTH]-[Server ID]&lt;/code&gt;&lt;/li&gt;&amp;#10;                        &lt;li&gt;EXAMPLE: For a logo that will change on December 31st on a server: &lt;code&gt;l-31-12-010203040506070809&lt;/code&gt;&lt;/li&gt;&amp;#10;                    &lt;/ul&gt;&amp;#10;                &lt;/li&gt;&amp;#10;                &lt;li&gt;&amp;#10;                    Prepare the Logo:&amp;#10;                    &lt;ul&gt;&amp;#10;                        &lt;li&gt;Upload your logo image to any Discord channel and copy its direct link.&lt;/li&gt;&amp;#10;                    &lt;/ul&gt;&amp;#10;                &lt;/li&gt;&amp;#10;                &lt;li&gt;&amp;#10;                    Schedule the Change:&amp;#10;                    &lt;ul&gt;&amp;#10;                        &lt;li&gt;Edit the Channel Topic of the channel you created in step 1.&lt;/li&gt;&amp;#10;                        &lt;li&gt;Paste the **link** of your image into the channel topic.&lt;/li&gt;&amp;#10;                    &lt;/ul&gt;&amp;#10;                &lt;/li&gt;&amp;#10;                &lt;li&gt;&amp;#10;                    Result:&amp;#10;                    &lt;ul&gt;&amp;#10;                        &lt;li&gt;The bot will automatically change the server logo on the day and month specified in the channel name!&lt;/li&gt;&amp;#10;                    &lt;/ul&gt;&amp;#10;                &lt;/li&gt;&amp;#10;            &lt;/ol&gt;&amp;#10;&amp;#10;            &lt;hr&gt;&amp;#10;&amp;#10;            &lt;h2&gt;Automatic Name Change System (Manual Setup)&lt;/h2&gt;&amp;#10;            &lt;p&gt;The bot monitors another channel to modify your server's name. Here's how to configure it manually:&lt;/p&gt;&amp;#10;&amp;#10;            &lt;ol&gt;&amp;#10;                &lt;li&gt;&amp;#10;                    Create the Scheduling Channel (Name):&amp;#10;                    &lt;ul&gt;&amp;#10;                        &lt;li&gt;The channel name must follow this format: &lt;code&gt;n-[DAY]-[MONTH]-[Server ID]&lt;/code&gt;&lt;/li&gt;&amp;#10;                        &lt;li&gt;EXAMPLE: For a name that will change on January 1st on a server: &lt;code&gt;n-01-01-010203040506070809&lt;/code&gt;&lt;/li&gt;&amp;#10;                    &lt;/ul&gt;&amp;#10;                &lt;/li&gt;&amp;#10;                &lt;li&gt;&amp;#10;                    Schedule the Change:&amp;#10;                    &lt;ul&gt;&amp;#10;                        &lt;li&gt;Edit the Channel Topic of the channel you created in step 1.&lt;/li&gt;&amp;#10;                        &lt;li&gt;Write the **new server name** in the channel topic.&lt;/li&gt;&amp;#10;                    &lt;/ul&gt;&amp;#10;                &lt;/li&gt;&amp;#10;                &lt;li&gt;&amp;#10;                    Result:&amp;#10;                    &lt;ul&gt;&amp;#10;                        &lt;li&gt;The bot will automatically change the server name on the day and month specified in the channel name!&lt;/li&gt;&amp;#10;                    &lt;/ul&gt;&amp;#10;                &lt;/li&gt;&amp;#10;            &lt;/ol&gt;&amp;#10;&amp;#10;            &lt;div class="note"&gt;&amp;#10;                IMPORTANT NOTE: The change (logo OR name) is triggered when a message is sent on the server. The bot sends a discreet message itself at the beginning of the day to ensure the change happens, so you don't need to worry.&amp;#10;            &lt;/div&gt;&amp;#10;        `;&amp;#10;&amp;#10;        /**&amp;#10;         * Fonction pour changer le contenu de la page&amp;#10;         * @param {string} lang - La langue à afficher ('fr' ou 'en')&amp;#10;         */&amp;#10;        function changeLanguage(lang) {&amp;#10;            const contentArea = document.getElementById('content-area');&amp;#10;            if (lang === 'fr') {&amp;#10;                contentArea.innerHTML = contentFR;&amp;#10;                document.documentElement.lang = 'fr'; // Met à jour l'attribut lang de la page&amp;#10;            } else if (lang === 'en') {&amp;#10;                contentArea.innerHTML = contentEN;&amp;#10;                document.documentElement.lang = 'en'; // Met à jour l'attribut lang de la page&amp;#10;            }&amp;#10;            // Remonte en haut de la page pour une meilleure UX&amp;#10;            window.scrollTo(0, 0); &amp;#10;        }&amp;#10;&amp;#10;        // Affiche le contenu français par défaut au chargement de la page&amp;#10;        document.addEventListener('DOMContentLoaded', () =&gt; {&amp;#10;            changeLanguage('fr');&amp;#10;        });&amp;#10;    &lt;/script&gt;&amp;#10;&lt;/body&gt;&amp;#10;&lt;/html&gt;</field>
+                <field name="TEXT">&lt;!DOCTYPE html&gt;&amp;#10;&lt;html lang="fr"&gt;&amp;#10;&lt;head&gt;&amp;#10;    &lt;meta charset="UTF-8"&gt;&amp;#10;    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;&amp;#10;    &lt;title&gt;Aide de Logoto - Automatisez votre Logo &amp; Nom&lt;/title&gt;&amp;#10;    &lt;style&gt;&amp;#10;        body {&amp;#10;            font-family: Arial, sans-serif;&amp;#10;            line-height: 1.6;&amp;#10;            margin: 20px;&amp;#10;            background-color: #f4f4f4;&amp;#10;            color: #333;&amp;#10;        }&amp;#10;        .container {&amp;#10;            max-width: 900px;&amp;#10;            margin: auto;&amp;#10;            background: #fff;&amp;#10;            padding: 30px;&amp;#10;            border-radius: 8px;&amp;#10;            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);&amp;#10;        }&amp;#10;        h1 {&amp;#10;            color: #7289da; /* Couleur Discord */&amp;#10;            border-bottom: 2px solid #7289da;&amp;#10;            padding-bottom: 10px;&amp;#10;        }&amp;#10;        h2 {&amp;#10;            color: #5865f2;&amp;#10;            margin-top: 30px;&amp;#10;        }&amp;#10;        code {&amp;#10;            background-color: #eee;&amp;#10;            padding: 2px 4px;&amp;#10;            border-radius: 4px;&amp;#10;        }&amp;#10;        .command-list {&amp;#10;            list-style-type: none;&amp;#10;            padding: 0;&amp;#10;        }&amp;#10;        .command-list li {&amp;#10;            margin-bottom: 10px;&amp;#10;        }&amp;#10;        .note {&amp;#10;            background-color: #fff3cd;&amp;#10;            border-left: 5px solid #ffc107;&amp;#10;            padding: 15px;&amp;#10;            margin-top: 20px;&amp;#10;            border-radius: 4px;&amp;#10;        }&amp;#10;        .lang-switch button {&amp;#10;            background-color: #7289da;&amp;#10;            color: white;&amp;#10;            border: none;&amp;#10;            padding: 10px 15px;&amp;#10;            cursor: pointer;&amp;#10;            border-radius: 4px;&amp;#10;            margin-left: 10px;&amp;#10;            font-weight: bold;&amp;#10;            transition: background-color 0.3s;&amp;#10;        }&amp;#10;        .lang-switch button:hover {&amp;#10;            background-color: #5865f2;&amp;#10;        }&amp;#10;        .lang-switch {&amp;#10;            text-align: center;&amp;#10;            margin-bottom: 20px;&amp;#10;        }&amp;#10;        hr {&amp;#10;            border: 0;&amp;#10;            border-top: 1px dashed #ddd;&amp;#10;            margin: 30px 0;&amp;#10;        }&amp;#10;    &lt;/style&gt;&amp;#10;&lt;/head&gt;&amp;#10;&lt;body&gt;&amp;#10;    &lt;div class="container"&gt;&amp;#10;        &lt;div class="lang-switch"&gt;&amp;#10;            &lt;button onclick="changeLanguage('fr')"&gt;Afficher en Français&lt;/button&gt;&amp;#10;            &lt;button onclick="changeLanguage('en')"&gt;Display in English&lt;/button&gt;&amp;#10;        &lt;/div&gt;&amp;#10;&amp;#10;        &lt;div id="content-area"&gt;&amp;#10;            &lt;/div&gt;&amp;#10;    &lt;/div&gt;&amp;#10;&amp;#10;    &lt;script&gt;&amp;#10;        // --- Contenu Français ---&amp;#10;        const contentFR = `&amp;#10;            &lt;h1&gt;Aide de Logoto - Automatisez votre Logo &amp; Nom ! 🇫🇷&lt;/h1&gt;&amp;#10;            &lt;p&gt;Je suis le bot spécialisé dans l'automatisation du changement de logo ET du nom de votre serveur, sans nécessiter de commandes complexes après la configuration.&lt;/p&gt;&amp;#10;&amp;#10;            &lt;h2&gt;Les Commandes&lt;/h2&gt;&amp;#10;            &lt;ul class="command-list"&gt;&amp;#10;                &lt;li&gt;&lt;code&gt;/setup&lt;/code&gt; : Crée un salon de démonstration pour comprendre le fonctionnement et démarrer rapidement la configuration.&lt;/li&gt;&amp;#10;                &lt;li&gt;&lt;code&gt;/logo-add&lt;/code&gt; : Crée un salon de changement de logo avec les options &lt;code&gt;day&lt;/code&gt; (Obligatoire, pour le jour) et &lt;code&gt;month&lt;/code&gt; (Obligatoire, pour le mois).&lt;/li&gt;&amp;#10;                &lt;li&gt;&lt;code&gt;/name-add&lt;/code&gt; : Crée un salon de changement de nom du serveur avec les options &lt;code&gt;day&lt;/code&gt; et &lt;code&gt;month&lt;/code&gt;.&lt;/li&gt;&amp;#10;                &lt;li&gt;&lt;code&gt;/help&lt;/code&gt; : Affiche ce message d'aide (ou cette page !).&lt;/li&gt;&amp;#10;                &lt;li&gt;&lt;code&gt;/invite&lt;/code&gt; : Obtenez le lien pour inviter le bot sur votre serveur.&lt;/li&gt;&amp;#10;                &lt;li&gt;&lt;code&gt;/support&lt;/code&gt; : Rejoignez le serveur de support pour toute question ou aide.&lt;/li&gt;&amp;#10;            &lt;/ul&gt;&amp;#10;&amp;#10;            &lt;hr&gt;&amp;#10;&amp;#10;            &lt;h2&gt;Système de Changement de Logo Automatique (Configuration Manuelle)&lt;/h2&gt;&amp;#10;            &lt;p&gt;Le bot surveille un salon spécifique pour planifier et exécuter les changements de logo. Voici comment le configurer manuellement :&lt;/p&gt;&amp;#10;&amp;#10;            &lt;ol&gt;&amp;#10;                &lt;li&gt;&amp;#10;                    Créez le Salon de Planification (Logo) :&amp;#10;                    &lt;ul&gt;&amp;#10;                        &lt;li&gt;Le nom du salon doit être au format suivant : &lt;code&gt;l-[JOUR]-[MOIS]&lt;/code&gt;&lt;/li&gt;&amp;#10;                        &lt;li&gt;EXEMPLE : Pour un logo qui changera le 31 décembre sur un serveur : &lt;code&gt;l-31-12&lt;/code&gt;&lt;/li&gt;&amp;#10;                    &lt;/ul&gt;&amp;#10;                &lt;/li&gt;&amp;#10;                &lt;li&gt;&amp;#10;                    Préparez le Logo :&amp;#10;                    &lt;ul&gt;&amp;#10;                        &lt;li&gt;Envoyez votre image de logo sur n'importe quel salon Discord et copiez son lien direct.&lt;/li&gt;&amp;#10;                    &lt;/ul&gt;&amp;#10;                &lt;/li&gt;&amp;#10;                &lt;li&gt;&amp;#10;                    Planifiez le Changement :&amp;#10;                    &lt;ul&gt;&amp;#10;                        &lt;li&gt;Modifiez le Sujet du Salon (Channel Topic) créé à l'étape 1.&lt;/li&gt;&amp;#10;                        &lt;li&gt;Collez le **lien** de votre image dans le sujet du salon.&lt;/li&gt;&amp;#10;                    &lt;/ul&gt;&amp;#10;                &lt;/li&gt;&amp;#10;                &lt;li&gt;&amp;#10;                    Résultat :&amp;#10;                    &lt;ul&gt;&amp;#10;                        &lt;li&gt;Le bot changera automatiquement le logo du serveur au jour et au mois spécifiés dans le nom du salon !&lt;/li&gt;&amp;#10;                    &lt;/ul&gt;&amp;#10;                &lt;/li&gt;&amp;#10;            &lt;/ol&gt;&amp;#10;&amp;#10;            &lt;hr&gt;&amp;#10;&amp;#10;            &lt;h2&gt;Système de Changement de Nom Automatique (Configuration Manuelle)&lt;/h2&gt;&amp;#10;            &lt;p&gt;Le bot surveille un autre salon pour modifier le nom de votre serveur. Voici comment le configurer manuellement :&lt;/p&gt;&amp;#10;&amp;#10;            &lt;ol&gt;&amp;#10;                &lt;li&gt;&amp;#10;                    Créez le Salon de Planification (Nom) :&amp;#10;                    &lt;ul&gt;&amp;#10;                        &lt;li&gt;Le nom du salon doit être au format suivant : &lt;code&gt;n-[JOUR]-[MOIS]&lt;/code&gt;&lt;/li&gt;&amp;#10;                        &lt;li&gt;EXEMPLE : Pour un nom qui changera le 31 décembre sur un serveur : &lt;code&gt;n-31-12&lt;/code&gt;&lt;/li&gt;&amp;#10;                    &lt;/ul&gt;&amp;#10;                &lt;/li&gt;&amp;#10;                &lt;li&gt;&amp;#10;                    Planifiez le Changement :&amp;#10;                    &lt;ul&gt;&amp;#10;                        &lt;li&gt;Modifiez le Sujet du Salon (Channel Topic) créé à l'étape 1.&lt;/li&gt;&amp;#10;                        &lt;li&gt;Écrivez le **nouveau nom du serveur** dans le sujet du salon.&lt;/li&gt;&amp;#10;                    &lt;/ul&gt;&amp;#10;                &lt;/li&gt;&amp;#10;                &lt;li&gt;&amp;#10;                    Résultat :&amp;#10;                    &lt;ul&gt;&amp;#10;                        &lt;li&gt;Le bot changera automatiquement le nom du serveur au jour et au mois spécifiés dans le nom du salon !&lt;/li&gt;&amp;#10;                    &lt;/ul&gt;&amp;#10;                &lt;/li&gt;&amp;#10;            &lt;/ol&gt;&amp;#10;&amp;#10;            &lt;div class="note"&gt;&amp;#10;                NOTE IMPORTANTE : Le changement (logo OU nom) se déclenche quand un message est envoyé sur le serveur. Le bot envoie lui-même un message discret en début de journée pour s'assurer que le changement se fasse, donc pas besoin de s'inquiéter.&amp;#10;            &lt;/div&gt;&amp;#10;        `;&amp;#10;&amp;#10;        // --- Contenu Anglais ---&amp;#10;        const contentEN = `&amp;#10;            &lt;h1&gt;Logoto Help - Automate your Logo &amp; Name! 🇬🇧&lt;/h1&gt;&amp;#10;            &lt;p&gt;I am the bot specialized in automating the change of your server's logo AND name, without requiring complex commands after the initial setup.&lt;/p&gt;&amp;#10;&amp;#10;            &lt;h2&gt;Commands&lt;/h2&gt;&amp;#10;            &lt;ul class="command-list"&gt;&amp;#10;                &lt;li&gt;&lt;code&gt;/setup&lt;/code&gt; : Creates a demonstration channel to understand the process and quickly start the configuration.&lt;/li&gt;&amp;#10;                &lt;li&gt;&lt;code&gt;/logo-add&lt;/code&gt; : Creates a logo change channel with the options &lt;code&gt;day&lt;/code&gt; (Required) and &lt;code&gt;month&lt;/code&gt; (Required).&lt;/li&gt;&amp;#10;                &lt;li&gt;&lt;code&gt;/name-add&lt;/code&gt; : Creates a server name change channel with the options &lt;code&gt;day&lt;/code&gt; and &lt;code&gt;month&lt;/code&gt;.&lt;/li&gt;&amp;#10;                &lt;li&gt;&lt;code&gt;/help&lt;/code&gt; : Displays this help message (or this page!).&lt;/li&gt;&amp;#10;                &lt;li&gt;&lt;code&gt;/invite&lt;/code&gt; : Get the link to invite the bot to your server.&lt;/li&gt;&amp;#10;                &lt;li&gt;&lt;code&gt;/support&lt;/code&gt; : Join the support server for any questions or assistance.&lt;/li&gt;&amp;#10;            &lt;/ul&gt;&amp;#10;&amp;#10;            &lt;hr&gt;&amp;#10;&amp;#10;            &lt;h2&gt;Automatic Logo Change System (Manual Setup)&lt;/h2&gt;&amp;#10;            &lt;p&gt;The bot monitors a specific channel to schedule and execute logo changes. Here's how to configure it manually:&lt;/p&gt;&amp;#10;&amp;#10;            &lt;ol&gt;&amp;#10;                &lt;li&gt;&amp;#10;                    Create the Scheduling Channel (Logo):&amp;#10;                    &lt;ul&gt;&amp;#10;                        &lt;li&gt;The channel name must follow this format: &lt;code&gt;l-[DAY]-[MONTH]&lt;/code&gt;&lt;/li&gt;&amp;#10;                        &lt;li&gt;EXAMPLE: For a logo that will change on December 31st on a server: &lt;code&gt;l-31-12&lt;/code&gt;&lt;/li&gt;&amp;#10;                    &lt;/ul&gt;&amp;#10;                &lt;/li&gt;&amp;#10;                &lt;li&gt;&amp;#10;                    Prepare the Logo:&amp;#10;                    &lt;ul&gt;&amp;#10;                        &lt;li&gt;Upload your logo image to any Discord channel and copy its direct link.&lt;/li&gt;&amp;#10;                    &lt;/ul&gt;&amp;#10;                &lt;/li&gt;&amp;#10;                &lt;li&gt;&amp;#10;                    Schedule the Change:&amp;#10;                    &lt;ul&gt;&amp;#10;                        &lt;li&gt;Edit the Channel Topic of the channel you created in step 1.&lt;/li&gt;&amp;#10;                        &lt;li&gt;Paste the **link** of your image into the channel topic.&lt;/li&gt;&amp;#10;                    &lt;/ul&gt;&amp;#10;                &lt;/li&gt;&amp;#10;                &lt;li&gt;&amp;#10;                    Result:&amp;#10;                    &lt;ul&gt;&amp;#10;                        &lt;li&gt;The bot will automatically change the server logo on the day and month specified in the channel name!&lt;/li&gt;&amp;#10;                    &lt;/ul&gt;&amp;#10;                &lt;/li&gt;&amp;#10;            &lt;/ol&gt;&amp;#10;&amp;#10;            &lt;hr&gt;&amp;#10;&amp;#10;            &lt;h2&gt;Automatic Name Change System (Manual Setup)&lt;/h2&gt;&amp;#10;            &lt;p&gt;The bot monitors another channel to modify your server's name. Here's how to configure it manually:&lt;/p&gt;&amp;#10;&amp;#10;            &lt;ol&gt;&amp;#10;                &lt;li&gt;&amp;#10;                    Create the Scheduling Channel (Name):&amp;#10;                    &lt;ul&gt;&amp;#10;                        &lt;li&gt;The channel name must follow this format: &lt;code&gt;n-[DAY]-[MONTH]&lt;/code&gt;&lt;/li&gt;&amp;#10;                        &lt;li&gt;EXAMPLE: For a name that will change on January 1st on a server: &lt;code&gt;n-01-01&lt;/code&gt;&lt;/li&gt;&amp;#10;                    &lt;/ul&gt;&amp;#10;                &lt;/li&gt;&amp;#10;                &lt;li&gt;&amp;#10;                    Schedule the Change:&amp;#10;                    &lt;ul&gt;&amp;#10;                        &lt;li&gt;Edit the Channel Topic of the channel you created in step 1.&lt;/li&gt;&amp;#10;                        &lt;li&gt;Write the **new server name** in the channel topic.&lt;/li&gt;&amp;#10;                    &lt;/ul&gt;&amp;#10;                &lt;/li&gt;&amp;#10;                &lt;li&gt;&amp;#10;                    Result:&amp;#10;                    &lt;ul&gt;&amp;#10;                        &lt;li&gt;The bot will automatically change the server name on the day and month specified in the channel name!&lt;/li&gt;&amp;#10;                    &lt;/ul&gt;&amp;#10;                &lt;/li&gt;&amp;#10;            &lt;/ol&gt;&amp;#10;&amp;#10;            &lt;div class="note"&gt;&amp;#10;                IMPORTANT NOTE: The change (logo OR name) is triggered when a message is sent on the server. The bot sends a discreet message itself at the beginning of the day to ensure the change happens, so you don't need to worry.&amp;#10;            &lt;/div&gt;&amp;#10;        `;&amp;#10;&amp;#10;        /**&amp;#10;         * Fonction pour changer le contenu de la page&amp;#10;         * @param {string} lang - La langue à afficher ('fr' ou 'en')&amp;#10;         */&amp;#10;        function changeLanguage(lang) {&amp;#10;            const contentArea = document.getElementById('content-area');&amp;#10;            if (lang === 'fr') {&amp;#10;                contentArea.innerHTML = contentFR;&amp;#10;                document.documentElement.lang = 'fr'; // Met à jour l'attribut lang de la page&amp;#10;            } else if (lang === 'en') {&amp;#10;                contentArea.innerHTML = contentEN;&amp;#10;                document.documentElement.lang = 'en'; // Met à jour l'attribut lang de la page&amp;#10;            }&amp;#10;            // Remonte en haut de la page pour une meilleure UX&amp;#10;            window.scrollTo(0, 0); &amp;#10;        }&amp;#10;&amp;#10;        // Affiche le contenu français par défaut au chargement de la page&amp;#10;        document.addEventListener('DOMContentLoaded', () =&gt; {&amp;#10;            changeLanguage('fr');&amp;#10;        });&amp;#10;    &lt;/script&gt;&amp;#10;&lt;/body&gt;&amp;#10;&lt;/html&gt;</field>
               </block>
             </value>
             <next>
@@ -1676,456 +1676,6 @@
             </statement>
           </block>
         </statement>
-        <next>
-          <block type="jg_channel_get_last_messages_in_channel_then" id="XRDdeq7w[pkpPC2=b`Xw">
-            <value name="AMOUNT">
-              <shadow type="math_number" id="AtAjP6[@O900;g?buN7=">
-                <field name="NUM">1</field>
-              </shadow>
-            </value>
-            <value name="CHANNEL">
-              <block type="frost_category_get" id="%Nze,E^j3eHOossrG[L7">
-                <field name="SEARCH_TYPE">NAME</field>
-                <value name="VALUE">
-                  <block type="text_join" id="xQNGOL$N(^}m1O.v=}cZ">
-                    <mutation items="4"></mutation>
-                    <value name="ADD0">
-                      <block type="jg_text_remake_paragraph_quotes" id="l$x|+.|0I8Z|}M6YI53G">
-                        <field name="TEXT">n-</field>
-                      </block>
-                    </value>
-                    <value name="ADD1">
-                      <block type="frost_current" id="D40WtSK:q3(xK9+][k?j">
-                        <field name="DATA_TYPE">DATE</field>
-                      </block>
-                    </value>
-                    <value name="ADD2">
-                      <block type="jg_text_remake_paragraph_quotes" id="SIq:^Q*KVL9?0bZ:K2No">
-                        <field name="TEXT">-</field>
-                      </block>
-                    </value>
-                    <value name="ADD3">
-                      <block type="math_arithmetic" id="zt6ZG3~k;#-8ZVzJ@4)[">
-                        <field name="OP">ADD</field>
-                        <value name="A">
-                          <shadow type="math_number" id="[{}Y%+EBXk;N]hQ5C-5b">
-                            <field name="NUM">1</field>
-                          </shadow>
-                          <block type="frost_current" id="iE3!zqYwbR!._2r-$:^L">
-                            <field name="DATA_TYPE">MONTH</field>
-                          </block>
-                        </value>
-                        <value name="B">
-                          <shadow type="math_number" id="GPDEdo|*Wn%aGOBml_Jw">
-                            <field name="NUM">1</field>
-                          </shadow>
-                        </value>
-                      </block>
-                    </value>
-                  </block>
-                </value>
-                <value name="SERVER">
-                  <block type="s4d_message_guild" id=",JePrxSX~3r*kBCMyq8{"></block>
-                </value>
-              </block>
-            </value>
-            <statement name="STATEMENTS">
-              <block type="controls_if" id="Bnn-t%%TP;dL~wYp]@6n">
-                <value name="IF0">
-                  <block type="logic_compare" id="/Oy4_dN66aGv:+)02ef^">
-                    <field name="OP">NEQ</field>
-                    <value name="A">
-                      <block type="jg_messages_value_dropdown_content_of_message" id="=VKva*XdDmy~;!54VNBO">
-                        <field name="TYPE">content</field>
-                        <value name="MSG">
-                          <block type="jg_channel_last_message_number" id="|AKO;JRxTxbf0%K4t6g:">
-                            <value name="INDEX">
-                              <shadow type="math_number" id="^N8eJ:Wt$Rj~])tN)7+;">
-                                <field name="NUM">1</field>
-                              </shadow>
-                            </value>
-                          </block>
-                        </value>
-                      </block>
-                    </value>
-                    <value name="B">
-                      <block type="text_join" id="EAS])J+2g_No*~1]4{UD">
-                        <mutation items="6"></mutation>
-                        <value name="ADD0">
-                          <block type="jg_text_remake_paragraph_quotes" id="1Y!`0TJag_$ZgNbXZ!4$">
-                            <field name="TEXT">✅ :</field>
-                          </block>
-                        </value>
-                        <value name="ADD1">
-                          <block type="frost_current" id="fmI=[Egm}I+}(@!6jamU">
-                            <field name="DATA_TYPE">DATE</field>
-                          </block>
-                        </value>
-                        <value name="ADD2">
-                          <block type="jg_text_remake_paragraph_quotes" id="JGz$PFOCQ5cb)$;-Va{?">
-                            <field name="TEXT">-</field>
-                          </block>
-                        </value>
-                        <value name="ADD3">
-                          <block type="math_arithmetic" id="`Y*:|3Kj?a!Dr0i~w,-o">
-                            <field name="OP">ADD</field>
-                            <value name="A">
-                              <shadow type="math_number" id="[{}Y%+EBXk;N]hQ5C-5b">
-                                <field name="NUM">1</field>
-                              </shadow>
-                              <block type="frost_current" id="_I:yK{iBBYm,oRs#HkX6">
-                                <field name="DATA_TYPE">MONTH</field>
-                              </block>
-                            </value>
-                            <value name="B">
-                              <shadow type="math_number" id="3vb,Qnru8q.uK:FAQgyk">
-                                <field name="NUM">1</field>
-                              </shadow>
-                            </value>
-                          </block>
-                        </value>
-                        <value name="ADD4">
-                          <block type="jg_text_remake_paragraph_quotes" id="KnOQ8}Bz@|y*-)v?^vS:">
-                            <field name="TEXT">-</field>
-                          </block>
-                        </value>
-                        <value name="ADD5">
-                          <block type="frost_current" id="@5~~_ME3ZDIk/Eymlg!+">
-                            <field name="DATA_TYPE">YEAR</field>
-                          </block>
-                        </value>
-                      </block>
-                    </value>
-                  </block>
-                </value>
-                <statement name="DO0">
-                  <block type="s4d_set_server_name" id=",hmv=whpDm`3m#y2b^Lz">
-                    <value name="SERVER">
-                      <block type="s4d_message_guild" id=";oq3ZwVHi-Z6l/#hwy~k"></block>
-                    </value>
-                    <value name="NEW_NICKNAME">
-                      <block type="s4d_channel_topic" id="nA`y#W6jg4$2LSW~[J)%">
-                        <value name="CHANNEL">
-                          <block type="frost_category_get" id="To}m)WS3Ec{M`yLL6#bb">
-                            <field name="SEARCH_TYPE">NAME</field>
-                            <value name="VALUE">
-                              <block type="text_join" id="UTZ)yBQ*q-w9`+ZSJ%VG">
-                                <mutation items="4"></mutation>
-                                <value name="ADD0">
-                                  <block type="jg_text_remake_paragraph_quotes" id="Kv-=#SkHy6%XA=.Ey*$-">
-                                    <field name="TEXT">n-</field>
-                                  </block>
-                                </value>
-                                <value name="ADD1">
-                                  <block type="frost_current" id="F6ysSua;b(wS+JUCA#)B">
-                                    <field name="DATA_TYPE">DATE</field>
-                                  </block>
-                                </value>
-                                <value name="ADD2">
-                                  <block type="jg_text_remake_paragraph_quotes" id="/Uonbb|9StKq,tRYdscq">
-                                    <field name="TEXT">-</field>
-                                  </block>
-                                </value>
-                                <value name="ADD3">
-                                  <block type="math_arithmetic" id=")?nG)VBF.H+[|[xb1}/T">
-                                    <field name="OP">ADD</field>
-                                    <value name="A">
-                                      <shadow type="math_number" id="[{}Y%+EBXk;N]hQ5C-5b">
-                                        <field name="NUM">1</field>
-                                      </shadow>
-                                      <block type="frost_current" id="uWR-@Qr2B-OW[c-W!u{=">
-                                        <field name="DATA_TYPE">MONTH</field>
-                                      </block>
-                                    </value>
-                                    <value name="B">
-                                      <shadow type="math_number" id="qKLJ9%uE,x1BwsdIc5aq">
-                                        <field name="NUM">1</field>
-                                      </shadow>
-                                    </value>
-                                  </block>
-                                </value>
-                              </block>
-                            </value>
-                            <value name="SERVER">
-                              <block type="s4d_message_guild" id="^ZJ$2Tz15i|d$z]KW|Y*"></block>
-                            </value>
-                          </block>
-                        </value>
-                      </block>
-                    </value>
-                    <next>
-                      <block type="s4d_send_channel" id="@7jV$Q#1mwKo?{M^7qu3">
-                        <value name="CONTENT">
-                          <block type="text_join" id="60Jd=QY=ChhZrDi7dna[">
-                            <mutation items="6"></mutation>
-                            <value name="ADD0">
-                              <block type="jg_text_remake_paragraph_quotes" id="nNxd8miQfRjf{PK;TVXz">
-                                <field name="TEXT">✅ :</field>
-                              </block>
-                            </value>
-                            <value name="ADD1">
-                              <block type="frost_current" id="_A=nxw(1?4vwIr!?!yNb">
-                                <field name="DATA_TYPE">DATE</field>
-                              </block>
-                            </value>
-                            <value name="ADD2">
-                              <block type="jg_text_remake_paragraph_quotes" id="kJIm3Nu^a=9D~.$9og!g">
-                                <field name="TEXT">-</field>
-                              </block>
-                            </value>
-                            <value name="ADD3">
-                              <block type="math_arithmetic" id="_qVaE!`2ppS1mE9oWm$~">
-                                <field name="OP">ADD</field>
-                                <value name="A">
-                                  <shadow type="math_number" id="[{}Y%+EBXk;N]hQ5C-5b">
-                                    <field name="NUM">1</field>
-                                  </shadow>
-                                  <block type="frost_current" id="kO9*SWr5-{%fHDTA)w1C">
-                                    <field name="DATA_TYPE">MONTH</field>
-                                  </block>
-                                </value>
-                                <value name="B">
-                                  <shadow type="math_number" id="$8_G}pC}6.8)*?w{vmIu">
-                                    <field name="NUM">1</field>
-                                  </shadow>
-                                </value>
-                              </block>
-                            </value>
-                            <value name="ADD4">
-                              <block type="jg_text_remake_paragraph_quotes" id="[LiYeCA(4K:T|)3@X*7c">
-                                <field name="TEXT">-</field>
-                              </block>
-                            </value>
-                            <value name="ADD5">
-                              <block type="frost_current" id="ebUc_7)Gjw-Qk9Q2=pqR">
-                                <field name="DATA_TYPE">YEAR</field>
-                              </block>
-                            </value>
-                          </block>
-                        </value>
-                        <value name="CHANNEL">
-                          <block type="frost_category_get" id="/h?lN?](zl@_-RAZTjjs">
-                            <field name="SEARCH_TYPE">NAME</field>
-                            <value name="VALUE">
-                              <block type="text_join" id="3tJtlWQhiPOB]wE(8obC">
-                                <mutation items="4"></mutation>
-                                <value name="ADD0">
-                                  <block type="jg_text_remake_paragraph_quotes" id="=,r8j5ZnV;/(~2f_Up5W">
-                                    <field name="TEXT">n-</field>
-                                  </block>
-                                </value>
-                                <value name="ADD1">
-                                  <block type="frost_current" id="(LnFn@;x_AbJLH.Ny$Id">
-                                    <field name="DATA_TYPE">DATE</field>
-                                  </block>
-                                </value>
-                                <value name="ADD2">
-                                  <block type="jg_text_remake_paragraph_quotes" id="$5zb.Pv9/D{HR_~d!OII">
-                                    <field name="TEXT">-</field>
-                                  </block>
-                                </value>
-                                <value name="ADD3">
-                                  <block type="math_arithmetic" id="9+(%v]N(jOrlWR[EHz.F">
-                                    <field name="OP">ADD</field>
-                                    <value name="A">
-                                      <shadow type="math_number" id="[{}Y%+EBXk;N]hQ5C-5b">
-                                        <field name="NUM">1</field>
-                                      </shadow>
-                                      <block type="frost_current" id="3{$Y@*jJ20X%pGbtq`~f">
-                                        <field name="DATA_TYPE">MONTH</field>
-                                      </block>
-                                    </value>
-                                    <value name="B">
-                                      <shadow type="math_number" id=":_$Op!Ts7IG)kR#gDqwh">
-                                        <field name="NUM">1</field>
-                                      </shadow>
-                                    </value>
-                                  </block>
-                                </value>
-                              </block>
-                            </value>
-                            <value name="SERVER">
-                              <block type="s4d_message_guild" id="l;$yj7I!+hbf@ZHVXa!K"></block>
-                            </value>
-                          </block>
-                        </value>
-                        <next>
-                          <block type="s4d_send_channel" id="3kTW3zr`$tUyTERc/{}q">
-                            <value name="CONTENT">
-                              <block type="text_join" id=";pBA-d!8aJLhJ4^p~K2C">
-                                <mutation items="11"></mutation>
-                                <value name="ADD0">
-                                  <block type="jg_text_remake_paragraph_quotes" id="iXcIuni%I]Ofbn+UCNDC">
-                                    <field name="TEXT">✅ **Le nom du serveur à été mis à jour !**</field>
-                                  </block>
-                                </value>
-                                <value name="ADD1">
-                                  <block type="s4d_newline" id="HwC8hFWbOf]avW6Rg6kN"></block>
-                                </value>
-                                <value name="ADD2">
-                                  <block type="jg_text_remake_paragraph_quotes" id="_XCo1ZKjHN{iHtgIFdDW">
-                                    <field name="TEXT">Action :Changer le nom du serveur. Date :</field>
-                                  </block>
-                                </value>
-                                <value name="ADD3">
-                                  <block type="frost_current" id="!u1+j@x3e^74vTgr)3.Q">
-                                    <field name="DATA_TYPE">DATE</field>
-                                  </block>
-                                </value>
-                                <value name="ADD4">
-                                  <block type="jg_text_remake_paragraph_quotes" id="|32.}hBBuY99qHM*N3{c">
-                                    <field name="TEXT">-</field>
-                                  </block>
-                                </value>
-                                <value name="ADD5">
-                                  <block type="math_arithmetic" id="d2B$4jU`6:3^,7upQzHy">
-                                    <field name="OP">ADD</field>
-                                    <value name="A">
-                                      <shadow type="math_number" id="[{}Y%+EBXk;N]hQ5C-5b">
-                                        <field name="NUM">1</field>
-                                      </shadow>
-                                      <block type="frost_current" id="kasg2B[,AcvD-tp3.(FU">
-                                        <field name="DATA_TYPE">MONTH</field>
-                                      </block>
-                                    </value>
-                                    <value name="B">
-                                      <shadow type="math_number" id="$aA-g.V{l}c*6E*YV0Ov">
-                                        <field name="NUM">1</field>
-                                      </shadow>
-                                    </value>
-                                  </block>
-                                </value>
-                                <value name="ADD6">
-                                  <block type="jg_text_remake_paragraph_quotes" id="t}X@ZU5*%7#,=uj,12YD">
-                                    <field name="TEXT">-</field>
-                                  </block>
-                                </value>
-                                <value name="ADD7">
-                                  <block type="frost_current" id="!~FRAjX.b{!+N/f8FRl,">
-                                    <field name="DATA_TYPE">YEAR</field>
-                                  </block>
-                                </value>
-                                <value name="ADD8">
-                                  <block type="s4d_newline" id="_vHsRgm%A5+`(JG9wSW?"></block>
-                                </value>
-                                <value name="ADD9">
-                                  <block type="jg_text_remake_paragraph_quotes" id="*0^*iS*+OUrf=NMvvne`">
-                                    <field name="TEXT">Nom :</field>
-                                  </block>
-                                </value>
-                                <value name="ADD10">
-                                  <block type="s4d_channel_topic" id="VNLGOuud=GQG]c~UQZ(6">
-                                    <value name="CHANNEL">
-                                      <block type="frost_category_get" id="BZi+[p0Zxgbg.FNj,I!`">
-                                        <field name="SEARCH_TYPE">NAME</field>
-                                        <value name="VALUE">
-                                          <block type="text_join" id="G1(Gko.XST[PXZK`dW)=">
-                                            <mutation items="4"></mutation>
-                                            <value name="ADD0">
-                                              <block type="jg_text_remake_paragraph_quotes" id="Uzvc:$E}B1Va=hAGuImH">
-                                                <field name="TEXT">n-</field>
-                                              </block>
-                                            </value>
-                                            <value name="ADD1">
-                                              <block type="frost_current" id="@$g0O=4=fe[on705?AhC">
-                                                <field name="DATA_TYPE">DATE</field>
-                                              </block>
-                                            </value>
-                                            <value name="ADD2">
-                                              <block type="jg_text_remake_paragraph_quotes" id="Qd!_-4?~09dnO-TnKu|4">
-                                                <field name="TEXT">-</field>
-                                              </block>
-                                            </value>
-                                            <value name="ADD3">
-                                              <block type="math_arithmetic" id="tIt[?+]+J8V6B)iW,ryb">
-                                                <field name="OP">ADD</field>
-                                                <value name="A">
-                                                  <shadow type="math_number" id="[{}Y%+EBXk;N]hQ5C-5b">
-                                                    <field name="NUM">1</field>
-                                                  </shadow>
-                                                  <block type="frost_current" id="G:8(sq#ZnN:}t+.AjE@n">
-                                                    <field name="DATA_TYPE">MONTH</field>
-                                                  </block>
-                                                </value>
-                                                <value name="B">
-                                                  <shadow type="math_number" id="j/5E;0~54(s3)RbT5hW?">
-                                                    <field name="NUM">1</field>
-                                                  </shadow>
-                                                </value>
-                                              </block>
-                                            </value>
-                                          </block>
-                                        </value>
-                                        <value name="SERVER">
-                                          <block type="s4d_message_guild" id="qHgN}iV,cBwc8cTn$^cv"></block>
-                                        </value>
-                                      </block>
-                                    </value>
-                                  </block>
-                                </value>
-                              </block>
-                            </value>
-                            <value name="CHANNEL">
-                              <block type="frost_category_get" id="Lvd9M5z6ID=g-,N-35=l">
-                                <field name="SEARCH_TYPE">NAME</field>
-                                <value name="VALUE">
-                                  <block type="jg_text_remake_paragraph_quotes" id="j.hb}|5,J#0V:Wy63k2x">
-                                    <field name="TEXT">log-logoto</field>
-                                  </block>
-                                </value>
-                                <value name="SERVER">
-                                  <block type="s4d_message_guild" id="HvTQ*C0`r1YY|6Kr4G.m"></block>
-                                </value>
-                              </block>
-                            </value>
-                            <next>
-                              <block type="s4d_print" id="ZV_?H@zc7U;@heSN2+Vp">
-                                <value name="PRINT">
-                                  <block type="text_join" id="[A|/w=a8]q+,xO?3Ppdv">
-                                    <mutation items="5"></mutation>
-                                    <value name="ADD0">
-                                      <block type="jg_text_remake_paragraph_quotes" id="NQCCojfFc;Bg+cH+uKW!">
-                                        <field name="TEXT">Changement du nom du serveur : </field>
-                                      </block>
-                                    </value>
-                                    <value name="ADD1">
-                                      <block type="s4d_server_name" id="2~V,r.sVUXSgkFFh$|q+">
-                                        <value name="SERVER">
-                                          <block type="s4d_message_guild" id=".%82bz~t,b@5oH4aargJ"></block>
-                                        </value>
-                                      </block>
-                                    </value>
-                                    <value name="ADD2">
-                                      <block type="jg_text_remake_paragraph_quotes" id="[1wl=[45$=mnGGh~Ugn=">
-                                        <field name="TEXT"> (</field>
-                                      </block>
-                                    </value>
-                                    <value name="ADD3">
-                                      <block type="s4d_server_id" id="C4)1Vm{^3_qf4{L~e/W4">
-                                        <value name="SERVER">
-                                          <block type="s4d_message_guild" id="U)?2s`f;LvjU$?M24f3W"></block>
-                                        </value>
-                                      </block>
-                                    </value>
-                                    <value name="ADD4">
-                                      <block type="jg_text_remake_paragraph_quotes" id="D$RD,!|)tTRkXa=9uEZi">
-                                        <field name="TEXT">).</field>
-                                      </block>
-                                    </value>
-                                  </block>
-                                </value>
-                              </block>
-                            </next>
-                          </block>
-                        </next>
-                      </block>
-                    </next>
-                  </block>
-                </statement>
-              </block>
-            </statement>
-          </block>
-        </next>
       </block>
     </statement>
   </block>
@@ -2287,6 +1837,458 @@
                 </value>
               </block>
             </next>
+          </block>
+        </statement>
+      </block>
+    </statement>
+  </block>
+  <block type="s4d_on_message" id="MmQ+LT_b^r.pUpPzfSFV" x="-2707" y="4942">
+    <statement name="STATEMENTS">
+      <block type="jg_channel_get_last_messages_in_channel_then" id="XRDdeq7w[pkpPC2=b`Xw">
+        <value name="AMOUNT">
+          <shadow type="math_number" id="AtAjP6[@O900;g?buN7=">
+            <field name="NUM">1</field>
+          </shadow>
+        </value>
+        <value name="CHANNEL">
+          <block type="frost_category_get" id="%Nze,E^j3eHOossrG[L7">
+            <field name="SEARCH_TYPE">NAME</field>
+            <value name="VALUE">
+              <block type="text_join" id="xQNGOL$N(^}m1O.v=}cZ">
+                <mutation items="4"></mutation>
+                <value name="ADD0">
+                  <block type="jg_text_remake_paragraph_quotes" id="l$x|+.|0I8Z|}M6YI53G">
+                    <field name="TEXT">n-</field>
+                  </block>
+                </value>
+                <value name="ADD1">
+                  <block type="frost_current" id="D40WtSK:q3(xK9+][k?j">
+                    <field name="DATA_TYPE">DATE</field>
+                  </block>
+                </value>
+                <value name="ADD2">
+                  <block type="jg_text_remake_paragraph_quotes" id="SIq:^Q*KVL9?0bZ:K2No">
+                    <field name="TEXT">-</field>
+                  </block>
+                </value>
+                <value name="ADD3">
+                  <block type="math_arithmetic" id="zt6ZG3~k;#-8ZVzJ@4)[">
+                    <field name="OP">ADD</field>
+                    <value name="A">
+                      <shadow type="math_number" id="[{}Y%+EBXk;N]hQ5C-5b">
+                        <field name="NUM">1</field>
+                      </shadow>
+                      <block type="frost_current" id="iE3!zqYwbR!._2r-$:^L">
+                        <field name="DATA_TYPE">MONTH</field>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <shadow type="math_number" id="GPDEdo|*Wn%aGOBml_Jw">
+                        <field name="NUM">1</field>
+                      </shadow>
+                    </value>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <value name="SERVER">
+              <block type="s4d_message_guild" id=",JePrxSX~3r*kBCMyq8{"></block>
+            </value>
+          </block>
+        </value>
+        <statement name="STATEMENTS">
+          <block type="controls_if" id="Bnn-t%%TP;dL~wYp]@6n">
+            <value name="IF0">
+              <block type="logic_compare" id="/Oy4_dN66aGv:+)02ef^">
+                <field name="OP">NEQ</field>
+                <value name="A">
+                  <block type="jg_messages_value_dropdown_content_of_message" id="=VKva*XdDmy~;!54VNBO">
+                    <field name="TYPE">content</field>
+                    <value name="MSG">
+                      <block type="jg_channel_last_message_number" id="|AKO;JRxTxbf0%K4t6g:">
+                        <value name="INDEX">
+                          <shadow type="math_number" id="^N8eJ:Wt$Rj~])tN)7+;">
+                            <field name="NUM">1</field>
+                          </shadow>
+                        </value>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="text_join" id="EAS])J+2g_No*~1]4{UD">
+                    <mutation items="6"></mutation>
+                    <value name="ADD0">
+                      <block type="jg_text_remake_paragraph_quotes" id="1Y!`0TJag_$ZgNbXZ!4$">
+                        <field name="TEXT">✅ :</field>
+                      </block>
+                    </value>
+                    <value name="ADD1">
+                      <block type="frost_current" id="fmI=[Egm}I+}(@!6jamU">
+                        <field name="DATA_TYPE">DATE</field>
+                      </block>
+                    </value>
+                    <value name="ADD2">
+                      <block type="jg_text_remake_paragraph_quotes" id="JGz$PFOCQ5cb)$;-Va{?">
+                        <field name="TEXT">-</field>
+                      </block>
+                    </value>
+                    <value name="ADD3">
+                      <block type="math_arithmetic" id="`Y*:|3Kj?a!Dr0i~w,-o">
+                        <field name="OP">ADD</field>
+                        <value name="A">
+                          <shadow type="math_number" id="[{}Y%+EBXk;N]hQ5C-5b">
+                            <field name="NUM">1</field>
+                          </shadow>
+                          <block type="frost_current" id="_I:yK{iBBYm,oRs#HkX6">
+                            <field name="DATA_TYPE">MONTH</field>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <shadow type="math_number" id="3vb,Qnru8q.uK:FAQgyk">
+                            <field name="NUM">1</field>
+                          </shadow>
+                        </value>
+                      </block>
+                    </value>
+                    <value name="ADD4">
+                      <block type="jg_text_remake_paragraph_quotes" id="KnOQ8}Bz@|y*-)v?^vS:">
+                        <field name="TEXT">-</field>
+                      </block>
+                    </value>
+                    <value name="ADD5">
+                      <block type="frost_current" id="@5~~_ME3ZDIk/Eymlg!+">
+                        <field name="DATA_TYPE">YEAR</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO0">
+              <block type="s4d_set_server_name" id=",hmv=whpDm`3m#y2b^Lz">
+                <value name="SERVER">
+                  <block type="s4d_message_guild" id=";oq3ZwVHi-Z6l/#hwy~k"></block>
+                </value>
+                <value name="NEW_NICKNAME">
+                  <block type="s4d_channel_topic" id="nA`y#W6jg4$2LSW~[J)%">
+                    <value name="CHANNEL">
+                      <block type="frost_category_get" id="To}m)WS3Ec{M`yLL6#bb">
+                        <field name="SEARCH_TYPE">NAME</field>
+                        <value name="VALUE">
+                          <block type="text_join" id="UTZ)yBQ*q-w9`+ZSJ%VG">
+                            <mutation items="4"></mutation>
+                            <value name="ADD0">
+                              <block type="jg_text_remake_paragraph_quotes" id="Kv-=#SkHy6%XA=.Ey*$-">
+                                <field name="TEXT">n-</field>
+                              </block>
+                            </value>
+                            <value name="ADD1">
+                              <block type="frost_current" id="F6ysSua;b(wS+JUCA#)B">
+                                <field name="DATA_TYPE">DATE</field>
+                              </block>
+                            </value>
+                            <value name="ADD2">
+                              <block type="jg_text_remake_paragraph_quotes" id="/Uonbb|9StKq,tRYdscq">
+                                <field name="TEXT">-</field>
+                              </block>
+                            </value>
+                            <value name="ADD3">
+                              <block type="math_arithmetic" id=")?nG)VBF.H+[|[xb1}/T">
+                                <field name="OP">ADD</field>
+                                <value name="A">
+                                  <shadow type="math_number" id="[{}Y%+EBXk;N]hQ5C-5b">
+                                    <field name="NUM">1</field>
+                                  </shadow>
+                                  <block type="frost_current" id="uWR-@Qr2B-OW[c-W!u{=">
+                                    <field name="DATA_TYPE">MONTH</field>
+                                  </block>
+                                </value>
+                                <value name="B">
+                                  <shadow type="math_number" id="qKLJ9%uE,x1BwsdIc5aq">
+                                    <field name="NUM">1</field>
+                                  </shadow>
+                                </value>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <value name="SERVER">
+                          <block type="s4d_message_guild" id="^ZJ$2Tz15i|d$z]KW|Y*"></block>
+                        </value>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <next>
+                  <block type="s4d_send_channel" id="@7jV$Q#1mwKo?{M^7qu3">
+                    <value name="CONTENT">
+                      <block type="text_join" id="60Jd=QY=ChhZrDi7dna[">
+                        <mutation items="6"></mutation>
+                        <value name="ADD0">
+                          <block type="jg_text_remake_paragraph_quotes" id="nNxd8miQfRjf{PK;TVXz">
+                            <field name="TEXT">✅ :</field>
+                          </block>
+                        </value>
+                        <value name="ADD1">
+                          <block type="frost_current" id="_A=nxw(1?4vwIr!?!yNb">
+                            <field name="DATA_TYPE">DATE</field>
+                          </block>
+                        </value>
+                        <value name="ADD2">
+                          <block type="jg_text_remake_paragraph_quotes" id="kJIm3Nu^a=9D~.$9og!g">
+                            <field name="TEXT">-</field>
+                          </block>
+                        </value>
+                        <value name="ADD3">
+                          <block type="math_arithmetic" id="_qVaE!`2ppS1mE9oWm$~">
+                            <field name="OP">ADD</field>
+                            <value name="A">
+                              <shadow type="math_number" id="[{}Y%+EBXk;N]hQ5C-5b">
+                                <field name="NUM">1</field>
+                              </shadow>
+                              <block type="frost_current" id="kO9*SWr5-{%fHDTA)w1C">
+                                <field name="DATA_TYPE">MONTH</field>
+                              </block>
+                            </value>
+                            <value name="B">
+                              <shadow type="math_number" id="$8_G}pC}6.8)*?w{vmIu">
+                                <field name="NUM">1</field>
+                              </shadow>
+                            </value>
+                          </block>
+                        </value>
+                        <value name="ADD4">
+                          <block type="jg_text_remake_paragraph_quotes" id="[LiYeCA(4K:T|)3@X*7c">
+                            <field name="TEXT">-</field>
+                          </block>
+                        </value>
+                        <value name="ADD5">
+                          <block type="frost_current" id="ebUc_7)Gjw-Qk9Q2=pqR">
+                            <field name="DATA_TYPE">YEAR</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <value name="CHANNEL">
+                      <block type="frost_category_get" id="/h?lN?](zl@_-RAZTjjs">
+                        <field name="SEARCH_TYPE">NAME</field>
+                        <value name="VALUE">
+                          <block type="text_join" id="3tJtlWQhiPOB]wE(8obC">
+                            <mutation items="4"></mutation>
+                            <value name="ADD0">
+                              <block type="jg_text_remake_paragraph_quotes" id="=,r8j5ZnV;/(~2f_Up5W">
+                                <field name="TEXT">n-</field>
+                              </block>
+                            </value>
+                            <value name="ADD1">
+                              <block type="frost_current" id="(LnFn@;x_AbJLH.Ny$Id">
+                                <field name="DATA_TYPE">DATE</field>
+                              </block>
+                            </value>
+                            <value name="ADD2">
+                              <block type="jg_text_remake_paragraph_quotes" id="$5zb.Pv9/D{HR_~d!OII">
+                                <field name="TEXT">-</field>
+                              </block>
+                            </value>
+                            <value name="ADD3">
+                              <block type="math_arithmetic" id="9+(%v]N(jOrlWR[EHz.F">
+                                <field name="OP">ADD</field>
+                                <value name="A">
+                                  <shadow type="math_number" id="[{}Y%+EBXk;N]hQ5C-5b">
+                                    <field name="NUM">1</field>
+                                  </shadow>
+                                  <block type="frost_current" id="3{$Y@*jJ20X%pGbtq`~f">
+                                    <field name="DATA_TYPE">MONTH</field>
+                                  </block>
+                                </value>
+                                <value name="B">
+                                  <shadow type="math_number" id=":_$Op!Ts7IG)kR#gDqwh">
+                                    <field name="NUM">1</field>
+                                  </shadow>
+                                </value>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <value name="SERVER">
+                          <block type="s4d_message_guild" id="l;$yj7I!+hbf@ZHVXa!K"></block>
+                        </value>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="s4d_send_channel" id="3kTW3zr`$tUyTERc/{}q">
+                        <value name="CONTENT">
+                          <block type="text_join" id=";pBA-d!8aJLhJ4^p~K2C">
+                            <mutation items="11"></mutation>
+                            <value name="ADD0">
+                              <block type="jg_text_remake_paragraph_quotes" id="iXcIuni%I]Ofbn+UCNDC">
+                                <field name="TEXT">✅ **Le nom du serveur à été mis à jour !**</field>
+                              </block>
+                            </value>
+                            <value name="ADD1">
+                              <block type="s4d_newline" id="HwC8hFWbOf]avW6Rg6kN"></block>
+                            </value>
+                            <value name="ADD2">
+                              <block type="jg_text_remake_paragraph_quotes" id="_XCo1ZKjHN{iHtgIFdDW">
+                                <field name="TEXT">Action :Changer le nom du serveur. Date :</field>
+                              </block>
+                            </value>
+                            <value name="ADD3">
+                              <block type="frost_current" id="!u1+j@x3e^74vTgr)3.Q">
+                                <field name="DATA_TYPE">DATE</field>
+                              </block>
+                            </value>
+                            <value name="ADD4">
+                              <block type="jg_text_remake_paragraph_quotes" id="|32.}hBBuY99qHM*N3{c">
+                                <field name="TEXT">-</field>
+                              </block>
+                            </value>
+                            <value name="ADD5">
+                              <block type="math_arithmetic" id="d2B$4jU`6:3^,7upQzHy">
+                                <field name="OP">ADD</field>
+                                <value name="A">
+                                  <shadow type="math_number" id="[{}Y%+EBXk;N]hQ5C-5b">
+                                    <field name="NUM">1</field>
+                                  </shadow>
+                                  <block type="frost_current" id="kasg2B[,AcvD-tp3.(FU">
+                                    <field name="DATA_TYPE">MONTH</field>
+                                  </block>
+                                </value>
+                                <value name="B">
+                                  <shadow type="math_number" id="$aA-g.V{l}c*6E*YV0Ov">
+                                    <field name="NUM">1</field>
+                                  </shadow>
+                                </value>
+                              </block>
+                            </value>
+                            <value name="ADD6">
+                              <block type="jg_text_remake_paragraph_quotes" id="t}X@ZU5*%7#,=uj,12YD">
+                                <field name="TEXT">-</field>
+                              </block>
+                            </value>
+                            <value name="ADD7">
+                              <block type="frost_current" id="!~FRAjX.b{!+N/f8FRl,">
+                                <field name="DATA_TYPE">YEAR</field>
+                              </block>
+                            </value>
+                            <value name="ADD8">
+                              <block type="s4d_newline" id="_vHsRgm%A5+`(JG9wSW?"></block>
+                            </value>
+                            <value name="ADD9">
+                              <block type="jg_text_remake_paragraph_quotes" id="*0^*iS*+OUrf=NMvvne`">
+                                <field name="TEXT">Nom :</field>
+                              </block>
+                            </value>
+                            <value name="ADD10">
+                              <block type="s4d_channel_topic" id="VNLGOuud=GQG]c~UQZ(6">
+                                <value name="CHANNEL">
+                                  <block type="frost_category_get" id="BZi+[p0Zxgbg.FNj,I!`">
+                                    <field name="SEARCH_TYPE">NAME</field>
+                                    <value name="VALUE">
+                                      <block type="text_join" id="G1(Gko.XST[PXZK`dW)=">
+                                        <mutation items="4"></mutation>
+                                        <value name="ADD0">
+                                          <block type="jg_text_remake_paragraph_quotes" id="Uzvc:$E}B1Va=hAGuImH">
+                                            <field name="TEXT">n-</field>
+                                          </block>
+                                        </value>
+                                        <value name="ADD1">
+                                          <block type="frost_current" id="@$g0O=4=fe[on705?AhC">
+                                            <field name="DATA_TYPE">DATE</field>
+                                          </block>
+                                        </value>
+                                        <value name="ADD2">
+                                          <block type="jg_text_remake_paragraph_quotes" id="Qd!_-4?~09dnO-TnKu|4">
+                                            <field name="TEXT">-</field>
+                                          </block>
+                                        </value>
+                                        <value name="ADD3">
+                                          <block type="math_arithmetic" id="tIt[?+]+J8V6B)iW,ryb">
+                                            <field name="OP">ADD</field>
+                                            <value name="A">
+                                              <shadow type="math_number" id="[{}Y%+EBXk;N]hQ5C-5b">
+                                                <field name="NUM">1</field>
+                                              </shadow>
+                                              <block type="frost_current" id="G:8(sq#ZnN:}t+.AjE@n">
+                                                <field name="DATA_TYPE">MONTH</field>
+                                              </block>
+                                            </value>
+                                            <value name="B">
+                                              <shadow type="math_number" id="j/5E;0~54(s3)RbT5hW?">
+                                                <field name="NUM">1</field>
+                                              </shadow>
+                                            </value>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </value>
+                                    <value name="SERVER">
+                                      <block type="s4d_message_guild" id="qHgN}iV,cBwc8cTn$^cv"></block>
+                                    </value>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <value name="CHANNEL">
+                          <block type="frost_category_get" id="Lvd9M5z6ID=g-,N-35=l">
+                            <field name="SEARCH_TYPE">NAME</field>
+                            <value name="VALUE">
+                              <block type="jg_text_remake_paragraph_quotes" id="j.hb}|5,J#0V:Wy63k2x">
+                                <field name="TEXT">log-logoto</field>
+                              </block>
+                            </value>
+                            <value name="SERVER">
+                              <block type="s4d_message_guild" id="HvTQ*C0`r1YY|6Kr4G.m"></block>
+                            </value>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="s4d_print" id="ZV_?H@zc7U;@heSN2+Vp">
+                            <value name="PRINT">
+                              <block type="text_join" id="[A|/w=a8]q+,xO?3Ppdv">
+                                <mutation items="5"></mutation>
+                                <value name="ADD0">
+                                  <block type="jg_text_remake_paragraph_quotes" id="NQCCojfFc;Bg+cH+uKW!">
+                                    <field name="TEXT">Changement du nom du serveur : </field>
+                                  </block>
+                                </value>
+                                <value name="ADD1">
+                                  <block type="s4d_server_name" id="2~V,r.sVUXSgkFFh$|q+">
+                                    <value name="SERVER">
+                                      <block type="s4d_message_guild" id=".%82bz~t,b@5oH4aargJ"></block>
+                                    </value>
+                                  </block>
+                                </value>
+                                <value name="ADD2">
+                                  <block type="jg_text_remake_paragraph_quotes" id="[1wl=[45$=mnGGh~Ugn=">
+                                    <field name="TEXT"> (</field>
+                                  </block>
+                                </value>
+                                <value name="ADD3">
+                                  <block type="s4d_server_id" id="C4)1Vm{^3_qf4{L~e/W4">
+                                    <value name="SERVER">
+                                      <block type="s4d_message_guild" id="U)?2s`f;LvjU$?M24f3W"></block>
+                                    </value>
+                                  </block>
+                                </value>
+                                <value name="ADD4">
+                                  <block type="jg_text_remake_paragraph_quotes" id="D$RD,!|)tTRkXa=9uEZi">
+                                    <field name="TEXT">).</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </statement>
           </block>
         </statement>
       </block>

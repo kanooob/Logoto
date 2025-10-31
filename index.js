@@ -371,8 +371,8 @@ const S4D_WEBSITECREATION_EXPRESS_app = S4D_WEBSITECREATION_EXPRESS();
                         <li>
                             Créez le Salon de Planification (Logo) :
                             <ul>
-                                <li>Le nom du salon doit être au format suivant : <code>l-[JOUR]-[MOIS]-[ID du serveur]</code></li>
-                                <li>EXEMPLE : Pour un logo qui changera le 31 décembre sur un serveur : <code>l-31-12-010203040506070809</code></li>
+                                <li>Le nom du salon doit être au format suivant : <code>l-[JOUR]-[MOIS]</code></li>
+                                <li>EXEMPLE : Pour un logo qui changera le 31 décembre sur un serveur : <code>l-31-12</code></li>
                             </ul>
                         </li>
                         <li>
@@ -405,8 +405,8 @@ const S4D_WEBSITECREATION_EXPRESS_app = S4D_WEBSITECREATION_EXPRESS();
                         <li>
                             Créez le Salon de Planification (Nom) :
                             <ul>
-                                <li>Le nom du salon doit être au format suivant : <code>n-[JOUR]-[MOIS]-[ID du serveur]</code></li>
-                                <li>EXEMPLE : Pour un nom qui changera le 1er janvier sur un serveur : <code>n-01-01-010203040506070809</code></li>
+                                <li>Le nom du salon doit être au format suivant : <code>n-[JOUR]-[MOIS]</code></li>
+                                <li>EXEMPLE : Pour un nom qui changera le 31 décembre sur un serveur : <code>n-31-12</code></li>
                             </ul>
                         </li>
                         <li>
@@ -453,8 +453,8 @@ const S4D_WEBSITECREATION_EXPRESS_app = S4D_WEBSITECREATION_EXPRESS();
                         <li>
                             Create the Scheduling Channel (Logo):
                             <ul>
-                                <li>The channel name must follow this format: <code>l-[DAY]-[MONTH]-[Server ID]</code></li>
-                                <li>EXAMPLE: For a logo that will change on December 31st on a server: <code>l-31-12-010203040506070809</code></li>
+                                <li>The channel name must follow this format: <code>l-[DAY]-[MONTH]</code></li>
+                                <li>EXAMPLE: For a logo that will change on December 31st on a server: <code>l-31-12</code></li>
                             </ul>
                         </li>
                         <li>
@@ -487,8 +487,8 @@ const S4D_WEBSITECREATION_EXPRESS_app = S4D_WEBSITECREATION_EXPRESS();
                         <li>
                             Create the Scheduling Channel (Name):
                             <ul>
-                                <li>The channel name must follow this format: <code>n-[DAY]-[MONTH]-[Server ID]</code></li>
-                                <li>EXAMPLE: For a name that will change on January 1st on a server: <code>n-01-01-010203040506070809</code></li>
+                                <li>The channel name must follow this format: <code>n-[DAY]-[MONTH]</code></li>
+                                <li>EXAMPLE: For a name that will change on January 1st on a server: <code>n-01-01</code></li>
                             </ul>
                         </li>
                         <li>
@@ -555,15 +555,6 @@ const S4D_WEBSITECREATION_EXPRESS_app = S4D_WEBSITECREATION_EXPRESS();
         }
     
       });
-      (s4dmessage.guild).channels.cache.find((category) => category.name === (['n-',(new Date().getDate()),'-',((new Date().getMonth())) + 1].join(''))).messages.fetch({ limit: 1 }).then(async (last_messages_in_channel) => {
-            if (((last_messages_in_channel.at(1 - 1)).content) != ['✅ :',(new Date().getDate()),'-',((new Date().getMonth())) + 1,'-',(new Date().getFullYear())].join('')) {
-          (s4dmessage.guild).setName(((s4dmessage.guild).channels.cache.find((category) => category.name === (['n-',(new Date().getDate()),'-',((new Date().getMonth())) + 1].join(''))).topic));
-          (s4dmessage.guild).channels.cache.find((category) => category.name === (['n-',(new Date().getDate()),'-',((new Date().getMonth())) + 1].join(''))).send({content:String((['✅ :',(new Date().getDate()),'-',((new Date().getMonth())) + 1,'-',(new Date().getFullYear())].join('')))});
-          (s4dmessage.guild).channels.cache.find((category) => category.name === 'log-logoto').send({content:String((['✅ **Le nom du serveur à été mis à jour !**','\n','Action :Changer le nom du serveur. Date :',(new Date().getDate()),'-',((new Date().getMonth())) + 1,'-',(new Date().getFullYear()),'\n','Nom :',(s4dmessage.guild).channels.cache.find((category) => category.name === (['n-',(new Date().getDate()),'-',((new Date().getMonth())) + 1].join(''))).topic].join('')))});
-          console.log((['Changement du nom du serveur : ',(s4dmessage.guild).name,' (',(s4dmessage.guild).id,').'].join('')));
-        }
-    
-      });
     
     });
     
@@ -580,6 +571,19 @@ const S4D_WEBSITECREATION_EXPRESS_app = S4D_WEBSITECREATION_EXPRESS();
       })
     
       });
+    
+    s4d.client.on('messageCreate', async (s4dmessage) => {
+      (s4dmessage.guild).channels.cache.find((category) => category.name === (['n-',(new Date().getDate()),'-',((new Date().getMonth())) + 1].join(''))).messages.fetch({ limit: 1 }).then(async (last_messages_in_channel) => {
+            if (((last_messages_in_channel.at(1 - 1)).content) != ['✅ :',(new Date().getDate()),'-',((new Date().getMonth())) + 1,'-',(new Date().getFullYear())].join('')) {
+          (s4dmessage.guild).setName(((s4dmessage.guild).channels.cache.find((category) => category.name === (['n-',(new Date().getDate()),'-',((new Date().getMonth())) + 1].join(''))).topic));
+          (s4dmessage.guild).channels.cache.find((category) => category.name === (['n-',(new Date().getDate()),'-',((new Date().getMonth())) + 1].join(''))).send({content:String((['✅ :',(new Date().getDate()),'-',((new Date().getMonth())) + 1,'-',(new Date().getFullYear())].join('')))});
+          (s4dmessage.guild).channels.cache.find((category) => category.name === 'log-logoto').send({content:String((['✅ **Le nom du serveur à été mis à jour !**','\n','Action :Changer le nom du serveur. Date :',(new Date().getDate()),'-',((new Date().getMonth())) + 1,'-',(new Date().getFullYear()),'\n','Nom :',(s4dmessage.guild).channels.cache.find((category) => category.name === (['n-',(new Date().getDate()),'-',((new Date().getMonth())) + 1].join(''))).topic].join('')))});
+          console.log((['Changement du nom du serveur : ',(s4dmessage.guild).name,' (',(s4dmessage.guild).id,').'].join('')));
+        }
+    
+      });
+    
+    });
     
     return s4d
 })();
