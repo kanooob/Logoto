@@ -1479,6 +1479,10 @@ const S4D_WEBSITECREATION_EXPRESS_app = S4D_WEBSITECREATION_EXPRESS();
         s4dmessage.channel.send({content:String('✅ Nom du serveurs changé.')});
         console.log((['Nom du serveur ',(s4dmessage.guild).name,' (',(s4dmessage.guild).id,').'].join('')));
       }
+      if (((s4dmessage).content) == '!ping') {
+        ms_on = (s4d.client.uptime);
+        s4dmessage.channel.send({content:String((['🏓 Pong! My ping is **',s4d.client.ws.ping,'ms**.','\n','And I\'ve been on for **',ms_on % 60000,' minutes**.'].join('')))});
+      }
     
     });
     
@@ -1505,36 +1509,6 @@ const S4D_WEBSITECREATION_EXPRESS_app = S4D_WEBSITECREATION_EXPRESS();
       })
     
       });
-    
-    eventEmitter.on('message1', async => {
-          s4d.client.guilds.cache.forEach(async (s) =>{
-         (s).channels.cache.forEach(async (c) =>{
-           if (((c).name) == [(new Date().getDate()),'-',((new Date().getMonth())) + 1].join('') && ((((c).topic) || '').startsWith('https://' || ''))) {
-            (s).setIcon(((c).topic),'changement de logo.')
-    
-            (c).send({content:String('logo')});
-            console.log((['Logo du serveur ',(s).name,' (',(s).id,').'].join('')));
-          } else if (((c).name) == [(new Date().getDate()),'-',((new Date().getMonth())) + 1].join('') && !((((c).topic) || '').startsWith('https://' || ''))) {
-            (s).setName(((c).topic),'changement de nom.')
-    
-            (c).send({content:String('nom')});
-            console.log((['Nom du serveur ',(s).name,' (',(s).id,').'].join('')));
-          }
-    
-        })
-    
-      })
-    
-      });
-    
-    s4d.client.on('messageCreate', async (s4dmessage) => {
-      if ((s4dmessage.content) == 'logo' && (s4dmessage.author) == (s4d.client.users.cache.get(String('1431383390162124920')))) {
-        (s4dmessage.guild).channels.cache.find((category) => category.name === 'log-logoto').send({content:String('✅ Logo du serveurs changé.')});
-      } else if ((s4dmessage.content) == 'nom' && (s4dmessage.author) == (s4d.client.users.cache.get(String('1431383390162124920')))) {
-        (s4dmessage.guild).channels.cache.find((category) => category.name === 'log-logoto').send({content:String('✅ Nom du serveurs changé.')});
-      }
-    
-    });
     
     return s4d
 })();
