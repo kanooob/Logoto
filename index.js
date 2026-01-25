@@ -1480,7 +1480,7 @@ const S4D_WEBSITECREATION_EXPRESS_app = S4D_WEBSITECREATION_EXPRESS();
       }
       if (((s4dmessage).content) == '!ping') {
         ms_on = (s4d.client.uptime);
-        s4dmessage.channel.send({content:String((['🏓 Pong! My ping is **',s4d.client.ws.ping,'ms**.','\n','And I\'ve been on for **',ms_on / 60000,' minutes**.'].join('')))});
+        s4dmessage.channel.send({content:String((['🏓 Pong! My ping is **',s4d.client.ws.ping,'ms**.','\n','And I\'ve been on for **',Math.round(ms_on / 60000),' minutes**.'].join('')))});
       }
     
     });
