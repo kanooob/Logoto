@@ -262,9 +262,8 @@ const S4D_WEBSITECREATION_EXPRESS_app = S4D_WEBSITECREATION_EXPRESS();
         await interaction.reply({ content: (['⭕ C\'est un nom de serveur. (s\'il comporter de 2 à 100 caractères).','\n','⭕ This is a server name. (if it contains between 2 and 100 characters).'].join('')), ephemeral: true, components: [] });
       }
       if ((interaction.commandName) == 'privee' && ((interaction.member).id) == '746069923465527339') {
-        eventEmitter.emit('message1');
-        eventEmitter.emit('1');
         await interaction.reply({ content: (['ok ','\n','❌ Discord URLs are not recommended for logo changes.'].join('')), ephemeral: true, components: [] });
+        eventEmitter.emit('1');
       } else if ((interaction.commandName) == 'privee' && ((interaction.member).id) != '746069923465527339') {
         await interaction.reply({ content: (['Non.','\n','No.'].join('')), ephemeral: true, components: [] });
       }
@@ -1481,7 +1480,7 @@ const S4D_WEBSITECREATION_EXPRESS_app = S4D_WEBSITECREATION_EXPRESS();
       }
       if (((s4dmessage).content) == '!ping') {
         ms_on = (s4d.client.uptime);
-        s4dmessage.channel.send({content:String((['🏓 Pong! My ping is **',s4d.client.ws.ping,'ms**.','\n','And I\'ve been on for **',ms_on % 60000,' minutes**.'].join('')))});
+        s4dmessage.channel.send({content:String((['🏓 Pong! My ping is **',s4d.client.ws.ping,'ms**.','\n','And I\'ve been on for **',ms_on / 60000,' minutes**.'].join('')))});
       }
     
     });

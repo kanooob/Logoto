@@ -1588,11 +1588,24 @@
                                               </block>
                                             </value>
                                             <statement name="DO0">
-                                              <block type="emit_event" id="hKBd9Rl@Vf:T_G1SvnIx">
-                                                <value name="NAME">
-                                                  <shadow type="text" id=")1`lsk,MKzd[jy.=9I,,">
-                                                    <field name="TEXT">message1</field>
-                                                  </shadow>
+                                              <block type="slash_reply" id="]p?2aM?(|;mhtC)fDirF">
+                                                <value name="CONTENT">
+                                                  <block type="text_join" id="DZhf3sY3x~^AB{/qH_;`">
+                                                    <mutation items="3"></mutation>
+                                                    <value name="ADD0">
+                                                      <block type="jg_text_remake_paragraph_quotes" id="DWH(X6L)$!HyF63Tg{$@">
+                                                        <field name="TEXT">ok </field>
+                                                      </block>
+                                                    </value>
+                                                    <value name="ADD1">
+                                                      <block type="s4d_newline" id="qy(g9+$vXY1ti!IVIn:8"></block>
+                                                    </value>
+                                                    <value name="ADD2">
+                                                      <block type="jg_text_remake_paragraph_quotes" id=";dFl,P6G#+|N!l.FU-lE">
+                                                        <field name="TEXT">❌ Discord URLs are not recommended for logo changes.</field>
+                                                      </block>
+                                                    </value>
+                                                  </block>
                                                 </value>
                                                 <next>
                                                   <block type="emit_event" id="PJ}Ezs#!$oKKQK#,VsVm">
@@ -1601,28 +1614,6 @@
                                                         <field name="TEXT">1</field>
                                                       </shadow>
                                                     </value>
-                                                    <next>
-                                                      <block type="slash_reply" id="]p?2aM?(|;mhtC)fDirF">
-                                                        <value name="CONTENT">
-                                                          <block type="text_join" id="DZhf3sY3x~^AB{/qH_;`">
-                                                            <mutation items="3"></mutation>
-                                                            <value name="ADD0">
-                                                              <block type="jg_text_remake_paragraph_quotes" id="DWH(X6L)$!HyF63Tg{$@">
-                                                                <field name="TEXT">ok </field>
-                                                              </block>
-                                                            </value>
-                                                            <value name="ADD1">
-                                                              <block type="s4d_newline" id="qy(g9+$vXY1ti!IVIn:8"></block>
-                                                            </value>
-                                                            <value name="ADD2">
-                                                              <block type="jg_text_remake_paragraph_quotes" id=";dFl,P6G#+|N!l.FU-lE">
-                                                                <field name="TEXT">❌ Discord URLs are not recommended for logo changes.</field>
-                                                              </block>
-                                                            </value>
-                                                          </block>
-                                                        </value>
-                                                      </block>
-                                                    </next>
                                                   </block>
                                                 </next>
                                               </block>
@@ -2643,17 +2634,18 @@
                               </block>
                             </value>
                             <value name="ADD5">
-                              <block type="math_modulo" id="k21~c,lMFi[5w{p%hYP6">
-                                <value name="DIVIDEND">
-                                  <shadow type="math_number" id="uf@0@vlL17mS+GNo1!g4">
-                                    <field name="NUM">64</field>
+                              <block type="math_arithmetic" id="%=q9h1.ll==I#C[fX~8k">
+                                <field name="OP">DIVIDE</field>
+                                <value name="A">
+                                  <shadow type="math_number" id="TThG^]Zo/eU1z),!Itw$">
+                                    <field name="NUM">1</field>
                                   </shadow>
                                   <block type="variables_get" id="v!vZEs88E2k7Y6?.So(Z">
                                     <field name="VAR" id="jlm:W3Oxc-yLpT4NI{=*">ms on</field>
                                   </block>
                                 </value>
-                                <value name="DIVISOR">
-                                  <shadow type="math_number" id="0qFgp=ya;[)jEE?I-:2X">
+                                <value name="B">
+                                  <shadow type="math_number" id="y41Dp_shA[/(*jbQ5Q$F">
                                     <field name="NUM">60000</field>
                                   </shadow>
                                 </value>
