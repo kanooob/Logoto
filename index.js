@@ -303,57 +303,20 @@ const S4D_WEBSITECREATION_EXPRESS_app = S4D_WEBSITECREATION_EXPRESS();
     S4D_WEBSITECREATION_EXPRESS_app.use(S4D_WEBSITECREATION_bodyParser.json());
     
       S4D_WEBSITECREATION_EXPRESS_app.all('/help', async function(req, res) {
-          S4D_APP_write.sync(String('help.html'), String(`<!DOCTYPE TML>
+          S4D_APP_write.sync(String('help.html'), String(`<!DOCTYPE html>
         <html lang="fr">
         <head>
             <meta charset="UTF-8">
-    
-            <title>Aide et Commandes Logoto | Configurer le Bot Discord (Logo & Nom)</title>
-    
-            <meta name="description" content="Tutoriel complet et liste des commandes (/setup, /logo-add, /name-add) pour configurer Logoto. Apprenez à automatiser le logo et le nom de votre serveur Discord.">
-    
-            <link rel="canonical" href="https://logoto.onrender.com/help" />
-    
-            <meta name="keywords" content="aide logoto, commandes logoto, configurer logoto, setup bot discord, /logo-add, /name-add, tutoriel logoto, comment automatiser discord">
-    
+            <title>Aide Logoto | Automatisation Logo & Nom Discord</title>
+            <meta name="description" content="Découvrez comment configurer Logoto pour automatiser l'identité visuelle de votre serveur Discord via les salons et le sujet des canaux.">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-            <meta property="og:title" content="Aide & Commandes | Logoto Bot Discord">
-            <meta property="og:description" content="Le tutoriel complet pour configurer l'automatisation de votre serveur Discord.">
-            <meta property="og:image" content="https://raw.githubusercontent.com/kanooob/Logoto/refs/heads/main/Logoto.png">
-            <meta property="og:url" content="https://logoto.onrender.com/help"> <meta property="og:type" content="article"> <meta property="og:locale" content="fr_FR">
-    
-            <meta name="twitter:card" content="summary">
-            <meta name="twitter:title" content="Aide & Commandes | Logoto Bot Discord">
-            <meta name="twitter:description" content="Le tutoriel complet pour configurer l'automatisation de votre serveur.">
-            <meta name="twitter:image" content="https://raw.githubusercontent.com/kanooob/Logoto/refs/heads/main/Logoto.png">
-    
-            <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/kanooob/Logoto/refs/heads/main/Logoto.png">
-    
-            <script type="application/ld+json">
-            {
-              "@context": "https://schema.org",
-              "@type": "TechArticle",
-              "headline": "Guide de Configuration et Commandes du Bot Logoto",
-              "description": "Apprenez à configurer et utiliser toutes les commandes de Logoto pour automatiser le changement de logo et de nom de votre serveur Discord.",
-              "image": "https://raw.githubusercontent.com/kanooob/Logoto/refs/heads/main/Logoto.png",
-              "author": {
-                "@type": "Organization",
-                "name": "Logoto"
-              },
-              "publisher": {
-                "@type": "Organization",
-                "name": "Logoto"
-              }
-            }
-            </script>
-    
             <style>
-                /* STYLES DE BASE & CONTRASTE (Accessibilité OK) */
+                /* BASE & DISCORD THEME */
                 body {
-                    font-family: Arial, sans-serif;
+                    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
                     margin: 0;
-                    padding: 0; /* padding: 40px 20px; déplacé vers .content-wrapper */
+                    padding: 0;
                     background-color: #36393f;
                     color: #dcddde;
                     line-height: 1.6;
@@ -368,358 +331,243 @@ const S4D_WEBSITECREATION_EXPRESS_app = S4D_WEBSITECREATION_EXPRESS();
                 }
     
                 .container {
-                    max-width: 900px;
+                    max-width: 950px;
                     margin: auto;
                     background: #2f3136;
-                    padding: 30px;
+                    padding: 40px;
                     border-radius: 8px;
                     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
                 }
+    
                 h1 {
-                    color: #7289da;
-                    border-bottom: 2px solid #7289da;
-                    padding-bottom: 10px;
-                    font-size: 2.2rem;
-                }
-                h2 {
-                    color: #5865f2;
-                    margin-top: 30px;
-                    border-bottom: 1px solid #4f545c;
-                    padding-bottom: 5px;
-                }
-                p, li { font-size: 1.1rem; color: #dcddde; }
-                code {
-                    background-color: #484c52;
-                    padding: 3px 6px;
-                    border-radius: 4px;
-                    font-family: Consolas, 'Courier New', monospace;
-                    color: #f2f2f2;
-                }
-                .note {
-                    background-color: #3c3a2e;
-                    border-left: 5px solid #ffc107;
-                    padding: 15px;
-                    margin-top: 20px;
-                    border-radius: 4px;
                     color: #ffffff;
-                }
-                .note strong { color: #ffc107; }
-                .command-list {
-                    list-style-type: none;
-                    padding: 0;
-                }
-                .command-list li {
-                    margin-bottom: 10px;
-                    background-color: #3a3d42;
-                    padding: 10px;
-                    border-radius: 5px;
+                    border-bottom: 2px solid #5865f2;
+                    padding-bottom: 15px;
+                    font-size: 2rem;
+                    text-align: center;
                 }
     
-                /* STYLES DES LIENS & BOUTONS */
-                .container a {
-                    text-decoration: underline;
-                    color: #7289da;
+                h2 {
+                    color: #5865f2;
+                    margin-top: 35px;
+                    font-size: 1.5rem;
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
                 }
+    
+                h3 {
+                    color: #ffffff;
+                    font-size: 1.2rem;
+                    margin-top: 20px;
+                }
+    
+                p, li { font-size: 1.05rem; color: #b9bbbe; }
+    
+                code {
+                    background-color: #202225;
+                    padding: 3px 8px;
+                    border-radius: 4px;
+                    font-family: 'Consolas', monospace;
+                    color: #f2f2f2;
+                    border: 1px solid #4f545c;
+                }
+    
+                .note {
+                    background-color: rgba(241, 196, 15, 0.1);
+                    border-left: 5px solid #f1c40f;
+                    padding: 15px;
+                    margin: 25px 0;
+                    border-radius: 4px;
+                }
+    
+                .note strong { color: #f1c40f; }
+    
+                .command-list {
+                    list-style: none;
+                    padding: 0;
+                }
+    
+                .command-list li {
+                    background: #36393f;
+                    margin-bottom: 8px;
+                    padding: 12px 15px;
+                    border-radius: 6px;
+                    transition: transform 0.2s, background 0.2s;
+                }
+    
+                .command-list li:hover {
+                    transform: translateX(5px);
+                    background: #40444b;
+                }
+    
+                /* BUTTONS */
                 .lang-switch {
                     text-align: center;
                     margin-bottom: 30px;
                     display: flex;
                     justify-content: center;
                     gap: 15px;
-                    flex-wrap: wrap;
                 }
+    
                 .btn {
-                    display: inline-block;
-                    padding: 12px 25px;
-                    border-radius: 8px;
-                    text-decoration: none !important;
-                    font-size: 1rem;
-                    font-weight: bold;
-                    color: #ffffff;
-                    transition: transform 0.2s, background-color 0.2s;
-                    border: none;
-                    cursor: pointer;
-                }
-                .btn:hover { transform: translateY(-2px); }
-                .btn-primary { background-color: #5865f2; }
-                .btn-primary:hover { background-color: #4f5bda; }
-                .btn-secondary { background-color: #4f545c; }
-                .btn-secondary:hover { background-color: #5d6269; }
-    
-                /* STYLES DU FOOTER (Ajoutés/Corrigés) */
-                footer {
-                    background-color: #2f3136; /* Couleur du conteneur pour le contraste */
-                    padding: 15px 20px;
-                    color: #99aab5;
-                    font-size: 0.9rem;
-                    width: 100%;
-                    box-sizing: border-box;
-                    text-align: center;
-                }
-    
-                footer a {
-                    color: #ffffff; /* Texte de lien blanc pour le contraste */
+                    padding: 10px 20px;
+                    border-radius: 5px;
                     text-decoration: none;
-                    margin: 0 10px;
-                    transition: color 0.2s;
+                    font-weight: bold;
+                    cursor: pointer;
+                    border: none;
+                    transition: 0.3s;
                 }
     
-                footer a:hover {
-                    color: #7289da;
-                    text-decoration: underline;
+                .btn-primary { background-color: #5865f2; color: white; }
+                .btn-primary:hover { background-color: #4752c4; }
+                .btn-secondary { background-color: #4f545c; color: white; }
+    
+                footer {
+                    background-color: #23272a;
+                    padding: 25px;
+                    text-align: center;
+                    font-size: 0.9rem;
                 }
     
-                .footer-links {
-                    display: flex;
-                    justify-content: center;
-                    gap: 15px;
-                    flex-wrap: wrap;
-                    margin-top: 5px;
-                }
-    
-                hr {
-                    border: 0;
-                    border-top: 1px solid #4f545c;
-                    margin: 40px 0;
-                }
-                ol { padding-left: 20px; }
-                ol li { margin-bottom: 15px; }
-                ol ul {
-                    list-style-type: disc;
-                    padding-left: 20px;
-                }
+                footer a { color: #5865f2; text-decoration: none; margin: 0 10px; }
+                hr { border: 0; border-top: 1px solid #4f545c; margin: 30px 0; }
             </style>
         </head>
         <body>
     
             <div class="content-wrapper">
                 <div class="container">
-    
                     <header>
                         <div class="lang-switch">
-                            <a href="/" class="btn btn-secondary">Retour à l'accueil</a>
-                            <button id="btn-fr" onclick="changeLanguage('fr')" class="btn btn-primary">Afficher en Français</button>
-                            <button id="btn-en" onclick="changeLanguage('en')" class="btn btn-primary">Display in English</button>
+                            <button id="btn-fr" onclick="changeLanguage('fr')" class="btn btn-primary">Français</button>
+                            <button id="btn-en" onclick="changeLanguage('en')" class="btn btn-secondary">English</button>
                         </div>
                     </header>
     
                     <main id="content-area">
-                        <h1>Aide et Commandes Logoto : Automatisez Logo & Nom 🇫🇷</h1>
-                        <p>Je suis le bot spécialisé dans l'automatisation du changement de logo ET du nom de votre serveur, sans nécessiter de commandes complexes après la configuration.</p>
-    
-                        <h2>Les Commandes Logoto</h2>
-                        <ul class="command-list">
-                            <li><code>/setup</code> : Crée les salons nécessaires (Logoto, log-logoto) pour un démarrage rapide.</li>
-                            <li><code>/logo-add</code> : Crée un salon de changement de logo avec les options <code>day</code> (jour) et <code>month</code> (mois).</li>
-                            <li><code>/name-add</code> : Crée un salon de changement de nom du serveur avec les options <code>day</code> et <code>month</code>.</li>
-                            <li><code>/help</code> : Affiche ce message d'aide (ou cette page !).</li>
-                            <li><code>/invite</code> : Obtenez le lien pour inviter le bot sur votre serveur.</li>
-                            <li><code>/support</code> : Rejoignez le serveur de support pour toute question ou aide.</li>
-                        </ul>
-    
-                        <hr>
-    
-                        <h2>Système de Changement de Logo Automatique</h2>
-                        <p>Le bot surveille des salons spécifiques pour planifier et exécuter les changements de logo. Voici comment le configurer manuellement (ou avec <code>/logo-add</code>) :</p>
-    
-                        <ol>
-                            <li>
-                                <strong>Créez le Salon de Planification (Logo) :</strong>
-                                <ul>
-                                    <li>Le nom du salon doit être au format : <code>l-[JOUR]-[MOIS]</code></li>
-                                    <li>EXEMPLE : Pour un logo le 31 décembre : <code>l-31-12</code></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <strong>Préparez le Logo :</strong>
-                                <ul>
-                                    <li>Envoyez votre image de logo sur n'importe quel salon Discord et copiez son lien direct.</li>
-                                    <li>Le lien doit être une URL d'image valide.</li>
-                                </ul>
-                            </li>
-                            <li>
-                                <strong>Planifiez le Changement :</strong>
-                                <ul>
-                                    <li>Modifiez le **Sujet du Salon** (Channel Topic) créé à l'étape 1.</li>
-                                    <li>Collez le **lien** de votre image dans le sujet du salon.</li>
-                                </ul>
-                            </li>
-                            <li>
-                                <strong>Résultat :</strong>
-                                <ul>
-                                    <li>Le bot changera automatiquement le logo du serveur au jour et au mois spécifiés !</li>
-                                </ul>
-                            </li>
-                        </ol>
-    
-                        <hr>
-    
-                        <h2>Système de Changement de Nom Automatique</h2>
-                        <p>Le principe est le même pour le nom du serveur (configurable avec <code>/name-add</code>) :</p>
-    
-                        <ol>
-                            <li>
-                                <strong>Créez le Salon de Planification (Nom) :</strong>
-                                <ul>
-                                    <li>Le nom du salon doit être au format : <code>n-[JOUR]-[MOIS]</code></li>
-                                    <li>EXEMPLE : Pour un nom le 1er janvier : <code>n-1-1</code></li>
-                                    </ul>
-                            </li>
-                            <li>
-                                <strong>Planifiez le Changement :</strong>
-                                <ul>
-                                    <li>Modifiez le **Sujet du Salon** (Channel Topic) créé à l'étape 1.</li>
-                                    <li>Écrivez le **nouveau nom du serveur** dans le sujet du salon.</li>
-                                </ul>
-                            </li>
-                            <li>
-                                <strong>Résultat :</strong>
-                                <ul>
-                                    <li>Le bot changera automatiquement le nom du serveur à la date spécifiée !</li>
-                                </ul>
-                            </li>
-                        </ol>
-    
-                        <div class="note">
-                            <strong>NOTE IMPORTANTE :</strong> Pour que le changement automatique fonctionne chaque jour, le salon <code>log-logoto</code> <strong>doit exister</strong>.
-                            <br>Chaque jour, le bot envoie un message technique (<code>🔄 (l/n)-Loading</code>) dans ce salon pour déclencher la vérification. C'est ce message qui active ensuite le changement de logo ou de nom si la date correspond.
-                            <br>La commande <code>/setup</code> crée automatiquement ce salon pour vous.
-                        </div>
-                    </main>
-    
+                        </main>
                 </div>
-            </div> <footer>
-                <p>Ce site est hébergé sur Render. Logoto est un projet personnel.</p>
-                <div class="footer-links">
-                    <a href="/tos">Conditions d'Utilisation (ToS)</a>
-                    <a href="/privacy">Politique de Confidentialité</a>
-                    <a href="https://github.com/kanooob/Logoto" target="_blank" rel="noopener noreferrer">Code Source</a>
-                </div>
+            </div>
+    
+            <footer>
+                <p>© Logoto Bot - Projet personnel hébergé sur Render</p>
+                <a href="/tos">ToS</a> | <a href="/privacy">Confidentialité</a> | <a href="https://github.com/kanooob/Logoto">GitHub</a>
             </footer>
     
             <script>
-                // --- Contenu Anglais ---
-                const contentEN = \`
-                    <h1>Logoto Help - Automate your Logo & Name! 🇬🇧</h1>
-                    <p>I am the bot specialized in automating the change of your server's logo AND name, without requiring complex commands after the initial setup.</p>
-    
-                    <h2>Commands</h2>
-                    <ul class="command-list">
-                        <li><code>/setup</code> : Creates the necessary channels (Logoto, log-logoto) for a quick start.</li>
-                        <li><code>/logo-add</code> : Creates a logo change channel with the options <code>day</code> (Required) and <code>month</code> (Required).</li>
-                        <li><code>/name-add</code> : Creates a server name change channel with the options <code>day</code> and <code>month</code>.</li>
-                        <li><code>/help</code> : Displays this help message (or this page!).</li>
-                        <li><code>/invite</code> : Get the link to invite the bot to your server.</li>
-                        <li><code>/support</code> : Join the support server for any questions or assistance.</li>
-                    </ul>
-    
-                    <hr>
-    
-                    <h2>Automatic Logo Change System</h2>
-                    <p>The bot monitors specific channels to schedule and execute logo changes. Here's how to configure it manually (or with <code>/logo-add</code>):</p>
-    
-                    <ol>
-                        <li>
-                            <strong>Create the Scheduling Channel (Logo):</strong>
-                            <ul>
-                                <li>The channel name must follow this format: <code>l-[DAY]-[MONTH]</code></li>
-                                <li>EXAMPLE: For a logo on December 31st: <code>l-31-12</code></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <strong>Prepare the Logo:</strong>
-                            <ul>
-                                <li>Upload your logo image to any Discord channel and copy its direct link.</li>
-                                <li>The link must be a valid image URL.</li>
-                            </ul>
-                        </li>
-                        <li>
-                            <strong>Schedule the Change:</strong>
-                            <ul>
-                                <li>Edit the **Channel Topic** of the channel you created in step 1.</li>
-                                <li>Paste the **link** of your image into the channel topic.</li>
-                            </ul>
-                        </li>
-                        <li>
-                            <strong>Result:</strong>
-                            <ul>
-                                <li>The bot will automatically change the server logo on the day and month specified!</li>
-                            </ul>
-                        </li>
-                    </ol>
-    
-                    <hr>
-    
-                    <h2>Automatic Name Change System</h2>
-                    <p>The same principle applies for the server name (configurable with <code>/name-add</code>):</p>
-    
-                    <ol>
-                        <li>
-                            <strong>Create the Scheduling Channel (Name):</strong>
-                            <ul>
-                                <li>The channel name must follow this format: <code>n-[DAY]-[MONTH]</code></li>
-                                <li>EXAMPLE: For a name on January 1st: <code>n-1-1</code></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <strong>Schedule the Change:</strong>
-                            <ul>
-                                <li>Edit the **Channel Topic** of the channel you created in step 1.</li>
-                                <li>Write the **new server name** in the channel topic.</li>
-                            </ul>
-                        </li>
-                        <li>
-                            <strong>Result:</strong>
-                            <ul>
-                                <li>The bot will automatically change the server name on the specified date!</li>
-                            </ul>
-                        </li>
-                    </ol>
-    
-                    <div class="note">
-                        <strong>IMPORTANT NOTE:</strong> For the automatic daily change to work, the <code>log-logoto</code> channel <strong>must exist</strong>.
-                        <br>Every day, the bot sends a technical message (<code>🔄 (l/n)-Loading</code>) to this channel to trigger the check. This message is what activates the logo or name change if the date matches.
-                        <br>The <code>/setup</code> command automatically creates this channel for you.
-                    </div>
-                \`;
-    
-                // --- Contenu Français (Récupéré du HTML initial) ---
-                const contentFR = document.getElementById('content-area').innerHTML;
-    
-                // --- Fonction de Changement de Langue CORRIGÉE ---
-                function changeLanguage(lang) {
-                    const contentArea = document.getElementById('content-area');
-                    const btnFr = document.getElementById('btn-fr');
-                    const btnEn = document.getElementById('btn-en');
-    
-                    if (lang === 'fr') {
-                        contentArea.innerHTML = contentFR;
-                        document.documentElement.lang = 'fr';
-                        // Mise à jour des boutons dans la langue cible (français)
-                        btnFr.textContent = "Afficher en Français";
-                        btnEn.textContent = "Display in English";
-    
-                    } else if (lang === 'en') {
-                        contentArea.innerHTML = contentEN;
-                        document.documentElement.lang = 'en';
-                        // Mise à jour des boutons dans la langue cible (anglais)
-                        btnFr.textContent = "Show in French"; // Texte EN pour le bouton FR
-                        btnEn.textContent = "Display in English";
+                const translations = {
+                    fr: {
+                        title: "🤖 Documentation du Bot Discord Logoto",
+                        intro: "Ce bot permet d'automatiser le changement de nom et de logo d'un serveur Discord en se basant sur la configuration de salons textuels spécifiques.",
+                        globalWork: "🛠 Fonctionnement Global",
+                        globalDesc: "Le bot surveille les salons pour détecter un message spécifique dans <code>log-logoto</code>. Il utilise la date actuelle pour identifier quel salon contient les instructions de configuration.",
+                        systemTitle: "📅 Système de Salons logoto-[jour]-[mois]",
+                        systemDesc: "Le bot s'appuie sur une structure de salons pour savoir quoi appliquer selon la date.",
+                        formatTitle: "1. Format du nom du salon",
+                        formatDesc: "Le salon doit être nommé exactement : <code>logoto-[jour]-[mois]</code>. <br>Exemple pour le 15 Mai : <code>logoto-15-5</code>",
+                        configTitle: "2. Configuration du Salon (Topic)",
+                        configDesc: "C'est dans la <strong>Description (Sujet)</strong> du salon que vous définissez l'action :",
+                        configList: \`<li><strong>Lien (https://...) :</strong> Le bot change le <strong>Logo</strong> du serveur.</li>
+                                     <li><strong>Texte simple :</strong> Le bot change le <strong>Nom</strong> du serveur.</li>
+                                     <li><strong>Vide :</strong> Aucune action.</li>\`,
+                        triggerTitle: "🔄 Le déclencheur",
+                        triggerDesc: "Le changement est automatique. Le bot enverra deux messages dans <code>log-logoto</code> : <code>🔄 Loading...</code> puis la confirmation du changement.",
+                        notesTitle: "⚠️ Notes Importantes",
+                        notesList: \`<li><strong>Permissions :</strong> Le bot doit avoir les permissions 'Gérer le serveur' et 'Gérer les salons'.</li>
+                                    <li><strong>Rôle :</strong> Le rôle du bot doit être placé au-dessus des autres pour modifier les paramètres.</li>
+                                    <li><strong>Format :</strong> Utilisez bien le format JJ-MM (sans zéro inutile, ex: 5 et non 05).</li>\`,
+                        commandsTitle: "🚀 Commandes Slash",
+                        faqTitle: "❓ FAQ Rapide",
+                        faqContent: "<strong>Le bot ne change rien ?</strong> Vérifiez que le salon <code>log-logoto</code> existe et que le bot peut y écrire. C'est ce salon qui 'réveille' le bot chaque jour."
+                    },
+                    en: {
+                        title: "🤖 Logoto Discord Bot Documentation",
+                        intro: "This bot automates server name and logo changes based on specific text channel configurations.",
+                        globalWork: "🛠 How It Works",
+                        globalDesc: "The bot monitors channels for a specific trigger message in <code>log-logoto</code>. It uses the current date to identify which channel contains the setup instructions.",
+                        systemTitle: "📅 Channel System: logoto-[day]-[month]",
+                        systemDesc: "The bot uses a specific channel structure to know which identity to apply based on the date.",
+                        formatTitle: "1. Channel Name Format",
+                        formatDesc: "The channel must be named exactly: <code>logoto-[day]-[month]</code>. <br>Example for May 15th: <code>logoto-15-5</code>",
+                        configTitle: "2. Channel Configuration (Topic)",
+                        configDesc: "The <strong>Channel Topic (Description)</strong> is where you define the action:",
+                        configList: \`<li><strong>URL (https://...) :</strong> The bot will update the server <strong>Logo</strong>.</li>
+                                     <li><strong>Plain text :</strong> The bot will update the server <strong>Name</strong>.</li>
+                                     <li><strong>Empty :</strong> No action taken.</li>\`,
+                        triggerTitle: "🔄 The Trigger",
+                        triggerDesc: "The change is fully automated. The bot will send two messages in <code>log-logoto</code>: <code>🔄 Loading...</code> followed by the change confirmation.",
+                        notesTitle: "⚠️ Important Notes",
+                        notesList: \`<li><strong>Permissions:</strong> The bot requires 'Manage Server' and 'Manage Channels' permissions.</li>
+                                    <li><strong>Hierarchy:</strong> Ensure the bot's role is high enough to edit server settings.</li>
+                                    <li><strong>Date Format:</strong> Use the DD-MM format (no leading zeros, e.g., 5 instead of 05).</li>\`,
+                        commandsTitle: "🚀 Slash Commands",
+                        faqTitle: "❓ Quick FAQ",
+                        faqContent: "<strong>Bot isn't changing anything?</strong> Make sure the <code>log-logoto</code> channel exists and the bot has permission to post there. This channel 'wakes up' the bot daily."
                     }
+                };
+    
+                function renderContent(lang) {
+                    const t = translations[lang];
+                    const content = \`
+                        <h1>\${t.title}</h1>
+                        <p>\${t.intro}</p>
+    
+                        <h2>\${t.globalWork}</h2>
+                        <p>\${t.globalDesc}</p>
+    
+                        <hr>
+    
+                        <h2>\${t.systemTitle}</h2>
+                        <p>\${t.systemDesc}</p>
+    
+                        <h3>\${t.formatTitle}</h3>
+                        <p>\${t.formatDesc}</p>
+    
+                        <h3>\${t.configTitle}</h3>
+                        <p>\${t.configDesc}</p>
+                        <ul>\${t.configList}</ul>
+    
+                        <hr>
+    
+                        <h2>\${t.triggerTitle}</h2>
+                        <p>\${t.triggerDesc}</p>
+    
+                        <div class="note">
+                            <h2>\${t.notesTitle}</h2>
+                            <ul>\${t.notesList}</ul>
+                        </div>
+    
+                        <h2>\${t.commandsTitle}</h2>
+                        <ul class="command-list">
+                            <li><code>/setup</code> : \${lang === 'fr' ? 'Crée les salons nécessaires.' : 'Creates necessary channels.'}</li>
+                            <li><code>/logo-add</code> : \${lang === 'fr' ? 'Ajoute un salon pour un logo.' : 'Adds a channel for a logo change.'}</li>
+                            <li><code>/name-add</code> : \${lang === 'fr' ? 'Ajoute un salon pour un nom.' : 'Adds a channel for a name change.'}</li>
+                            <li><code>/help</code> : \${lang === 'fr' ? 'Affiche l\\'aide.' : 'Displays help.'}</li>
+                        </ul>
+    
+                        <div class="note" style="background-color: rgba(88, 101, 242, 0.1); border-left-color: #5865f2;">
+                            <h3>\${t.faqTitle}</h3>
+                            <p>\${t.faqContent}</p>
+                        </div>
+                    \`;
+                    document.getElementById('content-area').innerHTML = content;
+                }
+    
+                function changeLanguage(lang) {
+                    renderContent(lang);
+                    document.documentElement.lang = lang;
+    
+                    // Toggle button styles
+                    document.getElementById('btn-fr').className = lang === 'fr' ? 'btn btn-primary' : 'btn btn-secondary';
+                    document.getElementById('btn-en').className = lang === 'en' ? 'btn btn-primary' : 'btn btn-secondary';
+    
                     window.scrollTo(0, 0);
                 }
     
-                // --- Initialisation au chargement ---
-                document.addEventListener('DOMContentLoaded', () => {
-                     // Assurez-vous que les boutons ont les IDs pour le JS
-                     const btnFr = document.getElementById('btn-fr');
-                     const btnEn = document.getElementById('btn-en');
-                     if (document.documentElement.lang === 'fr') {
-                         // Si la page est en FR (par défaut), mettre le bouton EN en anglais
-                         btnEn.textContent = "Display in English";
-                         btnFr.textContent = "Afficher en Français"; // Par sécurité
-                     }
-                });
+                // Init
+                renderContent('fr');
             </script>
         </body>
         </html>`), { overwrite: true });res.sendFile(S4D_WEBSITECREATION_path.join(__dirname, String('help.html')))
