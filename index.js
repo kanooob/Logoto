@@ -1503,19 +1503,26 @@ const S4D_WEBSITECREATION_EXPRESS_app = S4D_WEBSITECREATION_EXPRESS();
         if (typeof (s).channels.cache.find((category) => category.name === (['n-',(new Date().getDate()),'-',((new Date().getMonth())) + 1].join(''))) !== undefined) {
           (s).channels.cache.find((category) => category.name === 'log-logoto').send({content:String('🔄 n-Loading')});
         }
-        if ((typeof (s).channels.cache.find((category) => category.name === (['logoto-',(new Date().getDate()),'-',((new Date().getMonth())) + 1].join(''))) !== undefined) && ((((s).channels.cache.find((category) => category.name === (['logoto-',(new Date().getDate()),'-',((new Date().getMonth())) + 1].join(''))).topic) || '').startsWith('https://' || ''))) {
-          (s).setIcon(((s).channels.cache.find((category) => category.name === (['logoto-',(new Date().getDate()),'-',((new Date().getMonth())) + 1].join(''))).topic),'changement de logo.')
-    
-          (s).channels.cache.find((category) => category.name === 'log-logoto').send({content:String((['🔄 | Changement de logo du jour ',(new Date().getDate()),'/',((new Date().getMonth())) + 1,'.'].join('')))});
-        } else if (typeof (s).channels.cache.find((category) => category.name === (['logoto-',(new Date().getDate()),'-',((new Date().getMonth())) + 1].join(''))) !== undefined) {
-          (s).setName(((s).channels.cache.find((category) => category.name === (['logoto-',(new Date().getDate()),'-',((new Date().getMonth())) + 1].join(''))).topic),'changement de nom.')
-    
-          (s).channels.cache.find((category) => category.name === 'log-logoto').send({content:String((['🔄 | Changement de nom du jour ',(new Date().getDate()),'/',((new Date().getMonth())) + 1,'.'].join('')))});
+        if ((typeof (s).channels.cache.find((category) => category.name === 'log-logoto') !== undefined) && (typeof (s).channels.cache.find((category) => category.name === (['logoto',(new Date().getDate()),'-',((new Date().getMonth())) + 1].join(''))) !== undefined)) {
+          (s).channels.cache.find((category) => category.name === 'log-logoto').send({content:String('🔄 Loading...')});
         }
     
       })
     
       });
+    
+    s4d.client.on('messageCreate', async (s4dmessage) => {
+      if (((s4dmessage).content) == '🔄 Loading...' && ((((s4dmessage.guild).channels.cache.find((category) => category.name === (['logoto-',(new Date().getDate()),'-',((new Date().getMonth())) + 1].join(''))).topic) || '').startsWith('https://' || ''))) {
+        (s4dmessage.guild).setIcon(((s4dmessage.guild).channels.cache.find((category) => category.name === (['logoto-',(new Date().getDate()),'-',((new Date().getMonth())) + 1].join(''))).topic),'changement de logo.')
+    
+        s4dmessage.channel.send({content:String('✅ Logo du serveurs changé.')});
+      } else if (((s4dmessage).content) == '🔄 Loading...') {
+        (s4dmessage.guild).setName(((s4dmessage.guild).channels.cache.find((category) => category.name === (['logoto-',(new Date().getDate()),'-',((new Date().getMonth())) + 1].join(''))).topic),'changement de nom.')
+    
+        s4dmessage.channel.send({content:String('✅ Nom du serveurs changé.')});
+      }
+    
+    });
     
     return s4d
 })();
