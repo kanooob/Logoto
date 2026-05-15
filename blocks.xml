@@ -122,7 +122,7 @@
                                             </value>
                                             <value name="DESC">
                                               <shadow type="text" id="KYhyPeW4b6bH2YuMn|h{">
-                                                <field name="TEXT">Le jour du changement</field>
+                                                <field name="TEXT">Le jour du changement (ne pas mettre de 0 devant)</field>
                                               </shadow>
                                             </value>
                                             <value name="REQUIRED">
@@ -140,7 +140,7 @@
                                                 </value>
                                                 <value name="DESC">
                                                   <shadow type="text" id="(T-7G7kY3eMR=cB~fONU">
-                                                    <field name="TEXT">Le mois du changement</field>
+                                                    <field name="TEXT">Le mois du changement (ne pas mettre de 0 devant)</field>
                                                   </shadow>
                                                 </value>
                                                 <value name="REQUIRED">
@@ -174,7 +174,7 @@
                                                 </value>
                                                 <value name="DESC">
                                                   <shadow type="text" id="/1nE[)}I7*K(ybDUbTbR">
-                                                    <field name="TEXT">Le jour du changement</field>
+                                                    <field name="TEXT">Le jour du changement (ne pas mettre de 0 devant)</field>
                                                   </shadow>
                                                 </value>
                                                 <value name="REQUIRED">
@@ -192,7 +192,7 @@
                                                     </value>
                                                     <value name="DESC">
                                                       <shadow type="text" id="+]G9yR5o$3Y6%wgvFF-m">
-                                                        <field name="TEXT">Le mois du changement</field>
+                                                        <field name="TEXT">Le mois du changement (ne pas mettre de 0 devant)</field>
                                                       </shadow>
                                                     </value>
                                                     <value name="REQUIRED">
@@ -2839,7 +2839,7 @@
       </block>
     </statement>
   </block>
-  <block type="create_event" id="Ja:u-dYlKwT3qfD7U^B^" x="-2711" y="3993">
+  <block type="create_event" id="Ja:u-dYlKwT3qfD7U^B^" x="-3234" y="4014">
     <value name="NAME">
       <shadow type="text" id="[khEgr3c8Wi0GTyHb~$-">
         <field name="TEXT">1</field>
@@ -3139,15 +3139,6 @@
                     </next>
                   </block>
                 </statement>
-                <next>
-                  <block type="s4d_wait_seconds" id="Fc0$EmUiUoC$[E@@.6XD">
-                    <value name="TIME">
-                      <shadow type="math_number" id="afwfpz9bIpiP|,fFx?TD">
-                        <field name="NUM">1</field>
-                      </shadow>
-                    </value>
-                  </block>
-                </next>
               </block>
             </statement>
           </block>

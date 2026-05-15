@@ -155,7 +155,7 @@ const S4D_WEBSITECREATION_EXPRESS_app = S4D_WEBSITECREATION_EXPRESS();
             type: 4,
         	name: 'day',
             required: true,
-        	description: 'Le jour du changement',
+        	description: 'Le jour du changement (ne pas mettre de 0 devant)',
             choices: [
     
             ]
@@ -163,7 +163,7 @@ const S4D_WEBSITECREATION_EXPRESS_app = S4D_WEBSITECREATION_EXPRESS();
             type: 4,
         	name: 'month',
             required: true,
-        	description: 'Le mois du changement',
+        	description: 'Le mois du changement (ne pas mettre de 0 devant)',
             choices: [
     
             ]
@@ -177,7 +177,7 @@ const S4D_WEBSITECREATION_EXPRESS_app = S4D_WEBSITECREATION_EXPRESS();
             type: 4,
         	name: 'day',
             required: true,
-        	description: 'Le jour du changement',
+        	description: 'Le jour du changement (ne pas mettre de 0 devant)',
             choices: [
     
             ]
@@ -185,7 +185,7 @@ const S4D_WEBSITECREATION_EXPRESS_app = S4D_WEBSITECREATION_EXPRESS();
             type: 4,
         	name: 'month',
             required: true,
-        	description: 'Le mois du changement',
+        	description: 'Le mois du changement (ne pas mettre de 0 devant)',
             choices: [
     
             ]
@@ -1507,7 +1507,6 @@ const S4D_WEBSITECREATION_EXPRESS_app = S4D_WEBSITECREATION_EXPRESS();
     
             (s).channels.cache.find((category) => category.name === 'log-logoto').send({content:String((['🔄 | Changement de nom du jour ',(new Date().getDate()),'/',((new Date().getMonth())) + 1,'.'].join('')))});
           }
-          await delay(Number(1)*1000);
     
         })
     
