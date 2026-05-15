@@ -260,12 +260,36 @@
               </block>
             </value>
             <value name="B">
-              <block type="role_has_permission" id=":bYxk[@ySHLQlRaCtJ[+">
-                <field name="perm">MANAGE_GUILD</field>
-                <value name="role">
-                  <block type="hig_role" id="~[6#U76)i^GfVl~Zo}l-">
-                    <value name="member">
-                      <block type="interaction_author" id="V);gDHXoe!(i(xfuO9#)"></block>
+              <block type="logic_operation" id="PvcRy[?FND!N8CF4M|~c">
+                <field name="OP">OR</field>
+                <value name="A">
+                  <block type="role_has_permission" id=":bYxk[@ySHLQlRaCtJ[+">
+                    <field name="perm">MANAGE_GUILD</field>
+                    <value name="role">
+                      <block type="hig_role" id="~[6#U76)i^GfVl~Zo}l-">
+                        <value name="member">
+                          <block type="interaction_author" id="V);gDHXoe!(i(xfuO9#)"></block>
+                        </value>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="logic_compare" id="zK/?-^2r8U-+6q|nG0=M">
+                    <field name="OP">EQ</field>
+                    <value name="A">
+                      <block type="s4d_server_owner" id="dgJXELwzY,_)8!5Mbfj|">
+                        <value name="SERVER">
+                          <block type="interaction_guild" id=":dF49K9pSPm;=`^2-fp%"></block>
+                        </value>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block type="s4d_member_id" id="WVe6nocDK}wyMF.L{z!r">
+                        <value name="MEMBER">
+                          <block type="interaction_author" id="rr29fAM1]wv7F@Q]m5Wx"></block>
+                        </value>
+                      </block>
                     </value>
                   </block>
                 </value>
@@ -938,12 +962,36 @@
                                       </block>
                                     </value>
                                     <value name="B">
-                                      <block type="role_has_permission" id="rgryW~C!^%2#.s9pAlSq">
-                                        <field name="perm">MANAGE_GUILD</field>
-                                        <value name="role">
-                                          <block type="hig_role" id="0{0P*ASCnBx@E3M?+Ggu">
-                                            <value name="member">
-                                              <block type="interaction_author" id="p_5?ykQ*dnWfLnlhE;U!"></block>
+                                      <block type="logic_operation" id="O?_=ifzLr_?cV~dt3U6U">
+                                        <field name="OP">OR</field>
+                                        <value name="A">
+                                          <block type="role_has_permission" id="@Zl%5RV4X.]83={|4-#(">
+                                            <field name="perm">MANAGE_GUILD</field>
+                                            <value name="role">
+                                              <block type="hig_role" id="HjX-$0L)-p2~G#G[gkh=">
+                                                <value name="member">
+                                                  <block type="interaction_author" id="[sgn(/_CzqA9B[yUqQ(p"></block>
+                                                </value>
+                                              </block>
+                                            </value>
+                                          </block>
+                                        </value>
+                                        <value name="B">
+                                          <block type="logic_compare" id="Dr4!(8]L,c;{4Dxbv^#c">
+                                            <field name="OP">EQ</field>
+                                            <value name="A">
+                                              <block type="s4d_server_owner" id="bM{:HQG$zZN5Yr{OD#6V">
+                                                <value name="SERVER">
+                                                  <block type="interaction_guild" id="Kf.1egEk~_fF-fE:K[AQ"></block>
+                                                </value>
+                                              </block>
+                                            </value>
+                                            <value name="B">
+                                              <block type="s4d_member_id" id="LA@nQrt_EqXZ67~n_bB}">
+                                                <value name="MEMBER">
+                                                  <block type="interaction_author" id="*Dq0q7{@LNsABd}/U:T5"></block>
+                                                </value>
+                                              </block>
                                             </value>
                                           </block>
                                         </value>
@@ -1172,12 +1220,36 @@
                                           </block>
                                         </value>
                                         <value name="B">
-                                          <block type="role_has_permission" id="kIstAV|86UgcM:F55iq{">
-                                            <field name="perm">MANAGE_GUILD</field>
-                                            <value name="role">
-                                              <block type="hig_role" id="{cv2S7IbaUmb^@ewtK)~">
-                                                <value name="member">
-                                                  <block type="interaction_author" id="Ne2*vnY?YaY#ZXopb.mS"></block>
+                                          <block type="logic_operation" id="U}=YE-Eb@H3vz{8L$5_%">
+                                            <field name="OP">OR</field>
+                                            <value name="A">
+                                              <block type="role_has_permission" id=".Lup8vIp//Oxw]).oH;i">
+                                                <field name="perm">MANAGE_GUILD</field>
+                                                <value name="role">
+                                                  <block type="hig_role" id=":.9XT~P!tYd_x9q|_6FG">
+                                                    <value name="member">
+                                                      <block type="interaction_author" id="Ndh=kV(-V78`3NCUL]p;"></block>
+                                                    </value>
+                                                  </block>
+                                                </value>
+                                              </block>
+                                            </value>
+                                            <value name="B">
+                                              <block type="logic_compare" id="iK}w`7tNYytM1*yWcH7}">
+                                                <field name="OP">EQ</field>
+                                                <value name="A">
+                                                  <block type="s4d_server_owner" id="+Q_DDO`a:u+dC$l/IV!`">
+                                                    <value name="SERVER">
+                                                      <block type="interaction_guild" id=",DAr5VCr72y22SYt0i|P"></block>
+                                                    </value>
+                                                  </block>
+                                                </value>
+                                                <value name="B">
+                                                  <block type="s4d_member_id" id="Z%s52*SL`rv%_7xFgd`X">
+                                                    <value name="MEMBER">
+                                                      <block type="interaction_author" id="_k=4AffLvkyMYKbrG)[8"></block>
+                                                    </value>
+                                                  </block>
                                                 </value>
                                               </block>
                                             </value>
