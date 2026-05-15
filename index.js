@@ -407,7 +407,8 @@ const S4D_WEBSITECREATION_EXPRESS_app = S4D_WEBSITECREATION_EXPRESS();
                     margin-bottom: 30px;
                     display: flex;
                     justify-content: center;
-                    gap: 15px;
+                    gap: 10px;
+                    flex-wrap: wrap;
                 }
     
                 .btn {
@@ -418,11 +419,14 @@ const S4D_WEBSITECREATION_EXPRESS_app = S4D_WEBSITECREATION_EXPRESS();
                     cursor: pointer;
                     border: none;
                     transition: 0.3s;
+                    display: inline-block;
                 }
     
                 .btn-primary { background-color: #5865f2; color: white; }
                 .btn-primary:hover { background-color: #4752c4; }
                 .btn-secondary { background-color: #4f545c; color: white; }
+                .btn-home { background-color: #eb459e; color: white; } /* Couleur rose pour se distinguer */
+                .btn-home:hover { background-color: #da378d; }
     
                 footer {
                     background-color: #23272a;
@@ -441,13 +445,15 @@ const S4D_WEBSITECREATION_EXPRESS_app = S4D_WEBSITECREATION_EXPRESS();
                 <div class="container">
                     <header>
                         <div class="lang-switch">
+                            <a href="/" id="btn-home" class="btn btn-home">Accueil</a>
                             <button id="btn-fr" onclick="changeLanguage('fr')" class="btn btn-primary">Français</button>
                             <button id="btn-en" onclick="changeLanguage('en')" class="btn btn-secondary">English</button>
                         </div>
                     </header>
     
                     <main id="content-area">
-                        </main>
+                        <!-- Injecté par le script -->
+                    </main>
                 </div>
             </div>
     
@@ -459,10 +465,11 @@ const S4D_WEBSITECREATION_EXPRESS_app = S4D_WEBSITECREATION_EXPRESS();
             <script>
                 const translations = {
                     fr: {
+                        home: "Accueil",
                         title: "🤖 Documentation du Bot Discord Logoto",
                         intro: "Ce bot permet d'automatiser le changement de nom et de logo d'un serveur Discord en se basant sur la configuration de salons textuels spécifiques.",
                         globalWork: "🛠 Fonctionnement Global",
-                        globalDesc: "Le bot surveille les salons pour détecter un message spécifique dans <code>log-logoto</code>. Il utilise la date actuelle pour identifier quel salon contient les instructions de configuration.",
+                        globalDesc: "Le bot surveille les salons pour voir s'il y en a qui correspondent au jour actuel <code>logoto-[JJ]-[MM]</code>. Il utilise la date actuelle pour identifier quel salon contient les instructions de configuration.",
                         systemTitle: "📅 Système de Salons logoto-[jour]-[mois]",
                         systemDesc: "Le bot s'appuie sur une structure de salons pour savoir quoi appliquer selon la date.",
                         formatTitle: "1. Format du nom du salon",
@@ -476,17 +483,17 @@ const S4D_WEBSITECREATION_EXPRESS_app = S4D_WEBSITECREATION_EXPRESS();
                         triggerDesc: "Le changement est automatique. Le bot enverra deux messages dans <code>log-logoto</code> : <code>🔄 Loading...</code> puis la confirmation du changement.",
                         notesTitle: "⚠️ Notes Importantes",
                         notesList: \`<li><strong>Permissions :</strong> Le bot doit avoir les permissions 'Gérer le serveur' et 'Gérer les salons'.</li>
-                                    <li><strong>Rôle :</strong> Le rôle du bot doit être placé au-dessus des autres pour modifier les paramètres.</li>
                                     <li><strong>Format :</strong> Utilisez bien le format JJ-MM (sans zéro inutile, ex: 5 et non 05).</li>\`,
                         commandsTitle: "🚀 Commandes Slash",
                         faqTitle: "❓ FAQ Rapide",
                         faqContent: "<strong>Le bot ne change rien ?</strong> Vérifiez que le salon <code>log-logoto</code> existe et que le bot peut y écrire. C'est ce salon qui 'réveille' le bot chaque jour."
                     },
                     en: {
+                        home: "Home",
                         title: "🤖 Logoto Discord Bot Documentation",
                         intro: "This bot automates server name and logo changes based on specific text channel configurations.",
                         globalWork: "🛠 How It Works",
-                        globalDesc: "The bot monitors channels for a specific trigger message in <code>log-logoto</code>. It uses the current date to identify which channel contains the setup instructions.",
+                        globalDesc: "The bot monitors channels for a specific date match <code>logoto-[DD]-[MM]</code>. It uses the current date to identify which channel contains the setup instructions.",
                         systemTitle: "📅 Channel System: logoto-[day]-[month]",
                         systemDesc: "The bot uses a specific channel structure to know which identity to apply based on the date.",
                         formatTitle: "1. Channel Name Format",
@@ -500,7 +507,6 @@ const S4D_WEBSITECREATION_EXPRESS_app = S4D_WEBSITECREATION_EXPRESS();
                         triggerDesc: "The change is fully automated. The bot will send two messages in <code>log-logoto</code>: <code>🔄 Loading...</code> followed by the change confirmation.",
                         notesTitle: "⚠️ Important Notes",
                         notesList: \`<li><strong>Permissions:</strong> The bot requires 'Manage Server' and 'Manage Channels' permissions.</li>
-                                    <li><strong>Hierarchy:</strong> Ensure the bot's role is high enough to edit server settings.</li>
                                     <li><strong>Date Format:</strong> Use the DD-MM format (no leading zeros, e.g., 5 instead of 05).</li>\`,
                         commandsTitle: "🚀 Slash Commands",
                         faqTitle: "❓ Quick FAQ",
@@ -510,6 +516,10 @@ const S4D_WEBSITECREATION_EXPRESS_app = S4D_WEBSITECREATION_EXPRESS();
     
                 function renderContent(lang) {
                     const t = translations[lang];
+    
+                    // Mise à jour du texte du bouton Accueil
+                    document.getElementById('btn-home').textContent = t.home;
+    
                     const content = \`
                         <h1>\${t.title}</h1>
                         <p>\${t.intro}</p>
@@ -559,7 +569,6 @@ const S4D_WEBSITECREATION_EXPRESS_app = S4D_WEBSITECREATION_EXPRESS();
                     renderContent(lang);
                     document.documentElement.lang = lang;
     
-                    // Toggle button styles
                     document.getElementById('btn-fr').className = lang === 'fr' ? 'btn btn-primary' : 'btn btn-secondary';
                     document.getElementById('btn-en').className = lang === 'en' ? 'btn btn-primary' : 'btn btn-secondary';
     
