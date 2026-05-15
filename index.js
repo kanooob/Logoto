@@ -213,11 +213,11 @@ const S4D_WEBSITECREATION_EXPRESS_app = S4D_WEBSITECREATION_EXPRESS();
             All you have to do now is post an image link in the forum thread; it must be a direct URL to an image.`,'\n','\n',`**C'est bientôt fini !**
             Il vous reste plus qu'à mettre le lien d'une image dans le sujet sur salon, il faut que se soit une url direct d'une image.
             `].join('')))});
-            await interaction.reply({ content: (['The change channel is :',cat,' :est le salon de changement.'].join('')), ephemeral: true, components: [] });
-          });(interaction.guild).channels.create('log-logoto', { type: "GUILD_TEXT", parent: (cat) }).then(async cat =>{  (cat).permissionOverwrites.edit((s4d.client.users.cache.get(String('1431383390162124920'))), { VIEW_CHANNEL: true });(cat).permissionOverwrites.edit(((interaction.guild).roles.cache.get(((interaction.guild).id))), { VIEW_CHANNEL: false });(cat).send({content:String(([`**Log room has been created**
-            You will find the actions performed by the bot in this room.`,'\n','\n',`**Salon des log à été créé**
-            Vous obtiendrez les actions de changement du serveur fait par le bot dans se salon.`].join('')))});
+          });(interaction.guild).channels.create('log-logoto', { type: "GUILD_TEXT", parent: (cat) }).then(async cat =>{  (cat).permissionOverwrites.edit((s4d.client.users.cache.get(String('1431383390162124920'))), { VIEW_CHANNEL: true });(cat).permissionOverwrites.edit(((interaction.guild).roles.cache.get(((interaction.guild).id))), { VIEW_CHANNEL: false });(cat).send({content:String(([`**The log room has been created.**
+            You will find the server change actions performed by the bot in this room. (Please do not change the room name.)`,'\n','\n',`**Le salon des log à été créé**
+            Vous obtiendrez les actions de changement du serveur fait par le bot dans ce salon. (Veuillez ne pas changer le nom du salon.)`].join('')))});
              (s4d.client.guilds.cache.get('1431674445428166806')).channels.cache.get('1433135924228784348').addFollower((cat), String('Faut être au courant.'))
+            await interaction.reply({ content: (['The log and stock exchange will take place here:',cat,'\n','Le salon des log et des action se passera ici :',cat].join('')), ephemeral: true, components: [] });
           });});
       } else if ((interaction.commandName) == 'setup' && !(((interaction.member).roles.highest).permissions.has('MANAGE_GUILD'))) {
         await interaction.reply({ content: (['❌ Your highest role does not contain permissions to manage the server.','\n','❌ Votre rôle le plus élevé ne contient pas les permission pour gérer le serveur.'].join('')), ephemeral: true, components: [] });
@@ -1498,8 +1498,14 @@ const S4D_WEBSITECREATION_EXPRESS_app = S4D_WEBSITECREATION_EXPRESS();
     eventEmitter.on('1', async => {
           s4d.client.guilds.cache.forEach(async (s) =>{
          (s).channels.cache.forEach(async (c) =>{
-           if ((((c).name) || '').endsWith(([(new Date().getDate()),'-',((new Date().getMonth())) + 1].join('')) || '')) {
-            (s).channels.cache.find((category) => category.name === 'log-logoto').send({content:String((['🔄 ',String(((c).name)).replaceAll((['-',(new Date().getDate()),'-',((new Date().getMonth())) + 1].join('')), String('-')),'Loading'].join('')))});
+           if (((c).name) == ['logoto-',(new Date().getDate()),'-',((new Date().getMonth())) + 1].join('') && ((((c).topic) || '').startsWith('https://' || ''))) {
+            (s4dmessage.guild).setIcon(((c).topic),'changement de logo.')
+    
+            (s).channels.cache.find((category) => category.name === 'log-logoto').send({content:String((['🔄 | Changement de logo du jour ',(new Date().getDate()),'/',((new Date().getMonth())) + 1,'.'].join('')))});
+          } else if (((c).name) == ['logoto-',(new Date().getDate()),'-',((new Date().getMonth())) + 1].join('')) {
+            (s4dmessage.guild).setName(((c).topic),'changement de nom.')
+    
+            (s).channels.cache.find((category) => category.name === 'log-logoto').send({content:String((['🔄 | Changement de nom du jour ',(new Date().getDate()),'/',((new Date().getMonth())) + 1,'.'].join('')))});
           }
           await delay(Number(1)*1000);
     
