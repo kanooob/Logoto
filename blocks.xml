@@ -3,7 +3,254 @@
     <variable id="*Mw8:jGBr_D;=DnYIH)A">jour</variable>
     <variable id="jlm:W3Oxc-yLpT4NI{=*">ms on</variable>
   </variables>
-  <block type="frost_slash_register" id="}A:$DED(O`PGQ,Nm+r_," x="-1393" y="-79">
+  <block type="s4d_login" id="076e7c%2/lzW`#B^9s#h" x="-593" y="-511">
+    <value name="TOKEN">
+      <shadow type="text" id="SU|33Kq9bT.I:;x.7K`4">
+        <field name="TEXT">Your bot token</field>
+      </shadow>
+      <block type="frost_env" id="YY{:7Wr4QQ,zF*j}NhOa">
+        <value name="VALUE">
+          <shadow type="text" id="RuzU@v4~g}Q$UU@f?%YZ">
+            <field name="TEXT">token</field>
+          </shadow>
+        </value>
+      </block>
+    </value>
+  </block>
+  <block type="s4d_on_connected" id="Lw!S*EllkhX8m{|{=ZM+" x="-3762" y="71">
+    <statement name="STATEMENTS">
+      <block type="variables_set" id="FmsjU)=tX)mI9ZgM$zs`">
+        <field name="VAR" id="*Mw8:jGBr_D;=DnYIH)A">jour</field>
+        <value name="VALUE">
+          <block type="frost_current" id="T:n7;[:Iy.A7qskANq%S">
+            <field name="DATA_TYPE">DATE</field>
+          </block>
+        </value>
+        <next>
+          <block type="controls_if" id="iehJv[*ZnoXmou[26fI|">
+            <value name="IF0">
+              <block type="logic_compare" id="=#BY3Fw;*Wa,%vA}_-=,">
+                <field name="OP">LT</field>
+                <value name="A">
+                  <block type="frost_current" id="@@i_D`;d,=`o3V{HGt:E">
+                    <field name="DATA_TYPE">HOUR</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="math_number" id="10ZQKqWg/7N%E*j8qv;t">
+                    <field name="NUM">4</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO0">
+              <block type="variables_set" id="L-m:Chc(:l$}(A]db8B6">
+                <field name="VAR" id="*Mw8:jGBr_D;=DnYIH)A">jour</field>
+                <value name="VALUE">
+                  <block type="math_arithmetic" id="#eHAuqZt-KYNx1!HS5Mv">
+                    <field name="OP">MINUS</field>
+                    <value name="A">
+                      <shadow type="math_number" id="9~%-FoaN_6@D]skaW*=C">
+                        <field name="NUM">1</field>
+                      </shadow>
+                      <block type="frost_current" id="bVG@1XSIu#d}vQiLF))+">
+                        <field name="DATA_TYPE">DATE</field>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <shadow type="math_number" id="02CC.n?w*U!u3#4;)j~D">
+                        <field name="NUM">1</field>
+                      </shadow>
+                    </value>
+                  </block>
+                </value>
+              </block>
+            </statement>
+            <next>
+              <block type="s4d_send_channel" id="c~LTh30$mTPWpt8]y0%F">
+                <value name="CONTENT">
+                  <block type="jg_text_remake_paragraph_quotes" id="Vn?Rfx0hYE(6K5*xt#nH">
+                    <field name="TEXT">Démarrage du bot...</field>
+                  </block>
+                </value>
+                <value name="CHANNEL">
+                  <block type="s4d_get_channel" id="+jm@xZHl(N:k=E|XV_~+">
+                    <field name="SEARCH_TYPE">ID</field>
+                    <value name="VALUE">
+                      <block type="jg_text_remake_paragraph_quotes" id="xHFq9q!EEc]56+70t$i_">
+                        <field name="TEXT">1413899996691955755</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <next>
+                  <block type="s4d_forever" id="YCihHCc-_)a/#ZC.^y7s">
+                    <statement name="STATEMENT">
+                      <block type="s4d_set_bot_game" id="L6f;z_zrr8/vgpm8(Plv">
+                        <field name="OIFD">online</field>
+                        <field name="TYPE">WATCHING</field>
+                        <value name="GAME">
+                          <block type="text_join" id="_$Hr;!)`^;A`c+w.V6Zm">
+                            <mutation items="4"></mutation>
+                            <value name="ADD0">
+                              <block type="s4d_bot_amount" id=")bFRS_E(bH_`DJ+Mh#XT">
+                                <field name="T">users</field>
+                              </block>
+                            </value>
+                            <value name="ADD1">
+                              <block type="jg_text_remake_paragraph_quotes" id="70qfql42hCr*7GFuD}2~">
+                                <field name="TEXT"> membres, </field>
+                              </block>
+                            </value>
+                            <value name="ADD2">
+                              <block type="s4d_bot_amount" id=";`p6~n^wEE35JG!*yBj@">
+                                <field name="T">servers</field>
+                              </block>
+                            </value>
+                            <value name="ADD3">
+                              <block type="jg_text_remake_paragraph_quotes" id="C[Tc:yko}#CNM8unPFM3">
+                                <field name="TEXT"> serveurs.</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="s4d_wait_seconds" id="zUSfz3pT7),R$_zz*rsr">
+                            <value name="TIME">
+                              <shadow type="math_number" id="bUA6s2tvL0MiCNf|Se^+">
+                                <field name="NUM">180</field>
+                              </shadow>
+                            </value>
+                            <next>
+                              <block type="controls_if" id="H-u4;qkZ+SER,QEkA0[O">
+                                <value name="IF0">
+                                  <block type="logic_compare" id="SIUHSXNre?3=GegcTp~J">
+                                    <field name="OP">NEQ</field>
+                                    <value name="A">
+                                      <block type="variables_get" id="RD%g*A$w;/,m.^E^]Pl(">
+                                        <field name="VAR" id="*Mw8:jGBr_D;=DnYIH)A">jour</field>
+                                      </block>
+                                    </value>
+                                    <value name="B">
+                                      <block type="frost_current" id="aabeoDLw9.V$]ky!K1@s">
+                                        <field name="DATA_TYPE">DATE</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                                <statement name="DO0">
+                                  <block type="variables_set" id="Q,##pK.*~0,Ul{]RE/7i">
+                                    <field name="VAR" id="*Mw8:jGBr_D;=DnYIH)A">jour</field>
+                                    <value name="VALUE">
+                                      <block type="frost_current" id="Ez}xq%KNu@s+rZ=z^;(2">
+                                        <field name="DATA_TYPE">DATE</field>
+                                      </block>
+                                    </value>
+                                    <next>
+                                      <block type="emit_event" id="]HyB.VffZO6]:y[v]AiH">
+                                        <value name="NAME">
+                                          <shadow type="text" id="YWG}YE6w^_J!P*ckJGk{">
+                                            <field name="TEXT">1</field>
+                                          </shadow>
+                                        </value>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </statement>
+                                <next>
+                                  <block type="variables_set" id="frUI7qR1nKw)pFV6Z:q=">
+                                    <field name="VAR" id="jlm:W3Oxc-yLpT4NI{=*">ms on</field>
+                                    <value name="VALUE">
+                                      <block type="s4d_bot_amount" id="qEh9]rkd{6,?9ijih]/3">
+                                        <field name="T">uptime</field>
+                                      </block>
+                                    </value>
+                                    <next>
+                                      <block type="s4d_send_channel" id="J.du)4iOq=*Bn}.o2nh6">
+                                        <value name="CONTENT">
+                                          <block type="text_join" id="8sa|NBxm=d1GD7T;q^fy">
+                                            <mutation items="6"></mutation>
+                                            <value name="ADD0">
+                                              <block type="jg_text_remake_paragraph_quotes" id="$zf=0OE%Fyx#Ls=|?}XE">
+                                                <field name="TEXT">Ping :**</field>
+                                              </block>
+                                            </value>
+                                            <value name="ADD1">
+                                              <block type="s4d_bot_amount" id="pAs@s+rW0KrG:!jUEsYB">
+                                                <field name="T">pings</field>
+                                              </block>
+                                            </value>
+                                            <value name="ADD2">
+                                              <block type="s4d_newline" id="%vM8O!|Towy%FW5?[:{a"></block>
+                                            </value>
+                                            <value name="ADD3">
+                                              <block type="jg_text_remake_paragraph_quotes" id="WJkpfWS[|qj#+3ZeVk=j">
+                                                <field name="TEXT">**Temps de fonctionnement **</field>
+                                              </block>
+                                            </value>
+                                            <value name="ADD4">
+                                              <block type="math_round" id="Rco)uYy7aw@cyzA72g8d">
+                                                <field name="OP">ROUND</field>
+                                                <value name="NUM">
+                                                  <shadow type="math_number" id="v6/B/,hz3X_4b8.hGSPq">
+                                                    <field name="NUM">3.1</field>
+                                                  </shadow>
+                                                  <block type="math_arithmetic" id="@gF4?W^Im7++-x/vA]`#">
+                                                    <field name="OP">DIVIDE</field>
+                                                    <value name="A">
+                                                      <shadow type="math_number" id="0g_m=/GHLS.yCR*HNYf]">
+                                                        <field name="NUM">1</field>
+                                                      </shadow>
+                                                      <block type="variables_get" id="gM4*/+Wb`aNCp=l4{7Dv">
+                                                        <field name="VAR" id="jlm:W3Oxc-yLpT4NI{=*">ms on</field>
+                                                      </block>
+                                                    </value>
+                                                    <value name="B">
+                                                      <shadow type="math_number" id="]J6-IPEiv/0:8bHRgbjO">
+                                                        <field name="NUM">3600000</field>
+                                                      </shadow>
+                                                    </value>
+                                                  </block>
+                                                </value>
+                                              </block>
+                                            </value>
+                                            <value name="ADD5">
+                                              <block type="jg_text_remake_paragraph_quotes" id="dJ.?o1K2|SI%_v5{9F*O">
+                                                <field name="TEXT">** heures.</field>
+                                              </block>
+                                            </value>
+                                          </block>
+                                        </value>
+                                        <value name="CHANNEL">
+                                          <block type="s4d_get_channel" id=";,lYq!vbN3OXKOsc?OL/">
+                                            <field name="SEARCH_TYPE">ID</field>
+                                            <value name="VALUE">
+                                              <block type="jg_text_remake_paragraph_quotes" id="e=/w*4^Q2|Axv@78d.sB">
+                                                <field name="TEXT">1387514903778295940</field>
+                                              </block>
+                                            </value>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </statement>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="frost_slash_register" id="}A:$DED(O`PGQ,Nm+r_," x="-1393" y="-33">
     <statement name="OPTIONS">
       <block type="frost_slash_command" id="RR9%P)C_FP-^uKm-Q]2h">
         <value name="NAME">
@@ -225,21 +472,7 @@
       </block>
     </statement>
   </block>
-  <block type="s4d_login" id="076e7c%2/lzW`#B^9s#h" x="-386" y="-101">
-    <value name="TOKEN">
-      <shadow type="text" id="SU|33Kq9bT.I:;x.7K`4">
-        <field name="TEXT">Your bot token</field>
-      </shadow>
-      <block type="frost_env" id="YY{:7Wr4QQ,zF*j}NhOa">
-        <value name="VALUE">
-          <shadow type="text" id="RuzU@v4~g}Q$UU@f?%YZ">
-            <field name="TEXT">token</field>
-          </shadow>
-        </value>
-      </block>
-    </value>
-  </block>
-  <block type="on_slash" id="=Rg,M;I|qzbUv~9HZh7Z" x="-60" y="56">
+  <block type="on_slash" id="=Rg,M;I|qzbUv~9HZh7Z" x="-60" y="-6">
     <statement name="STATEMENTS">
       <block type="controls_if" id="yz{B,WKNp/B4)U0!i/Oy">
         <mutation elseif="1"></mutation>
@@ -333,7 +566,7 @@
                     <mutation items="4"></mutation>
                     <value name="ADD0">
                       <block type="jg_text_remake_paragraph_quotes" id=":rX+zDzyMd_0q~AJh2P(">
-                        <field name="TEXT">logoto-</field>
+                        <field name="TEXT">l-</field>
                       </block>
                     </value>
                     <value name="ADD1">
@@ -1047,7 +1280,7 @@
                                         <mutation items="4"></mutation>
                                         <value name="ADD0">
                                           <block type="jg_text_remake_paragraph_quotes" id="=K7C?xh]M|D632r#SAEi">
-                                            <field name="TEXT">logoto-</field>
+                                            <field name="TEXT">l-</field>
                                           </block>
                                         </value>
                                         <value name="ADD1">
@@ -1322,7 +1555,7 @@
                                             <mutation items="4"></mutation>
                                             <value name="ADD0">
                                               <block type="jg_text_remake_paragraph_quotes" id="ceaIEcBYiM{)^;M-bzhu">
-                                                <field name="TEXT">logoto-</field>
+                                                <field name="TEXT">n-</field>
                                               </block>
                                             </value>
                                             <value name="ADD1">
@@ -1719,21 +1952,8 @@
                                             <statement name="DO0">
                                               <block type="slash_reply" id="]p?2aM?(|;mhtC)fDirF">
                                                 <value name="CONTENT">
-                                                  <block type="text_join" id="DZhf3sY3x~^AB{/qH_;`">
-                                                    <mutation items="3"></mutation>
-                                                    <value name="ADD0">
-                                                      <block type="jg_text_remake_paragraph_quotes" id="DWH(X6L)$!HyF63Tg{$@">
-                                                        <field name="TEXT">ok </field>
-                                                      </block>
-                                                    </value>
-                                                    <value name="ADD1">
-                                                      <block type="s4d_newline" id="qy(g9+$vXY1ti!IVIn:8"></block>
-                                                    </value>
-                                                    <value name="ADD2">
-                                                      <block type="jg_text_remake_paragraph_quotes" id=";dFl,P6G#+|N!l.FU-lE">
-                                                        <field name="TEXT">❌ Discord URLs are not recommended for logo changes.</field>
-                                                      </block>
-                                                    </value>
+                                                  <block type="jg_text_remake_paragraph_quotes" id="DWH(X6L)$!HyF63Tg{$@">
+                                                    <field name="TEXT">C'est bon retournement de situation !</field>
                                                   </block>
                                                 </value>
                                                 <next>
@@ -1825,240 +2045,7 @@
       </block>
     </statement>
   </block>
-  <block type="s4d_on_connected" id="Lw!S*EllkhX8m{|{=ZM+" x="-3191" y="237">
-    <statement name="STATEMENTS">
-      <block type="variables_set" id="FmsjU)=tX)mI9ZgM$zs`">
-        <field name="VAR" id="*Mw8:jGBr_D;=DnYIH)A">jour</field>
-        <value name="VALUE">
-          <block type="frost_current" id="T:n7;[:Iy.A7qskANq%S">
-            <field name="DATA_TYPE">DATE</field>
-          </block>
-        </value>
-        <next>
-          <block type="controls_if" id="iehJv[*ZnoXmou[26fI|">
-            <value name="IF0">
-              <block type="logic_compare" id="=#BY3Fw;*Wa,%vA}_-=,">
-                <field name="OP">LT</field>
-                <value name="A">
-                  <block type="frost_current" id="@@i_D`;d,=`o3V{HGt:E">
-                    <field name="DATA_TYPE">HOUR</field>
-                  </block>
-                </value>
-                <value name="B">
-                  <block type="math_number" id="10ZQKqWg/7N%E*j8qv;t">
-                    <field name="NUM">4</field>
-                  </block>
-                </value>
-              </block>
-            </value>
-            <statement name="DO0">
-              <block type="variables_set" id="L-m:Chc(:l$}(A]db8B6">
-                <field name="VAR" id="*Mw8:jGBr_D;=DnYIH)A">jour</field>
-                <value name="VALUE">
-                  <block type="math_arithmetic" id="#eHAuqZt-KYNx1!HS5Mv">
-                    <field name="OP">MINUS</field>
-                    <value name="A">
-                      <shadow type="math_number" id="9~%-FoaN_6@D]skaW*=C">
-                        <field name="NUM">1</field>
-                      </shadow>
-                      <block type="frost_current" id="bVG@1XSIu#d}vQiLF))+">
-                        <field name="DATA_TYPE">DATE</field>
-                      </block>
-                    </value>
-                    <value name="B">
-                      <shadow type="math_number" id="02CC.n?w*U!u3#4;)j~D">
-                        <field name="NUM">1</field>
-                      </shadow>
-                    </value>
-                  </block>
-                </value>
-              </block>
-            </statement>
-            <next>
-              <block type="s4d_send_channel" id="c~LTh30$mTPWpt8]y0%F">
-                <value name="CONTENT">
-                  <block type="jg_text_remake_paragraph_quotes" id="Vn?Rfx0hYE(6K5*xt#nH">
-                    <field name="TEXT">Démarrage du bot...</field>
-                  </block>
-                </value>
-                <value name="CHANNEL">
-                  <block type="s4d_get_channel" id="+jm@xZHl(N:k=E|XV_~+">
-                    <field name="SEARCH_TYPE">ID</field>
-                    <value name="VALUE">
-                      <block type="jg_text_remake_paragraph_quotes" id="xHFq9q!EEc]56+70t$i_">
-                        <field name="TEXT">1413899996691955755</field>
-                      </block>
-                    </value>
-                  </block>
-                </value>
-                <next>
-                  <block type="s4d_forever" id="YCihHCc-_)a/#ZC.^y7s">
-                    <statement name="STATEMENT">
-                      <block type="s4d_set_bot_game" id="L6f;z_zrr8/vgpm8(Plv">
-                        <field name="OIFD">online</field>
-                        <field name="TYPE">WATCHING</field>
-                        <value name="GAME">
-                          <block type="text_join" id="_$Hr;!)`^;A`c+w.V6Zm">
-                            <mutation items="4"></mutation>
-                            <value name="ADD0">
-                              <block type="s4d_bot_amount" id=")bFRS_E(bH_`DJ+Mh#XT">
-                                <field name="T">users</field>
-                              </block>
-                            </value>
-                            <value name="ADD1">
-                              <block type="jg_text_remake_paragraph_quotes" id="70qfql42hCr*7GFuD}2~">
-                                <field name="TEXT"> membres, </field>
-                              </block>
-                            </value>
-                            <value name="ADD2">
-                              <block type="s4d_bot_amount" id=";`p6~n^wEE35JG!*yBj@">
-                                <field name="T">servers</field>
-                              </block>
-                            </value>
-                            <value name="ADD3">
-                              <block type="jg_text_remake_paragraph_quotes" id="C[Tc:yko}#CNM8unPFM3">
-                                <field name="TEXT"> serveurs.</field>
-                              </block>
-                            </value>
-                          </block>
-                        </value>
-                        <next>
-                          <block type="s4d_wait_seconds" id="zUSfz3pT7),R$_zz*rsr">
-                            <value name="TIME">
-                              <shadow type="math_number" id="bUA6s2tvL0MiCNf|Se^+">
-                                <field name="NUM">180</field>
-                              </shadow>
-                            </value>
-                            <next>
-                              <block type="controls_if" id="H-u4;qkZ+SER,QEkA0[O">
-                                <value name="IF0">
-                                  <block type="logic_compare" id="SIUHSXNre?3=GegcTp~J">
-                                    <field name="OP">NEQ</field>
-                                    <value name="A">
-                                      <block type="variables_get" id="RD%g*A$w;/,m.^E^]Pl(">
-                                        <field name="VAR" id="*Mw8:jGBr_D;=DnYIH)A">jour</field>
-                                      </block>
-                                    </value>
-                                    <value name="B">
-                                      <block type="frost_current" id="aabeoDLw9.V$]ky!K1@s">
-                                        <field name="DATA_TYPE">DATE</field>
-                                      </block>
-                                    </value>
-                                  </block>
-                                </value>
-                                <statement name="DO0">
-                                  <block type="variables_set" id="Q,##pK.*~0,Ul{]RE/7i">
-                                    <field name="VAR" id="*Mw8:jGBr_D;=DnYIH)A">jour</field>
-                                    <value name="VALUE">
-                                      <block type="frost_current" id="Ez}xq%KNu@s+rZ=z^;(2">
-                                        <field name="DATA_TYPE">DATE</field>
-                                      </block>
-                                    </value>
-                                    <next>
-                                      <block type="emit_event" id="]HyB.VffZO6]:y[v]AiH">
-                                        <value name="NAME">
-                                          <shadow type="text" id="YWG}YE6w^_J!P*ckJGk{">
-                                            <field name="TEXT">1</field>
-                                          </shadow>
-                                        </value>
-                                      </block>
-                                    </next>
-                                  </block>
-                                </statement>
-                                <next>
-                                  <block type="variables_set" id="frUI7qR1nKw)pFV6Z:q=">
-                                    <field name="VAR" id="jlm:W3Oxc-yLpT4NI{=*">ms on</field>
-                                    <value name="VALUE">
-                                      <block type="s4d_bot_amount" id="qEh9]rkd{6,?9ijih]/3">
-                                        <field name="T">uptime</field>
-                                      </block>
-                                    </value>
-                                    <next>
-                                      <block type="s4d_send_channel" id="J.du)4iOq=*Bn}.o2nh6">
-                                        <value name="CONTENT">
-                                          <block type="text_join" id="8sa|NBxm=d1GD7T;q^fy">
-                                            <mutation items="6"></mutation>
-                                            <value name="ADD0">
-                                              <block type="jg_text_remake_paragraph_quotes" id="$zf=0OE%Fyx#Ls=|?}XE">
-                                                <field name="TEXT">Ping :**</field>
-                                              </block>
-                                            </value>
-                                            <value name="ADD1">
-                                              <block type="s4d_bot_amount" id="pAs@s+rW0KrG:!jUEsYB">
-                                                <field name="T">pings</field>
-                                              </block>
-                                            </value>
-                                            <value name="ADD2">
-                                              <block type="s4d_newline" id="%vM8O!|Towy%FW5?[:{a"></block>
-                                            </value>
-                                            <value name="ADD3">
-                                              <block type="jg_text_remake_paragraph_quotes" id="WJkpfWS[|qj#+3ZeVk=j">
-                                                <field name="TEXT">**Temps de fonctionnement **</field>
-                                              </block>
-                                            </value>
-                                            <value name="ADD4">
-                                              <block type="math_round" id="Rco)uYy7aw@cyzA72g8d">
-                                                <field name="OP">ROUND</field>
-                                                <value name="NUM">
-                                                  <shadow type="math_number" id="v6/B/,hz3X_4b8.hGSPq">
-                                                    <field name="NUM">3.1</field>
-                                                  </shadow>
-                                                  <block type="math_arithmetic" id="@gF4?W^Im7++-x/vA]`#">
-                                                    <field name="OP">DIVIDE</field>
-                                                    <value name="A">
-                                                      <shadow type="math_number" id="0g_m=/GHLS.yCR*HNYf]">
-                                                        <field name="NUM">1</field>
-                                                      </shadow>
-                                                      <block type="variables_get" id="gM4*/+Wb`aNCp=l4{7Dv">
-                                                        <field name="VAR" id="jlm:W3Oxc-yLpT4NI{=*">ms on</field>
-                                                      </block>
-                                                    </value>
-                                                    <value name="B">
-                                                      <shadow type="math_number" id="]J6-IPEiv/0:8bHRgbjO">
-                                                        <field name="NUM">3600000</field>
-                                                      </shadow>
-                                                    </value>
-                                                  </block>
-                                                </value>
-                                              </block>
-                                            </value>
-                                            <value name="ADD5">
-                                              <block type="jg_text_remake_paragraph_quotes" id="dJ.?o1K2|SI%_v5{9F*O">
-                                                <field name="TEXT">** heures.</field>
-                                              </block>
-                                            </value>
-                                          </block>
-                                        </value>
-                                        <value name="CHANNEL">
-                                          <block type="s4d_get_channel" id=";,lYq!vbN3OXKOsc?OL/">
-                                            <field name="SEARCH_TYPE">ID</field>
-                                            <value name="VALUE">
-                                              <block type="jg_text_remake_paragraph_quotes" id="e=/w*4^Q2|Axv@78d.sB">
-                                                <field name="TEXT">1387514903778295940</field>
-                                              </block>
-                                            </value>
-                                          </block>
-                                        </value>
-                                      </block>
-                                    </next>
-                                  </block>
-                                </next>
-                              </block>
-                            </next>
-                          </block>
-                        </next>
-                      </block>
-                    </statement>
-                  </block>
-                </next>
-              </block>
-            </next>
-          </block>
-        </next>
-      </block>
-    </statement>
-  </block>
-  <block type="jg_express_start_website_then_using_port" id="MVF(^:H=EMD}lJ%6gQt3" x="3011" y="120">
+  <block type="jg_express_start_website_then_using_port" id="MVF(^:H=EMD}lJ%6gQt3" x="3163" y="53">
     <statement name="STATEMENTS">
       <block type="jg_express_website_on_page_on_request_type_do" id="A:+VwWD+d7s*+2!2FKbt">
         <field name="TYPE">all</field>
@@ -2077,7 +2064,7 @@
             </value>
             <value name="fileContent">
               <block type="jg_text_remake_paragraph_quotes" id="fo!^A|`oU]E)=G][,J_1">
-                <field name="TEXT">&lt;!DOCTYPE html&gt;&amp;#10;&lt;html lang="fr"&gt;&amp;#10;&lt;head&gt;&amp;#10;    &lt;meta charset="UTF-8"&gt;&amp;#10;    &lt;title&gt;Aide Logoto | Automatisation Logo &amp; Nom Discord&lt;/title&gt;&amp;#10;    &lt;meta name="description" content="Découvrez comment configurer Logoto pour automatiser l'identité visuelle de votre serveur Discord via les salons et le sujet des canaux."&gt;&amp;#10;    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;&amp;#10;    &amp;#10;    &lt;style&gt;&amp;#10;        /* BASE &amp; DISCORD THEME */&amp;#10;        body {&amp;#10;            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;&amp;#10;            margin: 0;&amp;#10;            padding: 0;&amp;#10;            background-color: #36393f; &amp;#10;            color: #dcddde; &amp;#10;            line-height: 1.6;&amp;#10;            display: flex;&amp;#10;            flex-direction: column;&amp;#10;            min-height: 100vh;&amp;#10;        }&amp;#10;        &amp;#10;        .content-wrapper {&amp;#10;            flex-grow: 1;&amp;#10;            padding: 40px 20px;&amp;#10;        }&amp;#10;&amp;#10;        .container {&amp;#10;            max-width: 950px;&amp;#10;            margin: auto;&amp;#10;            background: #2f3136;&amp;#10;            padding: 40px;&amp;#10;            border-radius: 8px;&amp;#10;            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);&amp;#10;        }&amp;#10;&amp;#10;        h1 {&amp;#10;            color: #ffffff;&amp;#10;            border-bottom: 2px solid #5865f2;&amp;#10;            padding-bottom: 15px;&amp;#10;            font-size: 2rem;&amp;#10;            text-align: center;&amp;#10;        }&amp;#10;&amp;#10;        h2 {&amp;#10;            color: #5865f2;&amp;#10;            margin-top: 35px;&amp;#10;            font-size: 1.5rem;&amp;#10;            display: flex;&amp;#10;            align-items: center;&amp;#10;            gap: 10px;&amp;#10;        }&amp;#10;&amp;#10;        h3 {&amp;#10;            color: #ffffff;&amp;#10;            font-size: 1.2rem;&amp;#10;            margin-top: 20px;&amp;#10;        }&amp;#10;&amp;#10;        p, li { font-size: 1.05rem; color: #b9bbbe; }&amp;#10;&amp;#10;        code {&amp;#10;            background-color: #202225;&amp;#10;            padding: 3px 8px;&amp;#10;            border-radius: 4px;&amp;#10;            font-family: 'Consolas', monospace;&amp;#10;            color: #f2f2f2;&amp;#10;            border: 1px solid #4f545c;&amp;#10;        }&amp;#10;&amp;#10;        .note {&amp;#10;            background-color: rgba(241, 196, 15, 0.1);&amp;#10;            border-left: 5px solid #f1c40f;&amp;#10;            padding: 15px;&amp;#10;            margin: 25px 0;&amp;#10;            border-radius: 4px;&amp;#10;        }&amp;#10;&amp;#10;        .note strong { color: #f1c40f; }&amp;#10;&amp;#10;        .command-list {&amp;#10;            list-style: none;&amp;#10;            padding: 0;&amp;#10;        }&amp;#10;&amp;#10;        .command-list li {&amp;#10;            background: #36393f;&amp;#10;            margin-bottom: 8px;&amp;#10;            padding: 12px 15px;&amp;#10;            border-radius: 6px;&amp;#10;            transition: transform 0.2s, background 0.2s;&amp;#10;        }&amp;#10;&amp;#10;        .command-list li:hover {&amp;#10;            transform: translateX(5px);&amp;#10;            background: #40444b;&amp;#10;        }&amp;#10;&amp;#10;        /* BUTTONS */&amp;#10;        .lang-switch {&amp;#10;            text-align: center;&amp;#10;            margin-bottom: 30px;&amp;#10;            display: flex;&amp;#10;            justify-content: center;&amp;#10;            gap: 10px;&amp;#10;            flex-wrap: wrap;&amp;#10;        }&amp;#10;&amp;#10;        .btn {&amp;#10;            padding: 10px 20px;&amp;#10;            border-radius: 5px;&amp;#10;            text-decoration: none;&amp;#10;            font-weight: bold;&amp;#10;            cursor: pointer;&amp;#10;            border: none;&amp;#10;            transition: 0.3s;&amp;#10;            display: inline-block;&amp;#10;        }&amp;#10;&amp;#10;        .btn-primary { background-color: #5865f2; color: white; }&amp;#10;        .btn-primary:hover { background-color: #4752c4; }&amp;#10;        .btn-secondary { background-color: #4f545c; color: white; }&amp;#10;        .btn-home { background-color: #eb459e; color: white; } /* Couleur rose pour se distinguer */&amp;#10;        .btn-home:hover { background-color: #da378d; }&amp;#10;&amp;#10;        footer {&amp;#10;            background-color: #23272a;&amp;#10;            padding: 25px;&amp;#10;            text-align: center;&amp;#10;            font-size: 0.9rem;&amp;#10;        }&amp;#10;&amp;#10;        footer a { color: #5865f2; text-decoration: none; margin: 0 10px; }&amp;#10;        hr { border: 0; border-top: 1px solid #4f545c; margin: 30px 0; }&amp;#10;    &lt;/style&gt;&amp;#10;&lt;/head&gt;&amp;#10;&lt;body&gt;&amp;#10;&amp;#10;    &lt;div class="content-wrapper"&gt;&amp;#10;        &lt;div class="container"&gt;&amp;#10;            &lt;header&gt;&amp;#10;                &lt;div class="lang-switch"&gt;&amp;#10;                    &lt;a href="/" id="btn-home" class="btn btn-home"&gt;Accueil&lt;/a&gt;&amp;#10;                    &lt;button id="btn-fr" onclick="changeLanguage('fr')" class="btn btn-primary"&gt;Français&lt;/button&gt;&amp;#10;                    &lt;button id="btn-en" onclick="changeLanguage('en')" class="btn btn-secondary"&gt;English&lt;/button&gt;&amp;#10;                &lt;/div&gt;&amp;#10;            &lt;/header&gt;&amp;#10;&amp;#10;            &lt;main id="content-area"&gt;&amp;#10;                &lt;!-- Injecté par le script --&gt;&amp;#10;            &lt;/main&gt;&amp;#10;        &lt;/div&gt;&amp;#10;    &lt;/div&gt;&amp;#10;&amp;#10;    &lt;footer&gt;&amp;#10;        &lt;p&gt;© Logoto Bot - Projet personnel hébergé sur Render&lt;/p&gt;&amp;#10;        &lt;a href="/tos"&gt;ToS&lt;/a&gt; | &lt;a href="/privacy"&gt;Confidentialité&lt;/a&gt; | &lt;a href="https://github.com/kanooob/Logoto"&gt;GitHub&lt;/a&gt;&amp;#10;    &lt;/footer&gt;&amp;#10;&amp;#10;    &lt;script&gt;&amp;#10;        const translations = {&amp;#10;            fr: {&amp;#10;                home: "Accueil",&amp;#10;                title: "🤖 Documentation du Bot Discord Logoto",&amp;#10;                intro: "Ce bot permet d'automatiser le changement de nom et de logo d'un serveur Discord en se basant sur la configuration de salons textuels spécifiques.",&amp;#10;                globalWork: "🛠 Fonctionnement Global",&amp;#10;                globalDesc: "Le bot surveille les salons pour voir s'il y en a qui correspondent au jour actuel &lt;code&gt;logoto-[JJ]-[MM]&lt;/code&gt;. Il utilise la date actuelle pour identifier quel salon contient les instructions de configuration.",&amp;#10;                systemTitle: "📅 Système de Salons logoto-[jour]-[mois]",&amp;#10;                systemDesc: "Le bot s'appuie sur une structure de salons pour savoir quoi appliquer selon la date.",&amp;#10;                formatTitle: "1. Format du nom du salon",&amp;#10;                formatDesc: "Le salon doit être nommé exactement : &lt;code&gt;logoto-[jour]-[mois]&lt;/code&gt;. &lt;br&gt;Exemple pour le 15 Mai : &lt;code&gt;logoto-15-5&lt;/code&gt;",&amp;#10;                configTitle: "2. Configuration du Salon (Topic)",&amp;#10;                configDesc: "C'est dans la &lt;strong&gt;Description (Sujet)&lt;/strong&gt; du salon que vous définissez l'action :",&amp;#10;                configList: `&lt;li&gt;&lt;strong&gt;Lien (https://...) :&lt;/strong&gt; Le bot change le &lt;strong&gt;Logo&lt;/strong&gt; du serveur.&lt;/li&gt;&amp;#10;                             &lt;li&gt;&lt;strong&gt;Texte simple :&lt;/strong&gt; Le bot change le &lt;strong&gt;Nom&lt;/strong&gt; du serveur.&lt;/li&gt;&amp;#10;                             &lt;li&gt;&lt;strong&gt;Vide :&lt;/strong&gt; Aucune action.&lt;/li&gt;`,&amp;#10;                triggerTitle: "🔄 Le déclencheur",&amp;#10;                triggerDesc: "Le changement est automatique. Le bot enverra deux messages dans &lt;code&gt;log-logoto&lt;/code&gt; : &lt;code&gt;🔄 Loading...&lt;/code&gt; puis la confirmation du changement.",&amp;#10;                notesTitle: "⚠️ Notes Importantes",&amp;#10;                notesList: `&lt;li&gt;&lt;strong&gt;Permissions :&lt;/strong&gt; Le bot doit avoir les permissions 'Gérer le serveur' et 'Gérer les salons'.&lt;/li&gt;&amp;#10;                            &lt;li&gt;&lt;strong&gt;Format :&lt;/strong&gt; Utilisez bien le format JJ-MM (sans zéro inutile, ex: 5 et non 05).&lt;/li&gt;`,&amp;#10;                commandsTitle: "🚀 Commandes Slash",&amp;#10;                faqTitle: "❓ FAQ Rapide",&amp;#10;                faqContent: "&lt;strong&gt;Le bot ne change rien ?&lt;/strong&gt; Vérifiez que le salon &lt;code&gt;log-logoto&lt;/code&gt; existe et que le bot peut y écrire. C'est ce salon qui 'réveille' le bot chaque jour."&amp;#10;            },&amp;#10;            en: {&amp;#10;                home: "Home",&amp;#10;                title: "🤖 Logoto Discord Bot Documentation",&amp;#10;                intro: "This bot automates server name and logo changes based on specific text channel configurations.",&amp;#10;                globalWork: "🛠 How It Works",&amp;#10;                globalDesc: "The bot monitors channels for a specific date match &lt;code&gt;logoto-[DD]-[MM]&lt;/code&gt;. It uses the current date to identify which channel contains the setup instructions.",&amp;#10;                systemTitle: "📅 Channel System: logoto-[day]-[month]",&amp;#10;                systemDesc: "The bot uses a specific channel structure to know which identity to apply based on the date.",&amp;#10;                formatTitle: "1. Channel Name Format",&amp;#10;                formatDesc: "The channel must be named exactly: &lt;code&gt;logoto-[day]-[month]&lt;/code&gt;. &lt;br&gt;Example for May 15th: &lt;code&gt;logoto-15-5&lt;/code&gt;",&amp;#10;                configTitle: "2. Channel Configuration (Topic)",&amp;#10;                configDesc: "The &lt;strong&gt;Channel Topic (Description)&lt;/strong&gt; is where you define the action:",&amp;#10;                configList: `&lt;li&gt;&lt;strong&gt;URL (https://...) :&lt;/strong&gt; The bot will update the server &lt;strong&gt;Logo&lt;/strong&gt;.&lt;/li&gt;&amp;#10;                             &lt;li&gt;&lt;strong&gt;Plain text :&lt;/strong&gt; The bot will update the server &lt;strong&gt;Name&lt;/strong&gt;.&lt;/li&gt;&amp;#10;                             &lt;li&gt;&lt;strong&gt;Empty :&lt;/strong&gt; No action taken.&lt;/li&gt;`,&amp;#10;                triggerTitle: "🔄 The Trigger",&amp;#10;                triggerDesc: "The change is fully automated. The bot will send two messages in &lt;code&gt;log-logoto&lt;/code&gt;: &lt;code&gt;🔄 Loading...&lt;/code&gt; followed by the change confirmation.",&amp;#10;                notesTitle: "⚠️ Important Notes",&amp;#10;                notesList: `&lt;li&gt;&lt;strong&gt;Permissions:&lt;/strong&gt; The bot requires 'Manage Server' and 'Manage Channels' permissions.&lt;/li&gt;&amp;#10;                            &lt;li&gt;&lt;strong&gt;Date Format:&lt;/strong&gt; Use the DD-MM format (no leading zeros, e.g., 5 instead of 05).&lt;/li&gt;`,&amp;#10;                commandsTitle: "🚀 Slash Commands",&amp;#10;                faqTitle: "❓ Quick FAQ",&amp;#10;                faqContent: "&lt;strong&gt;Bot isn't changing anything?&lt;/strong&gt; Make sure the &lt;code&gt;log-logoto&lt;/code&gt; channel exists and the bot has permission to post there. This channel 'wakes up' the bot daily."&amp;#10;            }&amp;#10;        };&amp;#10;&amp;#10;        function renderContent(lang) {&amp;#10;            const t = translations[lang];&amp;#10;            &amp;#10;            // Mise à jour du texte du bouton Accueil&amp;#10;            document.getElementById('btn-home').textContent = t.home;&amp;#10;&amp;#10;            const content = `&amp;#10;                &lt;h1&gt;${t.title}&lt;/h1&gt;&amp;#10;                &lt;p&gt;${t.intro}&lt;/p&gt;&amp;#10;&amp;#10;                &lt;h2&gt;${t.globalWork}&lt;/h2&gt;&amp;#10;                &lt;p&gt;${t.globalDesc}&lt;/p&gt;&amp;#10;&amp;#10;                &lt;hr&gt;&amp;#10;&amp;#10;                &lt;h2&gt;${t.systemTitle}&lt;/h2&gt;&amp;#10;                &lt;p&gt;${t.systemDesc}&lt;/p&gt;&amp;#10;                &amp;#10;                &lt;h3&gt;${t.formatTitle}&lt;/h3&gt;&amp;#10;                &lt;p&gt;${t.formatDesc}&lt;/p&gt;&amp;#10;&amp;#10;                &lt;h3&gt;${t.configTitle}&lt;/h3&gt;&amp;#10;                &lt;p&gt;${t.configDesc}&lt;/p&gt;&amp;#10;                &lt;ul&gt;${t.configList}&lt;/ul&gt;&amp;#10;&amp;#10;                &lt;hr&gt;&amp;#10;&amp;#10;                &lt;h2&gt;${t.triggerTitle}&lt;/h2&gt;&amp;#10;                &lt;p&gt;${t.triggerDesc}&lt;/p&gt;&amp;#10;&amp;#10;                &lt;div class="note"&gt;&amp;#10;                    &lt;h2&gt;${t.notesTitle}&lt;/h2&gt;&amp;#10;                    &lt;ul&gt;${t.notesList}&lt;/ul&gt;&amp;#10;                &lt;/div&gt;&amp;#10;&amp;#10;                &lt;h2&gt;${t.commandsTitle}&lt;/h2&gt;&amp;#10;                &lt;ul class="command-list"&gt;&amp;#10;                    &lt;li&gt;&lt;code&gt;/setup&lt;/code&gt; : ${lang === 'fr' ? 'Crée les salons nécessaires.' : 'Creates necessary channels.'}&lt;/li&gt;&amp;#10;                    &lt;li&gt;&lt;code&gt;/logo-add&lt;/code&gt; : ${lang === 'fr' ? 'Ajoute un salon pour un logo.' : 'Adds a channel for a logo change.'}&lt;/li&gt;&amp;#10;                    &lt;li&gt;&lt;code&gt;/name-add&lt;/code&gt; : ${lang === 'fr' ? 'Ajoute un salon pour un nom.' : 'Adds a channel for a name change.'}&lt;/li&gt;&amp;#10;                    &lt;li&gt;&lt;code&gt;/help&lt;/code&gt; : ${lang === 'fr' ? 'Affiche l\'aide.' : 'Displays help.'}&lt;/li&gt;&amp;#10;                &lt;/ul&gt;&amp;#10;&amp;#10;                &lt;div class="note" style="background-color: rgba(88, 101, 242, 0.1); border-left-color: #5865f2;"&gt;&amp;#10;                    &lt;h3&gt;${t.faqTitle}&lt;/h3&gt;&amp;#10;                    &lt;p&gt;${t.faqContent}&lt;/p&gt;&amp;#10;                &lt;/div&gt;&amp;#10;            `;&amp;#10;            document.getElementById('content-area').innerHTML = content;&amp;#10;        }&amp;#10;&amp;#10;        function changeLanguage(lang) {&amp;#10;            renderContent(lang);&amp;#10;            document.documentElement.lang = lang;&amp;#10;            &amp;#10;            document.getElementById('btn-fr').className = lang === 'fr' ? 'btn btn-primary' : 'btn btn-secondary';&amp;#10;            document.getElementById('btn-en').className = lang === 'en' ? 'btn btn-primary' : 'btn btn-secondary';&amp;#10;            &amp;#10;            window.scrollTo(0, 0);&amp;#10;        }&amp;#10;&amp;#10;        // Init&amp;#10;        renderContent('fr');&amp;#10;    &lt;/script&gt;&amp;#10;&lt;/body&gt;&amp;#10;&lt;/html&gt;</field>
+                <field name="TEXT">&lt;!DOCTYPE TML&gt;&amp;#10;&lt;html lang="fr"&gt;&amp;#10;&lt;head&gt;&amp;#10;    &lt;meta charset="UTF-8"&gt;&amp;#10;    &amp;#10;    &lt;title&gt;Aide et Commandes Logoto | Configurer le Bot Discord (Logo &amp; Nom)&lt;/title&gt;&amp;#10;    &amp;#10;    &lt;meta name="description" content="Tutoriel complet et liste des commandes (/setup, /logo-add, /name-add) pour configurer Logoto. Apprenez à automatiser le logo et le nom de votre serveur Discord."&gt;&amp;#10;    &amp;#10;    &lt;link rel="canonical" href="https://logoto.onrender.com/help" /&gt;&amp;#10;&amp;#10;    &lt;meta name="keywords" content="aide logoto, commandes logoto, configurer logoto, setup bot discord, /logo-add, /name-add, tutoriel logoto, comment automatiser discord"&gt;&amp;#10;    &amp;#10;    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;&amp;#10;&amp;#10;    &lt;meta property="og:title" content="Aide &amp; Commandes | Logoto Bot Discord"&gt;&amp;#10;    &lt;meta property="og:description" content="Le tutoriel complet pour configurer l'automatisation de votre serveur Discord."&gt;&amp;#10;    &lt;meta property="og:image" content="https://raw.githubusercontent.com/kanooob/Logoto/refs/heads/main/Logoto.png"&gt;&amp;#10;    &lt;meta property="og:url" content="https://logoto.onrender.com/help"&gt; &lt;meta property="og:type" content="article"&gt; &lt;meta property="og:locale" content="fr_FR"&gt;&amp;#10;    &amp;#10;    &lt;meta name="twitter:card" content="summary"&gt;&amp;#10;    &lt;meta name="twitter:title" content="Aide &amp; Commandes | Logoto Bot Discord"&gt;&amp;#10;    &lt;meta name="twitter:description" content="Le tutoriel complet pour configurer l'automatisation de votre serveur."&gt;&amp;#10;    &lt;meta name="twitter:image" content="https://raw.githubusercontent.com/kanooob/Logoto/refs/heads/main/Logoto.png"&gt;&amp;#10;&amp;#10;    &lt;link rel="icon" type="image/png" href="https://raw.githubusercontent.com/kanooob/Logoto/refs/heads/main/Logoto.png"&gt;&amp;#10;    &amp;#10;    &lt;script type="application/ld+json"&gt;&amp;#10;    {&amp;#10;      "@context": "https://schema.org",&amp;#10;      "@type": "TechArticle",&amp;#10;      "headline": "Guide de Configuration et Commandes du Bot Logoto",&amp;#10;      "description": "Apprenez à configurer et utiliser toutes les commandes de Logoto pour automatiser le changement de logo et de nom de votre serveur Discord.",&amp;#10;      "image": "https://raw.githubusercontent.com/kanooob/Logoto/refs/heads/main/Logoto.png",&amp;#10;      "author": {&amp;#10;        "@type": "Organization",&amp;#10;        "name": "Logoto"&amp;#10;      },&amp;#10;      "publisher": {&amp;#10;        "@type": "Organization",&amp;#10;        "name": "Logoto"&amp;#10;      }&amp;#10;    }&amp;#10;    &lt;/script&gt;&amp;#10;    &amp;#10;    &lt;style&gt;&amp;#10;        /* STYLES DE BASE &amp; CONTRASTE (Accessibilité OK) */&amp;#10;        body {&amp;#10;            font-family: Arial, sans-serif;&amp;#10;            margin: 0;&amp;#10;            padding: 0; /* padding: 40px 20px; déplacé vers .content-wrapper */&amp;#10;            background-color: #36393f; &amp;#10;            color: #dcddde; &amp;#10;            line-height: 1.6;&amp;#10;            display: flex;&amp;#10;            flex-direction: column;&amp;#10;            min-height: 100vh;&amp;#10;        }&amp;#10;        &amp;#10;        .content-wrapper {&amp;#10;            flex-grow: 1;&amp;#10;            padding: 40px 20px;&amp;#10;        }&amp;#10;&amp;#10;        .container {&amp;#10;            max-width: 900px;&amp;#10;            margin: auto;&amp;#10;            background: #2f3136;&amp;#10;            padding: 30px;&amp;#10;            border-radius: 8px;&amp;#10;            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);&amp;#10;        }&amp;#10;        h1 {&amp;#10;            color: #7289da;&amp;#10;            border-bottom: 2px solid #7289da;&amp;#10;            padding-bottom: 10px;&amp;#10;            font-size: 2.2rem;&amp;#10;        }&amp;#10;        h2 {&amp;#10;            color: #5865f2;&amp;#10;            margin-top: 30px;&amp;#10;            border-bottom: 1px solid #4f545c;&amp;#10;            padding-bottom: 5px;&amp;#10;        }&amp;#10;        p, li { font-size: 1.1rem; color: #dcddde; }&amp;#10;        code {&amp;#10;            background-color: #484c52;&amp;#10;            padding: 3px 6px;&amp;#10;            border-radius: 4px;&amp;#10;            font-family: Consolas, 'Courier New', monospace;&amp;#10;            color: #f2f2f2; &amp;#10;        }&amp;#10;        .note {&amp;#10;            background-color: #3c3a2e;&amp;#10;            border-left: 5px solid #ffc107;&amp;#10;            padding: 15px;&amp;#10;            margin-top: 20px;&amp;#10;            border-radius: 4px;&amp;#10;            color: #ffffff; &amp;#10;        }&amp;#10;        .note strong { color: #ffc107; }&amp;#10;        .command-list {&amp;#10;            list-style-type: none;&amp;#10;            padding: 0;&amp;#10;        }&amp;#10;        .command-list li {&amp;#10;            margin-bottom: 10px;&amp;#10;            background-color: #3a3d42;&amp;#10;            padding: 10px;&amp;#10;            border-radius: 5px;&amp;#10;        }&amp;#10;        &amp;#10;        /* STYLES DES LIENS &amp; BOUTONS */&amp;#10;        .container a {&amp;#10;            text-decoration: underline; &amp;#10;            color: #7289da;&amp;#10;        }&amp;#10;        .lang-switch {&amp;#10;            text-align: center;&amp;#10;            margin-bottom: 30px;&amp;#10;            display: flex;&amp;#10;            justify-content: center;&amp;#10;            gap: 15px;&amp;#10;            flex-wrap: wrap;&amp;#10;        }&amp;#10;        .btn {&amp;#10;            display: inline-block;&amp;#10;            padding: 12px 25px;&amp;#10;            border-radius: 8px;&amp;#10;            text-decoration: none !important; &amp;#10;            font-size: 1rem;&amp;#10;            font-weight: bold;&amp;#10;            color: #ffffff; &amp;#10;            transition: transform 0.2s, background-color 0.2s;&amp;#10;            border: none;&amp;#10;            cursor: pointer;&amp;#10;        }&amp;#10;        .btn:hover { transform: translateY(-2px); }&amp;#10;        .btn-primary { background-color: #5865f2; }&amp;#10;        .btn-primary:hover { background-color: #4f5bda; }&amp;#10;        .btn-secondary { background-color: #4f545c; }&amp;#10;        .btn-secondary:hover { background-color: #5d6269; }&amp;#10;        &amp;#10;        /* STYLES DU FOOTER (Ajoutés/Corrigés) */&amp;#10;        footer {&amp;#10;            background-color: #2f3136; /* Couleur du conteneur pour le contraste */&amp;#10;            padding: 15px 20px;&amp;#10;            color: #99aab5;&amp;#10;            font-size: 0.9rem;&amp;#10;            width: 100%;&amp;#10;            box-sizing: border-box;&amp;#10;            text-align: center;&amp;#10;        }&amp;#10;&amp;#10;        footer a {&amp;#10;            color: #ffffff; /* Texte de lien blanc pour le contraste */&amp;#10;            text-decoration: none;&amp;#10;            margin: 0 10px;&amp;#10;            transition: color 0.2s;&amp;#10;        }&amp;#10;        &amp;#10;        footer a:hover {&amp;#10;            color: #7289da;&amp;#10;            text-decoration: underline;&amp;#10;        }&amp;#10;&amp;#10;        .footer-links {&amp;#10;            display: flex;&amp;#10;            justify-content: center;&amp;#10;            gap: 15px;&amp;#10;            flex-wrap: wrap;&amp;#10;            margin-top: 5px;&amp;#10;        }&amp;#10;&amp;#10;        hr {&amp;#10;            border: 0;&amp;#10;            border-top: 1px solid #4f545c;&amp;#10;            margin: 40px 0;&amp;#10;        }&amp;#10;        ol { padding-left: 20px; }&amp;#10;        ol li { margin-bottom: 15px; }&amp;#10;        ol ul {&amp;#10;            list-style-type: disc;&amp;#10;            padding-left: 20px;&amp;#10;        }&amp;#10;    &lt;/style&gt;&amp;#10;&lt;/head&gt;&amp;#10;&lt;body&gt;&amp;#10;    &amp;#10;    &lt;div class="content-wrapper"&gt;&amp;#10;        &lt;div class="container"&gt;&amp;#10;            &amp;#10;            &lt;header&gt;&amp;#10;                &lt;div class="lang-switch"&gt;&amp;#10;                    &lt;a href="/" class="btn btn-secondary"&gt;Retour à l'accueil&lt;/a&gt;&amp;#10;                    &lt;button id="btn-fr" onclick="changeLanguage('fr')" class="btn btn-primary"&gt;Afficher en Français&lt;/button&gt;&amp;#10;                    &lt;button id="btn-en" onclick="changeLanguage('en')" class="btn btn-primary"&gt;Display in English&lt;/button&gt;&amp;#10;                &lt;/div&gt;&amp;#10;            &lt;/header&gt;&amp;#10;&amp;#10;            &lt;main id="content-area"&gt;&amp;#10;                &lt;h1&gt;Aide et Commandes Logoto : Automatisez Logo &amp; Nom 🇫🇷&lt;/h1&gt;&amp;#10;                &lt;p&gt;Je suis le bot spécialisé dans l'automatisation du changement de logo ET du nom de votre serveur, sans nécessiter de commandes complexes après la configuration.&lt;/p&gt;&amp;#10;                &amp;#10;                &lt;h2&gt;Les Commandes Logoto&lt;/h2&gt;&amp;#10;                &lt;ul class="command-list"&gt;&amp;#10;                    &lt;li&gt;&lt;code&gt;/setup&lt;/code&gt; : Crée les salons nécessaires (Logoto, log-logoto) pour un démarrage rapide.&lt;/li&gt;&amp;#10;                    &lt;li&gt;&lt;code&gt;/logo-add&lt;/code&gt; : Crée un salon de changement de logo avec les options &lt;code&gt;day&lt;/code&gt; (jour) et &lt;code&gt;month&lt;/code&gt; (mois).&lt;/li&gt;&amp;#10;                    &lt;li&gt;&lt;code&gt;/name-add&lt;/code&gt; : Crée un salon de changement de nom du serveur avec les options &lt;code&gt;day&lt;/code&gt; et &lt;code&gt;month&lt;/code&gt;.&lt;/li&gt;&amp;#10;                    &lt;li&gt;&lt;code&gt;/help&lt;/code&gt; : Affiche ce message d'aide (ou cette page !).&lt;/li&gt;&amp;#10;                    &lt;li&gt;&lt;code&gt;/invite&lt;/code&gt; : Obtenez le lien pour inviter le bot sur votre serveur.&lt;/li&gt;&amp;#10;                    &lt;li&gt;&lt;code&gt;/support&lt;/code&gt; : Rejoignez le serveur de support pour toute question ou aide.&lt;/li&gt;&amp;#10;                &lt;/ul&gt;&amp;#10;&amp;#10;                &lt;hr&gt;&amp;#10;&amp;#10;                &lt;h2&gt;Système de Changement de Logo Automatique&lt;/h2&gt;&amp;#10;                &lt;p&gt;Le bot surveille des salons spécifiques pour planifier et exécuter les changements de logo. Voici comment le configurer manuellement (ou avec &lt;code&gt;/logo-add&lt;/code&gt;) :&lt;/p&gt;&amp;#10;&amp;#10;                &lt;ol&gt;&amp;#10;                    &lt;li&gt;&amp;#10;                        &lt;strong&gt;Créez le Salon de Planification (Logo) :&lt;/strong&gt;&amp;#10;                        &lt;ul&gt;&amp;#10;                            &lt;li&gt;Le nom du salon doit être au format : &lt;code&gt;l-[JOUR]-[MOIS]&lt;/code&gt;&lt;/li&gt;&amp;#10;                            &lt;li&gt;EXEMPLE : Pour un logo le 31 décembre : &lt;code&gt;l-31-12&lt;/code&gt;&lt;/li&gt;&amp;#10;                        &lt;/ul&gt;&amp;#10;                    &lt;/li&gt;&amp;#10;                    &lt;li&gt;&amp;#10;                        &lt;strong&gt;Préparez le Logo :&lt;/strong&gt;&amp;#10;                        &lt;ul&gt;&amp;#10;                            &lt;li&gt;Envoyez votre image de logo sur n'importe quel salon Discord et copiez son lien direct.&lt;/li&gt;&amp;#10;                            &lt;li&gt;Le lien doit être une URL d'image valide.&lt;/li&gt;&amp;#10;                        &lt;/ul&gt;&amp;#10;                    &lt;/li&gt;&amp;#10;                    &lt;li&gt;&amp;#10;                        &lt;strong&gt;Planifiez le Changement :&lt;/strong&gt;&amp;#10;                        &lt;ul&gt;&amp;#10;                            &lt;li&gt;Modifiez le **Sujet du Salon** (Channel Topic) créé à l'étape 1.&lt;/li&gt;&amp;#10;                            &lt;li&gt;Collez le **lien** de votre image dans le sujet du salon.&lt;/li&gt;&amp;#10;                        &lt;/ul&gt;&amp;#10;                    &lt;/li&gt;&amp;#10;                    &lt;li&gt;&amp;#10;                        &lt;strong&gt;Résultat :&lt;/strong&gt;&amp;#10;                        &lt;ul&gt;&amp;#10;                            &lt;li&gt;Le bot changera automatiquement le logo du serveur au jour et au mois spécifiés !&lt;/li&gt;&amp;#10;                        &lt;/ul&gt;&amp;#10;                    &lt;/li&gt;&amp;#10;                &lt;/ol&gt;&amp;#10;&amp;#10;                &lt;hr&gt;&amp;#10;&amp;#10;                &lt;h2&gt;Système de Changement de Nom Automatique&lt;/h2&gt;&amp;#10;                &lt;p&gt;Le principe est le même pour le nom du serveur (configurable avec &lt;code&gt;/name-add&lt;/code&gt;) :&lt;/p&gt;&amp;#10;&amp;#10;                &lt;ol&gt;&amp;#10;                    &lt;li&gt;&amp;#10;                        &lt;strong&gt;Créez le Salon de Planification (Nom) :&lt;/strong&gt;&amp;#10;                        &lt;ul&gt;&amp;#10;                            &lt;li&gt;Le nom du salon doit être au format : &lt;code&gt;n-[JOUR]-[MOIS]&lt;/code&gt;&lt;/li&gt;&amp;#10;                            &lt;li&gt;EXEMPLE : Pour un nom le 1er janvier : &lt;code&gt;n-1-1&lt;/code&gt;&lt;/li&gt;&amp;#10;                            &lt;/ul&gt;&amp;#10;                    &lt;/li&gt;&amp;#10;                    &lt;li&gt;&amp;#10;                        &lt;strong&gt;Planifiez le Changement :&lt;/strong&gt;&amp;#10;                        &lt;ul&gt;&amp;#10;                            &lt;li&gt;Modifiez le **Sujet du Salon** (Channel Topic) créé à l'étape 1.&lt;/li&gt;&amp;#10;                            &lt;li&gt;Écrivez le **nouveau nom du serveur** dans le sujet du salon.&lt;/li&gt;&amp;#10;                        &lt;/ul&gt;&amp;#10;                    &lt;/li&gt;&amp;#10;                    &lt;li&gt;&amp;#10;                        &lt;strong&gt;Résultat :&lt;/strong&gt;&amp;#10;                        &lt;ul&gt;&amp;#10;                            &lt;li&gt;Le bot changera automatiquement le nom du serveur à la date spécifiée !&lt;/li&gt;&amp;#10;                        &lt;/ul&gt;&amp;#10;                    &lt;/li&gt;&amp;#10;                &lt;/ol&gt;&amp;#10;&amp;#10;                &lt;div class="note"&gt;&amp;#10;                    &lt;strong&gt;NOTE IMPORTANTE :&lt;/strong&gt; Pour que le changement automatique fonctionne chaque jour, le salon &lt;code&gt;log-logoto&lt;/code&gt; &lt;strong&gt;doit exister&lt;/strong&gt;. &amp;#10;                    &lt;br&gt;Chaque jour, le bot envoie un message technique (&lt;code&gt;🔄 (l/n)-Loading&lt;/code&gt;) dans ce salon pour déclencher la vérification. C'est ce message qui active ensuite le changement de logo ou de nom si la date correspond.&amp;#10;                    &lt;br&gt;La commande &lt;code&gt;/setup&lt;/code&gt; crée automatiquement ce salon pour vous.&amp;#10;                &lt;/div&gt;&amp;#10;            &lt;/main&gt; &amp;#10;            &amp;#10;        &lt;/div&gt;&amp;#10;    &lt;/div&gt; &lt;footer&gt;&amp;#10;        &lt;p&gt;Ce site est hébergé sur Render. Logoto est un projet personnel.&lt;/p&gt;&amp;#10;        &lt;div class="footer-links"&gt;&amp;#10;            &lt;a href="/tos"&gt;Conditions d'Utilisation (ToS)&lt;/a&gt;&amp;#10;            &lt;a href="/privacy"&gt;Politique de Confidentialité&lt;/a&gt;&amp;#10;            &lt;a href="https://github.com/kanooob/Logoto" target="_blank" rel="noopener noreferrer"&gt;Code Source&lt;/a&gt;&amp;#10;        &lt;/div&gt;&amp;#10;    &lt;/footer&gt;&amp;#10;&amp;#10;    &lt;script&gt;&amp;#10;        // --- Contenu Anglais ---&amp;#10;        const contentEN = `&amp;#10;            &lt;h1&gt;Logoto Help - Automate your Logo &amp; Name! 🇬🇧&lt;/h1&gt;&amp;#10;            &lt;p&gt;I am the bot specialized in automating the change of your server's logo AND name, without requiring complex commands after the initial setup.&lt;/p&gt;&amp;#10;&amp;#10;            &lt;h2&gt;Commands&lt;/h2&gt;&amp;#10;            &lt;ul class="command-list"&gt;&amp;#10;                &lt;li&gt;&lt;code&gt;/setup&lt;/code&gt; : Creates the necessary channels (Logoto, log-logoto) for a quick start.&lt;/li&gt;&amp;#10;                &lt;li&gt;&lt;code&gt;/logo-add&lt;/code&gt; : Creates a logo change channel with the options &lt;code&gt;day&lt;/code&gt; (Required) and &lt;code&gt;month&lt;/code&gt; (Required).&lt;/li&gt;&amp;#10;                &lt;li&gt;&lt;code&gt;/name-add&lt;/code&gt; : Creates a server name change channel with the options &lt;code&gt;day&lt;/code&gt; and &lt;code&gt;month&lt;/code&gt;.&lt;/li&gt;&amp;#10;                &lt;li&gt;&lt;code&gt;/help&lt;/code&gt; : Displays this help message (or this page!).&lt;/li&gt;&amp;#10;                &lt;li&gt;&lt;code&gt;/invite&lt;/code&gt; : Get the link to invite the bot to your server.&lt;/li&gt;&amp;#10;                &lt;li&gt;&lt;code&gt;/support&lt;/code&gt; : Join the support server for any questions or assistance.&lt;/li&gt;&amp;#10;            &lt;/ul&gt;&amp;#10;&amp;#10;            &lt;hr&gt;&amp;#10;&amp;#10;            &lt;h2&gt;Automatic Logo Change System&lt;/h2&gt;&amp;#10;            &lt;p&gt;The bot monitors specific channels to schedule and execute logo changes. Here's how to configure it manually (or with &lt;code&gt;/logo-add&lt;/code&gt;):&lt;/p&gt;&amp;#10;&amp;#10;            &lt;ol&gt;&amp;#10;                &lt;li&gt;&amp;#10;                    &lt;strong&gt;Create the Scheduling Channel (Logo):&lt;/strong&gt;&amp;#10;                    &lt;ul&gt;&amp;#10;                        &lt;li&gt;The channel name must follow this format: &lt;code&gt;l-[DAY]-[MONTH]&lt;/code&gt;&lt;/li&gt;&amp;#10;                        &lt;li&gt;EXAMPLE: For a logo on December 31st: &lt;code&gt;l-31-12&lt;/code&gt;&lt;/li&gt;&amp;#10;                    &lt;/ul&gt;&amp;#10;                &lt;/li&gt;&amp;#10;                &lt;li&gt;&amp;#10;                    &lt;strong&gt;Prepare the Logo:&lt;/strong&gt;&amp;#10;                    &lt;ul&gt;&amp;#10;                        &lt;li&gt;Upload your logo image to any Discord channel and copy its direct link.&lt;/li&gt;&amp;#10;                        &lt;li&gt;The link must be a valid image URL.&lt;/li&gt;&amp;#10;                    &lt;/ul&gt;&amp;#10;                &lt;/li&gt;&amp;#10;                &lt;li&gt;&amp;#10;                    &lt;strong&gt;Schedule the Change:&lt;/strong&gt;&amp;#10;                    &lt;ul&gt;&amp;#10;                        &lt;li&gt;Edit the **Channel Topic** of the channel you created in step 1.&lt;/li&gt;&amp;#10;                        &lt;li&gt;Paste the **link** of your image into the channel topic.&lt;/li&gt;&amp;#10;                    &lt;/ul&gt;&amp;#10;                &lt;/li&gt;&amp;#10;                &lt;li&gt;&amp;#10;                    &lt;strong&gt;Result:&lt;/strong&gt;&amp;#10;                    &lt;ul&gt;&amp;#10;                        &lt;li&gt;The bot will automatically change the server logo on the day and month specified!&lt;/li&gt;&amp;#10;                    &lt;/ul&gt;&amp;#10;                &lt;/li&gt;&amp;#10;            &lt;/ol&gt;&amp;#10;&amp;#10;            &lt;hr&gt;&amp;#10;&amp;#10;            &lt;h2&gt;Automatic Name Change System&lt;/h2&gt;&amp;#10;            &lt;p&gt;The same principle applies for the server name (configurable with &lt;code&gt;/name-add&lt;/code&gt;):&lt;/p&gt;&amp;#10;&amp;#10;            &lt;ol&gt;&amp;#10;                &lt;li&gt;&amp;#10;                    &lt;strong&gt;Create the Scheduling Channel (Name):&lt;/strong&gt;&amp;#10;                    &lt;ul&gt;&amp;#10;                        &lt;li&gt;The channel name must follow this format: &lt;code&gt;n-[DAY]-[MONTH]&lt;/code&gt;&lt;/li&gt;&amp;#10;                        &lt;li&gt;EXAMPLE: For a name on January 1st: &lt;code&gt;n-1-1&lt;/code&gt;&lt;/li&gt;&amp;#10;                    &lt;/ul&gt;&amp;#10;                &lt;/li&gt;&amp;#10;                &lt;li&gt;&amp;#10;                    &lt;strong&gt;Schedule the Change:&lt;/strong&gt;&amp;#10;                    &lt;ul&gt;&amp;#10;                        &lt;li&gt;Edit the **Channel Topic** of the channel you created in step 1.&lt;/li&gt;&amp;#10;                        &lt;li&gt;Write the **new server name** in the channel topic.&lt;/li&gt;&amp;#10;                    &lt;/ul&gt;&amp;#10;                &lt;/li&gt;&amp;#10;                &lt;li&gt;&amp;#10;                    &lt;strong&gt;Result:&lt;/strong&gt;&amp;#10;                    &lt;ul&gt;&amp;#10;                        &lt;li&gt;The bot will automatically change the server name on the specified date!&lt;/li&gt;&amp;#10;                    &lt;/ul&gt;&amp;#10;                &lt;/li&gt;&amp;#10;            &lt;/ol&gt;&amp;#10;&amp;#10;            &lt;div class="note"&gt;&amp;#10;                &lt;strong&gt;IMPORTANT NOTE:&lt;/strong&gt; For the automatic daily change to work, the &lt;code&gt;log-logoto&lt;/code&gt; channel &lt;strong&gt;must exist&lt;/strong&gt;.&amp;#10;                &lt;br&gt;Every day, the bot sends a technical message (&lt;code&gt;🔄 (l/n)-Loading&lt;/code&gt;) to this channel to trigger the check. This message is what activates the logo or name change if the date matches.&amp;#10;                &lt;br&gt;The &lt;code&gt;/setup&lt;/code&gt; command automatically creates this channel for you.&amp;#10;            &lt;/div&gt;&amp;#10;        `;&amp;#10;&amp;#10;        // --- Contenu Français (Récupéré du HTML initial) ---&amp;#10;        const contentFR = document.getElementById('content-area').innerHTML;&amp;#10;        &amp;#10;        // --- Fonction de Changement de Langue CORRIGÉE ---&amp;#10;        function changeLanguage(lang) {&amp;#10;            const contentArea = document.getElementById('content-area');&amp;#10;            const btnFr = document.getElementById('btn-fr');&amp;#10;            const btnEn = document.getElementById('btn-en');&amp;#10;            &amp;#10;            if (lang === 'fr') {&amp;#10;                contentArea.innerHTML = contentFR;&amp;#10;                document.documentElement.lang = 'fr';&amp;#10;                // Mise à jour des boutons dans la langue cible (français)&amp;#10;                btnFr.textContent = "Afficher en Français";&amp;#10;                btnEn.textContent = "Display in English";&amp;#10;&amp;#10;            } else if (lang === 'en') {&amp;#10;                contentArea.innerHTML = contentEN;&amp;#10;                document.documentElement.lang = 'en';&amp;#10;                // Mise à jour des boutons dans la langue cible (anglais)&amp;#10;                btnFr.textContent = "Show in French"; // Texte EN pour le bouton FR&amp;#10;                btnEn.textContent = "Display in English";&amp;#10;            }&amp;#10;            window.scrollTo(0, 0); &amp;#10;        }&amp;#10;&amp;#10;        // --- Initialisation au chargement ---&amp;#10;        document.addEventListener('DOMContentLoaded', () =&gt; {&amp;#10;             // Assurez-vous que les boutons ont les IDs pour le JS&amp;#10;             const btnFr = document.getElementById('btn-fr');&amp;#10;             const btnEn = document.getElementById('btn-en');&amp;#10;             if (document.documentElement.lang === 'fr') {&amp;#10;                 // Si la page est en FR (par défaut), mettre le bouton EN en anglais&amp;#10;                 btnEn.textContent = "Display in English";&amp;#10;                 btnFr.textContent = "Afficher en Français"; // Par sécurité&amp;#10;             }&amp;#10;        });&amp;#10;    &lt;/script&gt;&amp;#10;&lt;/body&gt;&amp;#10;&lt;/html&gt;</field>
               </block>
             </value>
             <next>
@@ -2326,7 +2313,212 @@
       </block>
     </statement>
   </block>
-  <block type="s4d_on_message" id="[,HHV+XdA99k=#MKqkN/" x="-4971" y="1549">
+  <block type="create_event" id="Ja:u-dYlKwT3qfD7U^B^" x="-3789" y="1666">
+    <value name="NAME">
+      <shadow type="text" id="[khEgr3c8Wi0GTyHb~$-">
+        <field name="TEXT">1</field>
+      </shadow>
+    </value>
+    <statement name="THEN">
+      <block type="s4d_get_all_server" id="eB`#Xi{]17HT2TfsS7nc">
+        <statement name="THEN">
+          <block type="controls_if" id="gZ|pqrD3w|XI%7DZ44r!">
+            <value name="IF0">
+              <block type="s4d_channel_exist" id="a,+p0CcGtqJ.F9-@5c2J">
+                <value name="CHANNEL">
+                  <block type="frost_category_get" id="vW?6HAvYkCc_6?sT3fV=">
+                    <field name="SEARCH_TYPE">NAME</field>
+                    <value name="VALUE">
+                      <block type="text_join" id="$W(/9lA3ZWpRGvBDL{o2">
+                        <mutation items="4"></mutation>
+                        <value name="ADD0">
+                          <block type="jg_text_remake_paragraph_quotes" id="ByOI@^{V,[n1mc2,:q=r">
+                            <field name="TEXT">l-</field>
+                          </block>
+                        </value>
+                        <value name="ADD1">
+                          <block type="frost_current" id="Q3IL(ImVIQoz0-U`ADLU">
+                            <field name="DATA_TYPE">DATE</field>
+                          </block>
+                        </value>
+                        <value name="ADD2">
+                          <block type="jg_text_remake_paragraph_quotes" id="8^iX_MR9-=G,xKSntx)X">
+                            <field name="TEXT">-</field>
+                          </block>
+                        </value>
+                        <value name="ADD3">
+                          <block type="math_arithmetic" id="_Cx+5P+WY6co;Lk%/hXw">
+                            <field name="OP">ADD</field>
+                            <value name="A">
+                              <shadow type="math_number" id="[{}Y%+EBXk;N]hQ5C-5b">
+                                <field name="NUM">1</field>
+                              </shadow>
+                              <block type="frost_current" id="#j8v8U`5wW^-c~y1}7wm">
+                                <field name="DATA_TYPE">MONTH</field>
+                              </block>
+                            </value>
+                            <value name="B">
+                              <shadow type="math_number" id="k%0B8,9UF0V*e`,[qYYa">
+                                <field name="NUM">1</field>
+                              </shadow>
+                            </value>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <value name="SERVER">
+                      <block type="s4d_get_all_server_server" id="Bp~,CaMF$%s*opf.T!,b"></block>
+                    </value>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO0">
+              <block type="s4d_send_channel" id="bwKVYA$moZTuF#}ACdOm">
+                <value name="CONTENT">
+                  <block type="jg_text_remake_paragraph_quotes" id="h}b!p8/Y,UkLdjw])DPn">
+                    <field name="TEXT">🔄 l-Loading</field>
+                  </block>
+                </value>
+                <value name="CHANNEL">
+                  <block type="frost_category_get" id="0PVR0^`~b?}S/q?e=apd">
+                    <field name="SEARCH_TYPE">NAME</field>
+                    <value name="VALUE">
+                      <block type="jg_text_remake_paragraph_quotes" id="oZwDZ`)HB)]@SniYX;XT">
+                        <field name="TEXT">log-logoto</field>
+                      </block>
+                    </value>
+                    <value name="SERVER">
+                      <block type="s4d_get_all_server_server" id="7c4OH3M{X%tig?5QlgrH"></block>
+                    </value>
+                  </block>
+                </value>
+              </block>
+            </statement>
+            <next>
+              <block type="controls_if" id="Z1*#~*)Y8#f?*^QPoN])">
+                <value name="IF0">
+                  <block type="s4d_channel_exist" id="HIDD-h7sYM=IUd8ws{hC">
+                    <value name="CHANNEL">
+                      <block type="frost_category_get" id="3lA?swJwADSlEH(%u!sd">
+                        <field name="SEARCH_TYPE">NAME</field>
+                        <value name="VALUE">
+                          <block type="text_join" id="[/h*Ygnq0*iPOqUYBXwh">
+                            <mutation items="4"></mutation>
+                            <value name="ADD0">
+                              <block type="jg_text_remake_paragraph_quotes" id="C4a-V]Hhf}M0#w(L#E8F">
+                                <field name="TEXT">n-</field>
+                              </block>
+                            </value>
+                            <value name="ADD1">
+                              <block type="frost_current" id="^@VdB#x?6BJ|lCsN#N[O">
+                                <field name="DATA_TYPE">DATE</field>
+                              </block>
+                            </value>
+                            <value name="ADD2">
+                              <block type="jg_text_remake_paragraph_quotes" id="]qiJxz/:_(OBcDwfdmp/">
+                                <field name="TEXT">-</field>
+                              </block>
+                            </value>
+                            <value name="ADD3">
+                              <block type="math_arithmetic" id="xU;[.qKk}l+;vrP9dJ2*">
+                                <field name="OP">ADD</field>
+                                <value name="A">
+                                  <shadow type="math_number" id="[{}Y%+EBXk;N]hQ5C-5b">
+                                    <field name="NUM">1</field>
+                                  </shadow>
+                                  <block type="frost_current" id="rW#SN5g4]^oz~.H0bMy1">
+                                    <field name="DATA_TYPE">MONTH</field>
+                                  </block>
+                                </value>
+                                <value name="B">
+                                  <shadow type="math_number" id="[F.d?8yKU6-4p*|U-6K%">
+                                    <field name="NUM">1</field>
+                                  </shadow>
+                                </value>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <value name="SERVER">
+                          <block type="s4d_get_all_server_server" id="JBl-~pO^6?DH|{1?@UYM"></block>
+                        </value>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <statement name="DO0">
+                  <block type="s4d_send_channel" id="6v)L.U2J[zqIP^6k:[!b">
+                    <value name="CONTENT">
+                      <block type="jg_text_remake_paragraph_quotes" id="MKFBESbQam!-^#m!Qfza">
+                        <field name="TEXT">🔄 n-Loading</field>
+                      </block>
+                    </value>
+                    <value name="CHANNEL">
+                      <block type="frost_category_get" id="/V~zVbrxEkasuR_;,^2W">
+                        <field name="SEARCH_TYPE">NAME</field>
+                        <value name="VALUE">
+                          <block type="jg_text_remake_paragraph_quotes" id="1Vd+}=.P8ToP==7lhn,m">
+                            <field name="TEXT">log-logoto</field>
+                          </block>
+                        </value>
+                        <value name="SERVER">
+                          <block type="s4d_get_all_server_server" id="Hj{HiZB1:|)R!X=S^`T3"></block>
+                        </value>
+                      </block>
+                    </value>
+                  </block>
+                </statement>
+              </block>
+            </next>
+          </block>
+        </statement>
+      </block>
+    </statement>
+  </block>
+  <block type="s4d_on_added" id="f[f[K3UbN$5[%Vy(]zA9" x="-1391" y="2306">
+    <statement name="STATEMENTS">
+      <block type="s4d_send_channel" id="lwwqVA9u]IHw!|T%T3_]">
+        <value name="CONTENT">
+          <block type="text_join" id="Q=W*:U60YA$)h)h20`xk">
+            <mutation items="5"></mutation>
+            <value name="ADD0">
+              <block type="jg_text_remake_paragraph_quotes" id="z%RPhtd2(*%b+3.t#cmm">
+                <field name="TEXT">Bot ajouté dans **</field>
+              </block>
+            </value>
+            <value name="ADD1">
+              <block type="s4d_add_server_name" id="(EY3z1KyJaEsx!UKkfWw"></block>
+            </value>
+            <value name="ADD2">
+              <block type="jg_text_remake_paragraph_quotes" id="$=[#T,NIRJH:J$TbnQin">
+                <field name="TEXT">** (`</field>
+              </block>
+            </value>
+            <value name="ADD3">
+              <block type="s4d_add_server_id" id="kl*`VWIB[`k*daZ])lF9"></block>
+            </value>
+            <value name="ADD4">
+              <block type="jg_text_remake_paragraph_quotes" id="BX{bW?Exo%@qbQ3Z5PF+">
+                <field name="TEXT">`).</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <value name="CHANNEL">
+          <block type="s4d_get_channel" id="#RM!aF{)M#VqcaMuY!rt">
+            <field name="SEARCH_TYPE">ID</field>
+            <value name="VALUE">
+              <block type="jg_text_remake_paragraph_quotes" id="sjx_/ar$!eZ0.dW,qO,j">
+                <field name="TEXT">1432341468059537419</field>
+              </block>
+            </value>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block type="s4d_on_message" id="[,HHV+XdA99k=#MKqkN/" x="-3770" y="2994">
     <statement name="STATEMENTS">
       <block type="controls_if" id="RB$[Gyjre,nntk)[g9aD">
         <value name="IF0">
@@ -2806,49 +2998,7 @@
       </block>
     </statement>
   </block>
-  <block type="s4d_on_added" id="f[f[K3UbN$5[%Vy(]zA9" x="-891" y="2262">
-    <statement name="STATEMENTS">
-      <block type="s4d_send_channel" id="lwwqVA9u]IHw!|T%T3_]">
-        <value name="CONTENT">
-          <block type="text_join" id="Q=W*:U60YA$)h)h20`xk">
-            <mutation items="5"></mutation>
-            <value name="ADD0">
-              <block type="jg_text_remake_paragraph_quotes" id="z%RPhtd2(*%b+3.t#cmm">
-                <field name="TEXT">Bot ajouté dans **</field>
-              </block>
-            </value>
-            <value name="ADD1">
-              <block type="s4d_add_server_name" id="(EY3z1KyJaEsx!UKkfWw"></block>
-            </value>
-            <value name="ADD2">
-              <block type="jg_text_remake_paragraph_quotes" id="$=[#T,NIRJH:J$TbnQin">
-                <field name="TEXT">** (`</field>
-              </block>
-            </value>
-            <value name="ADD3">
-              <block type="s4d_add_server_id" id="kl*`VWIB[`k*daZ])lF9"></block>
-            </value>
-            <value name="ADD4">
-              <block type="jg_text_remake_paragraph_quotes" id="BX{bW?Exo%@qbQ3Z5PF+">
-                <field name="TEXT">`).</field>
-              </block>
-            </value>
-          </block>
-        </value>
-        <value name="CHANNEL">
-          <block type="s4d_get_channel" id="#RM!aF{)M#VqcaMuY!rt">
-            <field name="SEARCH_TYPE">ID</field>
-            <value name="VALUE">
-              <block type="jg_text_remake_paragraph_quotes" id="sjx_/ar$!eZ0.dW,qO,j">
-                <field name="TEXT">1432341468059537419</field>
-              </block>
-            </value>
-          </block>
-        </value>
-      </block>
-    </statement>
-  </block>
-  <block type="s4d_on_remove" id="7|nL-JHLuT==:(nHGr(H" x="-875" y="2782">
+  <block type="s4d_on_remove" id="7|nL-JHLuT==:(nHGr(H" x="-1414" y="2994">
     <statement name="STATEMENTS">
       <block type="s4d_send_channel" id="|MCe]C+W*_W`+9iz2c4@">
         <value name="CONTENT">
@@ -2887,527 +3037,6 @@
             </value>
           </block>
         </value>
-      </block>
-    </statement>
-  </block>
-  <block type="create_event" id="Ja:u-dYlKwT3qfD7U^B^" x="-2913" y="3592">
-    <value name="NAME">
-      <shadow type="text" id="[khEgr3c8Wi0GTyHb~$-">
-        <field name="TEXT">1</field>
-      </shadow>
-    </value>
-    <statement name="THEN">
-      <block type="s4d_get_all_server" id="eB`#Xi{]17HT2TfsS7nc">
-        <statement name="THEN">
-          <block type="controls_if" id="gZ|pqrD3w|XI%7DZ44r!">
-            <value name="IF0">
-              <block type="s4d_channel_exist" id="a,+p0CcGtqJ.F9-@5c2J">
-                <value name="CHANNEL">
-                  <block type="frost_category_get" id="vW?6HAvYkCc_6?sT3fV=">
-                    <field name="SEARCH_TYPE">NAME</field>
-                    <value name="VALUE">
-                      <block type="text_join" id="$W(/9lA3ZWpRGvBDL{o2">
-                        <mutation items="4"></mutation>
-                        <value name="ADD0">
-                          <block type="jg_text_remake_paragraph_quotes" id="ByOI@^{V,[n1mc2,:q=r">
-                            <field name="TEXT">l-</field>
-                          </block>
-                        </value>
-                        <value name="ADD1">
-                          <block type="frost_current" id="Q3IL(ImVIQoz0-U`ADLU">
-                            <field name="DATA_TYPE">DATE</field>
-                          </block>
-                        </value>
-                        <value name="ADD2">
-                          <block type="jg_text_remake_paragraph_quotes" id="8^iX_MR9-=G,xKSntx)X">
-                            <field name="TEXT">-</field>
-                          </block>
-                        </value>
-                        <value name="ADD3">
-                          <block type="math_arithmetic" id="_Cx+5P+WY6co;Lk%/hXw">
-                            <field name="OP">ADD</field>
-                            <value name="A">
-                              <shadow type="math_number" id="[{}Y%+EBXk;N]hQ5C-5b">
-                                <field name="NUM">1</field>
-                              </shadow>
-                              <block type="frost_current" id="#j8v8U`5wW^-c~y1}7wm">
-                                <field name="DATA_TYPE">MONTH</field>
-                              </block>
-                            </value>
-                            <value name="B">
-                              <shadow type="math_number" id="k%0B8,9UF0V*e`,[qYYa">
-                                <field name="NUM">1</field>
-                              </shadow>
-                            </value>
-                          </block>
-                        </value>
-                      </block>
-                    </value>
-                    <value name="SERVER">
-                      <block type="s4d_get_all_server_server" id="Bp~,CaMF$%s*opf.T!,b"></block>
-                    </value>
-                  </block>
-                </value>
-              </block>
-            </value>
-            <statement name="DO0">
-              <block type="s4d_send_channel" id="bwKVYA$moZTuF#}ACdOm">
-                <value name="CONTENT">
-                  <block type="jg_text_remake_paragraph_quotes" id="h}b!p8/Y,UkLdjw])DPn">
-                    <field name="TEXT">🔄 l-Loading</field>
-                  </block>
-                </value>
-                <value name="CHANNEL">
-                  <block type="frost_category_get" id="0PVR0^`~b?}S/q?e=apd">
-                    <field name="SEARCH_TYPE">NAME</field>
-                    <value name="VALUE">
-                      <block type="jg_text_remake_paragraph_quotes" id="oZwDZ`)HB)]@SniYX;XT">
-                        <field name="TEXT">log-logoto</field>
-                      </block>
-                    </value>
-                    <value name="SERVER">
-                      <block type="s4d_get_all_server_server" id="7c4OH3M{X%tig?5QlgrH"></block>
-                    </value>
-                  </block>
-                </value>
-              </block>
-            </statement>
-            <next>
-              <block type="controls_if" id="Z1*#~*)Y8#f?*^QPoN])">
-                <value name="IF0">
-                  <block type="s4d_channel_exist" id="HIDD-h7sYM=IUd8ws{hC">
-                    <value name="CHANNEL">
-                      <block type="frost_category_get" id="3lA?swJwADSlEH(%u!sd">
-                        <field name="SEARCH_TYPE">NAME</field>
-                        <value name="VALUE">
-                          <block type="text_join" id="[/h*Ygnq0*iPOqUYBXwh">
-                            <mutation items="4"></mutation>
-                            <value name="ADD0">
-                              <block type="jg_text_remake_paragraph_quotes" id="C4a-V]Hhf}M0#w(L#E8F">
-                                <field name="TEXT">n-</field>
-                              </block>
-                            </value>
-                            <value name="ADD1">
-                              <block type="frost_current" id="^@VdB#x?6BJ|lCsN#N[O">
-                                <field name="DATA_TYPE">DATE</field>
-                              </block>
-                            </value>
-                            <value name="ADD2">
-                              <block type="jg_text_remake_paragraph_quotes" id="]qiJxz/:_(OBcDwfdmp/">
-                                <field name="TEXT">-</field>
-                              </block>
-                            </value>
-                            <value name="ADD3">
-                              <block type="math_arithmetic" id="xU;[.qKk}l+;vrP9dJ2*">
-                                <field name="OP">ADD</field>
-                                <value name="A">
-                                  <shadow type="math_number" id="[{}Y%+EBXk;N]hQ5C-5b">
-                                    <field name="NUM">1</field>
-                                  </shadow>
-                                  <block type="frost_current" id="rW#SN5g4]^oz~.H0bMy1">
-                                    <field name="DATA_TYPE">MONTH</field>
-                                  </block>
-                                </value>
-                                <value name="B">
-                                  <shadow type="math_number" id="[F.d?8yKU6-4p*|U-6K%">
-                                    <field name="NUM">1</field>
-                                  </shadow>
-                                </value>
-                              </block>
-                            </value>
-                          </block>
-                        </value>
-                        <value name="SERVER">
-                          <block type="s4d_get_all_server_server" id="JBl-~pO^6?DH|{1?@UYM"></block>
-                        </value>
-                      </block>
-                    </value>
-                  </block>
-                </value>
-                <statement name="DO0">
-                  <block type="s4d_send_channel" id="6v)L.U2J[zqIP^6k:[!b">
-                    <value name="CONTENT">
-                      <block type="jg_text_remake_paragraph_quotes" id="MKFBESbQam!-^#m!Qfza">
-                        <field name="TEXT">🔄 n-Loading</field>
-                      </block>
-                    </value>
-                    <value name="CHANNEL">
-                      <block type="frost_category_get" id="/V~zVbrxEkasuR_;,^2W">
-                        <field name="SEARCH_TYPE">NAME</field>
-                        <value name="VALUE">
-                          <block type="jg_text_remake_paragraph_quotes" id="1Vd+}=.P8ToP==7lhn,m">
-                            <field name="TEXT">log-logoto</field>
-                          </block>
-                        </value>
-                        <value name="SERVER">
-                          <block type="s4d_get_all_server_server" id="Hj{HiZB1:|)R!X=S^`T3"></block>
-                        </value>
-                      </block>
-                    </value>
-                  </block>
-                </statement>
-                <next>
-                  <block type="controls_if" id="y3qwC;=j6C8Yz%su(O`l">
-                    <value name="IF0">
-                      <block type="logic_operation" id="|,ncFcsFow||4dS=x,Oh">
-                        <field name="OP">AND</field>
-                        <value name="A">
-                          <block type="s4d_channel_exist" id="+s$=6O{Bf%P=bfawt%(2">
-                            <value name="CHANNEL">
-                              <block type="frost_category_get" id="}hA`,Ob$^kgobPfn,w$(">
-                                <field name="SEARCH_TYPE">NAME</field>
-                                <value name="VALUE">
-                                  <block type="jg_text_remake_paragraph_quotes" id="J4Uxyg(90}LrY)0?m]U+">
-                                    <field name="TEXT">log-logoto</field>
-                                  </block>
-                                </value>
-                                <value name="SERVER">
-                                  <block type="s4d_get_all_server_server" id="XY(/m4oB.B3%W41z%X8s"></block>
-                                </value>
-                              </block>
-                            </value>
-                          </block>
-                        </value>
-                        <value name="B">
-                          <block type="s4d_channel_exist" id="GgX]9,;5x{j)L=9`)0n_">
-                            <value name="CHANNEL">
-                              <block type="frost_category_get" id="9RA-B,ot/]xsOC{xDN;s">
-                                <field name="SEARCH_TYPE">NAME</field>
-                                <value name="VALUE">
-                                  <block type="text_join" id="N@=DyD-UFZGe5z=C#5vD">
-                                    <mutation items="4"></mutation>
-                                    <value name="ADD0">
-                                      <block type="jg_text_remake_paragraph_quotes" id=",IJYA}0r{aXLNb]g.oLH">
-                                        <field name="TEXT">logoto</field>
-                                      </block>
-                                    </value>
-                                    <value name="ADD1">
-                                      <block type="frost_current" id="EH!GR$vu?65Pzi[^wxi#">
-                                        <field name="DATA_TYPE">DATE</field>
-                                      </block>
-                                    </value>
-                                    <value name="ADD2">
-                                      <block type="jg_text_remake_paragraph_quotes" id="cAX=SJ^i|eFk%f0`,,P%">
-                                        <field name="TEXT">-</field>
-                                      </block>
-                                    </value>
-                                    <value name="ADD3">
-                                      <block type="math_arithmetic" id="wrZ`}e_8UW;te6py0[R-">
-                                        <field name="OP">ADD</field>
-                                        <value name="A">
-                                          <shadow type="math_number" id="[{}Y%+EBXk;N]hQ5C-5b">
-                                            <field name="NUM">1</field>
-                                          </shadow>
-                                          <block type="frost_current" id="BF:/9GViIJec-[kreF_W">
-                                            <field name="DATA_TYPE">MONTH</field>
-                                          </block>
-                                        </value>
-                                        <value name="B">
-                                          <shadow type="math_number" id="Bqwz+d1c3q;]hzVVVI$h">
-                                            <field name="NUM">1</field>
-                                          </shadow>
-                                        </value>
-                                      </block>
-                                    </value>
-                                  </block>
-                                </value>
-                                <value name="SERVER">
-                                  <block type="s4d_get_all_server_server" id="d?:bXqF$d5o%olMgl,mT"></block>
-                                </value>
-                              </block>
-                            </value>
-                          </block>
-                        </value>
-                      </block>
-                    </value>
-                    <statement name="DO0">
-                      <block type="s4d_send_channel" id="N0ahwZCkRRj`0`nckSy$">
-                        <value name="CONTENT">
-                          <block type="jg_text_remake_paragraph_quotes" id="m89Y`6eL^2K7_S;s)#gE">
-                            <field name="TEXT">🔄 Loading...</field>
-                          </block>
-                        </value>
-                        <value name="CHANNEL">
-                          <block type="frost_category_get" id="@MOzo1:^DBqVso*34YfP">
-                            <field name="SEARCH_TYPE">NAME</field>
-                            <value name="VALUE">
-                              <block type="jg_text_remake_paragraph_quotes" id="o7Q4H4ac]7N*G,l8U:7(">
-                                <field name="TEXT">log-logoto</field>
-                              </block>
-                            </value>
-                            <value name="SERVER">
-                              <block type="s4d_get_all_server_server" id=":hjDfnih=gP!e*wR){th"></block>
-                            </value>
-                          </block>
-                        </value>
-                      </block>
-                    </statement>
-                  </block>
-                </next>
-              </block>
-            </next>
-          </block>
-        </statement>
-      </block>
-    </statement>
-  </block>
-  <block type="s4d_on_message" id="mh,y~Sl}k~=#4~S-)]rK" x="-4813" y="5162">
-    <statement name="STATEMENTS">
-      <block type="controls_if" id="a9^vbiL8XldIzpM+yQk2">
-        <mutation elseif="1"></mutation>
-        <value name="IF0">
-          <block type="logic_operation" id="3a6,VB1|yxUe:=NDvS9)">
-            <field name="OP">AND</field>
-            <value name="A">
-              <block type="logic_compare" id="r58:Z3rTX;!Bi)2/9KDa">
-                <field name="OP">EQ</field>
-                <value name="A">
-                  <block type="jg_messages_value_dropdown_content_of_message" id="~#H0P({_8q.IBhOX%IvD">
-                    <field name="TYPE">content</field>
-                    <value name="MSG">
-                      <block type="Message" id="9Lwx[5H;9gV^TfY=BKnE"></block>
-                    </value>
-                  </block>
-                </value>
-                <value name="B">
-                  <block type="jg_text_remake_paragraph_quotes" id="s)3N1S_1DT`7vl+k!9%7">
-                    <field name="TEXT">🔄 Loading...</field>
-                  </block>
-                </value>
-              </block>
-            </value>
-            <value name="B">
-              <block type="s4d_starts_with" id="763rz#xb]#wK;E!75^%+">
-                <value name="STRING">
-                  <shadow type="text" id="=n]9VS+b]{i!0{8^Sk00">
-                    <field name="TEXT">abc</field>
-                  </shadow>
-                  <block type="s4d_channel_topic" id="ysmI7^FPiiqa^UB;|E1=">
-                    <value name="CHANNEL">
-                      <block type="frost_category_get" id="5nqow`;1Owy`Ap`d1;~H">
-                        <field name="SEARCH_TYPE">NAME</field>
-                        <value name="VALUE">
-                          <block type="text_join" id="?sx5[m)_CKj5]%1[xw3h">
-                            <mutation items="4"></mutation>
-                            <value name="ADD0">
-                              <block type="jg_text_remake_paragraph_quotes" id="YrZ%ER0JC`-pWO_=+b@F">
-                                <field name="TEXT">logoto-</field>
-                              </block>
-                            </value>
-                            <value name="ADD1">
-                              <block type="frost_current" id="f4q@h.]l@)sxg2I^CwmI">
-                                <field name="DATA_TYPE">DATE</field>
-                              </block>
-                            </value>
-                            <value name="ADD2">
-                              <block type="jg_text_remake_paragraph_quotes" id="GnmgQVnACq-D;+#w=o6d">
-                                <field name="TEXT">-</field>
-                              </block>
-                            </value>
-                            <value name="ADD3">
-                              <block type="math_arithmetic" id="mFQvaIC`S%5uAS~qzicX">
-                                <field name="OP">ADD</field>
-                                <value name="A">
-                                  <shadow type="math_number" id="[{}Y%+EBXk;N]hQ5C-5b">
-                                    <field name="NUM">1</field>
-                                  </shadow>
-                                  <block type="frost_current" id="6fz[-%[_c3K;H|ISV~*p">
-                                    <field name="DATA_TYPE">MONTH</field>
-                                  </block>
-                                </value>
-                                <value name="B">
-                                  <shadow type="math_number" id="8[B5^Wk#+*ygK(gn0aa]">
-                                    <field name="NUM">1</field>
-                                  </shadow>
-                                </value>
-                              </block>
-                            </value>
-                          </block>
-                        </value>
-                        <value name="SERVER">
-                          <block type="s4d_message_guild" id="kBIpMDSQFB$jF]CepDkd"></block>
-                        </value>
-                      </block>
-                    </value>
-                  </block>
-                </value>
-                <value name="SUBSTRING">
-                  <shadow type="text" id="-32ws-uXD_gCtT~Q$OCc">
-                    <field name="TEXT">https://</field>
-                  </shadow>
-                </value>
-              </block>
-            </value>
-          </block>
-        </value>
-        <statement name="DO0">
-          <block type="set_server_something" id=")tQpIKjneGK]+pQjIVf8">
-            <field name="parameter">ICON</field>
-            <value name="value">
-              <block type="s4d_channel_topic" id="1HqgQPegeZXBUERu6;9b">
-                <value name="CHANNEL">
-                  <block type="frost_category_get" id="T}?{[~6Ovz^|jGjpVpo[">
-                    <field name="SEARCH_TYPE">NAME</field>
-                    <value name="VALUE">
-                      <block type="text_join" id="_o#7A3i,lh`],*9-@CT`">
-                        <mutation items="4"></mutation>
-                        <value name="ADD0">
-                          <block type="jg_text_remake_paragraph_quotes" id="zpnWxHv(L2+6QO9H1X]0">
-                            <field name="TEXT">logoto-</field>
-                          </block>
-                        </value>
-                        <value name="ADD1">
-                          <block type="frost_current" id="=hQl#9+hLS:H}M}h]UPd">
-                            <field name="DATA_TYPE">DATE</field>
-                          </block>
-                        </value>
-                        <value name="ADD2">
-                          <block type="jg_text_remake_paragraph_quotes" id="BEOKMHnSozshG2XCnvN0">
-                            <field name="TEXT">-</field>
-                          </block>
-                        </value>
-                        <value name="ADD3">
-                          <block type="math_arithmetic" id="ca04_8u8MiVmuKg~sWjA">
-                            <field name="OP">ADD</field>
-                            <value name="A">
-                              <shadow type="math_number" id="[{}Y%+EBXk;N]hQ5C-5b">
-                                <field name="NUM">1</field>
-                              </shadow>
-                              <block type="frost_current" id="pI}2{APr^0aK6:ztF_{W">
-                                <field name="DATA_TYPE">MONTH</field>
-                              </block>
-                            </value>
-                            <value name="B">
-                              <shadow type="math_number" id="tK@CEP:,?!;`}Z.YyHy@">
-                                <field name="NUM">1</field>
-                              </shadow>
-                            </value>
-                          </block>
-                        </value>
-                      </block>
-                    </value>
-                    <value name="SERVER">
-                      <block type="s4d_message_guild" id="F/xd:WuWdm-M$aS1V!p+"></block>
-                    </value>
-                  </block>
-                </value>
-              </block>
-            </value>
-            <value name="reason">
-              <shadow type="text" id="x^!y1h/;94hGTH-qWM4e">
-                <field name="TEXT">changement de logo.</field>
-              </shadow>
-            </value>
-            <value name="server">
-              <block type="s4d_message_guild" id="1dIu#kBxv,U$s0D|^Q#0"></block>
-            </value>
-            <next>
-              <block type="s4d_reply" id="NU68,}=164L{qm~t$Vt^">
-                <value name="CONTENT">
-                  <shadow type="text" id="qG4?K@C#vz`Su(tFkMTZ">
-                    <field name="TEXT">Hey!</field>
-                  </shadow>
-                  <block type="jg_text_remake_paragraph_quotes" id="{B~)d.9C[__j3`r4$~9u">
-                    <field name="TEXT">✅ Logo du serveurs changé.</field>
-                  </block>
-                </value>
-              </block>
-            </next>
-          </block>
-        </statement>
-        <value name="IF1">
-          <block type="logic_compare" id="E7r~yygD-u)5iHFxzZd8">
-            <field name="OP">EQ</field>
-            <value name="A">
-              <block type="jg_messages_value_dropdown_content_of_message" id="yPJmz,51Yg$i-)oW*X$7">
-                <field name="TYPE">content</field>
-                <value name="MSG">
-                  <block type="Message" id="|P#QZb#9ymfAdCQ)Y1{#"></block>
-                </value>
-              </block>
-            </value>
-            <value name="B">
-              <block type="jg_text_remake_paragraph_quotes" id="^V)(GZ=Z/p}v/Q2qCzD%">
-                <field name="TEXT">🔄 Loading...</field>
-              </block>
-            </value>
-          </block>
-        </value>
-        <statement name="DO1">
-          <block type="set_server_something" id="d{DJZkkLR9%@E0VNLiXc">
-            <field name="parameter">NAME</field>
-            <value name="value">
-              <block type="s4d_channel_topic" id="1gjd%}g(c!DUUSL3~j62">
-                <value name="CHANNEL">
-                  <block type="frost_category_get" id="xRHCr)X(o0)QjG~Mbg|1">
-                    <field name="SEARCH_TYPE">NAME</field>
-                    <value name="VALUE">
-                      <block type="text_join" id="JZQnW@=Xxn]E6s~^yiw+">
-                        <mutation items="4"></mutation>
-                        <value name="ADD0">
-                          <block type="jg_text_remake_paragraph_quotes" id="lr=6:A9^=klDh5/Z@(d)">
-                            <field name="TEXT">logoto-</field>
-                          </block>
-                        </value>
-                        <value name="ADD1">
-                          <block type="frost_current" id="HF??o(3u.(VrRUX)Xf,4">
-                            <field name="DATA_TYPE">DATE</field>
-                          </block>
-                        </value>
-                        <value name="ADD2">
-                          <block type="jg_text_remake_paragraph_quotes" id="wu`=OQgdxw=3|q;%Fvly">
-                            <field name="TEXT">-</field>
-                          </block>
-                        </value>
-                        <value name="ADD3">
-                          <block type="math_arithmetic" id="jf/d^%!EcL.OT9b;:0i}">
-                            <field name="OP">ADD</field>
-                            <value name="A">
-                              <shadow type="math_number" id="[{}Y%+EBXk;N]hQ5C-5b">
-                                <field name="NUM">1</field>
-                              </shadow>
-                              <block type="frost_current" id="w`,@+ApcTtNbkg]YF@d$">
-                                <field name="DATA_TYPE">MONTH</field>
-                              </block>
-                            </value>
-                            <value name="B">
-                              <shadow type="math_number" id="sViB!qFSBys!cl~BUrK_">
-                                <field name="NUM">1</field>
-                              </shadow>
-                            </value>
-                          </block>
-                        </value>
-                      </block>
-                    </value>
-                    <value name="SERVER">
-                      <block type="s4d_message_guild" id="!w5FF0|];144tgLh[$9["></block>
-                    </value>
-                  </block>
-                </value>
-              </block>
-            </value>
-            <value name="reason">
-              <shadow type="text" id=".;:aE?x7_Ga`:@N8u=gP">
-                <field name="TEXT">changement de nom.</field>
-              </shadow>
-            </value>
-            <value name="server">
-              <block type="s4d_message_guild" id="!zIfj1?#?~wp1oGK1,%f"></block>
-            </value>
-            <next>
-              <block type="s4d_reply" id="m~oH1gj:pk}pjDcWd-mY">
-                <value name="CONTENT">
-                  <shadow type="text" id="qG4?K@C#vz`Su(tFkMTZ">
-                    <field name="TEXT">Hey!</field>
-                  </shadow>
-                  <block type="jg_text_remake_paragraph_quotes" id="Ve0/+a44i:kzR;=^7YOF">
-                    <field name="TEXT">✅ Nom du serveurs changé.</field>
-                  </block>
-                </value>
-              </block>
-            </next>
-          </block>
-        </statement>
       </block>
     </statement>
   </block>
