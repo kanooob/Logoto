@@ -1679,13 +1679,7 @@
                                               <block type="frost_created_cat" id="@vZYVox:`KORe/YvxfbB"></block>
                                             </value>
                                             <value name="to">
-                                              <block type="jg_members_get_member_by_id" id="!jiK60sV`Ez^F:IvS18a">
-                                                <value name="ID">
-                                                  <shadow type="text" id="mTV3Ff7)X,6$NmrJ2}})">
-                                                    <field name="TEXT">1431383390162124920</field>
-                                                  </shadow>
-                                                </value>
-                                              </block>
+                                              <block type="interaction_guild" id="L/v-Fsb/^HdCk:~}~){x"></block>
                                             </value>
                                             <next>
                                               <block type="channel_perms" id="=7BGoz#^2OpK+P[!67D:">
