@@ -650,7 +650,7 @@
                                 <mutation items="5"></mutation>
                                 <value name="ADD0">
                                   <block type="jg_text_remake_paragraph_quotes" id="AMAJV;8ey{4wGbCd6Jt|">
-                                    <field name="TEXT">&lt;:debut:1505250975282106469&gt; **Almost finished**</field>
+                                    <field name="TEXT">&lt;:asterisk:1505250975282106469&gt; **Almost finished**</field>
                                   </block>
                                 </value>
                                 <value name="ADD1">
@@ -658,7 +658,7 @@
                                 </value>
                                 <value name="ADD2">
                                   <block type="jg_text_remake_paragraph_quotes" id="SK[{fTD9=0ZDeeUCWGLy">
-                                    <field name="TEXT">All you have to do now is post an image link in the forum thread; it must be a direct URL to an image.</field>
+                                    <field name="TEXT">&lt;:track_next:1505295937856213072&gt; All you have to do now is post an image link in the forum thread; it must be a direct URL to an image.</field>
                                   </block>
                                 </value>
                                 <value name="ADD3">
@@ -666,7 +666,7 @@
                                 </value>
                                 <value name="ADD4">
                                   <block type="jg_text_remake_paragraph_quotes" id="9PaFv)g*X|I_@Ab~,ow^">
-                                    <field name="TEXT">Il vous reste plus qu'à mettre le lien d'une image dans le sujet sur salon, il faut que se soit une url direct d'une image.</field>
+                                    <field name="TEXT">&lt;:track_next:1505295937856213072&gt; Il vous reste plus qu'à mettre le lien d'une image dans le sujet sur salon, il faut que se soit une url direct d'une image.</field>
                                   </block>
                                 </value>
                               </block>
@@ -739,7 +739,7 @@
                                     <mutation items="5"></mutation>
                                     <value name="ADD0">
                                       <block type="jg_text_remake_paragraph_quotes" id="hpowx:KDp2ci_N9LzF9:">
-                                        <field name="TEXT">&lt;:debut:1505250975282106469&gt; **Information**</field>
+                                        <field name="TEXT">&lt;:asterisk:1505250975282106469&gt; **Information**</field>
                                       </block>
                                     </value>
                                     <value name="ADD1">
@@ -800,7 +800,7 @@
                                             <mutation items="7"></mutation>
                                             <value name="ADD0">
                                               <block type="jg_text_remake_paragraph_quotes" id="ln]G@9M*yx3z6tMj1!7H">
-                                                <field name="TEXT">&lt;:debut:1505250975282106469&gt; **Information**</field>
+                                                <field name="TEXT">&lt;:asterisk:1505250975282106469&gt; **Information**</field>
                                               </block>
                                             </value>
                                             <value name="ADD1">
@@ -884,7 +884,7 @@
                 <mutation items="5"></mutation>
                 <value name="ADD0">
                   <block type="jg_text_remake_paragraph_quotes" id="Zx;mXyN%4GikccGq!mmT">
-                    <field name="TEXT">&lt;:debut:1505250975282106469&gt; **Error**</field>
+                    <field name="TEXT">&lt;:asterisk:1505250975282106469&gt; **Error**</field>
                   </block>
                 </value>
                 <value name="ADD1">
@@ -929,7 +929,7 @@
                     <mutation items="23"></mutation>
                     <value name="ADD0">
                       <block type="jg_text_remake_paragraph_quotes" id="QkmOOqTdBxKXXV{Om:)X">
-                        <field name="TEXT">&lt;:debut:1505250975282106469&gt; **Aide de Logoto - Automatisez votre Logo !**</field>
+                        <field name="TEXT">&lt;:asterisk:1505250975282106469&gt; **Aide de Logoto - Automatisez votre Logo !**</field>
                       </block>
                     </value>
                     <value name="ADD1">
@@ -1075,7 +1075,7 @@
                         </value>
                         <value name="ADD6">
                           <block type="jg_text_remake_paragraph_quotes" id="~S~l=g{/}h2JcU?k#|Ci">
-                            <field name="TEXT">-# [Discord bot](https://discord.com/oauth2/authorize?client_id=1431383390162124920) &lt;:link:1505215573364047913&gt;</field>
+                            <field name="TEXT">-# &lt;:link:1505215573364047913&gt; [Discord bot](https://discord.com/oauth2/authorize?client_id=1431383390162124920)</field>
                           </block>
                         </value>
                       </block>
@@ -1219,7 +1219,7 @@
                                     </value>
                                     <value name="ADD2">
                                       <block type="jg_text_remake_paragraph_quotes" id="+83qWH]xCgklLVKtI|YY">
-                                        <field name="TEXT">Join the support server if you need help:</field>
+                                        <field name="TEXT">&lt;:track_next:1505295937856213072&gt; Join the support server if you need help:</field>
                                       </block>
                                     </value>
                                     <value name="ADD3">
@@ -1227,7 +1227,7 @@
                                     </value>
                                     <value name="ADD4">
                                       <block type="jg_text_remake_paragraph_quotes" id="!fsD#9,LY7.c1E+?6wc:">
-                                        <field name="TEXT">Rejoignez le serveur de support si vous avez besoin d'aide :</field>
+                                        <field name="TEXT">&lt;:track_next:1505295937856213072&gt; Rejoignez le serveur de support si vous avez besoin d'aide :</field>
                                       </block>
                                     </value>
                                     <value name="ADD5">
@@ -1235,7 +1235,7 @@
                                     </value>
                                     <value name="ADD6">
                                       <block type="jg_text_remake_paragraph_quotes" id="lc-GCg/Yn9Nj|NwCqew9">
-                                        <field name="TEXT">-# [Discord server](https://discord.gg/TPXFVYVnXe) &lt;:link:1505215573364047913&gt;</field>
+                                        <field name="TEXT">-# &lt;:link:1505215573364047913&gt; [Discord server](https://discord.gg/TPXFVYVnXe)</field>
                                       </block>
                                     </value>
                                   </block>
@@ -1422,7 +1422,7 @@
                                                     <mutation items="5"></mutation>
                                                     <value name="ADD0">
                                                       <block type="jg_text_remake_paragraph_quotes" id="_Qa9|z?hJQxR|oC]=*6P">
-                                                        <field name="TEXT">&lt;:debut:1505250975282106469&gt; **Almost finished**</field>
+                                                        <field name="TEXT">&lt;:asterisk:1505250975282106469&gt; **Almost finished**</field>
                                                       </block>
                                                     </value>
                                                     <value name="ADD1">
@@ -1430,7 +1430,7 @@
                                                     </value>
                                                     <value name="ADD2">
                                                       <block type="jg_text_remake_paragraph_quotes" id="K*7{.rf0Xp?^|*nccHfm">
-                                                        <field name="TEXT">All you have to do now is post an image link in the forum thread; it must be a direct URL to an image.</field>
+                                                        <field name="TEXT">&lt;:track_next:1505295937856213072&gt; All you have to do now is post an image link in the forum thread; it must be a direct URL to an image.</field>
                                                       </block>
                                                     </value>
                                                     <value name="ADD3">
@@ -1438,7 +1438,7 @@
                                                     </value>
                                                     <value name="ADD4">
                                                       <block type="jg_text_remake_paragraph_quotes" id="5RvoQ{[@L(.FM#Inr;ZC">
-                                                        <field name="TEXT">Il vous reste plus qu'à mettre le lien d'une image dans le sujet sur salon, il faut que se soit une url direct d'une image.</field>
+                                                        <field name="TEXT">&lt;:track_next:1505295937856213072&gt; Il vous reste plus qu'à mettre le lien d'une image dans le sujet sur salon, il faut que se soit une url direct d'une image.</field>
                                                       </block>
                                                     </value>
                                                   </block>
@@ -1512,7 +1512,7 @@
                                         <mutation items="5"></mutation>
                                         <value name="ADD0">
                                           <block type="jg_text_remake_paragraph_quotes" id="Rd}6Ks/+^OIzX#=G7h(Y">
-                                            <field name="TEXT">&lt;:debut:1505250975282106469&gt; **Error**</field>
+                                            <field name="TEXT">&lt;:asterisk:1505250975282106469&gt; **Error**</field>
                                           </block>
                                         </value>
                                         <value name="ADD1">
@@ -1710,7 +1710,7 @@
                                                         <mutation items="5"></mutation>
                                                         <value name="ADD0">
                                                           <block type="jg_text_remake_paragraph_quotes" id="$k|!9`/9:h,ibY|SK1,m">
-                                                            <field name="TEXT">&lt;:debut:1505250975282106469&gt; **Almost finished**</field>
+                                                            <field name="TEXT">&lt;:asterisk:1505250975282106469&gt; **Almost finished**</field>
                                                           </block>
                                                         </value>
                                                         <value name="ADD1">
@@ -1718,7 +1718,7 @@
                                                         </value>
                                                         <value name="ADD2">
                                                           <block type="jg_text_remake_paragraph_quotes" id="Eq{+cDfuc7Hx};LEg089">
-                                                            <field name="TEXT">All you have to do now is put the name of the server you want in the subject line.</field>
+                                                            <field name="TEXT">&lt;:track_next:1505295937856213072&gt; All you have to do now is put the name of the server you want in the subject line.</field>
                                                           </block>
                                                         </value>
                                                         <value name="ADD3">
@@ -1726,7 +1726,7 @@
                                                         </value>
                                                         <value name="ADD4">
                                                           <block type="jg_text_remake_paragraph_quotes" id="x^$TnOGj5;{+NL9v)w|u">
-                                                            <field name="TEXT">Il vous reste plus qu'à mettre le nom du serveur que vous voulez dans le sujet.</field>
+                                                            <field name="TEXT">&lt;:track_next:1505295937856213072&gt; Il vous reste plus qu'à mettre le nom du serveur que vous voulez dans le sujet.</field>
                                                           </block>
                                                         </value>
                                                       </block>
@@ -1800,7 +1800,7 @@
                                             <mutation items="5"></mutation>
                                             <value name="ADD0">
                                               <block type="jg_text_remake_paragraph_quotes" id="3O4![ne)!g]Gi7V|$-k{">
-                                                <field name="TEXT">&lt;:debut:1505250975282106469&gt; **Error**</field>
+                                                <field name="TEXT">&lt;:asterisk:1505250975282106469&gt; **Error**</field>
                                               </block>
                                             </value>
                                             <value name="ADD1">
@@ -1870,7 +1870,7 @@
                                                 <mutation items="5"></mutation>
                                                 <value name="ADD0">
                                                   <block type="jg_text_remake_paragraph_quotes" id="GoHAyQk:ayvxs*Oy,uou">
-                                                    <field name="TEXT">&lt;:debut:1505250975282106469&gt; **Test the topic**</field>
+                                                    <field name="TEXT">&lt;:asterisk:1505250975282106469&gt; **Test the topic**</field>
                                                   </block>
                                                 </value>
                                                 <value name="ADD1">
@@ -1942,7 +1942,7 @@
                                                 <mutation items="5"></mutation>
                                                 <value name="ADD0">
                                                   <block type="jg_text_remake_paragraph_quotes" id="H/`)3tXOap-}f(d%$8Fq">
-                                                    <field name="TEXT">&lt;:debut:1505250975282106469&gt; **Test the topic**</field>
+                                                    <field name="TEXT">&lt;:asterisk:1505250975282106469&gt; **Test the topic**</field>
                                                   </block>
                                                 </value>
                                                 <value name="ADD1">
@@ -1990,7 +1990,7 @@
                                                 <mutation items="5"></mutation>
                                                 <value name="ADD0">
                                                   <block type="jg_text_remake_paragraph_quotes" id="A9VC~k7WgMA{`@}eFT}.">
-                                                    <field name="TEXT">&lt;:debut:1505250975282106469&gt; **Test the topic**</field>
+                                                    <field name="TEXT">&lt;:asterisk:1505250975282106469&gt; **Test the topic**</field>
                                                   </block>
                                                 </value>
                                                 <value name="ADD1">
@@ -2055,7 +2055,7 @@
                                               <block type="slash_reply" id="]p?2aM?(|;mhtC)fDirF">
                                                 <value name="CONTENT">
                                                   <block type="jg_text_remake_paragraph_quotes" id="DWH(X6L)$!HyF63Tg{$@">
-                                                    <field name="TEXT">&lt;:debut:1505250975282106469&gt; C'est bon retournement de situation !</field>
+                                                    <field name="TEXT">&lt;:asterisk:1505250975282106469&gt; C'est bon retournement de situation !</field>
                                                   </block>
                                                 </value>
                                                 <next>
@@ -2111,7 +2111,7 @@
                                                     <mutation items="5"></mutation>
                                                     <value name="ADD0">
                                                       <block type="jg_text_remake_paragraph_quotes" id="lw#dL#}}gpv$P|)!OZ/7">
-                                                        <field name="TEXT">&lt;:debut:1505250975282106469&gt; **Error**</field>
+                                                        <field name="TEXT">&lt;:asterisk:1505250975282106469&gt; **Error**</field>
                                                       </block>
                                                     </value>
                                                     <value name="ADD1">
