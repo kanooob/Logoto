@@ -1679,7 +1679,17 @@
                                               <block type="frost_created_cat" id="@vZYVox:`KORe/YvxfbB"></block>
                                             </value>
                                             <value name="to">
-                                              <block type="interaction_guild" id="L/v-Fsb/^HdCk:~}~){x"></block>
+                                              <block type="s4d_get_role" id="TF?luq4?_WKTs@e|#yy1">
+                                                <field name="SEARCH_TYPE">NAME</field>
+                                                <value name="VALUE">
+                                                  <block type="jg_text_remake_paragraph_quotes" id="W`Y1h=zIv{@F:S}Oh[(%">
+                                                    <field name="TEXT">@everyone</field>
+                                                  </block>
+                                                </value>
+                                                <value name="SERVER">
+                                                  <block type="interaction_guild" id="f}za#TI=BnY{|ta2:as$"></block>
+                                                </value>
+                                              </block>
                                             </value>
                                             <next>
                                               <block type="channel_perms" id="=7BGoz#^2OpK+P[!67D:">
@@ -1690,12 +1700,10 @@
                                                 </value>
                                                 <value name="to">
                                                   <block type="s4d_get_role" id="sj:gp:|zoB8wk}xQl0M9">
-                                                    <field name="SEARCH_TYPE">ID</field>
+                                                    <field name="SEARCH_TYPE">NAME</field>
                                                     <value name="VALUE">
-                                                      <block type="s4d_server_id" id="Ya4XP_i,l^;24r*@*5{G">
-                                                        <value name="SERVER">
-                                                          <block type="interaction_guild" id="qF#@I{c_PuRQPTS^cQIL"></block>
-                                                        </value>
+                                                      <block type="jg_text_remake_paragraph_quotes" id="xO9O{EB=13mO2ebGScu2">
+                                                        <field name="TEXT">everyone</field>
                                                       </block>
                                                     </value>
                                                     <value name="SERVER">
