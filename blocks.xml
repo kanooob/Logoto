@@ -2730,7 +2730,7 @@
                     <field name="TEXT">Hey!</field>
                   </shadow>
                   <block type="jg_text_remake_paragraph_quotes" id="E}h9s!+m/R[t:hN|i,QD">
-                    <field name="TEXT">&lt;check:1505215575822172170&gt;&amp;#10; Logo du serveurs changé.</field>
+                    <field name="TEXT">&lt;:check:1505215575822172170&gt; Logo du serveurs changé.</field>
                   </block>
                 </value>
                 <next>
@@ -2918,7 +2918,7 @@
                         <field name="TEXT">Hey!</field>
                       </shadow>
                       <block type="jg_text_remake_paragraph_quotes" id="h.DF//4`V[:OS+Uc#Qf;">
-                        <field name="TEXT">&lt;check:1505215575822172170&gt;&amp;#10; Nom du serveurs changé.</field>
+                        <field name="TEXT">&lt;:check:1505215575822172170&gt; Nom du serveurs changé.</field>
                       </block>
                     </value>
                     <next>
