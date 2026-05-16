@@ -243,22 +243,22 @@ const S4D_WEBSITECREATION_EXPRESS_app = S4D_WEBSITECREATION_EXPRESS();
             await interaction.reply({ content: (['The log and stock exchange will take place here:',cat,'\n','Le salon des log et des action se passera ici :',cat].join('')), ephemeral: true, components: [] });
           });});
       } else if ((interaction.commandName) == 'setup' && !(((interaction.member).roles.highest).permissions.has('MANAGE_GUILD'))) {
-        await interaction.reply({ content: (['❌ Your highest role does not contain permissions to manage the server.','\n','❌ Votre rôle le plus élevé ne contient pas les permission pour gérer le serveur.'].join('')), ephemeral: true, components: [] });
+        await interaction.reply({ content: (['<:croismemesicestmultiplier:1505250983436091634> Your highest role does not contain permissions to manage the server.','\n','<:croismemesicestmultiplier:1505250983436091634> Votre rôle le plus élevé ne contient pas les permission pour gérer le serveur.'].join('')), ephemeral: true, components: [] });
       }
       if ((interaction.commandName) == 'help') {
         await interaction.reply({ content: (['Aide de Logoto - Automatisez votre Logo !','\n','====================================','\n','**Je suis le bot spécialisé dans l\'automatisation du changement de logo de votre serveur, sans nécessiter de commandes complexes après la configuration.**','\n','###','\n','Les commandes','\n','* **`/setup`** : Crée les salons nécessaires (Logoto, log-logoto) pour un démarrage rapide et pour comprendre le fonctionnement.','\n','* **`/logo-add`** : Crée un salon de changement de logo avec les options day (Obligatoire, pour le jour), month (Obligatoire, pour le mois).','\n','* **`/name-add`** : Crée un salon de changement de nom avec les options day (Obligatoire, pour le jour), month (Obligatoire, pour le mois).','\n','* **`/help`** : Affiche ce message d\'aide.','\n','* **`/invite`** : Invitez le bot dans votre serveurs.','\n','* **`/support`** : Rejoigniez le serveur de support.','\n','Pour l\'aide complète :[Ici](https://logoto.onrender.com/help)<:link:1505215573364047913>','\n','For english help :[Here](https://logoto.onrender.com/help-en)<:link:1505215573364047913>'].join('')), ephemeral: false, components: [] });
       }
       if ((interaction.commandName) == 'invite') {
-        await interaction.reply({ content: (['**Invite the bot**','\n','Inviter le bot grâce au lien sur votre serveur :','\n','Rejoignez le serveur de support si vous avez besoin d\'aide :','\n','-# [Discord bot](https://discord.com/oauth2/authorize?client_id=1431383390162124920) <:link:1505215573364047913>'].join('')), ephemeral: false, components: [] });
+        await interaction.reply({ content: (['<:serremains:1505250979430531134> **Invite the bot**','\n','Invite the bot using the link on your server:','\n','Inviter le bot grâce au lien sur votre serveur :','\n','-# [Discord bot](https://discord.com/oauth2/authorize?client_id=1431383390162124920) <:link:1505215573364047913>'].join('')), ephemeral: false, components: [] });
       }
       if ((interaction.commandName) == 'info') {
         await interaction.reply({ content: (['<:link:1505215573364047913> All useful links: [Website](https://logoto.onrender.com/index-en), [Support Server](https://discord.gg/TPXFVYVnXe), [ToS](https://logoto.onrender.com/tos), [Privacy Policy](https://logoto.onrender.com/privacy).','\n','\n','<:link:1505215573364047913> Tous les lien utiles : [Site](https://logoto.onrender.com/), [Serveur de support](https://discord.gg/TPXFVYVnXe), [ToS](https://logoto.onrender.com/tos), [Politique de Confidentialité](https://logoto.onrender.com/privacy).'].join('')), ephemeral: false, components: [] });
       }
       if ((interaction.commandName) == 'ping') {
-        await interaction.reply({ content: (['🏓 Pong !**','\n',s4d.client.ws.ping,'**ms.','\n','[Status page](https://logoto.betteruptime.com/) <:link:1505215573364047913>'].join('')), ephemeral: false, components: [] });
+        await interaction.reply({ content: (['<:ping:1505250928008237057> Pong !**','\n',s4d.client.ws.ping,'**ms.','\n','[Status page](https://logoto.betteruptime.com/) <:link:1505215573364047913>'].join('')), ephemeral: false, components: [] });
       }
       if ((interaction.commandName) == 'support') {
-        await interaction.reply({ content: (['**Support server**','\n','Join the support server if you need help:','\n','Rejoignez le serveur de support si vous avez besoin d\'aide :','\n','-# [Discord server](https://discord.gg/TPXFVYVnXe) <:link:1505215573364047913>'].join('')), ephemeral: false, components: [] });
+        await interaction.reply({ content: (['<:serremains:1505250979430531134> **Support server**','\n','Join the support server if you need help:','\n','Rejoignez le serveur de support si vous avez besoin d\'aide :','\n','-# [Discord server](https://discord.gg/TPXFVYVnXe) <:link:1505215573364047913>'].join('')), ephemeral: false, components: [] });
       }
       if ((interaction.commandName) == 'logo-add' && ((((interaction.member).roles.highest).permissions.has('MANAGE_GUILD')) || (((interaction.member).roles.highest).permissions.has('ADMINISTRATOR')) || (String((interaction.guild).ownerId)) == ((interaction.member).id))) {
         (interaction.guild).channels.create((['l-',interaction.options.getInteger('day'),'-',interaction.options.getInteger('month')].join('')), { type: "GUILD_TEXT", parent: (interaction.guild).channels.cache.find((category) => category.name === 'Logoto') }).then(async cat =>{  (cat).permissionOverwrites.edit((s4d.client.users.cache.get(String('1431383390162124920'))), { VIEW_CHANNEL: true });(cat).permissionOverwrites.edit(((interaction.guild).roles.cache.get(((interaction.guild).id))), { VIEW_CHANNEL: false });(cat).send({content:String(([`**Almost done!**
@@ -267,7 +267,7 @@ const S4D_WEBSITECREATION_EXPRESS_app = S4D_WEBSITECREATION_EXPRESS();
           `].join('')))});
           await interaction.reply({ content: ('Le salon à été créé :' + String(cat)), ephemeral: true, components: [] });
         });} else if ((interaction.commandName) == 'logo-add' && !(((interaction.member).roles.highest).permissions.has('MANAGE_GUILD'))) {
-        await interaction.reply({ content: (['❌ Your highest role does not contain permissions to manage the server.','\n','❌ Votre rôle le plus élevé ne contient pas les permission pour gérer le serveur.'].join('')), ephemeral: true, components: [] });
+        await interaction.reply({ content: (['<:croismemesicestmultiplier:1505250983436091634> Your highest role does not contain permissions to manage the server.','\n','<:croismemesicestmultiplier:1505250983436091634> Votre rôle le plus élevé ne contient pas les permission pour gérer le serveur.'].join('')), ephemeral: true, components: [] });
       }
       if ((interaction.commandName) == 'name-add' && ((((interaction.member).roles.highest).permissions.has('MANAGE_GUILD')) || (((interaction.member).roles.highest).permissions.has('ADMINISTRATOR')) || (String((interaction.guild).ownerId)) == ((interaction.member).id))) {
         (interaction.guild).channels.create((['n-',interaction.options.getInteger('day'),'-',interaction.options.getInteger('month')].join('')), { type: "GUILD_TEXT", parent: (interaction.guild).channels.cache.find((category) => category.name === 'Logoto') }).then(async cat =>{  (cat).permissionOverwrites.edit((s4d.client.users.cache.get(String('1431383390162124920'))), { VIEW_CHANNEL: true });(cat).permissionOverwrites.edit(((interaction.guild).roles.cache.get(((interaction.guild).id))), { VIEW_CHANNEL: false });(cat).send({content:String(([`**Almost done!**
@@ -275,20 +275,20 @@ const S4D_WEBSITECREATION_EXPRESS_app = S4D_WEBSITECREATION_EXPRESS();
           Il vous reste plus qu'à mettre le nom du serveur que vous voulez dans le sujet.`].join('')))});
           await interaction.reply({ content: ('Le salon à été créé :' + String(cat)), ephemeral: true, components: [] });
         });} else if ((interaction.commandName) == 'name-add' && !(((interaction.member).roles.highest).permissions.has('MANAGE_GUILD'))) {
-        await interaction.reply({ content: (['❌ Your highest role does not contain permissions to manage the server.','\n','❌ Votre rôle le plus élevé ne contient pas les permission pour gérer le serveur.'].join('')), ephemeral: true, components: [] });
+        await interaction.reply({ content: (['**Error**','\n','<:croismemesicestmultiplier:1505250983436091634> Your highest role does not contain permissions to manage the server.','\n','<:croismemesicestmultiplier:1505250983436091634> Votre rôle le plus élevé ne contient pas les permission pour gérer le serveur.'].join('')), ephemeral: true, components: [] });
       }
       if ((interaction.commandName) == 'test' && ((((interaction.channel).topic) || '').startsWith('https://cdn.discordapp.com' || ''))) {
-        await interaction.reply({ content: (['❌ Les urls discord sont déconseillé pour le changement de logo.','\n','❌ Discord URLs are not recommended for logo changes.'].join('')), ephemeral: false, components: [] });
+        await interaction.reply({ content: (['<:croismemesicestmultiplier:1505250983436091634> Les urls discord sont déconseillé pour le changement de logo.','\n','<:croismemesicestmultiplier:1505250983436091634> Discord URLs are not recommended for logo changes.'].join('')), ephemeral: false, components: [] });
       } else if ((interaction.commandName) == 'test' && ((((interaction.channel).topic) || '').startsWith('https://' || ''))) {
-        await interaction.reply({ content: (['❔ Si le lien que vous avez mis est une url direct d\'une image c\'est bon. (Url direct :sur la page de l\'url il y a que l\'image rien d\'autre (pas le logo du site, pas de texte) et sur discord si vous envoyez le lien de l\'image direct il y aura que l\'image sans texte)','\n','❔ If the link you provided is a direct URL to an image, that\'s fine. (Direct URL: the URL page contains only the image, nothing else (no website logo, no text), and on Discord, if you send the direct image link, it will only display the image without any text.)'].join('')), ephemeral: false, components: [] });
+        await interaction.reply({ content: (['<:linuxestmieuxquewindowsetmac:1505250978004336650> Si le lien que vous avez mis est une url direct d\'une image c\'est bon. (Url direct :sur la page de l\'url il y a que l\'image rien d\'autre (pas le logo du site, pas de texte) et sur discord si vous envoyez le lien de l\'image direct il y aura que l\'image sans texte)','\n','<:linuxestmieuxquewindowsetmac:1505250978004336650> If the link you provided is a direct URL to an image, that\'s fine. (Direct URL: the URL page contains only the image, nothing else (no website logo, no text), and on Discord, if you send the direct image link, it will only display the image without any text.)'].join('')), ephemeral: false, components: [] });
       } else if ((interaction.commandName) == 'test') {
-        await interaction.reply({ content: (['⭕ C\'est un nom de serveur. (s\'il comporter de 2 à 100 caractères).','\n','⭕ This is a server name. (if it contains between 2 and 100 characters).'].join('')), ephemeral: true, components: [] });
+        await interaction.reply({ content: (['<:texte:1505250977001902080> C\'est un nom de serveur. (s\'il comporter de 2 à 100 caractères).','\n','<:texte:1505250977001902080> This is a server name. (if it contains between 2 and 100 characters).'].join('')), ephemeral: true, components: [] });
       }
       if ((interaction.commandName) == 'privee' && ((interaction.member).id) == '746069923465527339') {
         await interaction.reply({ content: 'C\'est bon retournement de situation !', ephemeral: true, components: [] });
         eventEmitter.emit('1');
       } else if ((interaction.commandName) == 'privee' && ((interaction.member).id) != '746069923465527339') {
-        await interaction.reply({ content: (['Non.','\n','No.'].join('')), ephemeral: true, components: [] });
+        await interaction.reply({ content: (['**Error**','\n','<:croismemesicestmultiplier:1505250983436091634> Non. ','\n','<:croismemesicestmultiplier:1505250983436091634> No.'].join('')), ephemeral: true, components: [] });
       }
     
         });
@@ -610,27 +610,73 @@ const S4D_WEBSITECREATION_EXPRESS_app = S4D_WEBSITECREATION_EXPRESS();
             </script>
     
             <style>
-                /* Les styles CSS restent exactement identiques à la version FR */
-                body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #36393f; color: #dcddde; line-height: 1.6; display: flex; flex-direction: column; min-height: 100vh; }
+                body {
+                    font-family: Arial, sans-serif;
+                    margin: 0;
+                    padding: 0;
+                    background-color: #36393f;
+                    color: #dcddde;
+                    line-height: 1.6;
+                    display: flex;
+                    flex-direction: column;
+                    min-height: 100vh;
+                }
                 .content-wrapper { flex-grow: 1; padding: 40px 20px; }
-                .container { max-width: 900px; margin: auto; background: #2f3136; padding: 30px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); }
-                h1 { color: #7289da; border-bottom: 2px solid #7289da; padding-bottom: 10px; font-size: 2.2rem; }
-                h2 { color: #5865f2; margin-top: 30px; border-bottom: 1px solid #4f545c; padding-bottom: 5px; }
+                .container {
+                    max-width: 900px;
+                    margin: auto;
+                    background: #2f3136;
+                    padding: 30px;
+                    border-radius: 8px;
+                    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+                }
+    
+                /* Top Navigation Header */
+                header {
+                    margin-bottom: 35px;
+                    border-bottom: 1px solid #4f545c;
+                    padding-bottom: 15px;
+                }
+                .lang-switch {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    gap: 15px;
+                    flex-wrap: wrap;
+                }
+    
+                h1 { color: #7289da; padding-bottom: 10px; font-size: 2.2rem; margin-top: 10px; }
+                h2 { color: #5865f2; margin-top: 35px; border-bottom: 1px solid #4f545c; padding-bottom: 5px; }
                 p, li { font-size: 1.1rem; color: #dcddde; }
                 code { background-color: #484c52; padding: 3px 6px; border-radius: 4px; font-family: Consolas, monospace; color: #f2f2f2; }
-                .note { background-color: #3c3a2e; border-left: 5px solid #ffc107; padding: 15px; margin-top: 20px; border-radius: 4px; color: #ffffff; }
+                .note { background-color: #3c3a2e; border-left: 5px solid #ffc107; padding: 15px; margin-top: 25px; border-radius: 4px; color: #ffffff; }
                 .note strong { color: #ffc107; }
                 .command-list { list-style-type: none; padding: 0; }
-                .command-list li { margin-bottom: 10px; background-color: #3a3d42; padding: 10px; border-radius: 5px; }
+                .command-list li { margin-bottom: 10px; background-color: #3a3d42; padding: 12px; border-radius: 5px; }
+    
+                /* Text Links style */
                 .container a { text-decoration: underline; color: #7289da; }
-                .lang-switch { text-align: center; margin-bottom: 30px; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; }
-                .btn { display: inline-block; padding: 12px 25px; border-radius: 8px; text-decoration: none !important; font-size: 1rem; font-weight: bold; color: #ffffff; transition: transform 0.2s; border: none; cursor: pointer; }
-                .btn:hover { transform: translateY(-2px); }
+    
+                /* FIX DE LISIBILITÉ : Forçage de la couleur du texte à blanc pour les boutons */
+                .btn {
+                    display: inline-block;
+                    padding: 10px 20px;
+                    border-radius: 6px;
+                    text-decoration: none !important;
+                    font-size: 0.95rem;
+                    font-weight: bold;
+                    color: #ffffff !important; /* !important empêche les surcharges héritées */
+                    transition: transform 0.2s, background-color 0.2s;
+                    border: none;
+                    cursor: pointer;
+                }
+                .btn:hover { transform: translateY(-1px); }
                 .btn-primary { background-color: #5865f2; }
                 .btn-primary:hover { background-color: #4f5bda; }
                 .btn-secondary { background-color: #4f545c; }
                 .btn-secondary:hover { background-color: #5d6269; }
-                footer { background-color: #2f3136; padding: 15px 20px; color: #99aab5; font-size: 0.9rem; width: 100%; box-sizing: border-box; text-align: center; }
+    
+                footer { background-color: #2f3136; padding: 15px 20px; color: #99aab5; font-size: 0.9rem; width: 100%; box-sizing: border-box; text-align: center; margin-top: auto; }
                 footer a { color: #ffffff; text-decoration: none; margin: 0 10px; }
                 footer a:hover { color: #7289da; text-decoration: underline; }
                 .footer-links { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; margin-top: 5px; }
@@ -638,6 +684,11 @@ const S4D_WEBSITECREATION_EXPRESS_app = S4D_WEBSITECREATION_EXPRESS();
                 ol { padding-left: 20px; }
                 ol li { margin-bottom: 15px; }
                 ol ul { list-style-type: disc; padding-left: 20px; }
+    
+                @media (max-width: 480px) {
+                    .lang-switch { flex-direction: column; align-items: stretch; text-align: center; }
+                    h1 { font-size: 1.8rem; }
+                }
             </style>
         </head>
         <body>
@@ -647,8 +698,7 @@ const S4D_WEBSITECREATION_EXPRESS_app = S4D_WEBSITECREATION_EXPRESS();
     
                     <header>
                         <div class="lang-switch">
-                            <a href="/" class="btn btn-secondary">Back to Home</a>
-                            <!-- Redirection directe vers la page française -->
+                            <a href="/index-en" class="btn btn-secondary">← Back to Home</a>
                             <a href="/help" class="btn btn-primary">Afficher en Français 🇫🇷</a>
                         </div>
                     </header>
@@ -1768,7 +1818,7 @@ const S4D_WEBSITECREATION_EXPRESS_app = S4D_WEBSITECREATION_EXPRESS();
       }
       if (((s4dmessage).content) == '!ping') {
         ms_on = (s4d.client.uptime);
-        s4dmessage.channel.send({content:String((['🏓 Pong! My ping is **',s4d.client.ws.ping,'ms**.','\n','And I\'ve been on for **',Math.round(ms_on / 60000),' minutes**.'].join('')))});
+        s4dmessage.channel.send({content:String((['<:ping:1505250928008237057> Pong! My ping is **',s4d.client.ws.ping,'ms**.','\n','And I\'ve been on for **',Math.round(ms_on / 60000),' minutes**.'].join('')))});
       }
     
     });
