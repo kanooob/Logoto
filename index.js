@@ -250,7 +250,7 @@ const S4D_WEBSITECREATION_EXPRESS_app = S4D_WEBSITECREATION_EXPRESS();
         await interaction.reply({ content: (['<:link:1505215573364047913> All useful links: [Website](https://logoto.onrender.com/index-en), [Support Server](https://discord.gg/TPXFVYVnXe), [ToS](https://logoto.onrender.com/tos), [Privacy Policy](https://logoto.onrender.com/privacy).','\n','\n','<:link:1505215573364047913> Tous les lien utiles : [Site](https://logoto.onrender.com/), [Serveur de support](https://discord.gg/TPXFVYVnXe), [ToS](https://logoto.onrender.com/tos), [Politique de Confidentialité](https://logoto.onrender.com/privacy).'].join('')), ephemeral: false, components: [] });
       }
       if ((interaction.commandName) == 'ping') {
-        await interaction.reply({ content: (['<:ping:1505250928008237057> Pong !**','\n',s4d.client.ws.ping,'**ms.','\n','[Status page](https://logoto.betteruptime.com/) <:link:1505215573364047913>'].join('')), ephemeral: false, components: [] });
+        await interaction.reply({ content: (['<:ping:1505250928008237057> **',s4d.client.ws.ping,'**ms.','\n','[Status](https://logoto.betteruptime.com/) <:link:1505215573364047913>'].join('')), ephemeral: false, components: [] });
       }
       if ((interaction.commandName) == 'support') {
         await interaction.reply({ content: (['<:serremains:1505250979430531134> **Support server**','\n','Join the support server if you need help:','\n','Rejoignez le serveur de support si vous avez besoin d\'aide :','\n','-# [Discord server](https://discord.gg/TPXFVYVnXe) <:link:1505215573364047913>'].join('')), ephemeral: false, components: [] });
@@ -262,7 +262,7 @@ const S4D_WEBSITECREATION_EXPRESS_app = S4D_WEBSITECREATION_EXPRESS();
         await interaction.reply({ content: (['<:debut:1505250975282106469> **Error**','\n','<:croismemesicestmultiplier:1505250983436091634> Your highest role does not contain permissions to manage the server.','\n','<:croismemesicestmultiplier:1505250983436091634> Votre rôle le plus élevé ne contient pas les permission pour gérer le serveur.'].join('')), ephemeral: true, components: [] });
       }
       if ((interaction.commandName) == 'name-add' && ((((interaction.member).roles.highest).permissions.has('MANAGE_GUILD')) || (((interaction.member).roles.highest).permissions.has('ADMINISTRATOR')) || (String((interaction.guild).ownerId)) == ((interaction.member).id))) {
-        (interaction.guild).channels.create((['n-',interaction.options.getInteger('day'),'-',interaction.options.getInteger('month')].join('')), { type: "GUILD_TEXT", parent: (interaction.guild).channels.cache.find((category) => category.name === 'Logoto') }).then(async cat =>{  (cat).permissionOverwrites.edit(((interaction.guild).roles.cache.find((role) => role.name === '@everyone')), { VIEW_CHANNEL: true });(cat).permissionOverwrites.edit(((interaction.guild).roles.cache.find((role) => role.name === 'everyone')), { VIEW_CHANNEL: false });(cat).send({content:String((['<:debut:1505250975282106469> **Almost finished**','\n','All you have to do now is put the name of the server you want in the subject line.','\n','Il vous reste plus qu\'à mettre le nom du serveur que vous voulez dans le sujet.'].join('')))});
+        (interaction.guild).channels.create((['n-',interaction.options.getInteger('day'),'-',interaction.options.getInteger('month')].join('')), { type: "GUILD_TEXT", parent: (interaction.guild).channels.cache.find((category) => category.name === 'Logoto') }).then(async cat =>{  (cat).permissionOverwrites.edit((s4d.client.users.cache.get(String('1431383390162124920'))), { VIEW_CHANNEL: true });(cat).permissionOverwrites.edit(((interaction.guild).roles.cache.get(((interaction.guild).id))), { VIEW_CHANNEL: false });(cat).send({content:String((['<:debut:1505250975282106469> **Almost finished**','\n','All you have to do now is put the name of the server you want in the subject line.','\n','Il vous reste plus qu\'à mettre le nom du serveur que vous voulez dans le sujet.'].join('')))});
           await interaction.reply({ content: ('<:debut:1505250975282106469> Le salon à été créé :' + String(cat)), ephemeral: true, components: [] });
         });} else if ((interaction.commandName) == 'name-add' && !(((interaction.member).roles.highest).permissions.has('MANAGE_GUILD'))) {
         await interaction.reply({ content: (['<:debut:1505250975282106469> **Error**','\n','<:croismemesicestmultiplier:1505250983436091634> Your highest role does not contain permissions to manage the server.','\n','<:croismemesicestmultiplier:1505250983436091634> Votre rôle le plus élevé ne contient pas les permission pour gérer le serveur.'].join('')), ephemeral: true, components: [] });
@@ -1684,20 +1684,20 @@ const S4D_WEBSITECREATION_EXPRESS_app = S4D_WEBSITECREATION_EXPRESS();
             <div class="container">
                 <div class="status-code">404</div>
     
-                <h1>Oups, cette page a disparu.</h1>
+                <h1>Oops, this page has disappeared.</h1>
     
                 <p>
-                    Désolé, mais nous n'avons pas trouvé la page que vous cherchiez.
-                    Veuillez utiliser les boutons ci-dessous pour revenir à une zone connue.
+        Sorry, but we couldn't find the page you were looking for.
+        Please use the buttons below to return to a known area.
                 </p>
     
                 <div class="button-container">
-                    <a href="/" class="btn btn-primary">
-                        Retour à l'Accueil
+                    <a href="/index-en" class="btn btn-primary">
+                        Return to Home
                     </a>
     
-                    <a href="/help" class="btn btn-secondary">
-                        Accéder à l'Aide
+                    <a href="/help-en" class="btn btn-secondary">
+                        Access Help
                     </a>
                 </div>
             </div>
@@ -1708,7 +1708,9 @@ const S4D_WEBSITECREATION_EXPRESS_app = S4D_WEBSITECREATION_EXPRESS();
       S4D_WEBSITECREATION_EXPRESS_app.all('/robots.txt', async function(req, res) {
           S4D_APP_write.sync(String('robots.txt'), String(`User-agent: *
         Allow: /
+        Allow: /index-en
         Allow: /help
+        Allow: /help-en
         Allow: /tos
         Allow: /privacy
         Disallow: /blocks.xml
@@ -1727,7 +1729,17 @@ const S4D_WEBSITECREATION_EXPRESS_app = S4D_WEBSITECREATION_EXPRESS();
         </url>
     
         <url>
+          <loc>https://logoto.onrender.com/index-en</loc>
+          <priority>1.00</priority>
+        </url>
+    
+        <url>
           <loc>https://logoto.onrender.com/help</loc>
+          <priority>0.80</priority>
+        </url>
+    
+        <url>
+          <loc>https://logoto.onrender.com/help-en</loc>
           <priority>0.80</priority>
         </url>
     
@@ -1766,8 +1778,8 @@ const S4D_WEBSITECREATION_EXPRESS_app = S4D_WEBSITECREATION_EXPRESS();
             </style>
         </head>
         <body>
-            <p>Requête Invalide détectée. Redirection immédiate vers la page 404...</p>
-            <p>Si la redirection n'est pas automatique, veuillez cliquer ici : <a href="/404">Page non trouvée (404)</a>.</p>
+            <p>Invalid request detected. Immediate redirection to page 404...</p>
+            <p>If the redirection is not automatic, please click here: <a href="/404">Page not found (404)</a>.</p>
         </body>
         </html>`), { overwrite: true });res.sendFile(S4D_WEBSITECREATION_path.join(__dirname, String('Redirection.html')))
     
