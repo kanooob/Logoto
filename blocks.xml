@@ -1029,22 +1029,35 @@
                 <statement name="DO0">
                   <block type="slash_reply" id=";Ld/0[(r7dMLw*al=M%(">
                     <value name="CONTENT">
-                      <block type="text_join" id="0#wRhR9-k9y$L+nM8^Sn">
-                        <mutation items="4"></mutation>
+                      <block type="text_join" id="0P^3e#Tjk7Qn5em+p[@1">
+                        <mutation items="7"></mutation>
                         <value name="ADD0">
-                          <block type="jg_text_remake_paragraph_quotes" id="W)IVl2c`rp?Yp_F4d..{">
-                            <field name="TEXT">➕ Here is the link to add the bot: [link](https://discord.com/oauth2/authorize?client_id=1431383390162124920)</field>
+                          <block type="jg_text_remake_paragraph_quotes" id="zas^6WWg8aN.w:@$Q._L">
+                            <field name="TEXT">**Invite the bot**</field>
                           </block>
                         </value>
                         <value name="ADD1">
-                          <block type="s4d_newline" id="bBfk{7?{x]~Hji]xN3}/"></block>
+                          <block type="s4d_newline" id="l^e!@x*cMRApx3kQT_-V"></block>
                         </value>
                         <value name="ADD2">
-                          <block type="s4d_newline" id="WBvV4H`}XLXh;;C+_bKF"></block>
+                          <block type="jg_text_remake_paragraph_quotes" id="/mL[3Y60VqsM,[/2hnGf">
+                            <field name="TEXT">Inviter le bot grâce au lien sur votre serveur :</field>
+                          </block>
                         </value>
                         <value name="ADD3">
-                          <block type="jg_text_remake_paragraph_quotes" id="l,O3;2]OG)g|@,5d9Ee[">
-                            <field name="TEXT">➕ Voici le lien d'invitation du bot Discord :[lien](https://discord.com/oauth2/authorize?client_id=1431383390162124920)</field>
+                          <block type="s4d_newline" id="H}+bR-OTB[)Bd)NZTuss"></block>
+                        </value>
+                        <value name="ADD4">
+                          <block type="jg_text_remake_paragraph_quotes" id="RCVF/bH986n3vUjfSb?m">
+                            <field name="TEXT">Rejoignez le serveur de support si vous avez besoin d'aide :</field>
+                          </block>
+                        </value>
+                        <value name="ADD5">
+                          <block type="s4d_newline" id="g[IlHha([bH?s8%2C6#L"></block>
+                        </value>
+                        <value name="ADD6">
+                          <block type="jg_text_remake_paragraph_quotes" id="~S~l=g{/}h2JcU?k#|Ci">
+                            <field name="TEXT">-# [Discord bot](https://discord.com/oauth2/authorize?client_id=1431383390162124920) &lt;:link:1505215573364047913&gt;</field>
                           </block>
                         </value>
                       </block>
@@ -1202,7 +1215,7 @@
                                     </value>
                                     <value name="ADD6">
                                       <block type="jg_text_remake_paragraph_quotes" id="lc-GCg/Yn9Nj|NwCqew9">
-                                        <field name="TEXT">-# [Server](https://discord.gg/TPXFVYVnXe) &lt;:link:1505215573364047913&gt;</field>
+                                        <field name="TEXT">-# [Discord server](https://discord.gg/TPXFVYVnXe) &lt;:link:1505215573364047913&gt;</field>
                                       </block>
                                     </value>
                                   </block>
