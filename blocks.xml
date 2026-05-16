@@ -747,7 +747,7 @@
                                     </value>
                                     <value name="ADD2">
                                       <block type="jg_text_remake_paragraph_quotes" id="ecDRZKL9mKy0%V7*%1_!">
-                                        <field name="TEXT">The log room has been created. You will find the server change actions performed by the bot in this room. (Please do not change the room name.)</field>
+                                        <field name="TEXT">&lt;:track_next:1505295937856213072&gt; The log room has been created. You will find the server change actions performed by the bot in this room. (Please do not change the room name.)</field>
                                       </block>
                                     </value>
                                     <value name="ADD3">
@@ -755,7 +755,7 @@
                                     </value>
                                     <value name="ADD4">
                                       <block type="jg_text_remake_paragraph_quotes" id="dfM(|U!Fr%qho2YdeV21">
-                                        <field name="TEXT">Le salon des log à été créé. Vous obtiendrez les actions de changement du serveur fait par le bot dans ce salon. (Veuillez ne pas changer le nom du salon.)</field>
+                                        <field name="TEXT">&lt;:track_next:1505295937856213072&gt; Le salon des log à été créé. Vous obtiendrez les actions de changement du serveur fait par le bot dans ce salon. (Veuillez ne pas changer le nom du salon.)</field>
                                       </block>
                                     </value>
                                   </block>
@@ -808,7 +808,7 @@
                                             </value>
                                             <value name="ADD2">
                                               <block type="jg_text_remake_paragraph_quotes" id="u^^A-baps0y}tL#C3#b-">
-                                                <field name="TEXT">The log and stock exchange will take place here:</field>
+                                                <field name="TEXT">&lt;:track_next:1505295937856213072&gt; The log and stock exchange will take place here:</field>
                                               </block>
                                             </value>
                                             <value name="ADD3">
@@ -819,7 +819,7 @@
                                             </value>
                                             <value name="ADD5">
                                               <block type="jg_text_remake_paragraph_quotes" id="R~EVMD8k;d1U8*V+d]R+">
-                                                <field name="TEXT">Le salon des log et des action se passera ici :</field>
+                                                <field name="TEXT">&lt;:track_next:1505295937856213072&gt; Le salon des log et des action se passera ici :</field>
                                               </block>
                                             </value>
                                             <value name="ADD6">
@@ -926,7 +926,7 @@
               <block type="slash_reply" id="6]kK0wXXOtqW[s{n~/+^">
                 <value name="CONTENT">
                   <block type="text_join" id="G}NU#zYkp;(%?y0.{o1N">
-                    <mutation items="25"></mutation>
+                    <mutation items="23"></mutation>
                     <value name="ADD0">
                       <block type="jg_text_remake_paragraph_quotes" id="QkmOOqTdBxKXXV{Om:)X">
                         <field name="TEXT">&lt;:debut:1505250975282106469&gt; **Aide de Logoto - Automatisez votre Logo !**</field>
@@ -945,7 +945,7 @@
                     </value>
                     <value name="ADD4">
                       <block type="jg_text_remake_paragraph_quotes" id=",*Be;Tm3`pq#kU:)?sy{">
-                        <field name="TEXT">**Je suis le bot spécialisé dans l'automatisation du changement de logo de votre serveur, sans nécessiter de commandes complexes après la configuration.**</field>
+                        <field name="TEXT">&lt;:track_next:1505295937856213072&gt; **Je suis le bot spécialisé dans l'automatisation du changement de logo de votre serveur, sans nécessiter de commandes complexes après la configuration.**</field>
                       </block>
                     </value>
                     <value name="ADD5">
@@ -961,7 +961,7 @@
                     </value>
                     <value name="ADD8">
                       <block type="jg_text_remake_paragraph_quotes" id="l[6Q10+qGL3V=OG@kJ,4">
-                        <field name="TEXT">Les commandes</field>
+                        <field name="TEXT">&lt;:track_next:1505295937856213072&gt; Les commandes</field>
                       </block>
                     </value>
                     <value name="ADD9">
@@ -1017,15 +1017,7 @@
                     </value>
                     <value name="ADD22">
                       <block type="jg_text_remake_paragraph_quotes" id="}a{sPX?QTO)p,p`o%0v8">
-                        <field name="TEXT">Pour l'aide complète :[Ici](https://logoto.onrender.com/help)&lt;:link:1505215573364047913&gt;</field>
-                      </block>
-                    </value>
-                    <value name="ADD23">
-                      <block type="s4d_newline" id=".9g1L#jxmYoB*s)^!x_H"></block>
-                    </value>
-                    <value name="ADD24">
-                      <block type="jg_text_remake_paragraph_quotes" id=".m1g)cHmt^vM@NE]`|lr">
-                        <field name="TEXT">For english help :[Here](https://logoto.onrender.com/help-en)&lt;:link:1505215573364047913&gt;</field>
+                        <field name="TEXT">&lt;:link:1505215573364047913&gt; [Website home](https://logoto.onrender.com/index-en), [Help page](https://logoto.onrender.com/help-en)</field>
                       </block>
                     </value>
                   </block>
@@ -1067,7 +1059,7 @@
                         </value>
                         <value name="ADD2">
                           <block type="jg_text_remake_paragraph_quotes" id="RCVF/bH986n3vUjfSb?m">
-                            <field name="TEXT">Invite the bot using the link on your server:</field>
+                            <field name="TEXT">&lt;:track_next:1505295937856213072&gt; Invite the bot using the link on your server:</field>
                           </block>
                         </value>
                         <value name="ADD3">
@@ -1075,7 +1067,7 @@
                         </value>
                         <value name="ADD4">
                           <block type="jg_text_remake_paragraph_quotes" id="/mL[3Y60VqsM,[/2hnGf">
-                            <field name="TEXT">Inviter le bot grâce au lien sur votre serveur :</field>
+                            <field name="TEXT">&lt;:track_next:1505295937856213072&gt; Inviter le bot grâce au lien sur votre serveur :</field>
                           </block>
                         </value>
                         <value name="ADD5">
@@ -1114,21 +1106,26 @@
                       <block type="slash_reply" id="LUA1m*8(owV!F-hO0nTl">
                         <value name="CONTENT">
                           <block type="text_join" id="ea|Cm:%SRa{qd!Q~X8#)">
-                            <mutation items="4"></mutation>
+                            <mutation items="5"></mutation>
                             <value name="ADD0">
-                              <block type="jg_text_remake_paragraph_quotes" id="Mgz0Dd}oi{?5zpGkBWf)">
-                                <field name="TEXT">&lt;:link:1505215573364047913&gt; All useful links: [Website](https://logoto.onrender.com/index-en), [Support Server](https://discord.gg/TPXFVYVnXe), [ToS](https://logoto.onrender.com/tos), [Privacy Policy](https://logoto.onrender.com/privacy).</field>
+                              <block type="jg_text_remake_paragraph_quotes" id="XS{zg%+}y@yp[qw:AT3-">
+                                <field name="TEXT">&lt;:track_next:1505295937856213072&gt; **Useful links**</field>
                               </block>
                             </value>
                             <value name="ADD1">
                               <block type="s4d_newline" id="KZchhBj9~PI?F/7N)v?="></block>
                             </value>
                             <value name="ADD2">
-                              <block type="s4d_newline" id="i+{PynE#s|?yP?R1v^hS"></block>
+                              <block type="jg_text_remake_paragraph_quotes" id="Mgz0Dd}oi{?5zpGkBWf)">
+                                <field name="TEXT">&lt;:link:1505215573364047913&gt; [Website](https://logoto.onrender.com/index-en), [Support Server](https://discord.gg/TPXFVYVnXe), [ToS](https://logoto.onrender.com/tos), [Privacy Policy](https://logoto.onrender.com/privacy).</field>
+                              </block>
                             </value>
                             <value name="ADD3">
+                              <block type="s4d_newline" id="i+{PynE#s|?yP?R1v^hS"></block>
+                            </value>
+                            <value name="ADD4">
                               <block type="jg_text_remake_paragraph_quotes" id="58|1dC2WR1DKY^Fz};!:">
-                                <field name="TEXT">&lt;:link:1505215573364047913&gt; Tous les lien utiles : [Site](https://logoto.onrender.com/), [Serveur de support](https://discord.gg/TPXFVYVnXe), [ToS](https://logoto.onrender.com/tos), [Politique de Confidentialité](https://logoto.onrender.com/privacy).</field>
+                                <field name="TEXT">&lt;:link:1505215573364047913&gt; [Site](https://logoto.onrender.com/), [Serveur de support](https://discord.gg/TPXFVYVnXe), [ToS](https://logoto.onrender.com/tos), [Politique de Confidentialité](https://logoto.onrender.com/privacy).</field>
                               </block>
                             </value>
                           </block>
@@ -3114,7 +3111,7 @@
                             <mutation items="7"></mutation>
                             <value name="ADD0">
                               <block type="jg_text_remake_paragraph_quotes" id="VpL{JrrSOXhpH-O`RFa%">
-                                <field name="TEXT">&lt;:ping:1505250928008237057&gt; Pong! My ping is **</field>
+                                <field name="TEXT">&lt;:ping:1505250928008237057&gt; **</field>
                               </block>
                             </value>
                             <value name="ADD1">
@@ -3132,7 +3129,7 @@
                             </value>
                             <value name="ADD4">
                               <block type="jg_text_remake_paragraph_quotes" id="b,BDn5DKjy%f^Dns_v%7">
-                                <field name="TEXT">And I've been on for **</field>
+                                <field name="TEXT">Uptime **</field>
                               </block>
                             </value>
                             <value name="ADD5">
