@@ -2304,7 +2304,7 @@
       </block>
     </statement>
   </block>
-  <block type="s4d_on_added" id="f[f[K3UbN$5[%Vy(]zA9" x="-1466" y="1789">
+  <block type="s4d_on_added" id="f[f[K3UbN$5[%Vy(]zA9" x="-1455" y="1698">
     <statement name="STATEMENTS">
       <block type="s4d_send_channel" id="lwwqVA9u]IHw!|T%T3_]">
         <value name="CONTENT">
@@ -2358,7 +2358,7 @@
                 </value>
                 <value name="ADD2">
                   <block type="jg_text_remake_paragraph_quotes" id="zfQ:h6u32h40;ZGF-dA6">
-                    <field name="TEXT">&lt;:track_next:1505295937856213072&gt; Logoto is a Discord bot that automates the changing of your server's icon and name.</field>
+                    <field name="TEXT">Logoto is a Discord bot that automates the changing of your server's icon and name.</field>
                   </block>
                 </value>
                 <value name="ADD3">
@@ -2401,86 +2401,135 @@
               </block>
             </value>
             <next>
-              <block type="s4d_send_member" id="pP%Gf[p5OojY;UwV.CfV">
-                <value name="CONTENT">
-                  <block type="text_join" id="3AxROSd9N2Qnrtx^uUAp">
-                    <mutation items="11"></mutation>
-                    <value name="ADD0">
-                      <block type="jg_text_remake_paragraph_quotes" id="G0X{KODHF=tuDuz3:4?I">
-                        <field name="TEXT">&lt;:loudspeaker:1505590722798293253&gt; **I thank the </field>
-                      </block>
-                    </value>
-                    <value name="ADD1">
-                      <block type="s4d_add_server_name" id="Bl$Cimjr-3Ou@1cxsY84"></block>
-                    </value>
-                    <value name="ADD2">
-                      <block type="jg_text_remake_paragraph_quotes" id="5!8nd[bCmA?(0*l/k)x;">
-                        <field name="TEXT"> Discord server team.</field>
-                      </block>
-                    </value>
-                    <value name="ADD3">
-                      <block type="s4d_newline" id="xC1Z8Egn$1OA:L]TYDg6"></block>
-                    </value>
-                    <value name="ADD4">
-                      <block type="jg_text_remake_paragraph_quotes" id="x/WMRc1dV_5.SD0}D`Ur">
-                        <field name="TEXT">&lt;:track_next:1505295937856213072&gt; For more information, please visit my website and my support server.</field>
-                      </block>
-                    </value>
-                    <value name="ADD5">
-                      <block type="s4d_newline" id="Go;2.$^X,n]wv6O{I.M6"></block>
-                    </value>
-                    <value name="ADD6">
-                      <block type="jg_text_remake_paragraph_quotes" id="MY6`0r5+aDx)=sm]:)*O">
-                        <field name="TEXT">&lt;:track_next:1505295937856213072&gt; Pour plus d'information vous avez mon site internet et mon serveurs de support.</field>
-                      </block>
-                    </value>
-                    <value name="ADD7">
-                      <block type="s4d_newline" id="$(QERq-WSXp9qIoOyYNG"></block>
-                    </value>
-                    <value name="ADD8">
-                      <block type="jg_text_remake_paragraph_quotes" id="5%~36{)P@7FcK{1?cR:#">
-                        <field name="TEXT">-# [Website](https://logoto.onrender.com/index-en), [Support server](https://discord.gg/TPXFVYVnXe), &lt;#</field>
-                      </block>
-                    </value>
-                    <value name="ADD9">
-                      <block type="server_attributes" id="PFuTwjGiRVbrN=2:L)_I">
-                        <field name="attributes">SYS_CHANNEL_ID</field>
-                        <value name="server">
-                          <block type="s4d_get_server" id="q_x}pO*Nzjzj0B7d`tP@">
-                            <field name="SEARCH_TYPE">ID</field>
-                            <value name="VALUE">
-                              <block type="s4d_add_server_id" id=";?t]pO6G-5dF*G|t{%Fh"></block>
-                            </value>
-                          </block>
-                        </value>
-                      </block>
-                    </value>
-                    <value name="ADD10">
-                      <block type="jg_text_remake_paragraph_quotes" id="r5Y)I.yKTm.F0Ut7z7{:">
-                        <field name="TEXT">&gt;.</field>
-                      </block>
-                    </value>
-                  </block>
+              <block type="jg_channel_get_last_messages_in_channel_then" id=":,mzt!7bQ9i^Px5[c_J)">
+                <value name="AMOUNT">
+                  <shadow type="math_number" id="l%y|-l00xPAP?^fF#4]t">
+                    <field name="NUM">1</field>
+                  </shadow>
                 </value>
-                <value name="MEMBER">
-                  <block type="jg_members_get_member_by_id" id="Z)7Z@NHDc.[A|I_MMDDb">
-                    <value name="ID">
-                      <shadow type="text" id="dS6ujp35)%Q,n9w8ilNP">
-                        <field name="TEXT">12345</field>
-                      </shadow>
-                      <block type="s4d_server_owner" id="4/_p313t3I#(xH}n3eQ?">
-                        <value name="SERVER">
-                          <block type="s4d_get_server" id="yaM5++EJwe[QRE*;0:v_">
-                            <field name="SEARCH_TYPE">ID</field>
-                            <value name="VALUE">
-                              <block type="s4d_add_server_id" id="[w=@UD$==c|olrk3Ak?."></block>
-                            </value>
-                          </block>
+                <value name="CHANNEL">
+                  <block type="server_attributes" id="[G%{+.,^MEreksOxXNUA">
+                    <field name="attributes">SYS_CHANNEL</field>
+                    <value name="server">
+                      <block type="s4d_get_server" id="#PmhVoo-6RblQre[%;Jv">
+                        <field name="SEARCH_TYPE">ID</field>
+                        <value name="VALUE">
+                          <block type="s4d_add_server_id" id="k^-mk_t]V]0czN.QG;PS"></block>
                         </value>
                       </block>
                     </value>
                   </block>
                 </value>
+                <statement name="STATEMENTS">
+                  <block type="s4d_send_member" id="pP%Gf[p5OojY;UwV.CfV">
+                    <value name="CONTENT">
+                      <block type="text_join" id="3AxROSd9N2Qnrtx^uUAp">
+                        <mutation items="14"></mutation>
+                        <value name="ADD0">
+                          <block type="jg_text_remake_paragraph_quotes" id="G0X{KODHF=tuDuz3:4?I">
+                            <field name="TEXT">&lt;:loudspeaker:1505590722798293253&gt; **I thank the </field>
+                          </block>
+                        </value>
+                        <value name="ADD1">
+                          <block type="s4d_add_server_name" id="Bl$Cimjr-3Ou@1cxsY84"></block>
+                        </value>
+                        <value name="ADD2">
+                          <block type="jg_text_remake_paragraph_quotes" id="5!8nd[bCmA?(0*l/k)x;">
+                            <field name="TEXT"> Discord server team.**</field>
+                          </block>
+                        </value>
+                        <value name="ADD3">
+                          <block type="s4d_newline" id="xC1Z8Egn$1OA:L]TYDg6"></block>
+                        </value>
+                        <value name="ADD4">
+                          <block type="jg_text_remake_paragraph_quotes" id="x/WMRc1dV_5.SD0}D`Ur">
+                            <field name="TEXT">&lt;:track_next:1505295937856213072&gt; For more information, please visit my website and my support server.</field>
+                          </block>
+                        </value>
+                        <value name="ADD5">
+                          <block type="s4d_newline" id="Go;2.$^X,n]wv6O{I.M6"></block>
+                        </value>
+                        <value name="ADD6">
+                          <block type="jg_text_remake_paragraph_quotes" id="MY6`0r5+aDx)=sm]:)*O">
+                            <field name="TEXT">&lt;:track_next:1505295937856213072&gt; Pour plus d'information vous avez mon site internet et mon serveurs de support.</field>
+                          </block>
+                        </value>
+                        <value name="ADD7">
+                          <block type="s4d_newline" id="$(QERq-WSXp9qIoOyYNG"></block>
+                        </value>
+                        <value name="ADD8">
+                          <block type="jg_text_remake_paragraph_quotes" id="5%~36{)P@7FcK{1?cR:#">
+                            <field name="TEXT">-# &lt;:link:1505215573364047913&gt; [Website](https://logoto.onrender.com/index-en), [Support server](https://discord.gg/TPXFVYVnXe), https://discord.com/channels/</field>
+                          </block>
+                        </value>
+                        <value name="ADD9">
+                          <block type="s4d_add_server_id" id="{P0)wL_iA*9##L7lHa]+"></block>
+                        </value>
+                        <value name="ADD10">
+                          <block type="jg_text_remake_paragraph_quotes" id="b(q0CkvLt;F#fVk2RBx~">
+                            <field name="TEXT">/</field>
+                          </block>
+                        </value>
+                        <value name="ADD11">
+                          <block type="s4d_channel_id" id="L8VQ==H~_[$lM]4q6~bS">
+                            <value name="CHANNEL">
+                              <block type="jg_messages_value_dropdown_content_of_message" id="*oXT7ZVC/HFYmEt%p,W_">
+                                <field name="TYPE">channel</field>
+                                <value name="MSG">
+                                  <block type="jg_channel_last_message_number" id="xi-E~h_~xC]mZEw,ADxR">
+                                    <value name="INDEX">
+                                      <shadow type="math_number" id="4/jfQ$IiQBEl8$b$N61F">
+                                        <field name="NUM">1</field>
+                                      </shadow>
+                                    </value>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <value name="ADD12">
+                          <block type="jg_text_remake_paragraph_quotes" id="r5Y)I.yKTm.F0Ut7z7{:">
+                            <field name="TEXT">/</field>
+                          </block>
+                        </value>
+                        <value name="ADD13">
+                          <block type="jg_messages_value_dropdown_content_of_message" id=":*4Cg#:P`#W$dK:^]v6w">
+                            <field name="TYPE">id</field>
+                            <value name="MSG">
+                              <block type="jg_channel_last_message_number" id="9M!45a4*1=W8lui^#cjj">
+                                <value name="INDEX">
+                                  <shadow type="math_number" id="{vDf.A%69/w$6[:VTw3-">
+                                    <field name="NUM">1</field>
+                                  </shadow>
+                                </value>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <value name="MEMBER">
+                      <block type="jg_members_get_member_by_id" id="Z)7Z@NHDc.[A|I_MMDDb">
+                        <value name="ID">
+                          <shadow type="text" id="dS6ujp35)%Q,n9w8ilNP">
+                            <field name="TEXT">12345</field>
+                          </shadow>
+                          <block type="s4d_server_owner" id="4/_p313t3I#(xH}n3eQ?">
+                            <value name="SERVER">
+                              <block type="s4d_get_server" id="yaM5++EJwe[QRE*;0:v_">
+                                <field name="SEARCH_TYPE">ID</field>
+                                <value name="VALUE">
+                                  <block type="s4d_add_server_id" id="[w=@UD$==c|olrk3Ak?."></block>
+                                </value>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                  </block>
+                </statement>
               </block>
             </next>
           </block>
