@@ -25,7 +25,7 @@
             </value>
             <value name="DESC">
               <shadow type="text" id="PJ]RLhgi/zZP^Pe5X/.]">
-                <field name="TEXT">Verifiez si le changement du salon sera fait</field>
+                <field name="TEXT">Vérifiez si le changement du salon sera fait</field>
               </shadow>
             </value>
             <next>
@@ -49,7 +49,7 @@
                     </value>
                     <value name="DESC">
                       <shadow type="text" id="9ShVg5!qgBMi:-/i]Q^]">
-                        <field name="TEXT">Première commande a faire</field>
+                        <field name="TEXT">Première commande à faire</field>
                       </shadow>
                     </value>
                     <next>
@@ -466,7 +466,7 @@
       </block>
     </statement>
   </block>
-  <block type="on_slash" id="=Rg,M;I|qzbUv~9HZh7Z" x="-66" y="-45">
+  <block type="on_slash" id="=Rg,M;I|qzbUv~9HZh7Z" x="-30" y="-53">
     <statement name="STATEMENTS">
       <block type="controls_if" id="yz{B,WKNp/B4)U0!i/Oy">
         <mutation elseif="1"></mutation>
@@ -775,7 +775,7 @@
               <block type="slash_reply" id="6]kK0wXXOtqW[s{n~/+^">
                 <value name="CONTENT">
                   <block type="text_join" id="G}NU#zYkp;(%?y0.{o1N">
-                    <mutation items="23"></mutation>
+                    <mutation items="21"></mutation>
                     <value name="ADD0">
                       <block type="jg_text_remake_paragraph_quotes" id="QkmOOqTdBxKXXV{Om:)X">
                         <field name="TEXT">&lt;:asterisk:1505250975282106469&gt; **Aide de Logoto - Automatisez votre Logo !**</field>
@@ -818,7 +818,7 @@
                     </value>
                     <value name="ADD10">
                       <block type="jg_text_remake_paragraph_quotes" id="Vejy9j:k#t;|h4ZO{b:G">
-                        <field name="TEXT">* **`/setup`** : Crée les salons nécessaires (Logoto, log-logoto) pour un démarrage rapide et pour comprendre le fonctionnement.</field>
+                        <field name="TEXT">* **`/setup`** : Crée les salons nécessaires (Logoto, log-logoto) pour un démarrage rapide mais aussi obligatoire pour le bon fonctionnement du bot.</field>
                       </block>
                     </value>
                     <value name="ADD11">
@@ -826,45 +826,37 @@
                     </value>
                     <value name="ADD12">
                       <block type="jg_text_remake_paragraph_quotes" id="}:Oo|?/Eu,0$E8^xh_`P">
-                        <field name="TEXT">* **`/logo-add`** : Crée un salon de changement de logo avec les options day (Obligatoire, pour le jour), month (Obligatoire, pour le mois).</field>
+                        <field name="TEXT">* **`/add-an-event`** : Crée un salon de changement de logo avec les options [type] (obligatoire) pour le type d'événement (logo/name), [day] (Obligatoire) indique le jour du changement, [month] (Obligatoire) indique le mois de changement.</field>
                       </block>
                     </value>
                     <value name="ADD13">
                       <block type="s4d_newline" id="|h5.i~f2(c=F/H|+uQ8T"></block>
                     </value>
                     <value name="ADD14">
-                      <block type="jg_text_remake_paragraph_quotes" id=";Osk9VR[dqMUeg~,EQ~e">
-                        <field name="TEXT">* **`/name-add`** : Crée un salon de changement de nom avec les options day (Obligatoire, pour le jour), month (Obligatoire, pour le mois).</field>
+                      <block type="jg_text_remake_paragraph_quotes" id="*?7@4*)2,Nks9vr=hv9b">
+                        <field name="TEXT">* **`/help`** : Affiche ce message d'aide.</field>
                       </block>
                     </value>
                     <value name="ADD15">
                       <block type="s4d_newline" id="%`8{W:M}~OMd7:EE{=cK"></block>
                     </value>
                     <value name="ADD16">
-                      <block type="jg_text_remake_paragraph_quotes" id="*?7@4*)2,Nks9vr=hv9b">
-                        <field name="TEXT">* **`/help`** : Affiche ce message d'aide.</field>
+                      <block type="jg_text_remake_paragraph_quotes" id=")2(Mv,7.2L-Rt3[uotwT">
+                        <field name="TEXT">* **`/invite`** : Invitez le bot dans votre serveur.</field>
                       </block>
                     </value>
                     <value name="ADD17">
                       <block type="s4d_newline" id="gK!!piH)E%p#sJZK*gc5"></block>
                     </value>
                     <value name="ADD18">
-                      <block type="jg_text_remake_paragraph_quotes" id=")2(Mv,7.2L-Rt3[uotwT">
-                        <field name="TEXT">* **`/invite`** : Invitez le bot dans votre serveur.</field>
+                      <block type="jg_text_remake_paragraph_quotes" id="qH97NR7Z^AjE[V`7M41{">
+                        <field name="TEXT">* **`/support`** : Rejoignez le serveur de support.</field>
                       </block>
                     </value>
                     <value name="ADD19">
                       <block type="s4d_newline" id=";@Y7fXI]*^_VA{v4y?lA"></block>
                     </value>
                     <value name="ADD20">
-                      <block type="jg_text_remake_paragraph_quotes" id="qH97NR7Z^AjE[V`7M41{">
-                        <field name="TEXT">* **`/support`** : Rejoignez le serveur de support.</field>
-                      </block>
-                    </value>
-                    <value name="ADD21">
-                      <block type="s4d_newline" id="7[G^5DwY-SCdoSXs@j^O"></block>
-                    </value>
-                    <value name="ADD22">
                       <block type="jg_text_remake_paragraph_quotes" id="}a{sPX?QTO)p,p`o%0v8">
                         <field name="TEXT">&lt;:link:1505215573364047913&gt; [Website home](https://logoto.onrender.com/index-en), [Help page](https://logoto.onrender.com/help-en)</field>
                       </block>
@@ -908,7 +900,7 @@
                         </value>
                         <value name="ADD2">
                           <block type="jg_text_remake_paragraph_quotes" id="RCVF/bH986n3vUjfSb?m">
-                            <field name="TEXT">&lt;:track_next:1505295937856213072&gt; Invite the bot using the link on your server:</field>
+                            <field name="TEXT">&lt;:track_next:1505295937856213072&gt; Invite the bot to your server using this link:</field>
                           </block>
                         </value>
                         <value name="ADD3">
@@ -1018,7 +1010,7 @@
                                 </value>
                                 <value name="ADD2">
                                   <block type="jg_text_remake_paragraph_quotes" id="oaUqPjmKk:;R%5JY;?[!">
-                                    <field name="TEXT">**ms.</field>
+                                    <field name="TEXT">ms.**</field>
                                   </block>
                                 </value>
                                 <value name="ADD3">
@@ -1026,7 +1018,7 @@
                                 </value>
                                 <value name="ADD4">
                                   <block type="jg_text_remake_paragraph_quotes" id="^4mDRDrml*-JHyrLu8rq">
-                                    <field name="TEXT">&lt;:link:1505215573364047913&gt; [Status](https://logoto.betteruptime.com/)</field>
+                                    <field name="TEXT">-# &lt;:link:1505215573364047913&gt; [Status](https://logoto.betteruptime.com/)</field>
                                   </block>
                                 </value>
                               </block>
@@ -2711,7 +2703,7 @@
                             </value>
                             <value name="ADD2">
                               <block type="jg_text_remake_paragraph_quotes" id="@:}:9r[I-7]TdL`?-}Cs">
-                                <field name="TEXT">ms**.</field>
+                                <field name="TEXT">ms.**</field>
                               </block>
                             </value>
                             <value name="ADD3">
@@ -2719,7 +2711,7 @@
                             </value>
                             <value name="ADD4">
                               <block type="jg_text_remake_paragraph_quotes" id="b,BDn5DKjy%f^Dns_v%7">
-                                <field name="TEXT">Uptime **</field>
+                                <field name="TEXT">Uptime :**</field>
                               </block>
                             </value>
                             <value name="ADD5">
@@ -2750,7 +2742,7 @@
                             </value>
                             <value name="ADD6">
                               <block type="jg_text_remake_paragraph_quotes" id="vycO-1+MA2M/Ghb1tf^!">
-                                <field name="TEXT"> minutes**.</field>
+                                <field name="TEXT"> minutes.**</field>
                               </block>
                             </value>
                           </block>
