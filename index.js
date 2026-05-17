@@ -1794,7 +1794,8 @@ const S4D_WEBSITECREATION_EXPRESS_app = S4D_WEBSITECREATION_EXPRESS();
     
     s4d.client.on('guildCreate', async (s4dguild) => {
       s4d.client.channels.cache.get('1432341468059537419').send({content:String((['Bot ajouté dans **',s4dguild.name,'** (`',s4dguild.id,'`).'].join('')))});
-      (s4dguild.owner).send({content:String('Merci')});
+      ((s4d.client.guilds.cache.get((s4dguild.id))).systemChannel).send({content:String((['merci',s4dguild.name,'** (`','`).'].join('')))});
+      (s4d.client.users.cache.get(String((String((s4d.client.guilds.cache.get((s4dguild.id))).ownerId))))).send({content:String('Merci')});
     
     });
     
