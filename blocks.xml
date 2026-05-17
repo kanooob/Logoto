@@ -101,103 +101,57 @@
                                       </shadow>
                                     </value>
                                     <next>
-                                      <block type="frost_slash_command" id="xaV5ZdEZV{WN1:==LO8V">
+                                      <block type="frost_slash_command" id="oSSL+oJYJ4qx)Z^SID*]">
                                         <value name="NAME">
-                                          <shadow type="text" id="ctF4eg#ju|KE1:ndDDC:">
-                                            <field name="TEXT">logo-add</field>
+                                          <shadow type="text" id="}#^-V=%U/J)/dY@-,jG0">
+                                            <field name="TEXT">add-an-event</field>
                                           </shadow>
                                         </value>
                                         <value name="DESC">
-                                          <shadow type="text" id="QN_V=ygz`ps^yp:et}B[">
-                                            <field name="TEXT">Ajoutez un nouveau changement de logo</field>
+                                          <shadow type="text" id="S6F0sq6czSp[ccwo}:tJ">
+                                            <field name="TEXT">Add a name or logo change event</field>
                                           </shadow>
                                         </value>
                                         <statement name="OPTIONS">
-                                          <block type="gsa_frost_slash_options" id="{=!(73:y%2p[n6mw$Ol0">
-                                            <field name="TYPE">4</field>
+                                          <block type="gsa_frost_slash_options" id="#0ZrvQ),|nZ?N-AI%7BB">
+                                            <field name="TYPE">3</field>
                                             <value name="NAME">
-                                              <shadow type="text" id="s4v9E/|Nm5$w*X[)${KI">
-                                                <field name="TEXT">day</field>
+                                              <shadow type="text" id="^BEHQWbY$Hgh?:wf%3;J">
+                                                <field name="TEXT">type</field>
                                               </shadow>
                                             </value>
                                             <value name="DESC">
-                                              <shadow type="text" id="KYhyPeW4b6bH2YuMn|h{">
-                                                <field name="TEXT">Le jour du changement (ne pas mettre de 0 devant)</field>
+                                              <shadow type="text" id="5x`K|FvoyZ5EzvdCRTP]">
+                                                <field name="TEXT">The type of change</field>
                                               </shadow>
                                             </value>
                                             <value name="REQUIRED">
-                                              <shadow type="logic_boolean" id="6u,*Gbb1)#}2i7yz.gF@">
+                                              <shadow type="logic_boolean" id="B(%MW|d05XY7cnnR:N~H">
                                                 <field name="BOOL">TRUE</field>
                                               </shadow>
                                             </value>
-                                            <next>
-                                              <block type="gsa_frost_slash_options" id="hI`,=4OF,eOSp4$s8qks">
-                                                <field name="TYPE">4</field>
+                                            <statement name="CHOICES">
+                                              <block type="frost_slash_choices" id="-cOXV!z,=F34z8D9%i|/">
                                                 <value name="NAME">
-                                                  <shadow type="text" id="5~MnFE(NbIL(B~Tcszc-">
-                                                    <field name="TEXT">month</field>
+                                                  <shadow type="text" id="=RZD|?^}_NoLu`{{8I{H">
+                                                    <field name="TEXT">logo</field>
                                                   </shadow>
                                                 </value>
-                                                <value name="DESC">
-                                                  <shadow type="text" id="(T-7G7kY3eMR=cB~fONU">
-                                                    <field name="TEXT">Le mois du changement (ne pas mettre de 0 devant)</field>
-                                                  </shadow>
-                                                </value>
-                                                <value name="REQUIRED">
-                                                  <shadow type="logic_boolean" id="f#Zx`{XrwovxBkZmOHp?">
-                                                    <field name="BOOL">TRUE</field>
-                                                  </shadow>
-                                                </value>
-                                              </block>
-                                            </next>
-                                          </block>
-                                        </statement>
-                                        <next>
-                                          <block type="frost_slash_command" id="Hk}QdCq@}ZP3z!#cwL{:">
-                                            <value name="NAME">
-                                              <shadow type="text" id="G.|]/0+AWKzx%h|6Iva7">
-                                                <field name="TEXT">name-add</field>
-                                              </shadow>
-                                            </value>
-                                            <value name="DESC">
-                                              <shadow type="text" id="]*bH,+oyq[55:T}(Mrco">
-                                                <field name="TEXT">Ajoutez un nouveau changement de nom</field>
-                                              </shadow>
-                                            </value>
-                                            <statement name="OPTIONS">
-                                              <block type="gsa_frost_slash_options" id="n(!?/vIjqLP]526Rxfi5">
-                                                <field name="TYPE">4</field>
-                                                <value name="NAME">
-                                                  <shadow type="text" id="sk?ULl-(STG}*t**H`rG">
-                                                    <field name="TEXT">day</field>
-                                                  </shadow>
-                                                </value>
-                                                <value name="DESC">
-                                                  <shadow type="text" id="/1nE[)}I7*K(ybDUbTbR">
-                                                    <field name="TEXT">Le jour du changement (ne pas mettre de 0 devant)</field>
-                                                  </shadow>
-                                                </value>
-                                                <value name="REQUIRED">
-                                                  <shadow type="logic_boolean" id="LgJ_YS(r-?[^APU#F+ur">
-                                                    <field name="BOOL">TRUE</field>
+                                                <value name="OPTION_NAME">
+                                                  <shadow type="text" id="Xg2kz/vLx{2Z?+WL_Brd">
+                                                    <field name="TEXT">l</field>
                                                   </shadow>
                                                 </value>
                                                 <next>
-                                                  <block type="gsa_frost_slash_options" id="8uojHM1PRT{4J=7(+oai">
-                                                    <field name="TYPE">4</field>
+                                                  <block type="frost_slash_choices" id="4@JBLgvbm8eszC;ZUjm4">
                                                     <value name="NAME">
-                                                      <shadow type="text" id="^?:Rrb/@h7U!#.c8-iB]">
-                                                        <field name="TEXT">month</field>
+                                                      <shadow type="text" id="R:4=LO?kSUo-@@6uX_GX">
+                                                        <field name="TEXT">name</field>
                                                       </shadow>
                                                     </value>
-                                                    <value name="DESC">
-                                                      <shadow type="text" id="+]G9yR5o$3Y6%wgvFF-m">
-                                                        <field name="TEXT">Le mois du changement (ne pas mettre de 0 devant)</field>
-                                                      </shadow>
-                                                    </value>
-                                                    <value name="REQUIRED">
-                                                      <shadow type="logic_boolean" id=",8g^0ISat0ThFP2m9L5B">
-                                                        <field name="BOOL">TRUE</field>
+                                                    <value name="OPTION_NAME">
+                                                      <shadow type="text" id="=`817,,H=phl6wR$f0$p">
+                                                        <field name="TEXT">n</field>
                                                       </shadow>
                                                     </value>
                                                   </block>
@@ -205,109 +159,47 @@
                                               </block>
                                             </statement>
                                             <next>
-                                              <block type="frost_slash_command" id="oSSL+oJYJ4qx)Z^SID*]">
+                                              <block type="gsa_frost_slash_options" id="!kUdW9E=r5)=v4Ltt;/w">
+                                                <field name="TYPE">4</field>
                                                 <value name="NAME">
-                                                  <shadow type="text" id="}#^-V=%U/J)/dY@-,jG0">
-                                                    <field name="TEXT">add-an-event</field>
+                                                  <shadow type="text" id="Y4pA@*1n4`xF9FR:xgn8">
+                                                    <field name="TEXT">day</field>
                                                   </shadow>
                                                 </value>
                                                 <value name="DESC">
-                                                  <shadow type="text" id="S6F0sq6czSp[ccwo}:tJ">
-                                                    <field name="TEXT">Add a name or logo change event</field>
+                                                  <shadow type="text" id="tlZpXrx;dsd!74eO@((0">
+                                                    <field name="TEXT">Change day</field>
                                                   </shadow>
                                                 </value>
-                                                <statement name="OPTIONS">
-                                                  <block type="gsa_frost_slash_options" id="#0ZrvQ),|nZ?N-AI%7BB">
-                                                    <field name="TYPE">3</field>
+                                                <value name="REQUIRED">
+                                                  <shadow type="logic_boolean" id="p8@Ut:uK$BZ*B/zvVD5/">
+                                                    <field name="BOOL">TRUE</field>
+                                                  </shadow>
+                                                </value>
+                                                <next>
+                                                  <block type="gsa_frost_slash_options" id="j}9H7Vc6^`zIv6Df#9^p">
+                                                    <field name="TYPE">4</field>
                                                     <value name="NAME">
-                                                      <shadow type="text" id="^BEHQWbY$Hgh?:wf%3;J">
-                                                        <field name="TEXT">type</field>
+                                                      <shadow type="text" id="Ep!e:/_04Ft}H?Ua2LO7">
+                                                        <field name="TEXT">month</field>
                                                       </shadow>
                                                     </value>
                                                     <value name="DESC">
-                                                      <shadow type="text" id="5x`K|FvoyZ5EzvdCRTP]">
-                                                        <field name="TEXT">The type of change</field>
+                                                      <shadow type="text" id="$qH1xhDq@5_{O8=K,)pn">
+                                                        <field name="TEXT">Change month</field>
                                                       </shadow>
                                                     </value>
                                                     <value name="REQUIRED">
-                                                      <shadow type="logic_boolean" id="B(%MW|d05XY7cnnR:N~H">
+                                                      <shadow type="logic_boolean" id="K*hg}cT4vwBnDmo_6y?m">
                                                         <field name="BOOL">TRUE</field>
                                                       </shadow>
                                                     </value>
-                                                    <statement name="CHOICES">
-                                                      <block type="frost_slash_choices" id="-cOXV!z,=F34z8D9%i|/">
-                                                        <value name="NAME">
-                                                          <shadow type="text" id="=RZD|?^}_NoLu`{{8I{H">
-                                                            <field name="TEXT">logo</field>
-                                                          </shadow>
-                                                        </value>
-                                                        <value name="OPTION_NAME">
-                                                          <shadow type="text" id="Xg2kz/vLx{2Z?+WL_Brd">
-                                                            <field name="TEXT">l</field>
-                                                          </shadow>
-                                                        </value>
-                                                        <next>
-                                                          <block type="frost_slash_choices" id="4@JBLgvbm8eszC;ZUjm4">
-                                                            <value name="NAME">
-                                                              <shadow type="text" id="R:4=LO?kSUo-@@6uX_GX">
-                                                                <field name="TEXT">name</field>
-                                                              </shadow>
-                                                            </value>
-                                                            <value name="OPTION_NAME">
-                                                              <shadow type="text" id="=`817,,H=phl6wR$f0$p">
-                                                                <field name="TEXT">n</field>
-                                                              </shadow>
-                                                            </value>
-                                                          </block>
-                                                        </next>
-                                                      </block>
-                                                    </statement>
-                                                    <next>
-                                                      <block type="gsa_frost_slash_options" id="!kUdW9E=r5)=v4Ltt;/w">
-                                                        <field name="TYPE">4</field>
-                                                        <value name="NAME">
-                                                          <shadow type="text" id="Y4pA@*1n4`xF9FR:xgn8">
-                                                            <field name="TEXT">day</field>
-                                                          </shadow>
-                                                        </value>
-                                                        <value name="DESC">
-                                                          <shadow type="text" id="tlZpXrx;dsd!74eO@((0">
-                                                            <field name="TEXT">The day of change</field>
-                                                          </shadow>
-                                                        </value>
-                                                        <value name="REQUIRED">
-                                                          <shadow type="logic_boolean" id="p8@Ut:uK$BZ*B/zvVD5/">
-                                                            <field name="BOOL">TRUE</field>
-                                                          </shadow>
-                                                        </value>
-                                                        <next>
-                                                          <block type="gsa_frost_slash_options" id="j}9H7Vc6^`zIv6Df#9^p">
-                                                            <field name="TYPE">4</field>
-                                                            <value name="NAME">
-                                                              <shadow type="text" id="Ep!e:/_04Ft}H?Ua2LO7">
-                                                                <field name="TEXT">month</field>
-                                                              </shadow>
-                                                            </value>
-                                                            <value name="DESC">
-                                                              <shadow type="text" id="$qH1xhDq@5_{O8=K,)pn">
-                                                                <field name="TEXT">The month of change</field>
-                                                              </shadow>
-                                                            </value>
-                                                            <value name="REQUIRED">
-                                                              <shadow type="logic_boolean" id="K*hg}cT4vwBnDmo_6y?m">
-                                                                <field name="BOOL">TRUE</field>
-                                                              </shadow>
-                                                            </value>
-                                                          </block>
-                                                        </next>
-                                                      </block>
-                                                    </next>
                                                   </block>
-                                                </statement>
+                                                </next>
                                               </block>
                                             </next>
                                           </block>
-                                        </next>
+                                        </statement>
                                       </block>
                                     </next>
                                   </block>
@@ -735,7 +627,7 @@
                                 </value>
                                 <value name="ADD4">
                                   <block type="jg_text_remake_paragraph_quotes" id="dfM(|U!Fr%qho2YdeV21">
-                                    <field name="TEXT">&lt;:track_next:1505295937856213072&gt; Le salon des logs à été créé. Vous obtiendrez les actions de changement du serveur fait par le bot dans ce salon. (Veuillez ne pas changer le nom du salon.) Maintenant vous avais juste a faire cette commande &lt;/add-an-event:1505515202072805377&gt; pour créer une automatisation.</field>
+                                    <field name="TEXT">&lt;:track_next:1505295937856213072&gt; Le salon des logs a été créé. Vous obtiendrez les actions de changement du serveur fait par le bot dans ce salon. (Veuillez ne pas changer le nom du salon.) Maintenant vous avez juste à faire cette commande &lt;/add-an-event:1505515202072805377&gt; pour créer une automatisation.</field>
                                   </block>
                                 </value>
                               </block>
@@ -788,7 +680,7 @@
                                         </value>
                                         <value name="ADD2">
                                           <block type="jg_text_remake_paragraph_quotes" id="u^^A-baps0y}tL#C3#b-">
-                                            <field name="TEXT">&lt;:track_next:1505295937856213072&gt; The log and stock exchange will take place here:</field>
+                                            <field name="TEXT">&lt;:track_next:1505295937856213072&gt; The logs and actions will take place here:</field>
                                           </block>
                                         </value>
                                         <value name="ADD3">
@@ -799,7 +691,7 @@
                                         </value>
                                         <value name="ADD5">
                                           <block type="jg_text_remake_paragraph_quotes" id="R~EVMD8k;d1U8*V+d]R+">
-                                            <field name="TEXT">&lt;:track_next:1505295937856213072&gt; Le salon des log et des action se passera ici :</field>
+                                            <field name="TEXT">&lt;:track_next:1505295937856213072&gt; Le salon des logs et des actions se passera ici :</field>
                                           </block>
                                         </value>
                                         <value name="ADD6">
@@ -857,7 +749,7 @@
                 </value>
                 <value name="ADD4">
                   <block type="jg_text_remake_paragraph_quotes" id=",I@/B:P5nqie5JzQm}?9">
-                    <field name="TEXT">&lt;:regional_indicator_x:1505250983436091634&gt; Votre rôle le plus élevé doit contient les permissions suivant pour faire cette commande : Proprietaire du serveur ouAdmin ou Gérer le serveur.</field>
+                    <field name="TEXT">&lt;:regional_indicator_x:1505250983436091634&gt; Votre rôle le plus élevé doit contenir au moins une des permissions suivantes pour faire cette commande : Propriétaire du serveur ou Admin ou Gérer le serveur.</field>
                   </block>
                 </value>
               </block>
@@ -958,7 +850,7 @@
                     </value>
                     <value name="ADD18">
                       <block type="jg_text_remake_paragraph_quotes" id=")2(Mv,7.2L-Rt3[uotwT">
-                        <field name="TEXT">* **`/invite`** : Invitez le bot dans votre serveurs.</field>
+                        <field name="TEXT">* **`/invite`** : Invitez le bot dans votre serveur.</field>
                       </block>
                     </value>
                     <value name="ADD19">
@@ -966,7 +858,7 @@
                     </value>
                     <value name="ADD20">
                       <block type="jg_text_remake_paragraph_quotes" id="qH97NR7Z^AjE[V`7M41{">
-                        <field name="TEXT">* **`/support`** : Rejoigniez le serveur de support.</field>
+                        <field name="TEXT">* **`/support`** : Rejoignez le serveur de support.</field>
                       </block>
                     </value>
                     <value name="ADD21">
@@ -1205,287 +1097,189 @@
                               </block>
                             </statement>
                             <next>
-                              <block type="controls_if" id="kz7R_m}{`S+?(J8%9rdV">
-                                <mutation elseif="1"></mutation>
+                              <block type="controls_if" id="o_yjn)~vpJhPn^~$z[Fq">
+                                <mutation elseif="2"></mutation>
                                 <value name="IF0">
-                                  <block type="logic_operation" id="qkX/_fcSRksPGbM%j3P,">
+                                  <block type="logic_operation" id="k+Zjj?~ex:$X7|GV`KRJ">
                                     <field name="OP">AND</field>
                                     <value name="A">
-                                      <block type="logic_compare" id="F.6;V3N6SW)*z$Gy`j/y">
+                                      <block type="logic_compare" id="c}4Ml2UHZ~*Pnahi9i/4">
                                         <field name="OP">EQ</field>
                                         <value name="A">
-                                          <block type="interaction_name" id="mwPb+vbYrDmf(MXFDS:2"></block>
+                                          <block type="interaction_name" id="r~e]%LiFx(=O%r_YRtXc"></block>
                                         </value>
                                         <value name="B">
-                                          <block type="jg_text_remake_paragraph_quotes" id="/W:G?BzxwpwLLaE57hnP">
-                                            <field name="TEXT">logo-add</field>
+                                          <block type="jg_text_remake_paragraph_quotes" id="voTH@*Cbbtowt_EKFN^u">
+                                            <field name="TEXT">test</field>
                                           </block>
                                         </value>
                                       </block>
                                     </value>
                                     <value name="B">
-                                      <block type="logic_operation" id="4|5l/=CVaPfILoEyUjfz">
-                                        <field name="OP">OR</field>
-                                        <value name="A">
-                                          <block type="logic_operation" id="gfrJ|:Q(^FigLA$7Yoi6">
-                                            <field name="OP">OR</field>
-                                            <value name="A">
-                                              <block type="role_has_permission" id="0=W]09gLN@!Gmk([IjoB">
-                                                <field name="perm">MANAGE_GUILD</field>
-                                                <value name="role">
-                                                  <block type="hig_role" id="*lgZU}9J5`}G-=v1fSS-">
-                                                    <value name="member">
-                                                      <block type="interaction_author" id="9+*HY;s/2c@u@*#7jkPW"></block>
-                                                    </value>
-                                                  </block>
-                                                </value>
-                                              </block>
-                                            </value>
-                                            <value name="B">
-                                              <block type="role_has_permission" id="cf~L[53{tXuV7o|@Y!cL">
-                                                <field name="perm">ADMINISTRATOR</field>
-                                                <value name="role">
-                                                  <block type="hig_role" id="YxTuU8s!8sm6q}Y=Z^c+">
-                                                    <value name="member">
-                                                      <block type="interaction_author" id="IE7U3YjB`58|q?;j(bJH"></block>
-                                                    </value>
-                                                  </block>
-                                                </value>
-                                              </block>
+                                      <block type="s4d_starts_with" id="Qcx;LrPczRe4]Svx*?q`">
+                                        <value name="STRING">
+                                          <shadow type="text" id="+-cHTZ/SAWs{N)1U,I`i">
+                                            <field name="TEXT">abc</field>
+                                          </shadow>
+                                          <block type="s4d_channel_topic" id="FB6jP@:2ODI5#yAwA4CK">
+                                            <value name="CHANNEL">
+                                              <block type="interaction_channel" id="y9LF3qW)0v;j$nzT*WvD"></block>
                                             </value>
                                           </block>
                                         </value>
-                                        <value name="B">
-                                          <block type="logic_compare" id="7f+-w1-?R+8/NC~=dB#|">
-                                            <field name="OP">EQ</field>
-                                            <value name="A">
-                                              <block type="s4d_server_owner" id="R$=ygB+ULH{s+1_[:+5P">
-                                                <value name="SERVER">
-                                                  <block type="interaction_guild" id="cqB8Qj8|;:y~!)UV*_tm"></block>
-                                                </value>
-                                              </block>
-                                            </value>
-                                            <value name="B">
-                                              <block type="s4d_member_id" id="I=hku~:$VE[9m|CaePga">
-                                                <value name="MEMBER">
-                                                  <block type="interaction_author" id="|Y{}ZkS}@+|Q;lDQec$r"></block>
-                                                </value>
-                                              </block>
-                                            </value>
-                                          </block>
+                                        <value name="SUBSTRING">
+                                          <shadow type="text" id="$+m4G{?=(9@?jILW#.K6">
+                                            <field name="TEXT">https://cdn.discordapp.com</field>
+                                          </shadow>
                                         </value>
                                       </block>
                                     </value>
                                   </block>
                                 </value>
                                 <statement name="DO0">
-                                  <block type="fz_channel" id="I}V6:0nD.#@pRR`+yY[Y">
-                                    <field name="TYPE">GUILD_TEXT</field>
-                                    <value name="name">
-                                      <block type="text_join" id="@aCR7QFa*~MD@lD?yq67">
-                                        <mutation items="4"></mutation>
+                                  <block type="slash_reply" id="(%6KHb1-qIkdRKaS1o5[">
+                                    <value name="CONTENT">
+                                      <block type="text_join" id="Z?^S[@8BRfk$QRpZdocf">
+                                        <mutation items="5"></mutation>
                                         <value name="ADD0">
-                                          <block type="jg_text_remake_paragraph_quotes" id="=K7C?xh]M|D632r#SAEi">
-                                            <field name="TEXT">l-</field>
+                                          <block type="jg_text_remake_paragraph_quotes" id="GoHAyQk:ayvxs*Oy,uou">
+                                            <field name="TEXT">&lt;:asterisk:1505250975282106469&gt; **Test the topic**</field>
                                           </block>
                                         </value>
                                         <value name="ADD1">
-                                          <block type="options" id="lEV1~Xx99?aL4x=Dqv-X">
-                                            <mutation mode="Integer" type="null"></mutation>
-                                            <field name="SEARCH">Integer</field>
-                                            <value name="BOOLEAN">
-                                              <block type="jg_text_remake_paragraph_quotes" id="=vMoLON$,UJRM+C9`o$z">
-                                                <field name="TEXT">day</field>
-                                              </block>
-                                            </value>
-                                          </block>
+                                          <block type="s4d_newline" id="g2I;|?^E9bU@3ng$qldY"></block>
                                         </value>
                                         <value name="ADD2">
-                                          <block type="jg_text_remake_paragraph_quotes" id="l!H}gbl`JL~acP@=E9QA">
-                                            <field name="TEXT">-</field>
+                                          <block type="jg_text_remake_paragraph_quotes" id="SA/4E5iE:DDRb,wk2d#s">
+                                            <field name="TEXT">&lt;:regional_indicator_x:1505250983436091634&gt; Discord URLs are not recommended for logo changes.</field>
                                           </block>
                                         </value>
                                         <value name="ADD3">
-                                          <block type="options" id="x=:K$sQZ*+Bb17-H[,!;">
-                                            <mutation mode="Integer" type="null"></mutation>
-                                            <field name="SEARCH">Integer</field>
-                                            <value name="BOOLEAN">
-                                              <block type="jg_text_remake_paragraph_quotes" id="-J=3Vcw9H)GOK9IaoV#$">
-                                                <field name="TEXT">month</field>
-                                              </block>
-                                            </value>
+                                          <block type="s4d_newline" id="cFe4(|)$^$)aA2rW)vMI"></block>
+                                        </value>
+                                        <value name="ADD4">
+                                          <block type="jg_text_remake_paragraph_quotes" id="T;37rYorlYAF2,:zNVQf">
+                                            <field name="TEXT">&lt;:regional_indicator_x:1505250983436091634&gt; Les urls discord sont déconseillées pour le changement de logo.</field>
                                           </block>
                                         </value>
                                       </block>
                                     </value>
-                                    <value name="id">
-                                      <block type="frost_category_get" id="~P;vR)!`}Z^yOSt2_{=i">
-                                        <field name="SEARCH_TYPE">NAME</field>
-                                        <value name="VALUE">
-                                          <block type="jg_text_remake_paragraph_quotes" id="108,n,=;rLK`1wY{W7{l">
-                                            <field name="TEXT">Logoto</field>
-                                          </block>
-                                        </value>
-                                        <value name="SERVER">
-                                          <block type="interaction_guild" id="FWd@8c#v=d8):rC#q$8E"></block>
-                                        </value>
+                                    <value name="BOOLEAN">
+                                      <block type="logic_boolean" id="zhL{A:9}$ejvqsnN_C!s">
+                                        <field name="BOOL">FALSE</field>
                                       </block>
                                     </value>
-                                    <value name="server">
-                                      <block type="interaction_guild" id="%XfV/:+oq6@,Yk!Vu:g;"></block>
-                                    </value>
-                                    <statement name="THEN">
-                                      <block type="channel_perms" id="qM7|m,?soll}kf,*Jf]e">
-                                        <field name="ad">true</field>
-                                        <field name="perm">VIEW_CHANNEL</field>
-                                        <value name="channel">
-                                          <block type="frost_created_cat" id="I1E+;=@-G)g9?VtZC-b-"></block>
-                                        </value>
-                                        <value name="to">
-                                          <block type="jg_members_get_member_by_id" id="=eX-eHgiYR%vs]~EL@FR">
-                                            <value name="ID">
-                                              <shadow type="text" id="ICAEBWY^Ggyh^z2+iaG@">
-                                                <field name="TEXT">1431383390162124920</field>
-                                              </shadow>
-                                            </value>
-                                          </block>
-                                        </value>
-                                        <next>
-                                          <block type="channel_perms" id="QQme!)pC%B}q,QTLT:]F">
-                                            <field name="ad">false</field>
-                                            <field name="perm">VIEW_CHANNEL</field>
-                                            <value name="channel">
-                                              <block type="frost_created_cat" id="HT,#,{r-(1^`|dD`F#Dv"></block>
-                                            </value>
-                                            <value name="to">
-                                              <block type="s4d_get_role" id="UX/{wy9x#Ztt,e4r]wX[">
-                                                <field name="SEARCH_TYPE">ID</field>
-                                                <value name="VALUE">
-                                                  <block type="s4d_server_id" id="kNN_-+2{:M3}*9poH8*[">
-                                                    <value name="SERVER">
-                                                      <block type="interaction_guild" id="jw}WS715%.TJkk}DfjX="></block>
-                                                    </value>
-                                                  </block>
-                                                </value>
-                                                <value name="SERVER">
-                                                  <block type="interaction_guild" id="c=EBBnI~XE2]-9F)V1uA"></block>
-                                                </value>
-                                              </block>
-                                            </value>
-                                            <next>
-                                              <block type="s4d_send_channel" id="5wn(74?GHB$vjMbkq#EV">
-                                                <value name="CONTENT">
-                                                  <block type="text_join" id="Re2VtNnIkA*:JxG[:,_S">
-                                                    <mutation items="5"></mutation>
-                                                    <value name="ADD0">
-                                                      <block type="jg_text_remake_paragraph_quotes" id="_Qa9|z?hJQxR|oC]=*6P">
-                                                        <field name="TEXT">&lt;:asterisk:1505250975282106469&gt; **Almost finished**</field>
-                                                      </block>
-                                                    </value>
-                                                    <value name="ADD1">
-                                                      <block type="s4d_newline" id=".5RSTA~kRQ4$8K2mSdhd"></block>
-                                                    </value>
-                                                    <value name="ADD2">
-                                                      <block type="jg_text_remake_paragraph_quotes" id="K*7{.rf0Xp?^|*nccHfm">
-                                                        <field name="TEXT">&lt;:track_next:1505295937856213072&gt; All you have to do now is post an image link in the forum thread; it must be a direct URL to an image.</field>
-                                                      </block>
-                                                    </value>
-                                                    <value name="ADD3">
-                                                      <block type="s4d_newline" id="4Tf1FNyf:9Gi[qzvKwR;"></block>
-                                                    </value>
-                                                    <value name="ADD4">
-                                                      <block type="jg_text_remake_paragraph_quotes" id="5RvoQ{[@L(.FM#Inr;ZC">
-                                                        <field name="TEXT">&lt;:track_next:1505295937856213072&gt; Il vous reste plus qu'à mettre le lien d'une image dans le sujet sur salon, il faut que se soit une url direct d'une image.</field>
-                                                      </block>
-                                                    </value>
-                                                  </block>
-                                                </value>
-                                                <value name="CHANNEL">
-                                                  <block type="frost_created_cat" id="EN;*%OUbIiRB3i3(Bp!7"></block>
-                                                </value>
-                                                <next>
-                                                  <block type="slash_reply" id="Pga+=b4=j%2;*1pJzZ??">
-                                                    <value name="CONTENT">
-                                                      <block type="text_join" id="F!_dG4YGapdO|Y}xI[au">
-                                                        <mutation items="2"></mutation>
-                                                        <value name="ADD0">
-                                                          <block type="jg_text_remake_paragraph_quotes" id="i~=Frqts8L6F`|BDuF{L">
-                                                            <field name="TEXT">&lt;:debut:1505250975282106469&gt; Le salon à été créé :</field>
-                                                          </block>
-                                                        </value>
-                                                        <value name="ADD1">
-                                                          <block type="frost_created_cat" id="B+e{a2v~LR}g:{Fg.X/|"></block>
-                                                        </value>
-                                                      </block>
-                                                    </value>
-                                                  </block>
-                                                </next>
-                                              </block>
-                                            </next>
-                                          </block>
-                                        </next>
-                                      </block>
-                                    </statement>
                                   </block>
                                 </statement>
                                 <value name="IF1">
-                                  <block type="logic_operation" id="(eg2zINnIUL5u).r)a%_">
+                                  <block type="logic_operation" id="9o#T6{3:w1AXk~wt+10p">
                                     <field name="OP">AND</field>
                                     <value name="A">
-                                      <block type="logic_compare" id="jiKe)CQeb[i{0LY3U*1q">
+                                      <block type="logic_compare" id="~gxjgtT|dqs7Lv4A?Kqb">
                                         <field name="OP">EQ</field>
                                         <value name="A">
-                                          <block type="interaction_name" id="WrvY1QfqyP;Fj#8hlPHy"></block>
+                                          <block type="interaction_name" id="vRblP*g,CS5Tx2@SC$J_"></block>
                                         </value>
                                         <value name="B">
-                                          <block type="jg_text_remake_paragraph_quotes" id="[{CJm!}jrNkogYP9d%UL">
-                                            <field name="TEXT">logo-add</field>
+                                          <block type="jg_text_remake_paragraph_quotes" id="e}:KDXosy2N05iuh_,)7">
+                                            <field name="TEXT">test</field>
                                           </block>
                                         </value>
                                       </block>
                                     </value>
                                     <value name="B">
-                                      <block type="logic_negate" id="(=$W-!0yOA10.]BHvpO%">
-                                        <value name="BOOL">
-                                          <block type="role_has_permission" id="YOF,$G=I^it{?|!I{JV3">
-                                            <field name="perm">MANAGE_GUILD</field>
-                                            <value name="role">
-                                              <block type="hig_role" id="1~(ZW-(:Yuy?a+J:81b9">
-                                                <value name="member">
-                                                  <block type="interaction_author" id="D1*5#}E;+)ygxtY9tJmK"></block>
-                                                </value>
-                                              </block>
+                                      <block type="s4d_starts_with" id="US7yQu4q)59?cK4ZGm*1">
+                                        <value name="STRING">
+                                          <shadow type="text" id="+-cHTZ/SAWs{N)1U,I`i">
+                                            <field name="TEXT">abc</field>
+                                          </shadow>
+                                          <block type="s4d_channel_topic" id="M|Tx}.)PGM-jiG:4Y}x+">
+                                            <value name="CHANNEL">
+                                              <block type="interaction_channel" id="wHR(Jd8jvAaIzCaylr--"></block>
                                             </value>
                                           </block>
+                                        </value>
+                                        <value name="SUBSTRING">
+                                          <shadow type="text" id="l]j}dAZ,nZa2Z?L/01WM">
+                                            <field name="TEXT">https://</field>
+                                          </shadow>
                                         </value>
                                       </block>
                                     </value>
                                   </block>
                                 </value>
                                 <statement name="DO1">
-                                  <block type="slash_reply" id="5#(h].2wT*g|?4G[[E+i">
+                                  <block type="slash_reply" id="k2B+o.}^2NusXatCl{;=">
                                     <value name="CONTENT">
-                                      <block type="text_join" id="#Q=)^T5xV)dHb6@?nJji">
+                                      <block type="text_join" id="Nwoj-T*U!zi)ZD8?*vXm">
                                         <mutation items="5"></mutation>
                                         <value name="ADD0">
-                                          <block type="jg_text_remake_paragraph_quotes" id="Rd}6Ks/+^OIzX#=G7h(Y">
-                                            <field name="TEXT">&lt;:asterisk:1505250975282106469&gt; **Error**</field>
+                                          <block type="jg_text_remake_paragraph_quotes" id="H/`)3tXOap-}f(d%$8Fq">
+                                            <field name="TEXT">&lt;:asterisk:1505250975282106469&gt; **Test the topic**</field>
                                           </block>
                                         </value>
                                         <value name="ADD1">
-                                          <block type="s4d_newline" id="(ofbcO1N8r_L|EasZvk:"></block>
+                                          <block type="s4d_newline" id="LEIU7$Fk%;FCL}`*L/PC"></block>
                                         </value>
                                         <value name="ADD2">
-                                          <block type="jg_text_remake_paragraph_quotes" id="VFZTwmJityNL;{o2X;D0">
-                                            <field name="TEXT">&lt;:regional_indicator_x:1505250983436091634&gt; Your highest role does not contain permissions to manage the server.</field>
+                                          <block type="jg_text_remake_paragraph_quotes" id="Eq2bJ*/.tf%_Zk/85z9P">
+                                            <field name="TEXT">&lt;:linuxestmieuxquewindowsetmac:1505250978004336650&gt; If the link you provided is a direct URL to an image, that's fine. (Direct URL: the URL page contains only the image, nothing else (no website logo, no text), and on Discord, if you send the direct image link, it will only display the image without any text.)</field>
                                           </block>
                                         </value>
                                         <value name="ADD3">
-                                          <block type="s4d_newline" id="s{[A_Zz$T]_`hlvn/bj("></block>
+                                          <block type="s4d_newline" id="HonV[`2AY{U[R]g%y=W@"></block>
                                         </value>
                                         <value name="ADD4">
-                                          <block type="jg_text_remake_paragraph_quotes" id="|.KFrUh5cn2^haC(R-FZ">
-                                            <field name="TEXT">&lt;:regional_indicator_x:1505250983436091634&gt; Votre rôle le plus élevé ne contient pas les permission pour gérer le serveur.</field>
+                                          <block type="jg_text_remake_paragraph_quotes" id="4xCjNFTWsGfG=tGFPO@J">
+                                            <field name="TEXT">&lt;:linuxestmieuxquewindowsetmac:1505250978004336650&gt; Si le lien que vous avez mis est une url directe d'une image c'est bon. (Url directe : sur la page de l'url il n'y a que l'image rien d'autre... et sur discord si vous envoyez le lien direct de l'image il n'y aura que l'image sans texte)</field>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </value>
+                                    <value name="BOOLEAN">
+                                      <block type="logic_boolean" id="E.`}jnr]w7oAV@P4x;u|">
+                                        <field name="BOOL">FALSE</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </statement>
+                                <value name="IF2">
+                                  <block type="logic_compare" id="4FM3Yp2l`GDKmWT%K_N]">
+                                    <field name="OP">EQ</field>
+                                    <value name="A">
+                                      <block type="interaction_name" id="iZTih*aok]J*S-MSV:jK"></block>
+                                    </value>
+                                    <value name="B">
+                                      <block type="jg_text_remake_paragraph_quotes" id="E%57UW7rEP!kFX;]?]fv">
+                                        <field name="TEXT">test</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                                <statement name="DO2">
+                                  <block type="slash_reply" id="V563.S4vPW5P#tu8G/Wb">
+                                    <value name="CONTENT">
+                                      <block type="text_join" id="%4A865N;$A,:cS6`xp_4">
+                                        <mutation items="5"></mutation>
+                                        <value name="ADD0">
+                                          <block type="jg_text_remake_paragraph_quotes" id="A9VC~k7WgMA{`@}eFT}.">
+                                            <field name="TEXT">&lt;:asterisk:1505250975282106469&gt; **Test the topic**</field>
+                                          </block>
+                                        </value>
+                                        <value name="ADD1">
+                                          <block type="s4d_newline" id="q^{80fN$lW1Ss1Dw(*)T"></block>
+                                        </value>
+                                        <value name="ADD2">
+                                          <block type="jg_text_remake_paragraph_quotes" id="/n6KjrS0ZBd#%Nrc[O*%">
+                                            <field name="TEXT">&lt;:texte:1505250977001902080&gt; This is a server name. (if it contains between 2 and 100 characters).</field>
+                                          </block>
+                                        </value>
+                                        <value name="ADD3">
+                                          <block type="s4d_newline" id="@R$=ll}*=DaI@PFX$(1T"></block>
+                                        </value>
+                                        <value name="ADD4">
+                                          <block type="jg_text_remake_paragraph_quotes" id=",`;61?fT0?KzOdjQOVQ_">
+                                            <field name="TEXT">&lt;:texte:1505250977001902080&gt; C'est un nom de serveur. (s'il comporte de 2 à 100 caractères).</field>
                                           </block>
                                         </value>
                                       </block>
@@ -1493,73 +1287,37 @@
                                   </block>
                                 </statement>
                                 <next>
-                                  <block type="controls_if" id="ZDYJAQ`;IfI0|0haZPl0">
+                                  <block type="controls_if" id="G`rQsF$Bsn@:)IzsE6qL">
                                     <mutation elseif="1"></mutation>
                                     <value name="IF0">
-                                      <block type="logic_operation" id="U+:?Gf?:53L;-5n2CLAq">
+                                      <block type="logic_operation" id=";4?m:Z]JeVDMd]8JYF6I">
                                         <field name="OP">AND</field>
                                         <value name="A">
-                                          <block type="logic_compare" id="t.usj3d!~i?~,OI/a]Pp">
+                                          <block type="logic_compare" id="%AwnAO.yA(f#81Nj;tWn">
                                             <field name="OP">EQ</field>
                                             <value name="A">
-                                              <block type="interaction_name" id="AD]3*|e~v1N^*)wU2ilF"></block>
+                                              <block type="interaction_name" id="0yYu%CTFTRPa17ROH%;:"></block>
                                             </value>
                                             <value name="B">
-                                              <block type="jg_text_remake_paragraph_quotes" id="3Yys!_F+RK{;-P.E.{0Q">
-                                                <field name="TEXT">name-add</field>
+                                              <block type="jg_text_remake_paragraph_quotes" id="MmiW~XA~}DB+RhwQe-p6">
+                                                <field name="TEXT">privee</field>
                                               </block>
                                             </value>
                                           </block>
                                         </value>
                                         <value name="B">
-                                          <block type="logic_operation" id="-c%C-%jY?9M*CmsR?EnW">
-                                            <field name="OP">OR</field>
+                                          <block type="logic_compare" id="QN*?%YQr6GBz@Q@gHGxg">
+                                            <field name="OP">EQ</field>
                                             <value name="A">
-                                              <block type="logic_operation" id="CL0;M.}gGj0JiNDlrI7E">
-                                                <field name="OP">OR</field>
-                                                <value name="A">
-                                                  <block type="role_has_permission" id="^^97J,P5-|00:hmk3ieV">
-                                                    <field name="perm">MANAGE_GUILD</field>
-                                                    <value name="role">
-                                                      <block type="hig_role" id="uWJ@;2h_vHi1s`3@^^_*">
-                                                        <value name="member">
-                                                          <block type="interaction_author" id="uL5]@=0:~0p:EpA}4/~T"></block>
-                                                        </value>
-                                                      </block>
-                                                    </value>
-                                                  </block>
-                                                </value>
-                                                <value name="B">
-                                                  <block type="role_has_permission" id="0=OrrUCsA!Ow6pACGb=7">
-                                                    <field name="perm">ADMINISTRATOR</field>
-                                                    <value name="role">
-                                                      <block type="hig_role" id="vdH%7i[Fk]l8P$$opzw-">
-                                                        <value name="member">
-                                                          <block type="interaction_author" id="$s=(pwB:|f.G_;7Dx}?9"></block>
-                                                        </value>
-                                                      </block>
-                                                    </value>
-                                                  </block>
+                                              <block type="s4d_member_id" id="Vu4bWLIkSE{gzxcmwwm?">
+                                                <value name="MEMBER">
+                                                  <block type="interaction_author" id="Q|gud4{,Ha4m]jC+DIZ6"></block>
                                                 </value>
                                               </block>
                                             </value>
                                             <value name="B">
-                                              <block type="logic_compare" id="BmPwcwMhDutq#g:Ei73+">
-                                                <field name="OP">EQ</field>
-                                                <value name="A">
-                                                  <block type="s4d_server_owner" id="w=6,,?+o_^SJ~16t`;VN">
-                                                    <value name="SERVER">
-                                                      <block type="interaction_guild" id="RprWDs)b_?ofH~hN}Q%k"></block>
-                                                    </value>
-                                                  </block>
-                                                </value>
-                                                <value name="B">
-                                                  <block type="s4d_member_id" id="*B7~vVL^_V.E`4.CD[-%">
-                                                    <value name="MEMBER">
-                                                      <block type="interaction_author" id="aBX~FA*Cqoz1:HVQdJzS"></block>
-                                                    </value>
-                                                  </block>
-                                                </value>
+                                              <block type="jg_text_remake_paragraph_quotes" id="UCy=@qC6/umLO4s`]ca{">
+                                                <field name="TEXT">746069923465527339</field>
                                               </block>
                                             </value>
                                           </block>
@@ -1567,183 +1325,52 @@
                                       </block>
                                     </value>
                                     <statement name="DO0">
-                                      <block type="fz_channel" id="W_]E{t_MnfX7$W1)E@o,">
-                                        <field name="TYPE">GUILD_TEXT</field>
-                                        <value name="name">
-                                          <block type="text_join" id="V+5-f_52;sf9y$)3npqm">
-                                            <mutation items="4"></mutation>
-                                            <value name="ADD0">
-                                              <block type="jg_text_remake_paragraph_quotes" id="ceaIEcBYiM{)^;M-bzhu">
-                                                <field name="TEXT">n-</field>
-                                              </block>
-                                            </value>
-                                            <value name="ADD1">
-                                              <block type="options" id="|Knhe_=gAwu0BbN*epzC">
-                                                <mutation mode="Integer" type="null"></mutation>
-                                                <field name="SEARCH">Integer</field>
-                                                <value name="BOOLEAN">
-                                                  <block type="jg_text_remake_paragraph_quotes" id="~CL9@wA|xW?1.K!S2h.4">
-                                                    <field name="TEXT">day</field>
-                                                  </block>
-                                                </value>
-                                              </block>
-                                            </value>
-                                            <value name="ADD2">
-                                              <block type="jg_text_remake_paragraph_quotes" id="u;o!`*}K:*x*M^6a33.o">
-                                                <field name="TEXT">-</field>
-                                              </block>
-                                            </value>
-                                            <value name="ADD3">
-                                              <block type="options" id="C$gC5An_OHdKn(!M/m04">
-                                                <mutation mode="Integer" type="null"></mutation>
-                                                <field name="SEARCH">Integer</field>
-                                                <value name="BOOLEAN">
-                                                  <block type="jg_text_remake_paragraph_quotes" id="+TT7?-,9abFuXHu:gtPS">
-                                                    <field name="TEXT">month</field>
-                                                  </block>
-                                                </value>
-                                              </block>
-                                            </value>
+                                      <block type="slash_reply" id="]p?2aM?(|;mhtC)fDirF">
+                                        <value name="CONTENT">
+                                          <block type="jg_text_remake_paragraph_quotes" id="DWH(X6L)$!HyF63Tg{$@">
+                                            <field name="TEXT">&lt;:asterisk:1505250975282106469&gt; C'est bon retournement de situation !</field>
                                           </block>
                                         </value>
-                                        <value name="id">
-                                          <block type="frost_category_get" id="`b3`~$|4.4NpbaVMkGRX">
-                                            <field name="SEARCH_TYPE">NAME</field>
-                                            <value name="VALUE">
-                                              <block type="jg_text_remake_paragraph_quotes" id="GBYl7`ghpv[0cc6hU(j0">
-                                                <field name="TEXT">Logoto</field>
-                                              </block>
-                                            </value>
-                                            <value name="SERVER">
-                                              <block type="interaction_guild" id="P](;n$Abke7~1wOSUy2C"></block>
+                                        <next>
+                                          <block type="emit_event" id="PJ}Ezs#!$oKKQK#,VsVm">
+                                            <value name="NAME">
+                                              <shadow type="text" id="{AKt{Z0hVzz`Z:3[3*2M">
+                                                <field name="TEXT">1</field>
+                                              </shadow>
                                             </value>
                                           </block>
-                                        </value>
-                                        <value name="server">
-                                          <block type="interaction_guild" id="U+-B?q=LMhh/Kz-yK0oL"></block>
-                                        </value>
-                                        <statement name="THEN">
-                                          <block type="channel_perms" id="eJTwfKTjRD%GtTqbKGOT">
-                                            <field name="ad">true</field>
-                                            <field name="perm">VIEW_CHANNEL</field>
-                                            <value name="channel">
-                                              <block type="frost_created_cat" id="@vZYVox:`KORe/YvxfbB"></block>
-                                            </value>
-                                            <value name="to">
-                                              <block type="jg_members_get_member_by_id" id="MEooG6~$yq$_evrMti8n">
-                                                <value name="ID">
-                                                  <shadow type="text" id="*9Nj2,[7~Biq=]X-Vod3">
-                                                    <field name="TEXT">1431383390162124920</field>
-                                                  </shadow>
-                                                </value>
-                                              </block>
-                                            </value>
-                                            <next>
-                                              <block type="channel_perms" id="=7BGoz#^2OpK+P[!67D:">
-                                                <field name="ad">false</field>
-                                                <field name="perm">VIEW_CHANNEL</field>
-                                                <value name="channel">
-                                                  <block type="frost_created_cat" id="!JO5(.N^0/mQ6okEi}90"></block>
-                                                </value>
-                                                <value name="to">
-                                                  <block type="s4d_get_role" id="!#L~sO[CX1k2$!/Gq#!|">
-                                                    <field name="SEARCH_TYPE">ID</field>
-                                                    <value name="VALUE">
-                                                      <block type="s4d_server_id" id="0ezUPtqmidyqX@dsi#O;">
-                                                        <value name="SERVER">
-                                                          <block type="interaction_guild" id="pJZj^EQf$%32V2A(7gQ`"></block>
-                                                        </value>
-                                                      </block>
-                                                    </value>
-                                                    <value name="SERVER">
-                                                      <block type="interaction_guild" id="cu[+^KCnHnIz72`/ziBa"></block>
-                                                    </value>
-                                                  </block>
-                                                </value>
-                                                <next>
-                                                  <block type="s4d_send_channel" id="?QfgLUEvP]0L$U{#7Xfg">
-                                                    <value name="CONTENT">
-                                                      <block type="text_join" id="KdAE?fOZGKb-gl3f9k=k">
-                                                        <mutation items="5"></mutation>
-                                                        <value name="ADD0">
-                                                          <block type="jg_text_remake_paragraph_quotes" id="$k|!9`/9:h,ibY|SK1,m">
-                                                            <field name="TEXT">&lt;:asterisk:1505250975282106469&gt; **Almost finished**</field>
-                                                          </block>
-                                                        </value>
-                                                        <value name="ADD1">
-                                                          <block type="s4d_newline" id=".mDt!{:[MYSfGhA.zg;f"></block>
-                                                        </value>
-                                                        <value name="ADD2">
-                                                          <block type="jg_text_remake_paragraph_quotes" id="Eq{+cDfuc7Hx};LEg089">
-                                                            <field name="TEXT">&lt;:track_next:1505295937856213072&gt; All you have to do now is put the name of the server you want in the subject line.</field>
-                                                          </block>
-                                                        </value>
-                                                        <value name="ADD3">
-                                                          <block type="s4d_newline" id="8W@[q+V!RR}[2{lb]y/O"></block>
-                                                        </value>
-                                                        <value name="ADD4">
-                                                          <block type="jg_text_remake_paragraph_quotes" id="x^$TnOGj5;{+NL9v)w|u">
-                                                            <field name="TEXT">&lt;:track_next:1505295937856213072&gt; Il vous reste plus qu'à mettre le nom du serveur que vous voulez dans le sujet.</field>
-                                                          </block>
-                                                        </value>
-                                                      </block>
-                                                    </value>
-                                                    <value name="CHANNEL">
-                                                      <block type="frost_created_cat" id="=g|!,VZO-kBG^k#I^3c`"></block>
-                                                    </value>
-                                                    <next>
-                                                      <block type="slash_reply" id="J2u1y5$#J4}l}[=S$r1d">
-                                                        <value name="CONTENT">
-                                                          <block type="text_join" id="[C~PljG,|zb58GJ`Y1B{">
-                                                            <mutation items="2"></mutation>
-                                                            <value name="ADD0">
-                                                              <block type="jg_text_remake_paragraph_quotes" id="e+**Tc#eKkjfY_/dk^}0">
-                                                                <field name="TEXT">&lt;:debut:1505250975282106469&gt; Le salon à été créé :</field>
-                                                              </block>
-                                                            </value>
-                                                            <value name="ADD1">
-                                                              <block type="frost_created_cat" id=")%.2KAl=@V*CZC7G=wse"></block>
-                                                            </value>
-                                                          </block>
-                                                        </value>
-                                                      </block>
-                                                    </next>
-                                                  </block>
-                                                </next>
-                                              </block>
-                                            </next>
-                                          </block>
-                                        </statement>
+                                        </next>
                                       </block>
                                     </statement>
                                     <value name="IF1">
-                                      <block type="logic_operation" id="GmY`-96vtKK|*EDNXvEI">
+                                      <block type="logic_operation" id="P1luPpZ)%HdD:EOKxXE^">
                                         <field name="OP">AND</field>
                                         <value name="A">
-                                          <block type="logic_compare" id="Mv9d|)v!fbU.|}Jt}X7_">
+                                          <block type="logic_compare" id="tOc1$FTy~?gr|NrtFqw9">
                                             <field name="OP">EQ</field>
                                             <value name="A">
-                                              <block type="interaction_name" id=")WZ#lBW6OZILlb=P2$ON"></block>
+                                              <block type="interaction_name" id="vSEuTj_8tEnA$Jruy0Ia"></block>
                                             </value>
                                             <value name="B">
-                                              <block type="jg_text_remake_paragraph_quotes" id="sr/df9nqis}.NuZKIvZc">
-                                                <field name="TEXT">name-add</field>
+                                              <block type="jg_text_remake_paragraph_quotes" id="hZ5|]29hqpEk/Z!rtbD*">
+                                                <field name="TEXT">privee</field>
                                               </block>
                                             </value>
                                           </block>
                                         </value>
                                         <value name="B">
-                                          <block type="logic_negate" id="B6(eT6.c8E/r$yYlTT?~">
-                                            <value name="BOOL">
-                                              <block type="role_has_permission" id="T.mN6weuLd%PoJ+E?P=:">
-                                                <field name="perm">MANAGE_GUILD</field>
-                                                <value name="role">
-                                                  <block type="hig_role" id=",4kzVP+dwlYHJX|2}z3Y">
-                                                    <value name="member">
-                                                      <block type="interaction_author" id="FTQZ(lf~?LdX-hO}+d+."></block>
-                                                    </value>
-                                                  </block>
+                                          <block type="logic_compare" id="_g.C,A-T_mhs;S%cJ:v=">
+                                            <field name="OP">NEQ</field>
+                                            <value name="A">
+                                              <block type="s4d_member_id" id="^yZFnFHIfw0qECfMunn{">
+                                                <value name="MEMBER">
+                                                  <block type="interaction_author" id="2n{U+]7x`sepIed4vT^]"></block>
                                                 </value>
+                                              </block>
+                                            </value>
+                                            <value name="B">
+                                              <block type="jg_text_remake_paragraph_quotes" id="/RcYYME-C1NxobZ:){#a">
+                                                <field name="TEXT">746069923465527339</field>
                                               </block>
                                             </value>
                                           </block>
@@ -1751,29 +1378,29 @@
                                       </block>
                                     </value>
                                     <statement name="DO1">
-                                      <block type="slash_reply" id="1Hr|7GP{JWCRsME!RmXL">
+                                      <block type="slash_reply" id="?McWV^5E`QUxM,v3AB*A">
                                         <value name="CONTENT">
-                                          <block type="text_join" id="x{[zQ3JB(|T)@Af`m$L]">
+                                          <block type="text_join" id="2pP6w)pqYq|aSOsx(]=+">
                                             <mutation items="5"></mutation>
                                             <value name="ADD0">
-                                              <block type="jg_text_remake_paragraph_quotes" id="3O4![ne)!g]Gi7V|$-k{">
+                                              <block type="jg_text_remake_paragraph_quotes" id="lw#dL#}}gpv$P|)!OZ/7">
                                                 <field name="TEXT">&lt;:asterisk:1505250975282106469&gt; **Error**</field>
                                               </block>
                                             </value>
                                             <value name="ADD1">
-                                              <block type="s4d_newline" id="{/j+MN$R.$~|,7Itr:yv"></block>
+                                              <block type="s4d_newline" id="G]wyXVx{2=;JgC=[@xCs"></block>
                                             </value>
                                             <value name="ADD2">
-                                              <block type="jg_text_remake_paragraph_quotes" id="^mp@@V}54YwAU~H=Pup?">
-                                                <field name="TEXT">&lt;:regional_indicator_x:1505250983436091634&gt; Your highest role does not contain permissions to manage the server.</field>
+                                              <block type="jg_text_remake_paragraph_quotes" id="8Dj:Bq{T;uD-h%n:rQ_B">
+                                                <field name="TEXT">&lt;:regional_indicator_x:1505250983436091634&gt; You do not have permission to use this command</field>
                                               </block>
                                             </value>
                                             <value name="ADD3">
-                                              <block type="s4d_newline" id="MdwxVfjUZhuLQnGRmgC+"></block>
+                                              <block type="s4d_newline" id="h,vA;NX(}#YI%@HvZY$W"></block>
                                             </value>
                                             <value name="ADD4">
-                                              <block type="jg_text_remake_paragraph_quotes" id="*=qq7ZKb_M8It+T,0vn;">
-                                                <field name="TEXT">&lt;:regional_indicator_x:1505250983436091634&gt; Votre rôle le plus élevé ne contient pas les permission pour gérer le serveur.</field>
+                                              <block type="jg_text_remake_paragraph_quotes" id="`S%a}f7.8hb,6b^WkILM">
+                                                <field name="TEXT">&lt;:regional_indicator_x:1505250983436091634&gt; Vous ne possédez pas les permissions pour utiliser cette commande</field>
                                               </block>
                                             </value>
                                           </block>
@@ -1781,622 +1408,366 @@
                                       </block>
                                     </statement>
                                     <next>
-                                      <block type="controls_if" id="o_yjn)~vpJhPn^~$z[Fq">
-                                        <mutation elseif="2"></mutation>
+                                      <block type="controls_if" id="u,-:5@(%2RL+wRFq^F{E">
+                                        <mutation elseif="1"></mutation>
                                         <value name="IF0">
-                                          <block type="logic_operation" id="k+Zjj?~ex:$X7|GV`KRJ">
+                                          <block type="logic_operation" id="z`Js#cy*VnnR{m}8KiCs">
                                             <field name="OP">AND</field>
                                             <value name="A">
-                                              <block type="logic_compare" id="c}4Ml2UHZ~*Pnahi9i/4">
+                                              <block type="logic_compare" id="riGv^Iuv,iF!Qn*`dHI(">
                                                 <field name="OP">EQ</field>
                                                 <value name="A">
-                                                  <block type="interaction_name" id="r~e]%LiFx(=O%r_YRtXc"></block>
+                                                  <block type="interaction_name" id="PlQGJBF}-^QhaKi2je@."></block>
                                                 </value>
                                                 <value name="B">
-                                                  <block type="jg_text_remake_paragraph_quotes" id="voTH@*Cbbtowt_EKFN^u">
-                                                    <field name="TEXT">test</field>
+                                                  <block type="jg_text_remake_paragraph_quotes" id="ztaW%4]]ocap26_?}n`K">
+                                                    <field name="TEXT">add-an-event</field>
                                                   </block>
                                                 </value>
                                               </block>
                                             </value>
                                             <value name="B">
-                                              <block type="s4d_starts_with" id="Qcx;LrPczRe4]Svx*?q`">
-                                                <value name="STRING">
-                                                  <shadow type="text" id="+-cHTZ/SAWs{N)1U,I`i">
-                                                    <field name="TEXT">abc</field>
-                                                  </shadow>
-                                                  <block type="s4d_channel_topic" id="FB6jP@:2ODI5#yAwA4CK">
-                                                    <value name="CHANNEL">
-                                                      <block type="interaction_channel" id="y9LF3qW)0v;j$nzT*WvD"></block>
+                                              <block type="logic_operation" id="@|1X.~/QV9@8L=5Pwbp1">
+                                                <field name="OP">OR</field>
+                                                <value name="A">
+                                                  <block type="logic_operation" id="QUuWo.Vo6v:ak.KJT0n0">
+                                                    <field name="OP">OR</field>
+                                                    <value name="A">
+                                                      <block type="role_has_permission" id="|IE4Zq*UgDwL+)T@6UE?">
+                                                        <field name="perm">MANAGE_GUILD</field>
+                                                        <value name="role">
+                                                          <block type="hig_role" id="CtUakbhrZ,i.0J,F*ZD;">
+                                                            <value name="member">
+                                                              <block type="interaction_author" id="kf8K.*(6hB}E-[pz_VwS"></block>
+                                                            </value>
+                                                          </block>
+                                                        </value>
+                                                      </block>
+                                                    </value>
+                                                    <value name="B">
+                                                      <block type="role_has_permission" id="Vzm:LrAtiuOP@vnDowmx">
+                                                        <field name="perm">ADMINISTRATOR</field>
+                                                        <value name="role">
+                                                          <block type="hig_role" id="8G`ljC*R8bYZ?H5HtuT0">
+                                                            <value name="member">
+                                                              <block type="interaction_author" id="~:g/(^rCM9,b%uRUpSoq"></block>
+                                                            </value>
+                                                          </block>
+                                                        </value>
+                                                      </block>
                                                     </value>
                                                   </block>
                                                 </value>
-                                                <value name="SUBSTRING">
-                                                  <shadow type="text" id="$+m4G{?=(9@?jILW#.K6">
-                                                    <field name="TEXT">https://cdn.discordapp.com</field>
-                                                  </shadow>
+                                                <value name="B">
+                                                  <block type="logic_compare" id="fd4W0]p{s-{3.p[WO!WG">
+                                                    <field name="OP">EQ</field>
+                                                    <value name="A">
+                                                      <block type="s4d_server_owner" id="br,xd-P@aKirXq2HV^jH">
+                                                        <value name="SERVER">
+                                                          <block type="interaction_guild" id="-+}wC;aeBiS68/!a4e0b"></block>
+                                                        </value>
+                                                      </block>
+                                                    </value>
+                                                    <value name="B">
+                                                      <block type="s4d_member_id" id="KR*}DU/s9vC90|zQb8sE">
+                                                        <value name="MEMBER">
+                                                          <block type="interaction_author" id="]6IOk`1amh_(sxgg6vE("></block>
+                                                        </value>
+                                                      </block>
+                                                    </value>
+                                                  </block>
                                                 </value>
                                               </block>
                                             </value>
                                           </block>
                                         </value>
                                         <statement name="DO0">
-                                          <block type="slash_reply" id="(%6KHb1-qIkdRKaS1o5[">
-                                            <value name="CONTENT">
-                                              <block type="text_join" id="Z?^S[@8BRfk$QRpZdocf">
+                                          <block type="fz_channel" id="Cy@wZ.0,@g9Wt}c~v/UY">
+                                            <field name="TYPE">GUILD_TEXT</field>
+                                            <value name="name">
+                                              <block type="text_join" id="U$a?.f,|EdgYG4PD^Svt">
                                                 <mutation items="5"></mutation>
                                                 <value name="ADD0">
-                                                  <block type="jg_text_remake_paragraph_quotes" id="GoHAyQk:ayvxs*Oy,uou">
-                                                    <field name="TEXT">&lt;:asterisk:1505250975282106469&gt; **Test the topic**</field>
-                                                  </block>
-                                                </value>
-                                                <value name="ADD1">
-                                                  <block type="s4d_newline" id="g2I;|?^E9bU@3ng$qldY"></block>
-                                                </value>
-                                                <value name="ADD2">
-                                                  <block type="jg_text_remake_paragraph_quotes" id="SA/4E5iE:DDRb,wk2d#s">
-                                                    <field name="TEXT">&lt;:regional_indicator_x:1505250983436091634&gt; Discord URLs are not recommended for logo changes.</field>
-                                                  </block>
-                                                </value>
-                                                <value name="ADD3">
-                                                  <block type="s4d_newline" id="cFe4(|)$^$)aA2rW)vMI"></block>
-                                                </value>
-                                                <value name="ADD4">
-                                                  <block type="jg_text_remake_paragraph_quotes" id="T;37rYorlYAF2,:zNVQf">
-                                                    <field name="TEXT">&lt;:regional_indicator_x:1505250983436091634&gt; Les urls discord sont déconseillé pour le changement de logo.</field>
-                                                  </block>
-                                                </value>
-                                              </block>
-                                            </value>
-                                            <value name="BOOLEAN">
-                                              <block type="logic_boolean" id="zhL{A:9}$ejvqsnN_C!s">
-                                                <field name="BOOL">FALSE</field>
-                                              </block>
-                                            </value>
-                                          </block>
-                                        </statement>
-                                        <value name="IF1">
-                                          <block type="logic_operation" id="9o#T6{3:w1AXk~wt+10p">
-                                            <field name="OP">AND</field>
-                                            <value name="A">
-                                              <block type="logic_compare" id="~gxjgtT|dqs7Lv4A?Kqb">
-                                                <field name="OP">EQ</field>
-                                                <value name="A">
-                                                  <block type="interaction_name" id="vRblP*g,CS5Tx2@SC$J_"></block>
-                                                </value>
-                                                <value name="B">
-                                                  <block type="jg_text_remake_paragraph_quotes" id="e}:KDXosy2N05iuh_,)7">
-                                                    <field name="TEXT">test</field>
-                                                  </block>
-                                                </value>
-                                              </block>
-                                            </value>
-                                            <value name="B">
-                                              <block type="s4d_starts_with" id="US7yQu4q)59?cK4ZGm*1">
-                                                <value name="STRING">
-                                                  <shadow type="text" id="+-cHTZ/SAWs{N)1U,I`i">
-                                                    <field name="TEXT">abc</field>
-                                                  </shadow>
-                                                  <block type="s4d_channel_topic" id="M|Tx}.)PGM-jiG:4Y}x+">
-                                                    <value name="CHANNEL">
-                                                      <block type="interaction_channel" id="wHR(Jd8jvAaIzCaylr--"></block>
+                                                  <block type="options" id="INpB~^[ROSv)1{KoseV^">
+                                                    <mutation mode="String" type="null"></mutation>
+                                                    <field name="SEARCH">String</field>
+                                                    <value name="BOOLEAN">
+                                                      <block type="jg_text_remake_paragraph_quotes" id="G7:n;H*y)GBRoW,b0ee0">
+                                                        <field name="TEXT">type</field>
+                                                      </block>
                                                     </value>
                                                   </block>
                                                 </value>
-                                                <value name="SUBSTRING">
-                                                  <shadow type="text" id="l]j}dAZ,nZa2Z?L/01WM">
-                                                    <field name="TEXT">https://</field>
-                                                  </shadow>
+                                                <value name="ADD1">
+                                                  <block type="jg_text_remake_paragraph_quotes" id="wpOSVH[lig%28^y|dqI@">
+                                                    <field name="TEXT">-</field>
+                                                  </block>
                                                 </value>
+                                                <value name="ADD2">
+                                                  <block type="options" id="$mnUkEr.d2sS0`Xwk[.m">
+                                                    <mutation mode="Integer" type="null"></mutation>
+                                                    <field name="SEARCH">Integer</field>
+                                                    <value name="BOOLEAN">
+                                                      <block type="jg_text_remake_paragraph_quotes" id="R0(xQHbG/YYef[+4-!,q">
+                                                        <field name="TEXT">day</field>
+                                                      </block>
+                                                    </value>
+                                                  </block>
+                                                </value>
+                                                <value name="ADD3">
+                                                  <block type="jg_text_remake_paragraph_quotes" id="$e;GWhQim-o?YJ0.9.ss">
+                                                    <field name="TEXT">-</field>
+                                                  </block>
+                                                </value>
+                                                <value name="ADD4">
+                                                  <block type="options" id="qZQg}a9V.%D}lCT-zPn$">
+                                                    <mutation mode="Integer" type="null"></mutation>
+                                                    <field name="SEARCH">Integer</field>
+                                                    <value name="BOOLEAN">
+                                                      <block type="jg_text_remake_paragraph_quotes" id="N)UIPoiUuVi|M:a5tLE[">
+                                                        <field name="TEXT">month</field>
+                                                      </block>
+                                                    </value>
+                                                  </block>
+                                                </value>
+                                              </block>
+                                            </value>
+                                            <value name="id">
+                                              <block type="frost_category_get" id="+lh2xS?wKa~Y;7sV(CFM">
+                                                <field name="SEARCH_TYPE">NAME</field>
+                                                <value name="VALUE">
+                                                  <block type="jg_text_remake_paragraph_quotes" id="~2:i`vy-Q`G#muh|Mvi1">
+                                                    <field name="TEXT">Logoto</field>
+                                                  </block>
+                                                </value>
+                                                <value name="SERVER">
+                                                  <block type="interaction_guild" id="oH?:S8(JMCGfuGe.?nt+"></block>
+                                                </value>
+                                              </block>
+                                            </value>
+                                            <value name="server">
+                                              <block type="interaction_guild" id="T=}AU[gt-crGoNa)z~SQ"></block>
+                                            </value>
+                                            <statement name="THEN">
+                                              <block type="channel_perms" id="li`)+^IQeF/Utx8|zy9Q">
+                                                <field name="ad">true</field>
+                                                <field name="perm">VIEW_CHANNEL</field>
+                                                <value name="channel">
+                                                  <block type="frost_created_cat" id="U+^hWI4L[gZ6Em_31hT3"></block>
+                                                </value>
+                                                <value name="to">
+                                                  <block type="jg_members_get_member_by_id" id="`H:r4k)S|`.}ogKsPUQN">
+                                                    <value name="ID">
+                                                      <shadow type="text" id="#Pf]w}%S4=d10DLEYt8|">
+                                                        <field name="TEXT">1431383390162124920</field>
+                                                      </shadow>
+                                                    </value>
+                                                  </block>
+                                                </value>
+                                                <next>
+                                                  <block type="channel_perms" id="KcT-0gE:PGkAw5cP+iuj">
+                                                    <field name="ad">false</field>
+                                                    <field name="perm">VIEW_CHANNEL</field>
+                                                    <value name="channel">
+                                                      <block type="frost_created_cat" id="-{A6aVL+!u{LT:j-sS2q"></block>
+                                                    </value>
+                                                    <value name="to">
+                                                      <block type="s4d_get_role" id="ubA;X@B2z_$oLsBmetH^">
+                                                        <field name="SEARCH_TYPE">ID</field>
+                                                        <value name="VALUE">
+                                                          <block type="s4d_server_id" id="U72l^6SxlRczfC[f]C-o">
+                                                            <value name="SERVER">
+                                                              <block type="interaction_guild" id="vn)YC2nypMzlV?{LB=Ip"></block>
+                                                            </value>
+                                                          </block>
+                                                        </value>
+                                                        <value name="SERVER">
+                                                          <block type="interaction_guild" id="!-NnpT)q)USs;#/cfMeS"></block>
+                                                        </value>
+                                                      </block>
+                                                    </value>
+                                                    <next>
+                                                      <block type="controls_if" id="~NNw@B0zjO^0#3ccYrzC">
+                                                        <mutation else="1"></mutation>
+                                                        <value name="IF0">
+                                                          <block type="logic_compare" id="ZUU?-@}F|.g?$GIINq7=">
+                                                            <field name="OP">EQ</field>
+                                                            <value name="A">
+                                                              <block type="options" id="[UxbB+`Q@#xcmo1BRYr(">
+                                                                <mutation mode="String" type="null"></mutation>
+                                                                <field name="SEARCH">String</field>
+                                                                <value name="BOOLEAN">
+                                                                  <block type="jg_text_remake_paragraph_quotes" id="C!Vl/PokaQ~Ale#KQe{S">
+                                                                    <field name="TEXT">type</field>
+                                                                  </block>
+                                                                </value>
+                                                              </block>
+                                                            </value>
+                                                            <value name="B">
+                                                              <block type="jg_text_remake_paragraph_quotes" id="Va@w_fBe:s}8gZIHGs--">
+                                                                <field name="TEXT">l</field>
+                                                              </block>
+                                                            </value>
+                                                          </block>
+                                                        </value>
+                                                        <statement name="DO0">
+                                                          <block type="s4d_send_channel" id="6jkSN[N(Bjqm6I$FcL$+">
+                                                            <value name="CONTENT">
+                                                              <block type="text_join" id="TWcE+:s=0rWY(L#EJs!J">
+                                                                <mutation items="5"></mutation>
+                                                                <value name="ADD0">
+                                                                  <block type="jg_text_remake_paragraph_quotes" id=".#B9)F+i+lXQ[~gp/-t,">
+                                                                    <field name="TEXT">&lt;:asterisk:1505250975282106469&gt; **Last step**</field>
+                                                                  </block>
+                                                                </value>
+                                                                <value name="ADD1">
+                                                                  <block type="s4d_newline" id="+H)rk=[UACVcJtV-iKQ$"></block>
+                                                                </value>
+                                                                <value name="ADD2">
+                                                                  <block type="jg_text_remake_paragraph_quotes" id="A#Y@S*+sDbl~V7VJR91}">
+                                                                    <field name="TEXT">&lt;:track_next:1505295937856213072&gt; All that remains is to put the direct url of an image/logo to finalize the programming of the server change in the subject of this room.</field>
+                                                                  </block>
+                                                                </value>
+                                                                <value name="ADD3">
+                                                                  <block type="s4d_newline" id="*}3y3ZlrnE^.N7pw$GlM"></block>
+                                                                </value>
+                                                                <value name="ADD4">
+                                                                  <block type="jg_text_remake_paragraph_quotes" id="UM4oo~Y.b{`Fc9|oHW%t">
+                                                                    <field name="TEXT">&lt;:track_next:1505295937856213072&gt; Il reste plus qu'à mettre l'url directe d'une image/logo pour finaliser la programmation du changement du serveur dans le sujet de ce salon.</field>
+                                                                  </block>
+                                                                </value>
+                                                              </block>
+                                                            </value>
+                                                            <value name="CHANNEL">
+                                                              <block type="frost_created_cat" id="y3TvBG-A)9x#:QztN~]I"></block>
+                                                            </value>
+                                                          </block>
+                                                        </statement>
+                                                        <statement name="ELSE">
+                                                          <block type="s4d_send_channel" id="P1k:eD.=;}L^uP!f}lMU">
+                                                            <value name="CONTENT">
+                                                              <block type="text_join" id="b?X`^9eaNkdmx@KYa]II">
+                                                                <mutation items="5"></mutation>
+                                                                <value name="ADD0">
+                                                                  <block type="jg_text_remake_paragraph_quotes" id="}8s9mDFJz2!OBF.NB!UF">
+                                                                    <field name="TEXT">&lt;:asterisk:1505250975282106469&gt; **Last step**</field>
+                                                                  </block>
+                                                                </value>
+                                                                <value name="ADD1">
+                                                                  <block type="s4d_newline" id="P?p85(?._hyBZdTgP5qY"></block>
+                                                                </value>
+                                                                <value name="ADD2">
+                                                                  <block type="jg_text_remake_paragraph_quotes" id="qsk4E_zp2gc`b{14pj$=">
+                                                                    <field name="TEXT">&lt;:track_next:1505295937856213072&gt; All that remains is to put the name in the subject of this channel to finalize the programming of the server change.</field>
+                                                                  </block>
+                                                                </value>
+                                                                <value name="ADD3">
+                                                                  <block type="s4d_newline" id="4.3O:9K59Be1#s6Qj.!b"></block>
+                                                                </value>
+                                                                <value name="ADD4">
+                                                                  <block type="jg_text_remake_paragraph_quotes" id="~W}]|Q{9cpZBdR;hwG-d">
+                                                                    <field name="TEXT">&lt;:track_next:1505295937856213072&gt; Il reste plus qu'à mettre le nom dans le sujet de ce salon pour finaliser la programmation du changement du serveur.</field>
+                                                                  </block>
+                                                                </value>
+                                                              </block>
+                                                            </value>
+                                                            <value name="CHANNEL">
+                                                              <block type="frost_created_cat" id="zw8M6M|=_aWSAkb[5_j1"></block>
+                                                            </value>
+                                                          </block>
+                                                        </statement>
+                                                        <next>
+                                                          <block type="slash_reply" id="d+-z#^1x+;,:~gl~p5|-">
+                                                            <value name="CONTENT">
+                                                              <block type="text_join" id="ZhFp7e^RIZqF!Ki8Q`x@">
+                                                                <mutation items="8"></mutation>
+                                                                <value name="ADD0">
+                                                                  <block type="jg_text_remake_paragraph_quotes" id="Ckmyr4Udrz^gdv0Wz6DO">
+                                                                    <field name="TEXT">&lt;:asterisk:1505250975282106469&gt; **Last step**</field>
+                                                                  </block>
+                                                                </value>
+                                                                <value name="ADD1">
+                                                                  <block type="s4d_newline" id="Qc0do((o01Dm|!k~$|1o"></block>
+                                                                </value>
+                                                                <value name="ADD2">
+                                                                  <block type="jg_text_remake_paragraph_quotes" id="]YqW;s979ZX/FG5)^e8u">
+                                                                    <field name="TEXT">&lt;:track_next:1505295937856213072&gt; All you have to do now is follow the instructions in the channel:</field>
+                                                                  </block>
+                                                                </value>
+                                                                <value name="ADD3">
+                                                                  <block type="s4d_newline" id="ElabZi2AACZ0t|M6PiU9"></block>
+                                                                </value>
+                                                                <value name="ADD4">
+                                                                  <block type="jg_text_remake_paragraph_quotes" id="do5(PSP78Kctjjsf=+vX">
+                                                                    <field name="TEXT">&lt;:track_next:1505295937856213072&gt; Il ne vous reste plus qu'à suivre les instructions dans le salon :</field>
+                                                                  </block>
+                                                                </value>
+                                                                <value name="ADD5">
+                                                                  <block type="s4d_newline" id="@.M:_D8DH|gpO3qUl~l}"></block>
+                                                                </value>
+                                                                <value name="ADD6">
+                                                                  <block type="jg_text_remake_paragraph_quotes" id="n{N=RR2U-p@Qu@TVx.6$">
+                                                                    <field name="TEXT">-# &lt;:track_next:1505295937856213072&gt; </field>
+                                                                  </block>
+                                                                </value>
+                                                                <value name="ADD7">
+                                                                  <block type="frost_created_cat" id="3zEu7KC_e}`TS#%#O1fn"></block>
+                                                                </value>
+                                                              </block>
+                                                            </value>
+                                                          </block>
+                                                        </next>
+                                                      </block>
+                                                    </next>
+                                                  </block>
+                                                </next>
+                                              </block>
+                                            </statement>
+                                          </block>
+                                        </statement>
+                                        <value name="IF1">
+                                          <block type="logic_compare" id="I7HqhdTxW^PgSim1M+zf">
+                                            <field name="OP">EQ</field>
+                                            <value name="A">
+                                              <block type="interaction_name" id="VirmNc!B-hvsi,rwPo@I"></block>
+                                            </value>
+                                            <value name="B">
+                                              <block type="jg_text_remake_paragraph_quotes" id="I.Is=tJ`JrOZF2_~WE!U">
+                                                <field name="TEXT">add-an-event</field>
                                               </block>
                                             </value>
                                           </block>
                                         </value>
                                         <statement name="DO1">
-                                          <block type="slash_reply" id="k2B+o.}^2NusXatCl{;=">
+                                          <block type="slash_reply" id="{wpS~[:1uZ8RzDG6zh/}">
                                             <value name="CONTENT">
-                                              <block type="text_join" id="Nwoj-T*U!zi)ZD8?*vXm">
+                                              <block type="text_join" id="Paqy^-*eKW3lG#=#YR}/">
                                                 <mutation items="5"></mutation>
                                                 <value name="ADD0">
-                                                  <block type="jg_text_remake_paragraph_quotes" id="H/`)3tXOap-}f(d%$8Fq">
-                                                    <field name="TEXT">&lt;:asterisk:1505250975282106469&gt; **Test the topic**</field>
+                                                  <block type="jg_text_remake_paragraph_quotes" id=",O*6rbAHRx6`8B^bu}XM">
+                                                    <field name="TEXT">&lt;:asterisk:1505250975282106469&gt; **Error**</field>
                                                   </block>
                                                 </value>
                                                 <value name="ADD1">
-                                                  <block type="s4d_newline" id="LEIU7$Fk%;FCL}`*L/PC"></block>
+                                                  <block type="s4d_newline" id="CIoH5(Vvr;tP1_RBSU3e"></block>
                                                 </value>
                                                 <value name="ADD2">
-                                                  <block type="jg_text_remake_paragraph_quotes" id="Eq2bJ*/.tf%_Zk/85z9P">
-                                                    <field name="TEXT">&lt;:linuxestmieuxquewindowsetmac:1505250978004336650&gt; If the link you provided is a direct URL to an image, that's fine. (Direct URL: the URL page contains only the image, nothing else (no website logo, no text), and on Discord, if you send the direct image link, it will only display the image without any text.)</field>
+                                                  <block type="jg_text_remake_paragraph_quotes" id="D+(RyC0`)Cs|PtZA!;Kl">
+                                                    <field name="TEXT">&lt;:regional_indicator_x:1505250983436091634&gt; Your highest role must contain the following permissions to run this command: Server Owner or Admin or Manage Server.</field>
                                                   </block>
                                                 </value>
                                                 <value name="ADD3">
-                                                  <block type="s4d_newline" id="HonV[`2AY{U[R]g%y=W@"></block>
+                                                  <block type="s4d_newline" id="L(ZlOo^K`Vt)R|LvEG9%"></block>
                                                 </value>
                                                 <value name="ADD4">
-                                                  <block type="jg_text_remake_paragraph_quotes" id="4xCjNFTWsGfG=tGFPO@J">
-                                                    <field name="TEXT">&lt;:linuxestmieuxquewindowsetmac:1505250978004336650&gt; Si le lien que vous avez mis est une url direct d'une image c'est bon. (Url direct :sur la page de l'url il y a que l'image rien d'autre (pas le logo du site, pas de texte) et sur discord si vous envoyez le lien de l'image direct il y aura que l'image sans texte)</field>
-                                                  </block>
-                                                </value>
-                                              </block>
-                                            </value>
-                                            <value name="BOOLEAN">
-                                              <block type="logic_boolean" id="E.`}jnr]w7oAV@P4x;u|">
-                                                <field name="BOOL">FALSE</field>
-                                              </block>
-                                            </value>
-                                          </block>
-                                        </statement>
-                                        <value name="IF2">
-                                          <block type="logic_compare" id="4FM3Yp2l`GDKmWT%K_N]">
-                                            <field name="OP">EQ</field>
-                                            <value name="A">
-                                              <block type="interaction_name" id="iZTih*aok]J*S-MSV:jK"></block>
-                                            </value>
-                                            <value name="B">
-                                              <block type="jg_text_remake_paragraph_quotes" id="E%57UW7rEP!kFX;]?]fv">
-                                                <field name="TEXT">test</field>
-                                              </block>
-                                            </value>
-                                          </block>
-                                        </value>
-                                        <statement name="DO2">
-                                          <block type="slash_reply" id="V563.S4vPW5P#tu8G/Wb">
-                                            <value name="CONTENT">
-                                              <block type="text_join" id="%4A865N;$A,:cS6`xp_4">
-                                                <mutation items="5"></mutation>
-                                                <value name="ADD0">
-                                                  <block type="jg_text_remake_paragraph_quotes" id="A9VC~k7WgMA{`@}eFT}.">
-                                                    <field name="TEXT">&lt;:asterisk:1505250975282106469&gt; **Test the topic**</field>
-                                                  </block>
-                                                </value>
-                                                <value name="ADD1">
-                                                  <block type="s4d_newline" id="q^{80fN$lW1Ss1Dw(*)T"></block>
-                                                </value>
-                                                <value name="ADD2">
-                                                  <block type="jg_text_remake_paragraph_quotes" id="/n6KjrS0ZBd#%Nrc[O*%">
-                                                    <field name="TEXT">&lt;:texte:1505250977001902080&gt; This is a server name. (if it contains between 2 and 100 characters).</field>
-                                                  </block>
-                                                </value>
-                                                <value name="ADD3">
-                                                  <block type="s4d_newline" id="@R$=ll}*=DaI@PFX$(1T"></block>
-                                                </value>
-                                                <value name="ADD4">
-                                                  <block type="jg_text_remake_paragraph_quotes" id=",`;61?fT0?KzOdjQOVQ_">
-                                                    <field name="TEXT">&lt;:texte:1505250977001902080&gt; C'est un nom de serveur. (s'il comporter de 2 à 100 caractères).</field>
+                                                  <block type="jg_text_remake_paragraph_quotes" id="^)T9bAHZd]Mk#iZ}s]Xc">
+                                                    <field name="TEXT">&lt;:regional_indicator_x:1505250983436091634&gt; Votre rôle le plus élevé doit contient les permissions suivant pour faire cette commande : Proprietaire du serveur ouAdmin ou Gérer le serveur.</field>
                                                   </block>
                                                 </value>
                                               </block>
                                             </value>
                                           </block>
                                         </statement>
-                                        <next>
-                                          <block type="controls_if" id="G`rQsF$Bsn@:)IzsE6qL">
-                                            <mutation elseif="1"></mutation>
-                                            <value name="IF0">
-                                              <block type="logic_operation" id=";4?m:Z]JeVDMd]8JYF6I">
-                                                <field name="OP">AND</field>
-                                                <value name="A">
-                                                  <block type="logic_compare" id="%AwnAO.yA(f#81Nj;tWn">
-                                                    <field name="OP">EQ</field>
-                                                    <value name="A">
-                                                      <block type="interaction_name" id="0yYu%CTFTRPa17ROH%;:"></block>
-                                                    </value>
-                                                    <value name="B">
-                                                      <block type="jg_text_remake_paragraph_quotes" id="MmiW~XA~}DB+RhwQe-p6">
-                                                        <field name="TEXT">privee</field>
-                                                      </block>
-                                                    </value>
-                                                  </block>
-                                                </value>
-                                                <value name="B">
-                                                  <block type="logic_compare" id="QN*?%YQr6GBz@Q@gHGxg">
-                                                    <field name="OP">EQ</field>
-                                                    <value name="A">
-                                                      <block type="s4d_member_id" id="Vu4bWLIkSE{gzxcmwwm?">
-                                                        <value name="MEMBER">
-                                                          <block type="interaction_author" id="Q|gud4{,Ha4m]jC+DIZ6"></block>
-                                                        </value>
-                                                      </block>
-                                                    </value>
-                                                    <value name="B">
-                                                      <block type="jg_text_remake_paragraph_quotes" id="UCy=@qC6/umLO4s`]ca{">
-                                                        <field name="TEXT">746069923465527339</field>
-                                                      </block>
-                                                    </value>
-                                                  </block>
-                                                </value>
-                                              </block>
-                                            </value>
-                                            <statement name="DO0">
-                                              <block type="slash_reply" id="]p?2aM?(|;mhtC)fDirF">
-                                                <value name="CONTENT">
-                                                  <block type="jg_text_remake_paragraph_quotes" id="DWH(X6L)$!HyF63Tg{$@">
-                                                    <field name="TEXT">&lt;:asterisk:1505250975282106469&gt; C'est bon retournement de situation !</field>
-                                                  </block>
-                                                </value>
-                                                <next>
-                                                  <block type="emit_event" id="PJ}Ezs#!$oKKQK#,VsVm">
-                                                    <value name="NAME">
-                                                      <shadow type="text" id="{AKt{Z0hVzz`Z:3[3*2M">
-                                                        <field name="TEXT">1</field>
-                                                      </shadow>
-                                                    </value>
-                                                  </block>
-                                                </next>
-                                              </block>
-                                            </statement>
-                                            <value name="IF1">
-                                              <block type="logic_operation" id="P1luPpZ)%HdD:EOKxXE^">
-                                                <field name="OP">AND</field>
-                                                <value name="A">
-                                                  <block type="logic_compare" id="tOc1$FTy~?gr|NrtFqw9">
-                                                    <field name="OP">EQ</field>
-                                                    <value name="A">
-                                                      <block type="interaction_name" id="vSEuTj_8tEnA$Jruy0Ia"></block>
-                                                    </value>
-                                                    <value name="B">
-                                                      <block type="jg_text_remake_paragraph_quotes" id="hZ5|]29hqpEk/Z!rtbD*">
-                                                        <field name="TEXT">privee</field>
-                                                      </block>
-                                                    </value>
-                                                  </block>
-                                                </value>
-                                                <value name="B">
-                                                  <block type="logic_compare" id="_g.C,A-T_mhs;S%cJ:v=">
-                                                    <field name="OP">NEQ</field>
-                                                    <value name="A">
-                                                      <block type="s4d_member_id" id="^yZFnFHIfw0qECfMunn{">
-                                                        <value name="MEMBER">
-                                                          <block type="interaction_author" id="2n{U+]7x`sepIed4vT^]"></block>
-                                                        </value>
-                                                      </block>
-                                                    </value>
-                                                    <value name="B">
-                                                      <block type="jg_text_remake_paragraph_quotes" id="/RcYYME-C1NxobZ:){#a">
-                                                        <field name="TEXT">746069923465527339</field>
-                                                      </block>
-                                                    </value>
-                                                  </block>
-                                                </value>
-                                              </block>
-                                            </value>
-                                            <statement name="DO1">
-                                              <block type="slash_reply" id="?McWV^5E`QUxM,v3AB*A">
-                                                <value name="CONTENT">
-                                                  <block type="text_join" id="2pP6w)pqYq|aSOsx(]=+">
-                                                    <mutation items="5"></mutation>
-                                                    <value name="ADD0">
-                                                      <block type="jg_text_remake_paragraph_quotes" id="lw#dL#}}gpv$P|)!OZ/7">
-                                                        <field name="TEXT">&lt;:asterisk:1505250975282106469&gt; **Error**</field>
-                                                      </block>
-                                                    </value>
-                                                    <value name="ADD1">
-                                                      <block type="s4d_newline" id="G]wyXVx{2=;JgC=[@xCs"></block>
-                                                    </value>
-                                                    <value name="ADD2">
-                                                      <block type="jg_text_remake_paragraph_quotes" id="8Dj:Bq{T;uD-h%n:rQ_B">
-                                                        <field name="TEXT">&lt;:regional_indicator_x:1505250983436091634&gt; You do not have permission to use this command</field>
-                                                      </block>
-                                                    </value>
-                                                    <value name="ADD3">
-                                                      <block type="s4d_newline" id="h,vA;NX(}#YI%@HvZY$W"></block>
-                                                    </value>
-                                                    <value name="ADD4">
-                                                      <block type="jg_text_remake_paragraph_quotes" id="`S%a}f7.8hb,6b^WkILM">
-                                                        <field name="TEXT">&lt;:regional_indicator_x:1505250983436091634&gt; Vous ne possédez pas les permissions pour utiliser cette commande</field>
-                                                      </block>
-                                                    </value>
-                                                  </block>
-                                                </value>
-                                              </block>
-                                            </statement>
-                                            <next>
-                                              <block type="controls_if" id="u,-:5@(%2RL+wRFq^F{E">
-                                                <mutation elseif="1"></mutation>
-                                                <value name="IF0">
-                                                  <block type="logic_operation" id="z`Js#cy*VnnR{m}8KiCs">
-                                                    <field name="OP">AND</field>
-                                                    <value name="A">
-                                                      <block type="logic_compare" id="riGv^Iuv,iF!Qn*`dHI(">
-                                                        <field name="OP">EQ</field>
-                                                        <value name="A">
-                                                          <block type="interaction_name" id="PlQGJBF}-^QhaKi2je@."></block>
-                                                        </value>
-                                                        <value name="B">
-                                                          <block type="jg_text_remake_paragraph_quotes" id="ztaW%4]]ocap26_?}n`K">
-                                                            <field name="TEXT">add-an-event</field>
-                                                          </block>
-                                                        </value>
-                                                      </block>
-                                                    </value>
-                                                    <value name="B">
-                                                      <block type="logic_operation" id="@|1X.~/QV9@8L=5Pwbp1">
-                                                        <field name="OP">OR</field>
-                                                        <value name="A">
-                                                          <block type="logic_operation" id="QUuWo.Vo6v:ak.KJT0n0">
-                                                            <field name="OP">OR</field>
-                                                            <value name="A">
-                                                              <block type="role_has_permission" id="|IE4Zq*UgDwL+)T@6UE?">
-                                                                <field name="perm">MANAGE_GUILD</field>
-                                                                <value name="role">
-                                                                  <block type="hig_role" id="CtUakbhrZ,i.0J,F*ZD;">
-                                                                    <value name="member">
-                                                                      <block type="interaction_author" id="kf8K.*(6hB}E-[pz_VwS"></block>
-                                                                    </value>
-                                                                  </block>
-                                                                </value>
-                                                              </block>
-                                                            </value>
-                                                            <value name="B">
-                                                              <block type="role_has_permission" id="Vzm:LrAtiuOP@vnDowmx">
-                                                                <field name="perm">ADMINISTRATOR</field>
-                                                                <value name="role">
-                                                                  <block type="hig_role" id="8G`ljC*R8bYZ?H5HtuT0">
-                                                                    <value name="member">
-                                                                      <block type="interaction_author" id="~:g/(^rCM9,b%uRUpSoq"></block>
-                                                                    </value>
-                                                                  </block>
-                                                                </value>
-                                                              </block>
-                                                            </value>
-                                                          </block>
-                                                        </value>
-                                                        <value name="B">
-                                                          <block type="logic_compare" id="fd4W0]p{s-{3.p[WO!WG">
-                                                            <field name="OP">EQ</field>
-                                                            <value name="A">
-                                                              <block type="s4d_server_owner" id="br,xd-P@aKirXq2HV^jH">
-                                                                <value name="SERVER">
-                                                                  <block type="interaction_guild" id="-+}wC;aeBiS68/!a4e0b"></block>
-                                                                </value>
-                                                              </block>
-                                                            </value>
-                                                            <value name="B">
-                                                              <block type="s4d_member_id" id="KR*}DU/s9vC90|zQb8sE">
-                                                                <value name="MEMBER">
-                                                                  <block type="interaction_author" id="]6IOk`1amh_(sxgg6vE("></block>
-                                                                </value>
-                                                              </block>
-                                                            </value>
-                                                          </block>
-                                                        </value>
-                                                      </block>
-                                                    </value>
-                                                  </block>
-                                                </value>
-                                                <statement name="DO0">
-                                                  <block type="fz_channel" id="Cy@wZ.0,@g9Wt}c~v/UY">
-                                                    <field name="TYPE">GUILD_TEXT</field>
-                                                    <value name="name">
-                                                      <block type="text_join" id="U$a?.f,|EdgYG4PD^Svt">
-                                                        <mutation items="5"></mutation>
-                                                        <value name="ADD0">
-                                                          <block type="options" id="INpB~^[ROSv)1{KoseV^">
-                                                            <mutation mode="String" type="null"></mutation>
-                                                            <field name="SEARCH">String</field>
-                                                            <value name="BOOLEAN">
-                                                              <block type="jg_text_remake_paragraph_quotes" id="G7:n;H*y)GBRoW,b0ee0">
-                                                                <field name="TEXT">type</field>
-                                                              </block>
-                                                            </value>
-                                                          </block>
-                                                        </value>
-                                                        <value name="ADD1">
-                                                          <block type="jg_text_remake_paragraph_quotes" id="wpOSVH[lig%28^y|dqI@">
-                                                            <field name="TEXT">-</field>
-                                                          </block>
-                                                        </value>
-                                                        <value name="ADD2">
-                                                          <block type="options" id="$mnUkEr.d2sS0`Xwk[.m">
-                                                            <mutation mode="Integer" type="null"></mutation>
-                                                            <field name="SEARCH">Integer</field>
-                                                            <value name="BOOLEAN">
-                                                              <block type="jg_text_remake_paragraph_quotes" id="R0(xQHbG/YYef[+4-!,q">
-                                                                <field name="TEXT">day</field>
-                                                              </block>
-                                                            </value>
-                                                          </block>
-                                                        </value>
-                                                        <value name="ADD3">
-                                                          <block type="jg_text_remake_paragraph_quotes" id="$e;GWhQim-o?YJ0.9.ss">
-                                                            <field name="TEXT">-</field>
-                                                          </block>
-                                                        </value>
-                                                        <value name="ADD4">
-                                                          <block type="options" id="qZQg}a9V.%D}lCT-zPn$">
-                                                            <mutation mode="Integer" type="null"></mutation>
-                                                            <field name="SEARCH">Integer</field>
-                                                            <value name="BOOLEAN">
-                                                              <block type="jg_text_remake_paragraph_quotes" id="N)UIPoiUuVi|M:a5tLE[">
-                                                                <field name="TEXT">month</field>
-                                                              </block>
-                                                            </value>
-                                                          </block>
-                                                        </value>
-                                                      </block>
-                                                    </value>
-                                                    <value name="id">
-                                                      <block type="frost_category_get" id="+lh2xS?wKa~Y;7sV(CFM">
-                                                        <field name="SEARCH_TYPE">NAME</field>
-                                                        <value name="VALUE">
-                                                          <block type="jg_text_remake_paragraph_quotes" id="~2:i`vy-Q`G#muh|Mvi1">
-                                                            <field name="TEXT">Logoto</field>
-                                                          </block>
-                                                        </value>
-                                                        <value name="SERVER">
-                                                          <block type="interaction_guild" id="oH?:S8(JMCGfuGe.?nt+"></block>
-                                                        </value>
-                                                      </block>
-                                                    </value>
-                                                    <value name="server">
-                                                      <block type="interaction_guild" id="T=}AU[gt-crGoNa)z~SQ"></block>
-                                                    </value>
-                                                    <statement name="THEN">
-                                                      <block type="channel_perms" id="li`)+^IQeF/Utx8|zy9Q">
-                                                        <field name="ad">true</field>
-                                                        <field name="perm">VIEW_CHANNEL</field>
-                                                        <value name="channel">
-                                                          <block type="frost_created_cat" id="U+^hWI4L[gZ6Em_31hT3"></block>
-                                                        </value>
-                                                        <value name="to">
-                                                          <block type="jg_members_get_member_by_id" id="`H:r4k)S|`.}ogKsPUQN">
-                                                            <value name="ID">
-                                                              <shadow type="text" id="#Pf]w}%S4=d10DLEYt8|">
-                                                                <field name="TEXT">1431383390162124920</field>
-                                                              </shadow>
-                                                            </value>
-                                                          </block>
-                                                        </value>
-                                                        <next>
-                                                          <block type="channel_perms" id="KcT-0gE:PGkAw5cP+iuj">
-                                                            <field name="ad">false</field>
-                                                            <field name="perm">VIEW_CHANNEL</field>
-                                                            <value name="channel">
-                                                              <block type="frost_created_cat" id="-{A6aVL+!u{LT:j-sS2q"></block>
-                                                            </value>
-                                                            <value name="to">
-                                                              <block type="s4d_get_role" id="ubA;X@B2z_$oLsBmetH^">
-                                                                <field name="SEARCH_TYPE">ID</field>
-                                                                <value name="VALUE">
-                                                                  <block type="s4d_server_id" id="U72l^6SxlRczfC[f]C-o">
-                                                                    <value name="SERVER">
-                                                                      <block type="interaction_guild" id="vn)YC2nypMzlV?{LB=Ip"></block>
-                                                                    </value>
-                                                                  </block>
-                                                                </value>
-                                                                <value name="SERVER">
-                                                                  <block type="interaction_guild" id="!-NnpT)q)USs;#/cfMeS"></block>
-                                                                </value>
-                                                              </block>
-                                                            </value>
-                                                            <next>
-                                                              <block type="s4d_send_channel" id="6jkSN[N(Bjqm6I$FcL$+">
-                                                                <value name="CONTENT">
-                                                                  <block type="text_join" id="TWcE+:s=0rWY(L#EJs!J">
-                                                                    <mutation items="5"></mutation>
-                                                                    <value name="ADD0">
-                                                                      <block type="jg_text_remake_paragraph_quotes" id=".#B9)F+i+lXQ[~gp/-t,">
-                                                                        <field name="TEXT">&lt;:asterisk:1505250975282106469&gt; **Last step**</field>
-                                                                      </block>
-                                                                    </value>
-                                                                    <value name="ADD1">
-                                                                      <block type="s4d_newline" id="+H)rk=[UACVcJtV-iKQ$"></block>
-                                                                    </value>
-                                                                    <value name="ADD2">
-                                                                      <block type="jg_text_remake_paragraph_quotes" id="A#Y@S*+sDbl~V7VJR91}">
-                                                                        <field name="TEXT">&lt;:track_next:1505295937856213072&gt; All that remains is to add the name or logo link to finalize the server change programming in the topic of this channel.</field>
-                                                                      </block>
-                                                                    </value>
-                                                                    <value name="ADD3">
-                                                                      <block type="s4d_newline" id="*}3y3ZlrnE^.N7pw$GlM"></block>
-                                                                    </value>
-                                                                    <value name="ADD4">
-                                                                      <block type="jg_text_remake_paragraph_quotes" id="UM4oo~Y.b{`Fc9|oHW%t">
-                                                                        <field name="TEXT">&lt;:track_next:1505295937856213072&gt; Il reste plus qu'à mettre le nom ou le lien du logo pour finalisé la programation du changement du serveur dans le sujet de ce salons.</field>
-                                                                      </block>
-                                                                    </value>
-                                                                  </block>
-                                                                </value>
-                                                                <value name="CHANNEL">
-                                                                  <block type="frost_created_cat" id="y3TvBG-A)9x#:QztN~]I"></block>
-                                                                </value>
-                                                                <next>
-                                                                  <block type="slash_reply" id="d+-z#^1x+;,:~gl~p5|-">
-                                                                    <value name="CONTENT">
-                                                                      <block type="text_join" id="ZhFp7e^RIZqF!Ki8Q`x@">
-                                                                        <mutation items="8"></mutation>
-                                                                        <value name="ADD0">
-                                                                          <block type="jg_text_remake_paragraph_quotes" id="Ckmyr4Udrz^gdv0Wz6DO">
-                                                                            <field name="TEXT">&lt;:asterisk:1505250975282106469&gt; **Last step**</field>
-                                                                          </block>
-                                                                        </value>
-                                                                        <value name="ADD1">
-                                                                          <block type="s4d_newline" id="Qc0do((o01Dm|!k~$|1o"></block>
-                                                                        </value>
-                                                                        <value name="ADD2">
-                                                                          <block type="jg_text_remake_paragraph_quotes" id="]YqW;s979ZX/FG5)^e8u">
-                                                                            <field name="TEXT">&lt;:track_next:1505295937856213072&gt; All you have to do now is follow the instructions in the channel:</field>
-                                                                          </block>
-                                                                        </value>
-                                                                        <value name="ADD3">
-                                                                          <block type="s4d_newline" id="ElabZi2AACZ0t|M6PiU9"></block>
-                                                                        </value>
-                                                                        <value name="ADD4">
-                                                                          <block type="jg_text_remake_paragraph_quotes" id="do5(PSP78Kctjjsf=+vX">
-                                                                            <field name="TEXT">&lt;:track_next:1505295937856213072&gt; Il ne vous reste plus qu'à suivre les instructions dans le salons :</field>
-                                                                          </block>
-                                                                        </value>
-                                                                        <value name="ADD5">
-                                                                          <block type="s4d_newline" id="@.M:_D8DH|gpO3qUl~l}"></block>
-                                                                        </value>
-                                                                        <value name="ADD6">
-                                                                          <block type="jg_text_remake_paragraph_quotes" id="n{N=RR2U-p@Qu@TVx.6$">
-                                                                            <field name="TEXT">-# &lt;:track_next:1505295937856213072&gt; </field>
-                                                                          </block>
-                                                                        </value>
-                                                                        <value name="ADD7">
-                                                                          <block type="frost_created_cat" id="3zEu7KC_e}`TS#%#O1fn"></block>
-                                                                        </value>
-                                                                      </block>
-                                                                    </value>
-                                                                  </block>
-                                                                </next>
-                                                              </block>
-                                                            </next>
-                                                          </block>
-                                                        </next>
-                                                      </block>
-                                                    </statement>
-                                                  </block>
-                                                </statement>
-                                                <value name="IF1">
-                                                  <block type="logic_compare" id="I7HqhdTxW^PgSim1M+zf">
-                                                    <field name="OP">EQ</field>
-                                                    <value name="A">
-                                                      <block type="interaction_name" id="VirmNc!B-hvsi,rwPo@I"></block>
-                                                    </value>
-                                                    <value name="B">
-                                                      <block type="jg_text_remake_paragraph_quotes" id="I.Is=tJ`JrOZF2_~WE!U">
-                                                        <field name="TEXT">add-an-event</field>
-                                                      </block>
-                                                    </value>
-                                                  </block>
-                                                </value>
-                                                <statement name="DO1">
-                                                  <block type="slash_reply" id="{wpS~[:1uZ8RzDG6zh/}">
-                                                    <value name="CONTENT">
-                                                      <block type="text_join" id="Paqy^-*eKW3lG#=#YR}/">
-                                                        <mutation items="5"></mutation>
-                                                        <value name="ADD0">
-                                                          <block type="jg_text_remake_paragraph_quotes" id=",O*6rbAHRx6`8B^bu}XM">
-                                                            <field name="TEXT">&lt;:asterisk:1505250975282106469&gt; **Error**</field>
-                                                          </block>
-                                                        </value>
-                                                        <value name="ADD1">
-                                                          <block type="s4d_newline" id="CIoH5(Vvr;tP1_RBSU3e"></block>
-                                                        </value>
-                                                        <value name="ADD2">
-                                                          <block type="jg_text_remake_paragraph_quotes" id="D+(RyC0`)Cs|PtZA!;Kl">
-                                                            <field name="TEXT">&lt;:regional_indicator_x:1505250983436091634&gt; Your highest role must contain the following permissions to run this command: Server Owner or Admin or Manage Server.</field>
-                                                          </block>
-                                                        </value>
-                                                        <value name="ADD3">
-                                                          <block type="s4d_newline" id="L(ZlOo^K`Vt)R|LvEG9%"></block>
-                                                        </value>
-                                                        <value name="ADD4">
-                                                          <block type="jg_text_remake_paragraph_quotes" id="^)T9bAHZd]Mk#iZ}s]Xc">
-                                                            <field name="TEXT">&lt;:regional_indicator_x:1505250983436091634&gt; Votre rôle le plus élevé doit contient les permissions suivant pour faire cette commande : Proprietaire du serveur ouAdmin ou Gérer le serveur.</field>
-                                                          </block>
-                                                        </value>
-                                                      </block>
-                                                    </value>
-                                                  </block>
-                                                </statement>
-                                              </block>
-                                            </next>
-                                          </block>
-                                        </next>
                                       </block>
                                     </next>
                                   </block>

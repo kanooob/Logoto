@@ -148,50 +148,6 @@ const S4D_WEBSITECREATION_EXPRESS_app = S4D_WEBSITECREATION_EXPRESS();
     
           ]
       },{
-          name: 'logo-add',
-      		description: 'Ajoutez un nouveau changement de logo',
-      		options: [
-              {
-            type: 4,
-        	name: 'day',
-            required: true,
-        	description: 'Le jour du changement (ne pas mettre de 0 devant)',
-            choices: [
-    
-            ]
-        },{
-            type: 4,
-        	name: 'month',
-            required: true,
-        	description: 'Le mois du changement (ne pas mettre de 0 devant)',
-            choices: [
-    
-            ]
-        },
-          ]
-      },{
-          name: 'name-add',
-      		description: 'Ajoutez un nouveau changement de nom',
-      		options: [
-              {
-            type: 4,
-        	name: 'day',
-            required: true,
-        	description: 'Le jour du changement (ne pas mettre de 0 devant)',
-            choices: [
-    
-            ]
-        },{
-            type: 4,
-        	name: 'month',
-            required: true,
-        	description: 'Le mois du changement (ne pas mettre de 0 devant)',
-            choices: [
-    
-            ]
-        },
-          ]
-      },{
           name: 'add-an-event',
       		description: 'Add a name or logo change event',
       		options: [
@@ -213,7 +169,7 @@ const S4D_WEBSITECREATION_EXPRESS_app = S4D_WEBSITECREATION_EXPRESS();
             type: 4,
         	name: 'day',
             required: true,
-        	description: 'The day of change',
+        	description: 'Change day',
             choices: [
     
             ]
@@ -221,7 +177,7 @@ const S4D_WEBSITECREATION_EXPRESS_app = S4D_WEBSITECREATION_EXPRESS();
             type: 4,
         	name: 'month',
             required: true,
-        	description: 'The month of change',
+        	description: 'Change month',
             choices: [
     
             ]
@@ -268,15 +224,15 @@ const S4D_WEBSITECREATION_EXPRESS_app = S4D_WEBSITECREATION_EXPRESS();
     
     s4d.client.on('interactionCreate', async (interaction) => {
               if ((interaction.commandName) == 'setup' && ((((interaction.member).roles.highest).permissions.has('MANAGE_GUILD')) || (((interaction.member).roles.highest).permissions.has('ADMINISTRATOR')) || (String((interaction.guild).ownerId)) == ((interaction.member).id))) {
-        (interaction.guild).channels.create('Logoto', { type: 'GUILD_CATEGORY' }).then(async cat => {  (interaction.guild).channels.create('log-logoto', { type: "GUILD_TEXT", parent: (cat) }).then(async cat =>{  (cat).permissionOverwrites.edit((s4d.client.users.cache.get(String('1431383390162124920'))), { VIEW_CHANNEL: true });(cat).permissionOverwrites.edit(((interaction.guild).roles.cache.get(((interaction.guild).id))), { VIEW_CHANNEL: false });(cat).send({content:String((['<:asterisk:1505250975282106469> **Information**','\n','<:track_next:1505295937856213072> The logs channel has been created. You will see the server changes made by the bot in this channel. (Please do not change the channel name.) Now you just need to run this command </add-an-event:1505515202072805377> to create an automation.','\n','<:track_next:1505295937856213072> Le salon des logs à été créé. Vous obtiendrez les actions de changement du serveur fait par le bot dans ce salon. (Veuillez ne pas changer le nom du salon.) Maintenant vous avais juste a faire cette commande </add-an-event:1505515202072805377> pour créer une automatisation.'].join('')))});
+        (interaction.guild).channels.create('Logoto', { type: 'GUILD_CATEGORY' }).then(async cat => {  (interaction.guild).channels.create('log-logoto', { type: "GUILD_TEXT", parent: (cat) }).then(async cat =>{  (cat).permissionOverwrites.edit((s4d.client.users.cache.get(String('1431383390162124920'))), { VIEW_CHANNEL: true });(cat).permissionOverwrites.edit(((interaction.guild).roles.cache.get(((interaction.guild).id))), { VIEW_CHANNEL: false });(cat).send({content:String((['<:asterisk:1505250975282106469> **Information**','\n','<:track_next:1505295937856213072> The logs channel has been created. You will see the server changes made by the bot in this channel. (Please do not change the channel name.) Now you just need to run this command </add-an-event:1505515202072805377> to create an automation.','\n','<:track_next:1505295937856213072> Le salon des logs a été créé. Vous obtiendrez les actions de changement du serveur fait par le bot dans ce salon. (Veuillez ne pas changer le nom du salon.) Maintenant vous avez juste à faire cette commande </add-an-event:1505515202072805377> pour créer une automatisation.'].join('')))});
              (s4d.client.guilds.cache.get('1431674445428166806')).channels.cache.get('1433135924228784348').addFollower((cat), String('follow the project'))
-            await interaction.reply({ content: (['<:asterisk:1505250975282106469> **Information**','\n','<:track_next:1505295937856213072> The log and stock exchange will take place here:',cat,'\n','<:track_next:1505295937856213072> Le salon des log et des action se passera ici :',cat].join('')), ephemeral: true, components: [] });
+            await interaction.reply({ content: (['<:asterisk:1505250975282106469> **Information**','\n','<:track_next:1505295937856213072> The logs and actions will take place here:',cat,'\n','<:track_next:1505295937856213072> Le salon des logs et des actions se passera ici :',cat].join('')), ephemeral: true, components: [] });
           });});
       } else if ((interaction.commandName) == 'setup') {
-        await interaction.reply({ content: (['<:asterisk:1505250975282106469> **Error**','\n','<:regional_indicator_x:1505250983436091634> Your highest role must contain the following permissions to run this command: Server Owner or Admin or Manage Server.','\n','<:regional_indicator_x:1505250983436091634> Votre rôle le plus élevé doit contient les permissions suivant pour faire cette commande : Proprietaire du serveur ouAdmin ou Gérer le serveur.'].join('')), ephemeral: true, components: [] });
+        await interaction.reply({ content: (['<:asterisk:1505250975282106469> **Error**','\n','<:regional_indicator_x:1505250983436091634> Your highest role must contain the following permissions to run this command: Server Owner or Admin or Manage Server.','\n','<:regional_indicator_x:1505250983436091634> Votre rôle le plus élevé doit contenir au moins une des permissions suivantes pour faire cette commande : Propriétaire du serveur ou Admin ou Gérer le serveur.'].join('')), ephemeral: true, components: [] });
       }
       if ((interaction.commandName) == 'help') {
-        await interaction.reply({ content: (['<:asterisk:1505250975282106469> **Aide de Logoto - Automatisez votre Logo !**','\n','====================================','\n','<:track_next:1505295937856213072> **Je suis le bot spécialisé dans l\'automatisation du changement de logo de votre serveur, sans nécessiter de commandes complexes après la configuration.**','\n','###','\n','<:track_next:1505295937856213072> Les commandes','\n','* **`/setup`** : Crée les salons nécessaires (Logoto, log-logoto) pour un démarrage rapide et pour comprendre le fonctionnement.','\n','* **`/logo-add`** : Crée un salon de changement de logo avec les options day (Obligatoire, pour le jour), month (Obligatoire, pour le mois).','\n','* **`/name-add`** : Crée un salon de changement de nom avec les options day (Obligatoire, pour le jour), month (Obligatoire, pour le mois).','\n','* **`/help`** : Affiche ce message d\'aide.','\n','* **`/invite`** : Invitez le bot dans votre serveurs.','\n','* **`/support`** : Rejoigniez le serveur de support.','\n','<:link:1505215573364047913> [Website home](https://logoto.onrender.com/index-en), [Help page](https://logoto.onrender.com/help-en)'].join('')), ephemeral: false, components: [] });
+        await interaction.reply({ content: (['<:asterisk:1505250975282106469> **Aide de Logoto - Automatisez votre Logo !**','\n','====================================','\n','<:track_next:1505295937856213072> **Je suis le bot spécialisé dans l\'automatisation du changement de logo de votre serveur, sans nécessiter de commandes complexes après la configuration.**','\n','###','\n','<:track_next:1505295937856213072> Les commandes','\n','* **`/setup`** : Crée les salons nécessaires (Logoto, log-logoto) pour un démarrage rapide et pour comprendre le fonctionnement.','\n','* **`/logo-add`** : Crée un salon de changement de logo avec les options day (Obligatoire, pour le jour), month (Obligatoire, pour le mois).','\n','* **`/name-add`** : Crée un salon de changement de nom avec les options day (Obligatoire, pour le jour), month (Obligatoire, pour le mois).','\n','* **`/help`** : Affiche ce message d\'aide.','\n','* **`/invite`** : Invitez le bot dans votre serveur.','\n','* **`/support`** : Rejoignez le serveur de support.','\n','<:link:1505215573364047913> [Website home](https://logoto.onrender.com/index-en), [Help page](https://logoto.onrender.com/help-en)'].join('')), ephemeral: false, components: [] });
       }
       if ((interaction.commandName) == 'invite') {
         await interaction.reply({ content: (['<:serremains:1505250979430531134> **Invite the bot**','\n','<:track_next:1505295937856213072> Invite the bot using the link on your server:','\n','<:track_next:1505295937856213072> Inviter le bot grâce au lien sur votre serveur :','\n','-# <:link:1505215573364047913> [Discord bot](https://discord.com/oauth2/authorize?client_id=1431383390162124920)'].join('')), ephemeral: false, components: [] });
@@ -290,24 +246,12 @@ const S4D_WEBSITECREATION_EXPRESS_app = S4D_WEBSITECREATION_EXPRESS();
       if ((interaction.commandName) == 'support') {
         await interaction.reply({ content: (['<:serremains:1505250979430531134> **Support server**','\n','<:track_next:1505295937856213072> Join the support server if you need help:','\n','<:track_next:1505295937856213072> Rejoignez le serveur de support si vous avez besoin d\'aide :','\n','-# <:link:1505215573364047913> [Discord server](https://discord.gg/TPXFVYVnXe)'].join('')), ephemeral: false, components: [] });
       }
-      if ((interaction.commandName) == 'logo-add' && ((((interaction.member).roles.highest).permissions.has('MANAGE_GUILD')) || (((interaction.member).roles.highest).permissions.has('ADMINISTRATOR')) || (String((interaction.guild).ownerId)) == ((interaction.member).id))) {
-        (interaction.guild).channels.create((['l-',interaction.options.getInteger('day'),'-',interaction.options.getInteger('month')].join('')), { type: "GUILD_TEXT", parent: (interaction.guild).channels.cache.find((category) => category.name === 'Logoto') }).then(async cat =>{  (cat).permissionOverwrites.edit((s4d.client.users.cache.get(String('1431383390162124920'))), { VIEW_CHANNEL: true });(cat).permissionOverwrites.edit(((interaction.guild).roles.cache.get(((interaction.guild).id))), { VIEW_CHANNEL: false });(cat).send({content:String((['<:asterisk:1505250975282106469> **Almost finished**','\n','<:track_next:1505295937856213072> All you have to do now is post an image link in the forum thread; it must be a direct URL to an image.','\n','<:track_next:1505295937856213072> Il vous reste plus qu\'à mettre le lien d\'une image dans le sujet sur salon, il faut que se soit une url direct d\'une image.'].join('')))});
-          await interaction.reply({ content: ('<:debut:1505250975282106469> Le salon à été créé :' + String(cat)), ephemeral: true, components: [] });
-        });} else if ((interaction.commandName) == 'logo-add' && !(((interaction.member).roles.highest).permissions.has('MANAGE_GUILD'))) {
-        await interaction.reply({ content: (['<:asterisk:1505250975282106469> **Error**','\n','<:regional_indicator_x:1505250983436091634> Your highest role does not contain permissions to manage the server.','\n','<:regional_indicator_x:1505250983436091634> Votre rôle le plus élevé ne contient pas les permission pour gérer le serveur.'].join('')), ephemeral: true, components: [] });
-      }
-      if ((interaction.commandName) == 'name-add' && ((((interaction.member).roles.highest).permissions.has('MANAGE_GUILD')) || (((interaction.member).roles.highest).permissions.has('ADMINISTRATOR')) || (String((interaction.guild).ownerId)) == ((interaction.member).id))) {
-        (interaction.guild).channels.create((['n-',interaction.options.getInteger('day'),'-',interaction.options.getInteger('month')].join('')), { type: "GUILD_TEXT", parent: (interaction.guild).channels.cache.find((category) => category.name === 'Logoto') }).then(async cat =>{  (cat).permissionOverwrites.edit((s4d.client.users.cache.get(String('1431383390162124920'))), { VIEW_CHANNEL: true });(cat).permissionOverwrites.edit(((interaction.guild).roles.cache.get(((interaction.guild).id))), { VIEW_CHANNEL: false });(cat).send({content:String((['<:asterisk:1505250975282106469> **Almost finished**','\n','<:track_next:1505295937856213072> All you have to do now is put the name of the server you want in the subject line.','\n','<:track_next:1505295937856213072> Il vous reste plus qu\'à mettre le nom du serveur que vous voulez dans le sujet.'].join('')))});
-          await interaction.reply({ content: ('<:debut:1505250975282106469> Le salon à été créé :' + String(cat)), ephemeral: true, components: [] });
-        });} else if ((interaction.commandName) == 'name-add' && !(((interaction.member).roles.highest).permissions.has('MANAGE_GUILD'))) {
-        await interaction.reply({ content: (['<:asterisk:1505250975282106469> **Error**','\n','<:regional_indicator_x:1505250983436091634> Your highest role does not contain permissions to manage the server.','\n','<:regional_indicator_x:1505250983436091634> Votre rôle le plus élevé ne contient pas les permission pour gérer le serveur.'].join('')), ephemeral: true, components: [] });
-      }
       if ((interaction.commandName) == 'test' && ((((interaction.channel).topic) || '').startsWith('https://cdn.discordapp.com' || ''))) {
-        await interaction.reply({ content: (['<:asterisk:1505250975282106469> **Test the topic**','\n','<:regional_indicator_x:1505250983436091634> Discord URLs are not recommended for logo changes.','\n','<:regional_indicator_x:1505250983436091634> Les urls discord sont déconseillé pour le changement de logo.'].join('')), ephemeral: false, components: [] });
+        await interaction.reply({ content: (['<:asterisk:1505250975282106469> **Test the topic**','\n','<:regional_indicator_x:1505250983436091634> Discord URLs are not recommended for logo changes.','\n','<:regional_indicator_x:1505250983436091634> Les urls discord sont déconseillées pour le changement de logo.'].join('')), ephemeral: false, components: [] });
       } else if ((interaction.commandName) == 'test' && ((((interaction.channel).topic) || '').startsWith('https://' || ''))) {
-        await interaction.reply({ content: (['<:asterisk:1505250975282106469> **Test the topic**','\n','<:linuxestmieuxquewindowsetmac:1505250978004336650> If the link you provided is a direct URL to an image, that\'s fine. (Direct URL: the URL page contains only the image, nothing else (no website logo, no text), and on Discord, if you send the direct image link, it will only display the image without any text.)','\n','<:linuxestmieuxquewindowsetmac:1505250978004336650> Si le lien que vous avez mis est une url direct d\'une image c\'est bon. (Url direct :sur la page de l\'url il y a que l\'image rien d\'autre (pas le logo du site, pas de texte) et sur discord si vous envoyez le lien de l\'image direct il y aura que l\'image sans texte)'].join('')), ephemeral: false, components: [] });
+        await interaction.reply({ content: (['<:asterisk:1505250975282106469> **Test the topic**','\n','<:linuxestmieuxquewindowsetmac:1505250978004336650> If the link you provided is a direct URL to an image, that\'s fine. (Direct URL: the URL page contains only the image, nothing else (no website logo, no text), and on Discord, if you send the direct image link, it will only display the image without any text.)','\n','<:linuxestmieuxquewindowsetmac:1505250978004336650> Si le lien que vous avez mis est une url directe d\'une image c\'est bon. (Url directe : sur la page de l\'url il n\'y a que l\'image rien d\'autre... et sur discord si vous envoyez le lien direct de l\'image il n\'y aura que l\'image sans texte)'].join('')), ephemeral: false, components: [] });
       } else if ((interaction.commandName) == 'test') {
-        await interaction.reply({ content: (['<:asterisk:1505250975282106469> **Test the topic**','\n','<:texte:1505250977001902080> This is a server name. (if it contains between 2 and 100 characters).','\n','<:texte:1505250977001902080> C\'est un nom de serveur. (s\'il comporter de 2 à 100 caractères).'].join('')), ephemeral: true, components: [] });
+        await interaction.reply({ content: (['<:asterisk:1505250975282106469> **Test the topic**','\n','<:texte:1505250977001902080> This is a server name. (if it contains between 2 and 100 characters).','\n','<:texte:1505250977001902080> C\'est un nom de serveur. (s\'il comporte de 2 à 100 caractères).'].join('')), ephemeral: true, components: [] });
       }
       if ((interaction.commandName) == 'privee' && ((interaction.member).id) == '746069923465527339') {
         await interaction.reply({ content: '<:asterisk:1505250975282106469> C\'est bon retournement de situation !', ephemeral: true, components: [] });
@@ -316,8 +260,12 @@ const S4D_WEBSITECREATION_EXPRESS_app = S4D_WEBSITECREATION_EXPRESS();
         await interaction.reply({ content: (['<:asterisk:1505250975282106469> **Error**','\n','<:regional_indicator_x:1505250983436091634> You do not have permission to use this command','\n','<:regional_indicator_x:1505250983436091634> Vous ne possédez pas les permissions pour utiliser cette commande'].join('')), ephemeral: true, components: [] });
       }
       if ((interaction.commandName) == 'add-an-event' && ((((interaction.member).roles.highest).permissions.has('MANAGE_GUILD')) || (((interaction.member).roles.highest).permissions.has('ADMINISTRATOR')) || (String((interaction.guild).ownerId)) == ((interaction.member).id))) {
-        (interaction.guild).channels.create(([interaction.options.getString('type'),'-',interaction.options.getInteger('day'),'-',interaction.options.getInteger('month')].join('')), { type: "GUILD_TEXT", parent: (interaction.guild).channels.cache.find((category) => category.name === 'Logoto') }).then(async cat =>{  (cat).permissionOverwrites.edit((s4d.client.users.cache.get(String('1431383390162124920'))), { VIEW_CHANNEL: true });(cat).permissionOverwrites.edit(((interaction.guild).roles.cache.get(((interaction.guild).id))), { VIEW_CHANNEL: false });(cat).send({content:String((['<:asterisk:1505250975282106469> **Last step**','\n','<:track_next:1505295937856213072> All that remains is to add the name or logo link to finalize the server change programming in the topic of this channel.','\n','<:track_next:1505295937856213072> Il reste plus qu\'à mettre le nom ou le lien du logo pour finalisé la programation du changement du serveur dans le sujet de ce salons.'].join('')))});
-          await interaction.reply({ content: (['<:asterisk:1505250975282106469> **Last step**','\n','<:track_next:1505295937856213072> All you have to do now is follow the instructions in the channel:','\n','<:track_next:1505295937856213072> Il ne vous reste plus qu\'à suivre les instructions dans le salons :','\n','-# <:track_next:1505295937856213072> ',cat].join('')), ephemeral: true, components: [] });
+        (interaction.guild).channels.create(([interaction.options.getString('type'),'-',interaction.options.getInteger('day'),'-',interaction.options.getInteger('month')].join('')), { type: "GUILD_TEXT", parent: (interaction.guild).channels.cache.find((category) => category.name === 'Logoto') }).then(async cat =>{  (cat).permissionOverwrites.edit((s4d.client.users.cache.get(String('1431383390162124920'))), { VIEW_CHANNEL: true });(cat).permissionOverwrites.edit(((interaction.guild).roles.cache.get(((interaction.guild).id))), { VIEW_CHANNEL: false });if ((interaction.options.getString('type')) == 'l') {
+            (cat).send({content:String((['<:asterisk:1505250975282106469> **Last step**','\n','<:track_next:1505295937856213072> All that remains is to put the direct url of an image/logo to finalize the programming of the server change in the subject of this room.','\n','<:track_next:1505295937856213072> Il reste plus qu\'à mettre l\'url directe d\'une image/logo pour finaliser la programmation du changement du serveur dans le sujet de ce salon.'].join('')))});
+          } else {
+            (cat).send({content:String((['<:asterisk:1505250975282106469> **Last step**','\n','<:track_next:1505295937856213072> All that remains is to put the name in the subject of this channel to finalize the programming of the server change.','\n','<:track_next:1505295937856213072> Il reste plus qu\'à mettre le nom dans le sujet de ce salon pour finaliser la programmation du changement du serveur.'].join('')))});
+          }
+          await interaction.reply({ content: (['<:asterisk:1505250975282106469> **Last step**','\n','<:track_next:1505295937856213072> All you have to do now is follow the instructions in the channel:','\n','<:track_next:1505295937856213072> Il ne vous reste plus qu\'à suivre les instructions dans le salon :','\n','-# <:track_next:1505295937856213072> ',cat].join('')), ephemeral: true, components: [] });
         });} else if ((interaction.commandName) == 'add-an-event') {
         await interaction.reply({ content: (['<:asterisk:1505250975282106469> **Error**','\n','<:regional_indicator_x:1505250983436091634> Your highest role must contain the following permissions to run this command: Server Owner or Admin or Manage Server.','\n','<:regional_indicator_x:1505250983436091634> Votre rôle le plus élevé doit contient les permissions suivant pour faire cette commande : Proprietaire du serveur ouAdmin ou Gérer le serveur.'].join('')), ephemeral: true, components: [] });
       }
