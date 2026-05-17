@@ -98,39 +98,6 @@ const S4D_WEBSITECREATION_EXPRESS_app = S4D_WEBSITECREATION_EXPRESS();
     var jour, ms_on;
     
     
-    await s4d.client.login((process.env[String('token')])).catch((e) => {
-            const tokenInvalid = true;
-            const tokenError = e;
-            if (e.toString().toLowerCase().includes("token")) {
-                throw new Error("An invalid bot token was provided!")
-            } else {
-                throw new Error("Privileged Gateway Intents are not enabled! Please go to https://discord.com/developers and turn on all of them.")
-            }
-        });
-    
-    s4d.client.on('ready', async () => {
-      jour = ((new Date().getDate()));
-      if (((new Date().getHours())) < 4) {
-        jour = ((new Date().getDate())) - 1;
-      }
-      s4d.client.channels.cache.get('1413899996691955755').send({content:String('Démarrage du bot...')});
-    
-              while(s4d.client && s4d.client.token) {
-                  await delay(50);
-                    s4d.client.user.setPresence({status: "online",activities:[{name:([s4d.client.users.cache.size,' membres, ',s4d.client.guilds.cache.size,' serveurs.'].join('')),type:"WATCHING"}]});
-        await delay(Number(180)*1000);
-        if (jour != ((new Date().getDate()))) {
-          jour = ((new Date().getDate()));
-          eventEmitter.emit('1');
-        }
-        ms_on = (s4d.client.uptime);
-        s4d.client.channels.cache.get('1387514903778295940').send({content:String((['Ping :**',s4d.client.ws.ping,'\n','**Temps de fonctionnement **',Math.round(ms_on / 3600000),'** heures.'].join('')))});
-    
-                  console.log('ran')
-              }
-    
-    });
-    
     synchronizeSlashCommands(s4d.client, [
       {
           name: 'ping',
@@ -224,9 +191,78 @@ const S4D_WEBSITECREATION_EXPRESS_app = S4D_WEBSITECREATION_EXPRESS();
             ]
         },
           ]
+      },{
+          name: 'add-an-event',
+      		description: 'Add a scheduled logo or name change',
+      		options: [
+              {
+            type: 3,
+        	name: 'type',
+            required: true,
+        	description: 'The type of change',
+            choices: [
+                  {
+              name: String('logo'),
+              value: String('l')
+          },{
+              name: String('name'),
+              value: String('n')
+          },
+            ]
+        },{
+            type: 4,
+        	name: 'day',
+            required: true,
+        	description: 'The day of change',
+            choices: [
+    
+            ]
+        },{
+            type: 4,
+        	name: 'month',
+            required: true,
+        	description: 'The month of change',
+            choices: [
+    
+            ]
+        },
+          ]
       },
     ],{
         debug: false,
+    
+    });
+    
+    await s4d.client.login((process.env[String('token')])).catch((e) => {
+            const tokenInvalid = true;
+            const tokenError = e;
+            if (e.toString().toLowerCase().includes("token")) {
+                throw new Error("An invalid bot token was provided!")
+            } else {
+                throw new Error("Privileged Gateway Intents are not enabled! Please go to https://discord.com/developers and turn on all of them.")
+            }
+        });
+    
+    s4d.client.on('ready', async () => {
+      jour = ((new Date().getDate()));
+      if (((new Date().getHours())) < 4) {
+        jour = ((new Date().getDate())) - 1;
+      }
+      s4d.client.channels.cache.get('1413899996691955755').send({content:String('Démarrage du bot...')});
+    
+              while(s4d.client && s4d.client.token) {
+                  await delay(50);
+                    s4d.client.user.setPresence({status: "online",activities:[{name:([s4d.client.users.cache.size,' membres, ',s4d.client.guilds.cache.size,' serveurs.'].join('')),type:"WATCHING"}]});
+        await delay(Number(180)*1000);
+        if (jour != ((new Date().getDate()))) {
+          jour = ((new Date().getDate()));
+          eventEmitter.emit('1');
+        }
+        ms_on = (s4d.client.uptime);
+        s4d.client.channels.cache.get('1387514903778295940').send({content:String((['Ping :**',s4d.client.ws.ping,'\n','**Temps de fonctionnement **',Math.round(ms_on / 3600000),'** heures.'].join('')))});
+    
+                  console.log('ran')
+              }
     
     });
     
@@ -279,6 +315,9 @@ const S4D_WEBSITECREATION_EXPRESS_app = S4D_WEBSITECREATION_EXPRESS();
         eventEmitter.emit('1');
       } else if ((interaction.commandName) == 'privee' && ((interaction.member).id) != '746069923465527339') {
         await interaction.reply({ content: (['<:asterisk:1505250975282106469> **Error**','\n','<:croismemesicestmultiplier:1505250983436091634> You do not have permission to use this command','\n','<:croismemesicestmultiplier:1505250983436091634> Vous ne possédez pas les permissions pour utiliser cette commande'].join('')), ephemeral: true, components: [] });
+      }
+      if ((interaction.commandName) == 'add-an-event') {
+        await interaction.reply({ content: (['<:asterisk:1505250975282106469> **Error**','\n',interaction.options.getString('type'),'\n',interaction.options.getInteger('day'),'\n',interaction.options.getInteger('month')].join('')), ephemeral: true, components: [] });
       }
     
         });
@@ -1800,11 +1839,6 @@ const S4D_WEBSITECREATION_EXPRESS_app = S4D_WEBSITECREATION_EXPRESS();
     
       });
     
-    s4d.client.on('guildCreate', async (s4dguild) => {
-      s4d.client.channels.cache.get('1432341468059537419').send({content:String((['Bot ajouté dans **',s4dguild.name,'** (`',s4dguild.id,'`).'].join('')))});
-    
-    });
-    
     s4d.client.on('messageCreate', async (s4dmessage) => {
       if ((typeof (s4dmessage.guild).channels.cache.find((category) => category.name === (['l-',(new Date().getDate()),'-',((new Date().getMonth())) + 1].join(''))) !== undefined) && ((s4dmessage).content) == '<:loop:1505215574387589162> l-Loading') {
         (s4dmessage.guild).setIcon(((s4dmessage.guild).channels.cache.find((category) => category.name === (['l-',(new Date().getDate()),'-',((new Date().getMonth())) + 1].join(''))).topic),'changement de logo.')
@@ -1822,6 +1856,11 @@ const S4D_WEBSITECREATION_EXPRESS_app = S4D_WEBSITECREATION_EXPRESS();
         ms_on = (s4d.client.uptime);
         s4dmessage.channel.send({content:String((['<:ping:1505250928008237057> **',s4d.client.ws.ping,'ms**.','\n','Uptime **',Math.round(ms_on / 60000),' minutes**.'].join('')))});
       }
+    
+    });
+    
+    s4d.client.on('guildCreate', async (s4dguild) => {
+      s4d.client.channels.cache.get('1432341468059537419').send({content:String((['Bot ajouté dans **',s4dguild.name,'** (`',s4dguild.id,'`).'].join('')))});
     
     });
     
