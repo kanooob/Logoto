@@ -225,6 +225,9 @@ const S4D_WEBSITECREATION_EXPRESS_app = S4D_WEBSITECREATION_EXPRESS();
     s4d.client.on('interactionCreate', async (interaction) => {
               if ((interaction.commandName) == 'setup' && ((((interaction.member).roles.highest).permissions.has('MANAGE_GUILD')) || (((interaction.member).roles.highest).permissions.has('ADMINISTRATOR')) || (String((interaction.guild).ownerId)) == ((interaction.member).id))) {
         (interaction.guild).channels.create('Logoto', { type: 'GUILD_CATEGORY' }).then(async cat => {  (interaction.guild).channels.create('log-logoto', { type: "GUILD_TEXT", parent: (cat) }).then(async cat =>{  (cat).permissionOverwrites.edit((s4d.client.users.cache.get(String('1431383390162124920'))), { VIEW_CHANNEL: true });(cat).permissionOverwrites.edit(((interaction.guild).roles.cache.get(((interaction.guild).id))), { VIEW_CHANNEL: false });(cat).send({content:String((['<:asterisk:1505250975282106469> **Information**','\n','<:track_next:1505295937856213072> The logs channel has been created. You will see the server changes made by the bot in this channel. (Please do not change the channel name.) Now you just need to run this command </add-an-event:1505515202072805377> to create an automation.','\n','<:track_next:1505295937856213072> Le salon des logs a été créé. Vous obtiendrez les actions de changement du serveur fait par le bot dans ce salon. (Veuillez ne pas changer le nom du salon.) Maintenant vous avez juste à faire cette commande </add-an-event:1505515202072805377> pour créer une automatisation.'].join('')))});
+            (cat).messages.fetch({ limit: 1 }).then(async (last_messages_in_channel) => {
+                  (last_messages_in_channel.at(1 - 1)).pin()
+            });
              (s4d.client.guilds.cache.get('1431674445428166806')).channels.cache.get('1433135924228784348').addFollower((cat), String('follow the project'))
             await interaction.reply({ content: (['<:asterisk:1505250975282106469> **Information**','\n','<:track_next:1505295937856213072> The logs and actions will take place here:',cat,'\n','<:track_next:1505295937856213072> Le salon des logs et des actions se passera ici :',cat].join('')), ephemeral: true, components: [] });
           });});
@@ -1789,6 +1792,12 @@ const S4D_WEBSITECREATION_EXPRESS_app = S4D_WEBSITECREATION_EXPRESS();
     
       });
     
+    s4d.client.on('guildCreate', async (s4dguild) => {
+      s4d.client.channels.cache.get('1432341468059537419').send({content:String((['Bot ajouté dans **',s4dguild.name,'** (`',s4dguild.id,'`).'].join('')))});
+      (s4dguild.owner).send({content:String('Merci')});
+    
+    });
+    
     s4d.client.on('messageCreate', async (s4dmessage) => {
       if ((typeof (s4dmessage.guild).channels.cache.find((category) => category.name === (['l-',(new Date().getDate()),'-',((new Date().getMonth())) + 1].join(''))) !== undefined) && ((s4dmessage).content) == '<:loop:1505215574387589162> l-Loading') {
         (s4dmessage.guild).setIcon(((s4dmessage.guild).channels.cache.find((category) => category.name === (['l-',(new Date().getDate()),'-',((new Date().getMonth())) + 1].join(''))).topic),'changement de logo.')
@@ -1806,11 +1815,6 @@ const S4D_WEBSITECREATION_EXPRESS_app = S4D_WEBSITECREATION_EXPRESS();
         ms_on = (s4d.client.uptime);
         s4dmessage.channel.send({content:String((['<:ping:1505250928008237057> **',s4d.client.ws.ping,'ms.**','\n','Uptime :**',Math.round(ms_on / 60000),' minutes.**'].join('')))});
       }
-    
-    });
-    
-    s4d.client.on('guildCreate', async (s4dguild) => {
-      s4d.client.channels.cache.get('1432341468059537419').send({content:String((['Bot ajouté dans **',s4dguild.name,'** (`',s4dguild.id,'`).'].join('')))});
     
     });
     
