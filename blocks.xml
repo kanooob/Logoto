@@ -2304,7 +2304,7 @@
       </block>
     </statement>
   </block>
-  <block type="s4d_on_added" id="f[f[K3UbN$5[%Vy(]zA9" x="-1416" y="2466">
+  <block type="s4d_on_added" id="f[f[K3UbN$5[%Vy(]zA9" x="-1466" y="1789">
     <statement name="STATEMENTS">
       <block type="s4d_send_channel" id="lwwqVA9u]IHw!|T%T3_]">
         <value name="CONTENT">
@@ -2347,23 +2347,42 @@
           <block type="s4d_send_channel" id="W=yy~9HuGBFu)0Yp0O;1">
             <value name="CONTENT">
               <block type="text_join" id="Gq[mJS+#cv/DPHU6Zwl0">
-                <mutation items="4"></mutation>
+                <mutation items="9"></mutation>
                 <value name="ADD0">
                   <block type="jg_text_remake_paragraph_quotes" id="fVO6Cj#dL:)H_gq*9*l[">
-                    <field name="TEXT">merci</field>
+                    <field name="TEXT">&lt;:loudspeaker:1505590722798293253&gt; **Thank you for adding me**</field>
                   </block>
                 </value>
                 <value name="ADD1">
-                  <block type="s4d_add_server_name" id="Bl$Cimjr-3Ou@1cxsY84"></block>
+                  <block type="s4d_newline" id="7kq0gKRMQG,SZ!ZxyGC5"></block>
                 </value>
                 <value name="ADD2">
-                  <block type="jg_text_remake_paragraph_quotes" id="ACN[qn8u96~1X_v;dg07">
-                    <field name="TEXT">** (`</field>
+                  <block type="jg_text_remake_paragraph_quotes" id="zfQ:h6u32h40;ZGF-dA6">
+                    <field name="TEXT">&lt;:track_next:1505295937856213072&gt; Logoto is a Discord bot that automates the changing of your server's icon and name.</field>
                   </block>
                 </value>
                 <value name="ADD3">
+                  <block type="s4d_newline" id="Gw$km62A5F.fi4Zfz(Oi"></block>
+                </value>
+                <value name="ADD4">
                   <block type="jg_text_remake_paragraph_quotes" id="K[ieG}US.%qA,@fDHM_l">
-                    <field name="TEXT">`).</field>
+                    <field name="TEXT">&lt;:track_next:1505295937856213072&gt; To get started, run the following command: &lt;/setup:1431390983215386674&gt;</field>
+                  </block>
+                </value>
+                <value name="ADD5">
+                  <block type="s4d_newline" id="+bC86fVf2g+;mU1lOSBx"></block>
+                </value>
+                <value name="ADD6">
+                  <block type="jg_text_remake_paragraph_quotes" id="ACN[qn8u96~1X_v;dg07">
+                    <field name="TEXT">Logoto est un bot Discord qui automatiser le changement de l'icône et du nom de votre serveur.</field>
+                  </block>
+                </value>
+                <value name="ADD7">
+                  <block type="s4d_newline" id="*GYz,Jp@(nFnVr_%)ley"></block>
+                </value>
+                <value name="ADD8">
+                  <block type="jg_text_remake_paragraph_quotes" id="%n2^TM/?Dwo=?bM:Yrj4">
+                    <field name="TEXT">&lt;:track_next:1505295937856213072&gt; Pour commencer, exécutez la commande suivante : &lt;/setup:1431390983215386674&gt;</field>
                   </block>
                 </value>
               </block>
@@ -2384,8 +2403,63 @@
             <next>
               <block type="s4d_send_member" id="pP%Gf[p5OojY;UwV.CfV">
                 <value name="CONTENT">
-                  <block type="jg_text_remake_paragraph_quotes" id="r5Y)I.yKTm.F0Ut7z7{:">
-                    <field name="TEXT">Merci</field>
+                  <block type="text_join" id="3AxROSd9N2Qnrtx^uUAp">
+                    <mutation items="11"></mutation>
+                    <value name="ADD0">
+                      <block type="jg_text_remake_paragraph_quotes" id="G0X{KODHF=tuDuz3:4?I">
+                        <field name="TEXT">&lt;:loudspeaker:1505590722798293253&gt; **I thank the </field>
+                      </block>
+                    </value>
+                    <value name="ADD1">
+                      <block type="s4d_add_server_name" id="Bl$Cimjr-3Ou@1cxsY84"></block>
+                    </value>
+                    <value name="ADD2">
+                      <block type="jg_text_remake_paragraph_quotes" id="5!8nd[bCmA?(0*l/k)x;">
+                        <field name="TEXT"> Discord server team.</field>
+                      </block>
+                    </value>
+                    <value name="ADD3">
+                      <block type="s4d_newline" id="xC1Z8Egn$1OA:L]TYDg6"></block>
+                    </value>
+                    <value name="ADD4">
+                      <block type="jg_text_remake_paragraph_quotes" id="x/WMRc1dV_5.SD0}D`Ur">
+                        <field name="TEXT">&lt;:track_next:1505295937856213072&gt; For more information, please visit my website and my support server.</field>
+                      </block>
+                    </value>
+                    <value name="ADD5">
+                      <block type="s4d_newline" id="Go;2.$^X,n]wv6O{I.M6"></block>
+                    </value>
+                    <value name="ADD6">
+                      <block type="jg_text_remake_paragraph_quotes" id="MY6`0r5+aDx)=sm]:)*O">
+                        <field name="TEXT">&lt;:track_next:1505295937856213072&gt; Pour plus d'information vous avez mon site internet et mon serveurs de support.</field>
+                      </block>
+                    </value>
+                    <value name="ADD7">
+                      <block type="s4d_newline" id="$(QERq-WSXp9qIoOyYNG"></block>
+                    </value>
+                    <value name="ADD8">
+                      <block type="jg_text_remake_paragraph_quotes" id="5%~36{)P@7FcK{1?cR:#">
+                        <field name="TEXT">-# [Website](https://logoto.onrender.com/index-en), [Support server](https://discord.gg/TPXFVYVnXe), &lt;#</field>
+                      </block>
+                    </value>
+                    <value name="ADD9">
+                      <block type="server_attributes" id="PFuTwjGiRVbrN=2:L)_I">
+                        <field name="attributes">SYS_CHANNEL_ID</field>
+                        <value name="server">
+                          <block type="s4d_get_server" id="q_x}pO*Nzjzj0B7d`tP@">
+                            <field name="SEARCH_TYPE">ID</field>
+                            <value name="VALUE">
+                              <block type="s4d_add_server_id" id=";?t]pO6G-5dF*G|t{%Fh"></block>
+                            </value>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <value name="ADD10">
+                      <block type="jg_text_remake_paragraph_quotes" id="r5Y)I.yKTm.F0Ut7z7{:">
+                        <field name="TEXT">&gt;.</field>
+                      </block>
+                    </value>
                   </block>
                 </value>
                 <value name="MEMBER">
