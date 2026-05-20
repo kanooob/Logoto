@@ -202,7 +202,7 @@ const S4D_WEBSITECREATION_EXPRESS_app = S4D_WEBSITECREATION_EXPRESS();
     
               while(s4d.client && s4d.client.token) {
                   await delay(50);
-                    s4d.client.user.setPresence({status: "online",activities:[{name:([s4d.client.users.cache.size,' membres, ',s4d.client.guilds.cache.size,'servers.'].join('')),type:"WATCHING"}]});
+                    s4d.client.user.setPresence({status: "online",activities:[{name:([s4d.client.users.cache.size,'members, ',s4d.client.guilds.cache.size,'servers.'].join('')),type:"WATCHING"}]});
         await delay(Number(180)*1000);
         if (jour != ((new Date().getDate()))) {
           jour = ((new Date().getDate()));
@@ -226,7 +226,7 @@ const S4D_WEBSITECREATION_EXPRESS_app = S4D_WEBSITECREATION_EXPRESS();
                   (last_messages_in_channel.at(1 - 1)).pin()
             });
              (s4d.client.guilds.cache.get('1431674445428166806')).channels.cache.get('1433135924228784348').addFollower((cat), String('follow the project'))
-            await interaction.reply({ content: (['<:asterisk:1505250975282106469> **Information**','\n','<:track_next:1505295937856213072> The logs and actions will take place here:',cat,'\n','<:track_next:1505295937856213072> Le salon des logs et des actions se passera ici :',cat].join('')), ephemeral: true, components: [] });
+            await interaction.reply({ content: (['<:asterisk:1505250975282106469> **Information**','\n','<:track_next:1505295937856213072> The logs and actions will take place here:',cat,'\n','<:track_next:1505295937856213072> Le salon des logs et du suivi des actions se trouve ici :',cat].join('')), ephemeral: true, components: [] });
           });});
       } else if ((interaction.commandName) == 'setup') {
         await interaction.reply({ content: (['<:asterisk:1505250975282106469> **Error**','\n','<:regional_indicator_x:1505250983436091634> Your highest role must contain the following permissions to run this command: Server Owner or Admin or Manage Server.','\n','<:regional_indicator_x:1505250983436091634> Votre rôle le plus élevé doit contenir au moins une des permissions suivantes pour faire cette commande : Propriétaire du serveur ou Admin ou Gérer le serveur.'].join('')), ephemeral: true, components: [] });
@@ -245,13 +245,6 @@ const S4D_WEBSITECREATION_EXPRESS_app = S4D_WEBSITECREATION_EXPRESS();
       }
       if ((interaction.commandName) == 'support') {
         await interaction.reply({ content: (['<:serremains:1505250979430531134> **Support server**','\n','<:track_next:1505295937856213072> Join the support server if you need help:','\n','<:track_next:1505295937856213072> Rejoignez le serveur de support si vous avez besoin d\'aide :','\n','-# <:link:1505215573364047913> [Discord server](https://discord.gg/TPXFVYVnXe)'].join('')), ephemeral: false, components: [] });
-      }
-      if ((interaction.commandName) == 'test' && ((((interaction.channel).topic) || '').startsWith('https://cdn.discordapp.com' || ''))) {
-        await interaction.reply({ content: (['<:asterisk:1505250975282106469> **Test the topic**','\n','<:regional_indicator_x:1505250983436091634> Discord URLs are not recommended for logo changes.','\n','<:regional_indicator_x:1505250983436091634> Les urls discord sont déconseillées pour le changement de logo.'].join('')), ephemeral: false, components: [] });
-      } else if ((interaction.commandName) == 'test' && ((((interaction.channel).topic) || '').startsWith('https://' || ''))) {
-        await interaction.reply({ content: (['<:asterisk:1505250975282106469> **Test the topic**','\n','<:linuxestmieuxquewindowsetmac:1505250978004336650> If the link you provided is a direct URL to an image, that\'s fine. (Direct URL: the URL page contains only the image, nothing else (no website logo, no text), and on Discord, if you send the direct image link, it will only display the image without any text.)','\n','<:linuxestmieuxquewindowsetmac:1505250978004336650> Si le lien que vous avez mis est une url directe d\'une image c\'est bon. (Url directe : sur la page de l\'url il n\'y a que l\'image rien d\'autre... et sur discord si vous envoyez le lien direct de l\'image il n\'y aura que l\'image sans texte)'].join('')), ephemeral: false, components: [] });
-      } else if ((interaction.commandName) == 'test') {
-        await interaction.reply({ content: (['<:asterisk:1505250975282106469> **Test the topic**','\n','<:texte:1505250977001902080> This is a server name. (if it contains between 2 and 100 characters).','\n','<:texte:1505250977001902080> C\'est un nom de serveur. (s\'il comporte de 2 à 100 caractères).'].join('')), ephemeral: true, components: [] });
       }
       if ((interaction.commandName) == 'privee' && ((interaction.member).id) == '746069923465527339') {
         await interaction.reply({ content: '<:asterisk:1505250975282106469> C\'est bon retournement de situation !', ephemeral: true, components: [] });
@@ -289,15 +282,13 @@ const S4D_WEBSITECREATION_EXPRESS_app = S4D_WEBSITECREATION_EXPRESS();
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
             <title>Aide et Commandes Logoto | Configurer votre Bot Discord</title>
-            <meta name="description" content="Guide officiel du bot Discord Logoto. Découvrez toutes les commandes (/setup, /logo-add, /name-add) pour automatiser le changement de logo et de nom de votre serveur.">
+            <meta name="description" content="Guide officiel du bot Discord Logoto. Découvrez toutes les commandes (/setup, /help, /add-an-event) pour automatiser le changement de logo et de nom de votre serveur.">
             <link rel="canonical" href="https://logoto.onrender.com/help">
     
-            <!-- Balises Hreflang pour le SEO International -->
             <link rel="alternate" hreflang="fr" href="https://logoto.onrender.com/help">
             <link rel="alternate" hreflang="en" href="https://logoto.onrender.com/help-en">
             <link rel="alternate" hreflang="x-default" href="https://logoto.onrender.com/help">
     
-            <!-- Open Graph / Facebook -->
             <meta property="og:type" content="article">
             <meta property="og:url" content="https://logoto.onrender.com/help">
             <meta property="og:title" content="Aide & Commandes | Logoto Bot Discord">
@@ -305,7 +296,6 @@ const S4D_WEBSITECREATION_EXPRESS_app = S4D_WEBSITECREATION_EXPRESS();
             <meta property="og:image" content="https://raw.githubusercontent.com/kanooob/Logoto/refs/heads/main/Logoto.png">
             <meta property="og:locale" content="fr_FR">
     
-            <!-- Twitter -->
             <meta name="twitter:card" content="summary">
             <meta name="twitter:title" content="Aide & Commandes | Logoto Bot Discord">
             <meta name="twitter:description" content="Le tutoriel complet pour configurer l'automatisation de votre serveur Discord.">
@@ -313,7 +303,6 @@ const S4D_WEBSITECREATION_EXPRESS_app = S4D_WEBSITECREATION_EXPRESS();
     
             <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/kanooob/Logoto/refs/heads/main/Logoto.png">
     
-            <!-- Données structurées Schema.org -->
             <script type="application/ld+json">
             {
               "@context": "https://schema.org",
@@ -386,7 +375,7 @@ const S4D_WEBSITECREATION_EXPRESS_app = S4D_WEBSITECREATION_EXPRESS();
                 /* Style des liens par défaut dans le texte */
                 .container a { text-decoration: underline; color: #7289da; }
     
-                /* FIX DE LISIBILITÉ : Forçage de la couleur du texte à blanc pour les boutons */
+                /* Boutons */
                 .btn {
                     display: inline-block;
                     padding: 10px 20px;
@@ -394,7 +383,7 @@ const S4D_WEBSITECREATION_EXPRESS_app = S4D_WEBSITECREATION_EXPRESS();
                     text-decoration: none !important;
                     font-size: 0.95rem;
                     font-weight: bold;
-                    color: #ffffff !important; /* !important empêche les surcharges héritées */
+                    color: #ffffff !important;
                     transition: transform 0.2s, background-color 0.2s;
                     border: none;
                     cursor: pointer;
@@ -434,49 +423,50 @@ const S4D_WEBSITECREATION_EXPRESS_app = S4D_WEBSITECREATION_EXPRESS();
     
                     <main>
                         <h1>Aide et Commandes Logoto : Automatisez votre Logo & Nom Discord 🇫🇷</h1>
-                        <p>Je suis le bot spécialisé dans l'automatisation du changement de logo et du nom de votre serveur Discord, sans nécessiter de commandes complexes après la configuration.</p>
+                        <p>Je suis le bot spécialisé dans l'automatisation du changement de logo et du nom de votre serveur Discord, sans nécessiter de configurations ou de lignes de code complexes.</p>
     
                         <h2>Les Commandes du Bot Logoto</h2>
                         <ul class="command-list">
-                            <li><code>/setup</code> : Crée les salons nécessaires (Logoto, log-logoto) pour un démarrage rapide.</li>
-                            <li><code>/logo-add</code> : Crée un salon de changement de logo avec les options <code>day</code> (jour) et <code>month</code> (mois).</li>
-                            <li><code>/name-add</code> : Crée un salon de changement de nom du serveur avec les options <code>day</code> and <code>month</code>.</li>
-                            <li><code>/help</code> : Affiche ce message d'aide (ou cette page !).</li>
-                            <li><code>/invite</code> : Obtenez le lien pour inviter le bot sur votre serveur.</li>
-                            <li><code>/support</code> : Rejoignez le serveur de support pour toute question ou aide.</li>
+                            <li><code>/setup</code> : Première commande à faire. Crée automatiquement la catégorie et les salons nécessaires (Logoto, log-logoto) pour un démarrage rapide.</li>
+                            <li><code>/add-an-event</code> : Crée automatiquement un salon de planification au bon format pour vos événements futurs (Logo ou Nom).</li>
+                            <li><code>/help</code> : Affiche la liste des commandes du bot (ou cette page de documentation !).</li>
+                            <li><code>/info</code> : Renvoie toutes les informations utiles concernant l'état actuel et le statut du bot.</li>
+                            <li><code>/ping</code> : Obtenez la latence en temps réel entre le bot et l'API Discord.</li>
+                            <li><code>/invite</code> : Obtenez le lien d'invitation officiel pour ajouter Logoto sur votre propre serveur.</li>
+                            <li><code>/support</code> : Rejoignez notre serveur de support pour poser vos questions ou obtenir de l'aide.</li>
                         </ul>
     
                         <hr>
     
                         <h2>Système de Changement de Logo Automatique</h2>
-                        <p>Le bot surveille des salons spécifiques pour planifier et exécuter les changements de logo. Voici comment le configurer manuellement (ou avec la commande <code>/logo-add</code>) :</p>
+                        <p>Le bot surveille la présence de salons textuels spécifiques pour planifier et exécuter les changements d'avatar du serveur. Vous pouvez utiliser la commande <code>/add-an-event</code> ou faire la création manuellement :</p>
     
                         <ol>
                             <li>
                                 <strong>Créez le Salon de Planification (Logo) :</strong>
                                 <ul>
-                                    <li>Le nom du salon doit être au format : <code>l-[JOUR]-[MOIS]</code></li>
-                                    <li>EXEMPLE : Pour un logo le 31 décembre : <code>l-31-12</code></li>
+                                    <li>Le salon doit suivre scrupuleusement le format : <code>l-[JOUR]-[MOIS]</code> (ou généré via <code>/add-an-event</code>).</li>
+                                    <li>EXEMPLE : Pour programmer un logo automatique pour Halloween (31 octobre) : <code>l-31-10</code></li>
                                 </ul>
                             </li>
                             <li>
                                 <strong>Préparez le Logo :</strong>
                                 <ul>
-                                    <li>Envoyez votre image de logo sur n'importe quel salon Discord et copiez son lien direct.</li>
-                                    <li>Le lien doit être une URL d'image valide.</li>
+                                    <li>Envoyez l'image souhaitée dans n'importe quel salon de votre serveur, faites un clic droit dessus et copiez son <strong>lien direct</strong> (URL).</li>
+                                    <li>Le lien doit pointer vers un format d'image valide (PNG, JPEG).</li>
                                 </ul>
                             </li>
                             <li>
                                 <strong>Planifiez le Changement :</strong>
                                 <ul>
-                                    <li>Modifiez le <strong>Sujet du Salon</strong> (Channel Topic) créé à l'étape 1.</li>
-                                    <li>Collez le <strong>lien</strong> de votre image dans le sujet du salon.</li>
+                                    <li>Modifiez le <strong>Sujet du Salon</strong> (Channel Topic) du salon textuel créé à l'étape 1.</li>
+                                    <li>Collez le <strong>lien direct de l'image</strong> directement dans le sujet de ce salon.</li>
                                 </ul>
                             </li>
                             <li>
                                 <strong>Résultat :</strong>
                                 <ul>
-                                    <li>Le bot changera automatiquement le logo du serveur au jour et au mois spécifiés !</li>
+                                    <li>Le bot changera automatiquement la photo de profil du serveur au jour et au mois indiqués !</li>
                                 </ul>
                             </li>
                         </ol>
@@ -484,35 +474,35 @@ const S4D_WEBSITECREATION_EXPRESS_app = S4D_WEBSITECREATION_EXPRESS();
                         <hr>
     
                         <h2>Système de Changement de Nom Automatique</h2>
-                        <p>Le principe est le même pour modifier le nom du serveur (configurable avec la commande <code>/name-add</code>) :</p>
+                        <p>Le principe est identique pour modifier automatiquement le nom d'affichage de votre serveur Discord à une date précise :</p>
     
                         <ol>
                             <li>
                                 <strong>Créez le Salon de Planification (Nom) :</strong>
                                 <ul>
-                                    <li>Le nom du salon doit être au format : <code>n-[JOUR]-[MOIS]</code></li>
-                                    <li>EXEMPLE : Pour un nom le 1er janvier : <code>n-1-1</code></li>
+                                    <li>Le salon doit suivre le format : <code>n-[JOUR]-[MOIS]</code> (ou généré via <code>/add-an-event</code>).</li>
+                                    <li>EXEMPLE : Pour planifier un changement de nom le 1er Janvier : <code>n-1-1</code></li>
                                 </ul>
                             </li>
                             <li>
                                 <strong>Planifiez le Changement :</strong>
                                 <ul>
-                                    <li>Modifiez le <strong>Sujet du Salon</strong> (Channel Topic) créé à l'étape 1.</li>
-                                    <li>Écrivez le <strong>nouveau nom du serveur</strong> dans le sujet du salon.</li>
+                                    <li>Modifiez le <strong>Sujet du Salon</strong> (Channel Topic) du salon créé.</li>
+                                    <li>Écrivez textuellement le <strong>nouveau nom complet</strong> que devra prendre le serveur dans le sujet.</li>
                                 </ul>
                             </li>
                             <li>
                                 <strong>Résultat :</strong>
                                 <ul>
-                                    <li>Le bot changera automatiquement le nom du serveur à la date spécifiée !</li>
+                                    <li>Le bot appliquera automatiquement le nouveau nom au jour et au mois spécifiés !</li>
                                 </ul>
                             </li>
                         </ol>
     
                         <div class="note">
-                            <strong>NOTE IMPORTANTE :</strong> Pour que le changement automatique fonctionne chaque jour, le salon <code>log-logoto</code> <strong>doit exister</strong>.
-                            <br>Chaque jour, le bot envoie un message technique (<code>🔄 (l/n)-Loading</code>) dans ce salon pour déclencher la vérification. C'est ce message qui active ensuite le changement de logo ou de nom si la date correspond.
-                            <br>La commande <code>/setup</code> crée automatiquement ce salon pour vous.
+                            <strong>NOTE IMPORTANTE :</strong> Pour que les vérifications et les changements automatiques s'exécutent correctement, le salon nommé <code>log-logoto</code> <strong>doit impérativement exister</strong> sur votre serveur.
+                            <br><br>
+                            Le bot utilise ce salon pour envoyer ses messages techniques quotidiens de chargement (<code>l-Loading</code> ou <code>n-Loading</code>), ce qui déclenche la mise à jour des configurations du serveur. La commande <code>/setup</code> s'occupe de le créer proprement pour vous.
                         </div>
                     </main>
     
@@ -539,15 +529,13 @@ const S4D_WEBSITECREATION_EXPRESS_app = S4D_WEBSITECREATION_EXPRESS();
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
             <title>Logoto Help & Commands | Configure your Discord Bot</title>
-            <meta name="description" content="Official guide for the Logoto Discord bot. Discover all commands (/setup, /logo-add, /name-add) to automate your Discord server's logo and name changes.">
+            <meta name="description" content="Official guide for the Logoto Discord bot. Discover all commands (/setup, /help, /add-an-event) to automate your Discord server's logo and name changes.">
             <link rel="canonical" href="https://logoto.onrender.com/help-en">
     
-            <!-- Balises Hreflang pour le SEO International -->
             <link rel="alternate" hreflang="fr" href="https://logoto.onrender.com/help">
             <link rel="alternate" hreflang="en" href="https://logoto.onrender.com/help-en">
             <link rel="alternate" hreflang="x-default" href="https://logoto.onrender.com/help">
     
-            <!-- Open Graph / Facebook -->
             <meta property="og:type" content="article">
             <meta property="og:url" content="https://logoto.onrender.com/help-en">
             <meta property="og:title" content="Help & Commands | Logoto Discord Bot">
@@ -555,7 +543,6 @@ const S4D_WEBSITECREATION_EXPRESS_app = S4D_WEBSITECREATION_EXPRESS();
             <meta property="og:image" content="https://raw.githubusercontent.com/kanooob/Logoto/refs/heads/main/Logoto.png">
             <meta property="og:locale" content="en_US">
     
-            <!-- Twitter -->
             <meta name="twitter:card" content="summary">
             <meta name="twitter:title" content="Help & Commands | Logoto Discord Bot">
             <meta name="twitter:description" content="Complete tutorial to configure your Discord server's automation.">
@@ -563,7 +550,6 @@ const S4D_WEBSITECREATION_EXPRESS_app = S4D_WEBSITECREATION_EXPRESS();
     
             <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/kanooob/Logoto/refs/heads/main/Logoto.png">
     
-            <!-- Données structurées Schema.org -->
             <script type="application/ld+json">
             {
               "@context": "https://schema.org",
@@ -636,7 +622,7 @@ const S4D_WEBSITECREATION_EXPRESS_app = S4D_WEBSITECREATION_EXPRESS();
                 /* Text Links style */
                 .container a { text-decoration: underline; color: #7289da; }
     
-                /* FIX DE LISIBILITÉ : Forçage de la couleur du texte à blanc pour les boutons */
+                /* Buttons */
                 .btn {
                     display: inline-block;
                     padding: 10px 20px;
@@ -644,7 +630,7 @@ const S4D_WEBSITECREATION_EXPRESS_app = S4D_WEBSITECREATION_EXPRESS();
                     text-decoration: none !important;
                     font-size: 0.95rem;
                     font-weight: bold;
-                    color: #ffffff !important; /* !important empêche les surcharges héritées */
+                    color: #ffffff !important;
                     transition: transform 0.2s, background-color 0.2s;
                     border: none;
                     cursor: pointer;
@@ -684,49 +670,50 @@ const S4D_WEBSITECREATION_EXPRESS_app = S4D_WEBSITECREATION_EXPRESS();
     
                     <main>
                         <h1>Logoto Help - Automate your Logo & Name! 🇬🇧</h1>
-                        <p>I am the bot specialized in automating the change of your server's logo AND name, without requiring complex commands after the initial setup.</p>
+                        <p>I am the bot specialized in automating the change of your server's logo AND name, without requiring complex configurations or lines of code after the initial setup.</p>
     
                         <h2>Commands</h2>
                         <ul class="command-list">
-                            <li><code>/setup</code> : Creates the necessary channels (Logoto, log-logoto) for a quick start.</li>
-                            <li><code>/logo-add</code> : Creates a logo change channel with the options <code>day</code> (Required) and <code>month</code> (Required).</li>
-                            <li><code>/name-add</code> : Creates a server name change channel with the options <code>day</code> and <code>month</code>.</li>
-                            <li><code>/help</code> : Displays this help message (or this page!).</li>
-                            <li><code>/invite</code> : Get the link to invite the bot to your server.</li>
-                            <li><code>/support</code> : Join the support server for any questions or assistance.</li>
+                            <li><code>/setup</code> : First command to run. Automatically creates the required category and channels (Logoto, log-logoto) for a quick start.</li>
+                            <li><code>/add-an-event</code> : Automatically creates a scheduling channel with the correct format for your future events (Logo or Name).</li>
+                            <li><code>/help</code> : Displays the bot commands list (or this documentation page!).</li>
+                            <li><code>/info</code> : Returns all useful information regarding the current state and status of the bot.</li>
+                            <li><code>/ping</code> : Get the real-time latency between the bot and the Discord API.</li>
+                            <li><code>/invite</code> : Get the official invitation link to add Logoto to your own server.</li>
+                            <li><code>/support</code> : Join our support server to ask questions or get assistance.</li>
                         </ul>
     
                         <hr>
     
                         <h2>Automatic Logo Change System</h2>
-                        <p>The bot monitors specific channels to schedule and execute logo changes. Here's how to configure it manually (or with <code>/logo-add</code>):</p>
+                        <p>The bot monitors specific text channels to schedule and execute server avatar changes. You can use the <code>/add-an-event</code> command or create them manually:</p>
     
                         <ol>
                             <li>
                                 <strong>Create the Scheduling Channel (Logo):</strong>
                                 <ul>
-                                    <li>The channel name must follow this format: <code>l-[DAY]-[MONTH]</code></li>
-                                    <li>EXAMPLE: For a logo on December 31st: <code>l-31-12</code></li>
+                                    <li>The channel name must strictly follow this format: <code>l-[DAY]-[MONTH]</code> (or generated via <code>/add-an-event</code>).</li>
+                                    <li>EXAMPLE: To schedule an automatic logo for Halloween (October 31st): <code>l-31-10</code></li>
                                 </ul>
                             </li>
                             <li>
                                 <strong>Prepare the Logo:</strong>
                                 <ul>
-                                    <li>Upload your logo image to any Discord channel and copy its direct link.</li>
-                                    <li>The link must be a valid image URL.</li>
+                                    <li>Upload your desired image to any channel on your server, right-click it, and copy its <strong>direct link</strong> (URL).</li>
+                                    <li>The link must point to a valid image format (PNG, JPEG).</li>
                                 </ul>
                             </li>
                             <li>
                                 <strong>Schedule the Change:</strong>
                                 <ul>
-                                    <li>Edit the <strong>Channel Topic</strong> of the channel you created in step 1.</li>
-                                    <li>Paste the <strong>link</strong> of your image into the channel topic.</li>
+                                    <li>Edit the <strong>Channel Topic</strong> of the text channel created in step 1.</li>
+                                    <li>Paste the <strong>direct image link</strong> directly into the topic of this channel.</li>
                                 </ul>
                             </li>
                             <li>
                                 <strong>Result:</strong>
                                 <ul>
-                                    <li>The bot will automatically change the server logo on the day and month specified!</li>
+                                    <li>The bot will automatically change the server's profile picture on the specified day and month!</li>
                                 </ul>
                             </li>
                         </ol>
@@ -734,35 +721,35 @@ const S4D_WEBSITECREATION_EXPRESS_app = S4D_WEBSITECREATION_EXPRESS();
                         <hr>
     
                         <h2>Automatic Name Change System</h2>
-                        <p>The same principle applies for the server name (configurable with <code>/name-add</code>):</p>
+                        <p>The principle is identical for automatically changing your Discord server's display name on a key date:</p>
     
                         <ol>
                             <li>
                                 <strong>Create the Scheduling Channel (Name):</strong>
                                 <ul>
-                                    <li>The channel name must follow this format: <code>n-[DAY]-[MONTH]</code></li>
-                                    <li>EXAMPLE: For a name on January 1st: <code>n-1-1</code></li>
+                                    <li>The text channel name must follow this format: <code>n-[DAY]-[MONTH]</code> (or generated via <code>/add-an-event</code>).</li>
+                                    <li>EXAMPLE: To schedule a name change on January 1st: <code>n-1-1</code></li>
                                 </ul>
                             </li>
                             <li>
                                 <strong>Schedule the Change:</strong>
                                 <ul>
-                                    <li>Edit the <strong>Channel Topic</strong> of the channel you created in step 1.</li>
-                                    <li>Write the <strong>new server name</strong> in the channel topic.</li>
+                                    <li>Edit the <strong>Channel Topic</strong> of the created channel.</li>
+                                    <li>Type the exact <strong>new full name</strong> that the server should take inside the channel topic.</li>
                                 </ul>
                             </li>
                             <li>
                                 <strong>Result:</strong>
                                 <ul>
-                                    <li>The bot will automatically change the server name on the specified date!</li>
+                                    <li>The bot will automatically apply the new name on the specified date!</li>
                                 </ul>
                             </li>
                         </ol>
     
                         <div class="note">
-                            <strong>IMPORTANT NOTE:</strong> For the automatic daily change to work, the <code>log-logoto</code> channel <strong>must exist</strong>.
-                            <br>Every day, the bot sends a technical message (<code>🔄 (l/n)-Loading</code>) to this channel to trigger the check. This message is what activates the logo or name change if the date matches.
-                            <br>The <code>/setup</code> command automatically creates this channel for you.
+                            <strong>IMPORTANT NOTE:</strong> For the automatic daily verifications and changes to run properly, the channel named <code>log-logoto</code> <strong>must absolutely exist</strong> on your server.
+                            <br><br>
+                            The bot uses this channel to send its daily technical loading messages (<code>l-Loading</code> or <code>n-Loading</code>), which trigger the server configurations refresh. The <code>/setup</code> command takes care of creating it cleanly for you.
                         </div>
                     </main>
     
@@ -789,15 +776,13 @@ const S4D_WEBSITECREATION_EXPRESS_app = S4D_WEBSITECREATION_EXPRESS();
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
             <title>Logoto: Discord Bot to Automatically Change Logo and Server Name</title>
-            <meta name="description" content="Discover Logoto, the ultimate Discord bot to automate and schedule your server's icon and name changes. Perfect for events and seasons!">
+            <meta name="description" content="Discover Logoto, the ultimate Discord bot to automate and schedule your server's icon and name changes. Easily manage everything with /setup and /add-an-event!">
             <link rel="canonical" href="https://logoto.onrender.com/index-en">
     
-            <!-- Liaison SEO International (Hreflang) -->
             <link rel="alternate" hreflang="fr" href="https://logoto.onrender.com/">
             <link rel="alternate" hreflang="en" href="https://logoto.onrender.com/index-en">
             <link rel="alternate" hreflang="x-default" href="https://logoto.onrender.com/">
     
-            <!-- Open Graph / Facebook -->
             <meta property="og:type" content="website">
             <meta property="og:url" content="https://logoto.onrender.com/index-en">
             <meta property="og:title" content="Logoto: Discord Automation Bot">
@@ -805,7 +790,6 @@ const S4D_WEBSITECREATION_EXPRESS_app = S4D_WEBSITECREATION_EXPRESS();
             <meta property="og:image" content="https://raw.githubusercontent.com/kanooob/Logoto/refs/heads/main/Logoto.png">
             <meta property="og:locale" content="en_US">
     
-            <!-- Twitter -->
             <meta name="twitter:card" content="summary_large_image">
             <meta name="twitter:title" content="Logoto: Discord Automation Bot">
             <meta name="twitter:description" content="Automate your server's logo and name updates for seasonal and special events.">
@@ -813,7 +797,6 @@ const S4D_WEBSITECREATION_EXPRESS_app = S4D_WEBSITECREATION_EXPRESS();
     
             <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/kanooob/Logoto/refs/heads/main/Logoto.png">
     
-            <!-- Données structurées Schema.org -->
             <script type="application/ld+json">
             {
               "@context": "https://schema.org",
@@ -832,7 +815,6 @@ const S4D_WEBSITECREATION_EXPRESS_app = S4D_WEBSITECREATION_EXPRESS();
             </script>
     
             <style>
-                /* Styles CSS strictement identiques pour conserver le même design précis */
                 body {
                     font-family: Arial, sans-serif;
                     margin: 0;
@@ -954,7 +936,6 @@ const S4D_WEBSITECREATION_EXPRESS_app = S4D_WEBSITECREATION_EXPRESS();
         </head>
         <body>
             <div class="main-content">
-                <!-- Language selector at top right -->
                 <header class="lang-header">
                     <a href="/" class="lang-link">Français 🇫🇷</a>
                 </header>
@@ -1005,17 +986,15 @@ const S4D_WEBSITECREATION_EXPRESS_app = S4D_WEBSITECREATION_EXPRESS();
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
             <title>Logoto : Bot Discord pour Changer Logo et Nom Automatiquement</title>
-            <meta name="description" content="Découvrez Logoto, le bot Discord d'automatisation pour planifier le changement du logo et du nom de votre serveur. Parfait pour les événements et les saisons !">
+            <meta name="description" content="Découvrez Logoto, le bot Discord d'automatisation pour planifier le changement du logo et du nom de votre serveur. Gérez tout facilement avec /setup et /add-an-event !">
             <link rel="canonical" href="https://logoto.onrender.com/">
     
             <meta name="google-site-verification" content="u2mt1kkF8HLYxuULsxpdU7e8dJKFjj0ItJ6IPLcs23s">
     
-            <!-- Liaison SEO International (Hreflang) -->
             <link rel="alternate" hreflang="fr" href="https://logoto.onrender.com/">
             <link rel="alternate" hreflang="en" href="https://logoto.onrender.com/index-en">
             <link rel="alternate" hreflang="x-default" href="https://logoto.onrender.com/">
     
-            <!-- Open Graph / Facebook -->
             <meta property="og:type" content="website">
             <meta property="og:url" content="https://logoto.onrender.com/">
             <meta property="og:title" content="Logoto : Bot d'Automatisation Discord">
@@ -1023,7 +1002,6 @@ const S4D_WEBSITECREATION_EXPRESS_app = S4D_WEBSITECREATION_EXPRESS();
             <meta property="og:image" content="https://raw.githubusercontent.com/kanooob/Logoto/refs/heads/main/Logoto.png">
             <meta property="og:locale" content="fr_FR">
     
-            <!-- Twitter -->
             <meta name="twitter:card" content="summary_large_image">
             <meta name="twitter:title" content="Logoto : Bot d'Automatisation Discord">
             <meta name="twitter:description" content="Automatisez le changement de logo et de nom de votre serveur pour les événements.">
@@ -1031,13 +1009,12 @@ const S4D_WEBSITECREATION_EXPRESS_app = S4D_WEBSITECREATION_EXPRESS();
     
             <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/kanooob/Logoto/refs/heads/main/Logoto.png">
     
-            <!-- Données structurées Schema.org -->
             <script type="application/ld+json">
             {
               "@context": "https://schema.org",
               "@type": "SoftwareApplication",
               "name": "Logoto",
-              "description": "Bot Discord pour automatiser et planifier le changement du logo et du nom d'un serveur.",
+              "description": "Bot Discord pour automatiser et planifier le changement du logo et du nom d'un serveur avec /setup et /add-an-event.",
               "applicationCategory": "UtilitiesApplication",
               "operatingSystem": "Discord",
               "inLanguage": "fr-FR",
@@ -1171,7 +1148,6 @@ const S4D_WEBSITECREATION_EXPRESS_app = S4D_WEBSITECREATION_EXPRESS();
         </head>
         <body>
             <div class="main-content">
-                <!-- Sélecteur de langue en haut à droite -->
                 <header class="lang-header">
                     <a href="/index-en" class="lang-link">English 🇬🇧</a>
                 </header>
@@ -1222,7 +1198,7 @@ const S4D_WEBSITECREATION_EXPRESS_app = S4D_WEBSITECREATION_EXPRESS();
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
             <title>Politique de Confidentialité (Privacy Policy) de Logoto Bot Discord</title>
-            <meta name="description" content="Politique de confidentialité du bot Discord Logoto. Détails sur les données collectées (Serveur ID, Nom de Salon) et leur utilisation pour le service d'automatisation.">
+            <meta name="description" content="Politique de confidentialité du bot Discord Logoto. Détails sur les données nécessaires (Serveur ID, configurations d'événements) et leur utilisation pour le service d'automatisation.">
             <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/kanooob/Logoto/refs/heads/main/Logoto.png">
     
             <style>
@@ -1313,7 +1289,7 @@ const S4D_WEBSITECREATION_EXPRESS_app = S4D_WEBSITECREATION_EXPRESS();
     
                 <main>
                     <h1>Politique de Confidentialité (Privacy Policy) de Logoto</h1>
-                    <p>Dernière mise à jour : 21/11/2025</p>
+                    <p>Dernière mise à jour : 20/05/2026</p>
                     <hr>
     
                     <p>
@@ -1322,27 +1298,24 @@ const S4D_WEBSITECREATION_EXPRESS_app = S4D_WEBSITECREATION_EXPRESS();
     
                     <h2>1. Collecte et Utilisation des Informations</h2>
                     <p>
-                        Logoto est un bot axé sur la fonctionnalité et la minimisation des données. Nous ne stockons que les informations strictement nécessaires pour fournir le service d'automatisation.
+                        Logoto est un bot axé sur la fonctionnalité et la minimisation des données. Nous ne traitons et ne conservons que les informations strictement nécessaires pour fournir le service d'automatisation et de planification.
                     </p>
     
                     <h3>Types de Données Collectées :</h3>
                     <ul>
                         <li>
-                            <strong>Identifiants de Serveur (Guild IDs) :</strong> L'identifiant unique de votre serveur Discord est collecté pour l'associer aux configurations de planification (salons, logs).
+                            <strong>Identifiants de Serveur (Guild IDs) :</strong> L'identifiant unique de votre serveur Discord est traité pour associer votre serveur à ses configurations de planification d'événements.
                         </li>
                         <li>
-                            <strong>Identifiants de Salons (Channel IDs) :</strong> Les identifiants des salons de planification (ex : <code>l-31-12</code>, <code>n-1-1</code>) et du salon de log (<code>log-logoto</code>) sont stockés pour que le bot puisse vérifier les changements et les exécuter.
+                            <strong>Configurations d'Événements (Noms et URLs d'images) :</strong> Lorsque vous utilisez la commande <code>/add-an-event</code>, le nouveau nom planifié du serveur et/ou le lien de l'image du logo fournis sont enregistrés pour permettre au bot d'exécuter la modification à la date définie.
                         </li>
                         <li>
-                            <strong>Contenu des Sujets de Salons (Channel Topics) :</strong> Le lien de l'image de logo ou le nouveau nom de serveur que vous placez dans le sujet de salon est stocké temporairement en mémoire lors de la vérification quotidienne, mais **n'est pas stocké de manière permanente dans une base de données** au-delà de sa présence sur Discord.
-                        </li>
-                        <li>
-                            <strong>Identifiants d'Utilisateur (User IDs) :</strong> Les identifiants des utilisateurs peuvent être vus par le Bot lors de l'exécution d'une commande (ex: <code>/setup</code>) pour vérifier les permissions. Ces identifiants **ne sont pas stockés de manière permanente**.
+                            <strong>Identifiants d'Utilisateur (User IDs) :</strong> L'identifiant unique de l'utilisateur exécutant une commande (ex: <code>/setup</code>, <code>/add-an-event</code>) est vérifié de manière éphémère pour s'assurer qu'il possède les permissions requises sur le serveur. Il n'est pas stocké de manière permanente.
                         </li>
                     </ul>
     
                     <div class="important-note">
-                        <strong>Logoto ne stocke PAS :</strong> Les messages privés, les messages de discussion, les adresses IP, les noms d'utilisateur (au-delà de la vérification initiale des permissions), ni aucune donnée personnelle sensible.
+                        <strong>Logoto ne stocke PAS :</strong> Les messages privés, le contenu des salons textuels de discussion, les adresses IP, l'historique complet des utilisateurs, ni aucune donnée personnelle sensible.
                     </div>
     
                     <h2>2. Finalité du Traitement des Données</h2>
@@ -1350,23 +1323,23 @@ const S4D_WEBSITECREATION_EXPRESS_app = S4D_WEBSITECREATION_EXPRESS();
                         Les informations collectées sont utilisées exclusivement pour les finalités suivantes :
                     </p>
                     <ul>
-                        <li>Fournir et opérer le service Logoto (changer le logo/nom du serveur à la date prévue).</li>
-                        <li>Maintenir les logs d'activité du Bot pour le dépannage et la vérification des erreurs (stockées dans le salon <code>log-logoto</code> sur votre serveur).</li>
-                        <li>Assurer la sécurité et la stabilité du Bot.</li>
+                        <li>Fournir et opérer le service Logoto (changer automatiquement le logo et/ou le nom du serveur à la date prévue).</li>
+                        <li>Envoyer un compte-rendu ou un log d'activité directement sur votre serveur dans le salon configuré pour le suivi des tâches.</li>
+                        <li>Assurer la sécurité, la stabilité et le dépannage technique du Bot.</li>
                     </ul>
     
                     <h2>3. Partage des Informations</h2>
                     <p>
-                        Nous ne vendons, n'échangeons, ni ne louons vos informations d'identification de serveur à des tiers. Les seules entités ayant accès à ces identifiants sont :
+                        Nous ne vendons, n'échangeons, ni ne louons vos configurations ou vos identifiants de serveur à des tiers. Les seules entités intervenant dans le traitement technique sont :
                     </p>
                     <ul>
-                        <li>**Discord :** En utilisant le Bot, vous êtes soumis à la politique de Discord.</li>
-                        <li>**L'Hébergeur :** Les données de fonctionnement du Bot sont stockées temporairement sur les serveurs de l'hébergeur Render.</li>
+                        <li><strong>Discord :</strong> En utilisant ce Bot, vos données transitent par l'infrastructure de Discord et vous restez soumis à leurs conditions d'utilisation.</li>
+                        <li><strong>L'Hébergeur :</strong> Le Bot s'exécute et stocke de manière sécurisée ses fichiers de configuration sur la plateforme d'hébergement Render.</li>
                     </ul>
     
-                    <h2>4. Conservation des Données</h2>
+                    <h2>4. Conservation et Suppression des Données</h2>
                     <p>
-                        Les identifiants de serveur et de salons sont conservés tant que le Bot Logoto est présent sur votre serveur Discord. Si vous retirez le Bot de votre serveur, toutes les informations de configuration associées à cet identifiant de serveur sont automatiquement effacées dans les [DÉLAI, ex: 24 heures] suivant le départ du Bot.
+                        Les données de configuration liées à la planification des événements sont conservées tant que le Bot Logoto est présent sur votre serveur Discord. Si vous retirez (kickez) le Bot de votre serveur, l'événement Discord correspondant supprime instantanément l'intégralité des données et fichiers associés à l'identifiant de votre serveur.
                     </p>
     
                     <h2>5. Conformité au RGPD (Résidents de l'UE)</h2>
@@ -1374,21 +1347,21 @@ const S4D_WEBSITECREATION_EXPRESS_app = S4D_WEBSITECREATION_EXPRESS();
                         Si vous êtes résident de l'Espace Économique Européen (EEE), vous avez certains droits en vertu du Règlement Général sur la Protection des Données (RGPD) :
                     </p>
                     <ul>
-                        <li>Droit d'accès, de rectification et d'effacement de vos données personnelles (Server ID).</li>
-                        <li>Droit de retirer votre consentement (en retirant simplement le Bot de votre serveur).</li>
+                        <li>Droit d'accès, de rectification et d'effacement des données de configuration liées à votre serveur.</li>
+                        <li>Droit de retirer votre consentement à tout moment (en retirant simplement le Bot de votre serveur, ce qui détruit immédiatement les configurations liées).</li>
                     </ul>
                     <p>
-                        Pour exercer ces droits, veuillez nous contacter à l'adresse indiquée dans la section 7.
+                        Pour toute demande d'exercice de vos droits, vous pouvez nous contacter à l'adresse indiquée dans la section 7.
                     </p>
     
                     <h2>6. Sécurité des Données</h2>
                     <p>
-                        Nous mettons en œuvre des mesures de sécurité techniques et organisationnelles pour protéger les données que nous traitons. Cependant, aucune méthode de transmission sur Internet ou de stockage électronique n'est totalement sécurisée.
+                        Nous mettons en œuvre des mesures de sécurité techniques et organisationnelles pour protéger les configurations stockées. Cependant, aucun mode de transmission ou de stockage électronique sur Internet ne peut être garanti à 100 %.
                     </p>
     
                     <h2>7. Contact</h2>
                     <p>
-                        Pour toute question ou demande concernant cette Politique de Confidentialité, veuillez nous contacter à l'adresse e-mail dédiée : galaxies9@duck.com.
+                        Pour toute question ou demande concernant cette Politique de Confidentialité, veuillez nous contacter à l'adresse e-mail dédiée : <a href="mailto:galaxies9@duck.com">galaxies9@duck.com</a>.
                     </p>
     
                 </main>
@@ -1396,7 +1369,7 @@ const S4D_WEBSITECREATION_EXPRESS_app = S4D_WEBSITECREATION_EXPRESS();
             </div>
     
             <footer>
-                <p>Logoto est un projet personnel. | <a href="https://github.com/kanooob/Logoto" target="_blank">Voir le code source</a></p>
+                <p>Logoto est un projet personnel. | <a href="https://github.com/kanooob/Logoto" target="_blank" rel="noopener noreferrer">Voir le code source</a></p>
             </footer>
     
         </body>
@@ -1492,7 +1465,7 @@ const S4D_WEBSITECREATION_EXPRESS_app = S4D_WEBSITECREATION_EXPRESS();
     
                 <main>
                     <h1>Conditions d'Utilisation (Terms of Service - ToS) de Logoto</h1>
-                    <p>Dernière mise à jour : 21/11/2025</p>
+                    <p>Dernière mise à jour : 20/05/2026</p>
                     <hr>
     
                     <h2>1. Acceptation des Conditions</h2>
@@ -1503,7 +1476,7 @@ const S4D_WEBSITECREATION_EXPRESS_app = S4D_WEBSITECREATION_EXPRESS();
     
                     <h2>2. Description du Service</h2>
                     <p>
-                        Logoto est un bot Discord conçu pour l'automatisation. Son rôle principal est de permettre aux administrateurs de serveurs de **changer automatiquement le logo et/ou le nom de leur serveur** Discord à des dates et heures planifiées, en configurant des salons spécifiques.
+                        Logoto est un bot Discord conçu pour l'automatisation. Son rôle principal est de permettre aux administrateurs de serveurs de <strong>changer automatiquement le logo et/ou le nom de leur serveur</strong> Discord à des dates et heures planifiées. Ces événements et planifications se configurent simplement à l'aide des commandes slash dédiées (comme <code>/setup</code> et <code>/add-an-event</code>).
                     </p>
     
                     <h2>3. Conditions d'Utilisation et Engagements de l'Utilisateur</h2>
@@ -1512,50 +1485,50 @@ const S4D_WEBSITECREATION_EXPRESS_app = S4D_WEBSITECREATION_EXPRESS();
                     </p>
                     <ol>
                         <li>
-                            <strong>Conformité à Discord :</strong> L'utilisation de Logoto doit impérativement être conforme aux <a href="https://discord.com/terms" target="_blank">Conditions d'Utilisation de Discord</a> et aux <a href="https://discord.com/guidelines" target="_blank">Directives de la Communauté Discord</a>. Toute violation de ces règles via Logoto est interdite.
+                            <strong>Conformité à Discord :</strong> L'utilisation de Logoto doit impérativement être conforme aux <a href="https://discord.com/terms" target="_blank" rel="noopener noreferrer">Conditions d'Utilisation de Discord</a> et aux <a href="https://discord.com/guidelines" target="_blank" rel="noopener noreferrer">Directives de la Communauté Discord</a>. Toute violation de ces règles via Logoto est interdite.
                         </li>
                         <li>
-                            <strong>Autorisations :</strong> L'utilisateur garantit qu'il dispose des autorisations nécessaires (Gestion du Serveur) pour installer et configurer Logoto.
+                            <strong>Autorisations :</strong> L'utilisateur garantit qu'il dispose des autorisations nécessaires (Gestion du Serveur) pour installer, configurer et planifier des événements avec Logoto.
                         </li>
                         <li>
                             <strong>Contenu :</strong> Il est strictement interdit d'utiliser Logoto pour planifier ou afficher des logos ou des noms de serveur qui sont illégaux, offensants, haineux, violents, ou qui enfreignent les droits d'auteur.
                         </li>
                         <li>
-                            <strong>Abus du Service :</strong> Il est interdit d'utiliser le Bot de manière abusive ou excessive qui pourrait nuire au fonctionnement du service ou aux autres utilisateurs.
+                            <strong>Abus du Service :</strong> Il est interdit d'utiliser le Bot de manière abusive ou excessive (notamment les spams de requêtes) qui pourrait nuire au bon fonctionnement du service ou à la stabilité des infrastructures.
                         </li>
                     </ol>
     
                     <h2>4. Propriété Intellectuelle et Licence</h2>
                     <ol>
                         <li>
-                            <strong>Code Logoto :</strong> Le code source de Logoto est la propriété de Galaxie_S9 et est distribué sous la licence MIT License sur <a href="https://github.com/kanooob/Logoto?tab=MIT-1-ov-file#" target="_blank">GitHub</a>.
+                            <strong>Code Logoto :</strong> Le code source de Logoto est la propriété de Galaxie_S9 et est distribué librement sous la licence MIT sur <a href="https://github.com/kanooob/Logoto" target="_blank" rel="noopener noreferrer">GitHub</a>.
                         </li>
                         <li>
-                            <strong>Contenu Utilisateur :</strong> Les logos et noms de serveur que l'utilisateur planifie via le Bot demeurent la propriété du serveur Discord ou de l'utilisateur. Logoto ne revendique aucun droit sur ce contenu.
+                            <strong>Contenu Utilisateur :</strong> Les logos, images et noms de serveur que l'utilisateur planifie via le Bot demeurent la propriété exclusive de leurs auteurs ou du serveur Discord concerné. Logoto ne revendique aucun droit sur ce contenu.
                         </li>
                     </ol>
     
                     <h2>5. Limitation de Responsabilité et Avertissement</h2>
                     <p>
-                        <strong>Logoto est fourni « tel quel » sans garantie.</strong> En tant que développeur indépendant, nous ne pouvons garantir que le service sera ininterrompu, exempt d'erreurs ou toujours disponible.
+                        <strong>Logoto est fourni « tel quel » sans garantie d'aucune sorte.</strong> En tant que projet indépendant, nous ne pouvons garantir que le service sera totalement ininterrompu, exempt d'erreurs ou disponible 100% du temps.
                     </p>
                     <p>
-                        Nous ne sommes pas responsables des dommages causés directement ou indirectement par l'utilisation du Bot, y compris, mais sans s'y limiter, les erreurs de planification de logo ou de nom. L'utilisateur utilise le Bot à ses propres risques et doit toujours s'assurer qu'il dispose de sauvegardes ou de contrôles en place.
+                        Nous ne pourrons être tenus responsables des dommages causés directement ou indirectement par l'utilisation du Bot, y compris, mais sans s'y limiter, les erreurs ou retards dans l'application automatique d'une planification de logo ou de nom. L'utilisateur utilise le Bot à ses propres risques.
                     </p>
     
                     <h2>6. Modifications et Résiliation</h2>
                     <ol>
                         <li>
-                            <strong>Modifications :</strong> Nous nous réservons le droit de modifier ces Conditions à tout moment. La date de la dernière mise à jour sera indiquée en haut de cette page. L'utilisation continue du Bot après une modification vaut acceptation des nouvelles Conditions.
+                            <strong>Modifications :</strong> Nous nous réservons le droit de modifier ces Conditions à tout moment. La date de la dernière mise à jour sera systématiquement indiquée en haut de cette page. L'utilisation continue du Bot après une modification vaut acceptation des nouvelles Conditions.
                         </li>
                         <li>
-                            <strong>Résiliation :</strong> Nous pouvons suspendre ou mettre fin à l'accès de Logoto à n'importe quel serveur, sans préavis, en cas de violation des présentes Conditions.
+                            <strong>Résiliation :</strong> Nous pouvons suspendre ou mettre fin à l'accès de Logoto à n'importe quel serveur, sans préavis, en cas de non-respect ou de violation constatée des présentes Conditions.
                         </li>
                     </ol>
     
                     <h2>7. Contact</h2>
                     <p>
-                        Pour toute question ou préoccupation concernant ces Conditions d'Utilisation ou l'utilisation du Bot Logoto, veuillez nous contacter à l'adresse suivante : galaxies9@duck.com.
+                        Pour toute question ou préoccupation concernant ces Conditions d'Utilisation ou l'utilisation du Bot Logoto, veuillez nous contacter à l'adresse e-mail dédiée : <a href="mailto:galaxies9@duck.com">galaxies9@duck.com</a>.
                     </p>
     
                 </main>
@@ -1563,7 +1536,7 @@ const S4D_WEBSITECREATION_EXPRESS_app = S4D_WEBSITECREATION_EXPRESS();
             </div>
     
             <footer>
-                <p>Logoto est un projet personnel. | <a href="https://github.com/kanooob/Logoto" target="_blank">Voir le code source</a></p>
+                <p>Logoto est un projet personnel. | <a href="https://github.com/kanooob/Logoto" target="_blank" rel="noopener noreferrer">Voir le code source</a></p>
             </footer>
     
         </body>
@@ -1572,11 +1545,11 @@ const S4D_WEBSITECREATION_EXPRESS_app = S4D_WEBSITECREATION_EXPRESS();
       })
       S4D_WEBSITECREATION_EXPRESS_app.all('/404', async function(req, res) {
           S4D_APP_write.sync(String('404.html'), String(`<!DOCTYPE html>
-        <html lang="fr">
+        <html lang="en">
         <head>
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>404 - Page Non Trouvée | Logoto</title>
+            <title>404 - Page Not Found | Logoto</title>
             <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/kanooob/Logoto/refs/heads/main/Logoto.png">
             <style>
                 body {
@@ -1676,8 +1649,8 @@ const S4D_WEBSITECREATION_EXPRESS_app = S4D_WEBSITECREATION_EXPRESS();
                 <h1>Oops, this page has disappeared.</h1>
     
                 <p>
-        Sorry, but we couldn't find the page you were looking for.
-        Please use the buttons below to return to a known area.
+                    Sorry, but we couldn't find the page you were looking for.<br>
+                    Please use the buttons below to return to a known area.
                 </p>
     
                 <div class="button-container">
@@ -1696,15 +1669,10 @@ const S4D_WEBSITECREATION_EXPRESS_app = S4D_WEBSITECREATION_EXPRESS();
       })
       S4D_WEBSITECREATION_EXPRESS_app.all('/robots.txt', async function(req, res) {
           S4D_APP_write.sync(String('robots.txt'), String(`User-agent: *
-        Allow: /
-        Allow: /index-en
-        Allow: /help
-        Allow: /help-en
-        Allow: /tos
-        Allow: /privacy
         Disallow: /blocks.xml
         Disallow: /index.js
         Disallow: /404
+    
         Sitemap: https://logoto.onrender.com/sitemap.xml`), { overwrite: true });res.sendFile(S4D_WEBSITECREATION_path.join(__dirname, String('robots.txt')))
     
       })
@@ -1712,49 +1680,61 @@ const S4D_WEBSITECREATION_EXPRESS_app = S4D_WEBSITECREATION_EXPRESS();
           S4D_APP_write.sync(String('sitemap.xml'), String(`<?xml version="1.0" encoding="UTF-8"?>
         <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     
-        <url>
-          <loc>https://logoto.onrender.com/</loc>
-          <priority>1.00</priority>
-        </url>
+          <url>
+            <loc>https://logoto.onrender.com/</loc>
+            <lastmod>2026-05-20</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.00</priority>
+          </url>
     
-        <url>
-          <loc>https://logoto.onrender.com/index-en</loc>
-          <priority>1.00</priority>
-        </url>
+          <url>
+            <loc>https://logoto.onrender.com/index-en</loc>
+            <lastmod>2026-05-20</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.00</priority>
+          </url>
     
-        <url>
-          <loc>https://logoto.onrender.com/help</loc>
-          <priority>0.80</priority>
-        </url>
+          <url>
+            <loc>https://logoto.onrender.com/help</loc>
+            <lastmod>2026-05-20</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.80</priority>
+          </url>
     
-        <url>
-          <loc>https://logoto.onrender.com/help-en</loc>
-          <priority>0.80</priority>
-        </url>
+          <url>
+            <loc>https://logoto.onrender.com/help-en</loc>
+            <lastmod>2026-05-20</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.80</priority>
+          </url>
     
-        <url>
-          <loc>https://logoto.onrender.com/tos</loc>
-          <priority>0.60</priority>
-        </url>
+          <url>
+            <loc>https://logoto.onrender.com/tos</loc>
+            <lastmod>2026-05-20</lastmod>
+            <changefreq>yearly</changefreq>
+            <priority>0.60</priority>
+          </url>
     
-        <url>
-          <loc>https://logoto.onrender.com/privacy</loc>
-          <priority>0.60</priority>
-        </url>
+          <url>
+            <loc>https://logoto.onrender.com/privacy</loc>
+            <lastmod>2026-05-20</lastmod>
+            <changefreq>yearly</changefreq>
+            <priority>0.60</priority>
+          </url>
     
         </urlset>`), { overwrite: true });res.sendFile(S4D_WEBSITECREATION_path.join(__dirname, String('sitemap.xml')))
     
       })
       S4D_WEBSITECREATION_EXPRESS_app.use(function(req, res) {
           S4D_APP_write.sync(String('Redirection.html'), String(`<!DOCTYPE html>
-        <html lang="fr">
+        <html lang="en">
         <head>
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
             <meta http-equiv="refresh" content="0; url=/404">
     
-            <title>Redirection en cours...</title>
+            <title>Redirecting...</title>
     
             <style>
                 body {
@@ -1763,6 +1743,13 @@ const S4D_WEBSITECREATION_EXPRESS_app = S4D_WEBSITECREATION_EXPRESS();
                     color: #dcddde;
                     text-align: center;
                     padding-top: 50px;
+                }
+                a {
+                    color: #7289da;
+                    text-decoration: underline;
+                }
+                a:hover {
+                    color: #5865f2;
                 }
             </style>
         </head>
