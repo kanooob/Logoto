@@ -1765,12 +1765,19 @@ const S4D_WEBSITECREATION_EXPRESS_app = S4D_WEBSITECREATION_EXPRESS();
     S4D_WEBSITECREATION_EXPRESS_app.listen(S4D_APP_WEBSITE_HOSTING_PORT);
     eventEmitter.on('1', async => {
           s4d.client.guilds.cache.forEach(async (s) =>{
-         if ((s).channels.cache.find((category) => category.name === (['l-',(new Date().getDate()),'-',((new Date().getMonth())) + 1].join(''))) != null) {
+         if (typeof (s).channels.cache.find((category) => category.name === (['l-',(new Date().getDate()),'-',((new Date().getMonth())) + 1].join(''))) !== undefined) {
           (s).channels.cache.find((category) => category.name === 'log-logoto').send({content:String('<:loop:1505215574387589162> l-Loading')});
         }
-        if ((s).channels.cache.find((category) => category.name === (['n-',(new Date().getDate()),'-',((new Date().getMonth())) + 1].join(''))) != null) {
+        if (typeof (s).channels.cache.find((category) => category.name === (['n-',(new Date().getDate()),'-',((new Date().getMonth())) + 1].join(''))) !== undefined) {
           (s).channels.cache.find((category) => category.name === 'log-logoto').send({content:String('<:loop:1505215574387589162> n-Loading')});
         }
+        if (typeof (s).channels.cache.find((category) => category.name === (['b-',(new Date().getDate()),'-',((new Date().getMonth())) + 1].join(''))) !== undefined) {
+          (s).channels.cache.find((category) => category.name === 'log-logoto').send({content:String('<:loop:1505215574387589162> b-Loading')});
+        }
+        if (typeof (s).channels.cache.find((category) => category.name === (['i-',(new Date().getDate()),'-',((new Date().getMonth())) + 1].join(''))) !== undefined) {
+          (s).channels.cache.find((category) => category.name === 'log-logoto').send({content:String('<:loop:1505215574387589162> i-Loading')});
+        }
+        await delay(Number(2)*1000);
     
       })
     
@@ -1799,6 +1806,22 @@ const S4D_WEBSITECREATION_EXPRESS_app = S4D_WEBSITECREATION_EXPRESS();
     
         s4dmessage.channel.send({content:String('<:check:1505215575822172170> Server name changed.')});
         console.log((['Nom du serveur ',(s4dmessage.guild).name,' (',(s4dmessage.guild).id,').'].join('')));
+      }
+      if ((typeof (s4dmessage.guild).channels.cache.find((category) => category.name === (['b-',(new Date().getDate()),'-',((new Date().getMonth())) + 1].join(''))) !== undefined) && ((s4dmessage).content) == '<:loop:1505215574387589162> b-Loading') {
+        (s4dmessage.guild).setBanner(((s4dmessage.guild).channels.cache.find((category) => category.name === (['b-',(new Date().getDate()),'-',((new Date().getMonth())) + 1].join(''))).topic),'changement de bannière.')
+    
+        s4dmessage.channel.send({content:String('<:check:1505215575822172170> Server banner changed.')});
+        console.log((['Bannier du serveur ',(s4dmessage.guild).name,' (',(s4dmessage.guild).id,').'].join('')));
+      }
+      if ((typeof (s4dmessage.guild).channels.cache.find((category) => category.name === (['i-',(new Date().getDate()),'-',((new Date().getMonth())) + 1].join(''))) !== undefined) && ((s4dmessage).content) == '<:loop:1505215574387589162> i-Loading') {
+        (s4dmessage.guild).setSplash(((s4dmessage.guild).channels.cache.find((category) => category.name === (['i-',(new Date().getDate()),'-',((new Date().getMonth())) + 1].join(''))).topic),'changement d\'image d\'invitation.')
+    
+        s4dmessage.channel.send({content:String('<:check:1505215575822172170> Server invite image changed.')});
+        console.log((['Image d\'invitation du serveur ',(s4dmessage.guild).name,' (',(s4dmessage.guild).id,').'].join('')));
+      }
+      if (((s4dmessage).content) == '!ping') {
+        ms_on = (s4d.client.uptime);
+        s4dmessage.channel.send({content:String((['<:ping:1505250928008237057> **',s4d.client.ws.ping,'ms.**','\n','Uptime :**',Math.round(ms_on / 60000),' minutes.**'].join('')))});
       }
     
     });
