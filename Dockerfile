@@ -12,5 +12,6 @@ RUN npm install
 # Copie tout le reste du code
 COPY . .
 
+EXPOSE 8080
 # Lance ton bot
 CMD [ "node", "index.js" ]
