@@ -57,8 +57,7 @@ const S4D_WEBSITECREATION_EXPRESS_app = S4D_WEBSITECREATION_EXPRESS();
       throw new Error("Seems you arent using v13 please re-run or run `npm i discord.js@13.16.0`");
     }
 
-     /check if discord-logs is v2
-    /*
+    // check if discord-logs is v2
     if (!require('./package.json').dependencies['discord-logs'].startsWith("^2.")) {
       let file = JSON.parse(fs.readFileSync('package.json'))
       file.dependencies['discord-logs'] = '^2.0.0'
@@ -66,7 +65,6 @@ const S4D_WEBSITECREATION_EXPRESS_app = S4D_WEBSITECREATION_EXPRESS();
       exec('npm i')
       throw new Error("discord-logs must be 2.0.0. please re-run or if that fails run `npm i discord-logs@2.0.0` then re-run");
     }
-    */
 
     // create a new discord client
     s4d.client = new s4d.Discord.Client({
@@ -99,6 +97,16 @@ const S4D_WEBSITECREATION_EXPRESS_app = S4D_WEBSITECREATION_EXPRESS();
     // blockly code
     var jour, ms_on;
     
+    
+    await s4d.client.login((process.env[String('TOKEN')])).catch((e) => {
+            const tokenInvalid = true;
+            const tokenError = e;
+            if (e.toString().toLowerCase().includes("token")) {
+                throw new Error("An invalid bot token was provided!")
+            } else {
+                throw new Error("Privileged Gateway Intents are not enabled! Please go to https://discord.com/developers and turn on all of them.")
+            }
+        });
     
     synchronizeSlashCommands(s4d.client, [
       {
@@ -184,16 +192,6 @@ const S4D_WEBSITECREATION_EXPRESS_app = S4D_WEBSITECREATION_EXPRESS();
         debug: false,
     
     });
-    
-    await s4d.client.login((process.env[String('token')])).catch((e) => {
-            const tokenInvalid = true;
-            const tokenError = e;
-            if (e.toString().toLowerCase().includes("token")) {
-                throw new Error("An invalid bot token was provided!")
-            } else {
-                throw new Error("Privileged Gateway Intents are not enabled! Please go to https://discord.com/developers and turn on all of them.")
-            }
-        });
     
     s4d.client.on('ready', async () => {
       jour = ((new Date().getDate()));
@@ -1770,10 +1768,16 @@ const S4D_WEBSITECREATION_EXPRESS_app = S4D_WEBSITECREATION_EXPRESS();
          if (typeof (s).channels.cache.find((category) => category.name === (['l-',(new Date().getDate()),'-',((new Date().getMonth())) + 1].join(''))) !== undefined) {
           (s).channels.cache.find((category) => category.name === 'log-logoto').send({content:String('<:loop:1505215574387589162> l-Loading')});
         }
-        await delay(Number(0.1)*1000);
         if (typeof (s).channels.cache.find((category) => category.name === (['n-',(new Date().getDate()),'-',((new Date().getMonth())) + 1].join(''))) !== undefined) {
           (s).channels.cache.find((category) => category.name === 'log-logoto').send({content:String('<:loop:1505215574387589162> n-Loading')});
         }
+        if (typeof (s).channels.cache.find((category) => category.name === (['b-',(new Date().getDate()),'-',((new Date().getMonth())) + 1].join(''))) !== undefined) {
+          (s).channels.cache.find((category) => category.name === 'log-logoto').send({content:String('<:loop:1505215574387589162> b-Loading')});
+        }
+        if (typeof (s).channels.cache.find((category) => category.name === (['i-',(new Date().getDate()),'-',((new Date().getMonth())) + 1].join(''))) !== undefined) {
+          (s).channels.cache.find((category) => category.name === 'log-logoto').send({content:String('<:loop:1505215574387589162> i-Loading')});
+        }
+        await delay(Number(2)*1000);
     
       })
     
@@ -1802,6 +1806,18 @@ const S4D_WEBSITECREATION_EXPRESS_app = S4D_WEBSITECREATION_EXPRESS();
     
         s4dmessage.channel.send({content:String('<:check:1505215575822172170> Server name changed.')});
         console.log((['Nom du serveur ',(s4dmessage.guild).name,' (',(s4dmessage.guild).id,').'].join('')));
+      }
+      if ((typeof (s4dmessage.guild).channels.cache.find((category) => category.name === (['b-',(new Date().getDate()),'-',((new Date().getMonth())) + 1].join(''))) !== undefined) && ((s4dmessage).content) == '<:loop:1505215574387589162> b-Loading') {
+        (s4dmessage.guild).setBanner(((s4dmessage.guild).channels.cache.find((category) => category.name === (['b-',(new Date().getDate()),'-',((new Date().getMonth())) + 1].join(''))).topic),'changement de bannière.')
+    
+        s4dmessage.channel.send({content:String('<:check:1505215575822172170> Server banner changed.')});
+        console.log((['Bannier du serveur ',(s4dmessage.guild).name,' (',(s4dmessage.guild).id,').'].join('')));
+      }
+      if ((typeof (s4dmessage.guild).channels.cache.find((category) => category.name === (['i-',(new Date().getDate()),'-',((new Date().getMonth())) + 1].join(''))) !== undefined) && ((s4dmessage).content) == '<:loop:1505215574387589162> i-Loading') {
+        (s4dmessage.guild).setSplash(((s4dmessage.guild).channels.cache.find((category) => category.name === (['i-',(new Date().getDate()),'-',((new Date().getMonth())) + 1].join(''))).topic),'changement d\'image d\'invitation.')
+    
+        s4dmessage.channel.send({content:String('<:check:1505215575822172170> Server invite image changed.')});
+        console.log((['Image d\'invitation du serveur ',(s4dmessage.guild).name,' (',(s4dmessage.guild).id,').'].join('')));
       }
       if (((s4dmessage).content) == '!ping') {
         ms_on = (s4d.client.uptime);
