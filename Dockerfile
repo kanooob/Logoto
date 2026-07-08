@@ -14,4 +14,4 @@ COPY . .
 
 EXPOSE 8080
 # Lance ton bot
-CMD [ "node", "index.js" ]
+CMD [ "node", "server.js" ]
