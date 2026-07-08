@@ -1,4 +1,19 @@
-(async()=>{
+const http = require('http');
+
+// Crée le serveur HTTP requis pour valider le Health Check de Back4app
+const server = http.createServer((req, res) => {
+    res.writeHead(200, { 'Content-Type': 'text/plain' });
+    res.end('Logoto is running successfully!\n');
+});
+
+// Écoute sur le port fourni par Back4app ou 8080 par défaut
+const PORT = process.env.PORT || 8080;
+server.listen(PORT, () => {
+    console.log(`[Web] Serveur HTTP de Health Check actif sur le port ${PORT}`);
+});
+
+// --- CODE DU BOT DISCORD ---
+(async () => {
     // default imports
     const events = require('events');
     const { exec } = require("child_process")
