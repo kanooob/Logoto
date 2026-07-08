@@ -1,17 +1,18 @@
-const express = require('express');
-const app = express();
-// Back4app va injecter le port 8080 ici
-const port = process.env.PORT || 3000; 
+const http = require('http');
 
-app.get('/', (req, res) => {
-  res.send('Logoto est en ligne et actif !');
+// Crée un serveur HTTP minimaliste pour le Health Check de Back4app
+const server = http.createServer((req, res) => {
+    res.writeHead(200, { 'Content-Type': 'text/plain' });
+    res.end('Logoto is running!\n');
 });
 
-app.listen(port, () => {
-  console.log(`[Serveur] Maintien en vie lancé sur le port ${port}`);
-  
-  // Le serveur HTTP est prêt, Back4app valide le déploiement.
-  // On peut maintenant exécuter le bot en toute sécurité !
-  console.log("[Bot] Lancement de index.js...");
-  require('./index.js'); 
+// Récupère le port fourni par l'hébergeur ou utilise 8080 par défaut
+const PORT = process.env.PORT || 8080;
+
+server.listen(PORT, () => {
+    console.log(`Web server listening on port ${PORT}`);
 });
+
+// Lance la logique globale de ton bot Discord
+console.log("[Bot] Lancement de index.js...");
+require('./index.js');
