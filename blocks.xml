@@ -476,17 +476,21 @@
                   </block>
                 </value>
                 <value name="B">
-                  <block type="s4d_channel_exist" id="6=i1Zd$Et4(.US~ZSTab">
-                    <value name="CHANNEL">
-                      <block type="frost_category_get" id="oj2kZp)oAISgJNLD*T2j">
-                        <field name="SEARCH_TYPE">NAME</field>
-                        <value name="VALUE">
-                          <block type="jg_text_remake_paragraph_quotes" id="Vs%AVcJ*[}:RtOEht!xA">
-                            <field name="TEXT">log-logoto</field>
+                  <block type="logic_negate" id=")I[GC`uNphX*+Pv%,j~]">
+                    <value name="BOOL">
+                      <block type="s4d_channel_exist" id="6=i1Zd$Et4(.US~ZSTab">
+                        <value name="CHANNEL">
+                          <block type="frost_category_get" id="oj2kZp)oAISgJNLD*T2j">
+                            <field name="SEARCH_TYPE">NAME</field>
+                            <value name="VALUE">
+                              <block type="jg_text_remake_paragraph_quotes" id="Vs%AVcJ*[}:RtOEht!xA">
+                                <field name="TEXT">log-logoto</field>
+                              </block>
+                            </value>
+                            <value name="SERVER">
+                              <block type="interaction_guild" id="ni2]ZuM8Nw^vw.4)p?-."></block>
+                            </value>
                           </block>
-                        </value>
-                        <value name="SERVER">
-                          <block type="interaction_guild" id="ni2]ZuM8Nw^vw.4)p?-."></block>
                         </value>
                       </block>
                     </value>
