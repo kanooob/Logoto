@@ -58,6 +58,7 @@ const S4D_WEBSITECREATION_EXPRESS_app = S4D_WEBSITECREATION_EXPRESS();
     }
 
     // check if discord-logs is v2
+    /*
     if (!require('./package.json').dependencies['discord-logs'].startsWith("^2.")) {
       let file = JSON.parse(fs.readFileSync('package.json'))
       file.dependencies['discord-logs'] = '^2.0.0'
@@ -65,6 +66,7 @@ const S4D_WEBSITECREATION_EXPRESS_app = S4D_WEBSITECREATION_EXPRESS();
       exec('npm i')
       throw new Error("discord-logs must be 2.0.0. please re-run or if that fails run `npm i discord-logs@2.0.0` then re-run");
     }
+    */
 
     // create a new discord client
     s4d.client = new s4d.Discord.Client({
