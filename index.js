@@ -10,6 +10,7 @@ app.listen(port, () => {
   console.log(`Serveur de vérification activé sur le port ${port}`);
 });
 
+// Ton code Scratch For Discord prend la suite en dessous...
 // Le reste du code généré par Scratch For Discord (discord.js) continue en dessous...
 (async () => {
     // default imports
