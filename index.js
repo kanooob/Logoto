@@ -1,18 +1,16 @@
-onst http = require('http');
+const express = require('express');
+const app = express();
+const port = process.env.PORT || 8080;
 
-// Crée le serveur HTTP requis pour valider le Health Check de Back4app
-const server = http.createServer((req, res) => {
-    res.writeHead(200, { 'Content-Type': 'text/plain' });
-    res.end('Logoto is running successfully!\n');
+app.get('/', (req, res) => {
+  res.send('Bot Logoto en ligne !');
 });
 
-// Écoute sur le port fourni par Back4app ou 8080 par défaut
-const PORT = process.env.PORT || 8080;
-server.listen(PORT, () => {
-    console.log(`[Web] Serveur HTTP de Health Check actif sur le port ${PORT}`);
+app.listen(port, () => {
+  console.log(`Serveur de vérification activé sur le port ${port}`);
 });
 
-// --- CODE DU BOT DISCORD ---
+// Le reste du code généré par Scratch For Discord (discord.js) continue en dessous...
 (async () => {
     // default imports
     const events = require('events');
