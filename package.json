@@ -8,7 +8,6 @@
   },
   "dependencies": {
     "discord.js": "^13.16.0",
-    "s4d-helper": "latest",
     "axios": "^1.6.0"
   },
   "engines": {
