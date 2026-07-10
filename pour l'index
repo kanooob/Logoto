@@ -22,3 +22,17 @@ au tout debut et la ligne 16 doit remplacer l'autre ligne qui contien la meme ch
 
 */
 pour la verification de la version de discord log mais pas obliger je crois
+
+
+
+const express = require('express');
+const app = express();
+const port = process.env.PORT || 8080;
+
+app.get('/', (req, res) => {
+  res.send('Bot Logoto en ligne !');
+});
+
+app.listen(port, () => {
+  console.log(`Serveur de vérification activé sur le port ${port}`);
+});
