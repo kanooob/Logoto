@@ -3,12 +3,14 @@ const app = express();
 const port = process.env.PORT || 8080;
 
 app.get('/', (req, res) => {
-  res.send('Bot Logoto en ligne !');
+  res.send('Bot Logoto est fonctionnel !');
 });
 
 app.listen(port, () => {
   console.log(`Serveur de vérification activé sur le port ${port}`);
 });
+
+// Le reste de ton code Scratch For Discord (les requires de s4d, etc.) continue ici...
 (async()=>{
     // default imports
     const events = require('events');
