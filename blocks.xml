@@ -438,8 +438,18 @@
                                             <field name="METHOD">"post"</field>
                                             <field name="IMAGEORNOT"></field>
                                             <value name="URL">
-                                              <block type="text" id="{]LVS`PClPnXvv]x_gdB">
-                                                <field name="TEXT">https://logoto.onrender.com/api/serveur-counte</field>
+                                              <block type="text_join" id="~Q=:}%6mDAU[yJ^CnM##">
+                                                <mutation items="2"></mutation>
+                                                <value name="ADD0">
+                                                  <block type="text" id="{]LVS`PClPnXvv]x_gdB">
+                                                    <field name="TEXT">https://logoto.onrender.com/api/serveur-counte?server=</field>
+                                                  </block>
+                                                </value>
+                                                <value name="ADD1">
+                                                  <block type="s4d_bot_amount" id="[7)$Bx,qmrZwhklk:Tyw">
+                                                    <field name="T">servers</field>
+                                                  </block>
+                                                </value>
                                               </block>
                                             </value>
                                             <statement name="HEADERS">
@@ -458,30 +468,6 @@
                                                     </value>
                                                   </block>
                                                 </value>
-                                              </block>
-                                            </statement>
-                                            <statement name="BODY">
-                                              <block type="jg_web_request_advanced_data_section" id="#NjxS=(L9K.Dp#E=e#b]">
-                                                <field name="LABEL">body</field>
-                                                <statement name="STATEMENTS">
-                                                  <block type="jg_web_request_advanced_data" id="~XCa/o^rSRKq`0^u^?20">
-                                                    <value name="KEY">
-                                                      <block type="text" id="`x;i6#e|gNenK;zjGXZd">
-                                                        <field name="TEXT">server</field>
-                                                      </block>
-                                                    </value>
-                                                    <value name="VALUE">
-                                                      <block type="text_join" id="G{C(7/0V~mymy02-By4W">
-                                                        <mutation items="1"></mutation>
-                                                        <value name="ADD0">
-                                                          <block type="s4d_bot_amount" id="[7)$Bx,qmrZwhklk:Tyw">
-                                                            <field name="T">servers</field>
-                                                          </block>
-                                                        </value>
-                                                      </block>
-                                                    </value>
-                                                  </block>
-                                                </statement>
                                               </block>
                                             </statement>
                                             <statement name="IF_ERROR">

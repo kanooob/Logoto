@@ -1,16 +1,3 @@
-const express = require('express');
-const app = express();
-const port = process.env.PORT || 8080;
-
-app.get('/', (req, res) => {
-  res.send('Bot Logoto est fonctionnel !');
-});
-
-app.listen(port, () => {
-  console.log(`Serveur de vérification activé sur le port ${port}`);
-});
-
-// Le reste de ton code Scratch For Discord (les requires de s4d, etc.) continue ici...
 (async()=>{
     // default imports
     const events = require('events');
@@ -64,7 +51,6 @@ app.listen(port, () => {
     }
 
     // check if discord-logs is v2
-  /*
     if (!require('./package.json').dependencies['discord-logs'].startsWith("^2.")) {
       let file = JSON.parse(fs.readFileSync('package.json'))
       file.dependencies['discord-logs'] = '^2.0.0'
@@ -72,7 +58,6 @@ app.listen(port, () => {
       exec('npm i')
       throw new Error("discord-logs must be 2.0.0. please re-run or if that fails run `npm i discord-logs@2.0.0` then re-run");
     }
-    */
 
     // create a new discord client
     s4d.client = new s4d.Discord.Client({
@@ -220,16 +205,12 @@ app.listen(port, () => {
         s4d.client.channels.cache.get('1387514903778295940').send({content:String((['Ping :**',s4d.client.ws.ping,'\n','**Temps de fonctionnement **',Math.round(ms_on / 3600000),'** heures.'].join('')))});
         S4D_APP_PKG_axios({
                 method: "post",
-                url: 'https://logoto.onrender.com/api/serveur-counte',
+                url: ('https://logoto.onrender.com/api/serveur-counte?server=' + String(s4d.client.guilds.cache.size)),
     
                 headers: {
                      'key': (process.env[String('SECRET_KEY')]),
     
                 },
-                  body: {
-                       server: (String(s4d.client.guilds.cache.size)),
-    
-                  },
     
               })
               .then(async (response) => {
