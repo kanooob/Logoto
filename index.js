@@ -1,15 +1,3 @@
-const express = require('express');
-const app = express();
-const port = process.env.PORT || 8080;
-
-app.get('/', (req, res) => {
-  res.send('Bot Logoto en ligne !');
-});
-
-app.listen(port, () => {
-  console.log(`Serveur de vérification activé sur le port ${port}`);
-});
-
 (async()=>{
     // default imports
     const events = require('events');
@@ -220,11 +208,11 @@ app.listen(port, () => {
                 url: 'https://logoto.onrender.com/api/serveur-counte',
     
                 headers: {
-                     'key': 12345678,
+                     'key': (process.env[String('SECRET_KEY')]),
     
                 },
                   body: {
-                       server: (s4d.client.guilds.cache.size),
+                       server: (String(s4d.client.guilds.cache.size)),
     
                   },
     
