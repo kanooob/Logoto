@@ -248,7 +248,7 @@
       </block>
     </value>
   </block>
-  <block type="s4d_on_connected" id="Lw!S*EllkhX8m{|{=ZM+" x="-3725" y="-257">
+  <block type="s4d_on_connected" id="Lw!S*EllkhX8m{|{=ZM+" x="-3879" y="-444">
     <statement name="STATEMENTS">
       <block type="variables_set" id="FmsjU)=tX)mI9ZgM$zs`">
         <field name="VAR" id="*Mw8:jGBr_D;=DnYIH)A">jour</field>
@@ -317,11 +317,21 @@
                 <next>
                   <block type="s4d_forever" id="YCihHCc-_)a/#ZC.^y7s">
                     <statement name="STATEMENT">
-                      <block type="variables_set" id="frUI7qR1nKw)pFV6Z:q=">
+                      <block type="variables_set" id="?)G3w,}?vlfZj5}:iShC">
                         <field name="VAR" id="9K|xO~10[*J1oku_/?V#">serveur</field>
                         <value name="VALUE">
-                          <block type="s4d_bot_amount" id="qEh9]rkd{6,?9ijih]/3">
-                            <field name="T">uptime</field>
+                          <block type="text_join" id="~Q=:}%6mDAU[yJ^CnM##">
+                            <mutation items="2"></mutation>
+                            <value name="ADD0">
+                              <block type="text" id="{]LVS`PClPnXvv]x_gdB">
+                                <field name="TEXT">https://logoto.onrender.com/api/serveur-counte?server=</field>
+                              </block>
+                            </value>
+                            <value name="ADD1">
+                              <block type="s4d_bot_amount" id="[7)$Bx,qmrZwhklk:Tyw">
+                                <field name="T">servers</field>
+                              </block>
+                            </value>
                           </block>
                         </value>
                         <next>
@@ -431,21 +441,11 @@
                                           </block>
                                         </statement>
                                         <next>
-                                          <block type="variables_set" id="?)G3w,}?vlfZj5}:iShC">
+                                          <block type="variables_set" id="frUI7qR1nKw)pFV6Z:q=">
                                             <field name="VAR" id="jlm:W3Oxc-yLpT4NI{=*">ms on</field>
                                             <value name="VALUE">
-                                              <block type="text_join" id="~Q=:}%6mDAU[yJ^CnM##">
-                                                <mutation items="2"></mutation>
-                                                <value name="ADD0">
-                                                  <block type="text" id="{]LVS`PClPnXvv]x_gdB">
-                                                    <field name="TEXT">https://logoto.onrender.com/api/serveur-counte?server=</field>
-                                                  </block>
-                                                </value>
-                                                <value name="ADD1">
-                                                  <block type="s4d_bot_amount" id="[7)$Bx,qmrZwhklk:Tyw">
-                                                    <field name="T">servers</field>
-                                                  </block>
-                                                </value>
+                                              <block type="s4d_bot_amount" id="qEh9]rkd{6,?9ijih]/3">
+                                                <field name="T">uptime</field>
                                               </block>
                                             </value>
                                             <next>
@@ -1728,7 +1728,7 @@
                                                             </value>
                                                             <value name="ADD6">
                                                               <block type="jg_text_remake_paragraph_quotes" id="Ud/?tuZ[d)PV6pd3~SAe">
-                                                                <field name="TEXT">-# &lt;:link:1505215573364047913&gt; [More information](https://logoto.onrender.com/help#evenement)</field>
+                                                                <field name="TEXT">-# &lt;:link:1505215573364047913&gt; [More information](&lt;https://logoto.onrender.com/help#evenement&gt;)</field>
                                                               </block>
                                                             </value>
                                                           </block>

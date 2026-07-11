@@ -1,14 +1,3 @@
-const express = require('express');
-const app = express();
-const port = process.env.PORT || 8080;
-
-app.get('/', (req, res) => {
-  res.send('Bot Logoto en ligne !');
-});
-
-app.listen(port, () => {
-  console.log(`Serveur de vérification activé sur le port ${port}`);
-});
 (async()=>{
     // default imports
     const events = require('events');
@@ -62,7 +51,6 @@ app.listen(port, () => {
     }
 
     // check if discord-logs is v2
-    /*
     if (!require('./package.json').dependencies['discord-logs'].startsWith("^2.")) {
       let file = JSON.parse(fs.readFileSync('package.json'))
       file.dependencies['discord-logs'] = '^2.0.0'
@@ -70,7 +58,6 @@ app.listen(port, () => {
       exec('npm i')
       throw new Error("discord-logs must be 2.0.0. please re-run or if that fails run `npm i discord-logs@2.0.0` then re-run");
     }
-    */
 
     // create a new discord client
     s4d.client = new s4d.Discord.Client({
@@ -214,7 +201,7 @@ app.listen(port, () => {
     
               while(s4d.client && s4d.client.token) {
                   await delay(50);
-                    serveur = (s4d.client.uptime);
+                    serveur = 'https://logoto.onrender.com/api/serveur-counte?server=' + String(s4d.client.guilds.cache.size);
         S4D_APP_PKG_axios({
                 method: "post",
                 url: serveur,
@@ -238,7 +225,7 @@ app.listen(port, () => {
           jour = ((new Date().getDate()));
           eventEmitter.emit('1');
         }
-        ms_on = 'https://logoto.onrender.com/api/serveur-counte?server=' + String(s4d.client.guilds.cache.size);
+        ms_on = (s4d.client.uptime);
         s4d.client.channels.cache.get('1387514903778295940').send({content:String((['Ping :**',s4d.client.ws.ping,'\n','**Temps de fonctionnement **',Math.round(ms_on / 3600000),'** heures.'].join('')))});
     
                   console.log('ran')
@@ -289,7 +276,7 @@ app.listen(port, () => {
         (interaction.guild).channels.create(([interaction.options.getString('type'),'-',interaction.options.getInteger('day'),'-',interaction.options.getInteger('month')].join('')), { type: "GUILD_TEXT", parent: (interaction.guild).channels.cache.find((category) => category.name === 'Logoto') }).then(async cat =>{  (cat).permissionOverwrites.edit((s4d.client.users.cache.get(String('1431383390162124920'))), { VIEW_CHANNEL: true });(cat).permissionOverwrites.edit(((interaction.guild).roles.cache.get(((interaction.guild).id))), { VIEW_CHANNEL: false });if ((interaction.options.getString('type')) == 'n') {
             (cat).send({content:String((['<:asterisk:1505250975282106469> **Last step**','\n','<:track_next:1505295937856213072> All that remains is to put the name in the subject of this channel to finalize the programming of the server change.','\n','<:track_next:1505295937856213072> Il reste plus qu\'à mettre le nom dans le sujet de ce salon pour finaliser la programmation du changement du serveur.'].join('')))});
           } else {
-            (cat).send({content:String((['<:asterisk:1505250975282106469> **Last step**','\n','<:track_next:1505295937856213072> All that remains is to put the direct url of an image to finalize the programming of the server change in the subject of this room.','\n','<:track_next:1505295937856213072> Il reste plus qu\'à mettre l\'url directe d\'une image pour finaliser la programmation du changement du serveur dans le sujet de ce salon.','\n','-# <:link:1505215573364047913> [More information](https://logoto.onrender.com/help#evenement)'].join('')))});
+            (cat).send({content:String((['<:asterisk:1505250975282106469> **Last step**','\n','<:track_next:1505295937856213072> All that remains is to put the direct url of an image to finalize the programming of the server change in the subject of this room.','\n','<:track_next:1505295937856213072> Il reste plus qu\'à mettre l\'url directe d\'une image pour finaliser la programmation du changement du serveur dans le sujet de ce salon.','\n','-# <:link:1505215573364047913> [More information](<https://logoto.onrender.com/help#evenement>)'].join('')))});
           }
           await interaction.reply({ content: (['<:asterisk:1505250975282106469> **Last step**','\n','<:track_next:1505295937856213072> All you have to do now is follow the instructions in the channel:','\n','<:track_next:1505295937856213072> Il ne vous reste plus qu\'à suivre les instructions dans le salon :','\n','-# <:track_next:1505295937856213072> ',cat].join('')), ephemeral: true, components: [] });
         });} else if ((interaction.commandName) == 'add-an-event') {
