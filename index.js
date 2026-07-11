@@ -1,14 +1,3 @@
-const express = require('express');
-const app = express();
-const port = process.env.PORT || 8080;
-
-app.get('/', (req, res) => {
-  res.send('Bot Logoto en ligne !');
-});
-
-app.listen(port, () => {
-  console.log(`Serveur de vérification activé sur le port ${port}`);
-});
 (async()=>{
     // default imports
     const events = require('events');
@@ -62,7 +51,6 @@ app.listen(port, () => {
     }
 
     // check if discord-logs is v2
-  /*
     if (!require('./package.json').dependencies['discord-logs'].startsWith("^2.")) {
       let file = JSON.parse(fs.readFileSync('package.json'))
       file.dependencies['discord-logs'] = '^2.0.0'
@@ -70,7 +58,6 @@ app.listen(port, () => {
       exec('npm i')
       throw new Error("discord-logs must be 2.0.0. please re-run or if that fails run `npm i discord-logs@2.0.0` then re-run");
     }
-    */
 
     // create a new discord client
     s4d.client = new s4d.Discord.Client({
@@ -267,10 +254,9 @@ app.listen(port, () => {
         await interaction.reply({ content: (['<:serremains:1505250979430531134> **Invite the bot**','\n','<:track_next:1505295937856213072> Invite the bot to your server using this link:','\n','<:track_next:1505295937856213072> Inviter le bot grâce au lien sur votre serveur :','\n','-# <:link:1505215573364047913> [Discord bot](https://discord.com/oauth2/authorize?client_id=1431383390162124920)'].join('')), ephemeral: false, components: [] });
       }
       if ((interaction.commandName) == 'info') {
-        await interaction.reply({ content: (['<:track_next:1505295937856213072> **Information Desk** ','\n','\n',`<:monde:1525532891155534007> **English**
+        await interaction.reply({ content: (['<:track_next:1505295937856213072> **Information** ','\n','\n',`<:monde:1525532891155534007> **English**
         <:link:1505215573364047913> [Website](<https://logoto.onrender.com/>) • [Support Server](<https://discord.gg/TPXFVYVnXe>)
-        <:link:1505215573364047913> [Terms of Service](<https://logoto.onrender.com/tos>) • [Privacy Policy](<https://logoto.onrender.com/privacy>)
-        `,'\n','\n',`<:monde:1525532891155534007> **Français**
+        <:link:1505215573364047913> [Terms of Service](<https://logoto.onrender.com/tos>) • [Privacy Policy](<https://logoto.onrender.com/privacy>)`,'\n','\n',`<:monde:1525532891155534007> **Français**
         <:link:1505215573364047913> [Site Web](<https://logoto.onrender.com/>) • [Serveur Support](<https://discord.gg/TPXFVYVnXe>)
         <:link:1505215573364047913> [Conditions d'Utilisation](<https://logoto.onrender.com/tos>) • [Confidentialité](<https://logoto.onrender.com/privacy>)`].join('')), ephemeral: false, components: [] });
       }
@@ -324,7 +310,7 @@ app.listen(port, () => {
       ((s4d.client.guilds.cache.get((s4dguild.id))).systemChannel).send({content:String((['<:loudspeaker:1505590722798293253> **Thank you for adding me**','\n','Logoto is a Discord bot that automates the changing of your server\'s icon and name.','\n','<:track_next:1505295937856213072> To get started, run the following command: </setup:1431390983215386674>','\n','Logoto est un bot Discord qui automatiser le changement de l\'icône et du nom de votre serveur.','\n','<:track_next:1505295937856213072> Pour commencer, exécutez la commande suivante : </setup:1431390983215386674>'].join('')))});
       await delay(Number(0.1)*1000);
       ((s4d.client.guilds.cache.get((s4dguild.id))).systemChannel).messages.fetch({ limit: 1 }).then(async (last_messages_in_channel) => {
-            (s4d.client.users.cache.get(String((String((s4d.client.guilds.cache.get((s4dguild.id))).ownerId))))).send({content:String((['<:loudspeaker:1505590722798293253> **I thank the ',s4dguild.name,' Discord server team.**','\n','<:track_next:1505295937856213072> For more information, please visit my website and my support server.','\n','<:track_next:1505295937856213072> Pour plus d\'information vous avez mon site internet et mon serveurs de support.','\n','-# <:link:1505215573364047913> [Website](https://logoto.onrender.com/index-en), [Support server](https://discord.gg/TPXFVYVnXe), https://discord.com/channels/',s4dguild.id,'/',((last_messages_in_channel.at(1 - 1)).channel).id,'/',(last_messages_in_channel.at(1 - 1)).id].join('')))});
+            (s4d.client.users.cache.get(String((String((s4d.client.guilds.cache.get((s4dguild.id))).ownerId))))).send({content:String((['<:loudspeaker:1505590722798293253> **I thank the ',s4dguild.name,'\'s Discord server team.**','\n','<:track_next:1505295937856213072> For more information, please visit my website or my support server.','\n','<:track_next:1505295937856213072> Pour plus d\'information vous avez mon site internet et mon serveurs de support.','\n','-# <:link:1505215573364047913> [Website](https://logoto.onrender.com/), [Support server](https://discord.gg/TPXFVYVnXe), https://discord.com/channels/','\n','<:track_next:1505295937856213072> **Continue :** https://discord.com/channels/',s4dguild.id,'/',((last_messages_in_channel.at(1 - 1)).channel).id,'/',(last_messages_in_channel.at(1 - 1)).id].join('')))});
     
       });
     
@@ -364,6 +350,7 @@ app.listen(port, () => {
     
     s4d.client.on('guildDelete', async (s4dguild) => {
       s4d.client.channels.cache.get('1432341468059537419').send({content:String((['Bot enlevé de **',s4dguild.name,'** (`',s4dguild.id,'`).'].join('')))});
+      (s4d.client.users.cache.get(String((String((s4d.client.guilds.cache.get((s4dguild.id))).ownerId))))).send({content:String((['Bye bye',s4dguild.name,'\'s Discord server team.**','\n','<:track_next:1505295937856213072> To re-add the bot','\n','-# <:link:1505215573364047913> [Website](<https://logoto.onrender.com/>) • [Bot](https://discord.com/oauth2/authorize?client_id=1431383390162124920)'].join('')))});
     
     });
     

@@ -1196,7 +1196,7 @@
                             <mutation items="7"></mutation>
                             <value name="ADD0">
                               <block type="jg_text_remake_paragraph_quotes" id="XS{zg%+}y@yp[qw:AT3-">
-                                <field name="TEXT">&lt;:track_next:1505295937856213072&gt; **Information Desk** </field>
+                                <field name="TEXT">&lt;:track_next:1505295937856213072&gt; **Information** </field>
                               </block>
                             </value>
                             <value name="ADD1">
@@ -1207,7 +1207,7 @@
                             </value>
                             <value name="ADD3">
                               <block type="jg_text_remake_paragraph_quotes" id="Mgz0Dd}oi{?5zpGkBWf)">
-                                <field name="TEXT">&lt;:monde:1525532891155534007&gt; **English**&amp;#10;&lt;:link:1505215573364047913&gt; [Website](&lt;https://logoto.onrender.com/&gt;) • [Support Server](&lt;https://discord.gg/TPXFVYVnXe&gt;)&amp;#10;&lt;:link:1505215573364047913&gt; [Terms of Service](&lt;https://logoto.onrender.com/tos&gt;) • [Privacy Policy](&lt;https://logoto.onrender.com/privacy&gt;)&amp;#10;</field>
+                                <field name="TEXT">&lt;:monde:1525532891155534007&gt; **English**&amp;#10;&lt;:link:1505215573364047913&gt; [Website](&lt;https://logoto.onrender.com/&gt;) • [Support Server](&lt;https://discord.gg/TPXFVYVnXe&gt;)&amp;#10;&lt;:link:1505215573364047913&gt; [Terms of Service](&lt;https://logoto.onrender.com/tos&gt;) • [Privacy Policy](&lt;https://logoto.onrender.com/privacy&gt;)</field>
                               </block>
                             </value>
                             <value name="ADD4">
@@ -2314,7 +2314,7 @@
                       <block type="s4d_send_member" id="pP%Gf[p5OojY;UwV.CfV">
                         <value name="CONTENT">
                           <block type="text_join" id="3AxROSd9N2Qnrtx^uUAp">
-                            <mutation items="14"></mutation>
+                            <mutation items="16"></mutation>
                             <value name="ADD0">
                               <block type="jg_text_remake_paragraph_quotes" id="G0X{KODHF=tuDuz3:4?I">
                                 <field name="TEXT">&lt;:loudspeaker:1505590722798293253&gt; **I thank the </field>
@@ -2325,7 +2325,7 @@
                             </value>
                             <value name="ADD2">
                               <block type="jg_text_remake_paragraph_quotes" id="5!8nd[bCmA?(0*l/k)x;">
-                                <field name="TEXT"> Discord server team.**</field>
+                                <field name="TEXT">'s Discord server team.**</field>
                               </block>
                             </value>
                             <value name="ADD3">
@@ -2333,7 +2333,7 @@
                             </value>
                             <value name="ADD4">
                               <block type="jg_text_remake_paragraph_quotes" id="x/WMRc1dV_5.SD0}D`Ur">
-                                <field name="TEXT">&lt;:track_next:1505295937856213072&gt; For more information, please visit my website and my support server.</field>
+                                <field name="TEXT">&lt;:track_next:1505295937856213072&gt; For more information, please visit my website or my support server.</field>
                               </block>
                             </value>
                             <value name="ADD5">
@@ -2349,18 +2349,26 @@
                             </value>
                             <value name="ADD8">
                               <block type="jg_text_remake_paragraph_quotes" id="5%~36{)P@7FcK{1?cR:#">
-                                <field name="TEXT">-# &lt;:link:1505215573364047913&gt; [Website](https://logoto.onrender.com/index-en), [Support server](https://discord.gg/TPXFVYVnXe), https://discord.com/channels/</field>
+                                <field name="TEXT">-# &lt;:link:1505215573364047913&gt; [Website](https://logoto.onrender.com/), [Support server](https://discord.gg/TPXFVYVnXe), https://discord.com/channels/</field>
                               </block>
                             </value>
                             <value name="ADD9">
-                              <block type="s4d_add_server_id" id="{P0)wL_iA*9##L7lHa]+"></block>
+                              <block type="s4d_newline" id="%sK-W0bw?.Qb3]Qg@3lD"></block>
                             </value>
                             <value name="ADD10">
+                              <block type="jg_text_remake_paragraph_quotes" id="Zx{AVKo|.2k$gP2AXJ`M">
+                                <field name="TEXT">&lt;:track_next:1505295937856213072&gt; **Continue :** https://discord.com/channels/</field>
+                              </block>
+                            </value>
+                            <value name="ADD11">
+                              <block type="s4d_add_server_id" id="{P0)wL_iA*9##L7lHa]+"></block>
+                            </value>
+                            <value name="ADD12">
                               <block type="jg_text_remake_paragraph_quotes" id="b(q0CkvLt;F#fVk2RBx~">
                                 <field name="TEXT">/</field>
                               </block>
                             </value>
-                            <value name="ADD11">
+                            <value name="ADD13">
                               <block type="s4d_channel_id" id="L8VQ==H~_[$lM]4q6~bS">
                                 <value name="CHANNEL">
                                   <block type="jg_messages_value_dropdown_content_of_message" id="*oXT7ZVC/HFYmEt%p,W_">
@@ -2378,12 +2386,12 @@
                                 </value>
                               </block>
                             </value>
-                            <value name="ADD12">
+                            <value name="ADD14">
                               <block type="jg_text_remake_paragraph_quotes" id="r5Y)I.yKTm.F0Ut7z7{:">
                                 <field name="TEXT">/</field>
                               </block>
                             </value>
-                            <value name="ADD13">
+                            <value name="ADD15">
                               <block type="jg_messages_value_dropdown_content_of_message" id=":*4Cg#:P`#W$dK:^]v6w">
                                 <field name="TYPE">id</field>
                                 <value name="MSG">
@@ -3289,7 +3297,7 @@
       </block>
     </statement>
   </block>
-  <block type="s4d_on_remove" id="7|nL-JHLuT==:(nHGr(H" x="-1473" y="3562">
+  <block type="s4d_on_remove" id="7|nL-JHLuT==:(nHGr(H" x="-1411" y="3880">
     <statement name="STATEMENTS">
       <block type="s4d_send_channel" id="|MCe]C+W*_W`+9iz2c4@">
         <value name="CONTENT">
@@ -3328,6 +3336,63 @@
             </value>
           </block>
         </value>
+        <next>
+          <block type="s4d_send_member" id="bnhpVq[?[(2c},d3w,jN">
+            <value name="CONTENT">
+              <block type="text_join" id="{t4:n%#=Rq|!q(=k=4/0">
+                <mutation items="7"></mutation>
+                <value name="ADD0">
+                  <block type="jg_text_remake_paragraph_quotes" id="ryqn)VEik|giFZwD,)nF">
+                    <field name="TEXT">Bye bye</field>
+                  </block>
+                </value>
+                <value name="ADD1">
+                  <block type="s4d_add_server_name" id="8e]R=pNjiRQv{,kDj45a"></block>
+                </value>
+                <value name="ADD2">
+                  <block type="jg_text_remake_paragraph_quotes" id="kM|zc)~sb}dcCKH.V],@">
+                    <field name="TEXT">'s Discord server team.**</field>
+                  </block>
+                </value>
+                <value name="ADD3">
+                  <block type="s4d_newline" id="0;9{tFNB!56b}O[VXE%I"></block>
+                </value>
+                <value name="ADD4">
+                  <block type="jg_text_remake_paragraph_quotes" id=",8.{Vz[Jmv)=78o?NT[@">
+                    <field name="TEXT">&lt;:track_next:1505295937856213072&gt; To re-add the bot</field>
+                  </block>
+                </value>
+                <value name="ADD5">
+                  <block type="s4d_newline" id="0B)%.`d{^u}ziKo6Xd?="></block>
+                </value>
+                <value name="ADD6">
+                  <block type="jg_text_remake_paragraph_quotes" id=",r`vVD!7g-waVtl(4})T">
+                    <field name="TEXT">-# &lt;:link:1505215573364047913&gt; [Website](&lt;https://logoto.onrender.com/&gt;) • [Bot](https://discord.com/oauth2/authorize?client_id=1431383390162124920)</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <value name="MEMBER">
+              <block type="jg_members_get_member_by_id" id="=+;JG0+|/^7LUYas#F7t">
+                <value name="ID">
+                  <shadow type="text" id="dS6ujp35)%Q,n9w8ilNP">
+                    <field name="TEXT">12345</field>
+                  </shadow>
+                  <block type="s4d_server_owner" id="`[pzcY{$+H%^14xN?2Z#">
+                    <value name="SERVER">
+                      <block type="s4d_get_server" id="^qJ|-U}6RVF!vICDk1Nn">
+                        <field name="SEARCH_TYPE">ID</field>
+                        <value name="VALUE">
+                          <block type="s4d_add_server_id" id="y@?@cDesA!wLk[KRxe7+"></block>
+                        </value>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+              </block>
+            </value>
+          </block>
+        </next>
       </block>
     </statement>
   </block>
