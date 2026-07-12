@@ -1,14 +1,3 @@
-const express = require('express');
-const app = express();
-const port = process.env.PORT || 8080;
-
-app.get('/', (req, res) => {
-  res.send('Bot Logoto en ligne !');
-});
-
-app.listen(port, () => {
-  console.log(`Serveur de vérification activé sur le port ${port}`);
-});
 (async()=>{
     // default imports
     const events = require('events');
@@ -99,7 +88,7 @@ app.listen(port, () => {
     
 
     // blockly code
-    var jour, serveur, ms_on;
+    var jour, start_unix, serveur, ms_on;
     
     
     synchronizeSlashCommands(s4d.client, [
@@ -193,6 +182,7 @@ app.listen(port, () => {
     
     s4d.client.on('ready', async () => {
       jour = ((new Date().getDate()));
+      start_unix = (Math.floor(new Date().getTime()/1000));
       if (((new Date().getHours())) < 4) {
         jour = ((new Date().getDate())) - 1;
       }
@@ -253,7 +243,7 @@ app.listen(port, () => {
         await interaction.reply({ content: (['<:track_next:1505295937856213072> **About Logoto**','\n','\n','<:monde:1525532891155534007> **English**','\n',`• <:link:1505215573364047913> [Website](<https://logoto.onrender.com>) • [Support Server](<https://discord.gg/TPXFVYVnXe>)
         • <:link:1505215573364047913> [Terms of Service](<https://logoto.onrender.com/tos>) • [Privacy Policy](<https://logoto.onrender.com/privacy>)`,'\n','\n','<:monde:1525532891155534007> **Français**','\n',`• <:link:1505215573364047913> [Site Web](<https://logoto.onrender.com/>) • [Serveur Support](<https://discord.gg/TPXFVYVnXe>)
         • <:link:1505215573364047913> [Conditions d'Utilisation](<https://logoto.onrender.com/tos>) • [Politique de Confidentialité](<https://logoto.onrender.com/privacy>)`,'\n','\n','<:bot:1505482896268329050> **Need help or want to invite the bot ?**','\n',`<:serremains:1505250979430531134> **[Invite Logoto to your server](https://discord.com/oauth2/authorize?client_id=1431383390162124920)**
-        <:serremains:1505250979430531134> **[Join the Support Server](https://discord.gg/TPXFVYVnXe)**`,Math.floor((Number((s4d.client.uptime))).getTime()/1000)].join('')), ephemeral: false, components: [] });
+        <:serremains:1505250979430531134> **[Join the Support Server](https://discord.gg/TPXFVYVnXe)**`,'\n','<gal_ping:1506707044244263142>Start <t:',start_unix,':R>, (statut][https://logoto.betteruptime.com/]'].join('')), ephemeral: false, components: [] });
       }
       if ((interaction.commandName) == 'ping') {
         await interaction.reply({ content: (['<:ping:1505250928008237057> **',s4d.client.ws.ping,'ms.**','\n','-# <:link:1505215573364047913> [Status](<https://logoto.betteruptime.com/>)'].join('')), ephemeral: false, components: [] });
