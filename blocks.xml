@@ -1118,7 +1118,7 @@
                   <block type="slash_reply" id=";Ld/0[(r7dMLw*al=M%(">
                     <value name="CONTENT">
                       <block type="text_join" id="ea|Cm:%SRa{qd!Q~X8#)">
-                        <mutation items="24"></mutation>
+                        <mutation items="27"></mutation>
                         <value name="ADD0">
                           <block type="jg_text_remake_paragraph_quotes" id="XS{zg%+}y@yp[qw:AT3-">
                             <field name="TEXT">&lt;:track_next:1505295937856213072&gt; **About Logoto**</field>
@@ -1194,25 +1194,36 @@
                         </value>
                         <value name="ADD19">
                           <block type="jg_text_remake_paragraph_quotes" id="sN789-Z{w9pX|RB^2~v-">
-                            <field name="TEXT">&lt;:serremains:1505250979430531134&gt; **[Invite Logoto to your server](&lt;https://discord.com/oauth2/authorize?client_id=1431383390162124920&gt;)**&amp;#10;&lt;:serremains:1505250979430531134&gt; **[Join the Support Server](&lt;https://discord.gg/TPXFVYVnXe&gt;)**</field>
+                            <field name="TEXT">&lt;:serremains:1505250979430531134&gt; **[Invite Logoto to your server](&lt;https://discord.com/oauth2/authorize?client_id=1431383390162124920&gt;)**</field>
                           </block>
                         </value>
                         <value name="ADD20">
                           <block type="s4d_newline" id="G3nl??Y-A(5hc%A$9|^H"></block>
                         </value>
                         <value name="ADD21">
-                          <block type="jg_text_remake_paragraph_quotes" id="VvOLv6?NDKTcs.3_x``u">
-                            <field name="TEXT">&lt;:ping:1505250928008237057&gt;Start &lt;t:</field>
+                          <block type="jg_text_remake_paragraph_quotes" id="(8*Yg0QK{KB[g8aYzyHH">
+                            <field name="TEXT">&lt;:serremains:1505250979430531134&gt; **[Join the Support Server](&lt;https://discord.gg/TPXFVYVnXe&gt;)**</field>
                           </block>
                         </value>
                         <value name="ADD22">
+                          <block type="s4d_newline" id="Foj3e4]_k2kH-|VkeRvh"></block>
+                        </value>
+                        <value name="ADD23">
+                          <block type="s4d_newline" id="E#e`339t!SvV`YxB:^Sf"></block>
+                        </value>
+                        <value name="ADD24">
+                          <block type="jg_text_remake_paragraph_quotes" id="VvOLv6?NDKTcs.3_x``u">
+                            <field name="TEXT">&lt;:ping:1505250928008237057&gt; Start &lt;t:</field>
+                          </block>
+                        </value>
+                        <value name="ADD25">
                           <block type="variables_get" id="Vz.[,o3nUyj3ji=`_siM">
                             <field name="VAR" id="({,8$4+1#r^CW)14AY[c">start unix</field>
                           </block>
                         </value>
-                        <value name="ADD23">
+                        <value name="ADD26">
                           <block type="jg_text_remake_paragraph_quotes" id="rCx_{kD:ef%B^f[J1DW{">
-                            <field name="TEXT">:R&gt;, (statut)[&lt;https://logoto.betteruptime.com/&gt;]</field>
+                            <field name="TEXT">:R&gt;, [statut](&lt;https://logoto.betteruptime.com/&gt;)</field>
                           </block>
                         </value>
                       </block>
