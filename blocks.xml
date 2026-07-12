@@ -545,7 +545,7 @@
                 </value>
                 <value name="B">
                   <block type="logic_compare" id="U[nUFh5({{D(nhs@`bfu">
-                    <field name="OP">EQ</field>
+                    <field name="OP">NEQ</field>
                     <value name="A">
                       <block type="frost_category_get" id="[S!P%{^[yr%jQwBQOv93">
                         <field name="SEARCH_TYPE">NAME</field>
