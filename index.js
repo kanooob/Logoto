@@ -1,14 +1,3 @@
-const express = require('express');
-const app = express();
-const port = process.env.PORT || 8080;
-
-app.get('/', (req, res) => {
-  res.send('Bot Logoto en ligne !');
-});
-
-app.listen(port, () => {
-  console.log(`Serveur de vérification activé sur le port ${port}`);
-});
 (async()=>{
     // default imports
     const events = require('events');
@@ -62,7 +51,6 @@ app.listen(port, () => {
     }
 
     // check if discord-logs is v2
-    /*
     if (!require('./package.json').dependencies['discord-logs'].startsWith("^2.")) {
       let file = JSON.parse(fs.readFileSync('package.json'))
       file.dependencies['discord-logs'] = '^2.0.0'
@@ -70,7 +58,6 @@ app.listen(port, () => {
       exec('npm i')
       throw new Error("discord-logs must be 2.0.0. please re-run or if that fails run `npm i discord-logs@2.0.0` then re-run");
     }
-    */
 
     // create a new discord client
     s4d.client = new s4d.Discord.Client({
@@ -124,26 +111,14 @@ app.listen(port, () => {
     
           ]
       },{
-          name: 'info',
-      		description: 'All useful information / Toutes les informations utiles',
+          name: 'about',
+      		description: 'Display information about Logoto',
       		options: [
     
           ]
       },{
           name: 'help',
       		description: 'Bot commands list / Les commandes du bot',
-      		options: [
-    
-          ]
-      },{
-          name: 'invite',
-      		description: 'Invite the bot / Invitez le bot',
-      		options: [
-    
-          ]
-      },{
-          name: 'support',
-      		description: 'Join the support server / Rejoignez le serveur de support',
       		options: [
     
           ]
@@ -263,21 +238,14 @@ app.listen(port, () => {
       if ((interaction.commandName) == 'help') {
         await interaction.reply({ content: (['<:asterisk:1505250975282106469> **Aide de Logoto - Automatisez votre image !**','\n','====================================','\n','<:track_next:1505295937856213072> **Je suis le bot spécialisé dans l\'automatisation du changement de logo de votre serveur, sans nécessiter de commandes complexes après la configuration.**','\n','###','\n','<:track_next:1505295937856213072> Les commandes','\n','* **`/setup`** : Crée les salons nécessaires (Logoto, log-logoto) pour un démarrage rapide mais aussi obligatoire pour le bon fonctionnement du bot.','\n','* **`/add-an-event`** : Crée un salon de changement de logo avec les options [type] (obligatoire) pour le type d\'événement (logo/name), [day] (Obligatoire) indique le jour du changement, [month] (Obligatoire) indique le mois de changement.','\n','* **`/help`** : Affiche ce message d\'aide.','\n','* **`/invite`** : Invitez le bot dans votre serveur.','\n','* **`/support`** : Rejoignez le serveur de support.','\n','<:link:1505215573364047913> [Website](https://logoto.onrender.com/), [Help page](<https://logoto.onrender.com/help>)'].join('')), ephemeral: false, components: [] });
       }
-      if ((interaction.commandName) == 'invite') {
-        await interaction.reply({ content: (['<:serremains:1505250979430531134> **Invite the bot**','\n','<:track_next:1505295937856213072> Invite the bot to your server using this link:','\n','<:track_next:1505295937856213072> Inviter le bot grâce au lien sur votre serveur :','\n','-# <:link:1505215573364047913> [Discord bot](https://discord.com/oauth2/authorize?client_id=1431383390162124920)'].join('')), ephemeral: false, components: [] });
-      }
-      if ((interaction.commandName) == 'info') {
-        await interaction.reply({ content: (['<:track_next:1505295937856213072> **Information** ','\n','\n',`<:monde:1525532891155534007> **English**
-        <:link:1505215573364047913> [Website](<https://logoto.onrender.com/>) • [Support Server](<https://discord.gg/TPXFVYVnXe>)
-        <:link:1505215573364047913> [Terms of Service](<https://logoto.onrender.com/tos>) • [Privacy Policy](<https://logoto.onrender.com/privacy>)`,'\n','\n',`<:monde:1525532891155534007> **Français**
-        <:link:1505215573364047913> [Site Web](<https://logoto.onrender.com/>) • [Serveur Support](<https://discord.gg/TPXFVYVnXe>)
-        <:link:1505215573364047913> [Conditions d'Utilisation](<https://logoto.onrender.com/tos>) • [Confidentialité](<https://logoto.onrender.com/privacy>)`].join('')), ephemeral: false, components: [] });
+      if ((interaction.commandName) == 'about') {
+        await interaction.reply({ content: (['<:track_next:1505295937856213072> **About Logoto**','\n','\n','<:monde:1525532891155534007> **English**','\n',`• <:link:1505215573364047913> [Website](<https://logoto.onrender.com>) • [Support Server](<https://discord.gg/TPXFVYVnXe>)
+        • <:link:1505215573364047913> [Terms of Service](<https://logoto.onrender.com/tos>) • [Privacy Policy](<https://logoto.onrender.com/privacy>)`,'\n','\n','<:monde:1525532891155534007> **Français**','\n',`• <:link:1505215573364047913> [Site Web](<https://logoto.onrender.com/>) • [Serveur Support](<https://discord.gg/TPXFVYVnXe>)
+        • <:link:1505215573364047913> [Conditions d'Utilisation](<https://logoto.onrender.com/tos>) • [Politique de Confidentialité](<https://logoto.onrender.com/privacy>)`,'\n','\n','<:bot:1505482896268329050> **Need help or want to invite the bot ?**','\n',`<:serremains:1505250979430531134> **[Invite Logoto to your server](https://discord.com/oauth2/authorize?client_id=1431383390162124920)**
+        <:serremains:1505250979430531134> **[Join the Support Server](https://discord.gg/TPXFVYVnXe)**`,Math.floor((Number((s4d.client.uptime))).getTime()/1000)].join('')), ephemeral: false, components: [] });
       }
       if ((interaction.commandName) == 'ping') {
         await interaction.reply({ content: (['<:ping:1505250928008237057> **',s4d.client.ws.ping,'ms.**','\n','-# <:link:1505215573364047913> [Status](<https://logoto.betteruptime.com/>)'].join('')), ephemeral: false, components: [] });
-      }
-      if ((interaction.commandName) == 'support') {
-        await interaction.reply({ content: (['<:serremains:1505250979430531134> **Support server**','\n','<:track_next:1505295937856213072> Join the support server if you need help:','\n','<:track_next:1505295937856213072> Rejoignez le serveur de support si vous avez besoin d\'aide :','\n','-# <:link:1505215573364047913> [Support server](https://discord.gg/TPXFVYVnXe)'].join('')), ephemeral: false, components: [] });
       }
       if ((interaction.commandName) == 'privee' && ((interaction.member).id) == '746069923465527339') {
         await interaction.reply({ content: '<:asterisk:1505250975282106469> C\'est bon retournement de situation !', ephemeral: true, components: [] });
