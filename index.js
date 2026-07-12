@@ -1,14 +1,3 @@
-const express = require('express');
-const app = express();
-const port = process.env.PORT || 8080;
-
-app.get('/', (req, res) => {
-  res.send('Bot Logoto en ligne !');
-});
-
-app.listen(port, () => {
-  console.log(`Serveur de vérification activé sur le port ${port}`);
-});
 (async()=>{
     // default imports
     const events = require('events');
@@ -340,7 +329,6 @@ app.listen(port, () => {
     
     s4d.client.on('guildDelete', async (s4dguild) => {
       s4d.client.channels.cache.get('1432341468059537419').send({content:String((['Bot enlevé de **',s4dguild.name,'** (`',s4dguild.id,'`).'].join('')))});
-      (s4d.client.users.cache.get(String((String((s4d.client.guilds.cache.get((s4dguild.id))).ownerId))))).send({content:String((['Bye bye',s4dguild.name,'\'s Discord server team.**','\n','<:track_next:1505295937856213072> To re-add the bot','\n','-# <:link:1505215573364047913> [Website](<https://logoto.onrender.com/>) • [Bot](https://discord.com/oauth2/authorize?client_id=1431383390162124920)'].join('')))});
     
     });
     
