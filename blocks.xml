@@ -520,7 +520,7 @@
       </block>
     </statement>
   </block>
-  <block type="on_slash" id="=Rg,M;I|qzbUv~9HZh7Z" x="-223" y="-77">
+  <block type="on_slash" id="=Rg,M;I|qzbUv~9HZh7Z" x="-543" y="-116">
     <statement name="STATEMENTS">
       <block type="controls_if" id="yz{B,WKNp/B4)U0!i/Oy">
         <mutation elseif="2"></mutation>
@@ -1118,7 +1118,7 @@
                   <block type="slash_reply" id=";Ld/0[(r7dMLw*al=M%(">
                     <value name="CONTENT">
                       <block type="text_join" id="ea|Cm:%SRa{qd!Q~X8#)">
-                        <mutation items="20"></mutation>
+                        <mutation items="24"></mutation>
                         <value name="ADD0">
                           <block type="jg_text_remake_paragraph_quotes" id="XS{zg%+}y@yp[qw:AT3-">
                             <field name="TEXT">&lt;:track_next:1505295937856213072&gt; **About Logoto**</field>
@@ -1140,63 +1140,79 @@
                         </value>
                         <value name="ADD5">
                           <block type="jg_text_remake_paragraph_quotes" id="58|1dC2WR1DKY^Fz};!:">
-                            <field name="TEXT">• &lt;:link:1505215573364047913&gt; [Website](&lt;https://logoto.onrender.com&gt;) • [Support Server](&lt;https://discord.gg/TPXFVYVnXe&gt;)&amp;#10;• &lt;:link:1505215573364047913&gt; [Terms of Service](&lt;https://logoto.onrender.com/tos&gt;) • [Privacy Policy](&lt;https://logoto.onrender.com/privacy&gt;)</field>
+                            <field name="TEXT">&lt;:link:1505215573364047913&gt; [Website](&lt;https://logoto.onrender.com&gt;) • [Support Server](&lt;https://discord.gg/TPXFVYVnXe&gt;)</field>
                           </block>
                         </value>
                         <value name="ADD6">
                           <block type="s4d_newline" id="s?!xtc~I_sfIn^Nnx`be"></block>
                         </value>
                         <value name="ADD7">
-                          <block type="s4d_newline" id="U]72Z*2FXslo=ko+6O1A"></block>
+                          <block type="jg_text_remake_paragraph_quotes" id="B!$+Z4LtvNG*V_VbC!@`">
+                            <field name="TEXT">&lt;:link:1505215573364047913&gt; [Terms of Service](&lt;https://logoto.onrender.com/tos&gt;) • [Privacy Policy](&lt;https://logoto.onrender.com/privacy&gt;)</field>
+                          </block>
                         </value>
                         <value name="ADD8">
-                          <block type="jg_text_remake_paragraph_quotes" id="r!(`I35MwZXTxGw[jA7s">
-                            <field name="TEXT">&lt;:monde:1525532891155534007&gt; **Français**</field>
-                          </block>
+                          <block type="s4d_newline" id="U]72Z*2FXslo=ko+6O1A"></block>
                         </value>
                         <value name="ADD9">
                           <block type="s4d_newline" id="%CKZ]5o*oypj:/{|O[~Z"></block>
                         </value>
                         <value name="ADD10">
-                          <block type="jg_text_remake_paragraph_quotes" id="eJE_64D4NkHFQ8H[]iLd">
-                            <field name="TEXT">• &lt;:link:1505215573364047913&gt; [Site Web](&lt;https://logoto.onrender.com/&gt;) • [Serveur Support](&lt;https://discord.gg/TPXFVYVnXe&gt;)&amp;#10;• &lt;:link:1505215573364047913&gt; [Conditions d'Utilisation](&lt;https://logoto.onrender.com/tos&gt;) • [Politique de Confidentialité](&lt;https://logoto.onrender.com/privacy&gt;)</field>
+                          <block type="jg_text_remake_paragraph_quotes" id="r!(`I35MwZXTxGw[jA7s">
+                            <field name="TEXT">&lt;:monde:1525532891155534007&gt; **Français**</field>
                           </block>
                         </value>
                         <value name="ADD11">
                           <block type="s4d_newline" id="[i#bD=4ip21cH%;Io!}G"></block>
                         </value>
                         <value name="ADD12">
-                          <block type="s4d_newline" id="E#(P51@h(a/X6]bGTFs["></block>
+                          <block type="jg_text_remake_paragraph_quotes" id="eJE_64D4NkHFQ8H[]iLd">
+                            <field name="TEXT">&lt;:link:1505215573364047913&gt; [Site Web](&lt;https://logoto.onrender.com/&gt;) • [Serveur Support](&lt;https://discord.gg/TPXFVYVnXe&gt;)</field>
+                          </block>
                         </value>
                         <value name="ADD13">
+                          <block type="s4d_newline" id="]J!6(/b]^SUqKK{5F{7p"></block>
+                        </value>
+                        <value name="ADD14">
+                          <block type="jg_text_remake_paragraph_quotes" id="F8?3vd@#besyZ5E{lo.v">
+                            <field name="TEXT">&lt;:link:1505215573364047913&gt; [Conditions d'Utilisation](&lt;https://logoto.onrender.com/tos&gt;) • [Politique de Confidentialité](&lt;https://logoto.onrender.com/privacy&gt;)</field>
+                          </block>
+                        </value>
+                        <value name="ADD15">
+                          <block type="s4d_newline" id="E#(P51@h(a/X6]bGTFs["></block>
+                        </value>
+                        <value name="ADD16">
+                          <block type="s4d_newline" id="cIe|a?cPEo^DDHNCdn(F"></block>
+                        </value>
+                        <value name="ADD17">
                           <block type="jg_text_remake_paragraph_quotes" id="mv:R6]VT1)f3lmYIKB2H">
                             <field name="TEXT">&lt;:bot:1505482896268329050&gt; **Need help or want to invite the bot ?**</field>
                           </block>
                         </value>
-                        <value name="ADD14">
+                        <value name="ADD18">
                           <block type="s4d_newline" id="=i$+rNStDomVguTgedxx"></block>
                         </value>
-                        <value name="ADD15">
+                        <value name="ADD19">
                           <block type="jg_text_remake_paragraph_quotes" id="sN789-Z{w9pX|RB^2~v-">
-                            <field name="TEXT">&lt;:serremains:1505250979430531134&gt; **[Invite Logoto to your server](https://discord.com/oauth2/authorize?client_id=1431383390162124920)**&amp;#10;&lt;:serremains:1505250979430531134&gt; **[Join the Support Server](https://discord.gg/TPXFVYVnXe)**</field>
+                            <field name="TEXT">&lt;:serremains:1505250979430531134&gt; **[Invite Logoto to your server](&lt;https://discord.com/oauth2/authorize?client_id=1431383390162124920&gt;)**&amp;#10;&lt;:serremains:1505250979430531134&gt; **[Join the Support Server](&lt;https://discord.gg/TPXFVYVnXe&gt;)**</field>
                           </block>
                         </value>
-                        <value name="ADD16">
+                        <value name="ADD20">
                           <block type="s4d_newline" id="G3nl??Y-A(5hc%A$9|^H"></block>
                         </value>
-                        <value name="ADD17">
+                        <value name="ADD21">
                           <block type="jg_text_remake_paragraph_quotes" id="VvOLv6?NDKTcs.3_x``u">
-                            <field name="TEXT">&lt;gal_ping:1506707044244263142&gt;Start &lt;t:</field>
+                            <field name="TEXT">&lt;:ping:1505250928008237057&gt;Start &lt;t:</field>
                           </block>
                         </value>
-                        <value name="ADD18">
+                        <value name="ADD22">
                           <block type="variables_get" id="Vz.[,o3nUyj3ji=`_siM">
                             <field name="VAR" id="({,8$4+1#r^CW)14AY[c">start unix</field>
                           </block>
                         </value>
-                        <value name="ADD19">
+                        <value name="ADD23">
                           <block type="jg_text_remake_paragraph_quotes" id="rCx_{kD:ef%B^f[J1DW{">
-                            <field name="TEXT">:R&gt;, (statut][https://logoto.betteruptime.com/]</field>
+                            <field name="TEXT">:R&gt;, (statut)[&lt;https://logoto.betteruptime.com/&gt;]</field>
                           </block>
                         </value>
                       </block>

@@ -1,14 +1,3 @@
-const express = require('express');
-const app = express();
-const port = process.env.PORT || 8080;
-
-app.get('/', (req, res) => {
-  res.send('Bot Logoto en ligne !');
-});
-
-app.listen(port, () => {
-  console.log(`Serveur de vérification activé sur le port ${port}`);
-});
 (async()=>{
     // default imports
     const events = require('events');
@@ -251,10 +240,8 @@ app.listen(port, () => {
         await interaction.reply({ content: (['<:asterisk:1505250975282106469> **Aide de Logoto - Automatisez votre image !**','\n','====================================','\n','<:track_next:1505295937856213072> **Je suis le bot spécialisé dans l\'automatisation du changement de logo de votre serveur, sans nécessiter de commandes complexes après la configuration.**','\n','###','\n','<:track_next:1505295937856213072> Les commandes','\n','* **`/setup`** : Crée les salons nécessaires (Logoto, log-logoto) pour un démarrage rapide mais aussi obligatoire pour le bon fonctionnement du bot.','\n','* **`/add-an-event`** : Crée un salon de changement de logo avec les options [type] (obligatoire) pour le type d\'événement (logo/name), [day] (Obligatoire) indique le jour du changement, [month] (Obligatoire) indique le mois de changement.','\n','* **`/help`** : Affiche ce message d\'aide.','\n','* **`/invite`** : Invitez le bot dans votre serveur.','\n','* **`/support`** : Rejoignez le serveur de support.','\n','<:link:1505215573364047913> [Website](https://logoto.onrender.com/), [Help page](<https://logoto.onrender.com/help>)'].join('')), ephemeral: false, components: [] });
       }
       if ((interaction.commandName) == 'about') {
-        await interaction.reply({ content: (['<:track_next:1505295937856213072> **About Logoto**','\n','\n','<:monde:1525532891155534007> **English**','\n',`• <:link:1505215573364047913> [Website](<https://logoto.onrender.com>) • [Support Server](<https://discord.gg/TPXFVYVnXe>)
-        • <:link:1505215573364047913> [Terms of Service](<https://logoto.onrender.com/tos>) • [Privacy Policy](<https://logoto.onrender.com/privacy>)`,'\n','\n','<:monde:1525532891155534007> **Français**','\n',`• <:link:1505215573364047913> [Site Web](<https://logoto.onrender.com/>) • [Serveur Support](<https://discord.gg/TPXFVYVnXe>)
-        • <:link:1505215573364047913> [Conditions d'Utilisation](<https://logoto.onrender.com/tos>) • [Politique de Confidentialité](<https://logoto.onrender.com/privacy>)`,'\n','\n','<:bot:1505482896268329050> **Need help or want to invite the bot ?**','\n',`<:serremains:1505250979430531134> **[Invite Logoto to your server](https://discord.com/oauth2/authorize?client_id=1431383390162124920)**
-        <:serremains:1505250979430531134> **[Join the Support Server](https://discord.gg/TPXFVYVnXe)**`,'\n','<gal_ping:1506707044244263142>Start <t:',start_unix,':R>, (statut][https://logoto.betteruptime.com/]'].join('')), ephemeral: false, components: [] });
+        await interaction.reply({ content: (['<:track_next:1505295937856213072> **About Logoto**','\n','\n','<:monde:1525532891155534007> **English**','\n','<:link:1505215573364047913> [Website](<https://logoto.onrender.com>) • [Support Server](<https://discord.gg/TPXFVYVnXe>)','\n','<:link:1505215573364047913> [Terms of Service](<https://logoto.onrender.com/tos>) • [Privacy Policy](<https://logoto.onrender.com/privacy>)','\n','\n','<:monde:1525532891155534007> **Français**','\n','<:link:1505215573364047913> [Site Web](<https://logoto.onrender.com/>) • [Serveur Support](<https://discord.gg/TPXFVYVnXe>)','\n','<:link:1505215573364047913> [Conditions d\'Utilisation](<https://logoto.onrender.com/tos>) • [Politique de Confidentialité](<https://logoto.onrender.com/privacy>)','\n','\n','<:bot:1505482896268329050> **Need help or want to invite the bot ?**','\n',`<:serremains:1505250979430531134> **[Invite Logoto to your server](<https://discord.com/oauth2/authorize?client_id=1431383390162124920>)**
+        <:serremains:1505250979430531134> **[Join the Support Server](<https://discord.gg/TPXFVYVnXe>)**`,'\n','<:ping:1505250928008237057>Start <t:',start_unix,':R>, (statut)[<https://logoto.betteruptime.com/>]'].join('')), ephemeral: false, components: [] });
       }
       if ((interaction.commandName) == 'ping') {
         await interaction.reply({ content: (['<:ping:1505250928008237057> **',s4d.client.ws.ping,'ms.**','\n','-# <:link:1505215573364047913> [Status](<https://logoto.betteruptime.com/>)'].join('')), ephemeral: false, components: [] });
