@@ -520,7 +520,7 @@
       </block>
     </statement>
   </block>
-  <block type="on_slash" id="=Rg,M;I|qzbUv~9HZh7Z" x="-543" y="-116">
+  <block type="on_slash" id="=Rg,M;I|qzbUv~9HZh7Z" x="146" y="-204">
     <statement name="STATEMENTS">
       <block type="controls_if" id="yz{B,WKNp/B4)U0!i/Oy">
         <mutation elseif="2"></mutation>
@@ -544,9 +544,10 @@
                   </block>
                 </value>
                 <value name="B">
-                  <block type="s4d_channel_exist" id="6=i1Zd$Et4(.US~ZSTab">
-                    <value name="CHANNEL">
-                      <block type="frost_category_get" id="oj2kZp)oAISgJNLD*T2j">
+                  <block type="logic_compare" id="U[nUFh5({{D(nhs@`bfu">
+                    <field name="OP">EQ</field>
+                    <value name="A">
+                      <block type="frost_category_get" id="[S!P%{^[yr%jQwBQOv93">
                         <field name="SEARCH_TYPE">NAME</field>
                         <value name="VALUE">
                           <block type="jg_text_remake_paragraph_quotes" id="Vs%AVcJ*[}:RtOEht!xA">
@@ -557,6 +558,9 @@
                           <block type="interaction_guild" id="ni2]ZuM8Nw^vw.4)p?-."></block>
                         </value>
                       </block>
+                    </value>
+                    <value name="B">
+                      <block type="logic_null" id="xyW4;v,*P+;PwWQs@2@f"></block>
                     </value>
                   </block>
                 </value>
@@ -2292,7 +2296,7 @@
                             </value>
                             <value name="ADD8">
                               <block type="jg_text_remake_paragraph_quotes" id="5%~36{)P@7FcK{1?cR:#">
-                                <field name="TEXT">-# &lt;:link:1505215573364047913&gt; [Website](https://logoto.onrender.com/), [Support server](https://discord.gg/TPXFVYVnXe), https://discord.com/channels/</field>
+                                <field name="TEXT">-# &lt;:link:1505215573364047913&gt; [Website](&lt;https://logoto.onrender.com/&gt;), [Support server](&lt;https://discord.gg/TPXFVYVnXe&gt;)</field>
                               </block>
                             </value>
                             <value name="ADD9">

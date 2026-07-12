@@ -1,14 +1,3 @@
-const express = require('express');
-const app = express();
-const port = process.env.PORT || 8080;
-
-app.get('/', (req, res) => {
-  res.send('Bot Logoto en ligne !');
-});
-
-app.listen(port, () => {
-  console.log(`Serveur de vérification activé sur le port ${port}`);
-});
 (async()=>{
     // default imports
     const events = require('events');
@@ -234,7 +223,7 @@ app.listen(port, () => {
     });
     
     s4d.client.on('interactionCreate', async (interaction) => {
-              if ((interaction.commandName) == 'setup' && (typeof (interaction.guild).channels.cache.find((category) => category.name === 'log-logoto') !== undefined) && ((((interaction.member).roles.highest).permissions.has('MANAGE_GUILD')) || (((interaction.member).roles.highest).permissions.has('ADMINISTRATOR')) || (String((interaction.guild).ownerId)) == ((interaction.member).id))) {
+              if ((interaction.commandName) == 'setup' && (interaction.guild).channels.cache.find((category) => category.name === 'log-logoto') == null && ((((interaction.member).roles.highest).permissions.has('MANAGE_GUILD')) || (((interaction.member).roles.highest).permissions.has('ADMINISTRATOR')) || (String((interaction.guild).ownerId)) == ((interaction.member).id))) {
         await interaction.reply({ content: (['<:asterisk:1505250975282106469> **Information**','\n','<:track_next:1505295937856213072> The logs and actions forum already exists:',(interaction.guild).channels.cache.find((category) => category.name === 'log-logoto'),'\n','<:track_next:1505295937856213072> Le salon des logs et des actions existe déjà :',(interaction.guild).channels.cache.find((category) => category.name === 'log-logoto')].join('')), ephemeral: true, components: [] });
       } else if ((interaction.commandName) == 'setup' && ((((interaction.member).roles.highest).permissions.has('MANAGE_GUILD')) || (((interaction.member).roles.highest).permissions.has('ADMINISTRATOR')) || (String((interaction.guild).ownerId)) == ((interaction.member).id))) {
         (interaction.guild).channels.create('Logoto', { type: 'GUILD_CATEGORY' }).then(async cat => {  (interaction.guild).channels.create('log-logoto', { type: "GUILD_TEXT", parent: (cat) }).then(async cat =>{  (cat).permissionOverwrites.edit((s4d.client.users.cache.get(String('1431383390162124920'))), { VIEW_CHANNEL: true });(cat).permissionOverwrites.edit(((interaction.guild).roles.cache.get(((interaction.guild).id))), { VIEW_CHANNEL: false });(cat).send({content:String((['<:asterisk:1505250975282106469> **Information**','\n','<:track_next:1505295937856213072> The logs channel has been created. You will see the server changes made by the bot in this channel. (Please do not change the channel name.) Now you just need to run this command </add-an-event:1505515202072805377> to create an automation.','\n','<:track_next:1505295937856213072> Le salon des logs a été créé. Vous obtiendrez les actions de changement du serveur fait par le bot dans ce salon. (Veuillez ne pas changer le nom du salon.) Maintenant vous avez juste à faire cette commande </add-an-event:1505515202072805377> pour créer une automatisation.'].join('')))});
@@ -300,7 +289,7 @@ app.listen(port, () => {
       ((s4d.client.guilds.cache.get((s4dguild.id))).systemChannel).send({content:String((['<:loudspeaker:1505590722798293253> **Thank you for adding me**','\n','Logoto is a Discord bot that automates the changing of your server\'s icon and name.','\n','<:track_next:1505295937856213072> To get started, run the following command: </setup:1431390983215386674>','\n','Logoto est un bot Discord qui automatiser le changement de l\'icône et du nom de votre serveur.','\n','<:track_next:1505295937856213072> Pour commencer, exécutez la commande suivante : </setup:1431390983215386674>'].join('')))});
       await delay(Number(0.1)*1000);
       ((s4d.client.guilds.cache.get((s4dguild.id))).systemChannel).messages.fetch({ limit: 1 }).then(async (last_messages_in_channel) => {
-            (s4d.client.users.cache.get(String((String((s4d.client.guilds.cache.get((s4dguild.id))).ownerId))))).send({content:String((['<:loudspeaker:1505590722798293253> **I thank the ',s4dguild.name,'\'s Discord server team.**','\n','<:track_next:1505295937856213072> For more information, please visit my website or my support server.','\n','<:track_next:1505295937856213072> Pour plus d\'information vous avez mon site internet et mon serveurs de support.','\n','-# <:link:1505215573364047913> [Website](https://logoto.onrender.com/), [Support server](https://discord.gg/TPXFVYVnXe), https://discord.com/channels/','\n','<:track_next:1505295937856213072> **Continue :** https://discord.com/channels/',s4dguild.id,'/',((last_messages_in_channel.at(1 - 1)).channel).id,'/',(last_messages_in_channel.at(1 - 1)).id].join('')))});
+            (s4d.client.users.cache.get(String((String((s4d.client.guilds.cache.get((s4dguild.id))).ownerId))))).send({content:String((['<:loudspeaker:1505590722798293253> **I thank the ',s4dguild.name,'\'s Discord server team.**','\n','<:track_next:1505295937856213072> For more information, please visit my website or my support server.','\n','<:track_next:1505295937856213072> Pour plus d\'information vous avez mon site internet et mon serveurs de support.','\n','-# <:link:1505215573364047913> [Website](<https://logoto.onrender.com/>), [Support server](<https://discord.gg/TPXFVYVnXe>)','\n','<:track_next:1505295937856213072> **Continue :** https://discord.com/channels/',s4dguild.id,'/',((last_messages_in_channel.at(1 - 1)).channel).id,'/',(last_messages_in_channel.at(1 - 1)).id].join('')))});
     
       });
     
