@@ -1136,7 +1136,7 @@
                         </value>
                         <value name="ADD3">
                           <block type="jg_text_remake_paragraph_quotes" id="Mgz0Dd}oi{?5zpGkBWf)">
-                            <field name="TEXT">&lt;:monde:1525532891155534007&gt; **English**</field>
+                            <field name="TEXT">**The best Discord bot to automatically update and schedule your server's visual identity.**</field>
                           </block>
                         </value>
                         <value name="ADD4">
@@ -1144,7 +1144,7 @@
                         </value>
                         <value name="ADD5">
                           <block type="jg_text_remake_paragraph_quotes" id="58|1dC2WR1DKY^Fz};!:">
-                            <field name="TEXT">&lt;:link:1505215573364047913&gt; [Website](&lt;https://logoto.onrender.com&gt;) • [Support Server](&lt;https://discord.gg/TPXFVYVnXe&gt;)</field>
+                            <field name="TEXT">**Feature**</field>
                           </block>
                         </value>
                         <value name="ADD6">
@@ -1152,7 +1152,7 @@
                         </value>
                         <value name="ADD7">
                           <block type="jg_text_remake_paragraph_quotes" id="B!$+Z4LtvNG*V_VbC!@`">
-                            <field name="TEXT">&lt;:link:1505215573364047913&gt; [Terms of Service](&lt;https://logoto.onrender.com/tos&gt;) • [Privacy Policy](&lt;https://logoto.onrender.com/privacy&gt;)</field>
+                            <field name="TEXT">Simple scheduling and 100% autonomous customization of your server's logo, name, banner and invite image.</field>
                           </block>
                         </value>
                         <value name="ADD8">
@@ -1163,7 +1163,7 @@
                         </value>
                         <value name="ADD10">
                           <block type="jg_text_remake_paragraph_quotes" id="r!(`I35MwZXTxGw[jA7s">
-                            <field name="TEXT">&lt;:monde:1525532891155534007&gt; **Français**</field>
+                            <field name="TEXT">&lt;:monde:1525532891155534007&gt; **Resources**</field>
                           </block>
                         </value>
                         <value name="ADD11">
@@ -2272,7 +2272,7 @@
                             </value>
                             <value name="ADD2">
                               <block type="jg_text_remake_paragraph_quotes" id="5!8nd[bCmA?(0*l/k)x;">
-                                <field name="TEXT">'s Discord server team.**</field>
+                                <field name="TEXT"> Discord server team.**</field>
                               </block>
                             </value>
                             <value name="ADD3">
@@ -2375,42 +2375,6 @@
                         </value>
                       </block>
                     </statement>
-                    <next>
-                      <block type="s4d_wait_seconds" id="yrJ4qn,wmI}ief?s!$1y">
-                        <value name="TIME">
-                          <shadow type="math_number" id="J,p|q)epNtq!p7ea;_zt">
-                            <field name="NUM">5</field>
-                          </shadow>
-                        </value>
-                        <next>
-                          <block type="role_color" id="?:K%T[JfXvK(;p,`]K::">
-                            <value name="role">
-                              <block type="s4d_get_role" id="B^n4@5;wRwy%lM~DS]EL">
-                                <field name="SEARCH_TYPE">NAME</field>
-                                <value name="VALUE">
-                                  <block type="jg_text_remake_paragraph_quotes" id="D@zzN)CJDT`s7ef-^eK;">
-                                    <field name="TEXT">Logoto</field>
-                                  </block>
-                                </value>
-                                <value name="SERVER">
-                                  <block type="s4d_get_server" id="k)N%?6cA7}IwF?1bA!3r">
-                                    <field name="SEARCH_TYPE">ID</field>
-                                    <value name="VALUE">
-                                      <block type="s4d_add_server_id" id="CWn+R+TEbN,!H4SA`NJU"></block>
-                                    </value>
-                                  </block>
-                                </value>
-                              </block>
-                            </value>
-                            <value name="color">
-                              <block type="fz_color" id="Z%jJs2_Mmwl$Y=H)sl4K">
-                                <field name="COLOR">8c935d</field>
-                              </block>
-                            </value>
-                          </block>
-                        </next>
-                      </block>
-                    </next>
                   </block>
                 </next>
               </block>

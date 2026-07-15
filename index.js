@@ -1,14 +1,3 @@
-const express = require('express');
-const app = express();
-const port = process.env.PORT || 8080;
-
-app.get('/', (req, res) => {
-  res.send('Bot Logoto en ligne !');
-});
-
-app.listen(port, () => {
-  console.log(`Serveur de vérification activé sur le port ${port}`);
-});
 (async()=>{
     // default imports
     const events = require('events');
@@ -251,7 +240,7 @@ app.listen(port, () => {
         await interaction.reply({ content: (['<:asterisk:1505250975282106469> **Aide de Logoto - Automatisez votre image !**','\n','====================================','\n','<:track_next:1505295937856213072> **Je suis le bot spécialisé dans l\'automatisation du changement de logo de votre serveur, sans nécessiter de commandes complexes après la configuration.**','\n','###','\n','<:track_next:1505295937856213072> Les commandes','\n','* **`/setup`** : Crée les salons nécessaires (Logoto, log-logoto) pour un démarrage rapide mais aussi obligatoire pour le bon fonctionnement du bot.','\n','* **`/add-an-event`** : Crée un salon de changement de logo avec les options [type] (obligatoire) pour le type d\'événement (logo/name), [day] (Obligatoire) indique le jour du changement, [month] (Obligatoire) indique le mois de changement.','\n','* **`/help`** : Affiche ce message d\'aide.','\n','* **`/invite`** : Invitez le bot dans votre serveur.','\n','* **`/support`** : Rejoignez le serveur de support.','\n','<:link:1505215573364047913> [Website](https://logoto.onrender.com/), [Help page](<https://logoto.onrender.com/help>)'].join('')), ephemeral: false, components: [] });
       }
       if ((interaction.commandName) == 'about') {
-        await interaction.reply({ content: (['<:track_next:1505295937856213072> **About Logoto**','\n','\n','<:monde:1525532891155534007> **English**','\n','<:link:1505215573364047913> [Website](<https://logoto.onrender.com>) • [Support Server](<https://discord.gg/TPXFVYVnXe>)','\n','<:link:1505215573364047913> [Terms of Service](<https://logoto.onrender.com/tos>) • [Privacy Policy](<https://logoto.onrender.com/privacy>)','\n','\n','<:monde:1525532891155534007> **Français**','\n','<:link:1505215573364047913> [Site Web](<https://logoto.onrender.com/>) • [Serveur Support](<https://discord.gg/TPXFVYVnXe>)','\n','<:link:1505215573364047913> [Conditions d\'Utilisation](<https://logoto.onrender.com/tos>) • [Politique de Confidentialité](<https://logoto.onrender.com/privacy>)','\n','\n','<:bot:1505482896268329050> **Need help or want to invite the bot ?**','\n','<:serremains:1505250979430531134> **[Invite Logoto to your server](<https://discord.com/oauth2/authorize?client_id=1431383390162124920>)**','\n','<:serremains:1505250979430531134> **[Join the Support Server](<https://discord.gg/TPXFVYVnXe>)**','\n','\n','<:ping:1505250928008237057> Start <t:',start_unix,':R>, [statut](<https://logoto.betteruptime.com/>)'].join('')), ephemeral: false, components: [] });
+        await interaction.reply({ content: (['<:track_next:1505295937856213072> **About Logoto**','\n','\n','**The best Discord bot to automatically update and schedule your server\'s visual identity.**','\n','**Feature**','\n','Simple scheduling and 100% autonomous customization of your server\'s logo, name, banner and invite image.','\n','\n','<:monde:1525532891155534007> **Resources**','\n','<:link:1505215573364047913> [Site Web](<https://logoto.onrender.com/>) • [Serveur Support](<https://discord.gg/TPXFVYVnXe>)','\n','<:link:1505215573364047913> [Conditions d\'Utilisation](<https://logoto.onrender.com/tos>) • [Politique de Confidentialité](<https://logoto.onrender.com/privacy>)','\n','\n','<:bot:1505482896268329050> **Need help or want to invite the bot ?**','\n','<:serremains:1505250979430531134> **[Invite Logoto to your server](<https://discord.com/oauth2/authorize?client_id=1431383390162124920>)**','\n','<:serremains:1505250979430531134> **[Join the Support Server](<https://discord.gg/TPXFVYVnXe>)**','\n','\n','<:ping:1505250928008237057> Start <t:',start_unix,':R>, [statut](<https://logoto.betteruptime.com/>)'].join('')), ephemeral: false, components: [] });
       }
       if ((interaction.commandName) == 'ping') {
         await interaction.reply({ content: (['<:ping:1505250928008237057> **',s4d.client.ws.ping,'ms.**','\n','-# <:link:1505215573364047913> [Status](<https://logoto.betteruptime.com/>)'].join('')), ephemeral: false, components: [] });
@@ -300,13 +289,10 @@ app.listen(port, () => {
       ((s4d.client.guilds.cache.get((s4dguild.id))).systemChannel).send({content:String((['<:loudspeaker:1505590722798293253> **Thank you for adding me**','\n','Logoto is a Discord bot that automates the changing of your server\'s icon and name.','\n','<:track_next:1505295937856213072> To get started, run the following command: </setup:1431390983215386674>','\n','Logoto est un bot Discord qui automatiser le changement de l\'icône et du nom de votre serveur.','\n','<:track_next:1505295937856213072> Pour commencer, exécutez la commande suivante : </setup:1431390983215386674>'].join('')))});
       await delay(Number(0.1)*1000);
       ((s4d.client.guilds.cache.get((s4dguild.id))).systemChannel).messages.fetch({ limit: 1 }).then(async (last_messages_in_channel) => {
-            (s4d.client.users.cache.get(String((String((s4d.client.guilds.cache.get((s4dguild.id))).ownerId))))).send({content:String((['<:loudspeaker:1505590722798293253> **I thank the ',s4dguild.name,'\'s Discord server team.**','\n','<:track_next:1505295937856213072> For more information, please visit my website or my support server.','\n','<:track_next:1505295937856213072> Pour plus d\'information vous avez mon site internet et mon serveurs de support.','\n','-# <:link:1505215573364047913> [Website](<https://logoto.onrender.com/>), [Support server](<https://discord.gg/TPXFVYVnXe>)','\n','<:track_next:1505295937856213072> **Continue :** https://discord.com/channels/',s4dguild.id,'/',((last_messages_in_channel.at(1 - 1)).channel).id,'/',(last_messages_in_channel.at(1 - 1)).id].join('')))});
+            (s4d.client.users.cache.get(String((String((s4d.client.guilds.cache.get((s4dguild.id))).ownerId))))).send({content:String((['<:loudspeaker:1505590722798293253> **I thank the ',s4dguild.name,' Discord server team.**','\n','<:track_next:1505295937856213072> For more information, please visit my website or my support server.','\n','<:track_next:1505295937856213072> Pour plus d\'information vous avez mon site internet et mon serveurs de support.','\n','-# <:link:1505215573364047913> [Website](<https://logoto.onrender.com/>), [Support server](<https://discord.gg/TPXFVYVnXe>)','\n','<:track_next:1505295937856213072> **Continue :** https://discord.com/channels/',s4dguild.id,'/',((last_messages_in_channel.at(1 - 1)).channel).id,'/',(last_messages_in_channel.at(1 - 1)).id].join('')))});
     
       });
-      await delay(Number(5)*1000);
-      ((s4d.client.guilds.cache.get((s4dguild.id))).roles.cache.find((role) => role.name === 'Logoto')).edit({
-                  color: "8c935d"
-              });
+    
     });
     
     s4d.client.on('messageCreate', async (s4dmessage) => {
