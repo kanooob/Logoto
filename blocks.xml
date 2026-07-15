@@ -2134,7 +2134,7 @@
       </block>
     </statement>
   </block>
-  <block type="s4d_on_added" id="f[f[K3UbN$5[%Vy(]zA9" x="-1455" y="1698">
+  <block type="s4d_on_added" id="f[f[K3UbN$5[%Vy(]zA9" x="-1663" y="1469">
     <statement name="STATEMENTS">
       <block type="s4d_send_channel" id="lwwqVA9u]IHw!|T%T3_]">
         <value name="CONTENT">
@@ -2375,6 +2375,42 @@
                         </value>
                       </block>
                     </statement>
+                    <next>
+                      <block type="s4d_wait_seconds" id="yrJ4qn,wmI}ief?s!$1y">
+                        <value name="TIME">
+                          <shadow type="math_number" id="J,p|q)epNtq!p7ea;_zt">
+                            <field name="NUM">5</field>
+                          </shadow>
+                        </value>
+                        <next>
+                          <block type="role_color" id="?:K%T[JfXvK(;p,`]K::">
+                            <value name="role">
+                              <block type="s4d_get_role" id="B^n4@5;wRwy%lM~DS]EL">
+                                <field name="SEARCH_TYPE">NAME</field>
+                                <value name="VALUE">
+                                  <block type="jg_text_remake_paragraph_quotes" id="D@zzN)CJDT`s7ef-^eK;">
+                                    <field name="TEXT">Logoto</field>
+                                  </block>
+                                </value>
+                                <value name="SERVER">
+                                  <block type="s4d_get_server" id="k)N%?6cA7}IwF?1bA!3r">
+                                    <field name="SEARCH_TYPE">ID</field>
+                                    <value name="VALUE">
+                                      <block type="s4d_add_server_id" id="CWn+R+TEbN,!H4SA`NJU"></block>
+                                    </value>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                            <value name="color">
+                              <block type="fz_color" id="Z%jJs2_Mmwl$Y=H)sl4K">
+                                <field name="COLOR">8c935d</field>
+                              </block>
+                            </value>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
                   </block>
                 </next>
               </block>

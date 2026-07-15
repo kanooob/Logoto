@@ -1,14 +1,3 @@
-const express = require('express');
-const app = express();
-const port = process.env.PORT || 8080;
-
-app.get('/', (req, res) => {
-  res.send('Bot Logoto en ligne !');
-});
-
-app.listen(port, () => {
-  console.log(`Serveur de vérification activé sur le port ${port}`);
-});
 (async()=>{
     // default imports
     const events = require('events');
@@ -303,7 +292,10 @@ app.listen(port, () => {
             (s4d.client.users.cache.get(String((String((s4d.client.guilds.cache.get((s4dguild.id))).ownerId))))).send({content:String((['<:loudspeaker:1505590722798293253> **I thank the ',s4dguild.name,'\'s Discord server team.**','\n','<:track_next:1505295937856213072> For more information, please visit my website or my support server.','\n','<:track_next:1505295937856213072> Pour plus d\'information vous avez mon site internet et mon serveurs de support.','\n','-# <:link:1505215573364047913> [Website](<https://logoto.onrender.com/>), [Support server](<https://discord.gg/TPXFVYVnXe>)','\n','<:track_next:1505295937856213072> **Continue :** https://discord.com/channels/',s4dguild.id,'/',((last_messages_in_channel.at(1 - 1)).channel).id,'/',(last_messages_in_channel.at(1 - 1)).id].join('')))});
     
       });
-    
+      await delay(Number(5)*1000);
+      ((s4d.client.guilds.cache.get((s4dguild.id))).roles.cache.find((role) => role.name === 'Logoto')).edit({
+                  color: "8c935d"
+              });
     });
     
     s4d.client.on('messageCreate', async (s4dmessage) => {
