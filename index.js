@@ -1,14 +1,3 @@
-const express = require('express');
-const app = express();
-const port = process.env.PORT || 8080;
-
-app.get('/', (req, res) => {
-  res.send('Bot Logoto en ligne !');
-});
-
-app.listen(port, () => {
-  console.log(`Serveur de vérification activé sur le port ${port}`);
-});
 (async()=>{
     // default imports
     const events = require('events');
@@ -251,7 +240,7 @@ app.listen(port, () => {
         await interaction.reply({ content: (['<:asterisk:1505250975282106469> **Logoto Help - Automate your server\'s look!**','\n','\n','<:track_next:1505295937856213072> I am the specialized bot for automating your server\'s logo changes, requiring zero complex commands after the initial setup.','\n','Easily schedule updates to keep your server\'s visual identity fresh!','\n','###','\n','<:track_next:1505295937856213072> Commands','\n','- </setup:1431390983215386674> : Creates the required channels (Logoto, log-logoto) for a quick start, essential for the bot to function properly.','\n','- </add-an-event:1505515202072805377> : Creates an event channel with options: [type] (required) for the event type (logo/name/banner/image invite), [day] (required) for the change day, and [month] (required) for the change month.','\n','- </help:1431390984805290037> : Displays this help message.','\n','- </about:1525904003295350885> : Shows information about the bot, invite links, and support options.','\n','- </ping:1433569876399624395> : Get the bot\'s latency and status page.','\n','<:link:1505215573364047913> [Website](<https://logoto.onrender.com/>), [Help page](<https://logoto.onrender.com/help>)'].join('')), ephemeral: false, components: [] });
       }
       if ((interaction.commandName) == 'about') {
-        await interaction.reply({ content: (['<:track_next:1505295937856213072> **About Logoto**','\n','\n','<:bot:1505482896268329050> **The best Discord bot to automatically update and schedule your server\'s visual identity.**','\n','Simple scheduling and 100% autonomous customization of your server\'s logo, name, banner and invite image.','\n','\n','<:monde:1525532891155534007> **Resources**','\n','[Site Web](<https://logoto.onrender.com/>) • [Serveur Support](<https://discord.gg/TPXFVYVnXe>)','\n','[Conditions d\'Utilisation](<https://logoto.onrender.com/tos>) • [Politique de Confidentialité](<https://logoto.onrender.com/privacy>)','\n','\n','<:bot:1505482896268329050> **Need help or want to invite the bot ?**','\n','**[Invite Logoto to your server](<https://discord.com/oauth2/authorize?client_id=1431383390162124920>)**','\n','**[Join the Support Server](<https://discord.gg/TPXFVYVnXe>)**','\n','\n','<:ping:1505250928008237057> Start <t:',start_unix,':R>, [statut](<https://logoto.betteruptime.com/>)'].join('')), ephemeral: false, components: [] });
+        await interaction.reply({ content: (['<:asterisk:1505250975282106469> **About Logoto**','\n','\n','<:bot:1505482896268329050> **The best Discord bot to automatically update and schedule your server\'s visual identity.**','\n','Simple scheduling and 100% autonomous customization of your server\'s logo, name, banner and invite image.','\n','\n','<:monde:1525532891155534007> **Resources**','\n','[Site Web](<https://logoto.onrender.com/>) • [Serveur Support](<https://discord.gg/TPXFVYVnXe>)','\n','[Conditions d\'Utilisation](<https://logoto.onrender.com/tos>) • [Politique de Confidentialité](<https://logoto.onrender.com/privacy>)','\n','\n','<:bot:1505482896268329050> **Need help or want to invite the bot ?**','\n','**[Invite Logoto to your server](<https://discord.com/oauth2/authorize?client_id=1431383390162124920>)**','\n','**[Join the Support Server](<https://discord.gg/TPXFVYVnXe>)**','\n','\n','<:ping:1505250928008237057> Start <t:',start_unix,':R>, [statut](<https://logoto.betteruptime.com/>)'].join('')), ephemeral: false, components: [] });
       }
       if ((interaction.commandName) == 'ping') {
         await interaction.reply({ content: (['<:ping:1505250928008237057> **',s4d.client.ws.ping,'ms.**','\n','-# <:link:1505215573364047913> [Status](<https://logoto.betteruptime.com/>)'].join('')), ephemeral: false, components: [] });
