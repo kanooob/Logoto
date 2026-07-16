@@ -1008,7 +1008,7 @@
               <block type="slash_reply" id="6]kK0wXXOtqW[s{n~/+^">
                 <value name="CONTENT">
                   <block type="text_join" id="G}NU#zYkp;(%?y0.{o1N">
-                    <mutation items="21"></mutation>
+                    <mutation items="22"></mutation>
                     <value name="ADD0">
                       <block type="jg_text_remake_paragraph_quotes" id="QkmOOqTdBxKXXV{Om:)X">
                         <field name="TEXT">&lt;:asterisk:1505250975282106469&gt; **Logoto Help - Automate your server's look!**</field>
@@ -1037,57 +1037,62 @@
                       <block type="s4d_newline" id="EfLH{{#zp(os8+Ul{:4K"></block>
                     </value>
                     <value name="ADD7">
-                      <block type="s4d_newline" id=",SlAVPEhDt_4U`;[xjsh"></block>
-                    </value>
-                    <value name="ADD8">
                       <block type="jg_text_remake_paragraph_quotes" id="?,Nly}fAU@vdj4KVN,YB">
                         <field name="TEXT">###</field>
                       </block>
                     </value>
-                    <value name="ADD9">
+                    <value name="ADD8">
                       <block type="s4d_newline" id="/UT27t#;#[;;o%0`$`Nu"></block>
                     </value>
-                    <value name="ADD10">
+                    <value name="ADD9">
                       <block type="jg_text_remake_paragraph_quotes" id="l[6Q10+qGL3V=OG@kJ,4">
                         <field name="TEXT">&lt;:track_next:1505295937856213072&gt; Commands</field>
                       </block>
                     </value>
-                    <value name="ADD11">
+                    <value name="ADD10">
                       <block type="s4d_newline" id="MJ-LUGabfqoz}hX:[+ft"></block>
                     </value>
-                    <value name="ADD12">
+                    <value name="ADD11">
                       <block type="jg_text_remake_paragraph_quotes" id="Vejy9j:k#t;|h4ZO{b:G">
                         <field name="TEXT">- &lt;/setup:1431390983215386674&gt; : Creates the required channels (Logoto, log-logoto) for a quick start, essential for the bot to function properly.</field>
                       </block>
                     </value>
-                    <value name="ADD13">
+                    <value name="ADD12">
                       <block type="s4d_newline" id="|h5.i~f2(c=F/H|+uQ8T"></block>
                     </value>
-                    <value name="ADD14">
+                    <value name="ADD13">
                       <block type="jg_text_remake_paragraph_quotes" id="}:Oo|?/Eu,0$E8^xh_`P">
-                        <field name="TEXT">- &lt;/add-an-event:1505515202072805377&gt; : Creates an event channel with options: [type] (required) for the event type (logo/name), [day] (required) for the change day, and [month] (required) for the change month.</field>
+                        <field name="TEXT">- &lt;/add-an-event:1505515202072805377&gt; : Creates an event channel with options: [type] (required) for the event type (logo/name/banner/image invite), [day] (required) for the change day, and [month] (required) for the change month.</field>
                       </block>
                     </value>
-                    <value name="ADD15">
+                    <value name="ADD14">
                       <block type="s4d_newline" id="%`8{W:M}~OMd7:EE{=cK"></block>
                     </value>
-                    <value name="ADD16">
+                    <value name="ADD15">
                       <block type="jg_text_remake_paragraph_quotes" id="*?7@4*)2,Nks9vr=hv9b">
                         <field name="TEXT">- &lt;/help:1431390984805290037&gt; : Displays this help message.</field>
                       </block>
                     </value>
-                    <value name="ADD17">
+                    <value name="ADD16">
                       <block type="s4d_newline" id="gK!!piH)E%p#sJZK*gc5"></block>
                     </value>
-                    <value name="ADD18">
+                    <value name="ADD17">
                       <block type="jg_text_remake_paragraph_quotes" id=")2(Mv,7.2L-Rt3[uotwT">
                         <field name="TEXT">- &lt;/about:1525904003295350885&gt; : Shows information about the bot, invite links, and support options.</field>
                       </block>
                     </value>
+                    <value name="ADD18">
+                      <block type="s4d_newline" id=",SlAVPEhDt_4U`;[xjsh"></block>
+                    </value>
                     <value name="ADD19">
-                      <block type="s4d_newline" id=";@Y7fXI]*^_VA{v4y?lA"></block>
+                      <block type="jg_text_remake_paragraph_quotes" id="La=pSo=XNa^qvjQB9NC}">
+                        <field name="TEXT">- &lt;/ping:1433569876399624395&gt; : Get the bot's latency and status page.</field>
+                      </block>
                     </value>
                     <value name="ADD20">
+                      <block type="s4d_newline" id=";@Y7fXI]*^_VA{v4y?lA"></block>
+                    </value>
+                    <value name="ADD21">
                       <block type="jg_text_remake_paragraph_quotes" id="}a{sPX?QTO)p,p`o%0v8">
                         <field name="TEXT">&lt;:link:1505215573364047913&gt; [Website](&lt;https://logoto.onrender.com/&gt;), [Help page](&lt;https://logoto.onrender.com/help&gt;)</field>
                       </block>
