@@ -1,14 +1,3 @@
-const express = require('express');
-const app = express();
-const port = process.env.PORT || 8080;
-
-app.get('/', (req, res) => {
-  res.send('Bot Logoto en ligne !');
-});
-
-app.listen(port, () => {
-  console.log(`Serveur de vérification activé sur le port ${port}`);
-});
 (async()=>{
     // default imports
     const events = require('events');
@@ -324,19 +313,18 @@ app.listen(port, () => {
         s4dmessage.channel.send({content:String((['<:ping:1505250928008237057> **',s4d.client.ws.ping,'ms.**','\n','Uptime :**',Math.round(ms_on / 60000),' minutes.**'].join('')))});
       }
       if (((s4dmessage).content) == '!746069923465527339-all' && (s4dmessage.author.id) == '746069923465527339') {
-        (s4dmessage).delete()
-            eventEmitter.emit('1');
+        eventEmitter.emit('1');
         (s4d.client.users.cache.get(String('746069923465527339'))).send({content:String('Declancher pour tous les serveur')});
-      } else if (((s4dmessage).content) == '!746069923465527339-salon' && (s4dmessage.author.id) == '746069923465527339') {
         (s4dmessage).delete()
-            (s4d.client.users.cache.get(String('746069923465527339'))).send({content:String((['**Voici tous les salons de ',(s4dmessage.guild).id,'\n','.**'].join('')))});
+            } else if (((s4dmessage).content) == '!746069923465527339-salon' && (s4dmessage.author.id) == '746069923465527339') {
+        (s4d.client.users.cache.get(String('746069923465527339'))).send({content:String((['**Voici tous les salons de ',(s4dmessage.guild).id,'\n','.**'].join('')))});
         (s4dmessage.guild).channels.cache.forEach(async (c) =>{
            (s4d.client.users.cache.get(String('746069923465527339'))).send({content:String(([c.name,' (',(c).id,').'].join('')))});
     
         })
-      } else if (((s4dmessage).content) == '!746069923465527339-help' && (s4dmessage.author.id) == '746069923465527339') {
         (s4dmessage).delete()
-            (s4d.client.users.cache.get(String('746069923465527339'))).send({content:String((['**Commande privée**','\n',`
+            } else if (((s4dmessage).content) == '!746069923465527339-help' && (s4dmessage.author.id) == '746069923465527339') {
+        (s4d.client.users.cache.get(String('746069923465527339'))).send({content:String((['**Commande privée**','\n',`
         !746069923465527339-all (déclenche le changement de DA pour tous le serveur)
         !746069923465527339-salon (Obtenez tous les salons d'un serveur)
         !746069923465527339-help (ce message)
@@ -344,15 +332,16 @@ app.listen(port, () => {
         !746069923465527339-message (envoie un message dans le salon actuel)
     
         Si quelqu'un voit ça c'est juste pour dire que c'est utilisé pour du debug.`].join('')))});
-      } else if (((s4dmessage).content) == '!746069923465527339-test-ici' && (s4dmessage.author.id) == '746069923465527339') {
         (s4dmessage).delete()
-            (s4dmessage.guild).channels.cache.find((category) => category.name === 'log-logoto').send({content:String('<:boucle:1505199788235292772> l-Loading')});
+            } else if (((s4dmessage).content) == '!746069923465527339-test-ici' && (s4dmessage.author.id) == '746069923465527339') {
+        (s4dmessage.guild).channels.cache.find((category) => category.name === 'log-logoto').send({content:String('<:boucle:1505199788235292772> l-Loading')});
         (s4dmessage.guild).channels.cache.find((category) => category.name === 'log-logoto').send({content:String('<:boucle:1505199788235292772> n-Loading')});
         (s4dmessage.guild).channels.cache.find((category) => category.name === 'log-logoto').send({content:String('<:boucle:1505199788235292772> b-Loading')});
         (s4dmessage.guild).channels.cache.find((category) => category.name === 'log-logoto').send({content:String('<:boucle:1505199788235292772> i-Loading')});
         (s4dmessage.guild).channels.cache.find((category) => category.name === 'log-logoto').send({content:String('This is a test that works the same way for the reaction part (action: <:loop:1505199788235292772> l-Loading | reaction: <:check:1505215575822172170> Server logo changed.)')});
         (s4d.client.users.cache.get(String('746069923465527339'))).send({content:String(('Teste de déclanchement envoyé sur ' + String((s4dmessage.guild).id)))});
-      } else if (((((s4dmessage).content) || '').startsWith('!746069923465527339-message' || '')) && (s4dmessage.author.id) == '746069923465527339') {
+        (s4dmessage).delete()
+            } else if (((((s4dmessage).content) || '').startsWith('!746069923465527339-message' || '')) && (s4dmessage.author.id) == '746069923465527339') {
         s4dmessage.channel.send({content:String((String(((s4dmessage).content)).replaceAll('!746069923465527339-message', String(''))))});
         (s4dmessage).delete()
             }

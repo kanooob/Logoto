@@ -3134,35 +3134,35 @@
                               </block>
                             </value>
                             <statement name="DO0">
-                              <block type="jg_messages_delete_message" id="3?VJOmVjZ(18]~dJ_63X">
-                                <value name="MESSAGE">
-                                  <block type="Message" id="G$L{]U0r@3-WlqR-9EE;"></block>
+                              <block type="emit_event" id="LQqVuF-L|mT}xs^On@)A">
+                                <value name="NAME">
+                                  <shadow type="text" id="@0eN`T4PR?/s9`9.Hl@i">
+                                    <field name="TEXT">1</field>
+                                  </shadow>
                                 </value>
                                 <next>
-                                  <block type="emit_event" id="LQqVuF-L|mT}xs^On@)A">
-                                    <value name="NAME">
-                                      <shadow type="text" id="@0eN`T4PR?/s9`9.Hl@i">
-                                        <field name="TEXT">1</field>
-                                      </shadow>
+                                  <block type="s4d_send_member" id="Lvy+/}Et~fjae~HmulLb">
+                                    <value name="CONTENT">
+                                      <block type="jg_text_remake_paragraph_quotes" id="*EJ.WMX,e~S(b)vG2~2F">
+                                        <field name="TEXT">Declancher pour tous les serveur</field>
+                                      </block>
                                     </value>
-                                    <next>
-                                      <block type="s4d_send_member" id="Lvy+/}Et~fjae~HmulLb">
-                                        <value name="CONTENT">
-                                          <block type="jg_text_remake_paragraph_quotes" id="*EJ.WMX,e~S(b)vG2~2F">
-                                            <field name="TEXT">Declancher pour tous les serveur</field>
+                                    <value name="MEMBER">
+                                      <block type="jg_members_get_member_by_id" id="Ih?~+HqEaH@x6HrqKl@f">
+                                        <value name="ID">
+                                          <shadow type="text" id="dS6ujp35)%Q,n9w8ilNP">
+                                            <field name="TEXT">12345</field>
+                                          </shadow>
+                                          <block type="jg_text_remake_paragraph_quotes" id="{3M9l_mTAxo)]da@NEOG">
+                                            <field name="TEXT">746069923465527339</field>
                                           </block>
                                         </value>
-                                        <value name="MEMBER">
-                                          <block type="jg_members_get_member_by_id" id="Ih?~+HqEaH@x6HrqKl@f">
-                                            <value name="ID">
-                                              <shadow type="text" id="dS6ujp35)%Q,n9w8ilNP">
-                                                <field name="TEXT">12345</field>
-                                              </shadow>
-                                              <block type="jg_text_remake_paragraph_quotes" id="{3M9l_mTAxo)]da@NEOG">
-                                                <field name="TEXT">746069923465527339</field>
-                                              </block>
-                                            </value>
-                                          </block>
+                                      </block>
+                                    </value>
+                                    <next>
+                                      <block type="jg_messages_delete_message" id="3?VJOmVjZ(18]~dJ_63X">
+                                        <value name="MESSAGE">
+                                          <block type="Message" id="G$L{]U0r@3-WlqR-9EE;"></block>
                                         </value>
                                       </block>
                                     </next>
@@ -3210,95 +3210,95 @@
                               </block>
                             </value>
                             <statement name="DO1">
-                              <block type="jg_messages_delete_message" id="14zDJ7g4;4tnHcfvkNPT">
-                                <value name="MESSAGE">
-                                  <block type="Message" id="UlMlmcw1Z[mQOkK*ay0S"></block>
+                              <block type="s4d_send_member" id="EK,]TsTl{jVx`66lE^NV">
+                                <value name="CONTENT">
+                                  <block type="text_join" id="/*F=7f=DIE(*Lc2H0CY6">
+                                    <mutation items="4"></mutation>
+                                    <value name="ADD0">
+                                      <block type="jg_text_remake_paragraph_quotes" id="1bveVmA0~SynF$frT6mx">
+                                        <field name="TEXT">**Voici tous les salons de </field>
+                                      </block>
+                                    </value>
+                                    <value name="ADD1">
+                                      <block type="s4d_server_id" id="V%}%Kbb8I]a-z_L0vhxq">
+                                        <value name="SERVER">
+                                          <block type="s4d_message_guild" id="vPt@u:036dD93vICnGqW"></block>
+                                        </value>
+                                      </block>
+                                    </value>
+                                    <value name="ADD2">
+                                      <block type="s4d_newline" id="DNRIFXQbr`O1gj,-OelE"></block>
+                                    </value>
+                                    <value name="ADD3">
+                                      <block type="jg_text_remake_paragraph_quotes" id="AC!X9g1!rtHKij#P`S15">
+                                        <field name="TEXT">.**</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                                <value name="MEMBER">
+                                  <block type="jg_members_get_member_by_id" id="ZQw//VwfKrm#kwF:-=7X">
+                                    <value name="ID">
+                                      <shadow type="text" id="dS6ujp35)%Q,n9w8ilNP">
+                                        <field name="TEXT">12345</field>
+                                      </shadow>
+                                      <block type="jg_text_remake_paragraph_quotes" id="Mt__N*!dbQ$O7uKF(b71">
+                                        <field name="TEXT">746069923465527339</field>
+                                      </block>
+                                    </value>
+                                  </block>
                                 </value>
                                 <next>
-                                  <block type="s4d_send_member" id="EK,]TsTl{jVx`66lE^NV">
-                                    <value name="CONTENT">
-                                      <block type="text_join" id="/*F=7f=DIE(*Lc2H0CY6">
-                                        <mutation items="4"></mutation>
-                                        <value name="ADD0">
-                                          <block type="jg_text_remake_paragraph_quotes" id="1bveVmA0~SynF$frT6mx">
-                                            <field name="TEXT">**Voici tous les salons de </field>
-                                          </block>
-                                        </value>
-                                        <value name="ADD1">
-                                          <block type="s4d_server_id" id="V%}%Kbb8I]a-z_L0vhxq">
-                                            <value name="SERVER">
-                                              <block type="s4d_message_guild" id="vPt@u:036dD93vICnGqW"></block>
+                                  <block type="s4d_get_all_channel" id="(YJ#+t)]qbNhWY,NDEA~">
+                                    <value name="SERVER">
+                                      <block type="s4d_message_guild" id="ZQC=w/(7W{9xU:IJYQ,j"></block>
+                                    </value>
+                                    <statement name="THEN">
+                                      <block type="s4d_send_member" id="mvRgsOd;5j@29]LfU*Q4">
+                                        <value name="CONTENT">
+                                          <block type="text_join" id="M#Z2C[a$I=E:,bO{j5vr">
+                                            <mutation items="4"></mutation>
+                                            <value name="ADD0">
+                                              <block type="get_all_channel_channel_name" id="wt5U#8?H]Bgm;diVrDtc"></block>
+                                            </value>
+                                            <value name="ADD1">
+                                              <block type="jg_text_remake_paragraph_quotes" id="+Vk3v_1!55vKKu*s6!_@">
+                                                <field name="TEXT"> (</field>
+                                              </block>
+                                            </value>
+                                            <value name="ADD2">
+                                              <block type="s4d_channel_id" id="ll;DV.56(4tK3tEM-#nH">
+                                                <value name="CHANNEL">
+                                                  <block type="s4d_get_all_channel_channel" id="OVDKvFZ(n/cR7P%OjFwJ"></block>
+                                                </value>
+                                              </block>
+                                            </value>
+                                            <value name="ADD3">
+                                              <block type="jg_text_remake_paragraph_quotes" id="/WgVsN;R@xD7X;=C*:Tl">
+                                                <field name="TEXT">).</field>
+                                              </block>
                                             </value>
                                           </block>
                                         </value>
-                                        <value name="ADD2">
-                                          <block type="s4d_newline" id="DNRIFXQbr`O1gj,-OelE"></block>
-                                        </value>
-                                        <value name="ADD3">
-                                          <block type="jg_text_remake_paragraph_quotes" id="AC!X9g1!rtHKij#P`S15">
-                                            <field name="TEXT">.**</field>
+                                        <value name="MEMBER">
+                                          <block type="jg_members_get_member_by_id" id=".Aa(@LN/1+)/w/357G{H">
+                                            <value name="ID">
+                                              <shadow type="text" id="dS6ujp35)%Q,n9w8ilNP">
+                                                <field name="TEXT">12345</field>
+                                              </shadow>
+                                              <block type="jg_text_remake_paragraph_quotes" id="Ek4Jbxz*=bT9YclsYwZu">
+                                                <field name="TEXT">746069923465527339</field>
+                                              </block>
+                                            </value>
                                           </block>
                                         </value>
                                       </block>
-                                    </value>
-                                    <value name="MEMBER">
-                                      <block type="jg_members_get_member_by_id" id="ZQw//VwfKrm#kwF:-=7X">
-                                        <value name="ID">
-                                          <shadow type="text" id="dS6ujp35)%Q,n9w8ilNP">
-                                            <field name="TEXT">12345</field>
-                                          </shadow>
-                                          <block type="jg_text_remake_paragraph_quotes" id="Mt__N*!dbQ$O7uKF(b71">
-                                            <field name="TEXT">746069923465527339</field>
-                                          </block>
-                                        </value>
-                                      </block>
-                                    </value>
+                                    </statement>
                                     <next>
-                                      <block type="s4d_get_all_channel" id="(YJ#+t)]qbNhWY,NDEA~">
-                                        <value name="SERVER">
-                                          <block type="s4d_message_guild" id="ZQC=w/(7W{9xU:IJYQ,j"></block>
+                                      <block type="jg_messages_delete_message" id="14zDJ7g4;4tnHcfvkNPT">
+                                        <value name="MESSAGE">
+                                          <block type="Message" id="UlMlmcw1Z[mQOkK*ay0S"></block>
                                         </value>
-                                        <statement name="THEN">
-                                          <block type="s4d_send_member" id="mvRgsOd;5j@29]LfU*Q4">
-                                            <value name="CONTENT">
-                                              <block type="text_join" id="M#Z2C[a$I=E:,bO{j5vr">
-                                                <mutation items="4"></mutation>
-                                                <value name="ADD0">
-                                                  <block type="get_all_channel_channel_name" id="wt5U#8?H]Bgm;diVrDtc"></block>
-                                                </value>
-                                                <value name="ADD1">
-                                                  <block type="jg_text_remake_paragraph_quotes" id="+Vk3v_1!55vKKu*s6!_@">
-                                                    <field name="TEXT"> (</field>
-                                                  </block>
-                                                </value>
-                                                <value name="ADD2">
-                                                  <block type="s4d_channel_id" id="ll;DV.56(4tK3tEM-#nH">
-                                                    <value name="CHANNEL">
-                                                      <block type="s4d_get_all_channel_channel" id="OVDKvFZ(n/cR7P%OjFwJ"></block>
-                                                    </value>
-                                                  </block>
-                                                </value>
-                                                <value name="ADD3">
-                                                  <block type="jg_text_remake_paragraph_quotes" id="/WgVsN;R@xD7X;=C*:Tl">
-                                                    <field name="TEXT">).</field>
-                                                  </block>
-                                                </value>
-                                              </block>
-                                            </value>
-                                            <value name="MEMBER">
-                                              <block type="jg_members_get_member_by_id" id=".Aa(@LN/1+)/w/357G{H">
-                                                <value name="ID">
-                                                  <shadow type="text" id="dS6ujp35)%Q,n9w8ilNP">
-                                                    <field name="TEXT">12345</field>
-                                                  </shadow>
-                                                  <block type="jg_text_remake_paragraph_quotes" id="Ek4Jbxz*=bT9YclsYwZu">
-                                                    <field name="TEXT">746069923465527339</field>
-                                                  </block>
-                                                </value>
-                                              </block>
-                                            </value>
-                                          </block>
-                                        </statement>
                                       </block>
                                     </next>
                                   </block>
@@ -3345,41 +3345,41 @@
                               </block>
                             </value>
                             <statement name="DO2">
-                              <block type="jg_messages_delete_message" id="@oA(t:=?e0e0~^l,t#1E">
-                                <value name="MESSAGE">
-                                  <block type="Message" id="XKU^j@Q`{28mTvO:2[Yk"></block>
-                                </value>
-                                <next>
-                                  <block type="s4d_send_member" id="Kn5:?HNxhkYx1%(Kv@Di">
-                                    <value name="CONTENT">
-                                      <block type="text_join" id="d`:/Mb)g)9Jb`YE:f7I,">
-                                        <mutation items="3"></mutation>
-                                        <value name="ADD0">
-                                          <block type="jg_text_remake_paragraph_quotes" id="@p%w1/a[D!x[t|}(L,SA">
-                                            <field name="TEXT">**Commande privée**</field>
-                                          </block>
-                                        </value>
-                                        <value name="ADD1">
-                                          <block type="s4d_newline" id="Eu1{-8;e^^7pMqRZn3Mh"></block>
-                                        </value>
-                                        <value name="ADD2">
-                                          <block type="jg_text_remake_paragraph_quotes" id="xicB[t-w82Mct3X),{dC">
-                                            <field name="TEXT">&amp;#10;!746069923465527339-all (déclenche le changement de DA pour tous le serveur)&amp;#10;!746069923465527339-salon (Obtenez tous les salons d'un serveur)&amp;#10;!746069923465527339-help (ce message)&amp;#10;!746069923465527339-test-ici (envoie un test sur se erveur)&amp;#10;!746069923465527339-message (envoie un message dans le salon actuel)&amp;#10;&amp;#10;Si quelqu'un voit ça c'est juste pour dire que c'est utilisé pour du debug.</field>
-                                          </block>
-                                        </value>
+                              <block type="s4d_send_member" id="Kn5:?HNxhkYx1%(Kv@Di">
+                                <value name="CONTENT">
+                                  <block type="text_join" id="d`:/Mb)g)9Jb`YE:f7I,">
+                                    <mutation items="3"></mutation>
+                                    <value name="ADD0">
+                                      <block type="jg_text_remake_paragraph_quotes" id="@p%w1/a[D!x[t|}(L,SA">
+                                        <field name="TEXT">**Commande privée**</field>
                                       </block>
                                     </value>
-                                    <value name="MEMBER">
-                                      <block type="jg_members_get_member_by_id" id="VUEs$+1A8ulXv~V4+|Q)">
-                                        <value name="ID">
-                                          <shadow type="text" id="dS6ujp35)%Q,n9w8ilNP">
-                                            <field name="TEXT">12345</field>
-                                          </shadow>
-                                          <block type="jg_text_remake_paragraph_quotes" id="my}Qo.0k7M{9|ovzac:=">
-                                            <field name="TEXT">746069923465527339</field>
-                                          </block>
-                                        </value>
+                                    <value name="ADD1">
+                                      <block type="s4d_newline" id="Eu1{-8;e^^7pMqRZn3Mh"></block>
+                                    </value>
+                                    <value name="ADD2">
+                                      <block type="jg_text_remake_paragraph_quotes" id="xicB[t-w82Mct3X),{dC">
+                                        <field name="TEXT">&amp;#10;!746069923465527339-all (déclenche le changement de DA pour tous le serveur)&amp;#10;!746069923465527339-salon (Obtenez tous les salons d'un serveur)&amp;#10;!746069923465527339-help (ce message)&amp;#10;!746069923465527339-test-ici (envoie un test sur se erveur)&amp;#10;!746069923465527339-message (envoie un message dans le salon actuel)&amp;#10;&amp;#10;Si quelqu'un voit ça c'est juste pour dire que c'est utilisé pour du debug.</field>
                                       </block>
+                                    </value>
+                                  </block>
+                                </value>
+                                <value name="MEMBER">
+                                  <block type="jg_members_get_member_by_id" id="VUEs$+1A8ulXv~V4+|Q)">
+                                    <value name="ID">
+                                      <shadow type="text" id="dS6ujp35)%Q,n9w8ilNP">
+                                        <field name="TEXT">12345</field>
+                                      </shadow>
+                                      <block type="jg_text_remake_paragraph_quotes" id="my}Qo.0k7M{9|ovzac:=">
+                                        <field name="TEXT">746069923465527339</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                                <next>
+                                  <block type="jg_messages_delete_message" id="@oA(t:=?e0e0~^l,t#1E">
+                                    <value name="MESSAGE">
+                                      <block type="Message" id="XKU^j@Q`{28mTvO:2[Yk"></block>
                                     </value>
                                   </block>
                                 </next>
@@ -3425,140 +3425,140 @@
                               </block>
                             </value>
                             <statement name="DO3">
-                              <block type="jg_messages_delete_message" id="x(t;C5v{(}8p?];Lw(AA">
-                                <value name="MESSAGE">
-                                  <block type="Message" id="SMM~nA)C.F)Mx,xx!x/."></block>
+                              <block type="s4d_send_channel" id="ie2gB.4xshbXHwpaX}7;">
+                                <value name="CONTENT">
+                                  <block type="jg_text_remake_paragraph_quotes" id="H[}zq)}0uOBf2aq!KgYj">
+                                    <field name="TEXT">&lt;:boucle:1505199788235292772&gt; l-Loading</field>
+                                  </block>
+                                </value>
+                                <value name="CHANNEL">
+                                  <block type="frost_category_get" id="WFmTmq!X1u.y^WH0ofai">
+                                    <field name="SEARCH_TYPE">NAME</field>
+                                    <value name="VALUE">
+                                      <block type="jg_text_remake_paragraph_quotes" id="`$S*T%T{WyzoxAHVz=.V">
+                                        <field name="TEXT">log-logoto</field>
+                                      </block>
+                                    </value>
+                                    <value name="SERVER">
+                                      <block type="s4d_message_guild" id="7i[jzjbL(MTH-+C#cebw"></block>
+                                    </value>
+                                  </block>
                                 </value>
                                 <next>
-                                  <block type="s4d_send_channel" id="ie2gB.4xshbXHwpaX}7;">
+                                  <block type="s4d_send_channel" id="nWon[|WHZUR}GmT_]K=+">
                                     <value name="CONTENT">
-                                      <block type="jg_text_remake_paragraph_quotes" id="H[}zq)}0uOBf2aq!KgYj">
-                                        <field name="TEXT">&lt;:boucle:1505199788235292772&gt; l-Loading</field>
+                                      <block type="jg_text_remake_paragraph_quotes" id="St$Q]{fS1$Q$4po4%GGz">
+                                        <field name="TEXT">&lt;:boucle:1505199788235292772&gt; n-Loading</field>
                                       </block>
                                     </value>
                                     <value name="CHANNEL">
-                                      <block type="frost_category_get" id="WFmTmq!X1u.y^WH0ofai">
+                                      <block type="frost_category_get" id="Exa^oqJV(f|fz0)p{Q[X">
                                         <field name="SEARCH_TYPE">NAME</field>
                                         <value name="VALUE">
-                                          <block type="jg_text_remake_paragraph_quotes" id="`$S*T%T{WyzoxAHVz=.V">
+                                          <block type="jg_text_remake_paragraph_quotes" id=":G`eAXb2!h7nm*-AWF##">
                                             <field name="TEXT">log-logoto</field>
                                           </block>
                                         </value>
                                         <value name="SERVER">
-                                          <block type="s4d_message_guild" id="7i[jzjbL(MTH-+C#cebw"></block>
+                                          <block type="s4d_message_guild" id="?nnrGvV%s6BszZ2``InY"></block>
                                         </value>
                                       </block>
                                     </value>
                                     <next>
-                                      <block type="s4d_send_channel" id="nWon[|WHZUR}GmT_]K=+">
+                                      <block type="s4d_send_channel" id="xQ*^9:+rsZ%_74{+d:wL">
                                         <value name="CONTENT">
-                                          <block type="jg_text_remake_paragraph_quotes" id="St$Q]{fS1$Q$4po4%GGz">
-                                            <field name="TEXT">&lt;:boucle:1505199788235292772&gt; n-Loading</field>
+                                          <block type="jg_text_remake_paragraph_quotes" id="VSoy,M_Ni)hZ7VMp[iHg">
+                                            <field name="TEXT">&lt;:boucle:1505199788235292772&gt; b-Loading</field>
                                           </block>
                                         </value>
                                         <value name="CHANNEL">
-                                          <block type="frost_category_get" id="Exa^oqJV(f|fz0)p{Q[X">
+                                          <block type="frost_category_get" id="Hvg=eha::IgzI`r4%f8w">
                                             <field name="SEARCH_TYPE">NAME</field>
                                             <value name="VALUE">
-                                              <block type="jg_text_remake_paragraph_quotes" id=":G`eAXb2!h7nm*-AWF##">
+                                              <block type="jg_text_remake_paragraph_quotes" id="/vm*Nzc`:cjW|LF3Wo~u">
                                                 <field name="TEXT">log-logoto</field>
                                               </block>
                                             </value>
                                             <value name="SERVER">
-                                              <block type="s4d_message_guild" id="?nnrGvV%s6BszZ2``InY"></block>
+                                              <block type="s4d_message_guild" id=".e7:BTM(c,GL5Ts(slYm"></block>
                                             </value>
                                           </block>
                                         </value>
                                         <next>
-                                          <block type="s4d_send_channel" id="xQ*^9:+rsZ%_74{+d:wL">
+                                          <block type="s4d_send_channel" id="`q*w)C7H}NqbstONp^OD">
                                             <value name="CONTENT">
-                                              <block type="jg_text_remake_paragraph_quotes" id="VSoy,M_Ni)hZ7VMp[iHg">
-                                                <field name="TEXT">&lt;:boucle:1505199788235292772&gt; b-Loading</field>
+                                              <block type="jg_text_remake_paragraph_quotes" id="53!Hr-J[jRD6|2eR=!t6">
+                                                <field name="TEXT">&lt;:boucle:1505199788235292772&gt; i-Loading</field>
                                               </block>
                                             </value>
                                             <value name="CHANNEL">
-                                              <block type="frost_category_get" id="Hvg=eha::IgzI`r4%f8w">
+                                              <block type="frost_category_get" id="@`pEqm;)YP(x?Pcjpyn!">
                                                 <field name="SEARCH_TYPE">NAME</field>
                                                 <value name="VALUE">
-                                                  <block type="jg_text_remake_paragraph_quotes" id="/vm*Nzc`:cjW|LF3Wo~u">
+                                                  <block type="jg_text_remake_paragraph_quotes" id="n1Z+|$jkqJ[UdI]Ivj8[">
                                                     <field name="TEXT">log-logoto</field>
                                                   </block>
                                                 </value>
                                                 <value name="SERVER">
-                                                  <block type="s4d_message_guild" id=".e7:BTM(c,GL5Ts(slYm"></block>
+                                                  <block type="s4d_message_guild" id="Z]?t*v1,Ty(i/#7.WboJ"></block>
                                                 </value>
                                               </block>
                                             </value>
                                             <next>
-                                              <block type="s4d_send_channel" id="`q*w)C7H}NqbstONp^OD">
+                                              <block type="s4d_send_channel" id="Yi66ftmO.B|q.JLZwZBi">
                                                 <value name="CONTENT">
-                                                  <block type="jg_text_remake_paragraph_quotes" id="53!Hr-J[jRD6|2eR=!t6">
-                                                    <field name="TEXT">&lt;:boucle:1505199788235292772&gt; i-Loading</field>
+                                                  <block type="jg_text_remake_paragraph_quotes" id="$oB.p*I!0Rm5`fp8[sBu">
+                                                    <field name="TEXT">This is a test that works the same way for the reaction part (action: &lt;:loop:1505199788235292772&gt; l-Loading | reaction: &lt;:check:1505215575822172170&gt; Server logo changed.)</field>
                                                   </block>
                                                 </value>
                                                 <value name="CHANNEL">
-                                                  <block type="frost_category_get" id="@`pEqm;)YP(x?Pcjpyn!">
+                                                  <block type="frost_category_get" id="8)h!:lfc[]+QDU$2tg+g">
                                                     <field name="SEARCH_TYPE">NAME</field>
                                                     <value name="VALUE">
-                                                      <block type="jg_text_remake_paragraph_quotes" id="n1Z+|$jkqJ[UdI]Ivj8[">
+                                                      <block type="jg_text_remake_paragraph_quotes" id="*kJvmW=_IU1G4{+J94v7">
                                                         <field name="TEXT">log-logoto</field>
                                                       </block>
                                                     </value>
                                                     <value name="SERVER">
-                                                      <block type="s4d_message_guild" id="Z]?t*v1,Ty(i/#7.WboJ"></block>
+                                                      <block type="s4d_message_guild" id="RI[s_Ke?N1WW)ZotBwV/"></block>
                                                     </value>
                                                   </block>
                                                 </value>
                                                 <next>
-                                                  <block type="s4d_send_channel" id="Yi66ftmO.B|q.JLZwZBi">
+                                                  <block type="s4d_send_member" id="dd{H*M.4,HNPe;K`z..s">
                                                     <value name="CONTENT">
-                                                      <block type="jg_text_remake_paragraph_quotes" id="$oB.p*I!0Rm5`fp8[sBu">
-                                                        <field name="TEXT">This is a test that works the same way for the reaction part (action: &lt;:loop:1505199788235292772&gt; l-Loading | reaction: &lt;:check:1505215575822172170&gt; Server logo changed.)</field>
-                                                      </block>
-                                                    </value>
-                                                    <value name="CHANNEL">
-                                                      <block type="frost_category_get" id="8)h!:lfc[]+QDU$2tg+g">
-                                                        <field name="SEARCH_TYPE">NAME</field>
-                                                        <value name="VALUE">
-                                                          <block type="jg_text_remake_paragraph_quotes" id="*kJvmW=_IU1G4{+J94v7">
-                                                            <field name="TEXT">log-logoto</field>
+                                                      <block type="text_join" id="edb_Ai,r~P=FkCk/nt~p">
+                                                        <mutation items="2"></mutation>
+                                                        <value name="ADD0">
+                                                          <block type="jg_text_remake_paragraph_quotes" id="#j[vE(Z16;mMLY)Od?0)">
+                                                            <field name="TEXT">Teste de déclanchement envoyé sur </field>
                                                           </block>
                                                         </value>
-                                                        <value name="SERVER">
-                                                          <block type="s4d_message_guild" id="RI[s_Ke?N1WW)ZotBwV/"></block>
+                                                        <value name="ADD1">
+                                                          <block type="s4d_server_id" id="g#+!qhmb2{|nfnJn.t#%">
+                                                            <value name="SERVER">
+                                                              <block type="s4d_message_guild" id="1]j,!4bOMm~Z-IG5gJT@"></block>
+                                                            </value>
+                                                          </block>
+                                                        </value>
+                                                      </block>
+                                                    </value>
+                                                    <value name="MEMBER">
+                                                      <block type="jg_members_get_member_by_id" id="wbWBR_s((dS;lk_0@b,v">
+                                                        <value name="ID">
+                                                          <shadow type="text" id="dS6ujp35)%Q,n9w8ilNP">
+                                                            <field name="TEXT">12345</field>
+                                                          </shadow>
+                                                          <block type="jg_text_remake_paragraph_quotes" id="qjDN6g56vDJb`U:BGGWm">
+                                                            <field name="TEXT">746069923465527339</field>
+                                                          </block>
                                                         </value>
                                                       </block>
                                                     </value>
                                                     <next>
-                                                      <block type="s4d_send_member" id="dd{H*M.4,HNPe;K`z..s">
-                                                        <value name="CONTENT">
-                                                          <block type="text_join" id="edb_Ai,r~P=FkCk/nt~p">
-                                                            <mutation items="2"></mutation>
-                                                            <value name="ADD0">
-                                                              <block type="jg_text_remake_paragraph_quotes" id="#j[vE(Z16;mMLY)Od?0)">
-                                                                <field name="TEXT">Teste de déclanchement envoyé sur </field>
-                                                              </block>
-                                                            </value>
-                                                            <value name="ADD1">
-                                                              <block type="s4d_server_id" id="g#+!qhmb2{|nfnJn.t#%">
-                                                                <value name="SERVER">
-                                                                  <block type="s4d_message_guild" id="1]j,!4bOMm~Z-IG5gJT@"></block>
-                                                                </value>
-                                                              </block>
-                                                            </value>
-                                                          </block>
-                                                        </value>
-                                                        <value name="MEMBER">
-                                                          <block type="jg_members_get_member_by_id" id="wbWBR_s((dS;lk_0@b,v">
-                                                            <value name="ID">
-                                                              <shadow type="text" id="dS6ujp35)%Q,n9w8ilNP">
-                                                                <field name="TEXT">12345</field>
-                                                              </shadow>
-                                                              <block type="jg_text_remake_paragraph_quotes" id="qjDN6g56vDJb`U:BGGWm">
-                                                                <field name="TEXT">746069923465527339</field>
-                                                              </block>
-                                                            </value>
-                                                          </block>
+                                                      <block type="jg_messages_delete_message" id="x(t;C5v{(}8p?];Lw(AA">
+                                                        <value name="MESSAGE">
+                                                          <block type="Message" id="SMM~nA)C.F)Mx,xx!x/."></block>
                                                         </value>
                                                       </block>
                                                     </next>
