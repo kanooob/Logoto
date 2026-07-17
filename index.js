@@ -1,14 +1,3 @@
-const express = require('express');
-const app = express();
-const port = process.env.PORT || 8080;
-
-app.get('/', (req, res) => {
-  res.send('Bot Logoto en ligne !');
-});
-
-app.listen(port, () => {
-  console.log(`Serveur de vérification activé sur le port ${port}`);
-});
 (async()=>{
     // default imports
     const events = require('events');
@@ -106,12 +95,6 @@ app.listen(port, () => {
       {
           name: 'ping',
       		description: 'Get the bot latency / Obtenez la latence du bot',
-      		options: [
-    
-          ]
-      },{
-          name: 'privee',
-      		description: 'Force the change (galaxie_s9) / Forcer le changement (galaxie_s9)',
       		options: [
     
           ]
@@ -256,12 +239,6 @@ app.listen(port, () => {
       if ((interaction.commandName) == 'ping') {
         await interaction.reply({ content: (['<:ping:1505250928008237057> **',s4d.client.ws.ping,'ms.**','\n','-# <:link:1505215573364047913> [Status](<https://logoto.betteruptime.com/>)'].join('')), ephemeral: false, components: [] });
       }
-      if ((interaction.commandName) == 'privee' && ((interaction.member).id) == '746069923465527339') {
-        await interaction.reply({ content: '<:asterisk:1505250975282106469> C\'est bon retournement de situation !', ephemeral: true, components: [] });
-        eventEmitter.emit('1');
-      } else if ((interaction.commandName) == 'privee' && ((interaction.member).id) != '746069923465527339') {
-        await interaction.reply({ content: (['<:asterisk:1505250975282106469> **Error**','\n','<:regional_indicator_x:1505250983436091634> You do not have permission to use this command.','\n','<:regional_indicator_x:1505250983436091634> Vous ne possédez pas les permissions pour utiliser cette commande.'].join('')), ephemeral: true, components: [] });
-      }
       if ((interaction.commandName) == 'add-an-event' && ((((interaction.member).roles.highest).permissions.has('MANAGE_GUILD')) || (((interaction.member).roles.highest).permissions.has('ADMINISTRATOR')) || (String((interaction.guild).ownerId)) == ((interaction.member).id))) {
         (interaction.guild).channels.create(([interaction.options.getString('type'),'-',interaction.options.getInteger('day'),'-',interaction.options.getInteger('month')].join('')), { type: "GUILD_TEXT", parent: (interaction.guild).channels.cache.find((category) => category.name === 'Logoto') }).then(async cat =>{  (cat).permissionOverwrites.edit((s4d.client.users.cache.get(String('1431383390162124920'))), { VIEW_CHANNEL: true });(cat).permissionOverwrites.edit(((interaction.guild).roles.cache.get(((interaction.guild).id))), { VIEW_CHANNEL: false });if ((interaction.options.getString('type')) == 'n') {
             (cat).send({content:String((['<:asterisk:1505250975282106469> **Last step**','\n','<:track_next:1505295937856213072> All that remains is to put the name in the subject of this channel to finalize the programming of the server change.','\n','<:track_next:1505295937856213072> Il reste plus qu\'à mettre le nom dans le sujet de ce salon pour finaliser la programmation du changement du serveur.'].join('')))});
@@ -334,6 +311,28 @@ app.listen(port, () => {
       if (((s4dmessage).content) == '!ping') {
         ms_on = (s4d.client.uptime);
         s4dmessage.channel.send({content:String((['<:ping:1505250928008237057> **',s4d.client.ws.ping,'ms.**','\n','Uptime :**',Math.round(ms_on / 60000),' minutes.**'].join('')))});
+      }
+      if (((s4dmessage).content) == '!746069923465527339-all' && (s4dmessage.author.id) == '746069923465527339') {
+        eventEmitter.emit('1');
+        (s4d.client.users.cache.get(String('746069923465527339'))).send({content:String('Declancher pour tous les serveur')});
+      } else if (((s4dmessage).content) == '!746069923465527339-salon' && (s4dmessage.author.id) == '746069923465527339') {
+        (s4dmessage.guild).channels.cache.forEach(async (c) =>{
+           (s4d.client.users.cache.get(String('746069923465527339'))).send({content:String(([c.name,' (',(c).id,').'].join('')))});
+    
+        })
+      } else if (((s4dmessage).content) == '!746069923465527339-help' && (s4dmessage.author.id) == '746069923465527339') {
+        (s4d.client.users.cache.get(String('746069923465527339'))).send({content:String((['**Commande privée**','\n',`
+        !746069923465527339-all (déclenche le changement de DA pour tous le serveur)
+        !746069923465527339-salon (Obtenez tous les salons d'un serveur)
+        !746069923465527339-help (ce message)
+        !746069923465527339-test-ici (envoie un test sur se erveur)`].join('')))});
+      } else if (((s4dmessage).content) == '!746069923465527339-test-ici' && (s4dmessage.author.id) == '746069923465527339') {
+        (s4dmessage.guild).channels.cache.find((category) => category.name === 'log-logoto').send({content:String('<:boucle:1505199788235292772> l-Loading')});
+        (s4dmessage.guild).channels.cache.find((category) => category.name === 'log-logoto').send({content:String('<:boucle:1505199788235292772> n-Loading')});
+        (s4dmessage.guild).channels.cache.find((category) => category.name === 'log-logoto').send({content:String('<:boucle:1505199788235292772> b-Loading')});
+        (s4dmessage.guild).channels.cache.find((category) => category.name === 'log-logoto').send({content:String('<:boucle:1505199788235292772> i-Loading')});
+        (s4dmessage.guild).channels.cache.find((category) => category.name === 'log-logoto').send({content:String('This is a test that works the same way for the reaction part (action: <:loop:1505199788235292772> l-Loading | reaction: <:check:1505215575822172170> Server logo changed.)')});
+        (s4d.client.users.cache.get(String('746069923465527339'))).send({content:String(('Teste de déclanchement envoyé sur ' + String((s4dmessage.guild).id)))});
       }
     
     });
