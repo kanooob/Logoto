@@ -1015,126 +1015,51 @@
       </shadow>
     </value>
     <statement name="THEN">
-      <block type="controls_if" id="gZ|pqrD3w|XI%7DZ44r!">
-        <value name="IF0">
-          <block type="logic_compare" id="d^|3MkvLv`oS5-~s@Jm;">
-            <field name="OP">NEQ</field>
-            <value name="A">
-              <block type="frost_category_get" id="5k(iTYYJK8SDLfGk]/o}">
-                <field name="SEARCH_TYPE">NAME</field>
-                <value name="VALUE">
-                  <block type="text_join" id="$W(/9lA3ZWpRGvBDL{o2">
-                    <mutation items="4"></mutation>
-                    <value name="ADD0">
-                      <block type="jg_text_remake_paragraph_quotes" id="ByOI@^{V,[n1mc2,:q=r">
-                        <field name="TEXT">l-</field>
-                      </block>
-                    </value>
-                    <value name="ADD1">
-                      <block type="frost_current" id="Q3IL(ImVIQoz0-U`ADLU">
-                        <field name="DATA_TYPE">DATE</field>
-                      </block>
-                    </value>
-                    <value name="ADD2">
-                      <block type="jg_text_remake_paragraph_quotes" id="8^iX_MR9-=G,xKSntx)X">
-                        <field name="TEXT">-</field>
-                      </block>
-                    </value>
-                    <value name="ADD3">
-                      <block type="math_arithmetic" id="_Cx+5P+WY6co;Lk%/hXw">
-                        <field name="OP">ADD</field>
-                        <value name="A">
-                          <shadow type="math_number" id="[{}Y%+EBXk;N]hQ5C-5b">
-                            <field name="NUM">1</field>
-                          </shadow>
-                          <block type="frost_current" id="#j8v8U`5wW^-c~y1}7wm">
-                            <field name="DATA_TYPE">MONTH</field>
-                          </block>
-                        </value>
-                        <value name="B">
-                          <shadow type="math_number" id="k%0B8,9UF0V*e`,[qYYa">
-                            <field name="NUM">1</field>
-                          </shadow>
-                        </value>
-                      </block>
-                    </value>
-                  </block>
-                </value>
-                <value name="SERVER">
-                  <block type="variables_get" id="^uFp7o{|t2#gZd#WRS/N">
-                    <field name="VAR" id="nW/,qtBWyXI[s,clZc|B">serveur change is</field>
-                  </block>
-                </value>
-              </block>
-            </value>
-            <value name="B">
-              <block type="logic_null" id="RP%@Mr=c5FH0$k|+i8E@"></block>
-            </value>
+      <block type="s4d_print" id=".x#p29czmugmYpvugkfH">
+        <value name="PRINT">
+          <block type="jg_text_remake_paragraph_quotes" id="=m`lP9pixGwy~pV{Hz+p">
+            <field name="TEXT">8</field>
           </block>
         </value>
-        <statement name="DO0">
-          <block type="s4d_send_channel" id="bwKVYA$moZTuF#}ACdOm">
-            <value name="CONTENT">
-              <block type="jg_text_remake_paragraph_quotes" id="h}b!p8/Y,UkLdjw])DPn">
-                <field name="TEXT">&lt;:boucle:1505199788235292772&gt; l-Loading</field>
-              </block>
-            </value>
-            <value name="CHANNEL">
-              <block type="frost_category_get" id="0PVR0^`~b?}S/q?e=apd">
-                <field name="SEARCH_TYPE">NAME</field>
-                <value name="VALUE">
-                  <block type="jg_text_remake_paragraph_quotes" id="oZwDZ`)HB)]@SniYX;XT">
-                    <field name="TEXT">log-logoto</field>
-                  </block>
-                </value>
-                <value name="SERVER">
-                  <block type="variables_get" id="BHc2:kp7yTy;fG9u3.R,">
-                    <field name="VAR" id="nW/,qtBWyXI[s,clZc|B">serveur change is</field>
-                  </block>
-                </value>
-              </block>
-            </value>
-          </block>
-        </statement>
         <next>
-          <block type="controls_if" id="Z1*#~*)Y8#f?*^QPoN])">
+          <block type="controls_if" id="gZ|pqrD3w|XI%7DZ44r!">
             <value name="IF0">
-              <block type="logic_compare" id="k0DCXvbDGi0r]br@icUu">
+              <block type="logic_compare" id="d^|3MkvLv`oS5-~s@Jm;">
                 <field name="OP">NEQ</field>
                 <value name="A">
-                  <block type="frost_category_get" id="N6ML]={f6Wu0ZwmW3-sc">
+                  <block type="frost_category_get" id="5k(iTYYJK8SDLfGk]/o}">
                     <field name="SEARCH_TYPE">NAME</field>
                     <value name="VALUE">
-                      <block type="text_join" id="[/h*Ygnq0*iPOqUYBXwh">
+                      <block type="text_join" id="$W(/9lA3ZWpRGvBDL{o2">
                         <mutation items="4"></mutation>
                         <value name="ADD0">
-                          <block type="jg_text_remake_paragraph_quotes" id="C4a-V]Hhf}M0#w(L#E8F">
-                            <field name="TEXT">n-</field>
+                          <block type="jg_text_remake_paragraph_quotes" id="ByOI@^{V,[n1mc2,:q=r">
+                            <field name="TEXT">l-</field>
                           </block>
                         </value>
                         <value name="ADD1">
-                          <block type="frost_current" id="^@VdB#x?6BJ|lCsN#N[O">
-                            <field name="DATA_TYPE">DATE</field>
+                          <block type="frost_current" id="Q3IL(ImVIQoz0-U`ADLU">
+                            <field name="DATA_TYPE">UTC_DAY</field>
                           </block>
                         </value>
                         <value name="ADD2">
-                          <block type="jg_text_remake_paragraph_quotes" id="]qiJxz/:_(OBcDwfdmp/">
+                          <block type="jg_text_remake_paragraph_quotes" id="8^iX_MR9-=G,xKSntx)X">
                             <field name="TEXT">-</field>
                           </block>
                         </value>
                         <value name="ADD3">
-                          <block type="math_arithmetic" id="xU;[.qKk}l+;vrP9dJ2*">
+                          <block type="math_arithmetic" id="_Cx+5P+WY6co;Lk%/hXw">
                             <field name="OP">ADD</field>
                             <value name="A">
                               <shadow type="math_number" id="[{}Y%+EBXk;N]hQ5C-5b">
                                 <field name="NUM">1</field>
                               </shadow>
-                              <block type="frost_current" id="rW#SN5g4]^oz~.H0bMy1">
-                                <field name="DATA_TYPE">MONTH</field>
+                              <block type="frost_current" id="#j8v8U`5wW^-c~y1}7wm">
+                                <field name="DATA_TYPE">UTC_MONTH</field>
                               </block>
                             </value>
                             <value name="B">
-                              <shadow type="math_number" id="[F.d?8yKU6-4p*|U-6K%">
+                              <shadow type="math_number" id="k%0B8,9UF0V*e`,[qYYa">
                                 <field name="NUM">1</field>
                               </shadow>
                             </value>
@@ -1143,34 +1068,34 @@
                       </block>
                     </value>
                     <value name="SERVER">
-                      <block type="variables_get" id="qe!CC5$MD:eT%yPeIdEs">
+                      <block type="variables_get" id="^uFp7o{|t2#gZd#WRS/N">
                         <field name="VAR" id="nW/,qtBWyXI[s,clZc|B">serveur change is</field>
                       </block>
                     </value>
                   </block>
                 </value>
                 <value name="B">
-                  <block type="logic_null" id="JU0$QS4!d!JEzar2Ag%|"></block>
+                  <block type="logic_null" id="RP%@Mr=c5FH0$k|+i8E@"></block>
                 </value>
               </block>
             </value>
             <statement name="DO0">
-              <block type="s4d_send_channel" id="6v)L.U2J[zqIP^6k:[!b">
+              <block type="s4d_send_channel" id="bwKVYA$moZTuF#}ACdOm">
                 <value name="CONTENT">
-                  <block type="jg_text_remake_paragraph_quotes" id="MKFBESbQam!-^#m!Qfza">
-                    <field name="TEXT">&lt;:boucle:1505199788235292772&gt; n-Loading</field>
+                  <block type="jg_text_remake_paragraph_quotes" id="h}b!p8/Y,UkLdjw])DPn">
+                    <field name="TEXT">&lt;:boucle:1505199788235292772&gt; l-Loading</field>
                   </block>
                 </value>
                 <value name="CHANNEL">
-                  <block type="frost_category_get" id="/V~zVbrxEkasuR_;,^2W">
+                  <block type="frost_category_get" id="0PVR0^`~b?}S/q?e=apd">
                     <field name="SEARCH_TYPE">NAME</field>
                     <value name="VALUE">
-                      <block type="jg_text_remake_paragraph_quotes" id="1Vd+}=.P8ToP==7lhn,m">
+                      <block type="jg_text_remake_paragraph_quotes" id="oZwDZ`)HB)]@SniYX;XT">
                         <field name="TEXT">log-logoto</field>
                       </block>
                     </value>
                     <value name="SERVER">
-                      <block type="variables_get" id="cs2uIl?%t_]%(z`ayolb">
+                      <block type="variables_get" id="BHc2:kp7yTy;fG9u3.R,">
                         <field name="VAR" id="nW/,qtBWyXI[s,clZc|B">serveur change is</field>
                       </block>
                     </value>
@@ -1179,44 +1104,44 @@
               </block>
             </statement>
             <next>
-              <block type="controls_if" id="i:P^Z+ww^D$qEsct!)0u">
+              <block type="controls_if" id="Z1*#~*)Y8#f?*^QPoN])">
                 <value name="IF0">
-                  <block type="logic_compare" id="%duxs7_.oiu5rFa6i.|0">
+                  <block type="logic_compare" id="k0DCXvbDGi0r]br@icUu">
                     <field name="OP">NEQ</field>
                     <value name="A">
-                      <block type="frost_category_get" id="c`7RLA_;K4]lW_2r%U`(">
+                      <block type="frost_category_get" id="N6ML]={f6Wu0ZwmW3-sc">
                         <field name="SEARCH_TYPE">NAME</field>
                         <value name="VALUE">
-                          <block type="text_join" id="|4:4%9SkN##*A?SdO:m2">
+                          <block type="text_join" id="[/h*Ygnq0*iPOqUYBXwh">
                             <mutation items="4"></mutation>
                             <value name="ADD0">
-                              <block type="jg_text_remake_paragraph_quotes" id="be`^#Hy7S-w;S%g38?32">
-                                <field name="TEXT">b-</field>
+                              <block type="jg_text_remake_paragraph_quotes" id="C4a-V]Hhf}M0#w(L#E8F">
+                                <field name="TEXT">n-</field>
                               </block>
                             </value>
                             <value name="ADD1">
-                              <block type="frost_current" id="w~NMHYgm=NVvd.v9NHw`">
-                                <field name="DATA_TYPE">DATE</field>
+                              <block type="frost_current" id="^@VdB#x?6BJ|lCsN#N[O">
+                                <field name="DATA_TYPE">UTC_DAY</field>
                               </block>
                             </value>
                             <value name="ADD2">
-                              <block type="jg_text_remake_paragraph_quotes" id="xj{*hTp=+fY[%#rr{`7W">
+                              <block type="jg_text_remake_paragraph_quotes" id="]qiJxz/:_(OBcDwfdmp/">
                                 <field name="TEXT">-</field>
                               </block>
                             </value>
                             <value name="ADD3">
-                              <block type="math_arithmetic" id="g=t,,9vlw-Ax?Jda;N8^">
+                              <block type="math_arithmetic" id="xU;[.qKk}l+;vrP9dJ2*">
                                 <field name="OP">ADD</field>
                                 <value name="A">
-                                  <shadow type="math_number" id="#RQ1274ePCE|Jv{Z#5N@">
+                                  <shadow type="math_number" id="[{}Y%+EBXk;N]hQ5C-5b">
                                     <field name="NUM">1</field>
                                   </shadow>
-                                  <block type="frost_current" id="M_XkS:kpC80.656}]Peb">
-                                    <field name="DATA_TYPE">MONTH</field>
+                                  <block type="frost_current" id="rW#SN5g4]^oz~.H0bMy1">
+                                    <field name="DATA_TYPE">UTC_MONTH</field>
                                   </block>
                                 </value>
                                 <value name="B">
-                                  <shadow type="math_number" id="R8!~S$fo:JzZ,82!EFbw">
+                                  <shadow type="math_number" id="[F.d?8yKU6-4p*|U-6K%">
                                     <field name="NUM">1</field>
                                   </shadow>
                                 </value>
@@ -1225,34 +1150,34 @@
                           </block>
                         </value>
                         <value name="SERVER">
-                          <block type="variables_get" id="y*=Gp2a%J#JNt=B*=YIq">
+                          <block type="variables_get" id="qe!CC5$MD:eT%yPeIdEs">
                             <field name="VAR" id="nW/,qtBWyXI[s,clZc|B">serveur change is</field>
                           </block>
                         </value>
                       </block>
                     </value>
                     <value name="B">
-                      <block type="logic_null" id="jff*_/{;*q`*n[lGGhn`"></block>
+                      <block type="logic_null" id="JU0$QS4!d!JEzar2Ag%|"></block>
                     </value>
                   </block>
                 </value>
                 <statement name="DO0">
-                  <block type="s4d_send_channel" id="z(m)gv9ie$[8n$7Lrm{O">
+                  <block type="s4d_send_channel" id="6v)L.U2J[zqIP^6k:[!b">
                     <value name="CONTENT">
-                      <block type="jg_text_remake_paragraph_quotes" id="DelsF_gEZRoP(|75hL1S">
-                        <field name="TEXT">&lt;:boucle:1505199788235292772&gt; b-Loading</field>
+                      <block type="jg_text_remake_paragraph_quotes" id="MKFBESbQam!-^#m!Qfza">
+                        <field name="TEXT">&lt;:boucle:1505199788235292772&gt; n-Loading</field>
                       </block>
                     </value>
                     <value name="CHANNEL">
-                      <block type="frost_category_get" id="V8i.SoE!Z6lCj0rqnOt]">
+                      <block type="frost_category_get" id="/V~zVbrxEkasuR_;,^2W">
                         <field name="SEARCH_TYPE">NAME</field>
                         <value name="VALUE">
-                          <block type="jg_text_remake_paragraph_quotes" id="atZKBzdW_r`6hxX$_,z~">
+                          <block type="jg_text_remake_paragraph_quotes" id="1Vd+}=.P8ToP==7lhn,m">
                             <field name="TEXT">log-logoto</field>
                           </block>
                         </value>
                         <value name="SERVER">
-                          <block type="variables_get" id="~i[$xQ+`$2Gp3n:{pi${">
+                          <block type="variables_get" id="cs2uIl?%t_]%(z`ayolb">
                             <field name="VAR" id="nW/,qtBWyXI[s,clZc|B">serveur change is</field>
                           </block>
                         </value>
@@ -1261,44 +1186,44 @@
                   </block>
                 </statement>
                 <next>
-                  <block type="controls_if" id="a#2)ipEj`-Xu.bNB:`SJ">
+                  <block type="controls_if" id="i:P^Z+ww^D$qEsct!)0u">
                     <value name="IF0">
-                      <block type="logic_compare" id="1o{oHitG+T$SOKMMvHUo">
+                      <block type="logic_compare" id="%duxs7_.oiu5rFa6i.|0">
                         <field name="OP">NEQ</field>
                         <value name="A">
-                          <block type="frost_category_get" id="sRDGLM-AUxNc[UTTs;f=">
+                          <block type="frost_category_get" id="c`7RLA_;K4]lW_2r%U`(">
                             <field name="SEARCH_TYPE">NAME</field>
                             <value name="VALUE">
-                              <block type="text_join" id="D_jJo+(+@Xxq/_##K~B]">
+                              <block type="text_join" id="|4:4%9SkN##*A?SdO:m2">
                                 <mutation items="4"></mutation>
                                 <value name="ADD0">
-                                  <block type="jg_text_remake_paragraph_quotes" id="];j;7!G=~988_~.dEMds">
-                                    <field name="TEXT">i-</field>
+                                  <block type="jg_text_remake_paragraph_quotes" id="be`^#Hy7S-w;S%g38?32">
+                                    <field name="TEXT">b-</field>
                                   </block>
                                 </value>
                                 <value name="ADD1">
-                                  <block type="frost_current" id="T[KwQx!*tUr2A=$o@0C?">
+                                  <block type="frost_current" id="w~NMHYgm=NVvd.v9NHw`">
                                     <field name="DATA_TYPE">DATE</field>
                                   </block>
                                 </value>
                                 <value name="ADD2">
-                                  <block type="jg_text_remake_paragraph_quotes" id=";CiMK$FfqTM_S15bRN2@">
+                                  <block type="jg_text_remake_paragraph_quotes" id="xj{*hTp=+fY[%#rr{`7W">
                                     <field name="TEXT">-</field>
                                   </block>
                                 </value>
                                 <value name="ADD3">
-                                  <block type="math_arithmetic" id="p|z%)+1mHLXkSFY`M0c1">
+                                  <block type="math_arithmetic" id="g=t,,9vlw-Ax?Jda;N8^">
                                     <field name="OP">ADD</field>
                                     <value name="A">
-                                      <shadow type="math_number" id="LP{/EIomwE2+_Bgl7MKW">
+                                      <shadow type="math_number" id="#RQ1274ePCE|Jv{Z#5N@">
                                         <field name="NUM">1</field>
                                       </shadow>
-                                      <block type="frost_current" id="Jw/)u?8!/W@rO73+D(=J">
+                                      <block type="frost_current" id="M_XkS:kpC80.656}]Peb">
                                         <field name="DATA_TYPE">MONTH</field>
                                       </block>
                                     </value>
                                     <value name="B">
-                                      <shadow type="math_number" id="oH^At9f$iBS932Ro+17=">
+                                      <shadow type="math_number" id="R8!~S$fo:JzZ,82!EFbw">
                                         <field name="NUM">1</field>
                                       </shadow>
                                     </value>
@@ -1307,34 +1232,34 @@
                               </block>
                             </value>
                             <value name="SERVER">
-                              <block type="variables_get" id="(o;YkD=kttqZ|;L|RBRV">
+                              <block type="variables_get" id="y*=Gp2a%J#JNt=B*=YIq">
                                 <field name="VAR" id="nW/,qtBWyXI[s,clZc|B">serveur change is</field>
                               </block>
                             </value>
                           </block>
                         </value>
                         <value name="B">
-                          <block type="logic_null" id=")p,+.#Om_|WFwda=T~{."></block>
+                          <block type="logic_null" id="jff*_/{;*q`*n[lGGhn`"></block>
                         </value>
                       </block>
                     </value>
                     <statement name="DO0">
-                      <block type="s4d_send_channel" id="UbmLnM@O5EQ?L|Hs$tV%">
+                      <block type="s4d_send_channel" id="z(m)gv9ie$[8n$7Lrm{O">
                         <value name="CONTENT">
-                          <block type="jg_text_remake_paragraph_quotes" id="[G(wBlM~YPDRAOO#~Evy">
-                            <field name="TEXT">&lt;:boucle:1505199788235292772&gt; i-Loading</field>
+                          <block type="jg_text_remake_paragraph_quotes" id="DelsF_gEZRoP(|75hL1S">
+                            <field name="TEXT">&lt;:boucle:1505199788235292772&gt; b-Loading</field>
                           </block>
                         </value>
                         <value name="CHANNEL">
-                          <block type="frost_category_get" id="94m,1H=D]{dZq,KWY$~8">
+                          <block type="frost_category_get" id="V8i.SoE!Z6lCj0rqnOt]">
                             <field name="SEARCH_TYPE">NAME</field>
                             <value name="VALUE">
-                              <block type="jg_text_remake_paragraph_quotes" id="2;Kky@.2pSj_+L@lj`s1">
+                              <block type="jg_text_remake_paragraph_quotes" id="atZKBzdW_r`6hxX$_,z~">
                                 <field name="TEXT">log-logoto</field>
                               </block>
                             </value>
                             <value name="SERVER">
-                              <block type="variables_get" id="2y7.:~)^,6%KCkv{R:dm">
+                              <block type="variables_get" id="~i[$xQ+`$2Gp3n:{pi${">
                                 <field name="VAR" id="nW/,qtBWyXI[s,clZc|B">serveur change is</field>
                               </block>
                             </value>
@@ -1342,6 +1267,90 @@
                         </value>
                       </block>
                     </statement>
+                    <next>
+                      <block type="controls_if" id="a#2)ipEj`-Xu.bNB:`SJ">
+                        <value name="IF0">
+                          <block type="logic_compare" id="1o{oHitG+T$SOKMMvHUo">
+                            <field name="OP">NEQ</field>
+                            <value name="A">
+                              <block type="frost_category_get" id="sRDGLM-AUxNc[UTTs;f=">
+                                <field name="SEARCH_TYPE">NAME</field>
+                                <value name="VALUE">
+                                  <block type="text_join" id="D_jJo+(+@Xxq/_##K~B]">
+                                    <mutation items="4"></mutation>
+                                    <value name="ADD0">
+                                      <block type="jg_text_remake_paragraph_quotes" id="];j;7!G=~988_~.dEMds">
+                                        <field name="TEXT">i-</field>
+                                      </block>
+                                    </value>
+                                    <value name="ADD1">
+                                      <block type="frost_current" id="T[KwQx!*tUr2A=$o@0C?">
+                                        <field name="DATA_TYPE">DATE</field>
+                                      </block>
+                                    </value>
+                                    <value name="ADD2">
+                                      <block type="jg_text_remake_paragraph_quotes" id=";CiMK$FfqTM_S15bRN2@">
+                                        <field name="TEXT">-</field>
+                                      </block>
+                                    </value>
+                                    <value name="ADD3">
+                                      <block type="math_arithmetic" id="p|z%)+1mHLXkSFY`M0c1">
+                                        <field name="OP">ADD</field>
+                                        <value name="A">
+                                          <shadow type="math_number" id="LP{/EIomwE2+_Bgl7MKW">
+                                            <field name="NUM">1</field>
+                                          </shadow>
+                                          <block type="frost_current" id="Jw/)u?8!/W@rO73+D(=J">
+                                            <field name="DATA_TYPE">MONTH</field>
+                                          </block>
+                                        </value>
+                                        <value name="B">
+                                          <shadow type="math_number" id="oH^At9f$iBS932Ro+17=">
+                                            <field name="NUM">1</field>
+                                          </shadow>
+                                        </value>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                                <value name="SERVER">
+                                  <block type="variables_get" id="(o;YkD=kttqZ|;L|RBRV">
+                                    <field name="VAR" id="nW/,qtBWyXI[s,clZc|B">serveur change is</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                            <value name="B">
+                              <block type="logic_null" id=")p,+.#Om_|WFwda=T~{."></block>
+                            </value>
+                          </block>
+                        </value>
+                        <statement name="DO0">
+                          <block type="s4d_send_channel" id="UbmLnM@O5EQ?L|Hs$tV%">
+                            <value name="CONTENT">
+                              <block type="jg_text_remake_paragraph_quotes" id="[G(wBlM~YPDRAOO#~Evy">
+                                <field name="TEXT">&lt;:boucle:1505199788235292772&gt; i-Loading</field>
+                              </block>
+                            </value>
+                            <value name="CHANNEL">
+                              <block type="frost_category_get" id="94m,1H=D]{dZq,KWY$~8">
+                                <field name="SEARCH_TYPE">NAME</field>
+                                <value name="VALUE">
+                                  <block type="jg_text_remake_paragraph_quotes" id="2;Kky@.2pSj_+L@lj`s1">
+                                    <field name="TEXT">log-logoto</field>
+                                  </block>
+                                </value>
+                                <value name="SERVER">
+                                  <block type="variables_get" id="2y7.:~)^,6%KCkv{R:dm">
+                                    <field name="VAR" id="nW/,qtBWyXI[s,clZc|B">serveur change is</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                          </block>
+                        </statement>
+                      </block>
+                    </next>
                   </block>
                 </next>
               </block>

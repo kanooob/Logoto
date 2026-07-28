@@ -1,14 +1,3 @@
-const express = require('express');
-const app = express();
-const port = process.env.PORT || 8080;
-
-app.get('/', (req, res) => {
-  res.send('Bot Logoto en ligne !');
-});
-
-app.listen(port, () => {
-  console.log(`Serveur de vérification activé sur le port ${port}`);
-});
 (async()=>{
     // default imports
     const events = require('events');
@@ -258,10 +247,11 @@ app.listen(port, () => {
     });
     
     eventEmitter.on('2', async => {
-          if (serveur_change_is.channels.cache.find((category) => category.name === (['l-',(new Date().getDate()),'-',((new Date().getMonth())) + 1].join(''))) != null) {
+          console.log('8');
+      if (serveur_change_is.channels.cache.find((category) => category.name === (['l-',(new Date().getUTCDate()),'-',((new Date().getUTCMonth())) + 1].join(''))) != null) {
         serveur_change_is.channels.cache.find((category) => category.name === 'log-logoto').send({content:String('<:boucle:1505199788235292772> l-Loading')});
       }
-      if (serveur_change_is.channels.cache.find((category) => category.name === (['n-',(new Date().getDate()),'-',((new Date().getMonth())) + 1].join(''))) != null) {
+      if (serveur_change_is.channels.cache.find((category) => category.name === (['n-',(new Date().getUTCDate()),'-',((new Date().getUTCMonth())) + 1].join(''))) != null) {
         serveur_change_is.channels.cache.find((category) => category.name === 'log-logoto').send({content:String('<:boucle:1505199788235292772> n-Loading')});
       }
       if (serveur_change_is.channels.cache.find((category) => category.name === (['b-',(new Date().getDate()),'-',((new Date().getMonth())) + 1].join(''))) != null) {
