@@ -33,11 +33,7 @@
                   <block type="variables_set" id="q,,yeGeg6@;pOf,6Ni]0">
                     <field name="VAR" id="nW/,qtBWyXI[s,clZc|B">serveur change is</field>
                     <value name="VALUE">
-                      <block type="s4d_server_id" id="`,?+N`VDBsXHY1d$ao`m">
-                        <value name="SERVER">
-                          <block type="s4d_get_all_server_server" id="e+k7v5w@A6nA8-czy*Mr"></block>
-                        </value>
-                      </block>
+                      <block type="s4d_get_all_server_server" id="e+k7v5w@A6nA8-czy*Mr"></block>
                     </value>
                     <next>
                       <block type="s4d_print" id="W1|-?dra!2|52LXF=7xp">
