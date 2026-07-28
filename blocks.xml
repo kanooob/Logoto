@@ -23,21 +23,21 @@
         <next>
           <block type="s4d_get_all_server" id="eB`#Xi{]17HT2TfsS7nc">
             <statement name="THEN">
-              <block type="s4d_wait_seconds" id="1@+GDydr*:Qo1V4~fO:F">
-                <value name="TIME">
-                  <shadow type="math_number" id="I_!@ZfeE{8B)*k]zEx6k">
-                    <field name="NUM">5</field>
-                  </shadow>
+              <block type="variables_set" id="q,,yeGeg6@;pOf,6Ni]0">
+                <field name="VAR" id="nW/,qtBWyXI[s,clZc|B">serveur change is</field>
+                <value name="VALUE">
+                  <block type="s4d_server_id" id="iMh9GR+nAI@C,sW@2LmS">
+                    <value name="SERVER">
+                      <block type="s4d_get_all_server_server" id="e+k7v5w@A6nA8-czy*Mr"></block>
+                    </value>
+                  </block>
                 </value>
                 <next>
-                  <block type="variables_set" id="q,,yeGeg6@;pOf,6Ni]0">
-                    <field name="VAR" id="nW/,qtBWyXI[s,clZc|B">serveur change is</field>
-                    <value name="VALUE">
-                      <block type="s4d_server_id" id="iMh9GR+nAI@C,sW@2LmS">
-                        <value name="SERVER">
-                          <block type="s4d_get_all_server_server" id="e+k7v5w@A6nA8-czy*Mr"></block>
-                        </value>
-                      </block>
+                  <block type="s4d_wait_seconds" id="1@+GDydr*:Qo1V4~fO:F">
+                    <value name="TIME">
+                      <shadow type="math_number" id="I_!@ZfeE{8B)*k]zEx6k">
+                        <field name="NUM">5</field>
+                      </shadow>
                     </value>
                     <next>
                       <block type="s4d_print" id="W1|-?dra!2|52LXF=7xp">
