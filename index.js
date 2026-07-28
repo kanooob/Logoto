@@ -1,14 +1,3 @@
-const express = require('express');
-const app = express();
-const port = process.env.PORT || 8080;
-
-app.get('/', (req, res) => {
-  res.send('Bot Logoto en ligne !');
-});
-
-app.listen(port, () => {
-  console.log(`Serveur de vérification activé sur le port ${port}`);
-});
 (async()=>{
     // default imports
     const events = require('events');
@@ -120,7 +109,9 @@ app.listen(port, () => {
         }
         console.log('6');
         if (((new Date().getUTCHours())) + fuseau_horaire == 24 || ((new Date().getUTCHours())) - fuseau_horaire == 0) {
+          console.log((((new Date().getUTCHours())) + fuseau_horaire));
           console.log('7');
+          console.log((((new Date().getUTCHours())) - fuseau_horaire));
           serveur_change_is = ((s).id);
           await delay(Number(1)*1000);
           eventEmitter.emit('2');
