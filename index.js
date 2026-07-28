@@ -1,14 +1,3 @@
-const express = require('express');
-const app = express();
-const port = process.env.PORT || 8080;
-
-app.get('/', (req, res) => {
-  res.send('Bot Logoto en ligne !');
-});
-
-app.listen(port, () => {
-  console.log(`Serveur de vérification activé sur le port ${port}`);
-});
 (async()=>{
     // default imports
     const events = require('events');
@@ -105,17 +94,20 @@ app.listen(port, () => {
     eventEmitter.on('1', async => {
           console.log('1');
       s4d.client.guilds.cache.forEach(async (s) =>{
-         serveur_change_is = ((s).id);
-        await delay(Number(5)*1000);
+         await delay(Number(5)*1000);
         console.log('2');
         if ((s).channels.cache.find((category) => category.name === 'log-logoto') != null && ((((s).channels.cache.find((category) => category.name === 'log-logoto').topic) || '').startsWith('+' || ''))) {
           console.log('3222222');
+          console.log(((s).id));
           fuseau_horaire = (Number((String(((s).channels.cache.find((category) => category.name === 'log-logoto').topic)).replaceAll('+', String('')))));
           console.log((Number((String(((s).channels.cache.find((category) => category.name === 'log-logoto').topic)).replaceAll('+', String(''))))));
+          serveur_change_is = ((s).id);
         } else if ((s).channels.cache.find((category) => category.name === 'log-logoto') != null && ((((s).channels.cache.find((category) => category.name === 'log-logoto').topic) || '').startsWith('-' || ''))) {
+          console.log(((s).id));
           console.log('4');
           fuseau_horaire = 24 - (Number((String(((s).channels.cache.find((category) => category.name === 'log-logoto').topic)).replaceAll('-', String('')))));
         } else {
+          console.log(((s).id));
           console.log('5');
           fuseau_horaire = 24;
         }
