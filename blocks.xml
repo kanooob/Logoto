@@ -7,7 +7,7 @@
     <variable id="jlm:W3Oxc-yLpT4NI{=*">ms on</variable>
     <variable id="vn)lh!6^%Rc2JT)CYNsZ">fuseau horaire</variable>
   </variables>
-  <block type="create_event" id="NNSPS4-r~o^_Gyi:7sqX" x="-6513" y="-1921">
+  <block type="create_event" id="NNSPS4-r~o^_Gyi:7sqX" x="-6073" y="-2007">
     <value name="NAME">
       <shadow type="text" id="muvbkECo`a@P?=DM2Uj0">
         <field name="TEXT">1</field>
@@ -95,10 +95,10 @@
                           </block>
                         </value>
                         <statement name="DO0">
-                          <block type="s4d_print" id="SnQOmC9i2=4tH]]+`KRd">
+                          <block type="s4d_print" id="din1I:sFEl`iAL^~Y|]A">
                             <value name="PRINT">
                               <block type="jg_text_remake_paragraph_quotes" id="g;MqooWo89@jgTWn#.=L">
-                                <field name="TEXT">3</field>
+                                <field name="TEXT">3222222</field>
                               </block>
                             </value>
                             <next>
@@ -142,6 +142,48 @@
                                     </value>
                                   </block>
                                 </value>
+                                <next>
+                                  <block type="s4d_print" id="SnQOmC9i2=4tH]]+`KRd">
+                                    <value name="PRINT">
+                                      <block type="s4d_string_to_number" id="i`*j|yPn:t%d$GV-ped+">
+                                        <value name="STRING">
+                                          <block type="jg_text_remake_in_text_replace_with" id="$*zWwexQwTkF0aCCc!%J">
+                                            <value name="ORIGIN">
+                                              <shadow type="text" id="0]_V=Cl;J={RyfhM%qg9">
+                                                <field name="TEXT">aaa</field>
+                                              </shadow>
+                                              <block type="s4d_channel_topic" id="2ANHskJP@)m94J.Y}~C@">
+                                                <value name="CHANNEL">
+                                                  <block type="frost_category_get" id="??A){$^$=[xtMY[3}5-9">
+                                                    <field name="SEARCH_TYPE">NAME</field>
+                                                    <value name="VALUE">
+                                                      <block type="jg_text_remake_paragraph_quotes" id="RjPG1v24tEl{,YmVk3R!">
+                                                        <field name="TEXT">log-logoto</field>
+                                                      </block>
+                                                    </value>
+                                                    <value name="SERVER">
+                                                      <block type="s4d_get_all_server_server" id="_/|Tf([KJ=}7zvWSb%Qv"></block>
+                                                    </value>
+                                                  </block>
+                                                </value>
+                                              </block>
+                                            </value>
+                                            <value name="REPLACE">
+                                              <shadow type="text" id="Flk^y{4.%_A0TAY5$Y*,">
+                                                <field name="TEXT">+</field>
+                                              </shadow>
+                                            </value>
+                                            <value name="WITH">
+                                              <shadow type="text" id="~Zeq-F}Y|mClR_=2zLg[">
+                                                <field name="TEXT"></field>
+                                              </shadow>
+                                            </value>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </next>
                               </block>
                             </next>
                           </block>
