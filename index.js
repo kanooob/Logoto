@@ -1,14 +1,3 @@
-const express = require('express');
-const app = express();
-const port = process.env.PORT || 8080;
-
-app.get('/', (req, res) => {
-  res.send('Bot Logoto en ligne !');
-});
-
-app.listen(port, () => {
-  console.log(`Serveur de vérification activé sur le port ${port}`);
-});
 (async()=>{
     // default imports
     const events = require('events');
@@ -106,6 +95,7 @@ app.listen(port, () => {
           console.log('1');
       s4d.client.guilds.cache.forEach(async (s) =>{
          await delay(Number(5)*1000);
+        serveur_change_is = ((s).id);
         console.log('2');
         if ((s).channels.cache.find((category) => category.name === 'log-logoto') != null && ((((s).channels.cache.find((category) => category.name === 'log-logoto').topic) || '').startsWith('+' || ''))) {
           console.log('3222222');
@@ -123,7 +113,6 @@ app.listen(port, () => {
           console.log((((new Date().getUTCHours())) + fuseau_horaire));
           console.log('7');
           console.log((((new Date().getUTCHours())) - fuseau_horaire));
-          serveur_change_is = ((s).id);
           await delay(Number(1)*1000);
           eventEmitter.emit('2');
         }
