@@ -1,14 +1,3 @@
-const express = require('express');
-const app = express();
-const port = process.env.PORT || 8080;
-
-app.get('/', (req, res) => {
-  res.send('Bot Logoto en ligne !');
-});
-
-app.listen(port, () => {
-  console.log(`Serveur de vérification activé sur le port ${port}`);
-});
 (async()=>{
     // default imports
     const events = require('events');
@@ -99,8 +88,30 @@ app.listen(port, () => {
     
 
     // blockly code
-    var jour, start_unix, serveur, ms_on;
+    var jour, start_unix, serveur_change_is, fuseau_horaire, serveur, ms_on;
     
+    
+    eventEmitter.on('1', async => {
+          s4d.client.guilds.cache.forEach(async (s) =>{
+         await delay(Number(5)*1000);
+        if ((s).channels.cache.find((category) => category.name === 'log-logoto') == null) {
+          console.log(('erreur de salon log-logoto dans :' + String((s).id)));
+        } else if (((s).channels.cache.find((category) => category.name === 'log-logoto').topic) == null && ((s).channels.cache.find((category) => category.name === 'log-logoto').topic) == '0') {
+          fuseau_horaire = 24;
+        } else if ((((s).channels.cache.find((category) => category.name === 'log-logoto').topic) || '').startsWith('-' || '')) {
+          fuseau_horaire = 24 - (Number((String(((s).channels.cache.find((category) => category.name === 'log-logoto').topic)).replaceAll('-', String('')))));
+        } else if ((((s).channels.cache.find((category) => category.name === 'log-logoto').topic) || '').startsWith('+' || '')) {
+          fuseau_horaire = (Number((String(((s).channels.cache.find((category) => category.name === 'log-logoto').topic)).replaceAll('+', String('')))));
+        }
+        if (((new Date().getUTCHours())) + fuseau_horaire == 24 || ((new Date().getUTCHours())) + fuseau_horaire == 0) {
+          serveur_change_is = ((s).id);
+          await delay(Number(1)*1000);
+          eventEmitter.emit('2');
+        }
+    
+      })
+    
+      });
     
     synchronizeSlashCommands(s4d.client, [
       {
@@ -227,6 +238,22 @@ app.listen(port, () => {
     
     });
     
+    eventEmitter.on('2', async => {
+          if (serveur_change_is.channels.cache.find((category) => category.name === (['l-',(new Date().getDate()),'-',((new Date().getMonth())) + 1].join(''))) != null) {
+        serveur_change_is.channels.cache.find((category) => category.name === 'log-logoto').send({content:String('<:boucle:1505199788235292772> l-Loading')});
+      }
+      if (serveur_change_is.channels.cache.find((category) => category.name === (['n-',(new Date().getDate()),'-',((new Date().getMonth())) + 1].join(''))) != null) {
+        serveur_change_is.channels.cache.find((category) => category.name === 'log-logoto').send({content:String('<:boucle:1505199788235292772> n-Loading')});
+      }
+      if (serveur_change_is.channels.cache.find((category) => category.name === (['b-',(new Date().getDate()),'-',((new Date().getMonth())) + 1].join(''))) != null) {
+        serveur_change_is.channels.cache.find((category) => category.name === 'log-logoto').send({content:String('<:boucle:1505199788235292772> b-Loading')});
+      }
+      if (serveur_change_is.channels.cache.find((category) => category.name === (['i-',(new Date().getDate()),'-',((new Date().getMonth())) + 1].join(''))) != null) {
+        serveur_change_is.channels.cache.find((category) => category.name === 'log-logoto').send({content:String('<:boucle:1505199788235292772> i-Loading')});
+      }
+    
+      });
+    
     s4d.client.on('interactionCreate', async (interaction) => {
               if ((interaction.commandName) == 'setup' && (interaction.guild).channels.cache.find((category) => category.name === 'log-logoto') != null && ((((interaction.member).roles.highest).permissions.has('MANAGE_GUILD')) || (((interaction.member).roles.highest).permissions.has('ADMINISTRATOR')) || (String((interaction.guild).ownerId)) == ((interaction.member).id))) {
         await interaction.reply({ content: (['<:asterisk:1505250975282106469> **Information**','\n','<:track_next:1505295937856213072> The logs and actions forum already exists:',(interaction.guild).channels.cache.find((category) => category.name === 'log-logoto'),'\n','<:track_next:1505295937856213072> Le salon des logs et des actions existe déjà :',(interaction.guild).channels.cache.find((category) => category.name === 'log-logoto')].join('')), ephemeral: true, components: [] });
@@ -262,26 +289,6 @@ app.listen(port, () => {
       }
     
         });
-    
-    eventEmitter.on('1', async => {
-          s4d.client.guilds.cache.forEach(async (s) =>{
-         if ((s).channels.cache.find((category) => category.name === (['l-',(new Date().getDate()),'-',((new Date().getMonth())) + 1].join(''))) != null) {
-          (s).channels.cache.find((category) => category.name === 'log-logoto').send({content:String('<:boucle:1505199788235292772> l-Loading')});
-        }
-        if ((s).channels.cache.find((category) => category.name === (['n-',(new Date().getDate()),'-',((new Date().getMonth())) + 1].join(''))) != null) {
-          (s).channels.cache.find((category) => category.name === 'log-logoto').send({content:String('<:boucle:1505199788235292772> n-Loading')});
-        }
-        if ((s).channels.cache.find((category) => category.name === (['b-',(new Date().getDate()),'-',((new Date().getMonth())) + 1].join(''))) != null) {
-          (s).channels.cache.find((category) => category.name === 'log-logoto').send({content:String('<:boucle:1505199788235292772> b-Loading')});
-        }
-        if ((s).channels.cache.find((category) => category.name === (['i-',(new Date().getDate()),'-',((new Date().getMonth())) + 1].join(''))) != null) {
-          (s).channels.cache.find((category) => category.name === 'log-logoto').send({content:String('<:boucle:1505199788235292772> i-Loading')});
-        }
-        await delay(Number(2)*1000);
-    
-      })
-    
-      });
     
     s4d.client.on('guildCreate', async (s4dguild) => {
       s4d.client.channels.cache.get('1432341468059537419').send({content:String((['Bot ajouté dans **',s4dguild.name,'** (`',s4dguild.id,'`).'].join('')))});
