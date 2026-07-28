@@ -1,14 +1,3 @@
-const express = require('express');
-const app = express();
-const port = process.env.PORT || 8080;
-
-app.get('/', (req, res) => {
-  res.send('Bot Logoto en ligne !');
-});
-
-app.listen(port, () => {
-  console.log(`Serveur de vérification activé sur le port ${port}`);
-});
 (async()=>{
     // default imports
     const events = require('events');
@@ -99,13 +88,23 @@ app.listen(port, () => {
     
 
     // blockly code
-    var jour, start_unix, serveur_change_is, serveur, ms_on, fuseau_horaire;
+    var jour, start_unix, serveur, ms_on, fuseau_horaire, serveur_change_is;
+    
+    function mathRandomInt(a, b) {
+      if (a > b) {
+        // Swap a and b to ensure a is smaller.
+        var c = a;
+        a = b;
+        b = c;
+      }
+      return Math.floor(Math.random() * (b - a + 1) + a);
+    }
     
     
     eventEmitter.on('1', async => {
           console.log('1');
       s4d.client.guilds.cache.forEach(async (s) =>{
-         await delay(Number(5)*1000);
+         await delay(Number((mathRandomInt(5, 10)))*1000);
         console.log('2');
         if ((s).channels.cache.find((category) => category.name === 'log-logoto') != null && ((((s).channels.cache.find((category) => category.name === 'log-logoto').topic) || '').startsWith('+' || ''))) {
           console.log('3222222');
@@ -124,12 +123,20 @@ app.listen(port, () => {
         }
         console.log('6');
         if (((new Date().getUTCHours())) + fuseau_horaire == 24 || ((new Date().getUTCHours())) - fuseau_horaire == 0) {
-          console.log((((new Date().getUTCHours())) + fuseau_horaire));
-          console.log('7');
-          console.log((((new Date().getUTCHours())) - fuseau_horaire));
-          await delay(Number(1)*1000);
-          eventEmitter.emit('2');
+          if ((s).channels.cache.find((category) => category.name === (['l-',(new Date().getUTCDate()),'-',((new Date().getUTCMonth())) + 1].join(''))) != null) {
+            (s).channels.cache.find((category) => category.name === 'log-logoto').send({content:String('<:boucle:1505199788235292772> l-Loading')});
+          }
+          if ((s).channels.cache.find((category) => category.name === (['n-',(new Date().getUTCDate()),'-',((new Date().getUTCMonth())) + 1].join(''))) != null) {
+            (s).channels.cache.find((category) => category.name === 'log-logoto').send({content:String('<:boucle:1505199788235292772> n-Loading')});
+          }
+          if ((s).channels.cache.find((category) => category.name === (['b-',(new Date().getDate()),'-',((new Date().getMonth())) + 1].join(''))) != null) {
+            (s).channels.cache.find((category) => category.name === 'log-logoto').send({content:String('<:boucle:1505199788235292772> b-Loading')});
+          }
+          if ((s).channels.cache.find((category) => category.name === (['i-',(new Date().getDate()),'-',((new Date().getMonth())) + 1].join(''))) != null) {
+            (s).channels.cache.find((category) => category.name === 'log-logoto').send({content:String('<:boucle:1505199788235292772> i-Loading')});
+          }
         }
+        console.log('8');
     
       })
     
@@ -259,24 +266,6 @@ app.listen(port, () => {
               }
     
     });
-    
-    eventEmitter.on('2', async => {
-          console.log('8');
-      console.log(serveur_change_is);
-      if ((s4d.client.guilds.cache.get(serveur_change_is)).channels.cache.find((category) => category.name === (['l-',(new Date().getUTCDate()),'-',((new Date().getUTCMonth())) + 1].join(''))) != null) {
-        (s4d.client.guilds.cache.get(serveur_change_is)).channels.cache.find((category) => category.name === 'log-logoto').send({content:String('<:boucle:1505199788235292772> l-Loading')});
-      }
-      if ((s4d.client.guilds.cache.get(serveur_change_is)).channels.cache.find((category) => category.name === (['n-',(new Date().getUTCDate()),'-',((new Date().getUTCMonth())) + 1].join(''))) != null) {
-        (s4d.client.guilds.cache.get(serveur_change_is)).channels.cache.find((category) => category.name === 'log-logoto').send({content:String('<:boucle:1505199788235292772> n-Loading')});
-      }
-      if ((s4d.client.guilds.cache.get(serveur_change_is)).channels.cache.find((category) => category.name === (['b-',(new Date().getDate()),'-',((new Date().getMonth())) + 1].join(''))) != null) {
-        (s4d.client.guilds.cache.get(serveur_change_is)).channels.cache.find((category) => category.name === 'log-logoto').send({content:String('<:boucle:1505199788235292772> b-Loading')});
-      }
-      if ((s4d.client.guilds.cache.get(serveur_change_is)).channels.cache.find((category) => category.name === (['i-',(new Date().getDate()),'-',((new Date().getMonth())) + 1].join(''))) != null) {
-        (s4d.client.guilds.cache.get(serveur_change_is)).channels.cache.find((category) => category.name === 'log-logoto').send({content:String('<:boucle:1505199788235292772> i-Loading')});
-      }
-    
-      });
     
     s4d.client.on('interactionCreate', async (interaction) => {
               if ((interaction.commandName) == 'setup' && (interaction.guild).channels.cache.find((category) => category.name === 'log-logoto') != null && ((((interaction.member).roles.highest).permissions.has('MANAGE_GUILD')) || (((interaction.member).roles.highest).permissions.has('ADMINISTRATOR')) || (String((interaction.guild).ownerId)) == ((interaction.member).id))) {
