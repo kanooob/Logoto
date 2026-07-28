@@ -1,14 +1,3 @@
-const express = require('express');
-const app = express();
-const port = process.env.PORT || 8080;
-
-app.get('/', (req, res) => {
-  res.send('Bot Logoto en ligne !');
-});
-
-app.listen(port, () => {
-  console.log(`Serveur de vérification activé sur le port ${port}`);
-});
 (async()=>{
     // default imports
     const events = require('events');
@@ -99,20 +88,18 @@ app.listen(port, () => {
     
 
     // blockly code
-    var jour, start_unix, serveur_change_is, fuseau_horaire, serveur, ms_on;
+    var jour, start_unix, fuseau_horaire, serveur_change_is, serveur, ms_on;
     
     
     eventEmitter.on('1', async => {
           s4d.client.guilds.cache.forEach(async (s) =>{
          await delay(Number(5)*1000);
-        if ((s).channels.cache.find((category) => category.name === 'log-logoto') == null) {
-          console.log(('erreur de salon log-logoto dans :' + String((s).id)));
-        } else if (((s).channels.cache.find((category) => category.name === 'log-logoto').topic) == null && ((s).channels.cache.find((category) => category.name === 'log-logoto').topic) == '0') {
-          fuseau_horaire = 24;
-        } else if ((((s).channels.cache.find((category) => category.name === 'log-logoto').topic) || '').startsWith('-' || '')) {
-          fuseau_horaire = 24 - (Number((String(((s).channels.cache.find((category) => category.name === 'log-logoto').topic)).replaceAll('-', String('')))));
-        } else if ((((s).channels.cache.find((category) => category.name === 'log-logoto').topic) || '').startsWith('+' || '')) {
+        if ((s).channels.cache.find((category) => category.name === 'log-logoto') != null && ((((s).channels.cache.find((category) => category.name === 'log-logoto').topic) || '').startsWith('+' || ''))) {
           fuseau_horaire = (Number((String(((s).channels.cache.find((category) => category.name === 'log-logoto').topic)).replaceAll('+', String('')))));
+        } else if ((s).channels.cache.find((category) => category.name === 'log-logoto') != null && ((((s).channels.cache.find((category) => category.name === 'log-logoto').topic) || '').startsWith('-' || ''))) {
+          fuseau_horaire = 24 - (Number((String(((s).channels.cache.find((category) => category.name === 'log-logoto').topic)).replaceAll('-', String('')))));
+        } else {
+          fuseau_horaire = 24;
         }
         if (((new Date().getUTCHours())) + fuseau_horaire == 24 || ((new Date().getUTCHours())) + fuseau_horaire == 0) {
           serveur_change_is = ((s).id);

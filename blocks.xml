@@ -2,12 +2,12 @@
   <variables>
     <variable id="*Mw8:jGBr_D;=DnYIH)A">jour</variable>
     <variable id="({,8$4+1#r^CW)14AY[c">start unix</variable>
-    <variable id="nW/,qtBWyXI[s,clZc|B">serveur change is</variable>
     <variable id="vn)lh!6^%Rc2JT)CYNsZ">fuseau horaire</variable>
+    <variable id="nW/,qtBWyXI[s,clZc|B">serveur change is</variable>
     <variable id="9K|xO~10[*J1oku_/?V#">serveur</variable>
     <variable id="jlm:W3Oxc-yLpT4NI{=*">ms on</variable>
   </variables>
-  <block type="create_event" id="NNSPS4-r~o^_Gyi:7sqX" x="-6729" y="-1900">
+  <block type="create_event" id="NNSPS4-r~o^_Gyi:7sqX" x="-6513" y="-1921">
     <value name="NAME">
       <shadow type="text" id="muvbkECo`a@P?=DM2Uj0">
         <field name="TEXT">1</field>
@@ -24,42 +24,98 @@
             </value>
             <next>
               <block type="controls_if" id="2lnq7h8d*^A;x~^i.)U0">
-                <mutation elseif="3"></mutation>
+                <mutation elseif="1" else="1"></mutation>
                 <value name="IF0">
-                  <block type="logic_compare" id="WHm(PP7):d`JU]3W4)|K">
-                    <field name="OP">EQ</field>
+                  <block type="logic_operation" id="T)$bm59RFmGpZ~wTW)3:">
+                    <field name="OP">AND</field>
                     <value name="A">
-                      <block type="frost_category_get" id="~H6}yu]1d1S}HT8/j-uf">
-                        <field name="SEARCH_TYPE">NAME</field>
-                        <value name="VALUE">
-                          <block type="jg_text_remake_paragraph_quotes" id="p=:`R9Z5[6]C:,u83:,E">
-                            <field name="TEXT">log-logoto</field>
+                      <block type="logic_compare" id="L.`Jg!)S`B_@O3}Ul%.b">
+                        <field name="OP">NEQ</field>
+                        <value name="A">
+                          <block type="frost_category_get" id="][/=z|%)37c$fA3A2*3_">
+                            <field name="SEARCH_TYPE">NAME</field>
+                            <value name="VALUE">
+                              <block type="jg_text_remake_paragraph_quotes" id=";QMI*mg=:qC*Zi;^M[=H">
+                                <field name="TEXT">log-logoto</field>
+                              </block>
+                            </value>
+                            <value name="SERVER">
+                              <block type="s4d_get_all_server_server" id="ueen]w;?Q`TeRCn,0H66"></block>
+                            </value>
                           </block>
                         </value>
-                        <value name="SERVER">
-                          <block type="s4d_get_all_server_server" id="nUQjFBNm()A(yg52Qqh;"></block>
+                        <value name="B">
+                          <block type="logic_null" id="K+Q9[@ri:J/@CXczA.$|"></block>
                         </value>
                       </block>
                     </value>
                     <value name="B">
-                      <block type="logic_null" id="#U8OFZ)@b=be[v*@r$WC"></block>
+                      <block type="s4d_starts_with" id="0osSuW8`Oqn`{6[~4cJ,">
+                        <value name="STRING">
+                          <shadow type="text" id="_VG@69JwloOPDk]4M{=k">
+                            <field name="TEXT">abc</field>
+                          </shadow>
+                          <block type="s4d_channel_topic" id="x9UOB#Gw5[jE`A{?4xVB">
+                            <value name="CHANNEL">
+                              <block type="frost_category_get" id="SAv=E^-*EQo~[36^CB$r">
+                                <field name="SEARCH_TYPE">NAME</field>
+                                <value name="VALUE">
+                                  <block type="jg_text_remake_paragraph_quotes" id="|nG-7-{b;q9OGiF+^t#P">
+                                    <field name="TEXT">log-logoto</field>
+                                  </block>
+                                </value>
+                                <value name="SERVER">
+                                  <block type="s4d_get_all_server_server" id="rs8Re^OLn/@0A9]|D[=;"></block>
+                                </value>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <value name="SUBSTRING">
+                          <shadow type="text" id="{8Fp~f}aTHOuw|kM_4~1">
+                            <field name="TEXT">+</field>
+                          </shadow>
+                        </value>
+                      </block>
                     </value>
                   </block>
                 </value>
                 <statement name="DO0">
-                  <block type="s4d_print" id="PsrJ@Or@qV~lqQaRWJ($">
-                    <value name="PRINT">
-                      <block type="text_join" id="O3^oI[Wlnzt{}0.LEX?G">
-                        <mutation items="2"></mutation>
-                        <value name="ADD0">
-                          <block type="jg_text_remake_paragraph_quotes" id="|OTyf[yIH2*XInF9$bH$">
-                            <field name="TEXT">erreur de salon log-logoto dans :</field>
-                          </block>
-                        </value>
-                        <value name="ADD1">
-                          <block type="s4d_server_id" id="n$}Med}quAZhVp)Ehb}?">
-                            <value name="SERVER">
-                              <block type="s4d_get_all_server_server" id="1%Sj|*d{{W9~CNlRAv9G"></block>
+                  <block type="variables_set" id="/IU!S+DjWZ/va(aE9urE">
+                    <field name="VAR" id="vn)lh!6^%Rc2JT)CYNsZ">fuseau horaire</field>
+                    <value name="VALUE">
+                      <block type="s4d_string_to_number" id="|(O;#Ec@^HRR(%//PR5A">
+                        <value name="STRING">
+                          <block type="jg_text_remake_in_text_replace_with" id="J?Mc6sb.X-~BwyJjcecq">
+                            <value name="ORIGIN">
+                              <shadow type="text" id="0]_V=Cl;J={RyfhM%qg9">
+                                <field name="TEXT">aaa</field>
+                              </shadow>
+                              <block type="s4d_channel_topic" id="yV$c{{!up=FpARU6hb(F">
+                                <value name="CHANNEL">
+                                  <block type="frost_category_get" id="@Ud[NW+HZFQ]SerK0{d*">
+                                    <field name="SEARCH_TYPE">NAME</field>
+                                    <value name="VALUE">
+                                      <block type="jg_text_remake_paragraph_quotes" id="LyB93RI}P?y]ICfQoIGM">
+                                        <field name="TEXT">log-logoto</field>
+                                      </block>
+                                    </value>
+                                    <value name="SERVER">
+                                      <block type="s4d_get_all_server_server" id="PG9cKFnJd;[7nz#QGv!t"></block>
+                                    </value>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                            <value name="REPLACE">
+                              <shadow type="text" id="Svj=$X-{ZaP+LkP2mtZI">
+                                <field name="TEXT">+</field>
+                              </shadow>
+                            </value>
+                            <value name="WITH">
+                              <shadow type="text" id="2;0MYq7L~v9[Y|v%p~pg">
+                                <field name="TEXT"></field>
+                              </shadow>
                             </value>
                           </block>
                         </value>
@@ -68,102 +124,61 @@
                   </block>
                 </statement>
                 <value name="IF1">
-                  <block type="logic_operation" id="RO?2Z-qZ.RhU_m..aOSu">
+                  <block type="logic_operation" id="#TnGERI3EGHuPA1%lkq|">
                     <field name="OP">AND</field>
                     <value name="A">
-                      <block type="logic_compare" id="8xzO,kc:E5Oop6GT3=D;">
-                        <field name="OP">EQ</field>
+                      <block type="logic_compare" id="WHm(PP7):d`JU]3W4)|K">
+                        <field name="OP">NEQ</field>
                         <value name="A">
-                          <block type="s4d_channel_topic" id="Vkmgdm[m{rvpQ*Fv,o~!">
-                            <value name="CHANNEL">
-                              <block type="frost_category_get" id="Mh9PDTTFb^q+sTh=crUO">
-                                <field name="SEARCH_TYPE">NAME</field>
-                                <value name="VALUE">
-                                  <block type="jg_text_remake_paragraph_quotes" id="(DH.=1V-:,oQDYdzidpD">
-                                    <field name="TEXT">log-logoto</field>
-                                  </block>
-                                </value>
-                                <value name="SERVER">
-                                  <block type="s4d_get_all_server_server" id="]$DI=jgY:k^b?4KK?!|)"></block>
-                                </value>
+                          <block type="frost_category_get" id="~H6}yu]1d1S}HT8/j-uf">
+                            <field name="SEARCH_TYPE">NAME</field>
+                            <value name="VALUE">
+                              <block type="jg_text_remake_paragraph_quotes" id="p=:`R9Z5[6]C:,u83:,E">
+                                <field name="TEXT">log-logoto</field>
                               </block>
+                            </value>
+                            <value name="SERVER">
+                              <block type="s4d_get_all_server_server" id="nUQjFBNm()A(yg52Qqh;"></block>
                             </value>
                           </block>
                         </value>
                         <value name="B">
-                          <block type="logic_null" id="%xY.g|me`i+qQqK0Dv3("></block>
+                          <block type="logic_null" id="#U8OFZ)@b=be[v*@r$WC"></block>
                         </value>
                       </block>
                     </value>
                     <value name="B">
-                      <block type="logic_compare" id="%P|Gh8R9lW%F~(9%MI[r">
-                        <field name="OP">EQ</field>
-                        <value name="A">
-                          <block type="s4d_channel_topic" id="TvEOxNzmxkdF(l[R=q_q">
+                      <block type="s4d_starts_with" id="Zl_k.(IiXCUqb?s,%Zi6">
+                        <value name="STRING">
+                          <shadow type="text" id="_VG@69JwloOPDk]4M{=k">
+                            <field name="TEXT">abc</field>
+                          </shadow>
+                          <block type="s4d_channel_topic" id=")stRnTs=;:?tbIx^Bk0p">
                             <value name="CHANNEL">
-                              <block type="frost_category_get" id="ik,N$+!;5|i%X/9%Dry^">
+                              <block type="frost_category_get" id="Zk)M%Ur4{YE[}?@me/ip">
                                 <field name="SEARCH_TYPE">NAME</field>
                                 <value name="VALUE">
-                                  <block type="jg_text_remake_paragraph_quotes" id="JBnX?U*Z[V=-x}jtaJ-q">
+                                  <block type="jg_text_remake_paragraph_quotes" id="n(/YK1Kfk8+AK}YtC5/M">
                                     <field name="TEXT">log-logoto</field>
                                   </block>
                                 </value>
                                 <value name="SERVER">
-                                  <block type="s4d_get_all_server_server" id="`]NspXKQ8o1tb8b[`*5k"></block>
+                                  <block type="s4d_get_all_server_server" id="p*k/Bh{uO_Lc^HOVjc+}"></block>
                                 </value>
                               </block>
                             </value>
                           </block>
                         </value>
-                        <value name="B">
-                          <block type="jg_text_remake_paragraph_quotes" id="^#_enO~}=jYvJ+1Ufn+X">
-                            <field name="TEXT">0</field>
-                          </block>
+                        <value name="SUBSTRING">
+                          <shadow type="text" id="OckPGAgsMv7YAUTAr5bi">
+                            <field name="TEXT">-</field>
+                          </shadow>
                         </value>
                       </block>
                     </value>
                   </block>
                 </value>
                 <statement name="DO1">
-                  <block type="variables_set" id="_H53/Rn{px!,GG{(SIDR">
-                    <field name="VAR" id="vn)lh!6^%Rc2JT)CYNsZ">fuseau horaire</field>
-                    <value name="VALUE">
-                      <block type="math_number" id="]zf]aG[!P6p+%,qX1,)M">
-                        <field name="NUM">24</field>
-                      </block>
-                    </value>
-                  </block>
-                </statement>
-                <value name="IF2">
-                  <block type="s4d_starts_with" id="Zl_k.(IiXCUqb?s,%Zi6">
-                    <value name="STRING">
-                      <shadow type="text" id="_VG@69JwloOPDk]4M{=k">
-                        <field name="TEXT">abc</field>
-                      </shadow>
-                      <block type="s4d_channel_topic" id=")stRnTs=;:?tbIx^Bk0p">
-                        <value name="CHANNEL">
-                          <block type="frost_category_get" id="Zk)M%Ur4{YE[}?@me/ip">
-                            <field name="SEARCH_TYPE">NAME</field>
-                            <value name="VALUE">
-                              <block type="jg_text_remake_paragraph_quotes" id="n(/YK1Kfk8+AK}YtC5/M">
-                                <field name="TEXT">log-logoto</field>
-                              </block>
-                            </value>
-                            <value name="SERVER">
-                              <block type="s4d_get_all_server_server" id="p*k/Bh{uO_Lc^HOVjc+}"></block>
-                            </value>
-                          </block>
-                        </value>
-                      </block>
-                    </value>
-                    <value name="SUBSTRING">
-                      <shadow type="text" id="OckPGAgsMv7YAUTAr5bi">
-                        <field name="TEXT">-</field>
-                      </shadow>
-                    </value>
-                  </block>
-                </value>
-                <statement name="DO2">
                   <block type="variables_set" id="lT6X_W`nJusK`HOs.~-1">
                     <field name="VAR" id="vn)lh!6^%Rc2JT)CYNsZ">fuseau horaire</field>
                     <value name="VALUE">
@@ -219,74 +234,12 @@
                     </value>
                   </block>
                 </statement>
-                <value name="IF3">
-                  <block type="s4d_starts_with" id="0osSuW8`Oqn`{6[~4cJ,">
-                    <value name="STRING">
-                      <shadow type="text" id="_VG@69JwloOPDk]4M{=k">
-                        <field name="TEXT">abc</field>
-                      </shadow>
-                      <block type="s4d_channel_topic" id="x9UOB#Gw5[jE`A{?4xVB">
-                        <value name="CHANNEL">
-                          <block type="frost_category_get" id="SAv=E^-*EQo~[36^CB$r">
-                            <field name="SEARCH_TYPE">NAME</field>
-                            <value name="VALUE">
-                              <block type="jg_text_remake_paragraph_quotes" id="|nG-7-{b;q9OGiF+^t#P">
-                                <field name="TEXT">log-logoto</field>
-                              </block>
-                            </value>
-                            <value name="SERVER">
-                              <block type="s4d_get_all_server_server" id="rs8Re^OLn/@0A9]|D[=;"></block>
-                            </value>
-                          </block>
-                        </value>
-                      </block>
-                    </value>
-                    <value name="SUBSTRING">
-                      <shadow type="text" id="{8Fp~f}aTHOuw|kM_4~1">
-                        <field name="TEXT">+</field>
-                      </shadow>
-                    </value>
-                  </block>
-                </value>
-                <statement name="DO3">
-                  <block type="variables_set" id="/IU!S+DjWZ/va(aE9urE">
+                <statement name="ELSE">
+                  <block type="variables_set" id="_H53/Rn{px!,GG{(SIDR">
                     <field name="VAR" id="vn)lh!6^%Rc2JT)CYNsZ">fuseau horaire</field>
                     <value name="VALUE">
-                      <block type="s4d_string_to_number" id="|(O;#Ec@^HRR(%//PR5A">
-                        <value name="STRING">
-                          <block type="jg_text_remake_in_text_replace_with" id="J?Mc6sb.X-~BwyJjcecq">
-                            <value name="ORIGIN">
-                              <shadow type="text" id="0]_V=Cl;J={RyfhM%qg9">
-                                <field name="TEXT">aaa</field>
-                              </shadow>
-                              <block type="s4d_channel_topic" id="yV$c{{!up=FpARU6hb(F">
-                                <value name="CHANNEL">
-                                  <block type="frost_category_get" id="@Ud[NW+HZFQ]SerK0{d*">
-                                    <field name="SEARCH_TYPE">NAME</field>
-                                    <value name="VALUE">
-                                      <block type="jg_text_remake_paragraph_quotes" id="LyB93RI}P?y]ICfQoIGM">
-                                        <field name="TEXT">log-logoto</field>
-                                      </block>
-                                    </value>
-                                    <value name="SERVER">
-                                      <block type="s4d_get_all_server_server" id="PG9cKFnJd;[7nz#QGv!t"></block>
-                                    </value>
-                                  </block>
-                                </value>
-                              </block>
-                            </value>
-                            <value name="REPLACE">
-                              <shadow type="text" id="Svj=$X-{ZaP+LkP2mtZI">
-                                <field name="TEXT">+</field>
-                              </shadow>
-                            </value>
-                            <value name="WITH">
-                              <shadow type="text" id="2;0MYq7L~v9[Y|v%p~pg">
-                                <field name="TEXT"></field>
-                              </shadow>
-                            </value>
-                          </block>
-                        </value>
+                      <block type="math_number" id="]zf]aG[!P6p+%,qX1,)M">
+                        <field name="NUM">24</field>
                       </block>
                     </value>
                   </block>
