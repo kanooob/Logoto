@@ -375,7 +375,7 @@
                                         <field name="OP">EQ</field>
                                         <value name="A">
                                           <block type="math_arithmetic" id="]J@6gY{d/Cr5@9ymm9ZX">
-                                            <field name="OP">ADD</field>
+                                            <field name="OP">MINUS</field>
                                             <value name="A">
                                               <shadow type="math_number" id="Pi{p+_o[yoUlYFui]sCA">
                                                 <field name="NUM">1</field>
