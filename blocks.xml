@@ -33,7 +33,11 @@
                   <block type="variables_set" id="q,,yeGeg6@;pOf,6Ni]0">
                     <field name="VAR" id="nW/,qtBWyXI[s,clZc|B">serveur change is</field>
                     <value name="VALUE">
-                      <block type="s4d_get_all_server_server" id="e+k7v5w@A6nA8-czy*Mr"></block>
+                      <block type="s4d_server_id" id="iMh9GR+nAI@C,sW@2LmS">
+                        <value name="SERVER">
+                          <block type="s4d_get_all_server_server" id="e+k7v5w@A6nA8-czy*Mr"></block>
+                        </value>
+                      </block>
                     </value>
                     <next>
                       <block type="s4d_print" id="W1|-?dra!2|52LXF=7xp">
@@ -1004,7 +1008,7 @@
       </block>
     </statement>
   </block>
-  <block type="create_event" id=".PVCU{xSt62)Ws6;MjeT" x="-6763" y="-139">
+  <block type="create_event" id=".PVCU{xSt62)Ws6;MjeT" x="-5837" y="30">
     <value name="NAME">
       <shadow type="text" id="el8[Y,FWQ_ethvYM(RaU">
         <field name="TEXT">2</field>
@@ -1064,8 +1068,13 @@
                       </block>
                     </value>
                     <value name="SERVER">
-                      <block type="variables_get" id="^uFp7o{|t2#gZd#WRS/N">
-                        <field name="VAR" id="nW/,qtBWyXI[s,clZc|B">serveur change is</field>
+                      <block type="s4d_get_server" id="#O/UY{`n*BuP}-6LRXQs">
+                        <field name="SEARCH_TYPE">ID</field>
+                        <value name="VALUE">
+                          <block type="variables_get" id="!^2^c~X?0t6Be5prEjKg">
+                            <field name="VAR" id="nW/,qtBWyXI[s,clZc|B">serveur change is</field>
+                          </block>
+                        </value>
                       </block>
                     </value>
                   </block>
@@ -1091,8 +1100,13 @@
                       </block>
                     </value>
                     <value name="SERVER">
-                      <block type="variables_get" id="BHc2:kp7yTy;fG9u3.R,">
-                        <field name="VAR" id="nW/,qtBWyXI[s,clZc|B">serveur change is</field>
+                      <block type="s4d_get_server" id="OSVN5ugDnlXb+93jhWMq">
+                        <field name="SEARCH_TYPE">ID</field>
+                        <value name="VALUE">
+                          <block type="variables_get" id="BHc2:kp7yTy;fG9u3.R,">
+                            <field name="VAR" id="nW/,qtBWyXI[s,clZc|B">serveur change is</field>
+                          </block>
+                        </value>
                       </block>
                     </value>
                   </block>
@@ -1146,8 +1160,13 @@
                           </block>
                         </value>
                         <value name="SERVER">
-                          <block type="variables_get" id="qe!CC5$MD:eT%yPeIdEs">
-                            <field name="VAR" id="nW/,qtBWyXI[s,clZc|B">serveur change is</field>
+                          <block type="s4d_get_server" id="l+aw+jNnt|yfwnh[Ps~=">
+                            <field name="SEARCH_TYPE">ID</field>
+                            <value name="VALUE">
+                              <block type="variables_get" id="i7H;BWMFWb%,2)g9xomU">
+                                <field name="VAR" id="nW/,qtBWyXI[s,clZc|B">serveur change is</field>
+                              </block>
+                            </value>
                           </block>
                         </value>
                       </block>
@@ -1173,8 +1192,13 @@
                           </block>
                         </value>
                         <value name="SERVER">
-                          <block type="variables_get" id="cs2uIl?%t_]%(z`ayolb">
-                            <field name="VAR" id="nW/,qtBWyXI[s,clZc|B">serveur change is</field>
+                          <block type="s4d_get_server" id="G[6^vDtL7T+z3,bYpOq5">
+                            <field name="SEARCH_TYPE">ID</field>
+                            <value name="VALUE">
+                              <block type="variables_get" id="F+Xe`)]J9F`JGm*sKGgj">
+                                <field name="VAR" id="nW/,qtBWyXI[s,clZc|B">serveur change is</field>
+                              </block>
+                            </value>
                           </block>
                         </value>
                       </block>
@@ -1228,8 +1252,13 @@
                               </block>
                             </value>
                             <value name="SERVER">
-                              <block type="variables_get" id="y*=Gp2a%J#JNt=B*=YIq">
-                                <field name="VAR" id="nW/,qtBWyXI[s,clZc|B">serveur change is</field>
+                              <block type="s4d_get_server" id="?~`p$bbA;YrAg9AfGS}J">
+                                <field name="SEARCH_TYPE">ID</field>
+                                <value name="VALUE">
+                                  <block type="variables_get" id="==-M*@;A::plM!^R0QkQ">
+                                    <field name="VAR" id="nW/,qtBWyXI[s,clZc|B">serveur change is</field>
+                                  </block>
+                                </value>
                               </block>
                             </value>
                           </block>
@@ -1255,8 +1284,13 @@
                               </block>
                             </value>
                             <value name="SERVER">
-                              <block type="variables_get" id="~i[$xQ+`$2Gp3n:{pi${">
-                                <field name="VAR" id="nW/,qtBWyXI[s,clZc|B">serveur change is</field>
+                              <block type="s4d_get_server" id="LJviW],:drx#_[#/+3Hm">
+                                <field name="SEARCH_TYPE">ID</field>
+                                <value name="VALUE">
+                                  <block type="variables_get" id="1|BK]2LGUk7or4+f.Z+?">
+                                    <field name="VAR" id="nW/,qtBWyXI[s,clZc|B">serveur change is</field>
+                                  </block>
+                                </value>
                               </block>
                             </value>
                           </block>
@@ -1310,8 +1344,13 @@
                                   </block>
                                 </value>
                                 <value name="SERVER">
-                                  <block type="variables_get" id="(o;YkD=kttqZ|;L|RBRV">
-                                    <field name="VAR" id="nW/,qtBWyXI[s,clZc|B">serveur change is</field>
+                                  <block type="s4d_get_server" id="tC/-RUT3e?ez*jD/;9N=">
+                                    <field name="SEARCH_TYPE">ID</field>
+                                    <value name="VALUE">
+                                      <block type="variables_get" id="N7n),i?:oAO463~x1zJ}">
+                                        <field name="VAR" id="nW/,qtBWyXI[s,clZc|B">serveur change is</field>
+                                      </block>
+                                    </value>
                                   </block>
                                 </value>
                               </block>
@@ -1337,8 +1376,13 @@
                                   </block>
                                 </value>
                                 <value name="SERVER">
-                                  <block type="variables_get" id="2y7.:~)^,6%KCkv{R:dm">
-                                    <field name="VAR" id="nW/,qtBWyXI[s,clZc|B">serveur change is</field>
+                                  <block type="s4d_get_server" id="LAJEzE?bOK1zOK,9`dT4">
+                                    <field name="SEARCH_TYPE">ID</field>
+                                    <value name="VALUE">
+                                      <block type="variables_get" id="Q03w_:P6lR[=EDprpc~p">
+                                        <field name="VAR" id="nW/,qtBWyXI[s,clZc|B">serveur change is</field>
+                                      </block>
+                                    </value>
                                   </block>
                                 </value>
                               </block>
