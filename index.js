@@ -1,14 +1,3 @@
-const express = require('express');
-const app = express();
-const port = process.env.PORT || 8080;
-
-app.get('/', (req, res) => {
-  res.send('Bot Logoto en ligne !');
-});
-
-app.listen(port, () => {
-  console.log(`Serveur de vérification activé sur le port ${port}`);
-});
 (async()=>{
     // default imports
     const events = require('events');
@@ -99,7 +88,7 @@ app.listen(port, () => {
     
 
     // blockly code
-    var jour, start_unix, serveur, ms_on, fuseau_horaire, serveur_change_is;
+    var heure, start_unix, fuseau_horaire, serveur, ms_on;
     
     function mathRandomInt(a, b) {
       if (a > b) {
@@ -113,26 +102,15 @@ app.listen(port, () => {
     
     
     eventEmitter.on('1', async => {
-          console.log('1');
-      s4d.client.guilds.cache.forEach(async (s) =>{
+          s4d.client.guilds.cache.forEach(async (s) =>{
          await delay(Number((mathRandomInt(5, 10)))*1000);
-        console.log('2');
         if ((s).channels.cache.find((category) => category.name === 'log-logoto') != null && ((((s).channels.cache.find((category) => category.name === 'log-logoto').topic) || '').startsWith('+' || ''))) {
-          console.log('3222222');
-          console.log(((s).id));
           fuseau_horaire = (Number((String(((s).channels.cache.find((category) => category.name === 'log-logoto').topic)).replaceAll('+', String('')))));
-          console.log((Number((String(((s).channels.cache.find((category) => category.name === 'log-logoto').topic)).replaceAll('+', String(''))))));
-          serveur_change_is = ((s).id);
         } else if ((s).channels.cache.find((category) => category.name === 'log-logoto') != null && ((((s).channels.cache.find((category) => category.name === 'log-logoto').topic) || '').startsWith('-' || ''))) {
-          console.log(((s).id));
-          console.log('4');
           fuseau_horaire = 24 - (Number((String(((s).channels.cache.find((category) => category.name === 'log-logoto').topic)).replaceAll('-', String('')))));
         } else {
-          console.log(((s).id));
-          console.log('5');
           fuseau_horaire = 24;
         }
-        console.log('6');
         if (((new Date().getUTCHours())) + fuseau_horaire == 24 || ((new Date().getUTCHours())) - fuseau_horaire == 0) {
           if ((s).channels.cache.find((category) => category.name === (['l-',(new Date().getUTCDate()),'-',((new Date().getUTCMonth())) + 1].join(''))) != null) {
             (s).channels.cache.find((category) => category.name === 'log-logoto').send({content:String('<:boucle:1505199788235292772> l-Loading')});
@@ -147,7 +125,6 @@ app.listen(port, () => {
             (s).channels.cache.find((category) => category.name === 'log-logoto').send({content:String('<:boucle:1505199788235292772> i-Loading')});
           }
         }
-        console.log('8');
     
       })
     
@@ -237,12 +214,12 @@ app.listen(port, () => {
         });
     
     s4d.client.on('ready', async () => {
-      jour = ((new Date().getDate()));
+      heure = ((new Date().getUTCHours()));
       start_unix = (Math.floor(new Date().getTime()/1000));
-      if (((new Date().getHours())) < 4) {
-        jour = ((new Date().getDate())) - 1;
-      }
       s4d.client.channels.cache.get('1413899996691955755').send({content:String('Démarrage du bot...')});
+      if (((new Date().getUTCMinutes())) < 10) {
+        heure = ((new Date().getUTCHours())) - 1;
+      }
     
               while(s4d.client && s4d.client.token) {
                   await delay(50);
@@ -266,8 +243,8 @@ app.listen(port, () => {
               });
             s4d.client.user.setPresence({status: "online",activities:[{name:([s4d.client.users.cache.size,' members, ',s4d.client.guilds.cache.size,' servers.'].join('')),type:"WATCHING"}]});
         await delay(Number(180)*1000);
-        if (jour != ((new Date().getDate()))) {
-          jour = ((new Date().getDate()));
+        if (heure != ((new Date().getUTCHours()))) {
+          heure = ((new Date().getUTCHours()));
           eventEmitter.emit('1');
         }
         ms_on = (s4d.client.uptime);

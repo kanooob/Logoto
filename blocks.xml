@@ -1,11 +1,10 @@
 <xml xmlns="https://developers.google.com/blockly/xml">
   <variables>
-    <variable id="*Mw8:jGBr_D;=DnYIH)A">jour</variable>
+    <variable id="*Mw8:jGBr_D;=DnYIH)A">heure</variable>
     <variable id="({,8$4+1#r^CW)14AY[c">start unix</variable>
+    <variable id="vn)lh!6^%Rc2JT)CYNsZ">fuseau horaire</variable>
     <variable id="9K|xO~10[*J1oku_/?V#">serveur</variable>
     <variable id="jlm:W3Oxc-yLpT4NI{=*">ms on</variable>
-    <variable id="vn)lh!6^%Rc2JT)CYNsZ">fuseau horaire</variable>
-    <variable id="nW/,qtBWyXI[s,clZc|B">serveur change is</variable>
   </variables>
   <block type="create_event" id="NNSPS4-r~o^_Gyi:7sqX" x="-6099" y="-2642">
     <value name="NAME">
@@ -14,491 +13,590 @@
       </shadow>
     </value>
     <statement name="THEN">
-      <block type="s4d_print" id="](IL3uz8UvFn39)%imth">
-        <value name="PRINT">
-          <block type="jg_text_remake_paragraph_quotes" id="x;jH(hotFW|Td~/r:UOH">
-            <field name="TEXT">1</field>
-          </block>
-        </value>
-        <next>
-          <block type="s4d_get_all_server" id="eB`#Xi{]17HT2TfsS7nc">
-            <statement name="THEN">
-              <block type="s4d_wait_seconds" id="1@+GDydr*:Qo1V4~fO:F">
-                <value name="TIME">
-                  <shadow type="math_number" id="I_!@ZfeE{8B)*k]zEx6k">
+      <block type="s4d_get_all_server" id="eB`#Xi{]17HT2TfsS7nc">
+        <statement name="THEN">
+          <block type="s4d_wait_seconds" id="1@+GDydr*:Qo1V4~fO:F">
+            <value name="TIME">
+              <shadow type="math_number" id="I_!@ZfeE{8B)*k]zEx6k">
+                <field name="NUM">5</field>
+              </shadow>
+              <block type="math_random_int" id="/@tszCaqK]TrY,8|vF{X">
+                <value name="FROM">
+                  <shadow type="math_number" id="U,i`RGDYk@=udr3el$qA">
                     <field name="NUM">5</field>
                   </shadow>
-                  <block type="math_random_int" id="/@tszCaqK]TrY,8|vF{X">
-                    <value name="FROM">
-                      <shadow type="math_number" id="U,i`RGDYk@=udr3el$qA">
-                        <field name="NUM">5</field>
-                      </shadow>
+                </value>
+                <value name="TO">
+                  <shadow type="math_number" id="?(y4$3y:_g~x$N}!mg5=">
+                    <field name="NUM">10</field>
+                  </shadow>
+                </value>
+              </block>
+            </value>
+            <next>
+              <block type="controls_if" id="2lnq7h8d*^A;x~^i.)U0">
+                <mutation elseif="1" else="1"></mutation>
+                <value name="IF0">
+                  <block type="logic_operation" id="T)$bm59RFmGpZ~wTW)3:">
+                    <field name="OP">AND</field>
+                    <value name="A">
+                      <block type="logic_compare" id="L.`Jg!)S`B_@O3}Ul%.b">
+                        <field name="OP">NEQ</field>
+                        <value name="A">
+                          <block type="frost_category_get" id="][/=z|%)37c$fA3A2*3_">
+                            <field name="SEARCH_TYPE">NAME</field>
+                            <value name="VALUE">
+                              <block type="jg_text_remake_paragraph_quotes" id=";QMI*mg=:qC*Zi;^M[=H">
+                                <field name="TEXT">log-logoto</field>
+                              </block>
+                            </value>
+                            <value name="SERVER">
+                              <block type="s4d_get_all_server_server" id="ueen]w;?Q`TeRCn,0H66"></block>
+                            </value>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <block type="logic_null" id="K+Q9[@ri:J/@CXczA.$|"></block>
+                        </value>
+                      </block>
                     </value>
-                    <value name="TO">
-                      <shadow type="math_number" id="?(y4$3y:_g~x$N}!mg5=">
-                        <field name="NUM">10</field>
-                      </shadow>
+                    <value name="B">
+                      <block type="s4d_starts_with" id="0osSuW8`Oqn`{6[~4cJ,">
+                        <value name="STRING">
+                          <shadow type="text" id="_VG@69JwloOPDk]4M{=k">
+                            <field name="TEXT">abc</field>
+                          </shadow>
+                          <block type="s4d_channel_topic" id="x9UOB#Gw5[jE`A{?4xVB">
+                            <value name="CHANNEL">
+                              <block type="frost_category_get" id="SAv=E^-*EQo~[36^CB$r">
+                                <field name="SEARCH_TYPE">NAME</field>
+                                <value name="VALUE">
+                                  <block type="jg_text_remake_paragraph_quotes" id="|nG-7-{b;q9OGiF+^t#P">
+                                    <field name="TEXT">log-logoto</field>
+                                  </block>
+                                </value>
+                                <value name="SERVER">
+                                  <block type="s4d_get_all_server_server" id="rs8Re^OLn/@0A9]|D[=;"></block>
+                                </value>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <value name="SUBSTRING">
+                          <shadow type="text" id="{8Fp~f}aTHOuw|kM_4~1">
+                            <field name="TEXT">+</field>
+                          </shadow>
+                        </value>
+                      </block>
                     </value>
                   </block>
                 </value>
-                <next>
-                  <block type="s4d_print" id="W1|-?dra!2|52LXF=7xp">
-                    <value name="PRINT">
-                      <block type="jg_text_remake_paragraph_quotes" id="IsmAQlvSq}JU56gB^`fC">
-                        <field name="TEXT">2</field>
-                      </block>
-                    </value>
-                    <next>
-                      <block type="controls_if" id="2lnq7h8d*^A;x~^i.)U0">
-                        <mutation elseif="1" else="1"></mutation>
-                        <value name="IF0">
-                          <block type="logic_operation" id="T)$bm59RFmGpZ~wTW)3:">
-                            <field name="OP">AND</field>
-                            <value name="A">
-                              <block type="logic_compare" id="L.`Jg!)S`B_@O3}Ul%.b">
-                                <field name="OP">NEQ</field>
-                                <value name="A">
-                                  <block type="frost_category_get" id="][/=z|%)37c$fA3A2*3_">
+                <statement name="DO0">
+                  <block type="variables_set" id="/IU!S+DjWZ/va(aE9urE">
+                    <field name="VAR" id="vn)lh!6^%Rc2JT)CYNsZ">fuseau horaire</field>
+                    <value name="VALUE">
+                      <block type="s4d_string_to_number" id="|(O;#Ec@^HRR(%//PR5A">
+                        <value name="STRING">
+                          <block type="jg_text_remake_in_text_replace_with" id="J?Mc6sb.X-~BwyJjcecq">
+                            <value name="ORIGIN">
+                              <shadow type="text" id="0]_V=Cl;J={RyfhM%qg9">
+                                <field name="TEXT">aaa</field>
+                              </shadow>
+                              <block type="s4d_channel_topic" id="yV$c{{!up=FpARU6hb(F">
+                                <value name="CHANNEL">
+                                  <block type="frost_category_get" id="@Ud[NW+HZFQ]SerK0{d*">
                                     <field name="SEARCH_TYPE">NAME</field>
                                     <value name="VALUE">
-                                      <block type="jg_text_remake_paragraph_quotes" id=";QMI*mg=:qC*Zi;^M[=H">
+                                      <block type="jg_text_remake_paragraph_quotes" id="LyB93RI}P?y]ICfQoIGM">
                                         <field name="TEXT">log-logoto</field>
                                       </block>
                                     </value>
                                     <value name="SERVER">
-                                      <block type="s4d_get_all_server_server" id="ueen]w;?Q`TeRCn,0H66"></block>
+                                      <block type="s4d_get_all_server_server" id="PG9cKFnJd;[7nz#QGv!t"></block>
                                     </value>
                                   </block>
                                 </value>
-                                <value name="B">
-                                  <block type="logic_null" id="K+Q9[@ri:J/@CXczA.$|"></block>
+                              </block>
+                            </value>
+                            <value name="REPLACE">
+                              <shadow type="text" id="Svj=$X-{ZaP+LkP2mtZI">
+                                <field name="TEXT">+</field>
+                              </shadow>
+                            </value>
+                            <value name="WITH">
+                              <shadow type="text" id="2;0MYq7L~v9[Y|v%p~pg">
+                                <field name="TEXT"></field>
+                              </shadow>
+                            </value>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                  </block>
+                </statement>
+                <value name="IF1">
+                  <block type="logic_operation" id="#TnGERI3EGHuPA1%lkq|">
+                    <field name="OP">AND</field>
+                    <value name="A">
+                      <block type="logic_compare" id="WHm(PP7):d`JU]3W4)|K">
+                        <field name="OP">NEQ</field>
+                        <value name="A">
+                          <block type="frost_category_get" id="~H6}yu]1d1S}HT8/j-uf">
+                            <field name="SEARCH_TYPE">NAME</field>
+                            <value name="VALUE">
+                              <block type="jg_text_remake_paragraph_quotes" id="p=:`R9Z5[6]C:,u83:,E">
+                                <field name="TEXT">log-logoto</field>
+                              </block>
+                            </value>
+                            <value name="SERVER">
+                              <block type="s4d_get_all_server_server" id="nUQjFBNm()A(yg52Qqh;"></block>
+                            </value>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <block type="logic_null" id="#U8OFZ)@b=be[v*@r$WC"></block>
+                        </value>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block type="s4d_starts_with" id="Zl_k.(IiXCUqb?s,%Zi6">
+                        <value name="STRING">
+                          <shadow type="text" id="_VG@69JwloOPDk]4M{=k">
+                            <field name="TEXT">abc</field>
+                          </shadow>
+                          <block type="s4d_channel_topic" id=")stRnTs=;:?tbIx^Bk0p">
+                            <value name="CHANNEL">
+                              <block type="frost_category_get" id="Zk)M%Ur4{YE[}?@me/ip">
+                                <field name="SEARCH_TYPE">NAME</field>
+                                <value name="VALUE">
+                                  <block type="jg_text_remake_paragraph_quotes" id="n(/YK1Kfk8+AK}YtC5/M">
+                                    <field name="TEXT">log-logoto</field>
+                                  </block>
+                                </value>
+                                <value name="SERVER">
+                                  <block type="s4d_get_all_server_server" id="p*k/Bh{uO_Lc^HOVjc+}"></block>
                                 </value>
                               </block>
                             </value>
-                            <value name="B">
-                              <block type="s4d_starts_with" id="0osSuW8`Oqn`{6[~4cJ,">
-                                <value name="STRING">
-                                  <shadow type="text" id="_VG@69JwloOPDk]4M{=k">
-                                    <field name="TEXT">abc</field>
+                          </block>
+                        </value>
+                        <value name="SUBSTRING">
+                          <shadow type="text" id="OckPGAgsMv7YAUTAr5bi">
+                            <field name="TEXT">-</field>
+                          </shadow>
+                        </value>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <statement name="DO1">
+                  <block type="variables_set" id="lT6X_W`nJusK`HOs.~-1">
+                    <field name="VAR" id="vn)lh!6^%Rc2JT)CYNsZ">fuseau horaire</field>
+                    <value name="VALUE">
+                      <block type="math_arithmetic" id="hwjh4|8Bd4OcUiC/=W7t">
+                        <field name="OP">MINUS</field>
+                        <value name="A">
+                          <shadow type="math_number" id="K4)5^3D_dE#Klfd4_GTT">
+                            <field name="NUM">24</field>
+                          </shadow>
+                        </value>
+                        <value name="B">
+                          <shadow type="math_number" id="K+7~O#85G1alT@nze.Hq">
+                            <field name="NUM">1</field>
+                          </shadow>
+                          <block type="s4d_string_to_number" id="jc8sh2ox)1v-h|!1u30B">
+                            <value name="STRING">
+                              <block type="jg_text_remake_in_text_replace_with" id="?_#S=udoy3cMlT|$jJI!">
+                                <value name="ORIGIN">
+                                  <shadow type="text" id="0]_V=Cl;J={RyfhM%qg9">
+                                    <field name="TEXT">aaa</field>
                                   </shadow>
-                                  <block type="s4d_channel_topic" id="x9UOB#Gw5[jE`A{?4xVB">
+                                  <block type="s4d_channel_topic" id="/U]SR+P2)C:$V4J#aYuF">
                                     <value name="CHANNEL">
-                                      <block type="frost_category_get" id="SAv=E^-*EQo~[36^CB$r">
+                                      <block type="frost_category_get" id="V#%!-oZ44px=`3Q-P=n:">
                                         <field name="SEARCH_TYPE">NAME</field>
                                         <value name="VALUE">
-                                          <block type="jg_text_remake_paragraph_quotes" id="|nG-7-{b;q9OGiF+^t#P">
+                                          <block type="jg_text_remake_paragraph_quotes" id="*S:HR*Ci3hWP^{O9`j^`">
                                             <field name="TEXT">log-logoto</field>
                                           </block>
                                         </value>
                                         <value name="SERVER">
-                                          <block type="s4d_get_all_server_server" id="rs8Re^OLn/@0A9]|D[=;"></block>
+                                          <block type="s4d_get_all_server_server" id="dzGtki(mUY[KC)!kAfAQ"></block>
                                         </value>
                                       </block>
                                     </value>
                                   </block>
                                 </value>
-                                <value name="SUBSTRING">
-                                  <shadow type="text" id="{8Fp~f}aTHOuw|kM_4~1">
-                                    <field name="TEXT">+</field>
+                                <value name="REPLACE">
+                                  <shadow type="text" id="jmUU%4C@XP`M[-Y1sm=:">
+                                    <field name="TEXT">-</field>
+                                  </shadow>
+                                </value>
+                                <value name="WITH">
+                                  <shadow type="text" id="~G,GD4mnX]2)U$:M;/;D">
+                                    <field name="TEXT"></field>
                                   </shadow>
                                 </value>
                               </block>
+                            </value>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                  </block>
+                </statement>
+                <statement name="ELSE">
+                  <block type="variables_set" id="_H53/Rn{px!,GG{(SIDR">
+                    <field name="VAR" id="vn)lh!6^%Rc2JT)CYNsZ">fuseau horaire</field>
+                    <value name="VALUE">
+                      <block type="math_number" id="]zf]aG[!P6p+%,qX1,)M">
+                        <field name="NUM">24</field>
+                      </block>
+                    </value>
+                  </block>
+                </statement>
+                <next>
+                  <block type="controls_if" id="b,^3!YQW3f7Yq|DgEiR?">
+                    <value name="IF0">
+                      <block type="logic_operation" id="uk}K#@)Me*T{qXicIeZ8">
+                        <field name="OP">OR</field>
+                        <value name="A">
+                          <block type="logic_compare" id="YHZg,M1s7]7dVkIiZUIp">
+                            <field name="OP">EQ</field>
+                            <value name="A">
+                              <block type="math_arithmetic" id="4Tl].v)/Bx|zt`UGr@3-">
+                                <field name="OP">ADD</field>
+                                <value name="A">
+                                  <shadow type="math_number" id="Pi{p+_o[yoUlYFui]sCA">
+                                    <field name="NUM">1</field>
+                                  </shadow>
+                                  <block type="frost_current" id="vp$@qvzC/tWBN=n?wL@q">
+                                    <field name="DATA_TYPE">UTC_HOUR</field>
+                                  </block>
+                                </value>
+                                <value name="B">
+                                  <shadow type="math_number" id="AXnh^PjcJpv^N|%Z(iU0">
+                                    <field name="NUM">1</field>
+                                  </shadow>
+                                  <block type="variables_get" id="(U1ukhS?`vY:o,%9w7q6">
+                                    <field name="VAR" id="vn)lh!6^%Rc2JT)CYNsZ">fuseau horaire</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                            <value name="B">
+                              <block type="math_number" id="~~vF03gjhl`UhRRz;u^7">
+                                <field name="NUM">24</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <block type="logic_compare" id="gf-t^bJQ(BQ_}Y:S:s2J">
+                            <field name="OP">EQ</field>
+                            <value name="A">
+                              <block type="math_arithmetic" id="]J@6gY{d/Cr5@9ymm9ZX">
+                                <field name="OP">MINUS</field>
+                                <value name="A">
+                                  <shadow type="math_number" id="Pi{p+_o[yoUlYFui]sCA">
+                                    <field name="NUM">1</field>
+                                  </shadow>
+                                  <block type="frost_current" id="vc+K}y:UpHt%upX`..@J">
+                                    <field name="DATA_TYPE">UTC_HOUR</field>
+                                  </block>
+                                </value>
+                                <value name="B">
+                                  <shadow type="math_number" id="AXnh^PjcJpv^N|%Z(iU0">
+                                    <field name="NUM">1</field>
+                                  </shadow>
+                                  <block type="variables_get" id="w+RM%GEnyOE^C;{J?-Bz">
+                                    <field name="VAR" id="vn)lh!6^%Rc2JT)CYNsZ">fuseau horaire</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                            <value name="B">
+                              <block type="math_number" id="uRaRc2k:UR.i?^SIZTh*">
+                                <field name="NUM">0</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <statement name="DO0">
+                      <block type="controls_if" id="gZ|pqrD3w|XI%7DZ44r!">
+                        <value name="IF0">
+                          <block type="logic_compare" id="d^|3MkvLv`oS5-~s@Jm;">
+                            <field name="OP">NEQ</field>
+                            <value name="A">
+                              <block type="frost_category_get" id="5k(iTYYJK8SDLfGk]/o}">
+                                <field name="SEARCH_TYPE">NAME</field>
+                                <value name="VALUE">
+                                  <block type="text_join" id="$W(/9lA3ZWpRGvBDL{o2">
+                                    <mutation items="4"></mutation>
+                                    <value name="ADD0">
+                                      <block type="jg_text_remake_paragraph_quotes" id="ByOI@^{V,[n1mc2,:q=r">
+                                        <field name="TEXT">l-</field>
+                                      </block>
+                                    </value>
+                                    <value name="ADD1">
+                                      <block type="frost_current" id="Q3IL(ImVIQoz0-U`ADLU">
+                                        <field name="DATA_TYPE">UTC_DAY</field>
+                                      </block>
+                                    </value>
+                                    <value name="ADD2">
+                                      <block type="jg_text_remake_paragraph_quotes" id="8^iX_MR9-=G,xKSntx)X">
+                                        <field name="TEXT">-</field>
+                                      </block>
+                                    </value>
+                                    <value name="ADD3">
+                                      <block type="math_arithmetic" id="_Cx+5P+WY6co;Lk%/hXw">
+                                        <field name="OP">ADD</field>
+                                        <value name="A">
+                                          <shadow type="math_number" id="[{}Y%+EBXk;N]hQ5C-5b">
+                                            <field name="NUM">1</field>
+                                          </shadow>
+                                          <block type="frost_current" id="#j8v8U`5wW^-c~y1}7wm">
+                                            <field name="DATA_TYPE">UTC_MONTH</field>
+                                          </block>
+                                        </value>
+                                        <value name="B">
+                                          <shadow type="math_number" id="k%0B8,9UF0V*e`,[qYYa">
+                                            <field name="NUM">1</field>
+                                          </shadow>
+                                        </value>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                                <value name="SERVER">
+                                  <block type="s4d_get_all_server_server" id="!0q|V=nC,4R,1v[SmW2X"></block>
+                                </value>
+                              </block>
+                            </value>
+                            <value name="B">
+                              <block type="logic_null" id="RP%@Mr=c5FH0$k|+i8E@"></block>
                             </value>
                           </block>
                         </value>
                         <statement name="DO0">
-                          <block type="s4d_print" id="din1I:sFEl`iAL^~Y|]A">
-                            <value name="PRINT">
-                              <block type="jg_text_remake_paragraph_quotes" id="g;MqooWo89@jgTWn#.=L">
-                                <field name="TEXT">3222222</field>
+                          <block type="s4d_send_channel" id="bwKVYA$moZTuF#}ACdOm">
+                            <value name="CONTENT">
+                              <block type="jg_text_remake_paragraph_quotes" id="h}b!p8/Y,UkLdjw])DPn">
+                                <field name="TEXT">&lt;:boucle:1505199788235292772&gt; l-Loading</field>
                               </block>
                             </value>
-                            <next>
-                              <block type="s4d_print" id="~a-DhI,P0asx`fA}:xjI">
-                                <value name="PRINT">
-                                  <block type="s4d_server_id" id="iMh9GR+nAI@C,sW@2LmS">
-                                    <value name="SERVER">
-                                      <block type="s4d_get_all_server_server" id="e+k7v5w@A6nA8-czy*Mr"></block>
-                                    </value>
+                            <value name="CHANNEL">
+                              <block type="frost_category_get" id="0PVR0^`~b?}S/q?e=apd">
+                                <field name="SEARCH_TYPE">NAME</field>
+                                <value name="VALUE">
+                                  <block type="jg_text_remake_paragraph_quotes" id="oZwDZ`)HB)]@SniYX;XT">
+                                    <field name="TEXT">log-logoto</field>
                                   </block>
                                 </value>
-                                <next>
-                                  <block type="variables_set" id="/IU!S+DjWZ/va(aE9urE">
-                                    <field name="VAR" id="vn)lh!6^%Rc2JT)CYNsZ">fuseau horaire</field>
-                                    <value name="VALUE">
-                                      <block type="s4d_string_to_number" id="|(O;#Ec@^HRR(%//PR5A">
-                                        <value name="STRING">
-                                          <block type="jg_text_remake_in_text_replace_with" id="J?Mc6sb.X-~BwyJjcecq">
-                                            <value name="ORIGIN">
-                                              <shadow type="text" id="0]_V=Cl;J={RyfhM%qg9">
-                                                <field name="TEXT">aaa</field>
-                                              </shadow>
-                                              <block type="s4d_channel_topic" id="yV$c{{!up=FpARU6hb(F">
-                                                <value name="CHANNEL">
-                                                  <block type="frost_category_get" id="@Ud[NW+HZFQ]SerK0{d*">
-                                                    <field name="SEARCH_TYPE">NAME</field>
-                                                    <value name="VALUE">
-                                                      <block type="jg_text_remake_paragraph_quotes" id="LyB93RI}P?y]ICfQoIGM">
-                                                        <field name="TEXT">log-logoto</field>
-                                                      </block>
-                                                    </value>
-                                                    <value name="SERVER">
-                                                      <block type="s4d_get_all_server_server" id="PG9cKFnJd;[7nz#QGv!t"></block>
-                                                    </value>
-                                                  </block>
-                                                </value>
-                                              </block>
-                                            </value>
-                                            <value name="REPLACE">
-                                              <shadow type="text" id="Svj=$X-{ZaP+LkP2mtZI">
-                                                <field name="TEXT">+</field>
-                                              </shadow>
-                                            </value>
-                                            <value name="WITH">
-                                              <shadow type="text" id="2;0MYq7L~v9[Y|v%p~pg">
-                                                <field name="TEXT"></field>
-                                              </shadow>
-                                            </value>
-                                          </block>
-                                        </value>
-                                      </block>
-                                    </value>
-                                    <next>
-                                      <block type="s4d_print" id="SnQOmC9i2=4tH]]+`KRd">
-                                        <value name="PRINT">
-                                          <block type="s4d_string_to_number" id="i`*j|yPn:t%d$GV-ped+">
-                                            <value name="STRING">
-                                              <block type="jg_text_remake_in_text_replace_with" id="$*zWwexQwTkF0aCCc!%J">
-                                                <value name="ORIGIN">
-                                                  <shadow type="text" id="0]_V=Cl;J={RyfhM%qg9">
-                                                    <field name="TEXT">aaa</field>
-                                                  </shadow>
-                                                  <block type="s4d_channel_topic" id="2ANHskJP@)m94J.Y}~C@">
-                                                    <value name="CHANNEL">
-                                                      <block type="frost_category_get" id="??A){$^$=[xtMY[3}5-9">
-                                                        <field name="SEARCH_TYPE">NAME</field>
-                                                        <value name="VALUE">
-                                                          <block type="jg_text_remake_paragraph_quotes" id="RjPG1v24tEl{,YmVk3R!">
-                                                            <field name="TEXT">log-logoto</field>
-                                                          </block>
-                                                        </value>
-                                                        <value name="SERVER">
-                                                          <block type="s4d_get_all_server_server" id="_/|Tf([KJ=}7zvWSb%Qv"></block>
-                                                        </value>
-                                                      </block>
-                                                    </value>
-                                                  </block>
-                                                </value>
-                                                <value name="REPLACE">
-                                                  <shadow type="text" id="Flk^y{4.%_A0TAY5$Y*,">
-                                                    <field name="TEXT">+</field>
-                                                  </shadow>
-                                                </value>
-                                                <value name="WITH">
-                                                  <shadow type="text" id="~Zeq-F}Y|mClR_=2zLg[">
-                                                    <field name="TEXT"></field>
-                                                  </shadow>
-                                                </value>
-                                              </block>
-                                            </value>
-                                          </block>
-                                        </value>
-                                        <next>
-                                          <block type="variables_set" id="q,,yeGeg6@;pOf,6Ni]0">
-                                            <field name="VAR" id="nW/,qtBWyXI[s,clZc|B">serveur change is</field>
-                                            <value name="VALUE">
-                                              <block type="s4d_server_id" id="0`YWwLzOytvPy@Ja9xD2">
-                                                <value name="SERVER">
-                                                  <block type="s4d_get_all_server_server" id=",E[/C#Jw^nUS=TP+K*cZ"></block>
-                                                </value>
-                                              </block>
-                                            </value>
-                                          </block>
-                                        </next>
-                                      </block>
-                                    </next>
-                                  </block>
-                                </next>
+                                <value name="SERVER">
+                                  <block type="s4d_get_all_server_server" id="j.5-M4WPr*{9Y.%GoJ`)"></block>
+                                </value>
                               </block>
-                            </next>
+                            </value>
                           </block>
                         </statement>
-                        <value name="IF1">
-                          <block type="logic_operation" id="#TnGERI3EGHuPA1%lkq|">
-                            <field name="OP">AND</field>
-                            <value name="A">
-                              <block type="logic_compare" id="WHm(PP7):d`JU]3W4)|K">
+                        <next>
+                          <block type="controls_if" id="Z1*#~*)Y8#f?*^QPoN])">
+                            <value name="IF0">
+                              <block type="logic_compare" id="k0DCXvbDGi0r]br@icUu">
                                 <field name="OP">NEQ</field>
                                 <value name="A">
-                                  <block type="frost_category_get" id="~H6}yu]1d1S}HT8/j-uf">
+                                  <block type="frost_category_get" id="N6ML]={f6Wu0ZwmW3-sc">
                                     <field name="SEARCH_TYPE">NAME</field>
                                     <value name="VALUE">
-                                      <block type="jg_text_remake_paragraph_quotes" id="p=:`R9Z5[6]C:,u83:,E">
-                                        <field name="TEXT">log-logoto</field>
+                                      <block type="text_join" id="[/h*Ygnq0*iPOqUYBXwh">
+                                        <mutation items="4"></mutation>
+                                        <value name="ADD0">
+                                          <block type="jg_text_remake_paragraph_quotes" id="C4a-V]Hhf}M0#w(L#E8F">
+                                            <field name="TEXT">n-</field>
+                                          </block>
+                                        </value>
+                                        <value name="ADD1">
+                                          <block type="frost_current" id="^@VdB#x?6BJ|lCsN#N[O">
+                                            <field name="DATA_TYPE">UTC_DAY</field>
+                                          </block>
+                                        </value>
+                                        <value name="ADD2">
+                                          <block type="jg_text_remake_paragraph_quotes" id="]qiJxz/:_(OBcDwfdmp/">
+                                            <field name="TEXT">-</field>
+                                          </block>
+                                        </value>
+                                        <value name="ADD3">
+                                          <block type="math_arithmetic" id="xU;[.qKk}l+;vrP9dJ2*">
+                                            <field name="OP">ADD</field>
+                                            <value name="A">
+                                              <shadow type="math_number" id="[{}Y%+EBXk;N]hQ5C-5b">
+                                                <field name="NUM">1</field>
+                                              </shadow>
+                                              <block type="frost_current" id="rW#SN5g4]^oz~.H0bMy1">
+                                                <field name="DATA_TYPE">UTC_MONTH</field>
+                                              </block>
+                                            </value>
+                                            <value name="B">
+                                              <shadow type="math_number" id="[F.d?8yKU6-4p*|U-6K%">
+                                                <field name="NUM">1</field>
+                                              </shadow>
+                                            </value>
+                                          </block>
+                                        </value>
                                       </block>
                                     </value>
                                     <value name="SERVER">
-                                      <block type="s4d_get_all_server_server" id="nUQjFBNm()A(yg52Qqh;"></block>
+                                      <block type="s4d_get_all_server_server" id="P7h2+h*]f6)5VluCl)BP"></block>
                                     </value>
                                   </block>
                                 </value>
                                 <value name="B">
-                                  <block type="logic_null" id="#U8OFZ)@b=be[v*@r$WC"></block>
+                                  <block type="logic_null" id="JU0$QS4!d!JEzar2Ag%|"></block>
                                 </value>
                               </block>
                             </value>
-                            <value name="B">
-                              <block type="s4d_starts_with" id="Zl_k.(IiXCUqb?s,%Zi6">
-                                <value name="STRING">
-                                  <shadow type="text" id="_VG@69JwloOPDk]4M{=k">
-                                    <field name="TEXT">abc</field>
-                                  </shadow>
-                                  <block type="s4d_channel_topic" id=")stRnTs=;:?tbIx^Bk0p">
-                                    <value name="CHANNEL">
-                                      <block type="frost_category_get" id="Zk)M%Ur4{YE[}?@me/ip">
+                            <statement name="DO0">
+                              <block type="s4d_send_channel" id="6v)L.U2J[zqIP^6k:[!b">
+                                <value name="CONTENT">
+                                  <block type="jg_text_remake_paragraph_quotes" id="MKFBESbQam!-^#m!Qfza">
+                                    <field name="TEXT">&lt;:boucle:1505199788235292772&gt; n-Loading</field>
+                                  </block>
+                                </value>
+                                <value name="CHANNEL">
+                                  <block type="frost_category_get" id="/V~zVbrxEkasuR_;,^2W">
+                                    <field name="SEARCH_TYPE">NAME</field>
+                                    <value name="VALUE">
+                                      <block type="jg_text_remake_paragraph_quotes" id="1Vd+}=.P8ToP==7lhn,m">
+                                        <field name="TEXT">log-logoto</field>
+                                      </block>
+                                    </value>
+                                    <value name="SERVER">
+                                      <block type="s4d_get_all_server_server" id="tlTWXR`fD=:PSk;htpt="></block>
+                                    </value>
+                                  </block>
+                                </value>
+                              </block>
+                            </statement>
+                            <next>
+                              <block type="controls_if" id="i:P^Z+ww^D$qEsct!)0u">
+                                <value name="IF0">
+                                  <block type="logic_compare" id="%duxs7_.oiu5rFa6i.|0">
+                                    <field name="OP">NEQ</field>
+                                    <value name="A">
+                                      <block type="frost_category_get" id="c`7RLA_;K4]lW_2r%U`(">
                                         <field name="SEARCH_TYPE">NAME</field>
                                         <value name="VALUE">
-                                          <block type="jg_text_remake_paragraph_quotes" id="n(/YK1Kfk8+AK}YtC5/M">
-                                            <field name="TEXT">log-logoto</field>
+                                          <block type="text_join" id="|4:4%9SkN##*A?SdO:m2">
+                                            <mutation items="4"></mutation>
+                                            <value name="ADD0">
+                                              <block type="jg_text_remake_paragraph_quotes" id="be`^#Hy7S-w;S%g38?32">
+                                                <field name="TEXT">b-</field>
+                                              </block>
+                                            </value>
+                                            <value name="ADD1">
+                                              <block type="frost_current" id="w~NMHYgm=NVvd.v9NHw`">
+                                                <field name="DATA_TYPE">DATE</field>
+                                              </block>
+                                            </value>
+                                            <value name="ADD2">
+                                              <block type="jg_text_remake_paragraph_quotes" id="xj{*hTp=+fY[%#rr{`7W">
+                                                <field name="TEXT">-</field>
+                                              </block>
+                                            </value>
+                                            <value name="ADD3">
+                                              <block type="math_arithmetic" id="g=t,,9vlw-Ax?Jda;N8^">
+                                                <field name="OP">ADD</field>
+                                                <value name="A">
+                                                  <shadow type="math_number" id="#RQ1274ePCE|Jv{Z#5N@">
+                                                    <field name="NUM">1</field>
+                                                  </shadow>
+                                                  <block type="frost_current" id="M_XkS:kpC80.656}]Peb">
+                                                    <field name="DATA_TYPE">MONTH</field>
+                                                  </block>
+                                                </value>
+                                                <value name="B">
+                                                  <shadow type="math_number" id="R8!~S$fo:JzZ,82!EFbw">
+                                                    <field name="NUM">1</field>
+                                                  </shadow>
+                                                </value>
+                                              </block>
+                                            </value>
                                           </block>
                                         </value>
                                         <value name="SERVER">
-                                          <block type="s4d_get_all_server_server" id="p*k/Bh{uO_Lc^HOVjc+}"></block>
-                                        </value>
-                                      </block>
-                                    </value>
-                                  </block>
-                                </value>
-                                <value name="SUBSTRING">
-                                  <shadow type="text" id="OckPGAgsMv7YAUTAr5bi">
-                                    <field name="TEXT">-</field>
-                                  </shadow>
-                                </value>
-                              </block>
-                            </value>
-                          </block>
-                        </value>
-                        <statement name="DO1">
-                          <block type="s4d_print" id=":*bdEoFDlM.,#;RFoGaH">
-                            <value name="PRINT">
-                              <block type="s4d_server_id" id="v$+LHd+U:ysx.IT(P=pY">
-                                <value name="SERVER">
-                                  <block type="s4d_get_all_server_server" id="m3CvFk;{d-t|-.HH#Q8Z"></block>
-                                </value>
-                              </block>
-                            </value>
-                            <next>
-                              <block type="s4d_print" id="Qbgtx$Zlg;)@^cKX1szz">
-                                <value name="PRINT">
-                                  <block type="jg_text_remake_paragraph_quotes" id="cxSG|}dT*d}YF8zBqgvI">
-                                    <field name="TEXT">4</field>
-                                  </block>
-                                </value>
-                                <next>
-                                  <block type="variables_set" id="lT6X_W`nJusK`HOs.~-1">
-                                    <field name="VAR" id="vn)lh!6^%Rc2JT)CYNsZ">fuseau horaire</field>
-                                    <value name="VALUE">
-                                      <block type="math_arithmetic" id="hwjh4|8Bd4OcUiC/=W7t">
-                                        <field name="OP">MINUS</field>
-                                        <value name="A">
-                                          <shadow type="math_number" id="K4)5^3D_dE#Klfd4_GTT">
-                                            <field name="NUM">24</field>
-                                          </shadow>
-                                        </value>
-                                        <value name="B">
-                                          <shadow type="math_number" id="K+7~O#85G1alT@nze.Hq">
-                                            <field name="NUM">1</field>
-                                          </shadow>
-                                          <block type="s4d_string_to_number" id="jc8sh2ox)1v-h|!1u30B">
-                                            <value name="STRING">
-                                              <block type="jg_text_remake_in_text_replace_with" id="?_#S=udoy3cMlT|$jJI!">
-                                                <value name="ORIGIN">
-                                                  <shadow type="text" id="0]_V=Cl;J={RyfhM%qg9">
-                                                    <field name="TEXT">aaa</field>
-                                                  </shadow>
-                                                  <block type="s4d_channel_topic" id="/U]SR+P2)C:$V4J#aYuF">
-                                                    <value name="CHANNEL">
-                                                      <block type="frost_category_get" id="V#%!-oZ44px=`3Q-P=n:">
-                                                        <field name="SEARCH_TYPE">NAME</field>
-                                                        <value name="VALUE">
-                                                          <block type="jg_text_remake_paragraph_quotes" id="*S:HR*Ci3hWP^{O9`j^`">
-                                                            <field name="TEXT">log-logoto</field>
-                                                          </block>
-                                                        </value>
-                                                        <value name="SERVER">
-                                                          <block type="s4d_get_all_server_server" id="dzGtki(mUY[KC)!kAfAQ"></block>
-                                                        </value>
-                                                      </block>
-                                                    </value>
-                                                  </block>
-                                                </value>
-                                                <value name="REPLACE">
-                                                  <shadow type="text" id="jmUU%4C@XP`M[-Y1sm=:">
-                                                    <field name="TEXT">-</field>
-                                                  </shadow>
-                                                </value>
-                                                <value name="WITH">
-                                                  <shadow type="text" id="~G,GD4mnX]2)U$:M;/;D">
-                                                    <field name="TEXT"></field>
-                                                  </shadow>
-                                                </value>
-                                              </block>
-                                            </value>
-                                          </block>
-                                        </value>
-                                      </block>
-                                    </value>
-                                  </block>
-                                </next>
-                              </block>
-                            </next>
-                          </block>
-                        </statement>
-                        <statement name="ELSE">
-                          <block type="s4d_print" id="qa~U^(brtK@Wn15JCv+v">
-                            <value name="PRINT">
-                              <block type="s4d_server_id" id="GOl;g**Ov1Qjdk(/9bqL">
-                                <value name="SERVER">
-                                  <block type="s4d_get_all_server_server" id=")@x6:r$/2/V2b6]tQ{4O"></block>
-                                </value>
-                              </block>
-                            </value>
-                            <next>
-                              <block type="s4d_print" id="9FZ6|Kgy?p=-~5W3U$$3">
-                                <value name="PRINT">
-                                  <block type="jg_text_remake_paragraph_quotes" id="`yphX4IcH*=Fv!-IY9W}">
-                                    <field name="TEXT">5</field>
-                                  </block>
-                                </value>
-                                <next>
-                                  <block type="variables_set" id="_H53/Rn{px!,GG{(SIDR">
-                                    <field name="VAR" id="vn)lh!6^%Rc2JT)CYNsZ">fuseau horaire</field>
-                                    <value name="VALUE">
-                                      <block type="math_number" id="]zf]aG[!P6p+%,qX1,)M">
-                                        <field name="NUM">24</field>
-                                      </block>
-                                    </value>
-                                  </block>
-                                </next>
-                              </block>
-                            </next>
-                          </block>
-                        </statement>
-                        <next>
-                          <block type="s4d_print" id="Es`92O{0hm]yITaLE)13">
-                            <value name="PRINT">
-                              <block type="jg_text_remake_paragraph_quotes" id="V860i5V4.K6D^Y15n%!z">
-                                <field name="TEXT">6</field>
-                              </block>
-                            </value>
-                            <next>
-                              <block type="controls_if" id="b,^3!YQW3f7Yq|DgEiR?">
-                                <value name="IF0">
-                                  <block type="logic_operation" id="uk}K#@)Me*T{qXicIeZ8">
-                                    <field name="OP">OR</field>
-                                    <value name="A">
-                                      <block type="logic_compare" id="YHZg,M1s7]7dVkIiZUIp">
-                                        <field name="OP">EQ</field>
-                                        <value name="A">
-                                          <block type="math_arithmetic" id="4Tl].v)/Bx|zt`UGr@3-">
-                                            <field name="OP">ADD</field>
-                                            <value name="A">
-                                              <shadow type="math_number" id="Pi{p+_o[yoUlYFui]sCA">
-                                                <field name="NUM">1</field>
-                                              </shadow>
-                                              <block type="frost_current" id="vp$@qvzC/tWBN=n?wL@q">
-                                                <field name="DATA_TYPE">UTC_HOUR</field>
-                                              </block>
-                                            </value>
-                                            <value name="B">
-                                              <shadow type="math_number" id="AXnh^PjcJpv^N|%Z(iU0">
-                                                <field name="NUM">1</field>
-                                              </shadow>
-                                              <block type="variables_get" id="(U1ukhS?`vY:o,%9w7q6">
-                                                <field name="VAR" id="vn)lh!6^%Rc2JT)CYNsZ">fuseau horaire</field>
-                                              </block>
-                                            </value>
-                                          </block>
-                                        </value>
-                                        <value name="B">
-                                          <block type="math_number" id="~~vF03gjhl`UhRRz;u^7">
-                                            <field name="NUM">24</field>
-                                          </block>
+                                          <block type="s4d_get_all_server_server" id="ms^%P54@s4iD0LxwYg|8"></block>
                                         </value>
                                       </block>
                                     </value>
                                     <value name="B">
-                                      <block type="logic_compare" id="gf-t^bJQ(BQ_}Y:S:s2J">
-                                        <field name="OP">EQ</field>
-                                        <value name="A">
-                                          <block type="math_arithmetic" id="]J@6gY{d/Cr5@9ymm9ZX">
-                                            <field name="OP">MINUS</field>
-                                            <value name="A">
-                                              <shadow type="math_number" id="Pi{p+_o[yoUlYFui]sCA">
-                                                <field name="NUM">1</field>
-                                              </shadow>
-                                              <block type="frost_current" id="vc+K}y:UpHt%upX`..@J">
-                                                <field name="DATA_TYPE">UTC_HOUR</field>
-                                              </block>
-                                            </value>
-                                            <value name="B">
-                                              <shadow type="math_number" id="AXnh^PjcJpv^N|%Z(iU0">
-                                                <field name="NUM">1</field>
-                                              </shadow>
-                                              <block type="variables_get" id="w+RM%GEnyOE^C;{J?-Bz">
-                                                <field name="VAR" id="vn)lh!6^%Rc2JT)CYNsZ">fuseau horaire</field>
-                                              </block>
-                                            </value>
-                                          </block>
-                                        </value>
-                                        <value name="B">
-                                          <block type="math_number" id="uRaRc2k:UR.i?^SIZTh*">
-                                            <field name="NUM">0</field>
-                                          </block>
-                                        </value>
-                                      </block>
+                                      <block type="logic_null" id="jff*_/{;*q`*n[lGGhn`"></block>
                                     </value>
                                   </block>
                                 </value>
                                 <statement name="DO0">
-                                  <block type="controls_if" id="gZ|pqrD3w|XI%7DZ44r!">
+                                  <block type="s4d_send_channel" id="z(m)gv9ie$[8n$7Lrm{O">
+                                    <value name="CONTENT">
+                                      <block type="jg_text_remake_paragraph_quotes" id="DelsF_gEZRoP(|75hL1S">
+                                        <field name="TEXT">&lt;:boucle:1505199788235292772&gt; b-Loading</field>
+                                      </block>
+                                    </value>
+                                    <value name="CHANNEL">
+                                      <block type="frost_category_get" id="V8i.SoE!Z6lCj0rqnOt]">
+                                        <field name="SEARCH_TYPE">NAME</field>
+                                        <value name="VALUE">
+                                          <block type="jg_text_remake_paragraph_quotes" id="atZKBzdW_r`6hxX$_,z~">
+                                            <field name="TEXT">log-logoto</field>
+                                          </block>
+                                        </value>
+                                        <value name="SERVER">
+                                          <block type="s4d_get_all_server_server" id="HNH/,5Ip?r##CJTq)yj9"></block>
+                                        </value>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </statement>
+                                <next>
+                                  <block type="controls_if" id="a#2)ipEj`-Xu.bNB:`SJ">
                                     <value name="IF0">
-                                      <block type="logic_compare" id="d^|3MkvLv`oS5-~s@Jm;">
+                                      <block type="logic_compare" id="1o{oHitG+T$SOKMMvHUo">
                                         <field name="OP">NEQ</field>
                                         <value name="A">
-                                          <block type="frost_category_get" id="5k(iTYYJK8SDLfGk]/o}">
+                                          <block type="frost_category_get" id="sRDGLM-AUxNc[UTTs;f=">
                                             <field name="SEARCH_TYPE">NAME</field>
                                             <value name="VALUE">
-                                              <block type="text_join" id="$W(/9lA3ZWpRGvBDL{o2">
+                                              <block type="text_join" id="D_jJo+(+@Xxq/_##K~B]">
                                                 <mutation items="4"></mutation>
                                                 <value name="ADD0">
-                                                  <block type="jg_text_remake_paragraph_quotes" id="ByOI@^{V,[n1mc2,:q=r">
-                                                    <field name="TEXT">l-</field>
+                                                  <block type="jg_text_remake_paragraph_quotes" id="];j;7!G=~988_~.dEMds">
+                                                    <field name="TEXT">i-</field>
                                                   </block>
                                                 </value>
                                                 <value name="ADD1">
-                                                  <block type="frost_current" id="Q3IL(ImVIQoz0-U`ADLU">
-                                                    <field name="DATA_TYPE">UTC_DAY</field>
+                                                  <block type="frost_current" id="T[KwQx!*tUr2A=$o@0C?">
+                                                    <field name="DATA_TYPE">DATE</field>
                                                   </block>
                                                 </value>
                                                 <value name="ADD2">
-                                                  <block type="jg_text_remake_paragraph_quotes" id="8^iX_MR9-=G,xKSntx)X">
+                                                  <block type="jg_text_remake_paragraph_quotes" id=";CiMK$FfqTM_S15bRN2@">
                                                     <field name="TEXT">-</field>
                                                   </block>
                                                 </value>
                                                 <value name="ADD3">
-                                                  <block type="math_arithmetic" id="_Cx+5P+WY6co;Lk%/hXw">
+                                                  <block type="math_arithmetic" id="p|z%)+1mHLXkSFY`M0c1">
                                                     <field name="OP">ADD</field>
                                                     <value name="A">
-                                                      <shadow type="math_number" id="[{}Y%+EBXk;N]hQ5C-5b">
+                                                      <shadow type="math_number" id="LP{/EIomwE2+_Bgl7MKW">
                                                         <field name="NUM">1</field>
                                                       </shadow>
-                                                      <block type="frost_current" id="#j8v8U`5wW^-c~y1}7wm">
-                                                        <field name="DATA_TYPE">UTC_MONTH</field>
+                                                      <block type="frost_current" id="Jw/)u?8!/W@rO73+D(=J">
+                                                        <field name="DATA_TYPE">MONTH</field>
                                                       </block>
                                                     </value>
                                                     <value name="B">
-                                                      <shadow type="math_number" id="k%0B8,9UF0V*e`,[qYYa">
+                                                      <shadow type="math_number" id="oH^At9f$iBS932Ro+17=">
                                                         <field name="NUM">1</field>
                                                       </shadow>
                                                     </value>
@@ -507,286 +605,37 @@
                                               </block>
                                             </value>
                                             <value name="SERVER">
-                                              <block type="s4d_get_all_server_server" id="!0q|V=nC,4R,1v[SmW2X"></block>
+                                              <block type="s4d_get_all_server_server" id="Yn7Ojxnr=}Q_Yt,gbcgH"></block>
                                             </value>
                                           </block>
                                         </value>
                                         <value name="B">
-                                          <block type="logic_null" id="RP%@Mr=c5FH0$k|+i8E@"></block>
+                                          <block type="logic_null" id=")p,+.#Om_|WFwda=T~{."></block>
                                         </value>
                                       </block>
                                     </value>
                                     <statement name="DO0">
-                                      <block type="s4d_send_channel" id="bwKVYA$moZTuF#}ACdOm">
+                                      <block type="s4d_send_channel" id="UbmLnM@O5EQ?L|Hs$tV%">
                                         <value name="CONTENT">
-                                          <block type="jg_text_remake_paragraph_quotes" id="h}b!p8/Y,UkLdjw])DPn">
-                                            <field name="TEXT">&lt;:boucle:1505199788235292772&gt; l-Loading</field>
+                                          <block type="jg_text_remake_paragraph_quotes" id="[G(wBlM~YPDRAOO#~Evy">
+                                            <field name="TEXT">&lt;:boucle:1505199788235292772&gt; i-Loading</field>
                                           </block>
                                         </value>
                                         <value name="CHANNEL">
-                                          <block type="frost_category_get" id="0PVR0^`~b?}S/q?e=apd">
+                                          <block type="frost_category_get" id="94m,1H=D]{dZq,KWY$~8">
                                             <field name="SEARCH_TYPE">NAME</field>
                                             <value name="VALUE">
-                                              <block type="jg_text_remake_paragraph_quotes" id="oZwDZ`)HB)]@SniYX;XT">
+                                              <block type="jg_text_remake_paragraph_quotes" id="2;Kky@.2pSj_+L@lj`s1">
                                                 <field name="TEXT">log-logoto</field>
                                               </block>
                                             </value>
                                             <value name="SERVER">
-                                              <block type="s4d_get_all_server_server" id="j.5-M4WPr*{9Y.%GoJ`)"></block>
+                                              <block type="s4d_get_all_server_server" id="lHcj_u?{pqH_w[`4Fndi"></block>
                                             </value>
                                           </block>
                                         </value>
                                       </block>
                                     </statement>
-                                    <next>
-                                      <block type="controls_if" id="Z1*#~*)Y8#f?*^QPoN])">
-                                        <value name="IF0">
-                                          <block type="logic_compare" id="k0DCXvbDGi0r]br@icUu">
-                                            <field name="OP">NEQ</field>
-                                            <value name="A">
-                                              <block type="frost_category_get" id="N6ML]={f6Wu0ZwmW3-sc">
-                                                <field name="SEARCH_TYPE">NAME</field>
-                                                <value name="VALUE">
-                                                  <block type="text_join" id="[/h*Ygnq0*iPOqUYBXwh">
-                                                    <mutation items="4"></mutation>
-                                                    <value name="ADD0">
-                                                      <block type="jg_text_remake_paragraph_quotes" id="C4a-V]Hhf}M0#w(L#E8F">
-                                                        <field name="TEXT">n-</field>
-                                                      </block>
-                                                    </value>
-                                                    <value name="ADD1">
-                                                      <block type="frost_current" id="^@VdB#x?6BJ|lCsN#N[O">
-                                                        <field name="DATA_TYPE">UTC_DAY</field>
-                                                      </block>
-                                                    </value>
-                                                    <value name="ADD2">
-                                                      <block type="jg_text_remake_paragraph_quotes" id="]qiJxz/:_(OBcDwfdmp/">
-                                                        <field name="TEXT">-</field>
-                                                      </block>
-                                                    </value>
-                                                    <value name="ADD3">
-                                                      <block type="math_arithmetic" id="xU;[.qKk}l+;vrP9dJ2*">
-                                                        <field name="OP">ADD</field>
-                                                        <value name="A">
-                                                          <shadow type="math_number" id="[{}Y%+EBXk;N]hQ5C-5b">
-                                                            <field name="NUM">1</field>
-                                                          </shadow>
-                                                          <block type="frost_current" id="rW#SN5g4]^oz~.H0bMy1">
-                                                            <field name="DATA_TYPE">UTC_MONTH</field>
-                                                          </block>
-                                                        </value>
-                                                        <value name="B">
-                                                          <shadow type="math_number" id="[F.d?8yKU6-4p*|U-6K%">
-                                                            <field name="NUM">1</field>
-                                                          </shadow>
-                                                        </value>
-                                                      </block>
-                                                    </value>
-                                                  </block>
-                                                </value>
-                                                <value name="SERVER">
-                                                  <block type="s4d_get_all_server_server" id="P7h2+h*]f6)5VluCl)BP"></block>
-                                                </value>
-                                              </block>
-                                            </value>
-                                            <value name="B">
-                                              <block type="logic_null" id="JU0$QS4!d!JEzar2Ag%|"></block>
-                                            </value>
-                                          </block>
-                                        </value>
-                                        <statement name="DO0">
-                                          <block type="s4d_send_channel" id="6v)L.U2J[zqIP^6k:[!b">
-                                            <value name="CONTENT">
-                                              <block type="jg_text_remake_paragraph_quotes" id="MKFBESbQam!-^#m!Qfza">
-                                                <field name="TEXT">&lt;:boucle:1505199788235292772&gt; n-Loading</field>
-                                              </block>
-                                            </value>
-                                            <value name="CHANNEL">
-                                              <block type="frost_category_get" id="/V~zVbrxEkasuR_;,^2W">
-                                                <field name="SEARCH_TYPE">NAME</field>
-                                                <value name="VALUE">
-                                                  <block type="jg_text_remake_paragraph_quotes" id="1Vd+}=.P8ToP==7lhn,m">
-                                                    <field name="TEXT">log-logoto</field>
-                                                  </block>
-                                                </value>
-                                                <value name="SERVER">
-                                                  <block type="s4d_get_all_server_server" id="tlTWXR`fD=:PSk;htpt="></block>
-                                                </value>
-                                              </block>
-                                            </value>
-                                          </block>
-                                        </statement>
-                                        <next>
-                                          <block type="controls_if" id="i:P^Z+ww^D$qEsct!)0u">
-                                            <value name="IF0">
-                                              <block type="logic_compare" id="%duxs7_.oiu5rFa6i.|0">
-                                                <field name="OP">NEQ</field>
-                                                <value name="A">
-                                                  <block type="frost_category_get" id="c`7RLA_;K4]lW_2r%U`(">
-                                                    <field name="SEARCH_TYPE">NAME</field>
-                                                    <value name="VALUE">
-                                                      <block type="text_join" id="|4:4%9SkN##*A?SdO:m2">
-                                                        <mutation items="4"></mutation>
-                                                        <value name="ADD0">
-                                                          <block type="jg_text_remake_paragraph_quotes" id="be`^#Hy7S-w;S%g38?32">
-                                                            <field name="TEXT">b-</field>
-                                                          </block>
-                                                        </value>
-                                                        <value name="ADD1">
-                                                          <block type="frost_current" id="w~NMHYgm=NVvd.v9NHw`">
-                                                            <field name="DATA_TYPE">DATE</field>
-                                                          </block>
-                                                        </value>
-                                                        <value name="ADD2">
-                                                          <block type="jg_text_remake_paragraph_quotes" id="xj{*hTp=+fY[%#rr{`7W">
-                                                            <field name="TEXT">-</field>
-                                                          </block>
-                                                        </value>
-                                                        <value name="ADD3">
-                                                          <block type="math_arithmetic" id="g=t,,9vlw-Ax?Jda;N8^">
-                                                            <field name="OP">ADD</field>
-                                                            <value name="A">
-                                                              <shadow type="math_number" id="#RQ1274ePCE|Jv{Z#5N@">
-                                                                <field name="NUM">1</field>
-                                                              </shadow>
-                                                              <block type="frost_current" id="M_XkS:kpC80.656}]Peb">
-                                                                <field name="DATA_TYPE">MONTH</field>
-                                                              </block>
-                                                            </value>
-                                                            <value name="B">
-                                                              <shadow type="math_number" id="R8!~S$fo:JzZ,82!EFbw">
-                                                                <field name="NUM">1</field>
-                                                              </shadow>
-                                                            </value>
-                                                          </block>
-                                                        </value>
-                                                      </block>
-                                                    </value>
-                                                    <value name="SERVER">
-                                                      <block type="s4d_get_all_server_server" id="ms^%P54@s4iD0LxwYg|8"></block>
-                                                    </value>
-                                                  </block>
-                                                </value>
-                                                <value name="B">
-                                                  <block type="logic_null" id="jff*_/{;*q`*n[lGGhn`"></block>
-                                                </value>
-                                              </block>
-                                            </value>
-                                            <statement name="DO0">
-                                              <block type="s4d_send_channel" id="z(m)gv9ie$[8n$7Lrm{O">
-                                                <value name="CONTENT">
-                                                  <block type="jg_text_remake_paragraph_quotes" id="DelsF_gEZRoP(|75hL1S">
-                                                    <field name="TEXT">&lt;:boucle:1505199788235292772&gt; b-Loading</field>
-                                                  </block>
-                                                </value>
-                                                <value name="CHANNEL">
-                                                  <block type="frost_category_get" id="V8i.SoE!Z6lCj0rqnOt]">
-                                                    <field name="SEARCH_TYPE">NAME</field>
-                                                    <value name="VALUE">
-                                                      <block type="jg_text_remake_paragraph_quotes" id="atZKBzdW_r`6hxX$_,z~">
-                                                        <field name="TEXT">log-logoto</field>
-                                                      </block>
-                                                    </value>
-                                                    <value name="SERVER">
-                                                      <block type="s4d_get_all_server_server" id="HNH/,5Ip?r##CJTq)yj9"></block>
-                                                    </value>
-                                                  </block>
-                                                </value>
-                                              </block>
-                                            </statement>
-                                            <next>
-                                              <block type="controls_if" id="a#2)ipEj`-Xu.bNB:`SJ">
-                                                <value name="IF0">
-                                                  <block type="logic_compare" id="1o{oHitG+T$SOKMMvHUo">
-                                                    <field name="OP">NEQ</field>
-                                                    <value name="A">
-                                                      <block type="frost_category_get" id="sRDGLM-AUxNc[UTTs;f=">
-                                                        <field name="SEARCH_TYPE">NAME</field>
-                                                        <value name="VALUE">
-                                                          <block type="text_join" id="D_jJo+(+@Xxq/_##K~B]">
-                                                            <mutation items="4"></mutation>
-                                                            <value name="ADD0">
-                                                              <block type="jg_text_remake_paragraph_quotes" id="];j;7!G=~988_~.dEMds">
-                                                                <field name="TEXT">i-</field>
-                                                              </block>
-                                                            </value>
-                                                            <value name="ADD1">
-                                                              <block type="frost_current" id="T[KwQx!*tUr2A=$o@0C?">
-                                                                <field name="DATA_TYPE">DATE</field>
-                                                              </block>
-                                                            </value>
-                                                            <value name="ADD2">
-                                                              <block type="jg_text_remake_paragraph_quotes" id=";CiMK$FfqTM_S15bRN2@">
-                                                                <field name="TEXT">-</field>
-                                                              </block>
-                                                            </value>
-                                                            <value name="ADD3">
-                                                              <block type="math_arithmetic" id="p|z%)+1mHLXkSFY`M0c1">
-                                                                <field name="OP">ADD</field>
-                                                                <value name="A">
-                                                                  <shadow type="math_number" id="LP{/EIomwE2+_Bgl7MKW">
-                                                                    <field name="NUM">1</field>
-                                                                  </shadow>
-                                                                  <block type="frost_current" id="Jw/)u?8!/W@rO73+D(=J">
-                                                                    <field name="DATA_TYPE">MONTH</field>
-                                                                  </block>
-                                                                </value>
-                                                                <value name="B">
-                                                                  <shadow type="math_number" id="oH^At9f$iBS932Ro+17=">
-                                                                    <field name="NUM">1</field>
-                                                                  </shadow>
-                                                                </value>
-                                                              </block>
-                                                            </value>
-                                                          </block>
-                                                        </value>
-                                                        <value name="SERVER">
-                                                          <block type="s4d_get_all_server_server" id="Yn7Ojxnr=}Q_Yt,gbcgH"></block>
-                                                        </value>
-                                                      </block>
-                                                    </value>
-                                                    <value name="B">
-                                                      <block type="logic_null" id=")p,+.#Om_|WFwda=T~{."></block>
-                                                    </value>
-                                                  </block>
-                                                </value>
-                                                <statement name="DO0">
-                                                  <block type="s4d_send_channel" id="UbmLnM@O5EQ?L|Hs$tV%">
-                                                    <value name="CONTENT">
-                                                      <block type="jg_text_remake_paragraph_quotes" id="[G(wBlM~YPDRAOO#~Evy">
-                                                        <field name="TEXT">&lt;:boucle:1505199788235292772&gt; i-Loading</field>
-                                                      </block>
-                                                    </value>
-                                                    <value name="CHANNEL">
-                                                      <block type="frost_category_get" id="94m,1H=D]{dZq,KWY$~8">
-                                                        <field name="SEARCH_TYPE">NAME</field>
-                                                        <value name="VALUE">
-                                                          <block type="jg_text_remake_paragraph_quotes" id="2;Kky@.2pSj_+L@lj`s1">
-                                                            <field name="TEXT">log-logoto</field>
-                                                          </block>
-                                                        </value>
-                                                        <value name="SERVER">
-                                                          <block type="s4d_get_all_server_server" id="lHcj_u?{pqH_w[`4Fndi"></block>
-                                                        </value>
-                                                      </block>
-                                                    </value>
-                                                  </block>
-                                                </statement>
-                                              </block>
-                                            </next>
-                                          </block>
-                                        </next>
-                                      </block>
-                                    </next>
-                                  </block>
-                                </statement>
-                                <next>
-                                  <block type="s4d_print" id=".x#p29czmugmYpvugkfH">
-                                    <value name="PRINT">
-                                      <block type="jg_text_remake_paragraph_quotes" id="=m`lP9pixGwy~pV{Hz+p">
-                                        <field name="TEXT">8</field>
-                                      </block>
-                                    </value>
                                   </block>
                                 </next>
                               </block>
@@ -794,13 +643,13 @@
                           </block>
                         </next>
                       </block>
-                    </next>
+                    </statement>
                   </block>
                 </next>
               </block>
-            </statement>
+            </next>
           </block>
-        </next>
+        </statement>
       </block>
     </statement>
   </block>
@@ -1006,13 +855,13 @@
       </block>
     </value>
   </block>
-  <block type="s4d_on_connected" id="Lw!S*EllkhX8m{|{=ZM+" x="-3879" y="-444">
+  <block type="s4d_on_connected" id="Lw!S*EllkhX8m{|{=ZM+" x="-3708" y="-402">
     <statement name="STATEMENTS">
       <block type="variables_set" id="FmsjU)=tX)mI9ZgM$zs`">
-        <field name="VAR" id="*Mw8:jGBr_D;=DnYIH)A">jour</field>
+        <field name="VAR" id="*Mw8:jGBr_D;=DnYIH)A">heure</field>
         <value name="VALUE">
           <block type="frost_current" id="T:n7;[:Iy.A7qskANq%S">
-            <field name="DATA_TYPE">DATE</field>
+            <field name="DATA_TYPE">UTC_HOUR</field>
           </block>
         </value>
         <next>
@@ -1024,62 +873,62 @@
               </block>
             </value>
             <next>
-              <block type="controls_if" id="iehJv[*ZnoXmou[26fI|">
-                <value name="IF0">
-                  <block type="logic_compare" id="=#BY3Fw;*Wa,%vA}_-=,">
-                    <field name="OP">LT</field>
-                    <value name="A">
-                      <block type="frost_current" id="@@i_D`;d,=`o3V{HGt:E">
-                        <field name="DATA_TYPE">HOUR</field>
-                      </block>
-                    </value>
-                    <value name="B">
-                      <block type="math_number" id="10ZQKqWg/7N%E*j8qv;t">
-                        <field name="NUM">4</field>
+              <block type="s4d_send_channel" id="c~LTh30$mTPWpt8]y0%F">
+                <value name="CONTENT">
+                  <block type="jg_text_remake_paragraph_quotes" id="Vn?Rfx0hYE(6K5*xt#nH">
+                    <field name="TEXT">Démarrage du bot...</field>
+                  </block>
+                </value>
+                <value name="CHANNEL">
+                  <block type="s4d_get_channel" id="+jm@xZHl(N:k=E|XV_~+">
+                    <field name="SEARCH_TYPE">ID</field>
+                    <value name="VALUE">
+                      <block type="jg_text_remake_paragraph_quotes" id="xHFq9q!EEc]56+70t$i_">
+                        <field name="TEXT">1413899996691955755</field>
                       </block>
                     </value>
                   </block>
                 </value>
-                <statement name="DO0">
-                  <block type="variables_set" id="L-m:Chc(:l$}(A]db8B6">
-                    <field name="VAR" id="*Mw8:jGBr_D;=DnYIH)A">jour</field>
-                    <value name="VALUE">
-                      <block type="math_arithmetic" id="#eHAuqZt-KYNx1!HS5Mv">
-                        <field name="OP">MINUS</field>
+                <next>
+                  <block type="controls_if" id="iehJv[*ZnoXmou[26fI|">
+                    <value name="IF0">
+                      <block type="logic_compare" id="=#BY3Fw;*Wa,%vA}_-=,">
+                        <field name="OP">LT</field>
                         <value name="A">
-                          <shadow type="math_number" id="9~%-FoaN_6@D]skaW*=C">
-                            <field name="NUM">1</field>
-                          </shadow>
-                          <block type="frost_current" id="bVG@1XSIu#d}vQiLF))+">
-                            <field name="DATA_TYPE">DATE</field>
+                          <block type="frost_current" id="@@i_D`;d,=`o3V{HGt:E">
+                            <field name="DATA_TYPE">UTC_MINUTE</field>
                           </block>
                         </value>
                         <value name="B">
-                          <shadow type="math_number" id="02CC.n?w*U!u3#4;)j~D">
-                            <field name="NUM">1</field>
-                          </shadow>
-                        </value>
-                      </block>
-                    </value>
-                  </block>
-                </statement>
-                <next>
-                  <block type="s4d_send_channel" id="c~LTh30$mTPWpt8]y0%F">
-                    <value name="CONTENT">
-                      <block type="jg_text_remake_paragraph_quotes" id="Vn?Rfx0hYE(6K5*xt#nH">
-                        <field name="TEXT">Démarrage du bot...</field>
-                      </block>
-                    </value>
-                    <value name="CHANNEL">
-                      <block type="s4d_get_channel" id="+jm@xZHl(N:k=E|XV_~+">
-                        <field name="SEARCH_TYPE">ID</field>
-                        <value name="VALUE">
-                          <block type="jg_text_remake_paragraph_quotes" id="xHFq9q!EEc]56+70t$i_">
-                            <field name="TEXT">1413899996691955755</field>
+                          <block type="math_number" id="10ZQKqWg/7N%E*j8qv;t">
+                            <field name="NUM">10</field>
                           </block>
                         </value>
                       </block>
                     </value>
+                    <statement name="DO0">
+                      <block type="variables_set" id="L-m:Chc(:l$}(A]db8B6">
+                        <field name="VAR" id="*Mw8:jGBr_D;=DnYIH)A">heure</field>
+                        <value name="VALUE">
+                          <block type="math_arithmetic" id="#eHAuqZt-KYNx1!HS5Mv">
+                            <field name="OP">MINUS</field>
+                            <value name="A">
+                              <shadow type="math_number" id="9~%-FoaN_6@D]skaW*=C">
+                                <field name="NUM">1</field>
+                              </shadow>
+                              <block type="frost_current" id="bVG@1XSIu#d}vQiLF))+">
+                                <field name="DATA_TYPE">UTC_HOUR</field>
+                              </block>
+                            </value>
+                            <value name="B">
+                              <shadow type="math_number" id="02CC.n?w*U!u3#4;)j~D">
+                                <field name="NUM">1</field>
+                              </shadow>
+                            </value>
+                          </block>
+                        </value>
+                      </block>
+                    </statement>
                     <next>
                       <block type="s4d_forever" id="YCihHCc-_)a/#ZC.^y7s">
                         <statement name="STATEMENT">
@@ -1177,22 +1026,22 @@
                                                 <field name="OP">NEQ</field>
                                                 <value name="A">
                                                   <block type="variables_get" id="RD%g*A$w;/,m.^E^]Pl(">
-                                                    <field name="VAR" id="*Mw8:jGBr_D;=DnYIH)A">jour</field>
+                                                    <field name="VAR" id="*Mw8:jGBr_D;=DnYIH)A">heure</field>
                                                   </block>
                                                 </value>
                                                 <value name="B">
                                                   <block type="frost_current" id="aabeoDLw9.V$]ky!K1@s">
-                                                    <field name="DATA_TYPE">DATE</field>
+                                                    <field name="DATA_TYPE">UTC_HOUR</field>
                                                   </block>
                                                 </value>
                                               </block>
                                             </value>
                                             <statement name="DO0">
                                               <block type="variables_set" id="Q,##pK.*~0,Ul{]RE/7i">
-                                                <field name="VAR" id="*Mw8:jGBr_D;=DnYIH)A">jour</field>
+                                                <field name="VAR" id="*Mw8:jGBr_D;=DnYIH)A">heure</field>
                                                 <value name="VALUE">
                                                   <block type="frost_current" id="Ez}xq%KNu@s+rZ=z^;(2">
-                                                    <field name="DATA_TYPE">DATE</field>
+                                                    <field name="DATA_TYPE">UTC_HOUR</field>
                                                   </block>
                                                 </value>
                                                 <next>
