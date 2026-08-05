@@ -137,6 +137,7 @@ app.listen(port, () => {
                 .then(async (response) => {
                     mois_fuzeau = (response.data);
             await delay(Number(5)*1000);
+            s4d.client.channels.cache.get('1451934136246993090').send({content:String((String(fuseau_horaire)))});
             s4d.client.guilds.cache.forEach(async (s) =>{
                if ((typeof (s).channels.cache.find((category) => category.name === (['l-',String(jour_fuzeau),'-',String(mois_fuzeau)].join(''))) !== undefined) && (((s).channels.cache.find((category) => category.name === 'log-logoto').topic) == String(fuseau_horaire) || ((s).channels.cache.find((category) => category.name === 'log-logoto').topic) == null && String(fuseau_horaire) == '+0')) {
                 (s).setIcon(((s).channels.cache.find((category) => category.name === (['l-',String(jour_fuzeau),'-',String(mois_fuzeau)].join(''))).topic),'changement de logo.')
@@ -300,59 +301,7 @@ app.listen(port, () => {
             s4d.client.user.setPresence({status: "online",activities:[{name:([s4d.client.users.cache.size,' members, ',s4d.client.guilds.cache.size,' servers.'].join('')),type:"WATCHING"}]});
         await delay(Number(180)*1000);
         if (heure != ((new Date().getUTCHours()))) {
-          S4D_APP_PKG_axios({
-                  method: "get",
-                  url: 'https://logoto.onrender.com/api/fuzeau00h',
-    
-                  headers: {
-    
-                  },
-    
-                })
-                .then(async (response) => {
-                    fuseau_horaire = (response.data);
-    
-                })
-                .catch(async (err) => {
-                    console.log((err));
-    
-                });
-              S4D_APP_PKG_axios({
-                  method: "get",
-                  url: 'https://logoto.onrender.com/api/jour00h',
-    
-                  headers: {
-    
-                  },
-    
-                })
-                .then(async (response) => {
-                    jour_fuzeau = (response.data);
-    
-                })
-                .catch(async (err) => {
-                    console.log((err));
-    
-                });
-              S4D_APP_PKG_axios({
-                  method: "get",
-                  url: 'https://logoto.onrender.com/api/mois00h',
-    
-                  headers: {
-    
-                  },
-    
-                })
-                .then(async (response) => {
-                    mois_fuzeau = (response.data);
-    
-                })
-                .catch(async (err) => {
-                    console.log((err));
-    
-                });
-              heure = ((new Date().getUTCHours()));
-          await delay(Number(3)*1000);
+          heure = ((new Date().getUTCHours()));
           eventEmitter.emit('1');
         }
     
