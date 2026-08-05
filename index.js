@@ -1,14 +1,3 @@
-const express = require('express');
-const app = express();
-const port = process.env.PORT || 8080;
-
-app.get('/', (req, res) => {
-  res.send('Bot Logoto en ligne !');
-});
-
-app.listen(port, () => {
-  console.log(`Serveur de vérification activé sur le port ${port}`);
-});
 (async()=>{
     // default imports
     const events = require('events');
@@ -99,7 +88,7 @@ app.listen(port, () => {
     
 
     // blockly code
-    var heure, start_unix, fuseau_horaire, serveur, ms_on;
+    var heure, start_unix, fuseau_horaire, jour_fuzeau, mois_fuzeau, ms_on, serveur;
     
     function mathRandomInt(a, b) {
       if (a > b) {
@@ -231,6 +220,7 @@ app.listen(port, () => {
       if (((new Date().getUTCMinutes())) < 10) {
         heure = ((new Date().getUTCHours())) - 1;
       }
+      eventEmitter.emit('5');
     
               while(s4d.client && s4d.client.token) {
                   await delay(50);
@@ -301,6 +291,64 @@ app.listen(port, () => {
       }
     
         });
+    
+    eventEmitter.on('5', async => {
+          S4D_APP_PKG_axios({
+              method: "get",
+              url: 'https://logoto.onrender.com/api/fuzeau00h',
+    
+              headers: {
+    
+              },
+    
+            })
+            .then(async (response) => {
+                fuseau_horaire = (response);
+    
+            })
+            .catch(async (err) => {
+                console.log((err));
+    
+            });
+          S4D_APP_PKG_axios({
+              method: "get",
+              url: 'https://logoto.onrender.com/api/jour00h',
+    
+              headers: {
+    
+              },
+    
+            })
+            .then(async (response) => {
+                jour_fuzeau = (response);
+    
+            })
+            .catch(async (err) => {
+                console.log((err));
+    
+            });
+          S4D_APP_PKG_axios({
+              method: "get",
+              url: 'https://logoto.onrender.com/api/mois00h',
+    
+              headers: {
+    
+              },
+    
+            })
+            .then(async (response) => {
+                mois_fuzeau = (response);
+    
+            })
+            .catch(async (err) => {
+                console.log((err));
+    
+            });
+          s4d.client.channels.cache.get('1387514903778295940').send({content:String(('h:' + String(fuseau_horaire)))});
+      s4d.client.channels.cache.get('1387514903778295940').send({content:String(('j:' + String(jour_fuzeau)))});
+      s4d.client.channels.cache.get('1387514903778295940').send({content:String(('m:' + String(mois_fuzeau)))});
+    
+      });
     
     s4d.client.on('guildCreate', async (s4dguild) => {
       s4d.client.channels.cache.get('1432341468059537419').send({content:String((['Bot ajouté dans **',s4dguild.name,'** (`',s4dguild.id,'`).'].join('')))});
