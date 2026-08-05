@@ -159,9 +159,9 @@ app.listen(port, () => {
               if ((typeof (s).channels.cache.find((category) => category.name === (['i-',String(jour_fuzeau),'-',String(mois_fuzeau)].join(''))) !== undefined) && (((s).channels.cache.find((category) => category.name === 'log-logoto').topic) == String(fuseau_horaire) || ((s).channels.cache.find((category) => category.name === 'log-logoto').topic) == null && String(fuseau_horaire) == '+0')) {
                 (s).setSplash(((s).channels.cache.find((category) => category.name === (['i-',String(jour_fuzeau),'-',String(mois_fuzeau)].join(''))).topic),'changement d\'image d\'invitation.')
     
+                console.log((['Image d\'invitation du serveur ',(s).name,' (',(s).id,').'].join('')));
+                (s).channels.cache.find((category) => category.name === 'log-logoto').send({content:String('<:check:1505215575822172170> Server invite image changed.')});
               }
-              console.log((['Image d\'invitation du serveur ',(s).name,' (',(s).id,').'].join('')));
-              (s).channels.cache.find((category) => category.name === 'log-logoto').send({content:String('<:check:1505215575822172170> Server invite image changed.')});
     
             })
     

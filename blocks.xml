@@ -1050,68 +1050,68 @@
                                                         <value name="server">
                                                           <block type="s4d_get_all_server_server" id="V-Rm/E.^Kv-nI6Z}?a,t"></block>
                                                         </value>
-                                                      </block>
-                                                    </statement>
-                                                    <next>
-                                                      <block type="s4d_print" id="AyxJJn@$91f39TsIa9zv">
-                                                        <value name="PRINT">
-                                                          <block type="text_join" id="J*S;V4~q,5f+zq99i1;}">
-                                                            <mutation items="5"></mutation>
-                                                            <value name="ADD0">
-                                                              <block type="jg_text_remake_paragraph_quotes" id="LdTR*v)?4wE|+,}GM3D#">
-                                                                <field name="TEXT">Image d'invitation du serveur </field>
-                                                              </block>
-                                                            </value>
-                                                            <value name="ADD1">
-                                                              <block type="s4d_server_name" id="dN=Jj=XE+(S.oQ3kx,h{">
-                                                                <value name="SERVER">
-                                                                  <block type="s4d_get_all_server_server" id="f2GsDe6wZ.1,FYz~tIQt"></block>
-                                                                </value>
-                                                              </block>
-                                                            </value>
-                                                            <value name="ADD2">
-                                                              <block type="jg_text_remake_paragraph_quotes" id=".u;EYvDPp0.:=ZTl;m2V">
-                                                                <field name="TEXT"> (</field>
-                                                              </block>
-                                                            </value>
-                                                            <value name="ADD3">
-                                                              <block type="s4d_server_id" id="T4Gok+%:Tt6)ty0bXuA%">
-                                                                <value name="SERVER">
-                                                                  <block type="s4d_get_all_server_server" id="jK!!#8trO:6P1;LP~hq["></block>
-                                                                </value>
-                                                              </block>
-                                                            </value>
-                                                            <value name="ADD4">
-                                                              <block type="jg_text_remake_paragraph_quotes" id="[]WSXUx$r,LI1.qtod:[">
-                                                                <field name="TEXT">).</field>
-                                                              </block>
-                                                            </value>
-                                                          </block>
-                                                        </value>
                                                         <next>
-                                                          <block type="s4d_send_channel" id="9iMiW:gll}umaW0;6uH2">
-                                                            <value name="CONTENT">
-                                                              <block type="jg_text_remake_paragraph_quotes" id="om$cJ+MU}9XZ!r0d[Q,_">
-                                                                <field name="TEXT">&lt;:check:1505215575822172170&gt; Server invite image changed.</field>
-                                                              </block>
-                                                            </value>
-                                                            <value name="CHANNEL">
-                                                              <block type="frost_category_get" id="xXUKXKHjTN}jalc3/435">
-                                                                <field name="SEARCH_TYPE">NAME</field>
-                                                                <value name="VALUE">
-                                                                  <block type="jg_text_remake_paragraph_quotes" id="c)SLXBcNtOfqoiG^Lt(Z">
-                                                                    <field name="TEXT">log-logoto</field>
+                                                          <block type="s4d_print" id="AyxJJn@$91f39TsIa9zv">
+                                                            <value name="PRINT">
+                                                              <block type="text_join" id="J*S;V4~q,5f+zq99i1;}">
+                                                                <mutation items="5"></mutation>
+                                                                <value name="ADD0">
+                                                                  <block type="jg_text_remake_paragraph_quotes" id="LdTR*v)?4wE|+,}GM3D#">
+                                                                    <field name="TEXT">Image d'invitation du serveur </field>
                                                                   </block>
                                                                 </value>
-                                                                <value name="SERVER">
-                                                                  <block type="s4d_get_all_server_server" id="1#,uuaCQwHY5:~,KwD7-"></block>
+                                                                <value name="ADD1">
+                                                                  <block type="s4d_server_name" id="dN=Jj=XE+(S.oQ3kx,h{">
+                                                                    <value name="SERVER">
+                                                                      <block type="s4d_get_all_server_server" id="f2GsDe6wZ.1,FYz~tIQt"></block>
+                                                                    </value>
+                                                                  </block>
+                                                                </value>
+                                                                <value name="ADD2">
+                                                                  <block type="jg_text_remake_paragraph_quotes" id=".u;EYvDPp0.:=ZTl;m2V">
+                                                                    <field name="TEXT"> (</field>
+                                                                  </block>
+                                                                </value>
+                                                                <value name="ADD3">
+                                                                  <block type="s4d_server_id" id="T4Gok+%:Tt6)ty0bXuA%">
+                                                                    <value name="SERVER">
+                                                                      <block type="s4d_get_all_server_server" id="jK!!#8trO:6P1;LP~hq["></block>
+                                                                    </value>
+                                                                  </block>
+                                                                </value>
+                                                                <value name="ADD4">
+                                                                  <block type="jg_text_remake_paragraph_quotes" id="[]WSXUx$r,LI1.qtod:[">
+                                                                    <field name="TEXT">).</field>
+                                                                  </block>
                                                                 </value>
                                                               </block>
                                                             </value>
+                                                            <next>
+                                                              <block type="s4d_send_channel" id="9iMiW:gll}umaW0;6uH2">
+                                                                <value name="CONTENT">
+                                                                  <block type="jg_text_remake_paragraph_quotes" id="om$cJ+MU}9XZ!r0d[Q,_">
+                                                                    <field name="TEXT">&lt;:check:1505215575822172170&gt; Server invite image changed.</field>
+                                                                  </block>
+                                                                </value>
+                                                                <value name="CHANNEL">
+                                                                  <block type="frost_category_get" id="xXUKXKHjTN}jalc3/435">
+                                                                    <field name="SEARCH_TYPE">NAME</field>
+                                                                    <value name="VALUE">
+                                                                      <block type="jg_text_remake_paragraph_quotes" id="c)SLXBcNtOfqoiG^Lt(Z">
+                                                                        <field name="TEXT">log-logoto</field>
+                                                                      </block>
+                                                                    </value>
+                                                                    <value name="SERVER">
+                                                                      <block type="s4d_get_all_server_server" id="1#,uuaCQwHY5:~,KwD7-"></block>
+                                                                    </value>
+                                                                  </block>
+                                                                </value>
+                                                              </block>
+                                                            </next>
                                                           </block>
                                                         </next>
                                                       </block>
-                                                    </next>
+                                                    </statement>
                                                   </block>
                                                 </next>
                                               </block>
