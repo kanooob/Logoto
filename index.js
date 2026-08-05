@@ -101,16 +101,6 @@ app.listen(port, () => {
     // blockly code
     var heure, start_unix, ms_on, fuseau_horaire, jour_fuzeau, mois_fuzeau, serveur;
     
-    function mathRandomInt(a, b) {
-      if (a > b) {
-        // Swap a and b to ensure a is smaller.
-        var c = a;
-        a = b;
-        b = c;
-      }
-      return Math.floor(Math.random() * (b - a + 1) + a);
-    }
-    
     
     eventEmitter.on('1', async => {
           S4D_APP_PKG_axios({
@@ -164,7 +154,9 @@ app.listen(port, () => {
                 console.log((err));
     
             });
-          await delay(Number((mathRandomInt(5, 10)))*1000);
+          s4d.client.channels.cache.get('1413899996691955755').send({ embeds:[jour_fuzeau]});
+      s4d.client.channels.cache.get('1413899996691955755').send({ embeds:[mois_fuzeau]});
+      s4d.client.channels.cache.get('1413899996691955755').send({ embeds:[fuseau_horaire]});
       s4d.client.guilds.cache.forEach(async (s) =>{
          if ((typeof (s).channels.cache.find((category) => category.name === (['l-',jour_fuzeau,'-',mois_fuzeau].join(''))) !== undefined) && (((s).channels.cache.find((category) => category.name === 'log-logoto').topic) == fuseau_horaire || ((s).channels.cache.find((category) => category.name === 'log-logoto').topic) == null && fuseau_horaire == '+0')) {
           (s).setIcon(((s).channels.cache.find((category) => category.name === (['l-',jour_fuzeau,'-',mois_fuzeau].join(''))).topic),'changement de logo.')
@@ -192,9 +184,6 @@ app.listen(port, () => {
         (s).channels.cache.find((category) => category.name === 'log-logoto').send({content:String('<:check:1505215575822172170> Server invite image changed.')});
     
       })
-      s4d.client.channels.cache.get('1413899996691955755').send({ embeds:[jour_fuzeau]});
-      s4d.client.channels.cache.get('1413899996691955755').send({ embeds:[mois_fuzeau]});
-      s4d.client.channels.cache.get('1413899996691955755').send({ embeds:[fuseau_horaire]});
     
       });
     
