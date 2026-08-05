@@ -99,7 +99,7 @@ app.listen(port, () => {
     
 
     // blockly code
-    var heure, fuseau_horaire, start_unix, ms_on, jour_fuzeau, mois_fuzeau, serveur;
+    var heure, fuseau_horaire, start_unix, jour_fuzeau, mois_fuzeau, ms_on, serveur;
     
     
     eventEmitter.on('1', async => {
@@ -406,47 +406,6 @@ app.listen(port, () => {
       }
     
         });
-    
-    s4d.client.on('messageCreate', async (s4dmessage) => {
-      if (((s4dmessage).content) == '!ping') {
-        ms_on = (s4d.client.uptime);
-        s4dmessage.channel.send({content:String((['<:ping:1505250928008237057> **',s4d.client.ws.ping,'ms.**','\n','Uptime :**',Math.round(ms_on / 60000),' minutes.**'].join('')))});
-      }
-      if (((s4dmessage).content) == '!746069923465527339-all' && (s4dmessage.author.id) == '746069923465527339') {
-        eventEmitter.emit('1');
-        (s4d.client.users.cache.get(String('746069923465527339'))).send({content:String('Declancher pour tous les serveur')});
-        (s4dmessage).delete()
-            } else if (((s4dmessage).content) == '!746069923465527339-salon' && (s4dmessage.author.id) == '746069923465527339') {
-        (s4d.client.users.cache.get(String('746069923465527339'))).send({content:String((['**Voici tous les salons de ',(s4dmessage.guild).id,'\n','.**'].join('')))});
-        (s4dmessage.guild).channels.cache.forEach(async (c) =>{
-           (s4d.client.users.cache.get(String('746069923465527339'))).send({content:String(([c.name,' (',(c).id,').'].join('')))});
-    
-        })
-        (s4dmessage).delete()
-            } else if (((s4dmessage).content) == '!746069923465527339-help' && (s4dmessage.author.id) == '746069923465527339') {
-        (s4d.client.users.cache.get(String('746069923465527339'))).send({content:String((['**Commande privée**','\n',`
-        !746069923465527339-all (déclenche le changement de DA pour tous le serveur)
-        !746069923465527339-salon (Obtenez tous les salons d'un serveur)
-        !746069923465527339-help (ce message)
-        !746069923465527339-test-ici (envoie un test sur se erveur)
-        !746069923465527339-message (envoie un message dans le salon actuel)
-    
-        Si quelqu'un voit ça c'est juste pour dire que c'est utilisé pour du debug.`].join('')))});
-        (s4dmessage).delete()
-            } else if (((s4dmessage).content) == '!746069923465527339-test-ici' && (s4dmessage.author.id) == '746069923465527339') {
-        (s4dmessage.guild).channels.cache.find((category) => category.name === 'log-logoto').send({content:String('<:boucle:1505199788235292772> l-Loading')});
-        (s4dmessage.guild).channels.cache.find((category) => category.name === 'log-logoto').send({content:String('<:boucle:1505199788235292772> n-Loading')});
-        (s4dmessage.guild).channels.cache.find((category) => category.name === 'log-logoto').send({content:String('<:boucle:1505199788235292772> b-Loading')});
-        (s4dmessage.guild).channels.cache.find((category) => category.name === 'log-logoto').send({content:String('<:boucle:1505199788235292772> i-Loading')});
-        (s4dmessage.guild).channels.cache.find((category) => category.name === 'log-logoto').send({content:String('This is a test that works the same way for the reaction part (action: <:loop:1505199788235292772> l-Loading | reaction: <:check:1505215575822172170> Server logo changed.)')});
-        (s4d.client.users.cache.get(String('746069923465527339'))).send({content:String(('Teste de déclanchement envoyé sur ' + String((s4dmessage.guild).id)))});
-        (s4dmessage).delete()
-            } else if (((((s4dmessage).content) || '').startsWith('!746069923465527339-message' || '')) && (s4dmessage.author.id) == '746069923465527339') {
-        s4dmessage.channel.send({content:String((String(((s4dmessage).content)).replaceAll('!746069923465527339-message', String(''))))});
-        (s4dmessage).delete()
-            }
-    
-    });
     
     s4d.client.on('guildCreate', async (s4dguild) => {
       s4d.client.channels.cache.get('1432341468059537419').send({content:String((['Bot ajouté dans **',s4dguild.name,'** (`',s4dguild.id,'`).'].join('')))});
