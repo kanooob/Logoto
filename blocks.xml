@@ -8,7 +8,7 @@
     <variable id="3{=V.9,:yYx2RV}2#d$Q">jour fuzeau</variable>
     <variable id="5#U%#ehM~c,;$CKOrFTL">mois fuzeau</variable>
   </variables>
-  <block type="create_event" id="NNSPS4-r~o^_Gyi:7sqX" x="-6000" y="-3518">
+  <block type="create_event" id="NNSPS4-r~o^_Gyi:7sqX" x="-6100" y="-3431">
     <value name="NAME">
       <shadow type="text" id="muvbkECo`a@P?=DM2Uj0">
         <field name="TEXT">1</field>
@@ -39,28 +39,46 @@
               <block type="controls_if" id="2lnq7h8d*^A;x~^i.)U0">
                 <mutation elseif="1" else="1"></mutation>
                 <value name="IF0">
-                  <block type="logic_compare" id="L.`Jg!)S`B_@O3}Ul%.b">
-                    <field name="OP">EQ</field>
+                  <block type="logic_operation" id="dBUOMmp7zP7B-RtPW/J:">
+                    <field name="OP">AND</field>
                     <value name="A">
-                      <block type="s4d_channel_topic" id="x9UOB#Gw5[jE`A{?4xVB">
-                        <value name="CHANNEL">
-                          <block type="frost_category_get" id="SAv=E^-*EQo~[36^CB$r">
-                            <field name="SEARCH_TYPE">NAME</field>
-                            <value name="VALUE">
-                              <block type="jg_text_remake_paragraph_quotes" id="|nG-7-{b;q9OGiF+^t#P">
-                                <field name="TEXT">log-logoto</field>
+                      <block type="logic_compare" id="n}E:|FQeR=R?CVz^3(5U">
+                        <field name="OP">EQ</field>
+                        <value name="A">
+                          <block type="s4d_channel_topic" id="x9UOB#Gw5[jE`A{?4xVB">
+                            <value name="CHANNEL">
+                              <block type="frost_category_get" id="SAv=E^-*EQo~[36^CB$r">
+                                <field name="SEARCH_TYPE">NAME</field>
+                                <value name="VALUE">
+                                  <block type="jg_text_remake_paragraph_quotes" id="|nG-7-{b;q9OGiF+^t#P">
+                                    <field name="TEXT">log-logoto</field>
+                                  </block>
+                                </value>
+                                <value name="SERVER">
+                                  <block type="s4d_get_all_server_server" id="rs8Re^OLn/@0A9]|D[=;"></block>
+                                </value>
                               </block>
                             </value>
-                            <value name="SERVER">
-                              <block type="s4d_get_all_server_server" id="rs8Re^OLn/@0A9]|D[=;"></block>
-                            </value>
                           </block>
+                        </value>
+                        <value name="B">
+                          <block type="logic_null" id=")Y+{?_Fomn5J?S[(NtQx"></block>
                         </value>
                       </block>
                     </value>
                     <value name="B">
-                      <block type="variables_get" id="l:6riKuc3?My(za}WXL^">
-                        <field name="VAR" id="vn)lh!6^%Rc2JT)CYNsZ">fuseau horaire</field>
+                      <block type="logic_compare" id="L.`Jg!)S`B_@O3}Ul%.b">
+                        <field name="OP">EQ</field>
+                        <value name="A">
+                          <block type="jg_text_remake_paragraph_quotes" id="bdEEiJ]R8KoZ%Wz,e)Ym">
+                            <field name="TEXT">+0</field>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <block type="variables_get" id="l:6riKuc3?My(za}WXL^">
+                            <field name="VAR" id="vn)lh!6^%Rc2JT)CYNsZ">fuseau horaire</field>
+                          </block>
+                        </value>
                       </block>
                     </value>
                   </block>
@@ -69,8 +87,20 @@
                   <block type="logic_compare" id="4xom3y|jgzgl)6OG^HQ*">
                     <field name="OP">EQ</field>
                     <value name="A">
-                      <block type="jg_text_remake_paragraph_quotes" id="SPNa3:~Fiia@7b.@5!ne">
-                        <field name="TEXT">+0</field>
+                      <block type="s4d_channel_topic" id="[)zwYB%,:fsuPF3DDMuB">
+                        <value name="CHANNEL">
+                          <block type="frost_category_get" id="qzcoBOB[G$VV=BK69?YS">
+                            <field name="SEARCH_TYPE">NAME</field>
+                            <value name="VALUE">
+                              <block type="jg_text_remake_paragraph_quotes" id="M^!wU]!LL%Z:xe|Mj0sI">
+                                <field name="TEXT">log-logoto</field>
+                              </block>
+                            </value>
+                            <value name="SERVER">
+                              <block type="s4d_get_all_server_server" id="kQO9sEyl,IE7?yzM[;=0"></block>
+                            </value>
+                          </block>
+                        </value>
                       </block>
                     </value>
                     <value name="B">
