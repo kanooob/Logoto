@@ -808,7 +808,7 @@
                                                         <next>
                                                           <block type="controls_if" id="]#b*`,?!Bs^hsh*ckOTp">
                                                             <value name="IF0">
-                                                              <block type="logic_operation" id="gGIZoc086p8wuBNzCt#.">
+                                                              <block type="logic_operation" id=";yQQ9QPv5/o{2A1e==nk">
                                                                 <field name="OP">AND</field>
                                                                 <value name="A">
                                                                   <block type="s4d_channel_exist" id="y+{bpMT=B]={5}w{]h6^">
@@ -848,73 +848,73 @@
                                                                   </block>
                                                                 </value>
                                                                 <value name="B">
-                                                                  <block type="logic_operation" id="fk8c{1YXvkkygBhEI7Fn">
+                                                                  <block type="logic_operation" id="r1XV_i5%i.3$xhfrGb}3">
                                                                     <field name="OP">OR</field>
                                                                     <value name="A">
-                                                                      <block type="logic_compare" id="I{_.}5bR;nsGVh]izak9">
+                                                                      <block type="logic_compare" id="wZ3zGM/qty*}zLp!u/yV">
                                                                         <field name="OP">EQ</field>
                                                                         <value name="A">
-                                                                          <block type="s4d_channel_topic" id="p.yw.ypP@498oVIQ!Hz?">
+                                                                          <block type="s4d_channel_topic" id="$ztKtBo}Qi@9E[!P2my2">
                                                                             <value name="CHANNEL">
-                                                                              <block type="frost_category_get" id="bA-.sKKq/PQ!)`_m[NZV">
+                                                                              <block type="frost_category_get" id="*~xMj.`^xR1rYtuw;q%X">
                                                                                 <field name="SEARCH_TYPE">NAME</field>
                                                                                 <value name="VALUE">
-                                                                                  <block type="jg_text_remake_paragraph_quotes" id="*sD]943)Wjju^{qlMl]3">
+                                                                                  <block type="jg_text_remake_paragraph_quotes" id="^GjVI1EsY4+2bcKt[Gj$">
                                                                                     <field name="TEXT">log-logoto</field>
                                                                                   </block>
                                                                                 </value>
                                                                                 <value name="SERVER">
-                                                                                  <block type="s4d_get_all_server_server" id="lb4tS7Spng*7(UN|%2R,"></block>
+                                                                                  <block type="s4d_get_all_server_server" id="xEKMfn|:a*MO_?h0R:$,"></block>
                                                                                 </value>
                                                                               </block>
                                                                             </value>
                                                                           </block>
                                                                         </value>
                                                                         <value name="B">
-                                                                          <block type="variables_get" id="bag:sd=+24J8XMVmJFQ!">
+                                                                          <block type="variables_get" id="l}cq?@84Wk*2PYE/+8Q|">
                                                                             <field name="VAR" id="vn)lh!6^%Rc2JT)CYNsZ">fuseau horaire</field>
                                                                           </block>
                                                                         </value>
                                                                       </block>
                                                                     </value>
                                                                     <value name="B">
-                                                                      <block type="logic_operation" id="kr%J-OY0]$i*:Z-oeFN5">
+                                                                      <block type="logic_operation" id="T4PGQw^#$luIp-=NOlD-">
                                                                         <field name="OP">AND</field>
                                                                         <value name="A">
-                                                                          <block type="logic_compare" id="P[}2*Hp-#^N*z=@,az4+">
+                                                                          <block type="logic_compare" id="X+_vj::LecBh1#Yt1db`">
                                                                             <field name="OP">EQ</field>
                                                                             <value name="A">
-                                                                              <block type="s4d_channel_topic" id="56aXy%/gknU%]Q;kSdJa">
+                                                                              <block type="s4d_channel_topic" id="5yK$~me#C*5IE23(8!wx">
                                                                                 <value name="CHANNEL">
-                                                                                  <block type="frost_category_get" id="0IAxbq@j/Hw}x2//isMK">
+                                                                                  <block type="frost_category_get" id="4+K0}JUE?7qm{fm6,gJK">
                                                                                     <field name="SEARCH_TYPE">NAME</field>
                                                                                     <value name="VALUE">
-                                                                                      <block type="jg_text_remake_paragraph_quotes" id="s}FXkeaPGKEL3}eZ@Sy~">
+                                                                                      <block type="jg_text_remake_paragraph_quotes" id="GFuI]{@7lyVxS9IL72`k">
                                                                                         <field name="TEXT">log-logoto</field>
                                                                                       </block>
                                                                                     </value>
                                                                                     <value name="SERVER">
-                                                                                      <block type="s4d_get_all_server_server" id="PD3}3eD#SD#W=tF*R1Wl"></block>
+                                                                                      <block type="s4d_get_all_server_server" id="uF(Xoc%xH$cPQ6r#b1k|"></block>
                                                                                     </value>
                                                                                   </block>
                                                                                 </value>
                                                                               </block>
                                                                             </value>
                                                                             <value name="B">
-                                                                              <block type="logic_null" id="zhBWhnmn*Xku(jwsLo%3"></block>
+                                                                              <block type="logic_null" id=";.@0m!;gf.dPvyVp~Xuh"></block>
                                                                             </value>
                                                                           </block>
                                                                         </value>
                                                                         <value name="B">
-                                                                          <block type="logic_compare" id="XR7G7^@[N%-(M];6E?R*">
+                                                                          <block type="logic_compare" id="sw-nx+o}B)v:,Xo57{J3">
                                                                             <field name="OP">EQ</field>
                                                                             <value name="A">
-                                                                              <block type="variables_get" id="drAG897/n8c#?W1nx:07">
+                                                                              <block type="variables_get" id="26Jja!*=qKaN[1/Q$GCK">
                                                                                 <field name="VAR" id="vn)lh!6^%Rc2JT)CYNsZ">fuseau horaire</field>
                                                                               </block>
                                                                             </value>
                                                                             <value name="B">
-                                                                              <block type="jg_text_remake_paragraph_quotes" id="G,,oaC7Cys--F1]o2xqn">
+                                                                              <block type="jg_text_remake_paragraph_quotes" id=",jnd1*aWb{?PuLD/BWo4">
                                                                                 <field name="TEXT">+0</field>
                                                                               </block>
                                                                             </value>
