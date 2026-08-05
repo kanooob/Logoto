@@ -8,7 +8,7 @@
     <variable id="5#U%#ehM~c,;$CKOrFTL">mois fuzeau</variable>
     <variable id="9K|xO~10[*J1oku_/?V#">serveur</variable>
   </variables>
-  <block type="create_event" id="NNSPS4-r~o^_Gyi:7sqX" x="-8251" y="-5708">
+  <block type="create_event" id="NNSPS4-r~o^_Gyi:7sqX" x="-8721" y="-5822">
     <value name="NAME">
       <shadow type="text" id="muvbkECo`a@P?=DM2Uj0">
         <field name="TEXT">1</field>
@@ -94,7 +94,7 @@
                                           <block type="controls_if" id="RB$[Gyjre,nntk)[g9aD">
                                             <value name="IF0">
                                               <block type="logic_operation" id="$s^CZ%K@C(6GtJAkD9bE">
-                                                <field name="OP">AND</field>
+                                                <field name="OP">OR</field>
                                                 <value name="A">
                                                   <block type="s4d_channel_exist" id="@(Q(ygh!TSufWlsk}AYk">
                                                     <value name="CHANNEL">
@@ -355,7 +355,7 @@
                                               <block type="controls_if" id="pmb1,Gd8if4i%`i3qh0x">
                                                 <value name="IF0">
                                                   <block type="logic_operation" id="!nOP%%jEBdAyv4Lkf1)|">
-                                                    <field name="OP">AND</field>
+                                                    <field name="OP">OR</field>
                                                     <value name="A">
                                                       <block type="s4d_channel_exist" id="PQc()#Ia3nyPi?;s]-cP">
                                                         <value name="CHANNEL">
@@ -616,7 +616,7 @@
                                                   <block type="controls_if" id="T{^}9$?Bn0C{lhs-f[{(">
                                                     <value name="IF0">
                                                       <block type="logic_operation" id="b)[)p0^w/3L)4stUY+}A">
-                                                        <field name="OP">AND</field>
+                                                        <field name="OP">OR</field>
                                                         <value name="A">
                                                           <block type="s4d_channel_exist" id="rvNW`I$2ia6,)}]Oc9O8">
                                                             <value name="CHANNEL">
@@ -877,7 +877,7 @@
                                                       <block type="controls_if" id="]#b*`,?!Bs^hsh*ckOTp">
                                                         <value name="IF0">
                                                           <block type="logic_operation" id=";yQQ9QPv5/o{2A1e==nk">
-                                                            <field name="OP">AND</field>
+                                                            <field name="OP">OR</field>
                                                             <value name="A">
                                                               <block type="s4d_channel_exist" id="y+{bpMT=B]={5}w{]h6^">
                                                                 <value name="CHANNEL">
