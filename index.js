@@ -9,6 +9,17 @@ app.get('/', (req, res) => {
 app.listen(port, () => {
   console.log(`Serveur de vérification activé sur le port ${port}`);
 });
+const express = require('express');
+const app = express();
+const port = process.env.PORT || 8080;
+
+app.get('/', (req, res) => {
+  res.send('Bot Logoto en ligne !');
+});
+
+app.listen(port, () => {
+  console.log(`Serveur de vérification activé sur le port ${port}`);
+});
 (async()=>{
     // default imports
     const events = require('events');
