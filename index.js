@@ -101,6 +101,16 @@ app.listen(port, () => {
     // blockly code
     var heure, fuseau_horaire, start_unix, jour_fuzeau, mois_fuzeau, ms_on, serveur;
     
+    function mathRandomInt(a, b) {
+      if (a > b) {
+        // Swap a and b to ensure a is smaller.
+        var c = a;
+        a = b;
+        b = c;
+      }
+      return Math.floor(Math.random() * (b - a + 1) + a);
+    }
+    
     
     eventEmitter.on('1', async => {
           S4D_APP_PKG_axios({
@@ -136,15 +146,11 @@ app.listen(port, () => {
                 })
                 .then(async (response) => {
                     mois_fuzeau = (response.data);
-            await delay(Number(5)*1000);
-            s4d.client.channels.cache.get('1451934136246993090').send({content:String((String(fuseau_horaire)))});
+            await delay(Number((mathRandomInt(5, 50)))*1000);
             s4d.client.guilds.cache.forEach(async (s) =>{
                if (((s).channels.cache.find((category) => category.name === 'log-logoto').topic) == null && '+0' == String(fuseau_horaire)) {
-                s4d.client.channels.cache.get('1451934136246993090').send({content:String('1')});
               } else if (((s).channels.cache.find((category) => category.name === 'log-logoto').topic) == String(fuseau_horaire)) {
-                s4d.client.channels.cache.get('1451934136246993090').send({content:String('2')});
               } else {
-                s4d.client.channels.cache.get('1451934136246993090').send({content:String('3')});
                 return
               }
               if ((s).channels.cache.find((category) => category.name === (['l-',String(jour_fuzeau),'-',String(mois_fuzeau)].join(''))) != null) {
