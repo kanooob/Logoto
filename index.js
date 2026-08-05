@@ -99,7 +99,7 @@ app.listen(port, () => {
     
 
     // blockly code
-    var heure, start_unix, ms_on, fuseau_horaire, serveur, jour_fuzeau, mois_fuzeau;
+    var heure, start_unix, ms_on, fuseau_horaire, jour_fuzeau, mois_fuzeau, serveur;
     
     function mathRandomInt(a, b) {
       if (a > b) {
@@ -366,7 +366,58 @@ app.listen(port, () => {
         s4dmessage.channel.send({content:String((['<:ping:1505250928008237057> **',s4d.client.ws.ping,'ms.**','\n','Uptime :**',Math.round(ms_on / 60000),' minutes.**'].join('')))});
       }
       if (((s4dmessage).content) == '!746069923465527339-all' && (s4dmessage.author.id) == '746069923465527339') {
-        eventEmitter.emit('1');
+        S4D_APP_PKG_axios({
+                method: "get",
+                url: 'https://logoto.onrender.com/api/fuzeau00h',
+    
+                headers: {
+    
+                },
+    
+              })
+              .then(async (response) => {
+                  fuseau_horaire = (response.data);
+    
+              })
+              .catch(async (err) => {
+                  console.log((err));
+    
+              });
+            S4D_APP_PKG_axios({
+                method: "get",
+                url: 'https://logoto.onrender.com/api/jour00h',
+    
+                headers: {
+    
+                },
+    
+              })
+              .then(async (response) => {
+                  jour_fuzeau = (response.data);
+    
+              })
+              .catch(async (err) => {
+                  console.log((err));
+    
+              });
+            S4D_APP_PKG_axios({
+                method: "get",
+                url: 'https://logoto.onrender.com/api/mois00h',
+    
+                headers: {
+    
+                },
+    
+              })
+              .then(async (response) => {
+                  mois_fuzeau = (response.data);
+    
+              })
+              .catch(async (err) => {
+                  console.log((err));
+    
+              });
+            eventEmitter.emit('1');
         (s4d.client.users.cache.get(String('746069923465527339'))).send({content:String('Declancher pour tous les serveur')});
         (s4dmessage).delete()
             } else if (((s4dmessage).content) == '!746069923465527339-salon' && (s4dmessage.author.id) == '746069923465527339') {

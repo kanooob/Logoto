@@ -4,9 +4,9 @@
     <variable id="({,8$4+1#r^CW)14AY[c">start unix</variable>
     <variable id="jlm:W3Oxc-yLpT4NI{=*">ms on</variable>
     <variable id="vn)lh!6^%Rc2JT)CYNsZ">fuseau horaire</variable>
-    <variable id="9K|xO~10[*J1oku_/?V#">serveur</variable>
     <variable id="3{=V.9,:yYx2RV}2#d$Q">jour fuzeau</variable>
     <variable id="5#U%#ehM~c,;$CKOrFTL">mois fuzeau</variable>
+    <variable id="9K|xO~10[*J1oku_/?V#">serveur</variable>
   </variables>
   <block type="create_event" id="NNSPS4-r~o^_Gyi:7sqX" x="-6507" y="-3252">
     <value name="NAME">
@@ -2911,36 +2911,114 @@
               </block>
             </value>
             <statement name="DO0">
-              <block type="emit_event" id="LQqVuF-L|mT}xs^On@)A">
-                <value name="NAME">
-                  <shadow type="text" id="@0eN`T4PR?/s9`9.Hl@i">
-                    <field name="TEXT">1</field>
-                  </shadow>
+              <block type="jg_web_request_advanced_new2_send_request_to_url_using_method_with_result_giving_request_headers_with_data_sections_then_if_error" id="@k;g1n7KW+EJG1:3kZ1C">
+                <field name="METHOD">"get"</field>
+                <field name="IMAGEORNOT"></field>
+                <value name="URL">
+                  <block type="text" id="[kVYU@aKB4}?=c#GmBTZ">
+                    <field name="TEXT">https://logoto.onrender.com/api/fuzeau00h</field>
+                  </block>
                 </value>
+                <statement name="THEN">
+                  <block type="variables_set" id="HgIJxuLX/rzKo(RsLk(V">
+                    <field name="VAR" id="vn)lh!6^%Rc2JT)CYNsZ">fuseau horaire</field>
+                    <value name="VALUE">
+                      <block type="jg_web_request_advanced_response_data" id="miC-7l~e_G8s^xL8pt9C"></block>
+                    </value>
+                  </block>
+                </statement>
+                <statement name="IF_ERROR">
+                  <block type="s4d_print" id="=iR~=hxlnLgQ|gUhZVG$">
+                    <value name="PRINT">
+                      <block type="frost_other_err" id="W`6qE/i6~8Z#:ZADN;;z"></block>
+                    </value>
+                  </block>
+                </statement>
                 <next>
-                  <block type="s4d_send_member" id="Lvy+/}Et~fjae~HmulLb">
-                    <value name="CONTENT">
-                      <block type="jg_text_remake_paragraph_quotes" id="*EJ.WMX,e~S(b)vG2~2F">
-                        <field name="TEXT">Declancher pour tous les serveur</field>
+                  <block type="jg_web_request_advanced_new2_send_request_to_url_using_method_with_result_giving_request_headers_with_data_sections_then_if_error" id="|,pu88-$?#**k~_j0^4=">
+                    <field name="METHOD">"get"</field>
+                    <field name="IMAGEORNOT"></field>
+                    <value name="URL">
+                      <block type="text" id=";?VNVPA6x0#N2{^W+Y$|">
+                        <field name="TEXT">https://logoto.onrender.com/api/jour00h</field>
                       </block>
                     </value>
-                    <value name="MEMBER">
-                      <block type="jg_members_get_member_by_id" id="Ih?~+HqEaH@x6HrqKl@f">
-                        <value name="ID">
-                          <shadow type="text" id="dS6ujp35)%Q,n9w8ilNP">
-                            <field name="TEXT">12345</field>
-                          </shadow>
-                          <block type="jg_text_remake_paragraph_quotes" id="{3M9l_mTAxo)]da@NEOG">
-                            <field name="TEXT">746069923465527339</field>
+                    <statement name="THEN">
+                      <block type="variables_set" id="1^sNu:%e71P9!k/s$zE1">
+                        <field name="VAR" id="3{=V.9,:yYx2RV}2#d$Q">jour fuzeau</field>
+                        <value name="VALUE">
+                          <block type="jg_web_request_advanced_response_data" id="l~BqbgAOgtLNR-!_6i#*"></block>
+                        </value>
+                      </block>
+                    </statement>
+                    <statement name="IF_ERROR">
+                      <block type="s4d_print" id="u@m9hP1;)}*Z@se57Cwy">
+                        <value name="PRINT">
+                          <block type="frost_other_err" id="9jm2a#y#3_0,U^YXO*Dr"></block>
+                        </value>
+                      </block>
+                    </statement>
+                    <next>
+                      <block type="jg_web_request_advanced_new2_send_request_to_url_using_method_with_result_giving_request_headers_with_data_sections_then_if_error" id="(i;wPUJs)uuk!qm410SD">
+                        <field name="METHOD">"get"</field>
+                        <field name="IMAGEORNOT"></field>
+                        <value name="URL">
+                          <block type="text" id="]l2){hfqQc8ja,h9^qaE">
+                            <field name="TEXT">https://logoto.onrender.com/api/mois00h</field>
                           </block>
                         </value>
-                      </block>
-                    </value>
-                    <next>
-                      <block type="jg_messages_delete_message" id="3?VJOmVjZ(18]~dJ_63X">
-                        <value name="MESSAGE">
-                          <block type="Message" id="G$L{]U0r@3-WlqR-9EE;"></block>
-                        </value>
+                        <statement name="THEN">
+                          <block type="variables_set" id="(|ZFW7)0c@EF6Wja?q~G">
+                            <field name="VAR" id="5#U%#ehM~c,;$CKOrFTL">mois fuzeau</field>
+                            <value name="VALUE">
+                              <block type="jg_web_request_advanced_response_data" id="gKirA%]@_y]k`8xr~-I^"></block>
+                            </value>
+                          </block>
+                        </statement>
+                        <statement name="IF_ERROR">
+                          <block type="s4d_print" id="WO30+q*/k|b*ov$?P;oY">
+                            <value name="PRINT">
+                              <block type="frost_other_err" id="gR{IAt=HiRXQ;m4@ma+;"></block>
+                            </value>
+                          </block>
+                        </statement>
+                        <next>
+                          <block type="emit_event" id="LQqVuF-L|mT}xs^On@)A">
+                            <value name="NAME">
+                              <shadow type="text" id="@0eN`T4PR?/s9`9.Hl@i">
+                                <field name="TEXT">1</field>
+                              </shadow>
+                            </value>
+                            <next>
+                              <block type="s4d_send_member" id="Lvy+/}Et~fjae~HmulLb">
+                                <value name="CONTENT">
+                                  <block type="jg_text_remake_paragraph_quotes" id="*EJ.WMX,e~S(b)vG2~2F">
+                                    <field name="TEXT">Declancher pour tous les serveur</field>
+                                  </block>
+                                </value>
+                                <value name="MEMBER">
+                                  <block type="jg_members_get_member_by_id" id="Ih?~+HqEaH@x6HrqKl@f">
+                                    <value name="ID">
+                                      <shadow type="text" id="dS6ujp35)%Q,n9w8ilNP">
+                                        <field name="TEXT">12345</field>
+                                      </shadow>
+                                      <block type="jg_text_remake_paragraph_quotes" id="{3M9l_mTAxo)]da@NEOG">
+                                        <field name="TEXT">746069923465527339</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                                <next>
+                                  <block type="jg_messages_delete_message" id="3?VJOmVjZ(18]~dJ_63X">
+                                    <value name="MESSAGE">
+                                      <block type="Message" id="G$L{]U0r@3-WlqR-9EE;"></block>
+                                    </value>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
                       </block>
                     </next>
                   </block>
