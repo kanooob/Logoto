@@ -120,29 +120,29 @@ app.listen(port, () => {
         } else {
           return
         }
-        if (typeof (s4dmessage.guild).channels.cache.find((category) => category.name === (['l-',jour_fuzeau,'-',mois_fuzeau].join(''))) !== undefined) {
-          (s4dmessage.guild).setIcon(((s4dmessage.guild).channels.cache.find((category) => category.name === (['l-',jour_fuzeau,'-',mois_fuzeau].join(''))).topic),'changement de logo.')
+        if (typeof (s).channels.cache.find((category) => category.name === (['l-',jour_fuzeau,'-',mois_fuzeau].join(''))) !== undefined) {
+          (s).setIcon(((s).channels.cache.find((category) => category.name === (['l-',jour_fuzeau,'-',mois_fuzeau].join(''))).topic),'changement de logo.')
     
-          console.log((['Logo du serveur ',(s4dmessage.guild).name,' (',(s4dmessage.guild).id,').'].join('')));
+          console.log((['Logo du serveur ',(s).name,' (',(s).id,').'].join('')));
           (s).channels.cache.find((category) => category.name === 'log-logoto').send({content:String('<:check:1505215575822172170> Server logo changed.')});
         }
-        if (typeof (s4dmessage.guild).channels.cache.find((category) => category.name === (['n-',jour_fuzeau,'-',mois_fuzeau].join(''))) !== undefined) {
-          (s4dmessage.guild).setName(((s4dmessage.guild).channels.cache.find((category) => category.name === (['n-',jour_fuzeau,'-',mois_fuzeau].join(''))).topic),'changement de nom.')
+        if (typeof (s).channels.cache.find((category) => category.name === (['n-',jour_fuzeau,'-',mois_fuzeau].join(''))) !== undefined) {
+          (s).setName(((s).channels.cache.find((category) => category.name === (['n-',jour_fuzeau,'-',mois_fuzeau].join(''))).topic),'changement de nom.')
     
-          console.log((['Nom du serveur ',(s4dmessage.guild).name,' (',(s4dmessage.guild).id,').'].join('')));
+          console.log((['Nom du serveur ',(s).name,' (',(s).id,').'].join('')));
           (s).channels.cache.find((category) => category.name === 'log-logoto').send({content:String('<:check:1505215575822172170> Server name changed.')});
         }
-        if (typeof (s4dmessage.guild).channels.cache.find((category) => category.name === (['b-',jour_fuzeau,'-',mois_fuzeau].join(''))) !== undefined) {
-          (s4dmessage.guild).setBanner(((s4dmessage.guild).channels.cache.find((category) => category.name === (['b-',jour_fuzeau,'-',mois_fuzeau].join(''))).topic),'changement de bannière.')
+        if (typeof (s).channels.cache.find((category) => category.name === (['b-',jour_fuzeau,'-',mois_fuzeau].join(''))) !== undefined) {
+          (s).setBanner(((s).channels.cache.find((category) => category.name === (['b-',jour_fuzeau,'-',mois_fuzeau].join(''))).topic),'changement de bannière.')
     
-          console.log((['Bannier du serveur ',(s4dmessage.guild).name,' (',(s4dmessage.guild).id,').'].join('')));
+          console.log((['Bannier du serveur ',(s).name,' (',(s).id,').'].join('')));
           (s).channels.cache.find((category) => category.name === 'log-logoto').send({content:String('<:check:1505215575822172170> Server banner changed.')});
         }
-        if (typeof (s4dmessage.guild).channels.cache.find((category) => category.name === (['i-',jour_fuzeau,'-',mois_fuzeau].join(''))) !== undefined) {
-          (s4dmessage.guild).setSplash(((s4dmessage.guild).channels.cache.find((category) => category.name === (['i-',jour_fuzeau,'-',mois_fuzeau].join(''))).topic),'changement d\'image d\'invitation.')
+        if (typeof (s).channels.cache.find((category) => category.name === (['i-',jour_fuzeau,'-',mois_fuzeau].join(''))) !== undefined) {
+          (s).setSplash(((s).channels.cache.find((category) => category.name === (['i-',jour_fuzeau,'-',mois_fuzeau].join(''))).topic),'changement d\'image d\'invitation.')
     
         }
-        console.log((['Image d\'invitation du serveur ',(s4dmessage.guild).name,' (',(s4dmessage.guild).id,').'].join('')));
+        console.log((['Image d\'invitation du serveur ',(s).name,' (',(s).id,').'].join('')));
         (s).channels.cache.find((category) => category.name === 'log-logoto').send({content:String('<:check:1505215575822172170> Server invite image changed.')});
     
       })

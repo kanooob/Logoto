@@ -8,7 +8,7 @@
     <variable id="3{=V.9,:yYx2RV}2#d$Q">jour fuzeau</variable>
     <variable id="5#U%#ehM~c,;$CKOrFTL">mois fuzeau</variable>
   </variables>
-  <block type="create_event" id="NNSPS4-r~o^_Gyi:7sqX" x="-6100" y="-3431">
+  <block type="create_event" id="NNSPS4-r~o^_Gyi:7sqX" x="-6507" y="-3252">
     <value name="NAME">
       <shadow type="text" id="muvbkECo`a@P?=DM2Uj0">
         <field name="TEXT">1</field>
@@ -146,7 +146,7 @@
                               </block>
                             </value>
                             <value name="SERVER">
-                              <block type="s4d_message_guild" id="|?=itK}n3C}y^s!|2!rk"></block>
+                              <block type="s4d_get_all_server_server" id="KGD2My(}QK/_a~JBo3:O"></block>
                             </value>
                           </block>
                         </value>
@@ -186,7 +186,7 @@
                                   </block>
                                 </value>
                                 <value name="SERVER">
-                                  <block type="s4d_message_guild" id=".oOe_.OnfVSgLW1bJ^Ly"></block>
+                                  <block type="s4d_get_all_server_server" id="plAat52@VUsIQ{pf3+%1"></block>
                                 </value>
                               </block>
                             </value>
@@ -198,7 +198,7 @@
                           </shadow>
                         </value>
                         <value name="server">
-                          <block type="s4d_message_guild" id="t*EuH*r.r74efrE6,EAY"></block>
+                          <block type="s4d_get_all_server_server" id="r!U#q8SR8T)x)AY_q!.d"></block>
                         </value>
                         <next>
                           <block type="s4d_print" id="zQuEv95-I@;Ju==oZp(n">
@@ -213,7 +213,7 @@
                                 <value name="ADD1">
                                   <block type="s4d_server_name" id="{Vc]ySeCetXRLNg:Hp_-">
                                     <value name="SERVER">
-                                      <block type="s4d_message_guild" id="6$jQ).13eLAWj$^B%d/n"></block>
+                                      <block type="s4d_get_all_server_server" id="tiv.ffG2r%]85T.Xx`Dd"></block>
                                     </value>
                                   </block>
                                 </value>
@@ -225,7 +225,7 @@
                                 <value name="ADD3">
                                   <block type="s4d_server_id" id="UEaR#u!%z_HUvtD3U?vv">
                                     <value name="SERVER">
-                                      <block type="s4d_message_guild" id="Q3%3}?$+1ZUw4oYg,7A]"></block>
+                                      <block type="s4d_get_all_server_server" id="aGl[=hp|zM{u]KY+XfN~"></block>
                                     </value>
                                   </block>
                                 </value>
@@ -295,7 +295,7 @@
                                   </block>
                                 </value>
                                 <value name="SERVER">
-                                  <block type="s4d_message_guild" id="WNib}L#bI@[I)zpYk@g0"></block>
+                                  <block type="s4d_get_all_server_server" id="}/Hehmvp!RDZHQ42d7^a"></block>
                                 </value>
                               </block>
                             </value>
@@ -335,7 +335,7 @@
                                       </block>
                                     </value>
                                     <value name="SERVER">
-                                      <block type="s4d_message_guild" id="B(p^#,F9;lysPqW/#!|/"></block>
+                                      <block type="s4d_get_all_server_server" id="H2Y.EGLz,=lW!xTI1*`-"></block>
                                     </value>
                                   </block>
                                 </value>
@@ -347,7 +347,7 @@
                               </shadow>
                             </value>
                             <value name="server">
-                              <block type="s4d_message_guild" id="W!Z2HA40,~oc?.z*YmPn"></block>
+                              <block type="s4d_get_all_server_server" id="Pt6JtSOFv$-gI-zp*6VH"></block>
                             </value>
                             <next>
                               <block type="s4d_print" id="h,|1ZTxiNpZL3S~+Gv7H">
@@ -362,7 +362,7 @@
                                     <value name="ADD1">
                                       <block type="s4d_server_name" id="x|VRE$?Bb7jo?BZP79^7">
                                         <value name="SERVER">
-                                          <block type="s4d_message_guild" id="+r3o?IdM5[.4{=hlSM/X"></block>
+                                          <block type="s4d_get_all_server_server" id="!gos!!bYyclR/O$*{mc6"></block>
                                         </value>
                                       </block>
                                     </value>
@@ -374,7 +374,7 @@
                                     <value name="ADD3">
                                       <block type="s4d_server_id" id="yI_CK?LTp9jgU84qdH}:">
                                         <value name="SERVER">
-                                          <block type="s4d_message_guild" id="5~f,q5SdW;WYt7lSEQ/~"></block>
+                                          <block type="s4d_get_all_server_server" id="xkmcr.Zt.l0!w=SZN#|*"></block>
                                         </value>
                                       </block>
                                     </value>
@@ -444,7 +444,7 @@
                                       </block>
                                     </value>
                                     <value name="SERVER">
-                                      <block type="s4d_message_guild" id="A{9[DExP7q!B.Ma[1d,9"></block>
+                                      <block type="s4d_get_all_server_server" id="7JgDN{vj1/;Bv-Zr?s%n"></block>
                                     </value>
                                   </block>
                                 </value>
@@ -484,7 +484,7 @@
                                           </block>
                                         </value>
                                         <value name="SERVER">
-                                          <block type="s4d_message_guild" id="~rtNe{Ai[1)gmlL+Ye17"></block>
+                                          <block type="s4d_get_all_server_server" id="Lg[wvgbNOBoX*QQyF~!d"></block>
                                         </value>
                                       </block>
                                     </value>
@@ -496,7 +496,7 @@
                                   </shadow>
                                 </value>
                                 <value name="server">
-                                  <block type="s4d_message_guild" id="qKKXdQ5cY98qnGA5-CoE"></block>
+                                  <block type="s4d_get_all_server_server" id="?h1D#M(E$CbuI4_5x-Il"></block>
                                 </value>
                                 <next>
                                   <block type="s4d_print" id="K7!S.,B-0D=RM%mH$!1e">
@@ -511,7 +511,7 @@
                                         <value name="ADD1">
                                           <block type="s4d_server_name" id="H)W7@f!IhKY(56fy]C^C">
                                             <value name="SERVER">
-                                              <block type="s4d_message_guild" id="!OQ9dj(2fCdG8GYDA-W["></block>
+                                              <block type="s4d_get_all_server_server" id="_LJ/+xLS36Mn$}tBcVqO"></block>
                                             </value>
                                           </block>
                                         </value>
@@ -523,7 +523,7 @@
                                         <value name="ADD3">
                                           <block type="s4d_server_id" id="3//aH-GNz?h)!@tvaS4l">
                                             <value name="SERVER">
-                                              <block type="s4d_message_guild" id="Ul,w1J;qS[:*f0-z([S{"></block>
+                                              <block type="s4d_get_all_server_server" id="(Q@r(rM:oKkh3!wO]Z|*"></block>
                                             </value>
                                           </block>
                                         </value>
@@ -593,7 +593,7 @@
                                           </block>
                                         </value>
                                         <value name="SERVER">
-                                          <block type="s4d_message_guild" id=":uGa/%+|=dm/QZT^NHhE"></block>
+                                          <block type="s4d_get_all_server_server" id="Nf.q4v[_?gUe(+d]D#la"></block>
                                         </value>
                                       </block>
                                     </value>
@@ -633,7 +633,7 @@
                                               </block>
                                             </value>
                                             <value name="SERVER">
-                                              <block type="s4d_message_guild" id="fLr0B_V,s$^W];-j5.3."></block>
+                                              <block type="s4d_get_all_server_server" id="c,0nI^xHT#IZlB$[[t=2"></block>
                                             </value>
                                           </block>
                                         </value>
@@ -645,7 +645,7 @@
                                       </shadow>
                                     </value>
                                     <value name="server">
-                                      <block type="s4d_message_guild" id="=*,EPNER!#-wbVT[N}];"></block>
+                                      <block type="s4d_get_all_server_server" id="V-Rm/E.^Kv-nI6Z}?a,t"></block>
                                     </value>
                                   </block>
                                 </statement>
@@ -662,7 +662,7 @@
                                         <value name="ADD1">
                                           <block type="s4d_server_name" id="dN=Jj=XE+(S.oQ3kx,h{">
                                             <value name="SERVER">
-                                              <block type="s4d_message_guild" id="}Ed}9fDhzRrNMU!FbEjX"></block>
+                                              <block type="s4d_get_all_server_server" id="f2GsDe6wZ.1,FYz~tIQt"></block>
                                             </value>
                                           </block>
                                         </value>
@@ -674,7 +674,7 @@
                                         <value name="ADD3">
                                           <block type="s4d_server_id" id="T4Gok+%:Tt6)ty0bXuA%">
                                             <value name="SERVER">
-                                              <block type="s4d_message_guild" id="@X~|:%MOYpG{F|kzd.Cn"></block>
+                                              <block type="s4d_get_all_server_server" id="jK!!#8trO:6P1;LP~hq["></block>
                                             </value>
                                           </block>
                                         </value>
