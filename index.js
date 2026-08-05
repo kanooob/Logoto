@@ -118,7 +118,6 @@ app.listen(port, () => {
         if (((s).channels.cache.find((category) => category.name === 'log-logoto').topic) == null && '+0' == fuseau_horaire) {
         } else if (((s).channels.cache.find((category) => category.name === 'log-logoto').topic) == fuseau_horaire) {
         } else {
-          return
         }
         if (typeof (s).channels.cache.find((category) => category.name === (['l-',jour_fuzeau,'-',mois_fuzeau].join(''))) !== undefined) {
           (s).setIcon(((s).channels.cache.find((category) => category.name === (['l-',jour_fuzeau,'-',mois_fuzeau].join(''))).topic),'changement de logo.')

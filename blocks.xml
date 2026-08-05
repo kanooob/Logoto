@@ -110,9 +110,6 @@
                     </value>
                   </block>
                 </value>
-                <statement name="ELSE">
-                  <block type="s4d_return" id=":dnIZ`ddOUU0o-@EJ7vR"></block>
-                </statement>
                 <next>
                   <block type="controls_if" id="RB$[Gyjre,nntk)[g9aD">
                     <value name="IF0">
