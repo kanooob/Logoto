@@ -99,7 +99,7 @@ app.listen(port, () => {
     
 
     // blockly code
-    var heure, start_unix, ms_on, fuseau_horaire, jour_fuzeau, mois_fuzeau, serveur;
+    var heure, fuseau_horaire, start_unix, ms_on, jour_fuzeau, mois_fuzeau, serveur;
     
     
     eventEmitter.on('1', async => {
@@ -140,33 +140,24 @@ app.listen(port, () => {
             s4d.client.channels.cache.get('1451934136246993090').send({content:String((String(fuseau_horaire)))});
             s4d.client.guilds.cache.forEach(async (s) =>{
                if (((s).channels.cache.find((category) => category.name === 'log-logoto').topic) == null && '+0' == String(fuseau_horaire)) {
+                s4d.client.channels.cache.get('1451934136246993090').send({content:String('1')});
               } else if (((s).channels.cache.find((category) => category.name === 'log-logoto').topic) == String(fuseau_horaire)) {
+                s4d.client.channels.cache.get('1451934136246993090').send({content:String('2')});
               } else {
+                s4d.client.channels.cache.get('1451934136246993090').send({content:String('3')});
                 return
               }
-              if (typeof (s).channels.cache.find((category) => category.name === (['l-',String(jour_fuzeau),'-',String(mois_fuzeau)].join(''))) !== undefined) {
-                (s).setIcon(((s).channels.cache.find((category) => category.name === (['l-',String(jour_fuzeau),'-',String(mois_fuzeau)].join(''))).topic),'changement de logo.')
-    
-                console.log((['Logo du serveur ',(s).name,' (',(s).id,').'].join('')));
-                (s).channels.cache.find((category) => category.name === 'log-logoto').send({content:String('<:check:1505215575822172170> Server logo changed.')});
+              if ((s).channels.cache.find((category) => category.name === (['l-',String(jour_fuzeau),'-',String(mois_fuzeau)].join(''))) != null) {
+                (s).channels.cache.find((category) => category.name === 'log-logoto').send({content:String('<:boucle:1505199788235292772> l-Loading')});
               }
-              if (typeof (s).channels.cache.find((category) => category.name === (['n-',String(jour_fuzeau),'-',String(mois_fuzeau)].join(''))) !== undefined) {
-                (s).setName(((s).channels.cache.find((category) => category.name === (['n-',String(jour_fuzeau),'-',String(mois_fuzeau)].join(''))).topic),'changement de nom.')
-    
-                console.log((['Nom du serveur ',(s).name,' (',(s).id,').'].join('')));
-                (s).channels.cache.find((category) => category.name === 'log-logoto').send({content:String('<:check:1505215575822172170> Server name changed.')});
+              if ((s).channels.cache.find((category) => category.name === (['n-',String(jour_fuzeau),'-',String(mois_fuzeau)].join(''))) != null) {
+                (s).channels.cache.find((category) => category.name === 'log-logoto').send({content:String('<:boucle:1505199788235292772> n-Loading')});
               }
-              if (typeof (s).channels.cache.find((category) => category.name === (['b-',String(jour_fuzeau),'-',String(mois_fuzeau)].join(''))) !== undefined) {
-                (s).setBanner(((s).channels.cache.find((category) => category.name === (['b-',String(jour_fuzeau),'-',String(mois_fuzeau)].join(''))).topic),'changement de bannière.')
-    
-                console.log((['Bannier du serveur ',(s).name,' (',(s).id,').'].join('')));
-                (s).channels.cache.find((category) => category.name === 'log-logoto').send({content:String('<:check:1505215575822172170> Server banner changed.')});
+              if ((s).channels.cache.find((category) => category.name === (['b-',String(jour_fuzeau),'-',String(mois_fuzeau)].join(''))) != null) {
+                (s).channels.cache.find((category) => category.name === 'log-logoto').send({content:String('<:boucle:1505199788235292772> b-Loading')});
               }
-              if (typeof (s).channels.cache.find((category) => category.name === (['i-',String(jour_fuzeau),'-',String(mois_fuzeau)].join(''))) !== undefined) {
-                (s).setSplash(((s).channels.cache.find((category) => category.name === (['i-',String(jour_fuzeau),'-',String(mois_fuzeau)].join(''))).topic),'changement d\'image d\'invitation.')
-    
-                console.log((['Image d\'invitation du serveur ',(s).name,' (',(s).id,').'].join('')));
-                (s).channels.cache.find((category) => category.name === 'log-logoto').send({content:String('<:check:1505215575822172170> Server invite image changed.')});
+              if ((s).channels.cache.find((category) => category.name === (['i-',String(jour_fuzeau),'-',String(jour_fuzeau)].join(''))) != null) {
+                (s).channels.cache.find((category) => category.name === 'log-logoto').send({content:String('<:boucle:1505199788235292772> i-Loading')});
               }
     
             })
@@ -190,6 +181,71 @@ app.listen(port, () => {
             });
     
       });
+    
+    s4d.client.on('messageCreate', async (s4dmessage) => {
+      if (((s4dmessage).content) == '<:boucle:1505199788235292772> l-Loading') {
+        (s4dmessage.guild).setIcon(((s4dmessage.guild).channels.cache.find((category) => category.name === (['l-',(new Date().getDate()),'-',((new Date().getMonth())) + 1].join(''))).topic),'changement de logo.')
+    
+        s4dmessage.channel.send({content:String('<:check:1505215575822172170> Server logo changed.')});
+        console.log((['Logo du serveur ',(s4dmessage.guild).name,' (',(s4dmessage.guild).id,').'].join('')));
+      }
+      if (((s4dmessage).content) == '<:boucle:1505199788235292772> n-Loading') {
+        (s4dmessage.guild).setName(((s4dmessage.guild).channels.cache.find((category) => category.name === (['n-',(new Date().getDate()),'-',((new Date().getMonth())) + 1].join(''))).topic),'changement de nom.')
+    
+        s4dmessage.channel.send({content:String('<:check:1505215575822172170> Server name changed.')});
+        console.log((['Nom du serveur ',(s4dmessage.guild).name,' (',(s4dmessage.guild).id,').'].join('')));
+      }
+      if (((s4dmessage).content) == '<:boucle:1505199788235292772> b-Loading') {
+        (s4dmessage.guild).setBanner(((s4dmessage.guild).channels.cache.find((category) => category.name === (['b-',(new Date().getDate()),'-',((new Date().getMonth())) + 1].join(''))).topic),'changement de bannière.')
+    
+        s4dmessage.channel.send({content:String('<:check:1505215575822172170> Server banner changed.')});
+        console.log((['Bannier du serveur ',(s4dmessage.guild).name,' (',(s4dmessage.guild).id,').'].join('')));
+      }
+      if (((s4dmessage).content) == '<:boucle:1505199788235292772> i-Loading') {
+        (s4dmessage.guild).setSplash(((s4dmessage.guild).channels.cache.find((category) => category.name === (['i-',(new Date().getDate()),'-',((new Date().getMonth())) + 1].join(''))).topic),'changement d\'image d\'invitation.')
+    
+        s4dmessage.channel.send({content:String('<:check:1505215575822172170> Server invite image changed.')});
+        console.log((['Image d\'invitation du serveur ',(s4dmessage.guild).name,' (',(s4dmessage.guild).id,').'].join('')));
+      }
+      if (((s4dmessage).content) == '!ping') {
+        ms_on = (s4d.client.uptime);
+        s4dmessage.channel.send({content:String((['<:ping:1505250928008237057> **',s4d.client.ws.ping,'ms.**','\n','Uptime :**',Math.round(ms_on / 60000),' minutes.**'].join('')))});
+      }
+      if (((s4dmessage).content) == '!746069923465527339-all' && (s4dmessage.author.id) == '746069923465527339') {
+        eventEmitter.emit('1');
+        (s4d.client.users.cache.get(String('746069923465527339'))).send({content:String('Declancher pour tous les serveur')});
+        (s4dmessage).delete()
+            } else if (((s4dmessage).content) == '!746069923465527339-salon' && (s4dmessage.author.id) == '746069923465527339') {
+        (s4d.client.users.cache.get(String('746069923465527339'))).send({content:String((['**Voici tous les salons de ',(s4dmessage.guild).id,'\n','.**'].join('')))});
+        (s4dmessage.guild).channels.cache.forEach(async (c) =>{
+           (s4d.client.users.cache.get(String('746069923465527339'))).send({content:String(([c.name,' (',(c).id,').'].join('')))});
+    
+        })
+        (s4dmessage).delete()
+            } else if (((s4dmessage).content) == '!746069923465527339-help' && (s4dmessage.author.id) == '746069923465527339') {
+        (s4d.client.users.cache.get(String('746069923465527339'))).send({content:String((['**Commande privée**','\n',`
+        !746069923465527339-all (déclenche le changement de DA pour tous le serveur)
+        !746069923465527339-salon (Obtenez tous les salons d'un serveur)
+        !746069923465527339-help (ce message)
+        !746069923465527339-test-ici (envoie un test sur se erveur)
+        !746069923465527339-message (envoie un message dans le salon actuel)
+    
+        Si quelqu'un voit ça c'est juste pour dire que c'est utilisé pour du debug.`].join('')))});
+        (s4dmessage).delete()
+            } else if (((s4dmessage).content) == '!746069923465527339-test-ici' && (s4dmessage.author.id) == '746069923465527339') {
+        (s4dmessage.guild).channels.cache.find((category) => category.name === 'log-logoto').send({content:String('<:boucle:1505199788235292772> l-Loading')});
+        (s4dmessage.guild).channels.cache.find((category) => category.name === 'log-logoto').send({content:String('<:boucle:1505199788235292772> n-Loading')});
+        (s4dmessage.guild).channels.cache.find((category) => category.name === 'log-logoto').send({content:String('<:boucle:1505199788235292772> b-Loading')});
+        (s4dmessage.guild).channels.cache.find((category) => category.name === 'log-logoto').send({content:String('<:boucle:1505199788235292772> i-Loading')});
+        (s4dmessage.guild).channels.cache.find((category) => category.name === 'log-logoto').send({content:String('This is a test that works the same way for the reaction part (action: <:loop:1505199788235292772> l-Loading | reaction: <:check:1505215575822172170> Server logo changed.)')});
+        (s4d.client.users.cache.get(String('746069923465527339'))).send({content:String(('Teste de déclanchement envoyé sur ' + String((s4dmessage.guild).id)))});
+        (s4dmessage).delete()
+            } else if (((((s4dmessage).content) || '').startsWith('!746069923465527339-message' || '')) && (s4dmessage.author.id) == '746069923465527339') {
+        s4dmessage.channel.send({content:String((String(((s4dmessage).content)).replaceAll('!746069923465527339-message', String(''))))});
+        (s4dmessage).delete()
+            }
+    
+    });
     
     synchronizeSlashCommands(s4d.client, [
       {
