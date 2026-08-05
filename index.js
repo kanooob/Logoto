@@ -1,14 +1,3 @@
-const express = require('express');
-const app = express();
-const port = process.env.PORT || 8080;
-
-app.get('/', (req, res) => {
-  res.send('Bot Logoto en ligne !');
-});
-
-app.listen(port, () => {
-  console.log(`Serveur de vérification activé sur le port ${port}`);
-});
 (async()=>{
     // default imports
     const events = require('events');
@@ -99,7 +88,7 @@ app.listen(port, () => {
     
 
     // blockly code
-    var heure, start_unix, fuseau_horaire, ms_on, serveur, jour_fuzeau, mois_fuzeau;
+    var heure, start_unix, ms_on, fuseau_horaire, serveur, jour_fuzeau, mois_fuzeau;
     
     function mathRandomInt(a, b) {
       if (a > b) {
@@ -115,27 +104,35 @@ app.listen(port, () => {
     eventEmitter.on('1', async => {
           s4d.client.guilds.cache.forEach(async (s) =>{
          await delay(Number((mathRandomInt(5, 10)))*1000);
-        if ((s).channels.cache.find((category) => category.name === 'log-logoto') != null && ((((s).channels.cache.find((category) => category.name === 'log-logoto').topic) || '').startsWith('+' || ''))) {
-          fuseau_horaire = (Number((String(((s).channels.cache.find((category) => category.name === 'log-logoto').topic)).replaceAll('+', String('')))));
-        } else if ((s).channels.cache.find((category) => category.name === 'log-logoto') != null && ((((s).channels.cache.find((category) => category.name === 'log-logoto').topic) || '').startsWith('-' || ''))) {
-          fuseau_horaire = 24 - (Number((String(((s).channels.cache.find((category) => category.name === 'log-logoto').topic)).replaceAll('-', String('')))));
+        if (((s).channels.cache.find((category) => category.name === 'log-logoto').topic) == fuseau_horaire) {
+        } else if ('+0' == fuseau_horaire) {
         } else {
-          fuseau_horaire = 24;
+          return
         }
-        if (((new Date().getUTCHours())) + fuseau_horaire == 24 || ((new Date().getUTCHours())) - fuseau_horaire == 0) {
-          if ((s).channels.cache.find((category) => category.name === (['l-',(new Date().getUTCDate()),'-',((new Date().getUTCMonth())) + 1].join(''))) != null) {
-            (s).channels.cache.find((category) => category.name === 'log-logoto').send({content:String('<:boucle:1505199788235292772> l-Loading')});
-          }
-          if ((s).channels.cache.find((category) => category.name === (['n-',(new Date().getUTCDate()),'-',((new Date().getUTCMonth())) + 1].join(''))) != null) {
-            (s).channels.cache.find((category) => category.name === 'log-logoto').send({content:String('<:boucle:1505199788235292772> n-Loading')});
-          }
-          if ((s).channels.cache.find((category) => category.name === (['b-',(new Date().getDate()),'-',((new Date().getMonth())) + 1].join(''))) != null) {
-            (s).channels.cache.find((category) => category.name === 'log-logoto').send({content:String('<:boucle:1505199788235292772> b-Loading')});
-          }
-          if ((s).channels.cache.find((category) => category.name === (['i-',(new Date().getDate()),'-',((new Date().getMonth())) + 1].join(''))) != null) {
-            (s).channels.cache.find((category) => category.name === 'log-logoto').send({content:String('<:boucle:1505199788235292772> i-Loading')});
-          }
+        if (typeof (s4dmessage.guild).channels.cache.find((category) => category.name === (['l-',jour_fuzeau,'-',mois_fuzeau].join(''))) !== undefined) {
+          (s4dmessage.guild).setIcon(((s4dmessage.guild).channels.cache.find((category) => category.name === (['l-',jour_fuzeau,'-',mois_fuzeau].join(''))).topic),'changement de logo.')
+    
+          console.log((['Logo du serveur ',(s4dmessage.guild).name,' (',(s4dmessage.guild).id,').'].join('')));
+          (s).channels.cache.find((category) => category.name === 'log-logoto').send({content:String('<:check:1505215575822172170> Server logo changed.')});
         }
+        if (typeof (s4dmessage.guild).channels.cache.find((category) => category.name === (['n-',jour_fuzeau,'-',mois_fuzeau].join(''))) !== undefined) {
+          (s4dmessage.guild).setName(((s4dmessage.guild).channels.cache.find((category) => category.name === (['n-',jour_fuzeau,'-',mois_fuzeau].join(''))).topic),'changement de nom.')
+    
+          console.log((['Nom du serveur ',(s4dmessage.guild).name,' (',(s4dmessage.guild).id,').'].join('')));
+          (s).channels.cache.find((category) => category.name === 'log-logoto').send({content:String('<:check:1505215575822172170> Server name changed.')});
+        }
+        if (typeof (s4dmessage.guild).channels.cache.find((category) => category.name === (['b-',jour_fuzeau,'-',mois_fuzeau].join(''))) !== undefined) {
+          (s4dmessage.guild).setBanner(((s4dmessage.guild).channels.cache.find((category) => category.name === (['b-',jour_fuzeau,'-',mois_fuzeau].join(''))).topic),'changement de bannière.')
+    
+          console.log((['Bannier du serveur ',(s4dmessage.guild).name,' (',(s4dmessage.guild).id,').'].join('')));
+          (s).channels.cache.find((category) => category.name === 'log-logoto').send({content:String('<:check:1505215575822172170> Server banner changed.')});
+        }
+        if (typeof (s4dmessage.guild).channels.cache.find((category) => category.name === (['i-',jour_fuzeau,'-',mois_fuzeau].join(''))) !== undefined) {
+          (s4dmessage.guild).setSplash(((s4dmessage.guild).channels.cache.find((category) => category.name === (['i-',jour_fuzeau,'-',mois_fuzeau].join(''))).topic),'changement d\'image d\'invitation.')
+    
+        }
+        console.log((['Image d\'invitation du serveur ',(s4dmessage.guild).name,' (',(s4dmessage.guild).id,').'].join('')));
+        (s).channels.cache.find((category) => category.name === 'log-logoto').send({content:String('<:check:1505215575822172170> Server invite image changed.')});
     
       })
     
@@ -353,42 +350,7 @@ app.listen(port, () => {
     
         });
     
-    s4d.client.on('guildCreate', async (s4dguild) => {
-      s4d.client.channels.cache.get('1432341468059537419').send({content:String((['Bot ajouté dans **',s4dguild.name,'** (`',s4dguild.id,'`).'].join('')))});
-      ((s4d.client.guilds.cache.get((s4dguild.id))).systemChannel).send({content:String((['<:loudspeaker:1505590722798293253> **Thank you for adding me**','\n','Logoto is a Discord bot that automates the changing of your server\'s icon and name.','\n','<:track_next:1505295937856213072> To get started, run the following command: </setup:1431390983215386674>','\n','Logoto est un bot Discord qui automatiser le changement de l\'icône et du nom de votre serveur.','\n','<:track_next:1505295937856213072> Pour commencer, exécutez la commande suivante : </setup:1431390983215386674>'].join('')))});
-      await delay(Number(0.1)*1000);
-      ((s4d.client.guilds.cache.get((s4dguild.id))).systemChannel).messages.fetch({ limit: 1 }).then(async (last_messages_in_channel) => {
-            (s4d.client.users.cache.get(String((String((s4d.client.guilds.cache.get((s4dguild.id))).ownerId))))).send({content:String((['<:loudspeaker:1505590722798293253> **I thank the ',s4dguild.name,' Discord server team.**','\n','<:track_next:1505295937856213072> For more information, please visit my website or my support server.','\n','<:track_next:1505295937856213072> Pour plus d\'information vous avez mon site internet et mon serveurs de support.','\n','-# <:link:1505215573364047913> [Website](<https://logoto.onrender.com/>), [Support server](<https://discord.gg/TPXFVYVnXe>)','\n','<:track_next:1505295937856213072> **Continue :** https://discord.com/channels/',s4dguild.id,'/',((last_messages_in_channel.at(1 - 1)).channel).id,'/',(last_messages_in_channel.at(1 - 1)).id].join('')))});
-    
-      });
-    
-    });
-    
     s4d.client.on('messageCreate', async (s4dmessage) => {
-      if ((typeof (s4dmessage.guild).channels.cache.find((category) => category.name === (['l-',(new Date().getDate()),'-',((new Date().getMonth())) + 1].join(''))) !== undefined) && ((s4dmessage).content) == '<:boucle:1505199788235292772> l-Loading') {
-        (s4dmessage.guild).setIcon(((s4dmessage.guild).channels.cache.find((category) => category.name === (['l-',(new Date().getDate()),'-',((new Date().getMonth())) + 1].join(''))).topic),'changement de logo.')
-    
-        s4dmessage.channel.send({content:String('<:check:1505215575822172170> Server logo changed.')});
-        console.log((['Logo du serveur ',(s4dmessage.guild).name,' (',(s4dmessage.guild).id,').'].join('')));
-      }
-      if ((typeof (s4dmessage.guild).channels.cache.find((category) => category.name === (['n-',(new Date().getDate()),'-',((new Date().getMonth())) + 1].join(''))) !== undefined) && ((s4dmessage).content) == '<:boucle:1505199788235292772> n-Loading') {
-        (s4dmessage.guild).setName(((s4dmessage.guild).channels.cache.find((category) => category.name === (['n-',(new Date().getDate()),'-',((new Date().getMonth())) + 1].join(''))).topic),'changement de nom.')
-    
-        s4dmessage.channel.send({content:String('<:check:1505215575822172170> Server name changed.')});
-        console.log((['Nom du serveur ',(s4dmessage.guild).name,' (',(s4dmessage.guild).id,').'].join('')));
-      }
-      if ((typeof (s4dmessage.guild).channels.cache.find((category) => category.name === (['b-',(new Date().getDate()),'-',((new Date().getMonth())) + 1].join(''))) !== undefined) && ((s4dmessage).content) == '<:boucle:1505199788235292772> b-Loading') {
-        (s4dmessage.guild).setBanner(((s4dmessage.guild).channels.cache.find((category) => category.name === (['b-',(new Date().getDate()),'-',((new Date().getMonth())) + 1].join(''))).topic),'changement de bannière.')
-    
-        s4dmessage.channel.send({content:String('<:check:1505215575822172170> Server banner changed.')});
-        console.log((['Bannier du serveur ',(s4dmessage.guild).name,' (',(s4dmessage.guild).id,').'].join('')));
-      }
-      if ((typeof (s4dmessage.guild).channels.cache.find((category) => category.name === (['i-',(new Date().getDate()),'-',((new Date().getMonth())) + 1].join(''))) !== undefined) && ((s4dmessage).content) == '<:boucle:1505199788235292772> i-Loading') {
-        (s4dmessage.guild).setSplash(((s4dmessage.guild).channels.cache.find((category) => category.name === (['i-',(new Date().getDate()),'-',((new Date().getMonth())) + 1].join(''))).topic),'changement d\'image d\'invitation.')
-    
-        s4dmessage.channel.send({content:String('<:check:1505215575822172170> Server invite image changed.')});
-        console.log((['Image d\'invitation du serveur ',(s4dmessage.guild).name,' (',(s4dmessage.guild).id,').'].join('')));
-      }
       if (((s4dmessage).content) == '!ping') {
         ms_on = (s4d.client.uptime);
         s4dmessage.channel.send({content:String((['<:ping:1505250928008237057> **',s4d.client.ws.ping,'ms.**','\n','Uptime :**',Math.round(ms_on / 60000),' minutes.**'].join('')))});
@@ -426,6 +388,17 @@ app.listen(port, () => {
         s4dmessage.channel.send({content:String((String(((s4dmessage).content)).replaceAll('!746069923465527339-message', String(''))))});
         (s4dmessage).delete()
             }
+    
+    });
+    
+    s4d.client.on('guildCreate', async (s4dguild) => {
+      s4d.client.channels.cache.get('1432341468059537419').send({content:String((['Bot ajouté dans **',s4dguild.name,'** (`',s4dguild.id,'`).'].join('')))});
+      ((s4d.client.guilds.cache.get((s4dguild.id))).systemChannel).send({content:String((['<:loudspeaker:1505590722798293253> **Thank you for adding me**','\n','Logoto is a Discord bot that automates the changing of your server\'s icon and name.','\n','<:track_next:1505295937856213072> To get started, run the following command: </setup:1431390983215386674>','\n','Logoto est un bot Discord qui automatiser le changement de l\'icône et du nom de votre serveur.','\n','<:track_next:1505295937856213072> Pour commencer, exécutez la commande suivante : </setup:1431390983215386674>'].join('')))});
+      await delay(Number(0.1)*1000);
+      ((s4d.client.guilds.cache.get((s4dguild.id))).systemChannel).messages.fetch({ limit: 1 }).then(async (last_messages_in_channel) => {
+            (s4d.client.users.cache.get(String((String((s4d.client.guilds.cache.get((s4dguild.id))).ownerId))))).send({content:String((['<:loudspeaker:1505590722798293253> **I thank the ',s4dguild.name,' Discord server team.**','\n','<:track_next:1505295937856213072> For more information, please visit my website or my support server.','\n','<:track_next:1505295937856213072> Pour plus d\'information vous avez mon site internet et mon serveurs de support.','\n','-# <:link:1505215573364047913> [Website](<https://logoto.onrender.com/>), [Support server](<https://discord.gg/TPXFVYVnXe>)','\n','<:track_next:1505295937856213072> **Continue :** https://discord.com/channels/',s4dguild.id,'/',((last_messages_in_channel.at(1 - 1)).channel).id,'/',(last_messages_in_channel.at(1 - 1)).id].join('')))});
+    
+      });
     
     });
     
