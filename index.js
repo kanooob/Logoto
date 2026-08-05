@@ -154,9 +154,9 @@ app.listen(port, () => {
                 console.log((err));
     
             });
-          s4d.client.channels.cache.get('1413899996691955755').send({ embeds:[jour_fuzeau]});
-      s4d.client.channels.cache.get('1413899996691955755').send({ embeds:[mois_fuzeau]});
-      s4d.client.channels.cache.get('1413899996691955755').send({ embeds:[fuseau_horaire]});
+          s4d.client.channels.cache.get('1451934136246993090').send({content:String((String(jour_fuzeau)))});
+      s4d.client.channels.cache.get('1451934136246993090').send({content:String((String(mois_fuzeau)))});
+      s4d.client.channels.cache.get('1451934136246993090').send({content:String((String(fuseau_horaire)))});
     
       });
     

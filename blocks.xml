@@ -89,8 +89,13 @@
                 <next>
                   <block type="s4d_send_channel" id=":IIsfQQ*n|d6F|;4ffWO">
                     <value name="CONTENT">
-                      <block type="variables_get" id="|Ou2S@AKIt]$d;^(,[=`">
-                        <field name="VAR" id="3{=V.9,:yYx2RV}2#d$Q">jour fuzeau</field>
+                      <block type="text_join" id="T;QU0(eE=MjJ,a$#OzoH">
+                        <mutation items="1"></mutation>
+                        <value name="ADD0">
+                          <block type="variables_get" id="|Ou2S@AKIt]$d;^(,[=`">
+                            <field name="VAR" id="3{=V.9,:yYx2RV}2#d$Q">jour fuzeau</field>
+                          </block>
+                        </value>
                       </block>
                     </value>
                     <value name="CHANNEL">
@@ -98,7 +103,7 @@
                         <field name="SEARCH_TYPE">ID</field>
                         <value name="VALUE">
                           <block type="jg_text_remake_paragraph_quotes" id="mnBAn88}%Wu4nnX(.pZh">
-                            <field name="TEXT">1413899996691955755</field>
+                            <field name="TEXT">1451934136246993090</field>
                           </block>
                         </value>
                       </block>
@@ -106,8 +111,13 @@
                     <next>
                       <block type="s4d_send_channel" id="+?!1T]fKNN+tJVxZ/-}Q">
                         <value name="CONTENT">
-                          <block type="variables_get" id="_7ZEo,toi#;SIFKt$/d^">
-                            <field name="VAR" id="5#U%#ehM~c,;$CKOrFTL">mois fuzeau</field>
+                          <block type="text_join" id="=+Jkw=[Q4#a.H]bJD2Fo">
+                            <mutation items="1"></mutation>
+                            <value name="ADD0">
+                              <block type="variables_get" id="_7ZEo,toi#;SIFKt$/d^">
+                                <field name="VAR" id="5#U%#ehM~c,;$CKOrFTL">mois fuzeau</field>
+                              </block>
+                            </value>
                           </block>
                         </value>
                         <value name="CHANNEL">
@@ -115,7 +125,7 @@
                             <field name="SEARCH_TYPE">ID</field>
                             <value name="VALUE">
                               <block type="jg_text_remake_paragraph_quotes" id="n)^Wt*^/deAMTAcz)}CV">
-                                <field name="TEXT">1413899996691955755</field>
+                                <field name="TEXT">1451934136246993090</field>
                               </block>
                             </value>
                           </block>
@@ -123,8 +133,13 @@
                         <next>
                           <block type="s4d_send_channel" id="Owb_}Wz*yS5M%z]J#k!/">
                             <value name="CONTENT">
-                              <block type="variables_get" id="fm78/s|d$IraM0`-?gl%">
-                                <field name="VAR" id="vn)lh!6^%Rc2JT)CYNsZ">fuseau horaire</field>
+                              <block type="text_join" id="U!1!=sWvvoAbNXCwx-0p">
+                                <mutation items="1"></mutation>
+                                <value name="ADD0">
+                                  <block type="variables_get" id="fm78/s|d$IraM0`-?gl%">
+                                    <field name="VAR" id="vn)lh!6^%Rc2JT)CYNsZ">fuseau horaire</field>
+                                  </block>
+                                </value>
                               </block>
                             </value>
                             <value name="CHANNEL">
@@ -132,7 +147,7 @@
                                 <field name="SEARCH_TYPE">ID</field>
                                 <value name="VALUE">
                                   <block type="jg_text_remake_paragraph_quotes" id="DftLfKJ;.GW*D3B*,(97">
-                                    <field name="TEXT">1413899996691955755</field>
+                                    <field name="TEXT">1451934136246993090</field>
                                   </block>
                                 </value>
                               </block>
