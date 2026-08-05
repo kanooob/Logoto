@@ -371,7 +371,8 @@ app.listen(port, () => {
     });
     
     eventEmitter.on('message1', async => {
-          s4d.client.channels.cache.get('1387514903778295940').send({content:String(('h:' + String(fuseau_horaire)))});
+          await delay(Number(2)*1000);
+      s4d.client.channels.cache.get('1387514903778295940').send({content:String(('h:' + String(fuseau_horaire)))});
       s4d.client.channels.cache.get('1387514903778295940').send({content:String(('j:' + String(jour_fuzeau)))});
       s4d.client.channels.cache.get('1387514903778295940').send({content:String(('m:' + String(mois_fuzeau)))});
     
