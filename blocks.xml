@@ -87,27 +87,27 @@
                   </block>
                 </statement>
                 <next>
-                  <block type="s4d_get_all_server" id="eB`#Xi{]17HT2TfsS7nc">
-                    <statement name="THEN">
-                      <block type="s4d_wait_seconds" id="1@+GDydr*:Qo1V4~fO:F">
-                        <value name="TIME">
-                          <shadow type="math_number" id="I_!@ZfeE{8B)*k]zEx6k">
+                  <block type="s4d_wait_seconds" id="1@+GDydr*:Qo1V4~fO:F">
+                    <value name="TIME">
+                      <shadow type="math_number" id="I_!@ZfeE{8B)*k]zEx6k">
+                        <field name="NUM">5</field>
+                      </shadow>
+                      <block type="math_random_int" id="/@tszCaqK]TrY,8|vF{X">
+                        <value name="FROM">
+                          <shadow type="math_number" id="U,i`RGDYk@=udr3el$qA">
                             <field name="NUM">5</field>
                           </shadow>
-                          <block type="math_random_int" id="/@tszCaqK]TrY,8|vF{X">
-                            <value name="FROM">
-                              <shadow type="math_number" id="U,i`RGDYk@=udr3el$qA">
-                                <field name="NUM">5</field>
-                              </shadow>
-                            </value>
-                            <value name="TO">
-                              <shadow type="math_number" id="?(y4$3y:_g~x$N}!mg5=">
-                                <field name="NUM">10</field>
-                              </shadow>
-                            </value>
-                          </block>
                         </value>
-                        <next>
+                        <value name="TO">
+                          <shadow type="math_number" id="?(y4$3y:_g~x$N}!mg5=">
+                            <field name="NUM">10</field>
+                          </shadow>
+                        </value>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="s4d_get_all_server" id="eB`#Xi{]17HT2TfsS7nc">
+                        <statement name="THEN">
                           <block type="controls_if" id="RB$[Gyjre,nntk)[g9aD">
                             <value name="IF0">
                               <block type="logic_operation" id="$s^CZ%K@C(6GtJAkD9bE">
@@ -1038,60 +1038,60 @@
                               </block>
                             </next>
                           </block>
-                        </next>
-                      </block>
-                    </statement>
-                    <next>
-                      <block type="s4d_send_channel" id=":IIsfQQ*n|d6F|;4ffWO">
-                        <value name="CONTENT">
-                          <block type="variables_get" id="|Ou2S@AKIt]$d;^(,[=`">
-                            <field name="VAR" id="3{=V.9,:yYx2RV}2#d$Q">jour fuzeau</field>
-                          </block>
-                        </value>
-                        <value name="CHANNEL">
-                          <block type="s4d_get_channel" id="=SCq;2-v,G:-7=5lX!38">
-                            <field name="SEARCH_TYPE">ID</field>
-                            <value name="VALUE">
-                              <block type="jg_text_remake_paragraph_quotes" id="mnBAn88}%Wu4nnX(.pZh">
-                                <field name="TEXT">1413899996691955755</field>
-                              </block>
-                            </value>
-                          </block>
-                        </value>
+                        </statement>
                         <next>
-                          <block type="s4d_send_channel" id="+?!1T]fKNN+tJVxZ/-}Q">
+                          <block type="s4d_send_channel" id=":IIsfQQ*n|d6F|;4ffWO">
                             <value name="CONTENT">
-                              <block type="variables_get" id="_7ZEo,toi#;SIFKt$/d^">
-                                <field name="VAR" id="5#U%#ehM~c,;$CKOrFTL">mois fuzeau</field>
+                              <block type="variables_get" id="|Ou2S@AKIt]$d;^(,[=`">
+                                <field name="VAR" id="3{=V.9,:yYx2RV}2#d$Q">jour fuzeau</field>
                               </block>
                             </value>
                             <value name="CHANNEL">
-                              <block type="s4d_get_channel" id="@2XPOy$M(ea-0HNI(A=3">
+                              <block type="s4d_get_channel" id="=SCq;2-v,G:-7=5lX!38">
                                 <field name="SEARCH_TYPE">ID</field>
                                 <value name="VALUE">
-                                  <block type="jg_text_remake_paragraph_quotes" id="n)^Wt*^/deAMTAcz)}CV">
+                                  <block type="jg_text_remake_paragraph_quotes" id="mnBAn88}%Wu4nnX(.pZh">
                                     <field name="TEXT">1413899996691955755</field>
                                   </block>
                                 </value>
                               </block>
                             </value>
                             <next>
-                              <block type="s4d_send_channel" id="Owb_}Wz*yS5M%z]J#k!/">
+                              <block type="s4d_send_channel" id="+?!1T]fKNN+tJVxZ/-}Q">
                                 <value name="CONTENT">
-                                  <block type="variables_get" id="fm78/s|d$IraM0`-?gl%">
-                                    <field name="VAR" id="vn)lh!6^%Rc2JT)CYNsZ">fuseau horaire</field>
+                                  <block type="variables_get" id="_7ZEo,toi#;SIFKt$/d^">
+                                    <field name="VAR" id="5#U%#ehM~c,;$CKOrFTL">mois fuzeau</field>
                                   </block>
                                 </value>
                                 <value name="CHANNEL">
-                                  <block type="s4d_get_channel" id="z#6-=A)[P*UZW!^7fpTN">
+                                  <block type="s4d_get_channel" id="@2XPOy$M(ea-0HNI(A=3">
                                     <field name="SEARCH_TYPE">ID</field>
                                     <value name="VALUE">
-                                      <block type="jg_text_remake_paragraph_quotes" id="DftLfKJ;.GW*D3B*,(97">
+                                      <block type="jg_text_remake_paragraph_quotes" id="n)^Wt*^/deAMTAcz)}CV">
                                         <field name="TEXT">1413899996691955755</field>
                                       </block>
                                     </value>
                                   </block>
                                 </value>
+                                <next>
+                                  <block type="s4d_send_channel" id="Owb_}Wz*yS5M%z]J#k!/">
+                                    <value name="CONTENT">
+                                      <block type="variables_get" id="fm78/s|d$IraM0`-?gl%">
+                                        <field name="VAR" id="vn)lh!6^%Rc2JT)CYNsZ">fuseau horaire</field>
+                                      </block>
+                                    </value>
+                                    <value name="CHANNEL">
+                                      <block type="s4d_get_channel" id="z#6-=A)[P*UZW!^7fpTN">
+                                        <field name="SEARCH_TYPE">ID</field>
+                                        <value name="VALUE">
+                                          <block type="jg_text_remake_paragraph_quotes" id="DftLfKJ;.GW*D3B*,(97">
+                                            <field name="TEXT">1413899996691955755</field>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </next>
                               </block>
                             </next>
                           </block>

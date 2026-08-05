@@ -164,9 +164,9 @@ app.listen(port, () => {
                 console.log((err));
     
             });
-          s4d.client.guilds.cache.forEach(async (s) =>{
-         await delay(Number((mathRandomInt(5, 10)))*1000);
-        if ((typeof (s).channels.cache.find((category) => category.name === (['l-',jour_fuzeau,'-',mois_fuzeau].join(''))) !== undefined) && (((s).channels.cache.find((category) => category.name === 'log-logoto').topic) == fuseau_horaire || ((s).channels.cache.find((category) => category.name === 'log-logoto').topic) == null && fuseau_horaire == '+0')) {
+          await delay(Number((mathRandomInt(5, 10)))*1000);
+      s4d.client.guilds.cache.forEach(async (s) =>{
+         if ((typeof (s).channels.cache.find((category) => category.name === (['l-',jour_fuzeau,'-',mois_fuzeau].join(''))) !== undefined) && (((s).channels.cache.find((category) => category.name === 'log-logoto').topic) == fuseau_horaire || ((s).channels.cache.find((category) => category.name === 'log-logoto').topic) == null && fuseau_horaire == '+0')) {
           (s).setIcon(((s).channels.cache.find((category) => category.name === (['l-',jour_fuzeau,'-',mois_fuzeau].join(''))).topic),'changement de logo.')
     
           console.log((['Logo du serveur ',(s).name,' (',(s).id,').'].join('')));
