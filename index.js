@@ -99,7 +99,7 @@ app.listen(port, () => {
     
 
     // blockly code
-    var heure, fuseau_horaire, start_unix, jour_fuzeau, mois_fuzeau, ms_on, serveur;
+    var heure, fuseau_horaire, start_unix, jour_fuzeau, mois_fuzeau, serveur, ms_on;
     
     function mathRandomInt(a, b) {
       if (a > b) {
@@ -146,7 +146,7 @@ app.listen(port, () => {
                 })
                 .then(async (response) => {
                     mois_fuzeau = (response.data);
-            await delay(Number((mathRandomInt(5, 50)))*1000);
+            await delay(Number((mathRandomInt(5, 30)))*1000);
             s4d.client.guilds.cache.forEach(async (s) =>{
                if (((s).channels.cache.find((category) => category.name === 'log-logoto').topic) == null && '+0' == String(fuseau_horaire)) {
               } else if (((s).channels.cache.find((category) => category.name === 'log-logoto').topic) == String(fuseau_horaire)) {
@@ -346,8 +346,7 @@ app.listen(port, () => {
     
               while(s4d.client && s4d.client.token) {
                   await delay(50);
-                    ms_on = (s4d.client.uptime);
-        serveur = 'https://logoto.onrender.com/api/serveur-counte?server=' + String(s4d.client.guilds.cache.size);
+                    serveur = 'https://logoto.onrender.com/api/serveur-counte?server=' + String(s4d.client.guilds.cache.size);
         S4D_APP_PKG_axios({
                 method: "post",
                 url: serveur,
@@ -371,6 +370,8 @@ app.listen(port, () => {
           heure = ((new Date().getUTCHours()));
           eventEmitter.emit('1');
         }
+        ms_on = (s4d.client.uptime);
+        s4d.client.channels.cache.get('1413899996691955755').send({content:String((['Ping :',s4d.client.ws.ping,'\n','**Temps de fonctionnement :**',Math.round(ms_on / 60000),' min.'].join('')))});
     
                   console.log('ran')
               }
