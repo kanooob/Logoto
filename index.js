@@ -113,31 +113,78 @@ app.listen(port, () => {
     
     
     eventEmitter.on('1', async => {
+          S4D_APP_PKG_axios({
+              method: "get",
+              url: 'https://logoto.onrender.com/api/fuzeau00h',
+    
+              headers: {
+    
+              },
+    
+            })
+            .then(async (response) => {
+                fuseau_horaire = (response.data);
+    
+            })
+            .catch(async (err) => {
+                console.log((err));
+    
+            });
+          S4D_APP_PKG_axios({
+              method: "get",
+              url: 'https://logoto.onrender.com/api/jour00h',
+    
+              headers: {
+    
+              },
+    
+            })
+            .then(async (response) => {
+                jour_fuzeau = (response.data);
+    
+            })
+            .catch(async (err) => {
+                console.log((err));
+    
+            });
+          S4D_APP_PKG_axios({
+              method: "get",
+              url: 'https://logoto.onrender.com/api/mois00h',
+    
+              headers: {
+    
+              },
+    
+            })
+            .then(async (response) => {
+                mois_fuzeau = (response.data);
+    
+            })
+            .catch(async (err) => {
+                console.log((err));
+    
+            });
           s4d.client.guilds.cache.forEach(async (s) =>{
          await delay(Number((mathRandomInt(5, 10)))*1000);
-        if (((s).channels.cache.find((category) => category.name === 'log-logoto').topic) == null && '+0' == fuseau_horaire) {
-        } else if (((s).channels.cache.find((category) => category.name === 'log-logoto').topic) == fuseau_horaire) {
-        } else {
-        }
-        if (typeof (s).channels.cache.find((category) => category.name === (['l-',jour_fuzeau,'-',mois_fuzeau].join(''))) !== undefined) {
+        if ((typeof (s).channels.cache.find((category) => category.name === (['l-',jour_fuzeau,'-',mois_fuzeau].join(''))) !== undefined) && (((s).channels.cache.find((category) => category.name === 'log-logoto').topic) == fuseau_horaire || ((s).channels.cache.find((category) => category.name === 'log-logoto').topic) == null && fuseau_horaire == '+0')) {
           (s).setIcon(((s).channels.cache.find((category) => category.name === (['l-',jour_fuzeau,'-',mois_fuzeau].join(''))).topic),'changement de logo.')
     
           console.log((['Logo du serveur ',(s).name,' (',(s).id,').'].join('')));
           (s).channels.cache.find((category) => category.name === 'log-logoto').send({content:String('<:check:1505215575822172170> Server logo changed.')});
         }
-        if (typeof (s).channels.cache.find((category) => category.name === (['n-',jour_fuzeau,'-',mois_fuzeau].join(''))) !== undefined) {
+        if ((typeof (s).channels.cache.find((category) => category.name === (['n-',jour_fuzeau,'-',mois_fuzeau].join(''))) !== undefined) && (((s).channels.cache.find((category) => category.name === 'log-logoto').topic) == fuseau_horaire || ((s).channels.cache.find((category) => category.name === 'log-logoto').topic) == null && fuseau_horaire == '+0')) {
           (s).setName(((s).channels.cache.find((category) => category.name === (['n-',jour_fuzeau,'-',mois_fuzeau].join(''))).topic),'changement de nom.')
     
           console.log((['Nom du serveur ',(s).name,' (',(s).id,').'].join('')));
           (s).channels.cache.find((category) => category.name === 'log-logoto').send({content:String('<:check:1505215575822172170> Server name changed.')});
         }
-        if (typeof (s).channels.cache.find((category) => category.name === (['b-',jour_fuzeau,'-',mois_fuzeau].join(''))) !== undefined) {
+        if ((typeof (s).channels.cache.find((category) => category.name === (['b-',jour_fuzeau,'-',mois_fuzeau].join(''))) !== undefined) && (((s).channels.cache.find((category) => category.name === 'log-logoto').topic) == fuseau_horaire || ((s).channels.cache.find((category) => category.name === 'log-logoto').topic) == null && fuseau_horaire == '+0')) {
           (s).setBanner(((s).channels.cache.find((category) => category.name === (['b-',jour_fuzeau,'-',mois_fuzeau].join(''))).topic),'changement de bannière.')
     
           console.log((['Bannier du serveur ',(s).name,' (',(s).id,').'].join('')));
           (s).channels.cache.find((category) => category.name === 'log-logoto').send({content:String('<:check:1505215575822172170> Server banner changed.')});
         }
-        if (typeof (s).channels.cache.find((category) => category.name === (['i-',jour_fuzeau,'-',mois_fuzeau].join(''))) !== undefined) {
+        if ((typeof (s).channels.cache.find((category) => category.name === (['i-',jour_fuzeau,'-',mois_fuzeau].join(''))) !== undefined) && (((s).channels.cache.find((category) => category.name === 'log-logoto').topic) == fuseau_horaire || ((s).channels.cache.find((category) => category.name === 'log-logoto').topic) == null && fuseau_horaire == '+0')) {
           (s).setSplash(((s).channels.cache.find((category) => category.name === (['i-',jour_fuzeau,'-',mois_fuzeau].join(''))).topic),'changement d\'image d\'invitation.')
     
         }
@@ -366,58 +413,7 @@ app.listen(port, () => {
         s4dmessage.channel.send({content:String((['<:ping:1505250928008237057> **',s4d.client.ws.ping,'ms.**','\n','Uptime :**',Math.round(ms_on / 60000),' minutes.**'].join('')))});
       }
       if (((s4dmessage).content) == '!746069923465527339-all' && (s4dmessage.author.id) == '746069923465527339') {
-        S4D_APP_PKG_axios({
-                method: "get",
-                url: 'https://logoto.onrender.com/api/fuzeau00h',
-    
-                headers: {
-    
-                },
-    
-              })
-              .then(async (response) => {
-                  fuseau_horaire = (response.data);
-    
-              })
-              .catch(async (err) => {
-                  console.log((err));
-    
-              });
-            S4D_APP_PKG_axios({
-                method: "get",
-                url: 'https://logoto.onrender.com/api/jour00h',
-    
-                headers: {
-    
-                },
-    
-              })
-              .then(async (response) => {
-                  jour_fuzeau = (response.data);
-    
-              })
-              .catch(async (err) => {
-                  console.log((err));
-    
-              });
-            S4D_APP_PKG_axios({
-                method: "get",
-                url: 'https://logoto.onrender.com/api/mois00h',
-    
-                headers: {
-    
-                },
-    
-              })
-              .then(async (response) => {
-                  mois_fuzeau = (response.data);
-    
-              })
-              .catch(async (err) => {
-                  console.log((err));
-    
-              });
-            eventEmitter.emit('1');
+        eventEmitter.emit('1');
         (s4d.client.users.cache.get(String('746069923465527339'))).send({content:String('Declancher pour tous les serveur')});
         (s4dmessage).delete()
             } else if (((s4dmessage).content) == '!746069923465527339-salon' && (s4dmessage.author.id) == '746069923465527339') {
