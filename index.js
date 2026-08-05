@@ -192,6 +192,9 @@ app.listen(port, () => {
         (s).channels.cache.find((category) => category.name === 'log-logoto').send({content:String('<:check:1505215575822172170> Server invite image changed.')});
     
       })
+      s4d.client.channels.cache.get('1413899996691955755').send({ embeds:[jour_fuzeau]});
+      s4d.client.channels.cache.get('1413899996691955755').send({ embeds:[mois_fuzeau]});
+      s4d.client.channels.cache.get('1413899996691955755').send({ embeds:[fuseau_horaire]});
     
       });
     
