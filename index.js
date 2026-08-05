@@ -1,14 +1,3 @@
-const express = require('express');
-const app = express();
-const port = process.env.PORT || 8080;
-
-app.get('/', (req, res) => {
-  res.send('Bot Logoto en ligne !');
-});
-
-app.listen(port, () => {
-  console.log(`Serveur de vérification activé sur le port ${port}`);
-});
 (async()=>{
     // default imports
     const events = require('events');
@@ -355,9 +344,7 @@ app.listen(port, () => {
                 console.log((err));
     
             });
-          s4d.client.channels.cache.get('1387514903778295940').send({content:String(('h:' + String(fuseau_horaire)))});
-      s4d.client.channels.cache.get('1387514903778295940').send({content:String(('j:' + String(jour_fuzeau)))});
-      s4d.client.channels.cache.get('1387514903778295940').send({content:String(('m:' + String(mois_fuzeau)))});
+          eventEmitter.emit('message1');
     
       });
     
@@ -371,6 +358,13 @@ app.listen(port, () => {
       });
     
     });
+    
+    eventEmitter.on('message1', async => {
+          s4d.client.channels.cache.get('1387514903778295940').send({content:String(('h:' + String(fuseau_horaire)))});
+      s4d.client.channels.cache.get('1387514903778295940').send({content:String(('j:' + String(jour_fuzeau)))});
+      s4d.client.channels.cache.get('1387514903778295940').send({content:String(('m:' + String(mois_fuzeau)))});
+    
+      });
     
     s4d.client.on('messageCreate', async (s4dmessage) => {
       if ((typeof (s4dmessage.guild).channels.cache.find((category) => category.name === (['l-',(new Date().getDate()),'-',((new Date().getMonth())) + 1].join(''))) !== undefined) && ((s4dmessage).content) == '<:boucle:1505199788235292772> l-Loading') {
