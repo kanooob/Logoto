@@ -1138,6 +1138,93 @@
                                                             </value>
                                                           </block>
                                                         </value>
+                                                        <next>
+                                                          <block type="s4d_send_channel" id="l8j$H8~tIruvVktgRMHV">
+                                                            <value name="CONTENT">
+                                                              <block type="text_join" id="D,=;:KKnP*]2$dFoi?:,">
+                                                                <mutation items="2"></mutation>
+                                                                <value name="ADD0">
+                                                                  <block type="jg_text_remake_paragraph_quotes" id="-u]VAF_0*aHZou2r#jfM">
+                                                                    <field name="TEXT">h:</field>
+                                                                  </block>
+                                                                </value>
+                                                                <value name="ADD1">
+                                                                  <block type="variables_get" id=":F;60[wS6$JpuA?)8y6m">
+                                                                    <field name="VAR" id="vn)lh!6^%Rc2JT)CYNsZ">fuseau horaire</field>
+                                                                  </block>
+                                                                </value>
+                                                              </block>
+                                                            </value>
+                                                            <value name="CHANNEL">
+                                                              <block type="s4d_get_channel" id="`W:v=zO)60!6u+o$%kep">
+                                                                <field name="SEARCH_TYPE">ID</field>
+                                                                <value name="VALUE">
+                                                                  <block type="jg_text_remake_paragraph_quotes" id=".A1Xu~o/s{tz1ffy@YQy">
+                                                                    <field name="TEXT">1387514903778295940</field>
+                                                                  </block>
+                                                                </value>
+                                                              </block>
+                                                            </value>
+                                                            <next>
+                                                              <block type="s4d_send_channel" id="B-S/%k[;YXw4$3/SFfY~">
+                                                                <value name="CONTENT">
+                                                                  <block type="text_join" id="z~tCzpbzhs%V6GxO(2W`">
+                                                                    <mutation items="2"></mutation>
+                                                                    <value name="ADD0">
+                                                                      <block type="jg_text_remake_paragraph_quotes" id="QlB2=cGcgv(V(cvO4jq8">
+                                                                        <field name="TEXT">j:</field>
+                                                                      </block>
+                                                                    </value>
+                                                                    <value name="ADD1">
+                                                                      <block type="variables_get" id="01]@l~*bt(f?yh0A4k?W">
+                                                                        <field name="VAR" id="3{=V.9,:yYx2RV}2#d$Q">jour fuzeau</field>
+                                                                      </block>
+                                                                    </value>
+                                                                  </block>
+                                                                </value>
+                                                                <value name="CHANNEL">
+                                                                  <block type="s4d_get_channel" id="56cNyNOHxQ(A!)jJyAQ^">
+                                                                    <field name="SEARCH_TYPE">ID</field>
+                                                                    <value name="VALUE">
+                                                                      <block type="jg_text_remake_paragraph_quotes" id="mV7ea,FKSC/z}Td_jY[D">
+                                                                        <field name="TEXT">1387514903778295940</field>
+                                                                      </block>
+                                                                    </value>
+                                                                  </block>
+                                                                </value>
+                                                                <next>
+                                                                  <block type="s4d_send_channel" id="JI}-O|9vv$*2T%S/rEvB">
+                                                                    <value name="CONTENT">
+                                                                      <block type="text_join" id="#o,#d-1bK]wqWCWl#XMJ">
+                                                                        <mutation items="2"></mutation>
+                                                                        <value name="ADD0">
+                                                                          <block type="jg_text_remake_paragraph_quotes" id="AMnjmnfm6g=c0(x3,Bj8">
+                                                                            <field name="TEXT">m:</field>
+                                                                          </block>
+                                                                        </value>
+                                                                        <value name="ADD1">
+                                                                          <block type="variables_get" id="r{k?U+Op3~q:}sN3M$UI">
+                                                                            <field name="VAR" id="5#U%#ehM~c,;$CKOrFTL">mois fuzeau</field>
+                                                                          </block>
+                                                                        </value>
+                                                                      </block>
+                                                                    </value>
+                                                                    <value name="CHANNEL">
+                                                                      <block type="s4d_get_channel" id="N=]^X!fqMyp$0%}`V;h9">
+                                                                        <field name="SEARCH_TYPE">ID</field>
+                                                                        <value name="VALUE">
+                                                                          <block type="jg_text_remake_paragraph_quotes" id="u?BKjj.:h9y.hOQR,/Aw">
+                                                                            <field name="TEXT">1387514903778295940</field>
+                                                                          </block>
+                                                                        </value>
+                                                                      </block>
+                                                                    </value>
+                                                                  </block>
+                                                                </next>
+                                                              </block>
+                                                            </next>
+                                                          </block>
+                                                        </next>
                                                       </block>
                                                     </next>
                                                   </block>
@@ -2389,15 +2476,6 @@
                     </value>
                   </block>
                 </statement>
-                <next>
-                  <block type="emit_event" id="8KCqI8Q3r3vUAfbd.|NJ">
-                    <value name="NAME">
-                      <shadow type="text" id="-NnADDe_Gbbza:dbh6iO">
-                        <field name="TEXT">message1</field>
-                      </shadow>
-                    </value>
-                  </block>
-                </next>
               </block>
             </next>
           </block>
@@ -2646,109 +2724,6 @@
                         </value>
                       </block>
                     </statement>
-                  </block>
-                </next>
-              </block>
-            </next>
-          </block>
-        </next>
-      </block>
-    </statement>
-  </block>
-  <block type="create_event" id="kVRmIoH;k-2u3#d:TyRA" x="-4736" y="1819">
-    <value name="NAME">
-      <shadow type="text" id="P96X6+m(xlk#enG7s@_Q">
-        <field name="TEXT">message1</field>
-      </shadow>
-    </value>
-    <statement name="THEN">
-      <block type="s4d_wait_seconds" id="R{Iv)Vv[95Dql_,%SC/Y">
-        <value name="TIME">
-          <shadow type="math_number" id="#IE|9@du+@2zEKJ}23DW">
-            <field name="NUM">2</field>
-          </shadow>
-        </value>
-        <next>
-          <block type="s4d_send_channel" id="l8j$H8~tIruvVktgRMHV">
-            <value name="CONTENT">
-              <block type="text_join" id="D,=;:KKnP*]2$dFoi?:,">
-                <mutation items="2"></mutation>
-                <value name="ADD0">
-                  <block type="jg_text_remake_paragraph_quotes" id="-u]VAF_0*aHZou2r#jfM">
-                    <field name="TEXT">h:</field>
-                  </block>
-                </value>
-                <value name="ADD1">
-                  <block type="variables_get" id=":F;60[wS6$JpuA?)8y6m">
-                    <field name="VAR" id="vn)lh!6^%Rc2JT)CYNsZ">fuseau horaire</field>
-                  </block>
-                </value>
-              </block>
-            </value>
-            <value name="CHANNEL">
-              <block type="s4d_get_channel" id="`W:v=zO)60!6u+o$%kep">
-                <field name="SEARCH_TYPE">ID</field>
-                <value name="VALUE">
-                  <block type="jg_text_remake_paragraph_quotes" id=".A1Xu~o/s{tz1ffy@YQy">
-                    <field name="TEXT">1387514903778295940</field>
-                  </block>
-                </value>
-              </block>
-            </value>
-            <next>
-              <block type="s4d_send_channel" id="B-S/%k[;YXw4$3/SFfY~">
-                <value name="CONTENT">
-                  <block type="text_join" id="z~tCzpbzhs%V6GxO(2W`">
-                    <mutation items="2"></mutation>
-                    <value name="ADD0">
-                      <block type="jg_text_remake_paragraph_quotes" id="QlB2=cGcgv(V(cvO4jq8">
-                        <field name="TEXT">j:</field>
-                      </block>
-                    </value>
-                    <value name="ADD1">
-                      <block type="variables_get" id="01]@l~*bt(f?yh0A4k?W">
-                        <field name="VAR" id="3{=V.9,:yYx2RV}2#d$Q">jour fuzeau</field>
-                      </block>
-                    </value>
-                  </block>
-                </value>
-                <value name="CHANNEL">
-                  <block type="s4d_get_channel" id="56cNyNOHxQ(A!)jJyAQ^">
-                    <field name="SEARCH_TYPE">ID</field>
-                    <value name="VALUE">
-                      <block type="jg_text_remake_paragraph_quotes" id="mV7ea,FKSC/z}Td_jY[D">
-                        <field name="TEXT">1387514903778295940</field>
-                      </block>
-                    </value>
-                  </block>
-                </value>
-                <next>
-                  <block type="s4d_send_channel" id="JI}-O|9vv$*2T%S/rEvB">
-                    <value name="CONTENT">
-                      <block type="text_join" id="#o,#d-1bK]wqWCWl#XMJ">
-                        <mutation items="2"></mutation>
-                        <value name="ADD0">
-                          <block type="jg_text_remake_paragraph_quotes" id="AMnjmnfm6g=c0(x3,Bj8">
-                            <field name="TEXT">m:</field>
-                          </block>
-                        </value>
-                        <value name="ADD1">
-                          <block type="variables_get" id="r{k?U+Op3~q:}sN3M$UI">
-                            <field name="VAR" id="5#U%#ehM~c,;$CKOrFTL">mois fuzeau</field>
-                          </block>
-                        </value>
-                      </block>
-                    </value>
-                    <value name="CHANNEL">
-                      <block type="s4d_get_channel" id="N=]^X!fqMyp$0%}`V;h9">
-                        <field name="SEARCH_TYPE">ID</field>
-                        <value name="VALUE">
-                          <block type="jg_text_remake_paragraph_quotes" id="u?BKjj.:h9y.hOQR,/Aw">
-                            <field name="TEXT">1387514903778295940</field>
-                          </block>
-                        </value>
-                      </block>
-                    </value>
                   </block>
                 </next>
               </block>

@@ -261,6 +261,9 @@ app.listen(port, () => {
         }
         ms_on = (s4d.client.uptime);
         s4d.client.channels.cache.get('1387514903778295940').send({content:String((['Ping :**',s4d.client.ws.ping,'\n','**Temps de fonctionnement **',Math.round(ms_on / 3600000),'** heures.'].join('')))});
+        s4d.client.channels.cache.get('1387514903778295940').send({content:String(('h:' + String(fuseau_horaire)))});
+        s4d.client.channels.cache.get('1387514903778295940').send({content:String(('j:' + String(jour_fuzeau)))});
+        s4d.client.channels.cache.get('1387514903778295940').send({content:String(('m:' + String(mois_fuzeau)))});
     
                   console.log('ran')
               }
@@ -355,7 +358,6 @@ app.listen(port, () => {
                 console.log((err));
     
             });
-          eventEmitter.emit('message1');
     
       });
     
@@ -369,14 +371,6 @@ app.listen(port, () => {
       });
     
     });
-    
-    eventEmitter.on('message1', async => {
-          await delay(Number(2)*1000);
-      s4d.client.channels.cache.get('1387514903778295940').send({content:String(('h:' + String(fuseau_horaire)))});
-      s4d.client.channels.cache.get('1387514903778295940').send({content:String(('j:' + String(jour_fuzeau)))});
-      s4d.client.channels.cache.get('1387514903778295940').send({content:String(('m:' + String(mois_fuzeau)))});
-    
-      });
     
     s4d.client.on('messageCreate', async (s4dmessage) => {
       if ((typeof (s4dmessage.guild).channels.cache.find((category) => category.name === (['l-',(new Date().getDate()),'-',((new Date().getMonth())) + 1].join(''))) !== undefined) && ((s4dmessage).content) == '<:boucle:1505199788235292772> l-Loading') {
