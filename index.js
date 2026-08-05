@@ -114,49 +114,49 @@ app.listen(port, () => {
             })
             .then(async (response) => {
                 fuseau_horaire = (response.data);
-        S4D_APP_PKG_axios({
-                method: "get",
-                url: 'https://logoto.onrender.com/api/jour00h',
-    
-                headers: {
-    
-                },
-    
-              })
-              .then(async (response) => {
-                  jour_fuzeau = (response.data);
-          S4D_APP_PKG_axios({
-                  method: "get",
-                  url: 'https://logoto.onrender.com/api/mois00h',
-    
-                  headers: {
-    
-                  },
-    
-                })
-                .then(async (response) => {
-                    mois_fuzeau = (response.data);
-            s4d.client.channels.cache.get('1413899996691955755').send({ embeds:[jour_fuzeau]});
-            s4d.client.channels.cache.get('1413899996691955755').send({ embeds:[mois_fuzeau]});
-            s4d.client.channels.cache.get('1413899996691955755').send({ embeds:[fuseau_horaire]});
-    
-                })
-                .catch(async (err) => {
-                    console.log((err));
-    
-                });
-    
-              })
-              .catch(async (err) => {
-                  console.log((err));
-    
-              });
     
             })
             .catch(async (err) => {
                 console.log((err));
     
             });
+          S4D_APP_PKG_axios({
+              method: "get",
+              url: 'https://logoto.onrender.com/api/jour00h',
+    
+              headers: {
+    
+              },
+    
+            })
+            .then(async (response) => {
+                jour_fuzeau = (response.data);
+    
+            })
+            .catch(async (err) => {
+                console.log((err));
+    
+            });
+          S4D_APP_PKG_axios({
+              method: "get",
+              url: 'https://logoto.onrender.com/api/mois00h',
+    
+              headers: {
+    
+              },
+    
+            })
+            .then(async (response) => {
+                mois_fuzeau = (response.data);
+    
+            })
+            .catch(async (err) => {
+                console.log((err));
+    
+            });
+          s4d.client.channels.cache.get('1413899996691955755').send({ embeds:[jour_fuzeau]});
+      s4d.client.channels.cache.get('1413899996691955755').send({ embeds:[mois_fuzeau]});
+      s4d.client.channels.cache.get('1413899996691955755').send({ embeds:[fuseau_horaire]});
     
       });
     
