@@ -623,8 +623,13 @@
                           </block>
                         </value>
                         <value name="ADD1">
-                          <block type="frost_current" id="6`.)~2b@b6fu|rr8;(0=">
-                            <field name="DATA_TYPE">DATE</field>
+                          <block type="text_join" id="X4)7rdj86dzH^JnJxSuj">
+                            <mutation items="1"></mutation>
+                            <value name="ADD0">
+                              <block type="variables_get" id="c_4(/$cQzZogB7}+8+bD">
+                                <field name="VAR" id="3{=V.9,:yYx2RV}2#d$Q">jour fuzeau</field>
+                              </block>
+                            </value>
                           </block>
                         </value>
                         <value name="ADD2">
@@ -633,20 +638,12 @@
                           </block>
                         </value>
                         <value name="ADD3">
-                          <block type="math_arithmetic" id="KYoiD*iwIsayetV6(1%h">
-                            <field name="OP">ADD</field>
-                            <value name="A">
-                              <shadow type="math_number" id="nZm2nEcTjzYkFu5m14#P">
-                                <field name="NUM">1</field>
-                              </shadow>
-                              <block type="frost_current" id="kWVJH1Z2f#f,Miu/ou$d">
-                                <field name="DATA_TYPE">MONTH</field>
+                          <block type="text_join" id="{.$)y`yt)|T9KT_?xa5n">
+                            <mutation items="1"></mutation>
+                            <value name="ADD0">
+                              <block type="variables_get" id="]B6d%kOw}:!QQOhm)T9H">
+                                <field name="VAR" id="5#U%#ehM~c,;$CKOrFTL">mois fuzeau</field>
                               </block>
-                            </value>
-                            <value name="B">
-                              <shadow type="math_number" id="@Pi89w+mw@j-Pfcg;?5-">
-                                <field name="NUM">1</field>
-                              </shadow>
                             </value>
                           </block>
                         </value>
@@ -756,8 +753,13 @@
                               </block>
                             </value>
                             <value name="ADD1">
-                              <block type="frost_current" id="_cv;cVy_XfsChJ4Ng[-g">
-                                <field name="DATA_TYPE">DATE</field>
+                              <block type="text_join" id="%TR$@H{x7n9+*8hak/|h">
+                                <mutation items="1"></mutation>
+                                <value name="ADD0">
+                                  <block type="variables_get" id="z!B},~Kl/D{Bp$X$=b;:">
+                                    <field name="VAR" id="3{=V.9,:yYx2RV}2#d$Q">jour fuzeau</field>
+                                  </block>
+                                </value>
                               </block>
                             </value>
                             <value name="ADD2">
@@ -766,20 +768,12 @@
                               </block>
                             </value>
                             <value name="ADD3">
-                              <block type="math_arithmetic" id="m.(UM4ux*c(`DbOSpJaO">
-                                <field name="OP">ADD</field>
-                                <value name="A">
-                                  <shadow type="math_number" id="]P5e$%t6GEg}:Oy/{OXO">
-                                    <field name="NUM">1</field>
-                                  </shadow>
-                                  <block type="frost_current" id="hBtrc!?DsgX=Ftow52JI">
-                                    <field name="DATA_TYPE">MONTH</field>
+                              <block type="text_join" id="Oy%{;XZQw%{e#e@}I3qj">
+                                <mutation items="1"></mutation>
+                                <value name="ADD0">
+                                  <block type="variables_get" id="0!xOpXH:Mm8=LrL:kvtH">
+                                    <field name="VAR" id="5#U%#ehM~c,;$CKOrFTL">mois fuzeau</field>
                                   </block>
-                                </value>
-                                <value name="B">
-                                  <shadow type="math_number" id="1QN}u^u!LejEKCTN],%r">
-                                    <field name="NUM">1</field>
-                                  </shadow>
                                 </value>
                               </block>
                             </value>
@@ -889,8 +883,13 @@
                                   </block>
                                 </value>
                                 <value name="ADD1">
-                                  <block type="frost_current" id="=2A7Xn1Y:Y7FhVmA~|iw">
-                                    <field name="DATA_TYPE">DATE</field>
+                                  <block type="text_join" id="7`_?Of+0cBz;{T5ZBNBd">
+                                    <mutation items="1"></mutation>
+                                    <value name="ADD0">
+                                      <block type="variables_get" id="G!`OzI?rapPVH=(6asWh">
+                                        <field name="VAR" id="3{=V.9,:yYx2RV}2#d$Q">jour fuzeau</field>
+                                      </block>
+                                    </value>
                                   </block>
                                 </value>
                                 <value name="ADD2">
@@ -899,20 +898,12 @@
                                   </block>
                                 </value>
                                 <value name="ADD3">
-                                  <block type="math_arithmetic" id="{VaqK3T3Uv),4H0)neSM">
-                                    <field name="OP">ADD</field>
-                                    <value name="A">
-                                      <shadow type="math_number" id="7h;3*z[Jzk|XbbbtR+Na">
-                                        <field name="NUM">1</field>
-                                      </shadow>
-                                      <block type="frost_current" id=".ZH+JI{`-}2#C/65z,iT">
-                                        <field name="DATA_TYPE">MONTH</field>
+                                  <block type="text_join" id="dTdaIS|/V`nqQZ~@1sIf">
+                                    <mutation items="1"></mutation>
+                                    <value name="ADD0">
+                                      <block type="variables_get" id="M}N~}g*bSKKpA7gfH=~s">
+                                        <field name="VAR" id="5#U%#ehM~c,;$CKOrFTL">mois fuzeau</field>
                                       </block>
-                                    </value>
-                                    <value name="B">
-                                      <shadow type="math_number" id="_5/.Zeoq@K2$0|(a$ttd">
-                                        <field name="NUM">1</field>
-                                      </shadow>
                                     </value>
                                   </block>
                                 </value>
@@ -1022,8 +1013,13 @@
                                       </block>
                                     </value>
                                     <value name="ADD1">
-                                      <block type="frost_current" id="7uOq5bFmoT},j?rn6yk5">
-                                        <field name="DATA_TYPE">DATE</field>
+                                      <block type="text_join" id="lU+lit[_AzCv,2o!GEd8">
+                                        <mutation items="1"></mutation>
+                                        <value name="ADD0">
+                                          <block type="variables_get" id="EZIb,b$UaC`VzGb$WCqx">
+                                            <field name="VAR" id="3{=V.9,:yYx2RV}2#d$Q">jour fuzeau</field>
+                                          </block>
+                                        </value>
                                       </block>
                                     </value>
                                     <value name="ADD2">
@@ -1032,20 +1028,12 @@
                                       </block>
                                     </value>
                                     <value name="ADD3">
-                                      <block type="math_arithmetic" id="`p/0TIlPfR}A,aU:-+]e">
-                                        <field name="OP">ADD</field>
-                                        <value name="A">
-                                          <shadow type="math_number" id="x)-XU1[^{i!yEKL^@}?#">
-                                            <field name="NUM">1</field>
-                                          </shadow>
-                                          <block type="frost_current" id="_jxom*h2JA|,)Ym(!%Qf">
-                                            <field name="DATA_TYPE">MONTH</field>
+                                      <block type="text_join" id="U0p5wjs*)t3K0#@Hh{.t">
+                                        <mutation items="1"></mutation>
+                                        <value name="ADD0">
+                                          <block type="variables_get" id="aG89wSpr2EShzS8s*GxY">
+                                            <field name="VAR" id="5#U%#ehM~c,;$CKOrFTL">mois fuzeau</field>
                                           </block>
-                                        </value>
-                                        <value name="B">
-                                          <shadow type="math_number" id="58F?+zGQ(;JsI]EZm!A[">
-                                            <field name="NUM">1</field>
-                                          </shadow>
                                         </value>
                                       </block>
                                     </value>

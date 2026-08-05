@@ -184,25 +184,25 @@ app.listen(port, () => {
     
     s4d.client.on('messageCreate', async (s4dmessage) => {
       if (((s4dmessage).content) == '<:boucle:1505199788235292772> l-Loading') {
-        (s4dmessage.guild).setIcon(((s4dmessage.guild).channels.cache.find((category) => category.name === (['l-',(new Date().getDate()),'-',((new Date().getMonth())) + 1].join(''))).topic),'changement de logo.')
+        (s4dmessage.guild).setIcon(((s4dmessage.guild).channels.cache.find((category) => category.name === (['l-',String(jour_fuzeau),'-',String(mois_fuzeau)].join(''))).topic),'changement de logo.')
     
         s4dmessage.channel.send({content:String('<:check:1505215575822172170> Server logo changed.')});
         console.log((['Logo du serveur ',(s4dmessage.guild).name,' (',(s4dmessage.guild).id,').'].join('')));
       }
       if (((s4dmessage).content) == '<:boucle:1505199788235292772> n-Loading') {
-        (s4dmessage.guild).setName(((s4dmessage.guild).channels.cache.find((category) => category.name === (['n-',(new Date().getDate()),'-',((new Date().getMonth())) + 1].join(''))).topic),'changement de nom.')
+        (s4dmessage.guild).setName(((s4dmessage.guild).channels.cache.find((category) => category.name === (['n-',String(jour_fuzeau),'-',String(mois_fuzeau)].join(''))).topic),'changement de nom.')
     
         s4dmessage.channel.send({content:String('<:check:1505215575822172170> Server name changed.')});
         console.log((['Nom du serveur ',(s4dmessage.guild).name,' (',(s4dmessage.guild).id,').'].join('')));
       }
       if (((s4dmessage).content) == '<:boucle:1505199788235292772> b-Loading') {
-        (s4dmessage.guild).setBanner(((s4dmessage.guild).channels.cache.find((category) => category.name === (['b-',(new Date().getDate()),'-',((new Date().getMonth())) + 1].join(''))).topic),'changement de bannière.')
+        (s4dmessage.guild).setBanner(((s4dmessage.guild).channels.cache.find((category) => category.name === (['b-',String(jour_fuzeau),'-',String(mois_fuzeau)].join(''))).topic),'changement de bannière.')
     
         s4dmessage.channel.send({content:String('<:check:1505215575822172170> Server banner changed.')});
         console.log((['Bannier du serveur ',(s4dmessage.guild).name,' (',(s4dmessage.guild).id,').'].join('')));
       }
       if (((s4dmessage).content) == '<:boucle:1505199788235292772> i-Loading') {
-        (s4dmessage.guild).setSplash(((s4dmessage.guild).channels.cache.find((category) => category.name === (['i-',(new Date().getDate()),'-',((new Date().getMonth())) + 1].join(''))).topic),'changement d\'image d\'invitation.')
+        (s4dmessage.guild).setSplash(((s4dmessage.guild).channels.cache.find((category) => category.name === (['i-',String(jour_fuzeau),'-',String(mois_fuzeau)].join(''))).topic),'changement d\'image d\'invitation.')
     
         s4dmessage.channel.send({content:String('<:check:1505215575822172170> Server invite image changed.')});
         console.log((['Image d\'invitation du serveur ',(s4dmessage.guild).name,' (',(s4dmessage.guild).id,').'].join('')));
