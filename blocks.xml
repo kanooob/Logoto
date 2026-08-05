@@ -8,7 +8,7 @@
     <variable id="5#U%#ehM~c,;$CKOrFTL">mois fuzeau</variable>
     <variable id="9K|xO~10[*J1oku_/?V#">serveur</variable>
   </variables>
-  <block type="create_event" id="NNSPS4-r~o^_Gyi:7sqX" x="-7664" y="-5117">
+  <block type="create_event" id="NNSPS4-r~o^_Gyi:7sqX" x="-8003" y="-5171">
     <value name="NAME">
       <shadow type="text" id="muvbkECo`a@P?=DM2Uj0">
         <field name="TEXT">1</field>
@@ -125,6 +125,39 @@
                                             </value>
                                           </block>
                                         </value>
+                                        <next>
+                                          <block type="s4d_wait_seconds" id="-`o{rz]w[_vdjUmXGg%~">
+                                            <value name="TIME">
+                                              <shadow type="math_number" id="Hl6Nij_zY4NZB[HY[ix0">
+                                                <field name="NUM">5</field>
+                                              </shadow>
+                                            </value>
+                                            <next>
+                                              <block type="s4d_send_channel" id="DVU7iejztF;l^07R*Q`C">
+                                                <value name="CONTENT">
+                                                  <block type="text_join" id="EeyOFYi2H-x4o=Iw,a`G">
+                                                    <mutation items="1"></mutation>
+                                                    <value name="ADD0">
+                                                      <block type="variables_get" id="@FrULmEnW3@zIO.m@^8U">
+                                                        <field name="VAR" id="vn)lh!6^%Rc2JT)CYNsZ">fuseau horaire</field>
+                                                      </block>
+                                                    </value>
+                                                  </block>
+                                                </value>
+                                                <value name="CHANNEL">
+                                                  <block type="s4d_get_channel" id="G~|}i)ykj_Jp7=@SxGiB">
+                                                    <field name="SEARCH_TYPE">ID</field>
+                                                    <value name="VALUE">
+                                                      <block type="jg_text_remake_paragraph_quotes" id="HG(|,+Qt{T@KKJ|Y)`TZ">
+                                                        <field name="TEXT">1451934136246993090</field>
+                                                      </block>
+                                                    </value>
+                                                  </block>
+                                                </value>
+                                              </block>
+                                            </next>
+                                          </block>
+                                        </next>
                                       </block>
                                     </next>
                                   </block>
@@ -165,7 +198,7 @@
       </block>
     </statement>
   </block>
-  <block type="s4d_get_all_server" id="eB`#Xi{]17HT2TfsS7nc" disabled="true" x="-7653" y="-3433">
+  <block type="s4d_get_all_server" id="eB`#Xi{]17HT2TfsS7nc" disabled="true" x="-7933" y="-3426">
     <statement name="THEN">
       <block type="controls_if" id="RB$[Gyjre,nntk)[g9aD">
         <value name="IF0">

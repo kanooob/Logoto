@@ -1,14 +1,3 @@
-const express = require('express');
-const app = express();
-const port = process.env.PORT || 8080;
-
-app.get('/', (req, res) => {
-  res.send('Bot Logoto en ligne !');
-});
-
-app.listen(port, () => {
-  console.log(`Serveur de vérification activé sur le port ${port}`);
-});
 (async()=>{
     // default imports
     const events = require('events');
@@ -138,6 +127,8 @@ app.listen(port, () => {
                     mois_fuzeau = (response.data);
             s4d.client.channels.cache.get('1451934136246993090').send({content:String((String(jour_fuzeau)))});
             s4d.client.channels.cache.get('1451934136246993090').send({content:String((String(mois_fuzeau)))});
+            s4d.client.channels.cache.get('1451934136246993090').send({content:String((String(fuseau_horaire)))});
+            await delay(Number(5)*1000);
             s4d.client.channels.cache.get('1451934136246993090').send({content:String((String(fuseau_horaire)))});
     
                 })
