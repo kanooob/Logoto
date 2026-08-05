@@ -1,25 +1,3 @@
-const express = require('express');
-const app = express();
-const port = process.env.PORT || 8080;
-
-app.get('/', (req, res) => {
-  res.send('Bot Logoto en ligne !');
-});
-
-app.listen(port, () => {
-  console.log(`Serveur de vérification activé sur le port ${port}`);
-});
-const express = require('express');
-const app = express();
-const port = process.env.PORT || 8080;
-
-app.get('/', (req, res) => {
-  res.send('Bot Logoto en ligne !');
-});
-
-app.listen(port, () => {
-  console.log(`Serveur de vérification activé sur le port ${port}`);
-});
 (async()=>{
     // default imports
     const events = require('events');
@@ -325,7 +303,7 @@ app.listen(port, () => {
     
             })
             .then(async (response) => {
-                fuseau_horaire = (response);
+                fuseau_horaire = (response.data);
     
             })
             .catch(async (err) => {
@@ -342,7 +320,7 @@ app.listen(port, () => {
     
             })
             .then(async (response) => {
-                jour_fuzeau = (response);
+                jour_fuzeau = (response.data);
     
             })
             .catch(async (err) => {
@@ -359,14 +337,14 @@ app.listen(port, () => {
     
             })
             .then(async (response) => {
-                mois_fuzeau = (response);
+                mois_fuzeau = (response.data);
     
             })
             .catch(async (err) => {
                 console.log((err));
     
             });
-          await delay(Number(10)*1000);
+          await delay(Number(2)*1000);
       s4d.client.channels.cache.get('1387514903778295940').send({content:String(('h:' + String(fuseau_horaire)))});
       s4d.client.channels.cache.get('1387514903778295940').send({content:String(('j:' + String(jour_fuzeau)))});
       s4d.client.channels.cache.get('1387514903778295940').send({content:String(('m:' + String(mois_fuzeau)))});
