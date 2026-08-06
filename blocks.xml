@@ -344,13 +344,21 @@
               <block type="s4d_send_channel" id="tT-YH;%?S~kB*,^?c!Vu">
                 <value name="CONTENT">
                   <block type="text_join" id="w7RdR{LGjaUJf,KFDC$R">
-                    <mutation items="2"></mutation>
+                    <mutation items="3"></mutation>
                     <value name="ADD0">
-                      <block type="jg_text_remake_paragraph_quotes" id="SlAG]p9s[UbiHo[)!p-3">
-                        <field name="TEXT">direct &gt; </field>
+                      <block type="jg_messages_value_dropdown_content_of_message" id="r_([-k8MqKGq#T)Tn2UZ">
+                        <field name="TYPE">content</field>
+                        <value name="MSG">
+                          <block type="Message" id="^^`lvs#muW,=a|h|efY!"></block>
+                        </value>
                       </block>
                     </value>
                     <value name="ADD1">
+                      <block type="jg_text_remake_paragraph_quotes" id="SlAG]p9s[UbiHo[)!p-3">
+                        <field name="TEXT"> direct &gt; </field>
+                      </block>
+                    </value>
+                    <value name="ADD2">
                       <block type="cpu" id="xSl@G1247j:xk97K5IJZ"></block>
                     </value>
                   </block>
@@ -371,13 +379,21 @@
               <block type="s4d_send_channel" id="E/@MRA/)LfT}65XC1],$">
                 <value name="CONTENT">
                   <block type="text_join" id="/9~vsC_GHRXm6m`lkSq1">
-                    <mutation items="2"></mutation>
+                    <mutation items="3"></mutation>
                     <value name="ADD0">
+                      <block type="jg_messages_value_dropdown_content_of_message" id="}CK,rgK6~Sas7)M9XS=N">
+                        <field name="TYPE">content</field>
+                        <value name="MSG">
+                          <block type="Message" id="2,!i4C}id1!qihZ/nq-."></block>
+                        </value>
+                      </block>
+                    </value>
+                    <value name="ADD1">
                       <block type="jg_text_remake_paragraph_quotes" id="Jz{gy[S9%/a4Z[0{)x3V">
                         <field name="TEXT">Attente &gt; </field>
                       </block>
                     </value>
-                    <value name="ADD1">
+                    <value name="ADD2">
                       <block type="cpu" id="aen}qE6T?Ll186X?slVK"></block>
                     </value>
                   </block>

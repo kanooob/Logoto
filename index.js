@@ -169,9 +169,9 @@ app.listen(port, () => {
               os.cpuUsage(async function(v){
       	      var obj = v * 100
                 if ((obj) < '75') {
-          s4d.client.channels.cache.get('1387514903778295940').send({content:String(('direct > ' + String(obj)))});
+          s4d.client.channels.cache.get('1387514903778295940').send({content:String(([(s4dmessage).content,' direct > ',obj].join('')))});
         } else {
-          s4d.client.channels.cache.get('1387514903778295940').send({content:String(('Attente > ' + String(obj)))});
+          s4d.client.channels.cache.get('1387514903778295940').send({content:String(([(s4dmessage).content,'Attente > ',obj].join('')))});
           await delay(Number((mathRandomInt(20, 40)))*1000);
         }
     
