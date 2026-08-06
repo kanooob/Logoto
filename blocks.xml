@@ -368,31 +368,7 @@
           </block>
         </value>
         <statement name="ELSE">
-          <block type="s4d_send_channel" id="6n_t,D;|T9Y,{Uy].wWh">
-            <value name="CONTENT">
-              <block type="text_join" id="ud{6BbB?b(3W(._d-/Tm">
-                <mutation items="1"></mutation>
-                <value name="ADD0">
-                  <block type="jg_text_remake_paragraph_quotes" id="(ErZ~]+PdPA/FL?XsHI0">
-                    <field name="TEXT">fin</field>
-                  </block>
-                </value>
-              </block>
-            </value>
-            <value name="CHANNEL">
-              <block type="s4d_get_channel" id="2l!{L{)Tr^5Lcs^k$xpn">
-                <field name="SEARCH_TYPE">ID</field>
-                <value name="VALUE">
-                  <block type="jg_text_remake_paragraph_quotes" id="|/(zd#+*lVTc_@LX;a8j">
-                    <field name="TEXT">1387514903778295940</field>
-                  </block>
-                </value>
-              </block>
-            </value>
-            <next>
-              <block type="s4d_return" id="Bg,t2qQ:s2unBa!~MMsh"></block>
-            </next>
-          </block>
+          <block type="s4d_return" id="Bg,t2qQ:s2unBa!~MMsh"></block>
         </statement>
         <next>
           <block type="get_cpu_uptime" id="r%xoV;Q1VcL#xTTfyXzv">
