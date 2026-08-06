@@ -165,6 +165,9 @@ app.listen(port, () => {
     });
     
     s4d.client.on('messageCreate', async (s4dmessage) => {
+      if ((s4dmessage.author) != (s4d.client.user) && !(String(((s4dmessage).content)).includes(String('<:boucle:1505199788235292772>')))) {
+        return
+      }
     
               os.cpuUsage(async function(v){
       	      var obj = v * 100
