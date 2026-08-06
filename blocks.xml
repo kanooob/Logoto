@@ -324,12 +324,13 @@
   <block type="s4d_on_message" id="GT~9VW#b?fln!F5f=FP," x="-8916" y="-868">
     <statement name="STATEMENTS">
       <block type="controls_if" id="!3%O(Y+U:r.VbvBmig93">
+        <mutation else="1"></mutation>
         <value name="IF0">
           <block type="logic_operation" id="/isZD?#/+2Q?WbN!_=mS">
             <field name="OP">AND</field>
             <value name="A">
               <block type="logic_compare" id="-:u_g/2Ldrg6jB$s/X6@">
-                <field name="OP">NEQ</field>
+                <field name="OP">EQ</field>
                 <value name="A">
                   <block type="s4d_member_id" id="RXR?7Lct@4F2TRW3vIGn">
                     <value name="MEMBER">
@@ -345,33 +346,53 @@
               </block>
             </value>
             <value name="B">
-              <block type="logic_negate" id="@xk;ROWELhr9*BE2NS0h">
-                <value name="BOOL">
-                  <block type="s4d_includes" id="k.}wURv$EP/)$P3GMtBl">
-                    <value name="TEXT">
-                      <shadow type="text" id="XMkbi`X@8GKoAmCZSm+@">
-                        <field name="TEXT">abc</field>
-                      </shadow>
-                      <block type="jg_messages_value_dropdown_content_of_message" id="ON(vbXL/L:LCnI`)hnS2">
-                        <field name="TYPE">content</field>
-                        <value name="MSG">
-                          <block type="Message" id="k*WO+y6i1`[4x9iyLugF"></block>
-                        </value>
-                      </block>
-                    </value>
-                    <value name="INCLUDES">
-                      <shadow type="text" id=":Zo+~f4+L!ytZNknxb|^">
-                        <field name="TEXT">&lt;:boucle:1505199788235292772&gt;</field>
-                      </shadow>
+              <block type="s4d_starts_with" id="03V[}ZJERjA.]b7W6h36">
+                <value name="STRING">
+                  <shadow type="text" id="0BIH2=U77e.qTYihkDLY">
+                    <field name="TEXT">abc</field>
+                  </shadow>
+                  <block type="jg_messages_value_dropdown_content_of_message" id="ON(vbXL/L:LCnI`)hnS2">
+                    <field name="TYPE">content</field>
+                    <value name="MSG">
+                      <block type="Message" id="k*WO+y6i1`[4x9iyLugF"></block>
                     </value>
                   </block>
+                </value>
+                <value name="SUBSTRING">
+                  <shadow type="text" id="7^`ZKG]ryO`U:1eCv=zr">
+                    <field name="TEXT">&lt;:boucle:1505199788235292772&gt;</field>
+                  </shadow>
                 </value>
               </block>
             </value>
           </block>
         </value>
-        <statement name="DO0">
-          <block type="s4d_return" id="Bg,t2qQ:s2unBa!~MMsh"></block>
+        <statement name="ELSE">
+          <block type="s4d_send_channel" id="6n_t,D;|T9Y,{Uy].wWh">
+            <value name="CONTENT">
+              <block type="text_join" id="ud{6BbB?b(3W(._d-/Tm">
+                <mutation items="1"></mutation>
+                <value name="ADD0">
+                  <block type="jg_text_remake_paragraph_quotes" id="(ErZ~]+PdPA/FL?XsHI0">
+                    <field name="TEXT">fin</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <value name="CHANNEL">
+              <block type="s4d_get_channel" id="2l!{L{)Tr^5Lcs^k$xpn">
+                <field name="SEARCH_TYPE">ID</field>
+                <value name="VALUE">
+                  <block type="jg_text_remake_paragraph_quotes" id="|/(zd#+*lVTc_@LX;a8j">
+                    <field name="TEXT">1387514903778295940</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <next>
+              <block type="s4d_return" id="Bg,t2qQ:s2unBa!~MMsh"></block>
+            </next>
+          </block>
         </statement>
         <next>
           <block type="get_cpu_uptime" id="r%xoV;Q1VcL#xTTfyXzv">

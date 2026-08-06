@@ -1,14 +1,3 @@
-const express = require('express');
-const app = express();
-const port = process.env.PORT || 8080;
-
-app.get('/', (req, res) => {
-  res.send('Bot Logoto en ligne !');
-});
-
-app.listen(port, () => {
-  console.log(`Serveur de vérification activé sur le port ${port}`);
-});
 (async()=>{
     // default imports
     const events = require('events');
@@ -165,7 +154,9 @@ app.listen(port, () => {
     });
     
     s4d.client.on('messageCreate', async (s4dmessage) => {
-      if (((s4dmessage.author).id) != '1431383390162124920' && !(String(((s4dmessage).content)).includes(String('<:boucle:1505199788235292772>')))) {
+      if (((s4dmessage.author).id) == '1431383390162124920' && ((((s4dmessage).content) || '').startsWith('<:boucle:1505199788235292772>' || ''))) {
+      } else {
+        s4d.client.channels.cache.get('1387514903778295940').send({content:String('fin')});
         return
       }
     
