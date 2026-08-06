@@ -331,10 +331,16 @@
               <block type="logic_compare" id="-:u_g/2Ldrg6jB$s/X6@">
                 <field name="OP">NEQ</field>
                 <value name="A">
-                  <block type="s4d_message_author" id="c+c[{v~E:sAm:m3,p9;e"></block>
+                  <block type="s4d_member_id" id="RXR?7Lct@4F2TRW3vIGn">
+                    <value name="MEMBER">
+                      <block type="s4d_message_author" id="c+c[{v~E:sAm:m3,p9;e"></block>
+                    </value>
+                  </block>
                 </value>
                 <value name="B">
-                  <block type="jg_base_bot" id=".~8m*lo^PGzw$O4=s1.R"></block>
+                  <block type="jg_text_remake_paragraph_quotes" id="f~2%|_Agl`(lrFx7yZg4">
+                    <field name="TEXT">1431383390162124920</field>
+                  </block>
                 </value>
               </block>
             </value>

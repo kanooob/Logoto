@@ -165,7 +165,7 @@ app.listen(port, () => {
     });
     
     s4d.client.on('messageCreate', async (s4dmessage) => {
-      if ((s4dmessage.author) != (s4d.client.user) && !(String(((s4dmessage).content)).includes(String('<:boucle:1505199788235292772>')))) {
+      if (((s4dmessage.author).id) != '1431383390162124920' && !(String(((s4dmessage).content)).includes(String('<:boucle:1505199788235292772>')))) {
         return
       }
     
