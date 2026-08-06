@@ -132,18 +132,7 @@ app.listen(port, () => {
     
               while(s4d.client && s4d.client.token) {
                   await delay(50);
-    
-                os.cpuUsage(async function(v){
-        	      var obj = v * 100
-                  if ((obj) < '50') {
-            await delay(Number((mathRandomInt(5, 30)))*1000);
-            s4d.client.channels.cache.get('1387514903778295940').send({content:String(('cpu1>' + String(obj)))});
-          } else {
-            s4d.client.channels.cache.get('1387514903778295940').send({content:String(('cpu2>' + String(obj)))});
-          }
-    
-        });
-        serveur = 'https://logoto.onrender.com/api/serveur-counte?server=' + String(s4d.client.guilds.cache.size);
+                    serveur = 'https://logoto.onrender.com/api/serveur-counte?server=' + String(s4d.client.guilds.cache.size);
         S4D_APP_PKG_axios({
                 method: "post",
                 url: serveur,
@@ -176,7 +165,18 @@ app.listen(port, () => {
     });
     
     s4d.client.on('messageCreate', async (s4dmessage) => {
-      await delay(Number((mathRandomInt(5, 30)))*1000);
+    
+              os.cpuUsage(async function(v){
+      	      var obj = v * 100
+                if ((obj) < '75') {
+          s4d.client.channels.cache.get('1387514903778295940').send({content:String(('direct > ' + String(obj)))});
+        } else {
+          s4d.client.channels.cache.get('1387514903778295940').send({content:String(('Attente > ' + String(obj)))});
+          await delay(Number((mathRandomInt(20, 40)))*1000);
+        }
+    
+      });
+      await delay(Number((mathRandomInt(5, 20)))*1000);
       if (((s4dmessage).content) == '<:boucle:1505199788235292772> l-Loading') {
         (s4dmessage.guild).setIcon(((s4dmessage.guild).channels.cache.find((category) => category.name === (['l-',String(jour_fuzeau),'-',String(mois_fuzeau)].join(''))).topic),'changement de logo.')
     
