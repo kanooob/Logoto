@@ -122,7 +122,61 @@ app.listen(port, () => {
             }
         });
     
+    s4d.client.on('ready', async () => {
+      heure = ((new Date().getUTCHours()));
+      start_unix = (Math.floor(new Date().getTime()/1000));
+      s4d.client.channels.cache.get('1413899996691955755').send({content:String('Démarrage du bot...')});
+      if (((new Date().getUTCMinutes())) < 10) {
+        heure = ((new Date().getUTCHours())) - 1;
+      }
+    
+              while(s4d.client && s4d.client.token) {
+                  await delay(50);
+    
+                os.cpuUsage(async function(v){
+        	      var obj = v * 100
+                  if ((obj) < '50') {
+            await delay(Number((mathRandomInt(5, 30)))*1000);
+            s4d.client.channels.cache.get('1387514903778295940').send({content:String(('cpu1>' + String(obj)))});
+          } else {
+            s4d.client.channels.cache.get('1387514903778295940').send({content:String(('cpu2>' + String(obj)))});
+          }
+    
+        });
+        serveur = 'https://logoto.onrender.com/api/serveur-counte?server=' + String(s4d.client.guilds.cache.size);
+        S4D_APP_PKG_axios({
+                method: "post",
+                url: serveur,
+    
+                headers: {
+                     'key': (process.env[String('SECRET_KEY')]),
+    
+                },
+    
+              })
+              .then(async (response) => {
+    
+              })
+              .catch(async (err) => {
+                  console.log((err));
+    
+              });
+            s4d.client.user.setPresence({status: "online",activities:[{name:([s4d.client.users.cache.size,' members, ',s4d.client.guilds.cache.size,' servers.'].join('')),type:"WATCHING"}]});
+        await delay(Number(180)*1000);
+        if (heure != ((new Date().getUTCHours()))) {
+          heure = ((new Date().getUTCHours()));
+          eventEmitter.emit('1');
+        }
+        ms_on = (s4d.client.uptime);
+        s4d.client.channels.cache.get('1387514903778295940').send({content:String((['Ping :**',s4d.client.ws.ping,'\n','**Temps de fonctionnement :**',Math.round(ms_on / 3600000),'** heures'].join('')))});
+    
+                  console.log('ran')
+              }
+    
+    });
+    
     s4d.client.on('messageCreate', async (s4dmessage) => {
+      await delay(Number((mathRandomInt(5, 30)))*1000);
       if (((s4dmessage).content) == '<:boucle:1505199788235292772> l-Loading') {
         (s4dmessage.guild).setIcon(((s4dmessage.guild).channels.cache.find((category) => category.name === (['l-',String(jour_fuzeau),'-',String(mois_fuzeau)].join(''))).topic),'changement de logo.')
     
@@ -184,7 +238,6 @@ app.listen(port, () => {
                 })
                 .then(async (response) => {
                     mois_fuzeau = (response.data);
-            await delay(Number((mathRandomInt(5, 30)))*1000);
             s4d.client.guilds.cache.forEach(async (s) =>{
                if (((s).channels.cache.find((category) => category.name === 'log-logoto').topic) == null && '+0' == String(fuseau_horaire)) {
               } else if (((s).channels.cache.find((category) => category.name === 'log-logoto').topic) == String(fuseau_horaire)) {
@@ -225,48 +278,6 @@ app.listen(port, () => {
             });
     
       });
-    
-    s4d.client.on('ready', async () => {
-      heure = ((new Date().getUTCHours()));
-      start_unix = (Math.floor(new Date().getTime()/1000));
-      s4d.client.channels.cache.get('1413899996691955755').send({content:String('Démarrage du bot...')});
-      if (((new Date().getUTCMinutes())) < 10) {
-        heure = ((new Date().getUTCHours())) - 1;
-      }
-    
-              while(s4d.client && s4d.client.token) {
-                  await delay(50);
-                    serveur = 'https://logoto.onrender.com/api/serveur-counte?server=' + String(s4d.client.guilds.cache.size);
-        S4D_APP_PKG_axios({
-                method: "post",
-                url: serveur,
-    
-                headers: {
-                     'key': (process.env[String('SECRET_KEY')]),
-    
-                },
-    
-              })
-              .then(async (response) => {
-    
-              })
-              .catch(async (err) => {
-                  console.log((err));
-    
-              });
-            s4d.client.user.setPresence({status: "online",activities:[{name:([s4d.client.users.cache.size,' members, ',s4d.client.guilds.cache.size,' servers.'].join('')),type:"WATCHING"}]});
-        await delay(Number(180)*1000);
-        if (heure != ((new Date().getUTCHours()))) {
-          heure = ((new Date().getUTCHours()));
-          eventEmitter.emit('1');
-        }
-        ms_on = (s4d.client.uptime);
-        s4d.client.channels.cache.get('1387514903778295940').send({content:String((['Ping :**',s4d.client.ws.ping,'\n','**Temps de fonctionnement :**',Math.round(ms_on / 3600000),'** heures'].join('')))});
-    
-                  console.log('ran')
-              }
-    
-    });
     
     synchronizeSlashCommands(s4d.client, [
       {
