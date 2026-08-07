@@ -1,12 +1,12 @@
 <xml xmlns="https://developers.google.com/blockly/xml">
   <variables>
     <variable id="*Mw8:jGBr_D;=DnYIH)A">heure</variable>
-    <variable id="({,8$4+1#r^CW)14AY[c">start unix</variable>
     <variable id="vn)lh!6^%Rc2JT)CYNsZ">fuseau horaire</variable>
+    <variable id="({,8$4+1#r^CW)14AY[c">start unix</variable>
     <variable id="jlm:W3Oxc-yLpT4NI{=*">ms on</variable>
     <variable id="3{=V.9,:yYx2RV}2#d$Q">jour fuseau</variable>
-    <variable id="9K|xO~10[*J1oku_/?V#">serveur</variable>
     <variable id="5#U%#ehM~c,;$CKOrFTL">mois fuseau</variable>
+    <variable id="9K|xO~10[*J1oku_/?V#">serveur</variable>
   </variables>
   <block type="s4d_login" id="076e7c%2/lzW`#B^9s#h" x="-3057" y="-1348">
     <value name="TOKEN">
@@ -1892,7 +1892,7 @@
                           <block type="s4d_send_channel" id="cYIZ=I]%aC$q+%CiI8]i">
                             <value name="CONTENT">
                               <block type="text_join" id="9E2B~J~msb^NYA/ahT#d">
-                                <mutation items="5"></mutation>
+                                <mutation items="7"></mutation>
                                 <value name="ADD0">
                                   <block type="jg_text_remake_paragraph_quotes" id="hpowx:KDp2ci_N9LzF9:">
                                     <field name="TEXT">&lt;:asterisk:1505250975282106469&gt; **Information**</field>
@@ -1903,7 +1903,7 @@
                                 </value>
                                 <value name="ADD2">
                                   <block type="jg_text_remake_paragraph_quotes" id="ecDRZKL9mKy0%V7*%1_!">
-                                    <field name="TEXT">&lt;:track_next:1505295937856213072&gt; The logs channel has been created. You will see the server changes made by the bot in this channel. (Please do not change the channel name.) Now you just need to run this command &lt;/add-an-event:1505515202072805377&gt; to create an automation.</field>
+                                    <field name="TEXT">&lt;:track_next:1505295937856213072&gt; The logs channel has been created. You will see the server changes made by the bot in this channel. (Please do not change the channel name.) You can also specify the timezone in the channel topic.&amp;#10;Now you just need to run this command &lt;/add-an-event:1505515202072805377&gt; to create an automation.</field>
                                   </block>
                                 </value>
                                 <value name="ADD3">
@@ -1911,7 +1911,15 @@
                                 </value>
                                 <value name="ADD4">
                                   <block type="jg_text_remake_paragraph_quotes" id="dfM(|U!Fr%qho2YdeV21">
-                                    <field name="TEXT">&lt;:track_next:1505295937856213072&gt; Le salon des logs a été créé. Vous obtiendrez les actions de changement du serveur fait par le bot dans ce salon. (Veuillez ne pas changer le nom du salon.) Maintenant vous avez juste à faire cette commande &lt;/add-an-event:1505515202072805377&gt; pour créer une automatisation.</field>
+                                    <field name="TEXT">&lt;:track_next:1505295937856213072&gt;Le salon des logs a été créé. Vous obtiendrez les actions de changement du serveur fait par le bot dans ce salon. (Veuillez ne pas changer le nom du salon.) Vous pouvez également indiquer le fuseau horaire dans le sujet du salon.&amp;#10;Maintenant vous avez juste à faire cette commande &lt;/add-an-event:1505515202072805377&gt; pour créer une automatisation.</field>
+                                  </block>
+                                </value>
+                                <value name="ADD5">
+                                  <block type="s4d_newline" id="~PmDlZR_:K@iJ4XMD|$2"></block>
+                                </value>
+                                <value name="ADD6">
+                                  <block type="jg_text_remake_paragraph_quotes" id="10c5Y1%|)!hEHHR2H.[I">
+                                    <field name="TEXT">-# &lt;:link:1505215573364047913&gt; [More information about time zones](&lt;https://logoto.onrender.com/help#timezone&gt;)</field>
                                   </block>
                                 </value>
                               </block>
