@@ -1,14 +1,3 @@
-const express = require('express');
-const app = express();
-const port = process.env.PORT || 8080;
-
-app.get('/', (req, res) => {
-  res.send('Bot Logoto en ligne !');
-});
-
-app.listen(port, () => {
-  console.log(`Serveur de vérification activé sur le port ${port}`);
-});
 (async()=>{
     // default imports
     const events = require('events');
@@ -99,7 +88,7 @@ app.listen(port, () => {
     
 
     // blockly code
-    var heure, fuseau_horaire, start_unix, ms_on, jour_fuzeau, mois_fuzeau, serveur;
+    var heure, start_unix, fuseau_horaire, ms_on, jour_fuseau, serveur, mois_fuseau;
     
     function mathRandomInt(a, b) {
       if (a > b) {
@@ -111,16 +100,6 @@ app.listen(port, () => {
       return Math.floor(Math.random() * (b - a + 1) + a);
     }
     
-    
-    await s4d.client.login((process.env[String('TOKEN')])).catch((e) => {
-            const tokenInvalid = true;
-            const tokenError = e;
-            if (e.toString().toLowerCase().includes("token")) {
-                throw new Error("An invalid bot token was provided!")
-            } else {
-                throw new Error("Privileged Gateway Intents are not enabled! Please go to https://discord.com/developers and turn on all of them.")
-            }
-        });
     
     s4d.client.on('ready', async () => {
       heure = ((new Date().getUTCHours()));
@@ -159,48 +138,67 @@ app.listen(port, () => {
         ms_on = (s4d.client.uptime);
         s4d.client.channels.cache.get('1387514903778295940').send({content:String((['Ping :**',s4d.client.ws.ping,'\n','**Temps de fonctionnement :**',Math.round(ms_on / 3600000),'** heures'].join('')))});
     
+                os.cpuUsage(async function(v){
+        	      var obj = v * 100
+                  while ((obj) > '75') {
+            s4d.client.channels.cache.get('1387514903778295940').send({content:String(('1 Attente > ' + String(obj)))});
+            await delay(Number((mathRandomInt(5, 20)))*1000);
+          }
+    
+        });
+        s4d.client.channels.cache.get('1387514903778295940').send({content:String(('1 ok' + String(obj)))});
+        while ((obj) > '75') {
+    
+                  os.cpuUsage(async function(v){
+          	      var obj = v * 100
+                    s4d.client.channels.cache.get('1387514903778295940').send({content:String(('2 Attente > ' + String(obj)))});
+            await delay(Number((mathRandomInt(5, 20)))*1000);
+    
+          });
+        }
+        s4d.client.channels.cache.get('1387514903778295940').send({content:String(('2 ok' + String(obj)))});
+    
                   console.log('ran')
               }
     
     });
+    
+    await s4d.client.login((process.env[String('TOKEN')])).catch((e) => {
+            const tokenInvalid = true;
+            const tokenError = e;
+            if (e.toString().toLowerCase().includes("token")) {
+                throw new Error("An invalid bot token was provided!")
+            } else {
+                throw new Error("Privileged Gateway Intents are not enabled! Please go to https://discord.com/developers and turn on all of them.")
+            }
+        });
     
     s4d.client.on('messageCreate', async (s4dmessage) => {
       if (((s4dmessage.author).id) == '1431383390162124920' && ((((s4dmessage).content) || '').startsWith('<:boucle:1505199788235292772>' || ''))) {
       } else {
         return
       }
-    
-              os.cpuUsage(async function(v){
-      	      var obj = v * 100
-                if ((obj) < '75') {
-          s4d.client.channels.cache.get('1387514903778295940').send({content:String((' direct > ' + String(obj)))});
-        } else {
-          s4d.client.channels.cache.get('1387514903778295940').send({content:String(('Attente > ' + String(obj)))});
-          await delay(Number((mathRandomInt(20, 40)))*1000);
-        }
-    
-      });
-      await delay(Number((mathRandomInt(5, 20)))*1000);
+      s4d.client.channels.cache.get('1387514903778295940').send({content:String((' direct > ' + String(obj)))});
       if (((s4dmessage).content) == '<:boucle:1505199788235292772> l-Loading') {
-        (s4dmessage.guild).setIcon(((s4dmessage.guild).channels.cache.find((category) => category.name === (['l-',String(jour_fuzeau),'-',String(mois_fuzeau)].join(''))).topic),'changement de logo.')
+        (s4dmessage.guild).setIcon(((s4dmessage.guild).channels.cache.find((category) => category.name === (['l-',String(jour_fuseau),'-',String(mois_fuseau)].join(''))).topic),'changement de logo.')
     
         s4dmessage.channel.send({content:String('<:check:1505215575822172170> Server logo changed.')});
         console.log((['Logo du serveur ',(s4dmessage.guild).name,' (',(s4dmessage.guild).id,').'].join('')));
       }
       if (((s4dmessage).content) == '<:boucle:1505199788235292772> n-Loading') {
-        (s4dmessage.guild).setName(((s4dmessage.guild).channels.cache.find((category) => category.name === (['n-',String(jour_fuzeau),'-',String(mois_fuzeau)].join(''))).topic),'changement de nom.')
+        (s4dmessage.guild).setName(((s4dmessage.guild).channels.cache.find((category) => category.name === (['n-',String(jour_fuseau),'-',String(mois_fuseau)].join(''))).topic),'changement de nom.')
     
         s4dmessage.channel.send({content:String('<:check:1505215575822172170> Server name changed.')});
         console.log((['Nom du serveur ',(s4dmessage.guild).name,' (',(s4dmessage.guild).id,').'].join('')));
       }
       if (((s4dmessage).content) == '<:boucle:1505199788235292772> b-Loading') {
-        (s4dmessage.guild).setBanner(((s4dmessage.guild).channels.cache.find((category) => category.name === (['b-',String(jour_fuzeau),'-',String(mois_fuzeau)].join(''))).topic),'changement de bannière.')
+        (s4dmessage.guild).setBanner(((s4dmessage.guild).channels.cache.find((category) => category.name === (['b-',String(jour_fuseau),'-',String(mois_fuseau)].join(''))).topic),'changement de bannière.')
     
         s4dmessage.channel.send({content:String('<:check:1505215575822172170> Server banner changed.')});
         console.log((['Bannier du serveur ',(s4dmessage.guild).name,' (',(s4dmessage.guild).id,').'].join('')));
       }
       if (((s4dmessage).content) == '<:boucle:1505199788235292772> i-Loading') {
-        (s4dmessage.guild).setSplash(((s4dmessage.guild).channels.cache.find((category) => category.name === (['i-',String(jour_fuzeau),'-',String(mois_fuzeau)].join(''))).topic),'changement d\'image d\'invitation.')
+        (s4dmessage.guild).setSplash(((s4dmessage.guild).channels.cache.find((category) => category.name === (['i-',String(jour_fuseau),'-',String(mois_fuseau)].join(''))).topic),'changement d\'image d\'invitation.')
     
         s4dmessage.channel.send({content:String('<:check:1505215575822172170> Server invite image changed.')});
         console.log((['Image d\'invitation du serveur ',(s4dmessage.guild).name,' (',(s4dmessage.guild).id,').'].join('')));
@@ -230,7 +228,7 @@ app.listen(port, () => {
     
               })
               .then(async (response) => {
-                  jour_fuzeau = (response.data);
+                  jour_fuseau = (response.data);
           S4D_APP_PKG_axios({
                   method: "get",
                   url: 'https://logoto.onrender.com/api/mois00h',
@@ -241,23 +239,23 @@ app.listen(port, () => {
     
                 })
                 .then(async (response) => {
-                    mois_fuzeau = (response.data);
+                    mois_fuseau = (response.data);
             s4d.client.guilds.cache.forEach(async (s) =>{
                if (((s).channels.cache.find((category) => category.name === 'log-logoto').topic) == null && '+0' == String(fuseau_horaire)) {
               } else if (((s).channels.cache.find((category) => category.name === 'log-logoto').topic) == String(fuseau_horaire)) {
               } else {
                 return
               }
-              if ((s).channels.cache.find((category) => category.name === (['l-',String(jour_fuzeau),'-',String(mois_fuzeau)].join(''))) != null) {
+              if ((s).channels.cache.find((category) => category.name === (['l-',String(jour_fuseau),'-',String(mois_fuseau)].join(''))) != null) {
                 (s).channels.cache.find((category) => category.name === 'log-logoto').send({content:String('<:boucle:1505199788235292772> l-Loading')});
               }
-              if ((s).channels.cache.find((category) => category.name === (['n-',String(jour_fuzeau),'-',String(mois_fuzeau)].join(''))) != null) {
+              if ((s).channels.cache.find((category) => category.name === (['n-',String(jour_fuseau),'-',String(mois_fuseau)].join(''))) != null) {
                 (s).channels.cache.find((category) => category.name === 'log-logoto').send({content:String('<:boucle:1505199788235292772> n-Loading')});
               }
-              if ((s).channels.cache.find((category) => category.name === (['b-',String(jour_fuzeau),'-',String(mois_fuzeau)].join(''))) != null) {
+              if ((s).channels.cache.find((category) => category.name === (['b-',String(jour_fuseau),'-',String(mois_fuseau)].join(''))) != null) {
                 (s).channels.cache.find((category) => category.name === 'log-logoto').send({content:String('<:boucle:1505199788235292772> b-Loading')});
               }
-              if ((s).channels.cache.find((category) => category.name === (['i-',String(jour_fuzeau),'-',String(jour_fuzeau)].join(''))) != null) {
+              if ((s).channels.cache.find((category) => category.name === (['i-',String(jour_fuseau),'-',String(jour_fuseau)].join(''))) != null) {
                 (s).channels.cache.find((category) => category.name === 'log-logoto').send({content:String('<:boucle:1505199788235292772> i-Loading')});
               }
     
