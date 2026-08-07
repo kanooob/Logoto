@@ -1,3 +1,14 @@
+const express = require('express');
+const app = express();
+const port = process.env.PORT || 8080;
+
+app.get('/', (req, res) => {
+  res.send('Bot Logoto en ligne !');
+});
+
+app.listen(port, () => {
+  console.log(`Serveur de vérification activé sur le port ${port}`);
+});
 (async()=>{
     // default imports
     const events = require('events');
@@ -137,16 +148,6 @@
         }
         ms_on = (s4d.client.uptime);
         s4d.client.channels.cache.get('1387514903778295940').send({content:String((['Ping :**',s4d.client.ws.ping,'\n','**Temps de fonctionnement :**',Math.round(ms_on / 3600000),'** heures'].join('')))});
-    
-                os.cpuUsage(async function(v){
-        	      var obj = v * 100
-                  while ((obj) > '75') {
-            s4d.client.channels.cache.get('1387514903778295940').send({content:String(('1 Attente > ' + String(obj)))});
-            await delay(Number((mathRandomInt(5, 20)))*1000);
-          }
-    
-        });
-        s4d.client.channels.cache.get('1387514903778295940').send({content:String(('1 ok' + String(obj)))});
         while ((obj) > '75') {
     
                   os.cpuUsage(async function(v){

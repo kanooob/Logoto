@@ -1,14 +1,3 @@
-const express = require('express');
-const app = express();
-const port = process.env.PORT || 8080;
-
-app.get('/', (req, res) => {
-  res.send('Bot Logoto en ligne !');
-});
-
-app.listen(port, () => {
-  console.log(`Serveur de vérification activé sur le port ${port}`);
-});
 <xml xmlns="https://developers.google.com/blockly/xml">
   <variables>
     <variable id="*Mw8:jGBr_D;=DnYIH)A">heure</variable>
@@ -294,62 +283,62 @@ app.listen(port, () => {
                                                       </block>
                                                     </value>
                                                     <next>
-                                                      <block type="get_cpu_uptime" id="r%xoV;Q1VcL#xTTfyXzv">
-                                                        <statement name="THEN">
-                                                          <block type="controls_whileUntil" id="5My*zZ8U:i/+WpZ|4.d@">
-                                                            <field name="MODE">WHILE</field>
-                                                            <value name="BOOL">
-                                                              <block type="logic_compare" id="jm!|6Y!iYQ%!~dLP|O]]">
-                                                                <field name="OP">GT</field>
-                                                                <value name="A">
-                                                                  <block type="cpu" id="+jH,452#|!u[TtJL@hy,"></block>
-                                                                </value>
-                                                                <value name="B">
-                                                                  <block type="jg_text_remake_paragraph_quotes" id="pNfgpBa%X[Vm$-:(B~c3">
-                                                                    <field name="TEXT">75</field>
-                                                                  </block>
-                                                                </value>
+                                                      <block type="controls_whileUntil" id="tg+{;Rs;*,.ZUkP(F0eL">
+                                                        <field name="MODE">WHILE</field>
+                                                        <value name="BOOL">
+                                                          <block type="logic_compare" id="$4aVlBAI,0*l!,XZl4Le">
+                                                            <field name="OP">GT</field>
+                                                            <value name="A">
+                                                              <block type="cpu" id="CE+3Q~@ut|`GCUzQaUkr"></block>
+                                                            </value>
+                                                            <value name="B">
+                                                              <block type="jg_text_remake_paragraph_quotes" id="4Qq3~q{o9OM`@Tm=h6Sb">
+                                                                <field name="TEXT">75</field>
                                                               </block>
                                                             </value>
-                                                            <statement name="DO">
-                                                              <block type="s4d_send_channel" id="E/@MRA/)LfT}65XC1],$">
+                                                          </block>
+                                                        </value>
+                                                        <statement name="DO">
+                                                          <block type="get_cpu_uptime" id="6ArU3AM?lODBH;zr:;Op">
+                                                            <statement name="THEN">
+                                                              <block type="s4d_send_channel" id="v!|pjpYN=c^-i3BH?}vW">
                                                                 <value name="CONTENT">
-                                                                  <block type="text_join" id="/9~vsC_GHRXm6m`lkSq1">
+                                                                  <block type="text_join" id="N_@(ENS-g3c/#Edl3Ea(">
                                                                     <mutation items="2"></mutation>
                                                                     <value name="ADD0">
-                                                                      <block type="jg_text_remake_paragraph_quotes" id="Jz{gy[S9%/a4Z[0{)x3V">
-                                                                        <field name="TEXT">1 Attente &gt; </field>
+                                                                      <block type="jg_text_remake_paragraph_quotes" id="7v9].fBocu`1m(mzcxvZ">
+                                                                        <field name="TEXT">2 Attente &gt; </field>
                                                                       </block>
                                                                     </value>
                                                                     <value name="ADD1">
-                                                                      <block type="cpu" id="aen}qE6T?Ll186X?slVK"></block>
+                                                                      <block type="cpu" id="7*~~#=)A4/SMB(CVq%e#"></block>
                                                                     </value>
                                                                   </block>
                                                                 </value>
                                                                 <value name="CHANNEL">
-                                                                  <block type="s4d_get_channel" id="/sTWo;nrDjL$:fJwyHLU">
+                                                                  <block type="s4d_get_channel" id="Nx]0H3GY1_]JYy`h3Qrr">
                                                                     <field name="SEARCH_TYPE">ID</field>
                                                                     <value name="VALUE">
-                                                                      <block type="jg_text_remake_paragraph_quotes" id="c/slkHl;/oZn*/*Ly017">
+                                                                      <block type="jg_text_remake_paragraph_quotes" id="NvC(|+Cjx(+kX~#m@OKl">
                                                                         <field name="TEXT">1387514903778295940</field>
                                                                       </block>
                                                                     </value>
                                                                   </block>
                                                                 </value>
                                                                 <next>
-                                                                  <block type="s4d_wait_seconds" id="-`o{rz]w[_vdjUmXGg%~">
+                                                                  <block type="s4d_wait_seconds" id="ALd+gxbu4^SH$!~Y();q">
                                                                     <value name="TIME">
                                                                       <shadow type="math_number" id="Hl6Nij_zY4NZB[HY[ix0">
                                                                         <field name="NUM">5</field>
                                                                       </shadow>
-                                                                      <block type="math_random_int" id="u*dC8k{WNWf^xd1z|l]A">
+                                                                      <block type="math_random_int" id="[dh[)FJe{_CVG-iV|nt}">
                                                                         <value name="FROM">
-                                                                          <shadow type="math_number" id="/-sas7%)uD(5J-EYorFL">
+                                                                          <shadow type="math_number" id="SEbYZ{r-G~)U)jj%OS])">
                                                                             <field name="NUM">5</field>
                                                                           </shadow>
                                                                         </value>
                                                                         <value name="TO">
-                                                                          <shadow type="math_number" id="S,S.=rhd)|xG.Hg8ZHU)">
+                                                                          <shadow type="math_number" id="fmIpi1q0tn.Kb14@2g8G">
                                                                             <field name="NUM">20</field>
                                                                           </shadow>
                                                                         </value>
@@ -362,127 +351,30 @@ app.listen(port, () => {
                                                           </block>
                                                         </statement>
                                                         <next>
-                                                          <block type="s4d_send_channel" id="|5rui/k0u{7a7PSPDo97">
+                                                          <block type="s4d_send_channel" id="o}C?Zt~2.v^$C-c0Gr(%">
                                                             <value name="CONTENT">
-                                                              <block type="text_join" id="`~y=fok[EsCkO;4.D1;c">
+                                                              <block type="text_join" id="DA)z7)F-NUJfeRIOT.`S">
                                                                 <mutation items="2"></mutation>
                                                                 <value name="ADD0">
-                                                                  <block type="jg_text_remake_paragraph_quotes" id="8m0b2o`]gEADZ}P{[mLo">
-                                                                    <field name="TEXT">1 ok</field>
+                                                                  <block type="jg_text_remake_paragraph_quotes" id="qQRRQ;ZpR4#f.,1[w[A2">
+                                                                    <field name="TEXT">2 ok</field>
                                                                   </block>
                                                                 </value>
                                                                 <value name="ADD1">
-                                                                  <block type="cpu" id="J:/XB4)JG`YO#-i0-UXP"></block>
+                                                                  <block type="cpu" id="%j]cUNIY#2!E*K$Qfsy7"></block>
                                                                 </value>
                                                               </block>
                                                             </value>
                                                             <value name="CHANNEL">
-                                                              <block type="s4d_get_channel" id="6$i5:nz+OJ3yBAkpahhs">
+                                                              <block type="s4d_get_channel" id="zk1+1AqG:cJ`GtMM(g7_">
                                                                 <field name="SEARCH_TYPE">ID</field>
                                                                 <value name="VALUE">
-                                                                  <block type="jg_text_remake_paragraph_quotes" id="y:YTkI[waq92Agqm)M9{">
+                                                                  <block type="jg_text_remake_paragraph_quotes" id=":{pQj)xE.6Bj]HnFJU_s">
                                                                     <field name="TEXT">1387514903778295940</field>
                                                                   </block>
                                                                 </value>
                                                               </block>
                                                             </value>
-                                                            <next>
-                                                              <block type="controls_whileUntil" id="tg+{;Rs;*,.ZUkP(F0eL">
-                                                                <field name="MODE">WHILE</field>
-                                                                <value name="BOOL">
-                                                                  <block type="logic_compare" id="$4aVlBAI,0*l!,XZl4Le">
-                                                                    <field name="OP">GT</field>
-                                                                    <value name="A">
-                                                                      <block type="cpu" id="CE+3Q~@ut|`GCUzQaUkr"></block>
-                                                                    </value>
-                                                                    <value name="B">
-                                                                      <block type="jg_text_remake_paragraph_quotes" id="4Qq3~q{o9OM`@Tm=h6Sb">
-                                                                        <field name="TEXT">75</field>
-                                                                      </block>
-                                                                    </value>
-                                                                  </block>
-                                                                </value>
-                                                                <statement name="DO">
-                                                                  <block type="get_cpu_uptime" id="6ArU3AM?lODBH;zr:;Op">
-                                                                    <statement name="THEN">
-                                                                      <block type="s4d_send_channel" id="v!|pjpYN=c^-i3BH?}vW">
-                                                                        <value name="CONTENT">
-                                                                          <block type="text_join" id="N_@(ENS-g3c/#Edl3Ea(">
-                                                                            <mutation items="2"></mutation>
-                                                                            <value name="ADD0">
-                                                                              <block type="jg_text_remake_paragraph_quotes" id="7v9].fBocu`1m(mzcxvZ">
-                                                                                <field name="TEXT">2 Attente &gt; </field>
-                                                                              </block>
-                                                                            </value>
-                                                                            <value name="ADD1">
-                                                                              <block type="cpu" id="7*~~#=)A4/SMB(CVq%e#"></block>
-                                                                            </value>
-                                                                          </block>
-                                                                        </value>
-                                                                        <value name="CHANNEL">
-                                                                          <block type="s4d_get_channel" id="Nx]0H3GY1_]JYy`h3Qrr">
-                                                                            <field name="SEARCH_TYPE">ID</field>
-                                                                            <value name="VALUE">
-                                                                              <block type="jg_text_remake_paragraph_quotes" id="NvC(|+Cjx(+kX~#m@OKl">
-                                                                                <field name="TEXT">1387514903778295940</field>
-                                                                              </block>
-                                                                            </value>
-                                                                          </block>
-                                                                        </value>
-                                                                        <next>
-                                                                          <block type="s4d_wait_seconds" id="ALd+gxbu4^SH$!~Y();q">
-                                                                            <value name="TIME">
-                                                                              <shadow type="math_number" id="Hl6Nij_zY4NZB[HY[ix0">
-                                                                                <field name="NUM">5</field>
-                                                                              </shadow>
-                                                                              <block type="math_random_int" id="[dh[)FJe{_CVG-iV|nt}">
-                                                                                <value name="FROM">
-                                                                                  <shadow type="math_number" id="SEbYZ{r-G~)U)jj%OS])">
-                                                                                    <field name="NUM">5</field>
-                                                                                  </shadow>
-                                                                                </value>
-                                                                                <value name="TO">
-                                                                                  <shadow type="math_number" id="fmIpi1q0tn.Kb14@2g8G">
-                                                                                    <field name="NUM">20</field>
-                                                                                  </shadow>
-                                                                                </value>
-                                                                              </block>
-                                                                            </value>
-                                                                          </block>
-                                                                        </next>
-                                                                      </block>
-                                                                    </statement>
-                                                                  </block>
-                                                                </statement>
-                                                                <next>
-                                                                  <block type="s4d_send_channel" id="o}C?Zt~2.v^$C-c0Gr(%">
-                                                                    <value name="CONTENT">
-                                                                      <block type="text_join" id="DA)z7)F-NUJfeRIOT.`S">
-                                                                        <mutation items="2"></mutation>
-                                                                        <value name="ADD0">
-                                                                          <block type="jg_text_remake_paragraph_quotes" id="qQRRQ;ZpR4#f.,1[w[A2">
-                                                                            <field name="TEXT">2 ok</field>
-                                                                          </block>
-                                                                        </value>
-                                                                        <value name="ADD1">
-                                                                          <block type="cpu" id="%j]cUNIY#2!E*K$Qfsy7"></block>
-                                                                        </value>
-                                                                      </block>
-                                                                    </value>
-                                                                    <value name="CHANNEL">
-                                                                      <block type="s4d_get_channel" id="zk1+1AqG:cJ`GtMM(g7_">
-                                                                        <field name="SEARCH_TYPE">ID</field>
-                                                                        <value name="VALUE">
-                                                                          <block type="jg_text_remake_paragraph_quotes" id=":{pQj)xE.6Bj]HnFJU_s">
-                                                                            <field name="TEXT">1387514903778295940</field>
-                                                                          </block>
-                                                                        </value>
-                                                                      </block>
-                                                                    </value>
-                                                                  </block>
-                                                                </next>
-                                                              </block>
-                                                            </next>
                                                           </block>
                                                         </next>
                                                       </block>
