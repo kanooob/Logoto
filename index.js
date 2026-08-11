@@ -128,25 +128,33 @@ app.listen(port, () => {
         return
       }
       await delay(Number((mathRandomInt(4, 50)))*1000);
-      if (((s4dmessage).content) == '<:boucle:1505199788235292772> l-Loading') {
+      if (((s4dmessage).content) == '<:boucle:1505199788235292772> l-Loading' && null == ((s4dmessage.guild).channels.cache.find((category) => category.name === (['l-',String(jour_fuseau),'-',String(mois_fuseau)].join(''))).topic)) {
+        s4dmessage.channel.send({content:String((['<:regional_indicator_x:1505250983436091634> There is a problem with the following channel; possible causes include an empty channel subject or missing permissions.','\n','-# <#',(s4dmessage.guild).channels.cache.find((category) => category.name === (['l-',String(jour_fuseau),'-',String(mois_fuseau)].join(''))).id,'>.'].join('')))});
+      } else if (((s4dmessage).content) == '<:boucle:1505199788235292772> l-Loading') {
         (s4dmessage.guild).setIcon(((s4dmessage.guild).channels.cache.find((category) => category.name === (['l-',String(jour_fuseau),'-',String(mois_fuseau)].join(''))).topic),'changement de logo.')
     
         s4dmessage.channel.send({content:String('<:check:1505215575822172170> Server logo changed.')});
         console.log((['Logo du serveur ',(s4dmessage.guild).name,' (',(s4dmessage.guild).id,').'].join('')));
       }
-      if (((s4dmessage).content) == '<:boucle:1505199788235292772> n-Loading') {
+      if (((s4dmessage).content) == '<:boucle:1505199788235292772> n-Loading' && null == ((s4dmessage.guild).channels.cache.find((category) => category.name === (['l-',String(jour_fuseau),'-',String(mois_fuseau)].join(''))).topic)) {
+        s4dmessage.channel.send({content:String((['<:regional_indicator_x:1505250983436091634> There is a problem with the following channel; possible causes include an empty channel subject or missing permissions.','\n','-# <#',(s4dmessage.guild).channels.cache.find((category) => category.name === (['n-',String(jour_fuseau),'-',String(mois_fuseau)].join(''))).id,'>.'].join('')))});
+      } else if (((s4dmessage).content) == '<:boucle:1505199788235292772> n-Loading') {
         (s4dmessage.guild).setName(((s4dmessage.guild).channels.cache.find((category) => category.name === (['n-',String(jour_fuseau),'-',String(mois_fuseau)].join(''))).topic),'changement de nom.')
     
         s4dmessage.channel.send({content:String('<:check:1505215575822172170> Server name changed.')});
         console.log((['Nom du serveur ',(s4dmessage.guild).name,' (',(s4dmessage.guild).id,').'].join('')));
       }
-      if (((s4dmessage).content) == '<:boucle:1505199788235292772> b-Loading') {
+      if (((s4dmessage).content) == '<:boucle:1505199788235292772> b-Loading' && null == ((s4dmessage.guild).channels.cache.find((category) => category.name === (['l-',String(jour_fuseau),'-',String(mois_fuseau)].join(''))).topic)) {
+        s4dmessage.channel.send({content:String((['<:regional_indicator_x:1505250983436091634> There is a problem with the following channel; possible causes include an empty channel subject or missing permissions.','\n','-# <#',(s4dmessage.guild).channels.cache.find((category) => category.name === (['b-',String(jour_fuseau),'-',String(mois_fuseau)].join(''))).id,'>.'].join('')))});
+      } else if (((s4dmessage).content) == '<:boucle:1505199788235292772> b-Loading') {
         (s4dmessage.guild).setBanner(((s4dmessage.guild).channels.cache.find((category) => category.name === (['b-',String(jour_fuseau),'-',String(mois_fuseau)].join(''))).topic),'changement de bannière.')
     
         s4dmessage.channel.send({content:String('<:check:1505215575822172170> Server banner changed.')});
         console.log((['Bannier du serveur ',(s4dmessage.guild).name,' (',(s4dmessage.guild).id,').'].join('')));
       }
-      if (((s4dmessage).content) == '<:boucle:1505199788235292772> i-Loading') {
+      if (((s4dmessage).content) == '<:boucle:1505199788235292772> i-Loading' && null == ((s4dmessage.guild).channels.cache.find((category) => category.name === (['l-',String(jour_fuseau),'-',String(mois_fuseau)].join(''))).topic)) {
+        s4dmessage.channel.send({content:String((['<:regional_indicator_x:1505250983436091634> There is a problem with the following channel; possible causes include an empty channel subject or missing permissions.','\n','-# <#',(s4dmessage.guild).channels.cache.find((category) => category.name === (['i-',String(jour_fuseau),'-',String(mois_fuseau)].join(''))).id,'>.'].join('')))});
+      } else if (((s4dmessage).content) == '<:boucle:1505199788235292772> i-Loading') {
         (s4dmessage.guild).setSplash(((s4dmessage.guild).channels.cache.find((category) => category.name === (['i-',String(jour_fuseau),'-',String(mois_fuseau)].join(''))).topic),'changement d\'image d\'invitation.')
     
         s4dmessage.channel.send({content:String('<:check:1505215575822172170> Server invite image changed.')});
