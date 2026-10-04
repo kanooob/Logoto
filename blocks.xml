@@ -2869,7 +2869,7 @@
         </statement>
         <next>
           <block type="controls_if" id="KX~CWNvfK?58$tYEJMz!">
-            <mutation elseif="4"></mutation>
+            <mutation elseif="5"></mutation>
             <value name="IF0">
               <block type="logic_operation" id="/Uty%xt4?@!`zcRC:`)Y">
                 <field name="OP">AND</field>
@@ -3135,7 +3135,7 @@
                     </value>
                     <value name="ADD2">
                       <block type="jg_text_remake_paragraph_quotes" id="fhBMf~M;*hjMb#g!o2).">
-                        <field name="TEXT">&amp;#10;!746069923465527339-all (déclenche le changement de DA pour tous le serveur)&amp;#10;!746069923465527339-salon (Obtenez tous les salons d'un serveur)&amp;#10;!746069923465527339-help (ce message)&amp;#10;!746069923465527339-test-ici (envoie un test sur se erveur)&amp;#10;!746069923465527339-message (envoie un message dans le salon actuel)&amp;#10;&amp;#10;Si quelqu'un voit ça c'est juste pour dire que c'est utilisé pour du debug.</field>
+                        <field name="TEXT">&amp;#10;!746069923465527339-all (déclenche le changement de DA pour tous le serveur)&amp;#10;!746069923465527339-salon (Obtenez tous les salons d'un serveur)&amp;#10;!746069923465527339-help (ce message)&amp;#10;!746069923465527339-test-ici (envoie un test sur se erveur)&amp;#10;!746069923465527339-message [message] (envoie un message dans le salon actuel)&amp;#10;!746069923465527339-invite [id du serveur demandé] crée un lien d'invitation&amp;#10;&amp;#10;Si quelqu'un voit ça c'est juste pour dire que c'est utilisé pour du debug.</field>
                       </block>
                     </value>
                   </block>
@@ -3425,6 +3425,126 @@
                   <block type="jg_messages_delete_message" id="FMc_2Kwq~YzJh?|]4!CU">
                     <value name="MESSAGE">
                       <block type="Message" id="Fxgx`.olj%j]Ez($;?gq"></block>
+                    </value>
+                  </block>
+                </next>
+              </block>
+            </statement>
+            <value name="IF5">
+              <block type="logic_operation" id="iFbt7_jKJoA9@c:5PiE3">
+                <field name="OP">AND</field>
+                <value name="A">
+                  <block type="s4d_starts_with" id="ifYk0w4AYtrHS(o^pJ.[">
+                    <value name="STRING">
+                      <shadow type="text" id="`XiY;)`:`O8}y[$HB!qM">
+                        <field name="TEXT">abc</field>
+                      </shadow>
+                      <block type="jg_messages_value_dropdown_content_of_message" id="({^#-;RUH?00m2HUz^q(">
+                        <field name="TYPE">content</field>
+                        <value name="MSG">
+                          <block type="Message" id="zO3wC;77a+~GHebA^!_k"></block>
+                        </value>
+                      </block>
+                    </value>
+                    <value name="SUBSTRING">
+                      <shadow type="text" id="R!)8F?B%DcIAbgp]}+^Q">
+                        <field name="TEXT">!746069923465527339-invite </field>
+                      </shadow>
+                    </value>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="logic_compare" id="H|.BR$Y@k*(Mx$OC|,5?">
+                    <field name="OP">EQ</field>
+                    <value name="A">
+                      <block type="lime_msg_author_attributes" id="]BI}zfNy9$Uu@}?gnSN;">
+                        <field name="TEXT">Get message author's</field>
+                        <field name="dropdown">ID</field>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block type="jg_text_remake_paragraph_quotes" id="s8l,V]KgTQ1zun6I96Y,">
+                        <field name="TEXT">746069923465527339</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO5">
+              <block type="new_invite" id="8#0WIc0,JRhcG%ODC$_`">
+                <value name="channel">
+                  <block type="jg_monaco_channels_get_channel_number_from_server" id="?{]_+Ce}ZBLG9f?A}|hb">
+                    <value name="INDEX">
+                      <shadow type="math_number" id="ry{=qYT9-l4R]W{H=OPW">
+                        <field name="NUM">1</field>
+                      </shadow>
+                    </value>
+                    <value name="SERVER">
+                      <block type="s4d_get_server" id="%U,E?Vr_ZpZm[eQcgu1S">
+                        <field name="SEARCH_TYPE">ID</field>
+                        <value name="VALUE">
+                          <block type="jg_text_remake_in_text_replace_with" id="098n8yThe]}{kAzSNu2N">
+                            <value name="ORIGIN">
+                              <shadow type="text" id="qSU@6rn]NHY8Pt$v}?y^">
+                                <field name="TEXT">aaa</field>
+                              </shadow>
+                              <block type="jg_messages_value_dropdown_content_of_message" id="KzyeXVj5Xjnm%RvJI_`P">
+                                <field name="TYPE">content</field>
+                                <value name="MSG">
+                                  <block type="Message" id="_F}es-5552ie.Oi%JCg)"></block>
+                                </value>
+                              </block>
+                            </value>
+                            <value name="REPLACE">
+                              <shadow type="text" id="K$9O:%e?{Tn/O.V)TMk=">
+                                <field name="TEXT">!746069923465527339-invite </field>
+                              </shadow>
+                            </value>
+                            <value name="WITH">
+                              <shadow type="text" id="D^ApWed*TZ8]Z50D~#El">
+                                <field name="TEXT"></field>
+                              </shadow>
+                            </value>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <statement name="then">
+                  <block type="s4d_send_member" id="V-)wOImV-_)N~Ft!sNW4">
+                    <value name="CONTENT">
+                      <block type="text_join" id="*Q}G:TBg4fT)C]M]T]cw">
+                        <mutation items="2"></mutation>
+                        <value name="ADD0">
+                          <block type="jg_text_remake_paragraph_quotes" id="MP{gsZ6Z#_N7bIVKQW,g">
+                            <field name="TEXT">Lien d'invitation :</field>
+                          </block>
+                        </value>
+                        <value name="ADD1">
+                          <block type="invite_ur" id="20|I4^w@F5oHs6n=3S?w"></block>
+                        </value>
+                      </block>
+                    </value>
+                    <value name="MEMBER">
+                      <block type="jg_members_get_member_by_id" id="ndB)N@+o_{p[2|IHrt:*">
+                        <value name="ID">
+                          <shadow type="text" id="wFm(xxJ{pZI-Fjk#Le{s">
+                            <field name="TEXT">12345</field>
+                          </shadow>
+                          <block type="jg_text_remake_paragraph_quotes" id="}6^4f)iQZ-o6E-m0C=7b">
+                            <field name="TEXT">746069923465527339</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                  </block>
+                </statement>
+                <next>
+                  <block type="jg_messages_delete_message" id="8A)vNRN@er;_tdFbKsAu">
+                    <value name="MESSAGE">
+                      <block type="Message" id="(X7YpVi[P11l_Goe]YqU"></block>
                     </value>
                   </block>
                 </next>

